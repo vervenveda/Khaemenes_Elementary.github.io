@@ -2,176 +2,225 @@
 
 > **A Verve N Veda Educational Platform**
 >
-> *Building Strong Foundations for Lifelong Learning*
+> *Planting the Seeds of Knowledge, Character, and Curiosity*
 
 ---
 
-# Overview
+# Welcome to the Elementary School
 
-The **Khaemenes Academy™ Elementary School Portal** serves students in **Grades 1 through 5**, providing a welcoming, engaging, and academically rich environment where children develop the essential skills that support future learning.
+The **Khaemenes Academy™ Elementary School Portal** serves children from **Kinder Garden through Grade 5**, providing a joyful, structured, and academically rich environment where young learners develop the confidence and skills needed for lifelong success.
 
-The Elementary School Portal emphasizes literacy, mathematics, science, creativity, citizenship, and character while encouraging curiosity, imagination, and confidence.
+Our Elementary School combines traditional academic excellence with creativity, exploration, practical life skills, and character development in a beautiful digital learning environment designed for children, families, teachers, and homeschool communities around the world.
 
-Rather than simply presenting lessons, the Elementary School Portal is designed to become a complete digital elementary campus that supports students, families, teachers, and homeschool communities around the world.
+This is more than an online classroom.
 
----
-
-# Mission
-
-Our mission is to provide a beautiful, organized, and freely accessible elementary education that inspires children to become curious, compassionate, capable lifelong learners.
-
-The Elementary School Portal is built upon the belief that:
-
-- Every child deserves a quality education.
-- Learning should be joyful.
-- Families should be active educational partners.
-- Strong foundations create future success.
-- Curiosity is one of a child's greatest strengths.
-- Education should be available to everyone.
+It is a growing educational campus where curiosity is encouraged, kindness is practiced, and every learner is given the opportunity to flourish.
 
 ---
 
-# Educational Philosophy
+# Our Mission
 
-Elementary education lays the groundwork for every future academic achievement.
+Our mission is to provide a **free, world-class elementary education** that is:
 
-The Elementary School Portal encourages students to:
+- Accessible
+- Beautiful
+- Organized
+- Encouraging
+- International
+- Family-centered
+- Academically excellent
 
-- Love reading
-- Think creatively
-- Ask questions
-- Solve problems
-- Explore the natural world
-- Build confidence
-- Develop kindness
-- Practice responsibility
-- Celebrate curiosity
+Every child deserves a place where learning feels exciting, safe, and meaningful.
 
-Learning is presented through exploration, projects, stories, activities, games, and meaningful practice.
+---
+
+# The Kinder Garden Philosophy™
+
+One of the unique traditions of Khaemenes Academy is our intentional spelling of **Kinder Garden** as two words.
+
+A traditional *kindergarten* is often viewed simply as the first year of school.
+
+A **Kinder Garden** is something much deeper.
+
+It is a garden where children are nurtured with:
+
+- Kindness
+- Curiosity
+- Creativity
+- Imagination
+- Patience
+- Discovery
+- Confidence
+- Joy
+
+Every child grows at a different pace.
+
+Our responsibility is not to rush that growth, but to cultivate it with care.
+
+Just as every flower blooms in its own season, every learner develops according to their own strengths and abilities.
 
 ---
 
 # Grade Levels
 
-## Grade 1
+## 🌱 Kinder Garden
 
-**Learning to Learn**
+**Growing Through Wonder**
+
+Children begin their educational journey through stories, music, movement, exploration, creativity, and joyful discovery.
 
 Focus areas include:
 
-- Early reading fluency
-- Basic mathematics
-- Writing sentences
+- Letter recognition
+- Early reading
+- Number sense
+- Shapes and patterns
 - Nature exploration
-- Art and creativity
-- Healthy habits
-- Classroom routines
+- Music and movement
+- Fine motor development
+- Social-emotional learning
+- Creativity
+- Imagination
 
 ---
 
-## Grade 2
+## 📘 Grade 1
+
+**Learning to Learn**
+
+Students begin developing confidence as readers, writers, mathematicians, scientists, artists, and explorers.
+
+Focus areas include:
+
+- Reading fluency
+- Addition & subtraction
+- Sentence writing
+- Nature studies
+- Geography
+- Art
+- Daily routines
+
+---
+
+## 📙 Grade 2
 
 **Growing Confidence**
+
+Students strengthen foundational skills while becoming increasingly independent learners.
 
 Focus areas include:
 
 - Reading comprehension
-- Addition and subtraction mastery
-- Writing paragraphs
-- Science observation
-- Geography
+- Paragraph writing
+- Multiplication foundations
+- Science investigations
+- Communities
 - Music appreciation
+- Creative thinking
+
+---
+
+## 📗 Grade 3
+
+**Discovering the World**
+
+Students begin connecting ideas across subjects while expanding their curiosity.
+
+Focus areas include:
+
+- Multiplication & division
+- Research skills
+- Earth Science
+- Maps
+- World cultures
+- Creative projects
 - Problem solving
 
 ---
 
-## Grade 3
-
-**Discovering the World**
-
-Focus areas include:
-
-- Multiplication and division
-- Reading deeper texts
-- Research basics
-- Earth science
-- Communities
-- Maps
-- Creative projects
-
----
-
-## Grade 4
+## 📕 Grade 4
 
 **Thinking Independently**
+
+Students learn to analyze information, ask deeper questions, and work collaboratively.
 
 Focus areas include:
 
 - Fractions
 - Multi-paragraph writing
 - History
+- Government
 - Scientific investigations
-- Government basics
-- Technology skills
-- Collaboration
+- Technology
+- Leadership
 
 ---
 
-## Grade 5
+## 📓 Grade 5
 
 **Preparing for Middle School**
+
+Students build academic confidence while preparing for the increased independence of middle school.
 
 Focus areas include:
 
 - Advanced mathematics
 - Research writing
-- United States history
-- Earth and space science
+- United States History
+- Earth & Space Science
 - Public speaking
-- Leadership
 - Organization
+- Leadership
 
 ---
 
 # Academic Departments
 
+The Elementary School curriculum is organized into comprehensive academic departments.
+
 ## Reading & Literature
 
-Future curriculum includes:
-
 - Guided Reading
-- Reading Comprehension
 - Children's Literature
-- Poetry
+- Reading Comprehension
 - Vocabulary
+- Poetry
 - Storytelling
-- Book Studies
+- Reading Challenges
+
+---
+
+## Language Arts
+
+- Grammar
+- Writing Workshop
+- Creative Writing
+- Handwriting
+- Public Speaking
+- Spelling
+- Vocabulary Development
 
 ---
 
 ## Mathematics
 
-Future curriculum includes:
-
 - Number Sense
 - Arithmetic
-- Fractions
 - Geometry
 - Measurement
+- Fractions
 - Data
-- Problem Solving
+- Mathematical Thinking
 
 ---
 
 ## Science
 
-Future learning includes:
-
 - Life Science
 - Earth Science
 - Physical Science
 - Weather
-- Space
+- Astronomy
 - Nature Studies
 - STEM Activities
 
@@ -179,40 +228,22 @@ Future learning includes:
 
 ## Social Studies
 
-Future curriculum includes:
-
 - Geography
 - Communities
-- Cultures
-- World History
+- World Cultures
 - United States History
 - Civics
 - Maps
-
----
-
-## Language Arts
-
-Future instruction includes:
-
-- Grammar
-- Writing
-- Handwriting
-- Creative Writing
-- Spelling
-- Vocabulary
-- Public Speaking
+- Global Citizenship
 
 ---
 
 ## Technology
 
-Future courses include:
-
 - Computer Basics
-- Internet Safety
 - Keyboarding
 - Digital Citizenship
+- Internet Safety
 - Beginning Coding
 - AI Awareness
 
@@ -220,73 +251,66 @@ Future courses include:
 
 ## Fine Arts
 
-Future offerings include:
-
 - Drawing
 - Painting
 - Sculpture
+- Mixed Media
 - Digital Art
 - Art Appreciation
-- Crafts
 
 ---
 
 ## Music
 
-Future studies include:
-
 - Singing
 - Rhythm
 - Instruments
-- Music History
 - Music Appreciation
 - Beginning Composition
 
 ---
 
-## Health & Physical Education
+## Health & Wellness
 
-Future learning includes:
-
+- Healthy Living
 - Nutrition
-- Exercise
+- Physical Education
 - Hygiene
 - Emotional Wellness
 - Safety
-- Healthy Relationships
 
 ---
 
 ## Financial Literacy
 
-Students will gradually learn:
+Students gradually explore:
 
 - Saving
 - Spending
-- Earning
-- Sharing
-- Banking Basics
+- Budgeting
+- Banking
 - Entrepreneurship
 - Goal Setting
+- Responsible Decision Making
 
 ---
 
 # Student Homeroom
 
-Every elementary learner will receive a personalized digital homeroom.
+Every learner receives a personalized digital classroom.
 
 Future features include:
 
 - Student profile
-- Personalized themes
+- Personalized colors
 - Weekly schedule
-- Current classes
-- Reading tracker
 - Assignment organizer
+- Reading tracker
 - Daily goals
 - Achievement badges
-- Portfolio
-- Printable progress reports
+- Digital portfolio
+- Progress reports
+- Downloadable student records
 
 ---
 
@@ -296,12 +320,12 @@ Parents and guardians will have access to:
 
 - Student progress
 - Assignment summaries
+- Reading records
 - Weekly reports
-- Reading logs
-- Achievement records
 - Printable transcripts
 - Family calendar
-- Resource recommendations
+- Learning recommendations
+- Educational resources
 
 ---
 
@@ -309,68 +333,68 @@ Parents and guardians will have access to:
 
 Future educator tools include:
 
-- Lesson planner
-- Curriculum guides
-- Assignment builder
-- Quiz creator
+- Lesson Planner
+- Curriculum Builder
+- Assignment Creator
+- Quiz Generator
 - Gradebook
-- Student reports
-- Classroom organization
-- Resource library
+- Student Analytics
+- Classroom Management
+- Printable Resources
 
 ---
 
-# Enrichment
+# Clubs & Enrichment
 
 Future enrichment opportunities include:
 
-- Reading Challenges
+- Reading Club
+- Nature Club
 - Science Club
-- Nature Journals
-- Art Club
-- Music Club
-- Chess
-- Gardening
+- Gardening Club
+- Chess Club
 - Coding Club
-- Geography Adventures
-- Storytelling
+- Art Studio
+- Music Club
+- Geography Explorers
 - Community Service
+- Creative Writing
 
 ---
 
 # Daily Learning Experience
 
-The Elementary School Portal is designed to make every day engaging.
+Every school day should feel welcoming.
 
-Students will eventually enjoy:
+Future experiences include:
 
-- Morning welcome
+- Morning greeting
 - Daily inspiration
 - Educational games
 - Reading corner
+- Nature observations
+- Weather reports
+- Art activities
 - Science discoveries
-- Weather observations
-- Creative activities
 - Interactive maps
-- Nature exploration
 - Daily trivia
 
 ---
 
 # Accessibility
 
-Accessibility is a core design principle.
+Accessibility is fundamental to the Academy.
 
 Goals include:
 
-- Responsive design
+- Responsive layouts
 - Keyboard navigation
 - High readability
-- High-contrast themes
-- Screen-reader compatibility
+- Screen reader compatibility
 - Printable lessons
 - Downloadable resources
 - Offline-friendly learning
+- Translation support
 
 ---
 
@@ -382,22 +406,20 @@ The Elementary School Portal follows the **Verve N Veda Design System**.
 
 - Cinzel headings
 - Brandon Grotesque (or closest equivalent)
-- 444 font weights
-- Spacious layouts
-- Centered page structure
-- Calm visual hierarchy
+- 444 font weight philosophy
+- Centered layouts
+- Comfortable spacing
+- Calm reading experience
 
 ### Visual Language
 
 - Deep navy
 - Soft blue
 - Warm parchment
-- Silver accents
-- Gentle gold highlights
+- Silver highlights
+- Heritage gold accents
 - 7px interactive controls
 - 21px content cards
-
-The overall design emphasizes calmness, warmth, and readability.
 
 ---
 
@@ -409,69 +431,44 @@ elementary-school/
 │
 
 ├── index.html
-
 ├── README.md
-
 ├── LICENSE.md
-
 ├── SECURITY.md
-
 ├── CODE_OF_CONDUCT.md
 
 │
 
 ├── grades/
-
+│   ├── kinder-garden/
 │   ├── grade-01/
-
 │   ├── grade-02/
-
 │   ├── grade-03/
-
 │   ├── grade-04/
-
 │   └── grade-05/
 
 │
 
 ├── courses/
-
 │   ├── mathematics/
-
 │   ├── language-arts/
-
 │   ├── science/
-
 │   ├── social-studies/
-
 │   ├── technology/
-
 │   ├── arts/
-
 │   ├── music/
-
 │   ├── health/
-
-│   └── finance/
+│   └── financial-literacy/
 
 │
 
 ├── students/
-
 ├── parents/
-
 ├── teachers/
-
 ├── clubs/
-
 ├── games/
-
 ├── resources/
-
 ├── certificates/
-
 ├── downloads/
-
 └── shared/
 ```
 
@@ -479,34 +476,36 @@ elementary-school/
 
 # Future Development
 
-The Elementary School Portal will continue to grow with:
+The Elementary School will continue growing with:
 
-- Complete grade-level curricula
-- Interactive classroom activities
-- Virtual science laboratories
+- Complete K–5 curriculum libraries
+- Interactive learning games
+- Virtual science labs
 - Reading libraries
-- Educational games
-- Personalized learning paths
-- Family dashboards
 - Student portfolios
-- Achievement systems
+- Personalized learning plans
+- Parent dashboards
+- Teacher workspaces
 - AI-supported tutoring
-- Translation support
+- Translation tools
 - International curriculum alignment
 
 ---
 
 # Connected Learning Network
 
-The Elementary School Portal is part of the **Khaemenes Academy** and the broader **Verve N Veda Educational Network**.
+The Elementary School is part of the **Khaemenes Academy™** and the **Verve N Veda Educational Network**.
 
-Connected educational destinations include:
+Connected campuses include:
 
-- Preschool
-- Pre-K & Early Learning
+- Early Learning
+- Elementary School
 - Middle School
 - High School
 - Higher Learning
+
+Connected educational destinations include:
+
 - ARSHIF
 - The Verifier
 - Solanar
@@ -519,17 +518,15 @@ Connected educational destinations include:
 - Aurora Sanctuary
 - Educational Arcade
 
-Each destination serves a unique stage of learning while remaining connected through one unified educational ecosystem.
+Together they form one connected ecosystem supporting lifelong learning.
 
 ---
 
 # Long-Term Vision
 
-The Elementary School Portal is being developed as a complete digital elementary school where children can explore, discover, and build the academic foundations that will support them throughout life.
+The Elementary School Portal is being developed as a complete digital elementary school that inspires children to become confident readers, thoughtful problem-solvers, creative thinkers, compassionate citizens, and lifelong learners.
 
-The goal is not simply to teach subjects, but to nurture confident learners who enjoy reading, solving problems, helping others, creating, and asking meaningful questions.
-
-The long-term vision is to create one of the world's most comprehensive free elementary education platforms for homeschool families, classrooms, independent learners, and international communities.
+Our vision is to build one of the world's most comprehensive free elementary education platforms—serving homeschool families, classrooms, independent learners, and educational communities across the globe.
 
 ---
 
@@ -543,6 +540,6 @@ Copyright © Jennifer Pearl and Autumn Pearl.
 
 All rights reserved.
 
-Developed through the PLERA educational framework.
+Developed through the PLERA Educational Framework.
 
-*"Great journeys begin with strong foundations, curious minds, and the joy of discovering something new every day."*
+*"In every Kinder Garden, kindness is planted, curiosity is watered, and every child is given room to bloom."*
