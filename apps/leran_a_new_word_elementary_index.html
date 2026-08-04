@@ -1,0 +1,1357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Learn a New Word — Enchanted Word Garden</title>
+<style>
+  :root{
+    --bg:#fdf5e6;
+    --panel:#fffaf3;
+    --ink:#24303a;
+    --muted:#6b7280;
+    --accent:#f59e0b;
+    --accent-soft:#fde68a;
+    --success:#16a34a;
+    --glass:rgba(0,0,0,0.05);
+    --radius:16px;
+    --pad:16px;
+  }
+  html,body{
+    margin:0;
+    height:100%;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:radial-gradient(circle at top,#fef3c7,#fee2e2 40%,#e0f2fe 90%);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  .app{
+    max-width:900px;
+    margin:12px auto;
+    padding:12px;
+    box-sizing:border-box;
+  }
+  header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:18px;
+  }
+  .logo{
+    width:72px;height:72px;
+    border-radius:20px;
+    background:conic-gradient(from 210deg,#f97316,#facc15,#4ade80,#38bdf8,#a855f7,#f97316);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    position:relative;
+  }
+  .logo-inner{
+    width:66px;height:66px;
+    border-radius:18px;
+    background:#fffaf3;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-size:5px;font-weight:444;color:#92400e;
+    text-align:center;padding:4px;box-sizing:border-box;
+  }
+  h1{
+    margin:0;
+    font-size:1.55rem;
+    letter-spacing:0.03em;
+  }
+  .lead{
+    margin:2px 0 0;
+    font-size:0.92rem;
+    color:var(--muted);
+  }
+
+  /* Layout */
+  .grid{
+    display:grid;
+    grid-template-columns: minmax(0,2.1fr) minmax(0,1.4fr);
+    gap:14px;
+  }
+  @media(max-width:640px){
+    .grid{grid-template-columns:1fr;}
+  }
+
+  .card{
+    background:var(--panel);
+    border-radius:var(--radius);
+    padding:var(--pad);
+    box-shadow:0 14px 30px rgba(15,23,42,0.08);
+    border:1px solid var(--glass);
+  }
+
+  /* Main word area */
+  .word-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+  }
+  .word-main{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+  }
+  .word-title{
+    font-family:"Georgia","Times New Roman",serif;
+    font-size:2.2rem;
+    line-height:1;
+    letter-spacing:0.02em;
+  }
+  .pron{
+    font-size:0.86rem;
+    color:var(--muted);
+    margin-top:4px;
+  }
+  .word-id{
+    font-size:0.75rem;
+    color:var(--muted);
+  }
+  .meta{
+    margin-top:6px;
+    font-size:0.8rem;
+    color:var(--muted);
+  }
+  .definition{
+    margin-top:10px;
+    font-size:0.94rem;
+  }
+  .simple{
+    margin-top:6px;
+    font-size:0.94rem;
+    color:#374151;
+  }
+  .example{
+    margin-top:8px;
+    font-size:0.9rem;
+    color:#4b5563;
+    font-style:italic;
+  }
+
+  .chips-row{
+    margin-top:6px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+  }
+  .chip{
+    padding:4px 7px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.9);
+    border:1px solid rgba(0,0,0,0.05);
+    font-size:0.75rem;
+    color:#6b7280;
+  }
+
+  .actions-row{
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  button.btn{
+    border-radius:999px;
+    border:1px solid rgba(15,23,42,0.08);
+    padding:7px 11px;
+    font-size:0.9rem;
+    cursor:pointer;
+    background:#ffffff;
+    color:#111827;
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    box-shadow:0 6px 18px rgba(15,23,42,0.08);
+  }
+  button.btn.primary{
+    background:linear-gradient(135deg,#f59e0b,#f97316);
+    color:white;
+    border:none;
+  }
+  button.btn.small{
+    padding:6px 9px;
+    font-size:0.8rem;
+  }
+
+  /* Side card */
+  .side h3{
+    margin:0 0 6px;
+    font-size:1rem;
+  }
+  .side-section{
+    margin-top:10px;
+  }
+  .smallmuted{
+    font-size:0.8rem;
+    color:var(--muted);
+  }
+
+  .searchbox{
+    width:100%;
+    padding:7px 10px;
+    border-radius:999px;
+    border:1px solid rgba(15,23,42,0.12);
+    font-size:0.9rem;
+    box-sizing:border-box;
+  }
+  .results{
+    margin-top:6px;
+    max-height:200px;
+    overflow:auto;
+    background:#ffffff;
+    border-radius:12px;
+    border:1px solid rgba(15,23,42,0.08);
+  }
+  .result-item{
+    display:block;
+    width:100%;
+    padding:7px 9px;
+    text-align:left;
+    font-size:0.86rem;
+    background:transparent;
+    border:0;
+    border-bottom:1px solid rgba(148,163,184,0.3);
+    cursor:pointer;
+  }
+  .result-item:last-child{border-bottom:none;}
+  .result-item:hover{background:#f9fafb;}
+  .result-word{font-weight:600;}
+  .result-meta{font-size:0.75rem;color:var(--muted);margin-top:2px;}
+  .result-def{font-size:0.8rem;margin-top:3px;}
+
+  /* Quiz */
+  .quiz-option{
+    display:block;
+    width:100%;
+    text-align:left;
+    margin-top:6px;
+    padding:7px 9px;
+    border-radius:12px;
+    border:1px solid rgba(148,163,184,0.5);
+    background:#ffffff;
+    font-size:0.86rem;
+    cursor:pointer;
+  }
+  .quiz-option.correct{
+    border-color:var(--success);
+    box-shadow:0 0 0 1px var(--success);
+  }
+  .quiz-option.wrong{
+    border-color:#ef4444;
+    opacity:0.92;
+  }
+
+  footer{
+    margin-top:10px;
+    text-align:center;
+    font-size:0.8rem;
+    color:var(--muted);
+  }
+
+  /* Tiny badge + stats */
+  .badge{
+    display:inline-block;
+    padding:3px 7px;
+    border-radius:999px;
+    background:var(--accent-soft);
+    color:#92400e;
+    font-size:0.75rem;
+    font-weight:600;
+  }
+
+  /* ==============================
+     ENCHANTED WORD GARDEN THEME
+     ============================== */
+  :root{
+    --bg:#f6efff;
+    --panel:rgba(255,253,248,.94);
+    --ink:#342a49;
+    --muted:#756c83;
+    --accent:#8664d2;
+    --accent-soft:#eadfff;
+    --success:#3eb276;
+    --glass:rgba(64,44,88,.08);
+    --radius:28px;
+    --pad:18px;
+    --rose:#e975a4;
+    --mint:#70d1af;
+    --sky:#6dbfe5;
+    --gold:#f2ca63;
+  }
+
+  html,body{
+    min-height:100%;
+    height:auto;
+  }
+
+  body{
+    background:
+      radial-gradient(circle at 12% 13%,rgba(255,255,255,.92) 0 5%,transparent 6%),
+      radial-gradient(circle at 87% 14%,rgba(255,255,255,.74) 0 4%,transparent 5%),
+      linear-gradient(145deg,#f8edff 0%,#e8f8ff 43%,#fff2d2 100%);
+  }
+
+  .app{
+    max-width:1050px;
+    margin:22px auto;
+    padding:16px;
+  }
+
+  header{
+    position:relative;
+    overflow:hidden;
+    padding:22px;
+    border-radius:30px;
+    color:white;
+    background:
+      radial-gradient(circle at 18% 22%,rgba(255,255,255,.18),transparent 22%),
+      linear-gradient(135deg,#503a83,#8664d2,#d7659c);
+    box-shadow:0 20px 50px rgba(62,42,86,.18);
+  }
+
+  header::after{
+    content:"🌸  ✨  🌿  📚";
+    position:absolute;
+    right:20px;
+    bottom:12px;
+    font-size:1.25rem;
+    opacity:.7;
+    letter-spacing:.3rem;
+  }
+
+  .logo{
+    flex:0 0 auto;
+    background:conic-gradient(from 210deg,#f1ca62,#e975a4,#70d1af,#6dbfe5,#9d77de,#f1ca62);
+    box-shadow:0 12px 28px rgba(31,20,49,.22);
+  }
+
+  .logo-inner{
+    background:#fffdf8;
+    color:#654293;
+  }
+
+  h1{
+    font-size:clamp(1.6rem,4vw,2.45rem);
+    letter-spacing:-.02em;
+  }
+
+  .lead{
+    color:#f4edff;
+    font-size:.98rem;
+  }
+
+  .grid{
+    grid-template-columns:minmax(0,1.6fr) minmax(290px,.85fr);
+    gap:16px;
+  }
+
+  .card{
+    border-radius:28px;
+    border:1px solid rgba(255,255,255,.95);
+    box-shadow:0 18px 44px rgba(59,39,79,.13);
+    backdrop-filter:blur(8px);
+  }
+
+  .word-top{
+    padding:14px;
+    border-radius:22px;
+    background:
+      radial-gradient(circle at 85% 20%,rgba(255,255,255,.8),transparent 26%),
+      linear-gradient(145deg,#fff7d7,#f2ebff,#e7fbf5);
+  }
+
+  .word-main{
+    min-width:0;
+  }
+
+  .word-emoji{
+    font-size:4.6rem;
+    line-height:1;
+    margin-bottom:8px;
+    filter:drop-shadow(0 10px 10px rgba(75,52,96,.14));
+  }
+
+  .word-title{
+    color:#5c3d8e;
+    font-family:"Comic Sans MS","Trebuchet MS","Segoe Print",system-ui,sans-serif;
+    font-size:clamp(1.55rem,5.2vw,3.35rem);
+    font-weight:900;
+    line-height:1.05;
+    letter-spacing:-.025em;
+    white-space:nowrap;
+    overflow:visible;
+    overflow-wrap:normal;
+    word-break:normal;
+    max-width:100%;
+  }
+
+  .pron{
+    color:#9161aa;
+    font-weight:700;
+  }
+
+  .definition{
+    margin-top:16px;
+    padding:14px;
+    border-radius:18px;
+    background:#fffaf0;
+    border-left:6px solid var(--gold);
+    font-size:1.02rem;
+    line-height:1.55;
+  }
+
+  .simple{
+    padding:12px 14px;
+    border-radius:18px;
+    background:#effcf7;
+    border-left:6px solid var(--mint);
+    line-height:1.5;
+  }
+
+  .example{
+    padding:12px 14px;
+    border-radius:18px;
+    background:#eef8ff;
+    border-left:6px solid var(--sky);
+    line-height:1.5;
+  }
+
+  .chip{
+    background:#fff;
+    border:1px solid #e6dcef;
+    color:#6a4f82;
+    font-weight:700;
+  }
+
+  button.btn{
+    border-radius:999px;
+    padding:9px 13px;
+    font-weight:750;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+
+  button.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 9px 20px rgba(56,37,78,.14);
+  }
+
+  button.btn.primary{
+    background:linear-gradient(135deg,#8664d2,#d7659c);
+  }
+
+  .side h3{
+    color:#5b3e82;
+    font-size:1.05rem;
+  }
+
+  .searchbox{
+    padding:10px 13px;
+    border:2px solid #e2d9ec;
+    outline:none;
+  }
+
+  .searchbox:focus{
+    border-color:var(--sky);
+    box-shadow:0 0 0 4px rgba(109,191,229,.16);
+  }
+
+  .results{
+    border-radius:16px;
+  }
+
+  .result-item:hover{
+    background:#f6efff;
+  }
+
+  .quiz-option{
+    border-radius:16px;
+    padding:10px 12px;
+    line-height:1.4;
+  }
+
+  footer{
+    margin-top:16px;
+    padding:15px 12px;
+    border-radius:18px;
+    background:rgba(255,255,255,.78);
+    border:1px solid rgba(90,60,120,.1);
+    color:#665b72;
+    line-height:1.5;
+  }
+
+  footer strong{
+    color:#503a76;
+  }
+
+  @media(max-width:700px){
+    header{
+      text-align:center;
+      flex-direction:column;
+    }
+    header::after{
+      position:static;
+      display:block;
+      margin-top:10px;
+    }
+    .word-top{
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+    }
+    .word-top > div:last-child{
+      text-align:center!important;
+    }
+  }
+
+</style>
+</head>
+<body>
+<div class="app" role="application" aria-label="Learn a New Word Enchanted Word Garden">
+  <header>
+    <div class="logo">
+      <div class="logo-inner" aria-hidden="true">
+        <div style="font-size:24px;line-height:1;">🌿</div>
+       
+      </div>
+    </div>
+    <div>
+      <h1>Learn a New Word <br> Enchanted Word Garden</h1>
+      <p class="lead">Discover one beautiful, curious, and imaginative word at a time.</p>
+    </div>
+  </header>
+
+  <main class="grid">
+    <!-- MAIN -->
+    <section class="card" id="mainCard" aria-live="polite">
+      <div class="word-top">
+        <div class="word-main">
+          <div class="word-emoji" id="wordEmoji" aria-hidden="true">✨</div>
+          <div class="word-title" id="wordText">—</div>
+          <div class="pron" id="pronText"></div>
+          <div class="word-id" id="wordIdLine"></div>
+          <div class="meta" id="metaInfo"></div>
+        </div>
+        <div style="text-align:right;">
+          <div class="smallmuted">Today’s word</div>
+          <div class="smallmuted" id="dateLabel"></div>
+          <button class="btn small" id="dailyButton" style="margin-top:6px;">🌞 Show Today</button>
+        </div>
+      </div>
+
+      <div class="definition" id="definition">Tap “Show Today” to see your word.</div>
+      <div class="simple" id="simpleDef"></div>
+      <div class="example" id="exampleText"></div>
+
+      <div class="chips-row" id="synonymsWrap"></div>
+
+      <div class="actions-row">
+        <button class="btn primary" id="hearBtn">🔊 Hear it</button>
+        <button class="btn" id="markLearnedBtn">✅ I learned it</button>
+        <button class="btn" id="favBtn">⭐ Save to favorites</button>
+        <button class="btn" id="nextBtn">🎲 Surprise me</button>
+      </div>
+
+      <hr style="margin:12px 0;border:none;border-top:1px solid rgba(148,163,184,0.4);" />
+
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;">
+          <h3 style="margin:0;font-size:0.98rem;">Mini Quiz</h3>
+          <span class="badge">1 question</span>
+        </div>
+        <p class="smallmuted" id="quizQuestion" style="margin-top:6px;">
+          Tap “Start Quiz” to check a word.
+        </p>
+        <div id="quizOptions"></div>
+        <div style="margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+          <button class="btn small" id="startQuizBtn">Start Quiz</button>
+          <button class="btn small" id="nextQuestionBtn">Next Question</button>
+          <span class="smallmuted" id="quizResult" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIDE -->
+    <aside class="card side">
+      <div class="side-section">
+        <h3>Search the word garden</h3>
+        <input id="searchBox" class="searchbox" placeholder="Type part of a word or meaning…" />
+        <div class="smallmuted" id="searchMeta" style="margin-top:4px;">
+          Tip: press Enter to open the best match.
+        </div>
+        <div class="results" id="searchResults" style="display:none;"></div>
+      </div>
+
+      <div class="side-section">
+        <h3>Progress</h3>
+        <div class="smallmuted">Word bank: <span id="bankCount">0</span></div>
+        <div class="smallmuted">Learned: <span id="learnedCount">0</span></div>
+        <div class="smallmuted">Favorites: <span id="favCount">0</span></div>
+      </div>
+
+      <div class="side-section">
+        <h3>Voice</h3>
+        <div class="smallmuted">Choose a voice (if your browser has any):</div>
+        <select id="voicePicker" style="margin-top:4px;width:100%;padding:6px 8px;border-radius:10px;border:1px solid rgba(148,163,184,0.7);font-size:0.86rem;">
+          <option value="">(Use browser default)</option>
+        </select>
+        <p class="smallmuted" style="margin-top:6px;">
+          Tap “Hear it” and read along with the child.
+        </p>
+      </div>
+
+      <div class="side-section">
+        <h3>Teacher note</h3>
+        <p class="smallmuted">
+          This Kids Edition only uses gentle, imaginative words. To add or change
+          words, edit the <code>KIDS_MAGIC_WORDS</code> list inside this file.
+        </p>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <strong>© 2026 Verve N Veda · Khaemenes Academy · Jennifer Kay Pearl</strong><br>
+    All Rights Reserved.
+  </footer>
+</div>
+
+<script>
+/* ==============================
+   LeArnA nEw WoRd — Kids Edition
+   For Khaemenes Academy
+   - Single, hard-wired word bank
+   - LocalStorage progress
+   - Simple voice + quiz
+   ============================== */
+
+const STORAGE_KEY = 'learna_kids_progress_v1';
+
+/* 🌈 Kid-safe, imaginative word bank */
+const KIDS_MAGIC_WORDS = [
+  {
+    id:"kids-001-petrichor",
+    word:"petrichor",
+    pronunciation:"PET-rih-kor",
+    partOfSpeech:"noun",
+    definition:"The gentle, earthy smell that rises from the ground after rain.",
+    simpleDefinition:"That wonderful “rain on dry ground” smell.",
+    example:"After the summer storm, the petrichor made the playground feel brand new.",
+    synonyms:["rain-scent","earthy smell"],
+    origin:"From Greek words meaning “stone” and “the blood of the gods.”",
+    tags:["nature","cozy","kids"]
+  },
+  {
+    id:"kids-002-psithurism",
+    word:"psithurism",
+    pronunciation:"SITH-yuh-riz-um",
+    partOfSpeech:"noun",
+    definition:"The soft sound of wind whispering through trees and leaves.",
+    simpleDefinition:"The whisper of wind in the leaves.",
+    example:"They listened to the psithurism of the forest as they walked the trail.",
+    synonyms:["rustle","whisper"],
+    origin:"From Greek, meaning “to whisper.”",
+    tags:["nature","sound","kids"]
+  },
+  {
+    id:"kids-003-susurrus",
+    word:"susurrus",
+    pronunciation:"soo-SUR-us",
+    partOfSpeech:"noun",
+    definition:"A soft, gentle whispering or rustling sound.",
+    simpleDefinition:"A soft hushy sound, like quiet waves or leaves.",
+    example:"The susurrus of the ocean helped her fall asleep.",
+    synonyms:["murmur","hush"],
+    origin:"From Latin, meaning “a whisper.”",
+    tags:["sound","soft"]
+  },
+  {
+    id:"kids-004-alpenglow",
+    word:"alpenglow",
+    pronunciation:"AL-pen-gloh",
+    partOfSpeech:"noun",
+    definition:"The pink or golden light that shines on mountains at sunrise or sunset.",
+    simpleDefinition:"The pink glow on mountains when the sun is low.",
+    example:"The campers watched the alpenglow paint the peaks with warm light.",
+    synonyms:["rosy glow","mountain light"],
+    origin:"From German words for “alps” and “glow.”",
+    tags:["sky","light","nature"]
+  },
+  {
+    id:"kids-005-lambent",
+    word:"lambent",
+    pronunciation:"LAM-bent",
+    partOfSpeech:"adjective",
+    definition:"Softly glowing or flickering, like a small friendly flame.",
+    simpleDefinition:"Softly shining.",
+    example:"Lambent lanterns lit the path through the garden.",
+    synonyms:["glowing","gentle light"],
+    origin:"From Latin for “to lick” or “to glide,” like light sliding over things.",
+    tags:["light","cozy"]
+  },
+  {
+    id:"kids-006-serendipity",
+    word:"serendipity",
+    pronunciation:"seh-ren-DIP-ih-tee",
+    partOfSpeech:"noun",
+    definition:"A happy surprise or good thing that you find without looking for it.",
+    simpleDefinition:"A lucky, happy surprise.",
+    example:"Finding the perfect library book by accident felt like serendipity.",
+    synonyms:["happy accident","good luck"],
+    origin:"Coined from a fairy-tale about “The Three Princes of Serendip.”",
+    tags:["happy","feeling"]
+  },
+  {
+    id:"kids-007-mellifluous",
+    word:"mellifluous",
+    pronunciation:"meh-LIFF-loo-us",
+    partOfSpeech:"adjective",
+    definition:"Having a smooth, sweet, and musical sound.",
+    simpleDefinition:"So smooth it sounds like honey.",
+    example:"Her mellifluous singing filled the room with warmth.",
+    synonyms:["sweet-sounding","musical"],
+    origin:"From Latin words for “honey” and “flowing.”",
+    tags:["sound","music"]
+  },
+  {
+    id:"kids-008-gossamer",
+    word:"gossamer",
+    pronunciation:"GOSS-uh-mer",
+    partOfSpeech:"adjective",
+    definition:"Very light, thin, and delicate, like a spiderweb or fairy wings.",
+    simpleDefinition:"As light as a whisper and almost see-through.",
+    example:"She wore a gossamer scarf that floated in the breeze.",
+    synonyms:["delicate","filmy"],
+    origin:"Old English for “goose summer,” a time of fine webs in the air.",
+    tags:["texture","light"]
+  },
+  {
+    id:"kids-009-diaphanous",
+    word:"diaphanous",
+    pronunciation:"dye-AF-uh-nus",
+    partOfSpeech:"adjective",
+    definition:"So light and thin that you can almost see through it.",
+    simpleDefinition:"Very light and almost see-through.",
+    example:"Morning sun shone through the diaphanous curtains.",
+    synonyms:["sheer","delicate"],
+    origin:"From Greek words meaning “to show through.”",
+    tags:["light","visual"]
+  },
+  {
+    id:"kids-010-euphony",
+    word:"euphony",
+    pronunciation:"YOO-fuh-nee",
+    partOfSpeech:"noun",
+    definition:"A pleasing, beautiful combination of sounds.",
+    simpleDefinition:"When sounds fit together and feel nice to hear.",
+    example:"The choir’s song was pure euphony.",
+    synonyms:["harmony","pleasant sound"],
+    origin:"From Greek for “good sound.”",
+    tags:["sound","music"]
+  },
+  {
+    id:"kids-011-auroral",
+    word:"auroral",
+    pronunciation:"uh-ROHR-uhl",
+    partOfSpeech:"adjective",
+    definition:"Glowing like sunrise or like the northern lights in the sky.",
+    simpleDefinition:"Looking like a colorful dawn.",
+    example:"The sky had an auroral glow of pink and gold.",
+    synonyms:["dawn-like","rosy"],
+    origin:"From Latin for “dawn.”",
+    tags:["sky","light"]
+  },
+  {
+    id:"kids-012-sylvan",
+    word:"sylvan",
+    pronunciation:"SIL-vuhn",
+    partOfSpeech:"adjective",
+    definition:"Having to do with forests, trees, and woodland places.",
+    simpleDefinition:"Woodsy and full of trees.",
+    example:"They walked along a sylvan path shaded by tall pines.",
+    synonyms:["woodland","forest"],
+    origin:"From Latin for “wood” or “forest.”",
+    tags:["nature","forest"]
+  },
+  {
+    id:"kids-013-opalescent",
+    word:"opalescent",
+    pronunciation:"oh-puh-LES-unt",
+    partOfSpeech:"adjective",
+    definition:"Showing soft, shifting colors like an opal stone.",
+    simpleDefinition:"Shimmery colors that change when you move.",
+    example:"The bubbles looked opalescent in the sunlight.",
+    synonyms:["iridescent","shimmery"],
+    origin:"From “opal,” a gemstone with rainbow colors.",
+    tags:["color","light"]
+  },
+  {
+    id:"kids-014-lucent",
+    word:"lucent",
+    pronunciation:"LOO-sent",
+    partOfSpeech:"adjective",
+    definition:"Glowing softly with light.",
+    simpleDefinition:"Gently shining.",
+    example:"Fireflies made the garden lucent in the dark.",
+    synonyms:["luminous","glowing"],
+    origin:"From Latin for “light.”",
+    tags:["light","night"]
+  },
+  {
+    id:"kids-015-stelliferous",
+    word:"stelliferous",
+    pronunciation:"stel-LIF-er-us",
+    partOfSpeech:"adjective",
+    definition:"Full of stars.",
+    simpleDefinition:"Packed with stars everywhere.",
+    example:"They lay on a blanket under a stelliferous sky.",
+    synonyms:["starry","sparkling"],
+    origin:"From Latin for “star-bearing.”",
+    tags:["sky","night"]
+  },
+  {
+    id:"kids-016-niveous",
+    word:"niveous",
+    pronunciation:"NIV-ee-us",
+    partOfSpeech:"adjective",
+    definition:"Snowy or white like snow.",
+    simpleDefinition:"Snow-white.",
+    example:"The hill was covered in a niveous blanket.",
+    synonyms:["snowy","white"],
+    origin:"From Latin for “snow.”",
+    tags:["winter","color"]
+  },
+  {
+    id:"kids-017-whimsy",
+    word:"whimsy",
+    pronunciation:"WIM-zee",
+    partOfSpeech:"noun",
+    definition:"Playful, imaginative behavior or ideas.",
+    simpleDefinition:"Fun ideas that pop into your mind.",
+    example:"The drawing was full of whimsy and bright colors.",
+    synonyms:["playfulness","fancy"],
+    origin:"From words meaning “fanciful thought.”",
+    tags:["feeling","play"]
+  },
+  {
+    id:"kids-018-zephyr",
+    word:"zephyr",
+    pronunciation:"ZEFF-er",
+    partOfSpeech:"noun",
+    definition:"A gentle, light breeze.",
+    simpleDefinition:"A soft little wind.",
+    example:"A warm zephyr carried the smell of flowers.",
+    synonyms:["breeze","soft wind"],
+    origin:"From the name of a gentle wind god in Greek stories.",
+    tags:["nature","wind"]
+  },
+  {
+    id:"kids-019-daydream",
+    word:"daydream",
+    pronunciation:"DAY-dreem",
+    partOfSpeech:"verb / noun",
+    definition:"To imagine pleasant things while you are awake; the dream itself.",
+    simpleDefinition:"A happy pretend story in your mind.",
+    example:"She liked to daydream about flying through space.",
+    synonyms:["fantasy","imagination"],
+    origin:"From “day” + “dream.”",
+    tags:["imagination","kids"]
+  },
+  {
+    id:"kids-020-luminous",
+    word:"luminous",
+    pronunciation:"LOO-muh-nus",
+    partOfSpeech:"adjective",
+    definition:"Giving off light; softly shining.",
+    simpleDefinition:"Glowing with gentle light.",
+    example:"The moon looked luminous behind the clouds.",
+    synonyms:["bright","shining"],
+    origin:"From Latin for “light.”",
+    tags:["light","sky"]
+  },
+  {
+    id:"kids-021-twinkle",
+    word:"twinkle",
+    pronunciation:"TWIN-kul",
+    partOfSpeech:"verb / noun",
+    definition:"To shine with small, quick flashes of light; the sparkle itself.",
+    simpleDefinition:"To sparkle like a little star.",
+    example:"They watched the stars twinkle above the campsite.",
+    synonyms:["sparkle","glitter"],
+    origin:"From an old word meaning “to wink.”",
+    tags:["light","stars","kids"]
+  },
+  {
+    id:"kids-022-cosmic",
+    word:"cosmic",
+    pronunciation:"KOZ-mik",
+    partOfSpeech:"adjective",
+    definition:"Relating to the universe, outer space, or very big ideas.",
+    simpleDefinition:"About space and the whole universe.",
+    example:"They had a cosmic conversation about how big space is.",
+    synonyms:["universal","galactic"],
+    origin:"From Greek for “order” or “world.”",
+    tags:["space","big ideas"]
+  },
+  {
+    id:"kids-023-buoyant",
+    word:"buoyant",
+    pronunciation:"BOY-unt",
+    partOfSpeech:"adjective",
+    definition:"Able to float; also cheerful and full of energy.",
+    simpleDefinition:"Bouncy on water or in mood.",
+    example:"Her buoyant laugh made everyone smile.",
+    synonyms:["cheerful","floaty"],
+    origin:"From French/Latin words for “to float.”",
+    tags:["feeling","water"]
+  },
+  {
+    id:"kids-024-hush",
+    word:"hush",
+    pronunciation:"HUSH",
+    partOfSpeech:"verb / noun",
+    definition:"To become quiet; a gentle quietness.",
+    simpleDefinition:"A soft, calm quiet.",
+    example:"A hush fell over the classroom before the story.",
+    synonyms:["quiet","stillness"],
+    origin:"Imitative of a gentle “shh” sound.",
+    tags:["sound","calm"]
+  },
+  {
+    id:"kids-025-glimmer",
+    word:"glimmer",
+    pronunciation:"GLIM-er",
+    partOfSpeech:"noun / verb",
+    definition:"A small, gentle light or a faint sign of something.",
+    simpleDefinition:"A tiny little light.",
+    example:"Stars gave a glimmer of light on the trail.",
+    synonyms:["gleam","tiny shine"],
+    origin:"From old words meaning “to shine faintly.”",
+    tags:["light","hope","kids"]
+  }
+];
+
+
+/* Friendly visual symbols for the enchanted word garden */
+const WORD_EMOJIS = {
+  petrichor:"🌧️", psithurism:"🍃", susurrus:"🌊", alpenglow:"🏔️",
+  lambent:"🕯️", serendipity:"🎁", mellifluous:"🎵", gossamer:"🕸️",
+  diaphanous:"🪽", euphony:"🎶", auroral:"🌌", sylvan:"🌲",
+  opalescent:"🫧", lucent:"✨", stelliferous:"🌟", niveous:"❄️",
+  whimsy:"🪄", zephyr:"🌬️", daydream:"☁️", luminous:"🌙",
+  twinkle:"⭐", cosmic:"🪐", buoyant:"🎈", hush:"🤫", glimmer:"💫"
+};
+
+function fitWordOnOneLine(){
+  const el = document.getElementById("wordText");
+  if(!el) return;
+
+  el.style.fontSize = "";
+  const container = el.parentElement;
+  if(!container) return;
+
+  const available = Math.max(120, container.clientWidth - 4);
+  let size = parseFloat(getComputedStyle(el).fontSize);
+  const minimum = window.innerWidth < 480 ? 18 : 22;
+
+  while(el.scrollWidth > available && size > minimum){
+    size -= 1;
+    el.style.fontSize = size + "px";
+  }
+}
+
+function emojiForWord(item){
+  if(WORD_EMOJIS[item.word]) return WORD_EMOJIS[item.word];
+  const tags=(item.tags||[]).join(" ").toLowerCase();
+  if(tags.includes("forest")||tags.includes("nature")) return "🌿";
+  if(tags.includes("space")||tags.includes("sky")) return "🌌";
+  if(tags.includes("sound")||tags.includes("music")) return "🎵";
+  if(tags.includes("light")||tags.includes("color")) return "✨";
+  if(tags.includes("water")) return "🌊";
+  return "📚";
+}
+
+/* ============== State ============== */
+let state = {
+  bank: KIDS_MAGIC_WORDS.slice(),
+  learned: [],
+  favorites: [],
+  settings: { voiceName: "" }
+};
+let currentIndex = 0;
+let voicesList = [];
+
+/* ============== UI refs ============== */
+const wordEmoji = document.getElementById('wordEmoji');
+const wordText = document.getElementById('wordText');
+const pronText = document.getElementById('pronText');
+const wordIdLine = document.getElementById('wordIdLine');
+const metaInfo = document.getElementById('metaInfo');
+const definition = document.getElementById('definition');
+const simpleDef = document.getElementById('simpleDef');
+const exampleText = document.getElementById('exampleText');
+const dateLabel = document.getElementById('dateLabel');
+const synonymsWrap = document.getElementById('synonymsWrap');
+
+const dailyButton = document.getElementById('dailyButton');
+const hearBtn = document.getElementById('hearBtn');
+const markLearnedBtn = document.getElementById('markLearnedBtn');
+const favBtn = document.getElementById('favBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+const bankCount = document.getElementById('bankCount');
+const learnedCount = document.getElementById('learnedCount');
+const favCount = document.getElementById('favCount');
+
+const voicePicker = document.getElementById('voicePicker');
+
+const startQuizBtn = document.getElementById('startQuizBtn');
+const nextQuestionBtn = document.getElementById('nextQuestionBtn');
+const quizQuestion = document.getElementById('quizQuestion');
+const quizOptions = document.getElementById('quizOptions');
+const quizResult = document.getElementById('quizResult');
+
+const searchBox = document.getElementById('searchBox');
+const searchMeta = document.getElementById('searchMeta');
+const searchResults = document.getElementById('searchResults');
+
+/* ============== Storage ============== */
+function loadProgress(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return;
+    const parsed = JSON.parse(raw);
+    if(Array.isArray(parsed.learned)) state.learned = parsed.learned;
+    if(Array.isArray(parsed.favorites)) state.favorites = parsed.favorites;
+    if(parsed.settings && typeof parsed.settings === 'object'){
+      state.settings = { ...state.settings, ...parsed.settings };
+    }
+  }catch(e){
+    console.warn('Could not load progress', e);
+  }
+}
+function saveProgress(){
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({
+    learned: state.learned,
+    favorites: state.favorites,
+    settings: state.settings
+  }));
+}
+
+/* ============== Helpers ============== */
+function escapeHtml(s){
+  return String(s||"")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+}
+function normalize(s){ return String(s||"").toLowerCase().trim(); }
+function shuffle(arr){
+  for(let i=arr.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]]=[arr[j],arr[i]];
+  }
+}
+function indexForToday(){
+  if(!state.bank.length) return 0;
+  const now = new Date();
+  const start = new Date(now.getFullYear(),0,1);
+  const day = Math.floor((now - start)/(24*60*60*1000));
+  return day % state.bank.length;
+}
+
+/* ============== Voices ============== */
+function setupVoices(){
+  if(!('speechSynthesis' in window)) {
+    voicePicker.innerHTML = '<option value="">(Speech not supported)</option>';
+    hearBtn.disabled = true;
+    return;
+  }
+  voicesList = speechSynthesis.getVoices() || [];
+  voicePicker.innerHTML = '<option value="">(Use browser default)</option>';
+  voicesList.forEach((v,i)=>{
+    const opt = document.createElement('option');
+    opt.value = String(i);
+    opt.textContent = v.name + (v.lang ? " ("+v.lang+")" : "");
+    voicePicker.appendChild(opt);
+  });
+  if(state.settings.voiceName){
+    const idx = voicesList.findIndex(v=>v.name===state.settings.voiceName);
+    if(idx>=0) voicePicker.value = String(idx);
+  }
+}
+if('speechSynthesis' in window){
+  speechSynthesis.onvoiceschanged = setupVoices;
+}
+function speakText(text){
+  if(!text || !('speechSynthesis' in window)) return;
+  const u = new SpeechSynthesisUtterance(text);
+  const idx = voicePicker.value;
+  if(idx !== "" && voicesList[Number(idx)]){
+    u.voice = voicesList[Number(idx)];
+  }
+  u.lang = 'en-US';
+  u.rate = 0.95;
+  u.pitch = 1.02;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}
+
+/* ============== UI render ============== */
+function refreshCounts(){
+  bankCount.textContent = state.bank.length;
+  learnedCount.textContent = state.learned.length;
+  favCount.textContent = state.favorites.length;
+}
+function renderWord(idx){
+  if(!state.bank.length) return;
+  if(typeof idx === 'number') currentIndex = idx;
+  if(currentIndex<0) currentIndex = 0;
+  if(currentIndex>=state.bank.length) currentIndex = state.bank.length-1;
+  const w = state.bank[currentIndex];
+
+  wordEmoji.textContent = emojiForWord(w);
+  wordText.textContent = w.word || "—";
+  requestAnimationFrame(fitWordOnOneLine);
+  pronText.textContent = w.pronunciation ? "/"+w.pronunciation+"/" : "";
+  wordIdLine.textContent = w.id ? "Word ID: "+w.id : "";
+  const tags = (w.tags||[]).join(", ");
+  metaInfo.textContent =
+    (w.partOfSpeech || "—") +
+    (tags ? " · "+tags : "");
+
+  definition.textContent = w.definition || "";
+  simpleDef.textContent = w.simpleDefinition
+    ? "In kid-friendly words: " + w.simpleDefinition
+    : "";
+  exampleText.textContent = w.example
+    ? "“" + w.example + "”"
+    : "";
+
+  // synonyms
+  synonymsWrap.innerHTML = "";
+  const syns = (w.synonyms||[]).slice(0,6);
+  if(syns.length){
+    const label = document.createElement('div');
+    label.className = 'smallmuted';
+    label.textContent = 'Synonyms & word-friends:';
+    synonymsWrap.appendChild(label);
+    const row = document.createElement('div');
+    row.className = 'chips-row';
+    syns.forEach(s=>{
+      const span = document.createElement('span');
+      span.className = 'chip';
+      span.textContent = s;
+      row.appendChild(span);
+    });
+    synonymsWrap.appendChild(row);
+  }
+
+  // buttons
+  markLearnedBtn.textContent = state.learned.includes(w.word)
+    ? "✅ Learned"
+    : "✅ I learned it";
+  favBtn.textContent = state.favorites.includes(w.word)
+    ? "⭐ In favorites"
+    : "⭐ Save to favorites";
+
+  // date
+  const today = new Date();
+  dateLabel.textContent = today.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
+}
+
+/* ============== Search ============== */
+function scoreMatch(item, q){
+  if(!q) return 0;
+  const w = normalize(item.word);
+  const d = normalize(item.definition);
+  const t = normalize((item.tags||[]).join(" "));
+  const id = normalize(item.id);
+  let s = 0;
+  if(w === q) s+=100;
+  if(w.startsWith(q)) s+=60;
+  if(w.includes(q)) s+=40;
+  if(d.includes(q)) s+=25;
+  if(t.includes(q)) s+=15;
+  if(id.includes(q)) s+=10;
+  return s;
+}
+function renderSearchResults(q){
+  const query = normalize(q);
+  if(!query){
+    searchResults.style.display = "none";
+    searchResults.innerHTML = "";
+    searchMeta.textContent = "Tip: press Enter to open the best match.";
+    return;
+  }
+  const scored = [];
+  state.bank.forEach((w,i)=>{
+    const s = scoreMatch(w, query);
+    if(s>0) scored.push({i,s});
+  });
+  scored.sort((a,b)=>b.s-a.s);
+  const top = scored.slice(0,20);
+
+  if(!top.length){
+    searchResults.style.display = "none";
+    searchResults.innerHTML = "";
+    searchMeta.textContent = "No matches for “"+q+"”. Try a different word.";
+    return;
+  }
+
+  searchResults.style.display = "block";
+  searchResults.innerHTML = "";
+  searchMeta.textContent = "Found "+scored.length+" match(es). Showing top "+top.length+".";
+
+  top.forEach(({i})=>{
+    const w = state.bank[i];
+    const btn = document.createElement('button');
+    btn.type = "button";
+    btn.className = "result-item";
+    btn.innerHTML = `
+      <div class="result-word">${escapeHtml(w.word)}</div>
+      <div class="result-meta">${escapeHtml(w.partOfSpeech || "—")}</div>
+      <div class="result-def">${escapeHtml((w.definition||"").slice(0,90))}${(w.definition||"").length>90?"…":""}</div>
+    `;
+    btn.addEventListener('click', ()=>{
+      renderWord(i);
+      searchResults.style.display = "none";
+      searchResults.innerHTML = "";
+      searchMeta.textContent = "Tip: press Enter to open the best match.";
+      searchBox.blur();
+    });
+    searchResults.appendChild(btn);
+  });
+}
+
+/* ============== Quiz ============== */
+function startQuiz(){
+  quizResult.textContent = "";
+  quizOptions.innerHTML = "";
+  if(!state.bank.length){
+    quizQuestion.textContent = "No words in the bank.";
+    return;
+  }
+  const correctIdx = Math.floor(Math.random()*state.bank.length);
+  const correct = state.bank[correctIdx];
+  const correctDef = correct.definition || "";
+  quizQuestion.textContent = 'What does "'+correct.word+'" mean?';
+
+  const choices = [correctDef];
+  const pool = state.bank.filter((_,i)=>i!==correctIdx && state.bank[i].definition);
+  shuffle(pool);
+  for(let i=0;i<3 && i<pool.length;i++){
+    choices.push(pool[i].definition);
+  }
+  shuffle(choices);
+
+  choices.forEach(ch=>{
+    const btn = document.createElement('button');
+    btn.type = "button";
+    btn.className = "quiz-option";
+    btn.textContent = ch;
+    btn.addEventListener('click', ()=>{
+      Array.from(quizOptions.children).forEach(c=>c.disabled = true);
+      if(ch === correctDef){
+        btn.classList.add('correct');
+        quizResult.textContent = "Nice! That’s correct. 🌟";
+        if(!state.learned.includes(correct.word)){
+          state.learned.push(correct.word);
+          saveProgress();
+          refreshCounts();
+        }
+      } else {
+        btn.classList.add('wrong');
+        Array.from(quizOptions.children).forEach(c=>{
+          if(c.textContent === correctDef) c.classList.add('correct');
+        });
+        quizResult.textContent = "Good try! The correct meaning is highlighted in green.";
+      }
+    });
+    quizOptions.appendChild(btn);
+  });
+}
+
+/* ============== Events ============== */
+dailyButton.addEventListener('click', ()=>renderWord(indexForToday()));
+nextBtn.addEventListener('click', ()=>{
+  if(!state.bank.length) return;
+  const idx = Math.floor(Math.random()*state.bank.length);
+  renderWord(idx);
+});
+hearBtn.addEventListener('click', ()=>{
+  if(!state.bank.length) return;
+  const w = state.bank[currentIndex];
+  const text = `${w.word}. ${w.pronunciation ? "Pronounced " + w.pronunciation + ". " : ""} ${w.definition || ""}`;
+  speakText(text);
+});
+markLearnedBtn.addEventListener('click', ()=>{
+  if(!state.bank.length) return;
+  const w = state.bank[currentIndex];
+  if(!state.learned.includes(w.word)){
+    state.learned.push(w.word);
+  }else{
+    state.learned = state.learned.filter(x=>x!==w.word);
+  }
+  saveProgress();
+  refreshCounts();
+  renderWord();
+});
+favBtn.addEventListener('click', ()=>{
+  if(!state.bank.length) return;
+  const w = state.bank[currentIndex];
+  if(!state.favorites.includes(w.word)){
+    state.favorites.push(w.word);
+  }else{
+    state.favorites = state.favorites.filter(x=>x!==w.word);
+  }
+  saveProgress();
+  refreshCounts();
+  renderWord();
+});
+
+voicePicker.addEventListener('change', ()=>{
+  const idx = voicePicker.value;
+  if(idx !== "" && voicesList[Number(idx)]){
+    state.settings.voiceName = voicesList[Number(idx)].name;
+  }else{
+    state.settings.voiceName = "";
+  }
+  saveProgress();
+});
+
+searchBox.addEventListener('input', ()=>renderSearchResults(searchBox.value));
+searchBox.addEventListener('keydown', (e)=>{
+  if(e.key === "Enter"){
+    e.preventDefault();
+    const first = searchResults.querySelector('.result-item');
+    if(first) first.click();
+  }
+});
+
+startQuizBtn.addEventListener('click', startQuiz);
+nextQuestionBtn.addEventListener('click', startQuiz);
+
+/* ============== Init ============== */
+function init(){
+  loadProgress();
+  refreshCounts();
+  setupVoices();
+  const now = new Date();
+  dateLabel.textContent = now.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
+  if(state.bank.length){
+    renderWord(indexForToday());
+    startQuiz();
+  }else{
+    definition.textContent = "No words have been loaded. Please add some to KIDS_MAGIC_WORDS.";
+  }
+}
+init();
+setTimeout(setupVoices, 600);
+window.addEventListener("resize", ()=>requestAnimationFrame(fitWordOnOneLine));
+</script>
+</body>
+</html>
