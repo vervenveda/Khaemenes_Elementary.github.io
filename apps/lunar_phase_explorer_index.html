@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Sunny's Moon Adventure — a child-friendly lunar phase explorer with accurate phase names, observations, safety guidance, and local progress.">
+<title>Moon Adventure — Lunar Phase Explorer</title>
+<style>
+:root{
+--bg1:#11162f;--bg2:#2d2f58;--panel:#242849;--ink:#f6f4ff;--muted:#cbc7df;
+--primary:#aab6ff;--secondary:#c98ee0;--accent:#ffd978;--card:#30355c;--border:#5e648f;
+--good:#3cab70;--bad:#d65c6c;--shadow:0 24px 58px rgba(10,12,30,.32)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;min-height:100vh;padding:24px 14px 46px;color:var(--ink);
+font-family:"Comic Sans MS","Trebuchet MS","Arial Rounded MT Bold",system-ui,sans-serif;
+background:linear-gradient(180deg,var(--bg1),var(--bg2));transition:.35s
+}
+button,select{font:inherit}button{touch-action:manipulation}
+.wrap{width:min(1120px,100%);margin:auto}
+.hero{text-align:center;margin-bottom:16px}
+.mascot{width:82px;height:82px;margin:auto;border-radius:50%;display:grid;place-items:center;font-size:3rem;background:radial-gradient(circle,#fffbd1,#ffc84e);box-shadow:0 0 28px #ffd95d99;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-7px) rotate(2deg)}}
+h1{margin:16px auto 8px;max-width:920px;padding:0 .08em;font-size:clamp(2.4rem,6.3vw,4.8rem);line-height:1.08;letter-spacing:-.02em;color:var(--primary)}
+.subtitle{max-width:840px;margin:auto;color:var(--muted);line-height:1.72;font-size:1.02rem}
+.app{background:var(--panel);border:1px solid var(--border);border-radius:30px;padding:18px;box-shadow:var(--shadow)}
+.toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.control{background:var(--panel);border:1px solid var(--border);border-radius:17px;padding:10px}
+.control label{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900;margin-bottom:5px}
+.control select{width:100%;padding:9px;border-radius:11px;border:1px solid var(--border);background:var(--panel);color:var(--ink)}
+.notice{margin-top:11px;padding:12px 14px;border-radius:17px;background:color-mix(in srgb,var(--accent) 20%,var(--panel));border:1px solid var(--border);line-height:1.5}
+.lab{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px;margin-top:14px}
+.sky-card,.story-card{border-radius:25px;padding:17px;min-height:560px}
+.sky-card{background:var(--card);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center}
+.sky{
+position:relative;width:100%;min-height:390px;border-radius:22px;overflow:hidden;
+background:radial-gradient(circle at 50% 18%,#ffffff14,transparent 42%),linear-gradient(#10162f,#252851);
+box-shadow:inset 0 -30px 70px #0005
+}
+.star{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;animation:twinkle 1.7s infinite}
+@keyframes twinkle{50%{opacity:.2}}
+.moon-wrap{position:absolute;inset:0;display:grid;place-items:center}
+.moon{
+position:relative;width:min(230px,60vw);aspect-ratio:1;border-radius:50%;
+background:
+radial-gradient(circle at 33% 31%,#fffdf2 0 4%,transparent 5%),
+radial-gradient(circle at 63% 38%,#c8c9c7 0 7%,transparent 8%),
+radial-gradient(circle at 42% 68%,#c4c5c3 0 9%,transparent 10%),
+radial-gradient(circle at 70% 70%,#b6b7b5 0 5%,transparent 6%),
+radial-gradient(circle at 35% 35%,#f9f7e8,#d8d8d3 64%,#a9aaa8);
+box-shadow:0 0 48px 12px #fff6c555;overflow:hidden
+}
+.phase-shadow{position:absolute;inset:0;border-radius:50%;background:#0d1026;transition:clip-path .6s ease,transform .6s ease}
+.phase-name{text-align:center;font-size:clamp(1.55rem,4vw,2.2rem);font-weight:950;color:var(--primary);margin-top:10px}
+.phase-strip{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;width:100%;margin-top:10px}
+.phase-btn{border:1px solid var(--border);border-radius:12px;padding:7px 3px;background:var(--panel);color:var(--ink);cursor:pointer;font-size:1.35rem}
+.phase-btn.active{background:linear-gradient(135deg,var(--accent),var(--secondary))}
+.story-card{background:var(--panel);border:1px solid var(--border);display:flex;flex-direction:column}
+.story-card h2{margin:0;color:var(--primary);font-size:clamp(1.7rem,4vw,2.4rem)}
+.meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.pill{padding:6px 10px;border-radius:999px;background:var(--card);border:1px solid var(--border);font-size:.8rem;font-weight:900}
+.description{font-size:1.08rem;line-height:1.7;margin:13px 0}
+.box{padding:12px 14px;border-radius:17px;border:1px solid var(--border);line-height:1.5;margin-top:9px}
+.observe{background:var(--card)}.fact{background:color-mix(in srgb,var(--accent) 14%,var(--panel))}.safety{background:color-mix(in srgb,var(--secondary) 14%,var(--panel))}
+.check{margin-top:10px;padding:13px;border-radius:17px;background:var(--card);border:1px solid var(--border)}
+.options{display:grid;gap:7px;margin-top:8px}.option{border:1px solid var(--border);border-radius:12px;padding:10px;background:var(--panel);color:var(--ink);text-align:left;cursor:pointer;font-weight:900}.option.correct{background:#e3f6e8;color:#243d2d}.option.wrong{background:#ffe3e7;color:#4b2930}
+.feedback{min-height:27px;color:var(--muted);font-weight:900;margin-top:7px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:14px}.btn{border:0;border-radius:14px;padding:10px 14px;cursor:pointer;font-weight:900;background:var(--panel);color:var(--primary);box-shadow:0 5px 13px rgba(20,20,40,.18)}.btn.primary{color:#fff;background:linear-gradient(135deg,var(--secondary),var(--primary));margin-left:auto}.btn.sunny{background:linear-gradient(135deg,var(--accent),var(--secondary));color:#362b24}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:13px}.stat{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:10px;text-align:center}.stat strong{display:block;font-size:1.25rem;color:var(--primary)}
+footer{margin-top:15px;text-align:center;color:var(--muted);font-size:.82rem;line-height:1.55}footer strong{color:var(--primary)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:870px){.toolbar{grid-template-columns:repeat(2,1fr)}.lab{grid-template-columns:1fr}.sky-card,.story-card{min-height:0}}
+@media(max-width:560px){.toolbar{grid-template-columns:1fr}.phase-strip{grid-template-columns:repeat(4,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.btn.primary{margin-left:0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
+
+/* Crèche portal identity */
+.creche-header{
+  width:min(1120px,100%);
+  margin:0 auto 16px;
+  padding:11px 13px;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:12px;
+  border:1px solid var(--border);
+  border-radius:22px;
+  background:color-mix(in srgb,var(--panel) 92%,transparent);
+  box-shadow:0 10px 26px rgba(10,12,30,.18);
+}
+.creche-mark{
+  width:52px;height:52px;display:grid;place-items:center;border-radius:18px;
+  background:linear-gradient(145deg,#fff4ad,#aab6ff);font-size:1.8rem
+}
+.creche-eyebrow{margin:0;color:var(--primary);font-size:.68rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.creche-title{margin:2px 0 0;color:var(--ink);font-size:clamp(1.02rem,2.3vw,1.32rem);line-height:1.2}
+.creche-links{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.creche-link{
+  display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:8px 12px;
+  border:1px solid var(--border);border-radius:999px;background:var(--panel);color:var(--primary);
+  text-decoration:none;font-size:.78rem;font-weight:900
+}
+.creche-link.current{background:linear-gradient(135deg,var(--accent),var(--secondary));color:#362b24;border-color:transparent}
+
+/* Accurate moon additions */
+.control input[type="date"]{
+  width:100%;padding:9px;border-radius:11px;border:1px solid var(--border);
+  background:var(--panel);color:var(--ink);font-weight:900
+}
+.moon canvas{
+  width:100%;height:100%;display:block;border-radius:50%;
+  filter:drop-shadow(0 0 26px rgba(255,246,197,.35))
+}
+.phase-shadow{display:none!important}
+.accuracy-panel{
+  width:100%;
+  margin-top:10px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:7px;
+}
+.accuracy-chip{
+  min-width:0;padding:8px;border-radius:14px;background:var(--panel);
+  border:1px solid var(--border);text-align:center
+}
+.accuracy-chip strong{display:block;color:var(--primary);font-size:1rem}
+.accuracy-chip small{display:block;color:var(--muted);font-size:.68rem;line-height:1.3}
+.today-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;width:100%;margin-top:9px}
+.science-note{
+  margin-top:9px;color:var(--muted);font-size:.76rem;line-height:1.5;text-align:center
+}
+@media(max-width:720px){
+  .creche-header{grid-template-columns:auto 1fr}
+  .creche-links{grid-column:1/-1;justify-content:center}
+  .accuracy-panel{grid-template-columns:1fr}
+}
+@media(max-width:460px){
+  .creche-header{grid-template-columns:1fr;text-align:center}
+  .creche-mark{margin:auto}
+  .creche-links{grid-column:auto}
+}
+
+</style>
+</head>
+<body>
+
+<header class="creche-header" aria-label="Crèche Preschool Portal">
+  <div class="creche-mark" aria-hidden="true">🌙</div>
+  <div>
+    <p class="creche-eyebrow">Khaemenes Academy · Preschool Portal</p>
+    <div class="creche-title">The Crèche™ · Gentle Learning for Little Explorers</div>
+  </div>
+  <nav class="creche-links" aria-label="Preschool navigation">
+    <a class="creche-link" href="../index.html">🏡 Crèche Home</a>
+    <a class="creche-link current" href="#" aria-current="page">🌙 Moon Adventure</a>
+  </nav>
+</header>
+
+<main class="wrap">
+<header class="hero">
+<div class="mascot" aria-hidden="true">😊</div>
+<h1>Sunny's Moon Adventure</h1>
+<p class="subtitle">Explore the eight main lunar phases, learn why the Moon appears to change shape, and practice safe sky observation.</p>
+</header>
+
+<section class="app">
+<div class="toolbar" style="grid-template-columns:repeat(5,minmax(0,1fr))">
+<div class="control"><label for="theme">Moonwatch theme</label><select id="theme"></select></div>
+<div class="control"><label for="soundMode">Sunny's voice</label><select id="soundMode"><option value="on">On</option><option value="off">Off</option></select></div>
+<div class="control"><label for="motionMode">Star motion</label><select id="motionMode"><option value="on">On</option><option value="off">Off</option></select></div>
+<div class="control"><label for="cycleMode">Phase mode</label><select id="cycleMode">
+      <option value="today">Live selected date</option>
+      <option value="manual">Explore 8 phases</option>
+      <option value="auto">Smooth auto tour</option>
+    </select></div>
+    <div class="control"><label for="moonDate">Moon date</label><input id="moonDate" type="date"></div>
+</div>
+
+<div class="notice"><strong>Moon science:</strong> Earth’s shadow does not normally create the Moon’s phases. Phases happen because we see different portions of the Moon’s sunlit half as the Moon orbits Earth. Earth’s shadow causes a lunar eclipse.</div>
+
+<div class="lab">
+<section class="sky-card">
+<div class="sky" id="sky" aria-label="Illustrated lunar phase scene">
+<div class="moon-wrap"><div class="moon"><canvas id="moonCanvas" width="320" height="320" aria-label="Calculated Moon phase"></canvas><div class="phase-shadow" id="phaseShadow"></div></div></div>
+</div>
+<div class="phase-name" id="phaseName"></div>
+<div class="phase-strip" id="phaseStrip"></div>
+    <div class="accuracy-panel">
+      <div class="accuracy-chip"><strong id="actualIllumination">—</strong><small>Calculated illumination</small></div>
+      <div class="accuracy-chip"><strong id="moonAge">—</strong><small>Age since new moon</small></div>
+      <div class="accuracy-chip"><strong id="cyclePosition">—</strong><small>Cycle position</small></div>
+    </div>
+    <div class="today-row">
+      <button class="btn sunny" id="todayBtn" type="button">📅 Show Today</button>
+      <button class="btn" id="playCycleBtn" type="button">▶ Smooth Full Cycle</button>
+    </div>
+    <p class="science-note">The live phase uses a compact astronomical Sun–Moon position calculation. It is suitable for learning and everyday moonwatching; professional rise/set and eclipse work uses full ephemerides.</p>
+</section>
+
+<section class="story-card">
+<h2 id="phaseTitle" tabindex="-1"></h2>
+<div class="meta"><span class="pill" id="illumination"></span><span class="pill" id="position"></span></div>
+<div class="description" id="description"></div>
+<div class="box observe"><strong>🔭 Moonwatch mission:</strong> <span id="observe"></span></div>
+<div class="box fact"><strong>💡 Moon fact:</strong> <span id="fact"></span></div>
+<div class="box safety"><strong>🛟 Safety:</strong> <span id="safety"></span></div>
+<div class="check"><strong>🌟 Quick Check</strong><div id="question"></div><div class="options" id="options"></div><div class="feedback" id="feedback" aria-live="polite"></div></div>
+<div class="actions">
+<button class="btn" id="prevBtn">← Previous</button>
+<button class="btn" id="hearBtn">🔊 Hear Sunny</button>
+<button class="btn sunny" id="recordBtn">✓ Phase Observed</button>
+<button class="btn primary" id="nextBtn">Next →</button>
+</div>
+</section>
+</div>
+
+<div class="stats">
+<div class="stat"><strong id="phaseStat">0</strong>Phases explored</div>
+<div class="stat"><strong id="checkStat">0</strong>Checks learned</div>
+<div class="stat"><strong id="observeStat">0</strong>Observations recorded</div>
+<div class="stat"><strong id="dayStat">0</strong>Moonwatch days</div>
+</div>
+</section>
+
+<footer><strong>© 2026 Verve N Veda · Khaemenes Academy · Jennifer Kay Pearl</strong><br>All Rights Reserved. · Local, private, offline-first, and child-friendly.</footer>
+</main>
+
+<script>
+const PHASES=[{"name": "New Moon", "emoji": "🌑", "illumination": "0%", "position": "Between Earth and the Sun", "description": "The side of the Moon facing Earth is mostly dark, so the Moon can be difficult to see.", "observe": "Look for a very dark sky where the Moon is not easily visible.", "fact": "The Moon is still there during a new moon; its sunlit side is mostly facing away from Earth.", "safety": "Never look directly at the Sun while searching for the Moon.", "check": {"q": "Is the Moon gone during a new moon?", "answers": ["No, it is still orbiting Earth", "Yes, it disappears", "It falls behind the stars"], "correct": 0}}, {"name": "Waxing Crescent", "emoji": "🌒", "illumination": "Growing sliver", "position": "A little east of the Sun in our sky", "description": "A thin bright crescent becomes visible after the new moon.", "observe": "Look for a small curved sliver after sunset.", "fact": "Waxing means the visible lit portion is growing.", "safety": "Observe with a trusted grown-up from a safe place away from traffic.", "check": {"q": "What does waxing mean?", "answers": ["The lit part is growing", "The Moon is getting physically bigger", "The Moon is melting"], "correct": 0}}, {"name": "First Quarter", "emoji": "🌓", "illumination": "About half lit", "position": "About one-quarter through the lunar cycle", "description": "About half of the Moon’s visible face looks bright.", "observe": "Notice the straight-looking line between light and dark.", "fact": "It is called first quarter because the Moon is about one-quarter of the way through its orbit cycle, not because only one-quarter looks lit.", "safety": "Use binoculars only with a grown-up and never point them near the Sun.", "check": {"q": "Why is it called first quarter?", "answers": ["It is about one-quarter through the cycle", "Only one-quarter of the Moon exists", "It lasts exactly one hour"], "correct": 0}}, {"name": "Waxing Gibbous", "emoji": "🌔", "illumination": "More than half lit", "position": "Moving toward full moon", "description": "More than half of the visible Moon is bright, and the lit part is still growing.", "observe": "Compare it with first quarter. Does the bright area look larger?", "fact": "Gibbous means more than half lit but not completely full.", "safety": "Observe from a stable place and stay with a trusted grown-up after dark.", "check": {"q": "What does gibbous describe?", "answers": ["More than half lit", "Completely dark", "A Moon with rings"], "correct": 0}}, {"name": "Full Moon", "emoji": "🌕", "illumination": "Nearly all visible face lit", "position": "Earth is roughly between the Sun and Moon", "description": "The Moon’s Earth-facing side appears round and bright.", "observe": "Look for the Moon rising around sunset and compare its color near the horizon and higher in the sky.", "fact": "A full moon does not make its own light. It reflects sunlight.", "safety": "Night viewing should happen with a trusted grown-up in a safe location.", "check": {"q": "Where does moonlight come from?", "answers": ["Sunlight reflected by the Moon", "The Moon makes its own light", "Streetlights"], "correct": 0}}, {"name": "Waning Gibbous", "emoji": "🌖", "illumination": "Shrinking from full", "position": "Moving away from full moon", "description": "More than half is still bright, but the visible lit portion is getting smaller.", "observe": "Compare the shape with waxing gibbous and notice which side appears lit.", "fact": "Waning means the visible lit portion is decreasing.", "safety": "Do not walk while looking upward. Stop before observing.", "check": {"q": "What does waning mean?", "answers": ["The lit part is getting smaller", "The Moon is falling", "The Moon is moving faster than light"], "correct": 0}}, {"name": "Last Quarter", "emoji": "🌗", "illumination": "About half lit", "position": "About three-quarters through the cycle", "description": "About half of the Moon’s visible face looks bright again.", "observe": "Notice that the bright side is opposite the first-quarter appearance in many locations.", "fact": "Last quarter is also called third quarter.", "safety": "Observe only when an adult says the location and time are safe.", "check": {"q": "What is another name for last quarter?", "answers": ["Third quarter", "First sunrise", "Blue moon"], "correct": 0}}, {"name": "Waning Crescent", "emoji": "🌘", "illumination": "Shrinking sliver", "position": "Approaching new moon", "description": "Only a thin bright crescent remains before the cycle begins again.", "observe": "Look in the early morning sky with a grown-up.", "fact": "The lunar phase cycle takes about 29.5 days from one new moon to the next.", "safety": "Early-morning observation still requires adult supervision and a safe location.", "check": {"q": "About how long is one lunar phase cycle?", "answers": ["About 29.5 days", "About 2 hours", "About 365 years"], "correct": 0}}];
+const THEMES={"midnight": {"name": "Midnight Observatory", "emoji": "🌌", "bg1": "#11162f", "bg2": "#2d2f58", "panel": "#242849", "ink": "#f6f4ff", "muted": "#cbc7df", "primary": "#aab6ff", "secondary": "#c98ee0", "accent": "#ffd978", "card": "#30355c", "border": "#5e648f"}, "violet": {"name": "Violet Sky", "emoji": "💜", "bg1": "#251455", "bg2": "#6a4ca3", "panel": "#fdfaff", "ink": "#433650", "muted": "#72677d", "primary": "#8065bd", "secondary": "#bd89ce", "accent": "#f1d57c", "card": "#f6efff", "border": "#cdbde2"}, "ocean": {"name": "Ocean Night", "emoji": "🌊", "bg1": "#0e2942", "bg2": "#245a73", "panel": "#f8fdff", "ink": "#24434f", "muted": "#62757c", "primary": "#2f8fad", "secondary": "#63bfc1", "accent": "#ffd88b", "card": "#ecfaff", "border": "#acdce4"}, "sunset": {"name": "Sunset Moonrise", "emoji": "🌅", "bg1": "#3e315f", "bg2": "#e28d8a", "panel": "#fffaf8", "ink": "#513a42", "muted": "#78676e", "primary": "#b9657f", "secondary": "#e09a84", "accent": "#ffd36a", "card": "#fff0eb", "border": "#edc0b7"}, "forest": {"name": "Forest Moonwatch", "emoji": "🌲", "bg1": "#162f2a", "bg2": "#385c4c", "panel": "#fbfff9", "ink": "#304536", "muted": "#667168", "primary": "#5b9468", "secondary": "#8fbd7d", "accent": "#e8cf73", "card": "#f1f8ed", "border": "#b7d2b2"}};
+const $=id=>document.getElementById(id);
+const KEY='sunnys-moon-adventure-v3';
+function fresh(){return{theme:'midnight',index:4,cycleMode:'today',selectedDate:'',explored:[],checks:[],observations:[],dates:[]}}
+function load(){try{return Object.assign(fresh(),JSON.parse(localStorage.getItem(KEY)||'{}'))}catch{return fresh()}}
+let state=load(),index=Math.max(0,Math.min(PHASES.length-1,Number(state.index)||0)),autoTimer=null,cycleRAF=null,currentPhaseValue=.5,targetPhaseValue=.5;
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{}}
+function speak(t){if($('soundMode').value==='off'||!('speechSynthesis'in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.rate=.88;u.pitch=1.06;speechSynthesis.speak(u)}
+function applyTheme(k){const t=THEMES[k]||THEMES.midnight;Object.entries(t).forEach(([n,v])=>{if(!['name','emoji'].includes(n))document.documentElement.style.setProperty('--'+n,v)});state.theme=k;save()}
+function buildStars(){
+$('sky').querySelectorAll('.star').forEach(x=>x.remove());
+for(let i=0;i<70;i++){const s=document.createElement('span');s.className='star';s.style.left=(2+Math.random()*96)+'%';s.style.top=(2+Math.random()*92)+'%';s.style.animationDelay=(Math.random()*1.7)+'s';s.style.opacity=.35+Math.random()*.65;if($('motionMode').value==='off')s.style.animation='none';$('sky').appendChild(s)}
+}
+/* Compact astronomical phase calculation.
+   Based on geocentric solar and lunar coordinates around J2000.
+   phase: 0=new, .25=first quarter, .5=full, .75=last quarter. */
+const RAD=Math.PI/180;
+const DAY_MS=86400000;
+const J1970=2440588;
+const J2000=2451545;
+const SYNODIC_MONTH=29.530588853;
+
+function toJulian(date){return date.valueOf()/DAY_MS-.5+J1970}
+function toDays(date){return toJulian(date)-J2000}
+function rightAscension(l,b){const e=RAD*23.4397;return Math.atan2(Math.sin(l)*Math.cos(e)-Math.tan(b)*Math.sin(e),Math.cos(l))}
+function declination(l,b){const e=RAD*23.4397;return Math.asin(Math.sin(b)*Math.cos(e)+Math.cos(b)*Math.sin(e)*Math.sin(l))}
+function solarMeanAnomaly(d){return RAD*(357.5291+.98560028*d)}
+function eclipticLongitude(M){
+  const C=RAD*(1.9148*Math.sin(M)+.02*Math.sin(2*M)+.0003*Math.sin(3*M));
+  const P=RAD*102.9372;
+  return M+C+P+Math.PI;
+}
+function sunCoords(d){
+  const M=solarMeanAnomaly(d),L=eclipticLongitude(M);
+  return{dec:declination(L,0),ra:rightAscension(L,0)}
+}
+function moonCoords(d){
+  const L=RAD*(218.316+13.176396*d);
+  const M=RAD*(134.963+13.064993*d);
+  const F=RAD*(93.272+13.229350*d);
+  const l=L+RAD*6.289*Math.sin(M);
+  const b=RAD*5.128*Math.sin(F);
+  const dist=385001-20905*Math.cos(M);
+  return{ra:rightAscension(l,b),dec:declination(l,b),dist}
+}
+function moonIllumination(date){
+  const d=toDays(date),s=sunCoords(d),m=moonCoords(d),sdist=149598000;
+  const phi=Math.acos(Math.sin(s.dec)*Math.sin(m.dec)+Math.cos(s.dec)*Math.cos(m.dec)*Math.cos(s.ra-m.ra));
+  const inc=Math.atan2(sdist*Math.sin(phi),m.dist-sdist*Math.cos(phi));
+  const angle=Math.atan2(
+    Math.cos(s.dec)*Math.sin(s.ra-m.ra),
+    Math.sin(s.dec)*Math.cos(m.dec)-Math.cos(s.dec)*Math.sin(m.dec)*Math.cos(s.ra-m.ra)
+  );
+  const fraction=(1+Math.cos(inc))/2;
+  const phase=.5+.5*inc*(angle<0?-1:1)/Math.PI;
+  return{fraction,phase:(phase+1)%1,angle}
+}
+function dateFromInput(){
+  const value=$('moonDate').value;
+  if(!value)return new Date();
+  const [y,m,d]=value.split('-').map(Number);
+  return new Date(y,m-1,d,12,0,0);
+}
+function phaseIndexFromValue(phase){return Math.round(phase*8)%8}
+function phaseLabelFromValue(phase){return PHASES[phaseIndexFromValue(phase)]}
+function shortestPhaseDelta(from,to){
+  let d=to-from;
+  if(d>.5)d-=1;
+  if(d<-.5)d+=1;
+  return d;
+}
+
+let moonBase=null;
+function buildMoonTexture(size=320){
+  const data=new Uint8ClampedArray(size*size*4);
+  const craters=[
+    [.31,.29,.055,.62],[.64,.37,.082,.7],[.43,.69,.105,.68],
+    [.72,.7,.06,.58],[.28,.57,.038,.72],[.57,.18,.032,.74],
+    [.79,.46,.028,.66],[.18,.43,.023,.7]
+  ];
+  for(let y=0;y<size;y++){
+    for(let x=0;x<size;x++){
+      const nx=(x+.5-size/2)/(size*.47),ny=(y+.5-size/2)/(size*.47);
+      const r2=nx*nx+ny*ny,idx=(y*size+x)*4;
+      if(r2>1){data[idx+3]=0;continue}
+      const z=Math.sqrt(Math.max(0,1-r2));
+      let texture=205+34*z-18*r2;
+      for(const [cx,cy,cr,dark] of craters){
+        const dx=x/size-cx,dy=y/size-cy,rr=Math.sqrt(dx*dx+dy*dy);
+        if(rr<cr)texture*=dark+(rr/cr)*(.96-dark);
+      }
+      const grain=4*Math.sin(x*.17+y*.11)+3*Math.sin(x*.041-y*.073);
+      texture=Math.max(80,Math.min(250,texture+grain));
+      data[idx]=texture;
+      data[idx+1]=Math.min(255,texture+1);
+      data[idx+2]=Math.min(255,texture-5);
+      data[idx+3]=255;
+    }
+  }
+  moonBase={size,data};
+}
+function drawMoon(phase){
+  const canvas=$('moonCanvas');
+  if(!canvas)return;
+  const size=canvas.width,ctx=canvas.getContext('2d');
+  if(!moonBase||moonBase.size!==size)buildMoonTexture(size);
+  const out=new ImageData(new Uint8ClampedArray(moonBase.data),size,size);
+  const a=2*Math.PI*phase;
+  const sx=Math.sin(a),sz=-Math.cos(a);
+  for(let y=0;y<size;y++){
+    for(let x=0;x<size;x++){
+      const idx=(y*size+x)*4;
+      if(out.data[idx+3]===0)continue;
+      const nx=(x+.5-size/2)/(size*.47),ny=(y+.5-size/2)/(size*.47);
+      const z=Math.sqrt(Math.max(0,1-nx*nx-ny*ny));
+      const dot=nx*sx+z*sz;
+      const edge=Math.max(0,Math.min(1,.5+dot*20));
+      const limb=Math.max(.48,z);
+      const light=.07+.93*edge;
+      out.data[idx]=Math.round(out.data[idx]*light*limb);
+      out.data[idx+1]=Math.round(out.data[idx+1]*light*limb);
+      out.data[idx+2]=Math.round(out.data[idx+2]*light*limb);
+    }
+  }
+  ctx.clearRect(0,0,size,size);
+  ctx.putImageData(out,0,0);
+}
+function animateMoonTo(target,duration=850){
+  if(cycleRAF)cancelAnimationFrame(cycleRAF);
+  target=(target+1)%1;
+  const start=currentPhaseValue;
+  const delta=shortestPhaseDelta(start,target);
+  const began=performance.now();
+  function frame(now){
+    const t=Math.min(1,(now-began)/duration);
+    const eased=1-Math.pow(1-t,3);
+    currentPhaseValue=(start+delta*eased+1)%1;
+    drawMoon(currentPhaseValue);
+    if(t<1)cycleRAF=requestAnimationFrame(frame);
+    else{currentPhaseValue=target;drawMoon(target);cycleRAF=null}
+  }
+  cycleRAF=requestAnimationFrame(frame);
+}
+function updateLivePhase(date,animate=true){
+  const info=moonIllumination(date);
+  targetPhaseValue=info.phase;
+  index=phaseIndexFromValue(info.phase);
+  const age=info.phase*SYNODIC_MONTH;
+  $('actualIllumination').textContent=`${(info.fraction*100).toFixed(1)}%`;
+  $('moonAge').textContent=`${age.toFixed(1)} days`;
+  $('cyclePosition').textContent=`${(info.phase*100).toFixed(1)}%`;
+  if(animate)animateMoonTo(info.phase);
+  else{currentPhaseValue=info.phase;drawMoon(info.phase)}
+  return info;
+}
+function setMoonPhase(i){
+  const target=(i%8)/8;
+  targetPhaseValue=target;
+  $('actualIllumination').textContent=`${Math.round((1-Math.cos(2*Math.PI*target))*50)}%`;
+  $('moonAge').textContent=`${(target*SYNODIC_MONTH).toFixed(1)} days`;
+  $('cyclePosition').textContent=`${Math.round(target*100)}%`;
+  animateMoonTo(target);
+}
+function renderStrip(){
+$('phaseStrip').innerHTML='';PHASES.forEach((p,i)=>{const b=document.createElement('button');b.className='phase-btn'+(i===index?' active':'');b.textContent=p.emoji;b.title=p.name;b.setAttribute('aria-label',p.name);b.onclick=()=>{index=i;$('cycleMode').value='manual';state.cycleMode='manual';autoCycle();render()};$('phaseStrip').appendChild(b)})
+}
+function render(){
+  let p,liveInfo=null;
+  if($('cycleMode').value==='today'){
+    liveInfo=updateLivePhase(dateFromInput(),true);
+    p=phaseLabelFromValue(liveInfo.phase);
+    index=phaseIndexFromValue(liveInfo.phase);
+  }else{
+    p=PHASES[index];
+    setMoonPhase(index);
+  }
+  state.index=index;
+  state.cycleMode=$('cycleMode').value;
+  state.selectedDate=$('moonDate').value;
+  if(!state.explored.includes(p.name))state.explored.push(p.name);
+  save();
+
+  $('phaseName').textContent=`${p.emoji} ${p.name}`;
+  $('phaseTitle').textContent=p.name;
+  $('illumination').textContent=liveInfo
+    ?`Illumination: ${(liveInfo.fraction*100).toFixed(1)}%`
+    :`Illumination: ${p.illumination}`;
+  $('position').textContent=liveInfo
+    ?`Calculated for ${dateFromInput().toLocaleDateString()}`
+    :p.position;
+  $('description').textContent=p.description;
+  $('observe').textContent=p.observe;
+  $('fact').textContent=p.fact;
+  $('safety').textContent=p.safety;
+  renderStrip();
+  renderCheck();
+  updateStats();
+  $('phaseTitle').focus();
+}function renderCheck(){
+const q=PHASES[index].check;$('question').textContent=q.q;$('options').innerHTML='';$('feedback').textContent='';
+const pairs=q.answers.map((text,i)=>({text,correct:i===q.correct})).sort(()=>Math.random()-.5);
+pairs.forEach(x=>{const b=document.createElement('button');b.className='option';b.textContent=x.text;b.onclick=()=>{[...$('options').children].forEach(n=>n.disabled=true);b.classList.add(x.correct?'correct':'wrong');if(x.correct){$('feedback').textContent='That fits!';if(!state.checks.includes(PHASES[index].name))state.checks.push(PHASES[index].name)}else{$('feedback').textContent='Good try. The green answer shows the best choice.';const i=pairs.findIndex(v=>v.correct);$('options').children[i].classList.add('correct')}save();updateStats()};$('options').appendChild(b)})
+}
+function updateStats(){$('phaseStat').textContent=state.explored.length;$('checkStat').textContent=state.checks.length;$('observeStat').textContent=state.observations.length;$('dayStat').textContent=new Set(state.dates).size}
+function move(d){$('cycleMode').value='manual';state.cycleMode='manual';index=(index+d+PHASES.length)%PHASES.length;autoCycle();render()}
+function autoCycle(){
+  if(autoTimer)clearInterval(autoTimer);
+  autoTimer=null;
+  if($('cycleMode').value==='auto'){
+    let phase=currentPhaseValue;
+    autoTimer=setInterval(()=>{
+      phase=(phase+.0045)%1;
+      currentPhaseValue=phase;
+      drawMoon(phase);
+      index=phaseIndexFromValue(phase);
+      const p=PHASES[index];
+      $('phaseName').textContent=`${p.emoji} ${p.name}`;
+      $('phaseTitle').textContent=p.name;
+      $('actualIllumination').textContent=`${((1-Math.cos(2*Math.PI*phase))*50).toFixed(1)}%`;
+      $('moonAge').textContent=`${(phase*SYNODIC_MONTH).toFixed(1)} days`;
+      $('cyclePosition').textContent=`${(phase*100).toFixed(1)}%`;
+      renderStrip();
+    },60);
+  }
+}
+$('theme').innerHTML=Object.entries(THEMES).map(([k,t])=>`<option value="${k}">${t.emoji} ${t.name}</option>`).join('');$('theme').value=state.theme;$('theme').onchange=e=>applyTheme(e.target.value);
+$('motionMode').onchange=buildStars;
+$('cycleMode').value=state.cycleMode||'today';
+$('cycleMode').onchange=()=>{
+  state.cycleMode=$('cycleMode').value;
+  save();
+  autoCycle();
+  if($('cycleMode').value!=='auto')render();
+};
+$('moonDate').value=state.selectedDate||new Date().toLocaleDateString('en-CA');
+$('moonDate').onchange=()=>{
+  $('cycleMode').value='today';
+  state.cycleMode='today';
+  autoCycle();
+  render();
+};
+$('todayBtn').onclick=()=>{
+  $('moonDate').value=new Date().toLocaleDateString('en-CA');
+  $('cycleMode').value='today';
+  state.cycleMode='today';
+  autoCycle();
+  render();
+};
+$('playCycleBtn').onclick=()=>{
+  $('cycleMode').value='auto';
+  state.cycleMode='auto';
+  save();
+  autoCycle();
+};
+$('prevBtn').onclick=()=>move(-1);$('nextBtn').onclick=()=>move(1);
+$('hearBtn').onclick=()=>{const p=PHASES[index];speak(`${p.name}. ${p.description}. Moonwatch mission. ${p.observe}. Moon fact. ${p.fact}. Safety. ${p.safety}`)};
+$('recordBtn').onclick=()=>{const p=$('cycleMode').value==='today'?phaseLabelFromValue(moonIllumination(dateFromInput()).phase):PHASES[index];state.observations.push({phase:p.name,date:new Date().toISOString(),selectedDate:$('moonDate').value});state.dates.push(new Date().toLocaleDateString('en-CA'));save();updateStats();$('feedback').textContent=`Observation recorded: ${p.name}.`;speak(`${p.name} observation recorded.`)};
+applyTheme(state.theme);
+buildStars();
+buildMoonTexture(320);
+if($('cycleMode').value==='today'){
+  const initial=moonIllumination(dateFromInput());
+  currentPhaseValue=initial.phase;
+  drawMoon(initial.phase);
+}else{
+  currentPhaseValue=index/8;
+  drawMoon(currentPhaseValue);
+}
+render();
+autoCycle();
+window.addEventListener('beforeunload',()=>{
+  if(autoTimer)clearInterval(autoTimer);
+  if(cycleRAF)cancelAnimationFrame(cycleRAF);
+  if('speechSynthesis'in window)speechSynthesis.cancel();
+});
+</script>
+</body>
+</html>
