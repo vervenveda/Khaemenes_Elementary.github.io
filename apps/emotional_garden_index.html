@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Noetic Elementary Psychology Garden — a child-friendly, privacy-first psychology learning app for grades 1–5.">
+<title>Noetic Elementary Psychology Garden</title>
+<style>
+:root{
+  --lav:#8f7aea;--plum:#5f4b8b;--rose:#f28ab2;--coral:#ff9a84;--gold:#ffd66b;
+  --mint:#8fe0bd;--sky:#8fd8ff;--ink:#302a3d;--muted:#6f667c;--paper:#fffdf9;
+  --panel:rgba(255,255,255,.88);--shadow:0 20px 55px rgba(63,43,82,.16);--radius:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;min-height:100vh;color:var(--ink);
+  font-family:"Trebuchet MS","Avenir Next Rounded","Arial Rounded MT Bold","Comic Sans MS",system-ui,sans-serif;
+  background:
+    radial-gradient(circle at 10% 12%,rgba(255,255,255,.9) 0 5%,transparent 6%),
+    radial-gradient(circle at 90% 18%,rgba(255,255,255,.72) 0 4%,transparent 5%),
+    linear-gradient(140deg,#ede5ff 0%,#fff4cb 42%,#dcf8ec 100%);
+  overflow-x:hidden;
+}
+button,select{font:inherit}
+button{touch-action:manipulation}
+button:focus-visible,select:focus-visible{outline:4px solid #f5c84c;outline-offset:3px}
+.bg{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
+.orb{position:absolute;border-radius:50%;opacity:.24;animation:float 8s ease-in-out infinite}
+.o1{width:160px;height:160px;background:#fff;left:2%;top:10%}
+.o2{width:90px;height:90px;background:var(--gold);right:8%;top:20%;animation-delay:-2s}
+.o3{width:190px;height:190px;background:#fff;right:-30px;bottom:5%;animation-delay:-5s}
+.o4{width:80px;height:80px;background:var(--mint);left:13%;bottom:12%;animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-18px) scale(1.05)}}
+.wrap{width:min(1180px,calc(100% - 26px));margin:auto;padding:28px 0 48px}
+.hero{text-align:center;margin-bottom:16px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#ffffffc9;box-shadow:0 8px 24px rgba(67,45,83,.12);font-size:.87rem;font-weight:900}
+h1{margin:12px 0 4px;font-size:clamp(2.4rem,7vw,5.3rem);line-height:.95;letter-spacing:-.05em;background:linear-gradient(90deg,var(--plum),var(--rose),var(--coral),#34a9c7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:8px auto 0;max-width:780px;color:var(--muted);font-size:1rem;line-height:1.6}
+.app{background:var(--panel);backdrop-filter:blur(14px);border:1px solid #ffffffd6;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+.topbar{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start}
+.brand h2{margin:0;font-size:1.55rem}.brand p{margin:5px 0 0;color:var(--muted);font-size:.92rem}
+.sound-btn{border:0;border-radius:16px;padding:10px 13px;background:#fff;color:var(--plum);font-weight:900;cursor:pointer;box-shadow:0 6px 15px rgba(54,40,71,.09)}
+.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.control{background:#fff;border-radius:18px;padding:12px;border:1px solid #ede6f2}
+.control label{display:block;font-size:.78rem;font-weight:900;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em}
+.control select{width:100%;border:1px solid #ddd2e7;border-radius:12px;padding:10px;background:#fff;color:var(--ink)}
+.category-row{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:15px 0 2px}
+.category-btn{border:1px solid #e8dff0;background:#fff;border-radius:999px;padding:9px 13px;font-weight:900;color:var(--plum);cursor:pointer}
+.category-btn.active{color:white;background:linear-gradient(135deg,var(--lav),var(--plum));border-color:transparent}
+.progress-wrap{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;margin:16px 0 12px}
+.progress-track{height:12px;border-radius:999px;background:#fff;overflow:hidden;border:1px solid #e7dfea}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--gold),var(--mint));transition:width .35s ease}
+.progress-text{font-size:.83rem;color:var(--muted);min-width:100px;text-align:right}
+.quiz-card{background:linear-gradient(155deg,#fff,#fffaf2);border-radius:24px;padding:20px;border:1px solid #f0e7ee;box-shadow:0 12px 30px rgba(65,43,81,.08)}
+.meta-row{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:.84rem}
+.icon{font-size:4rem;text-align:center;margin:8px 0 4px;filter:drop-shadow(0 10px 8px rgba(69,47,84,.14));animation:bob 2.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-7px) rotate(2deg)}}
+.question{font-size:clamp(1.35rem,3vw,2rem);line-height:1.35;text-align:center;margin:8px auto 18px;max-width:820px}
+.action-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.small-btn{border:0;border-radius:13px;padding:9px 12px;background:#fff;color:var(--plum);font-weight:900;cursor:pointer;box-shadow:0 5px 13px rgba(63,43,80,.08)}
+.answers{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.answer{position:relative;border:2px solid #e6deec;background:#fff;border-radius:18px;padding:16px;min-height:74px;font-size:1.05rem;font-weight:800;color:var(--ink);cursor:pointer;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.answer:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(67,46,83,.1)}
+.answer.correct{background:#e9fff3;border-color:#59c58d}.answer.wrong{background:#fff0f2;border-color:#df7180}.answer:disabled{cursor:default;opacity:1}
+.answer .key{position:absolute;left:10px;top:9px;width:25px;height:25px;border-radius:8px;background:#f2edf6;display:grid;place-items:center;font-size:.77rem;color:var(--plum)}
+.feedback{margin-top:14px;border-radius:18px;padding:14px 16px;min-height:82px;background:#f9f6fb;border:1px solid #e7dfea;display:none}
+.feedback.show{display:block}.feedback h3{margin:0 0 4px;color:var(--plum)}.feedback p{margin:0;line-height:1.5;color:#51475e}
+.nav-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px}
+.stats{display:flex;gap:8px;flex-wrap:wrap}.chip{background:#fff;border-radius:999px;padding:8px 11px;font-size:.86rem;box-shadow:0 5px 13px rgba(62,42,79,.07)}
+.primary{border:0;border-radius:15px;padding:11px 17px;background:linear-gradient(135deg,var(--lav),var(--plum));color:white;font-weight:900;cursor:pointer}
+.primary:disabled{opacity:.4;cursor:default}
+.hidden{display:none!important}
+.end-card{text-align:center;padding:28px 16px}.end-card h2{font-size:2rem;color:var(--plum);margin:0 0 8px}.end-card p{color:var(--muted);font-size:1.08rem}.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:18px 0}.summary{background:#fff;border-radius:18px;padding:16px;box-shadow:0 8px 20px rgba(63,43,80,.08)}.summary strong{display:block;font-size:1.5rem;color:var(--plum)}
+.calm{margin-top:16px;background:linear-gradient(145deg,#eefaff,#f3fff8);border-radius:22px;padding:16px;border:1px solid #d6ece7}.calm h3{margin:0 0 6px;color:#247a72}.breath-circle{width:95px;height:95px;border-radius:50%;margin:14px auto;background:radial-gradient(circle,#fff 0 32%,var(--sky) 34% 65%,var(--mint) 67%);display:grid;place-items:center;font-size:.8rem;font-weight:900;color:#285c6f}.breath-circle.active{animation:breathe 8s ease-in-out 3}@keyframes breathe{0%,100%{transform:scale(.78)}50%{transform:scale(1.14)}}
+.footer{text-align:center;margin-top:16px;color:var(--muted);font-size:.8rem;line-height:1.5}
+@media(max-width:760px){.wrap{padding-top:18px}.topbar{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.quiz-card{padding:16px}.answers{grid-template-columns:1fr}.progress-wrap{grid-template-columns:1fr}.progress-text{text-align:left}.nav-row{align-items:stretch}.primary{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span><span class="orb o4"></span></div>
+<main class="wrap">
+  <header class="hero">
+    <div class="badge">🧠 Khaemenes Academy · Noetic Learning</div>
+    <h1>Psychology Garden</h1>
+    <p>Explore thoughts, feelings, friendships, choices, and healthy coping through gentle questions, clear explanations, and encouraging practice for grades 1–5.</p>
+  </header>
+
+  <section class="app" aria-label="Noetic Elementary Psychology Garden">
+    <div class="topbar">
+      <div class="brand"><h2>Noetic Elementary</h2><p>Thoughts · Feelings · Choices · Growth</p></div>
+      <button id="soundBtn" class="sound-btn" aria-pressed="true">🔊 Sound On</button>
+    </div>
+
+    <div class="controls">
+      <div class="control"><label for="gradeBand">Grade Band</label><select id="gradeBand"><option value="1-2">Grades 1–2</option><option value="3-4">Grades 3–4</option><option value="5">Grade 5</option></select></div>
+      <div class="control"><label for="sessionSize">Questions</label><select id="sessionSize"><option value="5">5</option><option value="10" selected>10</option><option value="15">15</option></select></div>
+      <div class="control"><label for="modeSelect">Session Type</label><select id="modeSelect"><option value="mixed">Mixed Practice</option><option value="category">Selected Category</option><option value="missed">Review Missed</option></select></div>
+    </div>
+
+    <div class="category-row" id="categoryRow" aria-label="Choose a psychology category"></div>
+    <div class="progress-wrap"><div class="progress-track"><div id="progressBar" class="progress-bar"></div></div><div id="progressText" class="progress-text">Ready to begin</div></div>
+
+    <section id="playPanel" class="quiz-card">
+      <div class="meta-row"><span id="categoryLabel">Category: Mixed Practice</span><span id="streakLabel">Streak: 0</span></div>
+      <div id="icon" class="icon" aria-hidden="true">🧠</div>
+      <h2 id="question" class="question" tabindex="-1">Choose your settings and begin.</h2>
+      <div class="action-row"><button id="hearQuestion" class="small-btn">🔊 Hear Question</button><button id="hearAnswers" class="small-btn">🎧 Hear Answers</button></div>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback" role="status" aria-live="polite"><h3 id="feedbackTitle"></h3><p id="feedbackText"></p></div>
+      <div class="nav-row"><div class="stats"><span class="chip">⭐ Score: <strong id="score">0</strong></span><span class="chip">🌱 Learned: <strong id="learned">0</strong></span></div><button id="nextBtn" class="primary" disabled>Next Question</button></div>
+    </section>
+
+    <section id="endPanel" class="quiz-card end-card hidden">
+      <div class="icon">🎉</div><h2>Session Complete</h2><p id="resultText"></p>
+      <div class="summary-grid"><div class="summary"><strong id="finalScore">0/0</strong>Correct</div><div class="summary"><strong id="finalStars">0</strong>Stars</div><div class="summary"><strong id="finalBest">0</strong>Best Streak</div></div>
+      <div class="action-row"><button id="againBtn" class="primary">Play Again</button><button id="reviewBtn" class="small-btn">Review Missed</button><button id="resetBtn" class="small-btn">Reset Local Progress</button></div>
+    </section>
+
+    <section class="calm" aria-label="Calm Corner">
+      <h3>🌬️ Calm Corner</h3><p>Take a slow breath in, hold gently, and breathe out. This activity is for practice and does not replace help from a trusted adult.</p>
+      <div id="breathCircle" class="breath-circle">Breathe</div>
+      <div class="action-row"><button id="breathBtn" class="small-btn">Start 3 Breaths</button></div>
+    </section>
+
+    <p class="footer">© 2026 Verve N Veda · Khaemenes Academy · Jennifer Kay Pearl<br>All Rights Reserved. · Local progress only · No accounts, ads, or tracking.</p>
+  </section>
+</main>
+<script>
+const BANK=[
+{g:'1-2',cat:'feelings',icon:'😊',q:'What is a feeling?',a:['A message from your mind and body','A type of shoe','A school desk'],correct:'A message from your mind and body',ex:'Feelings are signals that help us notice what is happening inside us.'},
+{g:'1-2',cat:'feelings',icon:'🎭',q:'Can a person feel two emotions at the same time?',a:['Yes','No, never','Only at night'],correct:'Yes',ex:'People can feel excited and nervous, happy and sad, or many other combinations.'},
+{g:'1-2',cat:'coping',icon:'🌬️',q:'What is one safe choice when you feel nervous?',a:['Take slow breaths','Yell at someone','Break something'],correct:'Take slow breaths',ex:'Slow breathing can help your body begin to settle.'},
+{g:'1-2',cat:'friendship',icon:'🤝',q:'A friend looks sad. What is a caring choice?',a:['Ask if they want help','Laugh at them','Pretend not to notice'],correct:'Ask if they want help',ex:'Kindly asking shows care while still respecting the other person.'},
+{g:'1-2',cat:'choices',icon:'🛑',q:'What does self-control mean?',a:['Pausing and choosing a safe action','Doing anything you want','Never having feelings'],correct:'Pausing and choosing a safe action',ex:'Self-control helps us decide what to do, even when feelings are strong.'},
+{g:'1-2',cat:'brain',icon:'🧠',q:'Which body part helps you think and learn?',a:['Brain','Elbow','Shoe'],correct:'Brain',ex:'Your brain helps with thinking, remembering, moving, and learning.'},
+{g:'1-2',cat:'brain',icon:'😴',q:'Why is sleep important?',a:['It helps the brain and body rest','It makes learning disappear','It is only for adults'],correct:'It helps the brain and body rest',ex:'Sleep supports attention, memory, mood, and growth.'},
+{g:'1-2',cat:'friendship',icon:'💛',q:'What can you do if someone feels left out?',a:['Invite them to join','Tease them','Tell them to leave'],correct:'Invite them to join',ex:'Including someone can help them feel welcome and connected.'},
+{g:'1-2',cat:'coping',icon:'🫶',q:'What should you do when a feeling feels too big to manage alone?',a:['Talk to a trusted adult','Keep it secret forever','Hurt something'],correct:'Talk to a trusted adult',ex:'Trusted adults can help you feel safer and make a plan.'},
+{g:'1-2',cat:'choices',icon:'🔁',q:'What can you do after making a mistake?',a:['Learn and try again','Blame someone else','Give up forever'],correct:'Learn and try again',ex:'Mistakes can help us learn what to do differently next time.'},
+
+{g:'3-4',cat:'feelings',icon:'🦋',q:'Which body clue may happen when someone feels worried?',a:['A fluttery stomach','Shoes changing color','Hair growing quickly'],correct:'A fluttery stomach',ex:'Worry can sometimes cause a tight, fluttery, or uncomfortable feeling in the stomach.'},
+{g:'3-4',cat:'feelings',icon:'🔥',q:'Is anger itself wrong?',a:['No, but actions still need to be safe','Yes, anger is always bad','Only adults may feel angry'],correct:'No, but actions still need to be safe',ex:'Anger is a normal emotion. We are responsible for choosing safe actions.'},
+{g:'3-4',cat:'coping',icon:'🧘',q:'What is one helpful strategy when you feel frustrated?',a:['Take a short break and return','Throw your work','Insult someone'],correct:'Take a short break and return',ex:'A brief pause can help your brain reset before you try again.'},
+{g:'3-4',cat:'brain',icon:'🎯',q:'What does it mean to focus?',a:['Direct your attention to one task','Think about everything at once','Never move your eyes'],correct:'Direct your attention to one task',ex:'Focus means choosing where to place your attention.'},
+{g:'3-4',cat:'brain',icon:'🧠',q:'What can strengthen memory?',a:['Practice and meaningful connections','Ignoring information','Never reviewing'],correct:'Practice and meaningful connections',ex:'Reviewing and connecting new information to what you know can improve memory.'},
+{g:'3-4',cat:'friendship',icon:'👂',q:'Which action shows active listening?',a:['Waiting, listening, and responding respectfully','Interrupting quickly','Planning your answer without listening'],correct:'Waiting, listening, and responding respectfully',ex:'Active listening helps people feel heard and understood.'},
+{g:'3-4',cat:'friendship',icon:'❤️',q:'What is empathy?',a:['Trying to understand another person’s feelings','Always agreeing with everyone','Winning every discussion'],correct:'Trying to understand another person’s feelings',ex:'Empathy means noticing and considering another person’s experience.'},
+{g:'3-4',cat:'choices',icon:'🤔',q:'What is a useful step before making an important choice?',a:['Pause and think about possible results','Rush immediately','Copy someone without asking why'],correct:'Pause and think about possible results',ex:'Thinking ahead can help you make safer and more responsible choices.'},
+{g:'3-4',cat:'choices',icon:'⚖️',q:'What does fairness often mean?',a:['Giving people the support they need','Giving everyone the exact same thing every time','Letting one person decide everything'],correct:'Giving people the support they need',ex:'Fairness can mean equal opportunity and appropriate support, not always identical treatment.'},
+{g:'3-4',cat:'coping',icon:'💬',q:'What is positive self-talk?',a:['Using encouraging words with yourself','Pretending problems do not exist','Calling yourself names'],correct:'Using encouraging words with yourself',ex:'Helpful self-talk can make difficult tasks feel more manageable.'},
+
+{g:'5',cat:'feelings',icon:'👀',q:'What is perspective?',a:['The way someone sees or understands a situation','A kind of backpack','The loudest opinion'],correct:'The way someone sees or understands a situation',ex:'Different people can understand the same event in different ways.'},
+{g:'5',cat:'feelings',icon:'⚠️',q:'What can fear do?',a:['Warn us about possible danger','Always prove danger is present','Make every choice for us'],correct:'Warn us about possible danger',ex:'Fear can be protective, but we may still need facts and support to judge whether danger is real.'},
+{g:'5',cat:'brain',icon:'🔁',q:'What is a habit?',a:['A behavior repeated often enough to become familiar','A feeling that lasts forever','A rule that cannot change'],correct:'A behavior repeated often enough to become familiar',ex:'Habits form through repetition and can be changed with practice.'},
+{g:'5',cat:'brain',icon:'🌱',q:'What is a growth mindset?',a:['Believing skills can improve with effort and strategies','Believing ability can never change','Believing mistakes must be hidden'],correct:'Believing skills can improve with effort and strategies',ex:'A growth mindset focuses on learning, feedback, practice, and improvement.'},
+{g:'5',cat:'friendship',icon:'🕊️',q:'What is a constructive way to handle disagreement?',a:['Listen, speak respectfully, and look for solutions','Try to embarrass the other person','Refuse to hear anything else'],correct:'Listen, speak respectfully, and look for solutions',ex:'Respectful communication can reduce conflict and reveal shared goals.'},
+{g:'5',cat:'friendship',icon:'🚧',q:'What is a personal boundary?',a:['A limit that helps protect comfort, safety, or privacy','A way to control everyone','A rule that only applies at school'],correct:'A limit that helps protect comfort, safety, or privacy',ex:'Healthy boundaries help people communicate what feels safe and respectful.'},
+{g:'5',cat:'choices',icon:'🧭',q:'What is one way social pressure can affect choices?',a:['It may make someone act differently to fit in','It removes all responsibility','It guarantees a good decision'],correct:'It may make someone act differently to fit in',ex:'Recognizing pressure can help you pause and choose according to your values and safety.'},
+{g:'5',cat:'choices',icon:'📋',q:'Which action shows responsibility?',a:['Completing a task and admitting mistakes','Blaming others automatically','Ignoring consequences'],correct:'Completing a task and admitting mistakes',ex:'Responsibility includes following through and repairing harm when possible.'},
+{g:'5',cat:'coping',icon:'🛡️',q:'Which response may help during stress?',a:['Break the task into smaller steps','Expect yourself to be perfect','Avoid every difficult task'],correct:'Break the task into smaller steps',ex:'Smaller steps can reduce overwhelm and make progress easier to see.'},
+{g:'5',cat:'coping',icon:'🤝',q:'When should someone seek support?',a:['When a problem feels unsafe, overwhelming, or hard to manage alone','Only after everything has failed','Never, because asking is weak'],correct:'When a problem feels unsafe, overwhelming, or hard to manage alone',ex:'Seeking help is a healthy skill, especially when safety or wellbeing is involved.'}
+];
+
+const CATS={mixed:['Mixed Practice','🧠'],feelings:['Feelings Garden','🎭'],brain:['Brain Lab','🧠'],friendship:['Friendship Meadow','🤝'],choices:['Choice Compass','🧭'],coping:['Calm Corner','🌬️']};
+let state={category:'mixed',questions:[],index:0,score:0,streak:0,best:0,learned:0,missed:[],sound:localStorage.getItem('noetic-sound')!=='false'};
+const $=id=>document.getElementById(id);
+function saveProgress(){localStorage.setItem('noetic-sound',String(state.sound));localStorage.setItem('noetic-best',String(Math.max(Number(localStorage.getItem('noetic-best')||0),state.best)));localStorage.setItem('noetic-sessions',String(Number(localStorage.getItem('noetic-sessions')||0)+0));localStorage.setItem('noetic-missed',JSON.stringify(state.missed));}
+function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr}
+function speak(text){if(!state.sound||!('speechSynthesis'in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.rate=.9;u.pitch=1.05;speechSynthesis.speak(u)}
+function renderCategories(){const row=$('categoryRow');row.innerHTML='';Object.entries(CATS).forEach(([key,[name,icon]])=>{const b=document.createElement('button');b.className='category-btn'+(state.category===key?' active':'');b.textContent=`${icon} ${name}`;b.onclick=()=>{state.category=key;renderCategories()};row.appendChild(b)})}
+function pool(){const grade=$('gradeBand').value;let p=BANK.filter(x=>x.g===grade);if(state.category!=='mixed')p=p.filter(x=>x.cat===state.category);return p}
+function startGame(review=false){let p=review?JSON.parse(localStorage.getItem('noetic-missed')||'[]'):pool();if(!p.length){p=pool()}const n=Math.min(Number($('sessionSize').value),p.length);state.questions=shuffle([...p]).slice(0,n);state.index=0;state.score=0;state.streak=0;state.best=0;state.learned=0;state.missed=[];$('playPanel').classList.remove('hidden');$('endPanel').classList.add('hidden');loadQuestion()}
+function loadQuestion(){const q=state.questions[state.index];$('feedback').classList.remove('show');$('nextBtn').disabled=true;$('icon').textContent=q.icon;$('question').textContent=q.q;$('question').focus();$('categoryLabel').textContent=`Category: ${CATS[q.cat][0]}`;$('streakLabel').textContent=`Streak: ${state.streak}`;const answers=shuffle(q.a.map(text=>({text,correct:text===q.correct})));$('answers').innerHTML='';answers.forEach((item,i)=>{const b=document.createElement('button');b.className='answer';b.innerHTML=`<span class="key">${i+1}</span>${item.text}`;b.onclick=()=>selectAnswer(b,item,q);$('answers').appendChild(b)});updateProgress()}
+function selectAnswer(btn,item,q){const buttons=[...$('answers').querySelectorAll('button')];buttons.forEach(b=>b.disabled=true);buttons.forEach(b=>{if(b.textContent.trim().replace(/^\d/,'').trim()===q.correct)b.classList.add('correct')});if(item.correct){state.score++;state.streak++;state.best=Math.max(state.best,state.streak);state.learned++;btn.classList.add('correct');$('feedbackTitle').textContent='✓ Correct';$('feedbackText').textContent=q.ex;speak(`Correct. ${q.ex}`)}else{state.streak=0;btn.classList.add('wrong');state.missed.push(q);$('feedbackTitle').textContent='Good try';$('feedbackText').textContent=`The best answer is: ${q.correct}. ${q.ex}`;speak(`Good try. ${q.ex}`)}$('feedback').classList.add('show');$('score').textContent=state.score;$('learned').textContent=state.learned;$('streakLabel').textContent=`Streak: ${state.streak}`;$('nextBtn').disabled=false;$('nextBtn').focus();saveProgress()}
+function updateProgress(){const total=state.questions.length;const current=state.index+1;$('progressBar').style.width=`${(current-1)/Math.max(total,1)*100}%`;$('progressText').textContent=`Question ${current} of ${total}`}
+function next(){state.index++;if(state.index<state.questions.length)loadQuestion();else endGame()}
+function endGame(){localStorage.setItem('noetic-sessions',String(Number(localStorage.getItem('noetic-sessions')||0)+1));localStorage.setItem('noetic-best',String(Math.max(Number(localStorage.getItem('noetic-best')||0),state.best)));localStorage.setItem('noetic-missed',JSON.stringify(state.missed));$('playPanel').classList.add('hidden');$('endPanel').classList.remove('hidden');$('finalScore').textContent=`${state.score}/${state.questions.length}`;$('finalStars').textContent=state.score*2+state.learned;$('finalBest').textContent=state.best;$('resultText').textContent=state.score===state.questions.length?'Wonderful work! You explored every question carefully.':'Great effort. Review missed questions to strengthen your learning.'}
+$('nextBtn').onclick=next;$('againBtn').onclick=()=>startGame(false);$('reviewBtn').onclick=()=>startGame(true);$('resetBtn').onclick=()=>{if(confirm('Reset locally saved Noetic progress?')){['noetic-best','noetic-sessions','noetic-missed'].forEach(k=>localStorage.removeItem(k));alert('Local progress has been reset.')}};$('soundBtn').onclick=()=>{state.sound=!state.sound;$('soundBtn').textContent=state.sound?'🔊 Sound On':'🔇 Sound Off';$('soundBtn').setAttribute('aria-pressed',String(state.sound));saveProgress()};$('hearQuestion').onclick=()=>speak($('question').textContent);$('hearAnswers').onclick=()=>speak([...$('answers').querySelectorAll('button')].map((b,i)=>`Answer ${i+1}. ${b.textContent.replace(/^\d/,'').trim()}`).join('. '));$('breathBtn').onclick=()=>{const c=$('breathCircle');c.classList.remove('active');void c.offsetWidth;c.classList.add('active');speak('Breathe in slowly. Hold gently. Breathe out slowly. Repeat two more times.')};document.addEventListener('keydown',e=>{if(['1','2','3'].includes(e.key)){const b=$('answers').querySelectorAll('button')[Number(e.key)-1];if(b&&!b.disabled)b.click()}else if(e.key==='Enter'&&!$('nextBtn').disabled&&!$('endPanel').classList.contains('hidden')){}else if(e.key==='Enter'&&!$('nextBtn').disabled){next()}});
+renderCategories();$('soundBtn').textContent=state.sound?'🔊 Sound On':'🔇 Sound Off';startGame(false);
+</script>
+</body>
+</html>
