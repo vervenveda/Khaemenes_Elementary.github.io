@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Shape Garden Academy Elementary — a complete vanilla JavaScript geometry game with shape properties, angles, symmetry, perimeter, area, coordinates, patterns, tracing, badges, and private local progress.">
+<title>Shape Garden Academy™ — Elementary Geometry</title>
+<style>
+:root{
+  --sky:#dff5ff;
+  --sun:#ffd75f;
+  --coral:#ff8f78;
+  --blue:#2f73bd;
+  --navy:#17355d;
+  --green:#55ae75;
+  --mint:#c8efd7;
+  --lav:#d9cdf5;
+  --paper:#fffdf8;
+  --panel:#ffffff;
+  --ink:#26384e;
+  --muted:#68778b;
+  --line:rgba(23,53,93,.15);
+  --good:#3fa96e;
+  --warn:#dc8a3e;
+  --bad:#ce5663;
+  --shadow:0 18px 42px rgba(30,65,105,.13);
+  --r7:7px;
+  --r11:11px;
+  --r21:21px;
+  --r33:33px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  padding:18px 10px 46px;
+  overflow-x:hidden;
+  color:var(--ink);
+  font-family:"Trebuchet MS","Arial Rounded MT Bold",system-ui,sans-serif;
+  background:
+    radial-gradient(circle at 12% 6%,rgba(255,255,255,.88),transparent 18%),
+    linear-gradient(180deg,#bdeaff 0%,#eefaff 34%,#fff5c7 73%,#ffd9b1 100%);
+}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:4px solid rgba(47,115,189,.25);
+  outline-offset:3px;
+}
+.portal-header{
+  width:min(1260px,100%);
+  margin:0 auto 14px;
+  padding:12px 14px;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:12px;
+  border:2px solid #fff;
+  border-radius:22px;
+  background:rgba(255,255,255,.92);
+  box-shadow:0 12px 28px rgba(27,66,108,.12);
+}
+.portal-mark{
+  width:58px;height:58px;
+  display:grid;place-items:center;
+  border-radius:18px;
+  background:linear-gradient(145deg,#56c99a,#ffd75d);
+  border:3px solid #fff;
+  font-size:2rem;
+}
+.portal-eyebrow{
+  margin:0;color:var(--coral);
+  font-size:.68rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase
+}
+.portal-title{
+  margin:2px 0 0;
+  color:var(--navy);
+  font-size:clamp(1.05rem,2.2vw,1.42rem);
+  line-height:1.2
+}
+.portal-links{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.portal-link{
+  min-height:38px;padding:8px 12px;
+  display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);border-radius:999px;
+  background:#fff;color:var(--blue);text-decoration:none;font-weight:900;font-size:.78rem
+}
+.portal-link.current{color:#fff;border-color:transparent;background:linear-gradient(135deg,var(--blue),#7768c7)}
+.wrap{width:min(1260px,100%);margin:auto}
+.hero{
+  padding:28px 20px;
+  border-radius:30px;
+  background:
+    radial-gradient(circle at 17% 18%,rgba(255,255,255,.15),transparent 18%),
+    linear-gradient(135deg,var(--navy),#2d6196 58%,#4389b6 100%);
+  color:#fff;
+  text-align:center;
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+.hero:after{
+  content:"△  ○  □  ◇  ⬡";
+  position:absolute;right:18px;bottom:12px;
+  font-size:1.35rem;opacity:.36;letter-spacing:.3em
+}
+.hero .eyebrow{
+  display:inline-flex;gap:8px;align-items:center;
+  padding:7px 13px;border-radius:999px;
+  background:rgba(255,255,255,.11);
+  border:1px solid rgba(255,255,255,.24);
+  font-size:.76rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase
+}
+.hero h1{
+  margin:16px auto 8px;
+  max-width:1000px;
+  font-size:clamp(2.4rem,6vw,5.1rem);
+  line-height:1.05;
+  letter-spacing:-.025em
+}
+.hero p{max-width:920px;margin:auto;color:#edf8ff;line-height:1.72}
+.toolbar{
+  margin:14px 0;
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:9px;
+}
+.control{
+  min-width:0;padding:10px;
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:rgba(255,255,255,.92);
+  box-shadow:0 7px 16px rgba(34,73,115,.06)
+}
+.control label{
+  display:block;margin-bottom:5px;
+  color:var(--muted);
+  font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase
+}
+.control select{
+  width:100%;padding:9px 10px;
+  border:1px solid var(--line);border-radius:11px;
+  background:#fff;color:var(--ink)
+}
+.btn{
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:9px 12px;
+  background:#fff;
+  color:var(--blue);
+  font-weight:900;
+  box-shadow:0 5px 12px rgba(32,70,110,.07);
+  transition:.16s ease
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{color:#fff;border-color:transparent;background:linear-gradient(135deg,var(--blue),#48a6d8)}
+.btn.sunny{color:#574313;border-color:transparent;background:linear-gradient(135deg,#ffe36d,#ffad5f)}
+.btn.good{color:#fff;border-color:transparent;background:linear-gradient(135deg,#4eb678,#3c9d77)}
+.btn.danger{color:#fff;border-color:transparent;background:linear-gradient(135deg,#d96b78,#ba4b5e)}
+.status{
+  margin-bottom:12px;padding:10px 13px;
+  border:1px solid var(--line);border-radius:15px;
+  background:rgba(255,255,255,.84);
+  color:var(--muted);line-height:1.5
+}
+.layout{
+  display:grid;
+  grid-template-columns:320px minmax(0,1fr);
+  gap:14px;
+  align-items:start
+}
+.sidebar,.game-panel{
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:rgba(255,255,255,.93);
+  box-shadow:var(--shadow)
+}
+.sidebar{overflow:hidden}
+.side-head{
+  padding:13px 15px;border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,#fff,#f7fbff)
+}
+.side-head h2{margin:0;color:var(--navy);font-size:1.05rem}
+.side-body{padding:14px}
+.path{display:grid;gap:8px}
+.path-btn{
+  width:100%;
+  min-height:72px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:10px;
+  padding:11px;
+  border:2px solid transparent;
+  border-radius:16px;
+  background:linear-gradient(145deg,#fff,#fff9ec);
+  color:var(--ink);
+  text-align:left;
+  box-shadow:0 6px 14px rgba(35,72,111,.06)
+}
+.path-btn.active{border-color:var(--sun);box-shadow:0 0 0 4px rgba(255,215,95,.18)}
+.path-btn.locked{opacity:.45}
+.path-btn .icon{font-size:1.7rem}
+.path-btn strong{display:block;color:var(--navy);font-size:.86rem}
+.path-btn small{display:block;color:var(--muted);font-size:.68rem;line-height:1.35;margin-top:2px}
+.path-btn .count{
+  min-width:32px;padding:4px 7px;border-radius:999px;
+  background:#eef5fb;color:var(--navy);font-size:.68rem;text-align:center
+}
+.garden{
+  margin-top:12px;padding:11px;border:1px solid var(--line);border-radius:17px;
+  background:linear-gradient(180deg,#e6f8ff 0 61%,#d8b675 62% 100%)
+}
+.garden h3{margin:0 0 7px;text-align:center;color:var(--navy);font-size:.9rem}
+.garden-row{min-height:98px;display:flex;align-items:flex-end;justify-content:center;gap:8px;flex-wrap:wrap}
+.plant{
+  width:50px;text-align:center;opacity:.28;filter:grayscale(.4);transform:scale(.9);transition:.2s
+}
+.plant.grown{opacity:1;filter:none;transform:scale(1)}
+.plant span{display:block;font-size:2rem}
+.plant small{font-size:.58rem;font-weight:900;color:#4e4854;background:#ffffffcc;border-radius:999px;padding:2px 5px}
+.game-panel{padding:16px;min-width:0}
+.game-head{
+  display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap
+}
+.game-head h2{margin:0;color:var(--navy)}
+.progress{
+  margin-top:10px;height:14px;border-radius:999px;overflow:hidden;
+  background:#e8edf3;border:1px solid var(--line)
+}
+.progress>div{height:100%;width:0;background:linear-gradient(90deg,var(--coral),var(--sun),var(--green));transition:.25s}
+.prompt{
+  margin:14px 0;
+  padding:13px;
+  border-radius:17px;
+  background:#eef8ff;
+  border:1px solid #bddbeb;
+  font-size:1.08rem;
+  font-weight:900;
+  color:var(--navy);
+  text-align:center
+}
+.stage{
+  min-height:430px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:
+    linear-gradient(90deg,rgba(47,115,189,.06) 1px,transparent 1px),
+    linear-gradient(rgba(47,115,189,.06) 1px,transparent 1px),
+    linear-gradient(145deg,#fff,#f9fcff);
+  background-size:28px 28px,28px 28px,auto;
+  overflow:hidden;
+  position:relative
+}
+.shape-grid{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  padding:18px
+}
+.choice{
+  min-height:145px;
+  border:2px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  color:var(--ink);
+  display:grid;
+  place-items:center;
+  align-content:center;
+  gap:8px;
+  transition:.16s ease
+}
+.choice:hover{transform:translateY(-3px)}
+.choice.correct{background:#e3f7e9;border-color:#7cc793}
+.choice.wrong{background:#ffe8eb;border-color:#e59ba6}
+.choice.hint{box-shadow:0 0 0 5px rgba(255,215,95,.44)}
+.shape-art{
+  width:92px;height:92px;
+  background:var(--shape-color,#4a98d5);
+  clip-path:var(--clip);
+  transform:rotate(var(--rot,0deg));
+  filter:drop-shadow(0 7px 7px rgba(31,57,82,.12))
+}
+.choice strong{color:var(--navy)}
+.choice small{max-width:180px;text-align:center;color:var(--muted);line-height:1.35}
+.answer-input{
+  display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap
+}
+.answer-input input{
+  width:min(180px,70vw);
+  padding:10px;border:1px solid var(--line);border-radius:12px;
+  text-align:center;font-weight:900
+}
+.feedback{
+  min-height:30px;margin-top:10px;
+  color:var(--muted);font-weight:900;text-align:center
+}
+.info-grid{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px
+}
+.info-card{
+  padding:12px;border:1px solid var(--line);border-radius:17px;background:#fff
+}
+.info-card h3{margin:0 0 6px;color:var(--navy);font-size:.9rem}
+.info-card p{margin:0;color:var(--muted);font-size:.8rem;line-height:1.45}
+.voice-panel{
+  margin-top:14px;padding:13px;
+  border:1px solid var(--line);border-radius:20px;
+  background:linear-gradient(145deg,#fff,#f5f7ff)
+}
+.voice-guides{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.voice-guide{
+  min-height:58px;border:1px solid var(--line);border-radius:14px;
+  background:#fff;color:var(--blue);font-weight:900
+}
+.voice-guide.active{color:#fff;background:linear-gradient(135deg,var(--blue),#7768c7)}
+.voice-controls{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:8px}
+.stats{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:8px
+}
+.stat{
+  padding:10px;border:1px solid var(--line);border-radius:15px;background:#fff;text-align:center
+}
+.stat strong{display:block;color:var(--blue);font-size:1.2rem}
+.badges{
+  margin-top:14px;padding:13px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.9)
+}
+.badges h2{margin:0 0 8px;color:var(--navy);text-align:center;font-size:1rem}
+.badge-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
+.badge{
+  min-height:72px;padding:7px;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:center;opacity:.34;filter:grayscale(.4)
+}
+.badge.earned{opacity:1;filter:none}
+.badge span{display:block;font-size:1.45rem}
+.badge small{font-size:.62rem;color:var(--muted);font-weight:900}
+footer{
+  margin-top:16px;padding:14px;border:1px solid rgba(255,255,255,.8);border-radius:18px;
+  background:rgba(255,255,255,.72);text-align:center;color:var(--muted);line-height:1.5;font-size:.82rem
+}
+.sparkle{position:fixed;pointer-events:none;z-index:80;font-size:1.5rem;animation:spark 1s ease forwards}
+@keyframes spark{to{transform:translateY(-85px) rotate(55deg);opacity:0}}
+@media(max-width:1000px){
+  .toolbar{grid-template-columns:repeat(3,1fr)}
+  .layout{grid-template-columns:1fr}
+  .path{grid-template-columns:repeat(2,1fr)}
+  .shape-grid{grid-template-columns:repeat(2,1fr)}
+  .info-grid{grid-template-columns:1fr}
+  .badge-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:720px){
+  body{padding:10px 7px 34px}
+  .portal-header{grid-template-columns:auto 1fr}
+  .portal-links{grid-column:1/-1;justify-content:center}
+  .toolbar{grid-template-columns:1fr}
+  .path{grid-template-columns:1fr}
+  .shape-grid{grid-template-columns:1fr}
+  .voice-guides{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:460px){
+  .portal-header{grid-template-columns:1fr;text-align:center}
+  .portal-mark{margin:auto}
+  .portal-links{grid-column:auto}
+  .badge-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+<header class="portal-header" aria-label="Khaemenes Academy Elementary Portal">
+  <div class="portal-mark" aria-hidden="true">📐</div>
+  <div>
+    <p class="portal-eyebrow">Khaemenes Academy · Elementary Portal</p>
+    <div class="portal-title">Shape Garden Academy™ · Elementary Geometry</div>
+  </div>
+  <nav class="portal-links" aria-label="Elementary navigation">
+    <a class="portal-link" href="../index.html">🏡 Elementary Home</a>
+    <a class="portal-link current" href="#" aria-current="page">📐 Shape Garden</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">🌱 Geometry · Measurement · Symmetry · Coordinates</div>
+    <h1>Shape Garden Academy™</h1>
+    <p>A growing elementary geometry adventure with shape properties, angle reasoning, perimeter, area, symmetry, coordinate grids, patterns, quizzes, voice guides, badges, and private local progress.</p>
+  </section>
+
+  <section class="toolbar">
+    <div class="control">
+      <label for="gradeSelect">Grade Band</label>
+      <select id="gradeSelect">
+        <option value="k2">Grades K–2</option>
+        <option value="34">Grades 3–4</option>
+        <option value="5">Grade 5 Challenge</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="modeSelect">Challenge Mode</label>
+      <select id="modeSelect">
+        <option value="properties">Shape Properties</option>
+        <option value="angles">Angles & Corners</option>
+        <option value="symmetry">Lines of Symmetry</option>
+        <option value="perimeter">Perimeter</option>
+        <option value="area">Area</option>
+        <option value="coordinates">Coordinate Grid</option>
+        <option value="patterns">Shape Patterns</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="difficultySelect">Difficulty</label>
+      <select id="difficultySelect">
+        <option value="gentle">Gentle</option>
+        <option value="standard">Standard</option>
+        <option value="challenge">Challenge</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="themeSelect">Theme</label>
+      <select id="themeSelect">
+        <option value="day">Bright Garden</option>
+        <option value="ocean">Ocean Geometry</option>
+        <option value="sunset">Sunset Studio</option>
+        <option value="night">Night Geometry</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="soundSelect">Narration</label>
+      <select id="soundSelect">
+        <option value="on">On</option>
+        <option value="off">Off</option>
+      </select>
+    </div>
+    <div class="control">
+      <label>Round Tools</label>
+      <button class="btn sunny" id="newRoundBtn" type="button">New Challenge</button>
+    </div>
+  </section>
+
+  <div class="status" id="status">Choose a learning path and begin growing your geometry garden.</div>
+
+  <section class="layout">
+    <aside class="sidebar">
+      <div class="side-head"><h2>Geometry Learning Path</h2></div>
+      <div class="side-body">
+        <div class="path" id="path"></div>
+        <div class="garden">
+          <h3>🌱 My Geometry Garden</h3>
+          <div class="garden-row" id="gardenRow"></div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="game-panel">
+      <div class="game-head">
+        <h2 id="lessonTitle">Shape Properties</h2>
+        <div>
+          <button class="btn" id="hearBtn" type="button">🔊 Hear Question</button>
+          <button class="btn" id="hintBtn" type="button">💡 Hint</button>
+        </div>
+      </div>
+
+      <div class="progress"><div id="progressBar"></div></div>
+      <div class="prompt" id="prompt">Loading challenge…</div>
+
+      <div class="stage" id="stage">
+        <div class="shape-grid" id="shapeGrid"></div>
+      </div>
+
+      <div class="feedback" id="feedback" aria-live="polite"></div>
+
+      <section class="info-grid">
+        <article class="info-card"><h3>Geometry Word</h3><p id="wordCard">A polygon is a closed shape made from straight line segments.</p></article>
+        <article class="info-card"><h3>Real-World Connection</h3><p id="worldCard">Windows, signs, floor tiles, and buildings use geometric shapes.</p></article>
+        <article class="info-card"><h3>Reasoning Prompt</h3><p id="reasonCard">Explain how you know your answer is correct.</p></article>
+      </section>
+
+      <section class="voice-panel">
+        <h2 style="text-align:center;margin-top:0">Choose a Geometry Guide</h2>
+        <div class="voice-guides" id="voiceGuides">
+          <button class="voice-guide" data-voice="terra" type="button">🌿 Terra</button>
+          <button class="voice-guide" data-voice="axiom" type="button">📐 Axiom</button>
+          <button class="voice-guide" data-voice="owl" type="button">🦉 Euclid Owl</button>
+          <button class="voice-guide" data-voice="nova" type="button">✨ Nova</button>
+        </div>
+        <div class="voice-controls">
+          <select id="voiceSpeed"><option value="slow">Slow and clear</option><option value="normal">Just right</option><option value="lively">A little lively</option></select>
+          <button class="btn" id="meetGuideBtn" type="button">👋 Meet My Guide</button>
+          <button class="btn" id="repeatBtn" type="button">🔁 Repeat Last</button>
+          <button class="btn" id="stopVoiceBtn" type="button">⏹ Stop Voice</button>
+        </div>
+        <p id="voiceStatus" style="text-align:center;color:var(--muted);min-height:1.2em"></p>
+      </section>
+    </section>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><strong id="scoreStat">0</strong>Score</div>
+    <div class="stat"><strong id="streakStat">0</strong>Streak</div>
+    <div class="stat"><strong id="roundStat">0</strong>Rounds</div>
+    <div class="stat"><strong id="masteryStat">0</strong>Skills mastered</div>
+    <div class="stat"><strong id="accuracyStat">0%</strong>Accuracy</div>
+    <div class="stat"><strong id="levelStat">1</strong>Garden level</div>
+  </section>
+
+  <section class="badges">
+    <h2>🏅 Geometry Badge Cabinet</h2>
+    <div class="badge-grid" id="badgeGrid"></div>
+  </section>
+
+  <footer>
+    <strong>© 2026 Shape Garden Academy™ · Verve N Veda · Khaemenes Academy · Jennifer Kay Pearl</strong><br>
+    Single-file vanilla JavaScript · Private local progress · No accounts, ads, or outside game services
+  </footer>
+</main>
+
+<script>
+(() => {
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+  const KEY = "shape-garden-elementary-v1";
+
+  const SHAPES = [
+    {id:"triangle",name:"Triangle",sides:3,corners:3,symmetry:3,angles:"3 angles",clip:"polygon(50% 0,100% 100%,0 100%)",color:"#f06d78",real:"roof, pennant, bridge support"},
+    {id:"square",name:"Square",sides:4,corners:4,symmetry:4,angles:"4 right angles",clip:"polygon(0 0,100% 0,100% 100%,0 100%)",color:"#4e9ed6",real:"tile, window, chessboard space"},
+    {id:"rectangle",name:"Rectangle",sides:4,corners:4,symmetry:2,angles:"4 right angles",clip:"polygon(0 15%,100% 15%,100% 85%,0 85%)",color:"#55aa78",real:"door, book, screen"},
+    {id:"rhombus",name:"Rhombus",sides:4,corners:4,symmetry:2,angles:"2 acute and 2 obtuse angles",clip:"polygon(50% 0,100% 50%,50% 100%,0 50%)",color:"#9d71d0",real:"kite, road marking, decorative tile"},
+    {id:"pentagon",name:"Pentagon",sides:5,corners:5,symmetry:5,angles:"5 interior angles",clip:"polygon(50% 0,97% 35%,79% 100%,21% 100%,3% 35%)",color:"#ef9859",real:"home plate, badge, building design"},
+    {id:"hexagon",name:"Hexagon",sides:6,corners:6,symmetry:6,angles:"6 interior angles",clip:"polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)",color:"#e3bd3b",real:"honeycomb, bolt head, tile"},
+    {id:"octagon",name:"Octagon",sides:8,corners:8,symmetry:8,angles:"8 interior angles",clip:"polygon(30% 0,70% 0,100% 30%,100% 70%,70% 100%,30% 100%,0 70%,0 30%)",color:"#d95c65",real:"stop sign, decorative window"},
+    {id:"trapezoid",name:"Trapezoid",sides:4,corners:4,symmetry:1,angles:"4 interior angles",clip:"polygon(22% 0,78% 0,100% 100%,0 100%)",color:"#3da2a4",real:"lampshade, bridge support"},
+    {id:"parallelogram",name:"Parallelogram",sides:4,corners:4,symmetry:0,angles:"2 acute and 2 obtuse angles",clip:"polygon(22% 0,100% 0,78% 100%,0 100%)",color:"#5f7fcb",real:"slanted tile, design panel"},
+    {id:"circle",name:"Circle",sides:0,corners:0,symmetry:"many",angles:"no angles",clip:"circle(50%)",color:"#4ab9d0",real:"wheel, clock, plate"}
+  ];
+
+  const PATHS = [
+    {id:"properties",name:"Shape Properties",icon:"🔷",desc:"Sides, corners, and classifications",unlock:0},
+    {id:"angles",name:"Angles & Corners",icon:"📐",desc:"Right, acute, and obtuse angle reasoning",unlock:4},
+    {id:"symmetry",name:"Lines of Symmetry",icon:"🪞",desc:"Predict and count symmetry lines",unlock:8},
+    {id:"perimeter",name:"Perimeter Garden",icon:"📏",desc:"Add side lengths around a shape",unlock:12},
+    {id:"area",name:"Area Greenhouse",icon:"🟩",desc:"Count square units and use formulas",unlock:16},
+    {id:"coordinates",name:"Coordinate Garden",icon:"🗺️",desc:"Read ordered pairs in Quadrant I",unlock:20},
+    {id:"patterns",name:"Pattern Orchard",icon:"🔁",desc:"Complete geometric patterns",unlock:24}
+  ];
+
+  const THEMES = {
+    day:{bg1:"#bdeaff",bg2:"#fff5c7",panel:"#fff",ink:"#26384e",blue:"#2f73bd"},
+    ocean:{bg1:"#ccefff",bg2:"#d9f7ec",panel:"#fbffff",ink:"#224052",blue:"#2d84a7"},
+    sunset:{bg1:"#ffd7bc",bg2:"#ffe8ef",panel:"#fffaf8",ink:"#513b44",blue:"#b85c72"},
+    night:{bg1:"#1e2a50",bg2:"#3b3e6b",panel:"#2d345a",ink:"#f6f4ff",blue:"#a9b7ff"}
+  };
+
+  const BADGES = [
+    {id:"starter",icon:"🌱",name:"Geometry Sprout",test:s=>s.rounds>=3},
+    {id:"properties",icon:"🔷",name:"Property Pro",test:s=>(s.mastery.properties||0)>=5},
+    {id:"angles",icon:"📐",name:"Angle Explorer",test:s=>(s.mastery.angles||0)>=5},
+    {id:"symmetry",icon:"🪞",name:"Symmetry Scout",test:s=>(s.mastery.symmetry||0)>=5},
+    {id:"measure",icon:"📏",name:"Measurement Gardener",test:s=>(s.mastery.perimeter||0)>=4&&(s.mastery.area||0)>=4},
+    {id:"coordinates",icon:"🗺️",name:"Coordinate Navigator",test:s=>(s.mastery.coordinates||0)>=5},
+    {id:"patterns",icon:"🔁",name:"Pattern Keeper",test:s=>(s.mastery.patterns||0)>=5},
+    {id:"streak",icon:"🔥",name:"Five-in-a-Row",test:s=>s.bestStreak>=5},
+    {id:"master",icon:"🏆",name:"Geometry Garden Master",test:s=>Object.keys(s.mastery).filter(k=>s.mastery[k]>=5).length>=7}
+  ];
+
+  function fresh(){
+    return {
+      grade:"k2",mode:"properties",difficulty:"gentle",theme:"day",sound:"on",
+      voice:"terra",voiceSpeed:"slow",score:0,streak:0,bestStreak:0,rounds:0,
+      correct:0,attempts:0,totalAttempts:0,mastery:{},lastPrompt:"",selectedPath:"properties"
+    };
+  }
+  function load(){
+    try{return Object.assign(fresh(),JSON.parse(localStorage.getItem(KEY)||"{}"))}
+    catch{return fresh()}
+  }
+  let state=load(),current=null,wrongCount=0,voices=[],speechToken=0,lastSpoken="";
+
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{}}
+  function setStatus(text){$("status").textContent=text}
+  function applyTheme(name){
+    const t=THEMES[name]||THEMES.day;
+    document.body.style.background=`linear-gradient(180deg,${t.bg1},${t.bg2})`;
+    document.documentElement.style.setProperty("--panel",t.panel);
+    document.documentElement.style.setProperty("--ink",t.ink);
+    document.documentElement.style.setProperty("--blue",t.blue);
+    state.theme=name;save()
+  }
+  function shuffle(a){return a.slice().sort(()=>Math.random()-.5)}
+  function randomInt(min,max){return Math.floor(Math.random()*(max-min+1))+min}
+  function sparkle(count=12){
+    for(let i=0;i<count;i++){
+      const s=document.createElement("span");s.className="sparkle";
+      s.textContent=["✨","⭐","📐","🌿"][i%4];
+      s.style.left=(20+Math.random()*60)+"vw";
+      s.style.top=(45+Math.random()*25)+"vh";
+      document.body.appendChild(s);setTimeout(()=>s.remove(),1100)
+    }
+  }
+
+  const GUIDES = {
+    terra:{name:"Terra",rate:.82,pitch:1.06,match:/samantha|aria|jenny|ava|karen|victoria/i,greeting:"Hello, geometer. Terra is ready to grow a garden of shapes and measurements."},
+    axiom:{name:"Axiom",rate:.78,pitch:.98,match:/daniel|david|alex|fred|george/i,greeting:"Welcome, geometry learner. Axiom is ready to reason carefully about shapes."},
+    owl:{name:"Euclid Owl",rate:.74,pitch:1,match:/daniel|samantha|alex|serena|moira/i,greeting:"Welcome, young mathematician. Euclid Owl is ready for careful geometry thinking."},
+    nova:{name:"Nova",rate:.84,pitch:1.1,match:/natural|enhanced|premium|samantha|aria|jenny|ava/i,greeting:"Hello, bright explorer. Nova is ready for a sparkling geometry challenge."}
+  };
+  const SPEEDS={slow:.88,normal:1,lively:1.1};
+  function refreshVoices(){if("speechSynthesis"in window)voices=speechSynthesis.getVoices()||[]}
+  function chooseVoice(){
+    refreshVoices();const g=GUIDES[state.voice]||GUIDES.terra;
+    const en=voices.filter(v=>/^en([-_]|$)/i.test(v.lang||"")),pool=en.length?en:voices;
+    return pool.find(v=>g.match.test(v.name))||pool.find(v=>/natural|enhanced|premium/i.test(v.name))||pool[0]||null
+  }
+  function stopVoice(msg="Voice stopped."){
+    speechToken++;if("speechSynthesis"in window)speechSynthesis.cancel();$("voiceStatus").textContent=msg
+  }
+  function speak(text,preview=false){
+    if(state.sound==="off"||!("speechSynthesis"in window))return;
+    const g=GUIDES[state.voice]||GUIDES.terra,phrase=preview?g.greeting:String(text||"").trim();if(!phrase)return;
+    stopVoice("");lastSpoken=phrase;const token=++speechToken,u=new SpeechSynthesisUtterance(phrase),v=chooseVoice();
+    if(v)u.voice=v;u.lang=v?.lang||"en-US";u.rate=Math.max(.55,Math.min(1.15,g.rate*(SPEEDS[state.voiceSpeed]||1)));u.pitch=g.pitch;
+    u.onstart=()=>$("voiceStatus").textContent=`${g.name} is reading.`;
+    u.onend=()=>{if(token===speechToken)$("voiceStatus").textContent="Ready for another geometry challenge!"};
+    u.onerror=()=>{if(token===speechToken)$("voiceStatus").textContent="The voice had a little hiccup."};
+    speechSynthesis.speak(u)
+  }
+
+  function unlocked(path){return state.correct>=path.unlock}
+  function renderPath(){
+    $("path").innerHTML="";
+    PATHS.forEach(p=>{
+      const b=document.createElement("button");
+      const can=unlocked(p);
+      b.className="path-btn"+(state.mode===p.id?" active":"")+(can?"":" locked");
+      b.disabled=!can;
+      b.innerHTML=`<span class="icon">${p.icon}</span><span><strong>${p.name}</strong><small>${p.desc}</small></span><span class="count">${state.mastery[p.id]||0}</span>`;
+      b.onclick=()=>{state.mode=p.id;state.selectedPath=p.id;$("modeSelect").value=p.id;save();renderPath();newRound()};
+      $("path").appendChild(b)
+    })
+  }
+  function renderGarden(){
+    $("gardenRow").innerHTML=PATHS.map((p,i)=>{
+      const level=state.mastery[p.id]||0;
+      const grown=level>=3;
+      return `<div class="plant ${grown?"grown":""}"><span>${grown?["🌻","🌿","🌳","🌼","🍎","🌷","🏆"][i]:"🌱"}</span><small>${p.name.split(" ")[0]}</small></div>`
+    }).join("")
+  }
+  function renderBadges(){
+    $("badgeGrid").innerHTML=BADGES.map(b=>`<div class="badge ${b.test(state)?"earned":""}"><span>${b.icon}</span><small>${b.name}</small></div>`).join("")
+  }
+  function updateStats(){
+    $("scoreStat").textContent=state.score;
+    $("streakStat").textContent=state.streak;
+    $("roundStat").textContent=state.rounds;
+    $("masteryStat").textContent=Object.values(state.mastery).filter(v=>v>=5).length;
+    $("accuracyStat").textContent=`${state.totalAttempts?Math.round(state.correct/state.totalAttempts*100):0}%`;
+    $("levelStat").textContent=1+Math.floor(state.correct/8);
+    $("progressBar").style.width=`${Math.min(100,(state.mastery[state.mode]||0)/5*100)}%`;
+    renderPath();renderGarden();renderBadges();save()
+  }
+
+  function shapeHTML(shape,extra=""){
+    return `<div class="shape-art" style="--clip:${shape.clip};--shape-color:${shape.color};${extra}"></div><strong>${shape.name}</strong><small>${shape.sides} straight sides · ${shape.corners} corners</small>`
+  }
+  function buildChoice(shape,correct,extraLabel=""){
+    const b=document.createElement("button");b.className="choice";
+    b.innerHTML=shapeHTML(shape)+(extraLabel?`<small>${extraLabel}</small>`:"");
+    b.onclick=()=>answer(correct,b);
+    return b
+  }
+
+  function generateProperties(){
+    const target=SHAPES[randomInt(0,SHAPES.length-1)];
+    const pool=shuffle(SHAPES.filter(s=>s.id!==target.id)).slice(0,state.difficulty==="challenge"?5:3);
+    const choices=shuffle([target,...pool]);
+    const clues=[
+      `Choose the ${target.name}.`,
+      `Which shape has ${target.sides} straight sides and ${target.corners} corners?`,
+      `Which shape can match a ${target.real.split(",")[0]}?`
+    ];
+    return {
+      title:"Shape Properties",
+      prompt:clues[randomInt(0,clues.length-1)],
+      word:"Polygon: a closed figure made from straight line segments.",
+      world:`Real-world examples: ${target.real}.`,
+      reason:`Explain how the sides and corners prove that this is a ${target.name}.`,
+      render(){
+        $("shapeGrid").innerHTML="";
+        choices.forEach(s=>$("shapeGrid").appendChild(buildChoice(s,s.id===target.id)))
+      },
+      hint:`Look for ${target.sides} straight sides and ${target.corners} corners.`
+    }
+  }
+  function generateAngles(){
+    const candidates=SHAPES.filter(s=>["triangle","square","rectangle","rhombus","trapezoid","parallelogram"].includes(s.id));
+    const target=candidates[randomInt(0,candidates.length-1)];
+    const choices=shuffle(candidates).slice(0,4);
+    if(!choices.some(s=>s.id===target.id))choices[0]=target;
+    return{
+      title:"Angles & Corners",
+      prompt:`Which shape matches this angle clue: ${target.angles}?`,
+      word:"A right angle measures 90°. Acute angles are smaller; obtuse angles are larger.",
+      world:"Corners in frames, roofs, ramps, and signs create different angle types.",
+      reason:"Name one angle type you can see in the shape.",
+      render(){ $("shapeGrid").innerHTML="";shuffle(choices).forEach(s=>$("shapeGrid").appendChild(buildChoice(s,s.id===target.id,s.angles)))},
+      hint:`The correct shape has ${target.angles}.`
+    }
+  }
+  function generateSymmetry(){
+    const target=SHAPES[randomInt(0,SHAPES.length-1)];
+    const options=shuffle([target.symmetry,0,1,2,4,6,"many"].filter((v,i,a)=>a.indexOf(v)===i)).slice(0,4);
+    if(!options.includes(target.symmetry))options[0]=target.symmetry;
+    return{
+      title:"Lines of Symmetry",
+      prompt:`How many lines of symmetry does a regular ${target.name.toLowerCase()} have?`,
+      word:"A line of symmetry divides a figure into matching mirror halves.",
+      world:"Butterflies, snowflakes, leaves, and designs often show symmetry.",
+      reason:"Imagine folding the shape. Would both halves match?",
+      render(){
+        $("shapeGrid").innerHTML="";
+        shuffle(options).forEach(value=>{
+          const b=document.createElement("button");b.className="choice";
+          b.innerHTML=`<div style="font-size:2.5rem;font-weight:950;color:var(--blue)">${value}</div><strong>${value===1?"line":"lines"} of symmetry</strong>`;
+          b.onclick=()=>answer(String(value)===String(target.symmetry),b);
+          $("shapeGrid").appendChild(b)
+        })
+      },
+      hint:target.symmetry==="many"?"A circle can be folded through its center in many directions.":`Try imagining ${target.symmetry} mirror fold${target.symmetry===1?"":"s"}.`
+    }
+  }
+  function generatePerimeter(){
+    const w=randomInt(2,state.difficulty==="challenge"?12:8),h=randomInt(2,state.difficulty==="challenge"?12:8);
+    const answerValue=2*(w+h);
+    return{
+      title:"Perimeter Garden",
+      prompt:`A rectangular garden is ${w} units long and ${h} units wide. What is its perimeter?`,
+      word:"Perimeter is the total distance around a figure.",
+      world:"Garden fences, room borders, and picture frames use perimeter.",
+      reason:"Explain why both lengths and both widths must be added.",
+      render(){
+        $("shapeGrid").innerHTML=`<div style="grid-column:1/-1;text-align:center"><div style="width:min(430px,80vw);height:210px;border:8px solid #55aa78;margin:auto;display:grid;place-items:center;background:#e9f8e8"><strong style="font-size:1.3rem">${w} units × ${h} units</strong></div><div class="answer-input" style="margin-top:14px"><input id="numericAnswer" type="number" placeholder="Perimeter"><button class="btn primary" id="submitNumeric">Check</button></div></div>`;
+        $("submitNumeric").onclick=()=>answer(Number($("numericAnswer").value)===answerValue,$("submitNumeric"))
+      },
+      hint:`Use 2 × (${w} + ${h}).`
+    }
+  }
+  function generateArea(){
+    const w=randomInt(2,state.difficulty==="challenge"?10:7),h=randomInt(2,state.difficulty==="challenge"?10:7);
+    const answerValue=w*h;
+    return{
+      title:"Area Greenhouse",
+      prompt:`A greenhouse floor is ${w} units by ${h} units. What is its area?`,
+      word:"Area measures the space inside a flat figure in square units.",
+      world:"Floors, gardens, walls, and fields can be measured with area.",
+      reason:"Explain why multiplying rows by columns counts all square units.",
+      render(){
+        const cells=Array.from({length:w*h},()=>`<span style="border:1px solid #9bc9aa;background:#dff3e4"></span>`).join("");
+        $("shapeGrid").innerHTML=`<div style="grid-column:1/-1;text-align:center"><div style="width:min(430px,82vw);aspect-ratio:${w}/${h};display:grid;grid-template-columns:repeat(${w},1fr);margin:auto;border:2px solid #55aa78">${cells}</div><div class="answer-input" style="margin-top:14px"><input id="numericAnswer" type="number" placeholder="Square units"><button class="btn primary" id="submitNumeric">Check</button></div></div>`;
+        $("submitNumeric").onclick=()=>answer(Number($("numericAnswer").value)===answerValue,$("submitNumeric"))
+      },
+      hint:`Multiply ${w} rows by ${h} columns.`
+    }
+  }
+  function generateCoordinates(){
+    const x=randomInt(1,9),y=randomInt(1,9);
+    return{
+      title:"Coordinate Garden",
+      prompt:`What ordered pair names the flower's location?`,
+      word:"An ordered pair is written (x, y). Move across first, then up.",
+      world:"Maps, games, graphs, and design plans use coordinate grids.",
+      reason:"Explain why the x-coordinate is read before the y-coordinate.",
+      render(){
+        const dots=[];
+        for(let row=10;row>=0;row--){
+          for(let col=0;col<=10;col++){
+            dots.push(`<div style="border:1px solid #d9e4ee;display:grid;place-items:center;font-size:.8rem">${col===x&&row===y?"🌻":""}</div>`)
+          }
+        }
+        $("shapeGrid").innerHTML=`<div style="grid-column:1/-1"><div style="display:grid;grid-template-columns:repeat(11,1fr);width:min(520px,88vw);aspect-ratio:1;margin:auto;border:2px solid var(--blue)">${dots.join("")}</div><div class="answer-input" style="margin-top:14px"><input id="coordAnswer" placeholder="Example: (3, 5)"><button class="btn primary" id="submitCoord">Check</button></div></div>`;
+        $("submitCoord").onclick=()=>answer($("coordAnswer").value.replace(/\s/g,"")===`(${x},${y})`,$("submitCoord"))
+      },
+      hint:`Move ${x} spaces across, then ${y} spaces up.`
+    }
+  }
+  function generatePatterns(){
+    const a=SHAPES[randomInt(0,5)],b=SHAPES[randomInt(0,5)];
+    const pattern=state.difficulty==="challenge"?[a,b,b,a,b,b]:[a,b,a,b,a];
+    const answerShape=state.difficulty==="challenge"?a:b;
+    const choices=shuffle([answerShape,...SHAPES.filter(s=>s.id!==answerShape.id).slice(0,3)]);
+    return{
+      title:"Pattern Orchard",
+      prompt:"Which shape comes next in the pattern?",
+      word:"A pattern is a repeated or growing arrangement that follows a rule.",
+      world:"Patterns appear in art, music, buildings, nature, and number sequences.",
+      reason:"Describe the repeating rule in words.",
+      render(){
+        $("shapeGrid").innerHTML=`<div style="grid-column:1/-1;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">${pattern.map(s=>`<div class="shape-art" style="--clip:${s.clip};--shape-color:${s.color};width:64px;height:64px"></div>`).join("")}<div style="font-size:3rem;font-weight:950">?</div></div>`;
+        const holder=document.createElement("div");holder.style.cssText="grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px";
+        choices.forEach(s=>holder.appendChild(buildChoice(s,s.id===answerShape.id)));
+        $("shapeGrid").appendChild(holder)
+      },
+      hint:state.difficulty==="challenge"?"Look for groups of three shapes.":"The shapes alternate."
+    }
+  }
+
+  function generate(){
+    if(state.mode==="angles")return generateAngles();
+    if(state.mode==="symmetry")return generateSymmetry();
+    if(state.mode==="perimeter")return generatePerimeter();
+    if(state.mode==="area")return generateArea();
+    if(state.mode==="coordinates")return generateCoordinates();
+    if(state.mode==="patterns")return generatePatterns();
+    return generateProperties()
+  }
+
+  function newRound(){
+    wrongCount=0;state.rounds++;
+    current=generate();
+    $("lessonTitle").textContent=current.title;
+    $("prompt").textContent=current.prompt;
+    $("wordCard").textContent=current.word;
+    $("worldCard").textContent=current.world;
+    $("reasonCard").textContent=current.reason;
+    $("feedback").textContent="";
+    state.lastPrompt=current.prompt;
+    current.render();
+    setStatus(`${current.title} challenge ready.`);
+    updateStats();
+    if(state.sound==="on")setTimeout(()=>speak(current.prompt),220)
+  }
+
+  function answer(correct,element){
+    if(element?.disabled)return;
+    state.totalAttempts++;
+    if(correct){
+      if(element)element.classList.add("correct");
+      state.correct++;state.score+=10+state.streak*2;state.streak++;state.bestStreak=Math.max(state.bestStreak,state.streak);
+      state.mastery[state.mode]=(state.mastery[state.mode]||0)+1;
+      $("feedback").textContent="Excellent reasoning! Explain how you know.";
+      speak("Excellent reasoning. Explain how you know your answer is correct.");
+      sparkle(14);
+      document.querySelectorAll(".choice").forEach(b=>b.disabled=true);
+      updateStats();setTimeout(newRound,1500)
+    }else{
+      wrongCount++;state.streak=0;if(element){element.classList.add("wrong");element.disabled=true}
+      if(wrongCount<2){
+        $("feedback").textContent="Good try. Use the hint or test another idea.";
+        speak("Good try. Use the hint or test another idea.")
+      }else{
+        $("feedback").textContent="This one is challenging. Read the hint and try a fresh round.";
+        speak("This one is challenging. Read the hint and try a fresh round.");
+        setTimeout(newRound,2200)
+      }
+      updateStats()
+    }
+  }
+
+  function updateVoiceButtons(){
+    document.querySelectorAll("[data-voice]").forEach(b=>b.classList.toggle("active",b.dataset.voice===state.voice));
+    $("voiceSpeed").value=state.voiceSpeed
+  }
+
+  $("gradeSelect").onchange=e=>{state.grade=e.target.value;save();newRound()};
+  $("modeSelect").onchange=e=>{state.mode=e.target.value;state.selectedPath=e.target.value;save();renderPath();newRound()};
+  $("difficultySelect").onchange=e=>{state.difficulty=e.target.value;save();newRound()};
+  $("themeSelect").onchange=e=>applyTheme(e.target.value);
+  $("soundSelect").onchange=e=>{state.sound=e.target.value;save();if(state.sound==="off")stopVoice("")};
+  $("newRoundBtn").onclick=newRound;
+  $("hearBtn").onclick=()=>speak(current?.prompt||state.lastPrompt);
+  $("hintBtn").onclick=()=>{if(!current)return;$("feedback").textContent=current.hint;speak(current.hint)};
+  $("voiceGuides").onclick=e=>{const b=e.target.closest("[data-voice]");if(!b)return;state.voice=b.dataset.voice;save();updateVoiceButtons();$("voiceStatus").textContent=`${GUIDES[state.voice].name} selected.`};
+  $("voiceSpeed").onchange=e=>{state.voiceSpeed=e.target.value;save()};
+  $("meetGuideBtn").onclick=()=>speak("",true);
+  $("repeatBtn").onclick=()=>lastSpoken?speak(lastSpoken):speak(current?.prompt||"Choose a geometry path to begin.");
+  $("stopVoiceBtn").onclick=()=>stopVoice();
+
+  $("gradeSelect").value=state.grade;
+  $("modeSelect").value=state.mode;
+  $("difficultySelect").value=state.difficulty;
+  $("themeSelect").value=state.theme;
+  $("soundSelect").value=state.sound;
+  applyTheme(state.theme);
+  renderPath();renderGarden();renderBadges();updateStats();updateVoiceButtons();refreshVoices();
+  if("speechSynthesis"in window){speechSynthesis.addEventListener?.("voiceschanged",refreshVoices);speechSynthesis.onvoiceschanged=refreshVoices}
+  newRound();
+  window.addEventListener("beforeunload",()=>stopVoice(""));
+})();
+</script>
+</body>
+</html>
