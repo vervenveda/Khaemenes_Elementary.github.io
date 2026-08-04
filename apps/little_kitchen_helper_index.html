@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Little Tikes Life Skills — Little Kitchen Helper</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <style>
+    :root{
+      --bg:#fefaf3;
+      --ink:#2c2430;
+      --accent:#ffb347;
+      --accent-soft:#ffe1b8;
+      --soft-blue:#d7ecff;
+      --soft-green:#dff7d7;
+      --radius:21px;
+      --shadow:0 14px 33px rgba(0,0,0,0.12);
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:"Comic Sans MS","Trebuchet MS","Arial Rounded MT Bold",system-ui,sans-serif;
+      background:radial-gradient(circle at top,#fffdf7 0%,#fef4df 40%,#f7e2c4 100%);
+      color:var(--ink);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:24px 12px 40px;
+    }
+
+    .app-shell{
+      width:100%;
+      max-width:980px;
+      text-align:center;
+    }
+
+    .lt-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:6px 16px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      color:#7a4b12;
+      font-size:13px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    h1.app-title{
+      margin:4px 0 2px;
+      font-size:27px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+    }
+
+    .app-subtitle{
+      margin:0 0 18px;
+      font-size:15px;
+      color:#6c5c6f;
+    }
+
+    /* Book layout */
+
+    .book-wrap{
+      margin:0 auto;
+      margin-top:10px;
+      max-width:920px;
+      background:#fffdf8;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px 18px 22px;
+      border:1px solid rgba(255,187,118,0.5);
+    }
+
+    .book-inner{
+      display:flex;
+      gap:18px;
+      align-items:stretch;
+      justify-content:center;
+      transition:transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .book-inner.page-turn{
+      transform:scale(0.99) rotateY(2deg);
+      box-shadow:0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    .page{
+      flex:1 1 0;
+      background:#fffcf5;
+      border-radius:16px;
+      padding:18px 16px 20px;
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,0.04);
+    }
+
+    .page-left{
+      background:linear-gradient(145deg,#ffe9c8,#fff7e5);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      align-items:center;
+      text-align:center;
+    }
+
+    .page-right{
+      background:#fffcf5;
+      text-align:left;
+    }
+
+    .page-label{
+      font-size:11px;
+      letter-spacing:0.14em;
+      text-transform:uppercase;
+      color:#9a7a45;
+      margin-bottom:6px;
+    }
+
+    .page-title{
+      font-size:20px;
+      font-weight:700;
+      margin:4px 0 8px;
+    }
+
+    .kitchen-graphic{
+      margin-top:8px;
+      width:100%;
+      max-width:220px;
+      aspect-ratio:4/3;
+      border-radius:18px;
+      background:conic-gradient(from 210deg,#ffb347,#ffd56b,#fff7e5,#ffb347);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .kitchen-pot{
+      width:60%;
+      max-width:150px;
+      height:55%;
+      border-radius:22px 22px 12px 12px;
+      background:#fffdf5;
+      border:3px solid #ff9b4b;
+      position:relative;
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+      padding-bottom:6px;
+    }
+
+    .kitchen-pot::before{
+      content:"";
+      position:absolute;
+      top:-10px;
+      left:50%;
+      transform:translateX(-50%);
+      width:70%;
+      height:10px;
+      border-radius:999px;
+      background:#ffb347;
+      box-shadow:0 3px 0 rgba(0,0,0,0.08);
+    }
+
+    .bubble-row{
+      position:absolute;
+      top:12px;
+      display:flex;
+      gap:8px;
+    }
+
+    .bubble{
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:#ffe9c8;
+      box-shadow:0 0 6px rgba(255,255,255,0.8);
+      animation:float 2.2s ease-in-out infinite alternate;
+    }
+
+    .bubble:nth-child(2){animation-delay:0.3s;}
+    .bubble:nth-child(3){animation-delay:0.6s;}
+
+    @keyframes float{
+      0%{transform:translateY(0);}
+      100%{transform:translateY(-6px);}
+    }
+
+    .kid-helper{
+      width:80px;
+      height:80px;
+      border-radius:50%;
+      background:#ffe1b8;
+      border:3px solid rgba(255,155,75,0.8);
+      position:absolute;
+      bottom:-12px;
+      right:-6px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:11px;
+      font-weight:600;
+      color:#7a4b12;
+      text-align:center;
+      padding:8px;
+    }
+
+    .step-tag{
+      font-size:11px;
+      color:#9b8a75;
+      margin-bottom:6px;
+    }
+
+    .story-text{
+      font-size:17px;
+      line-height:1.7;
+      margin:2px 0 12px;
+    }
+
+    .story-tip{
+      font-size:14px;
+      color:#7b6b60;
+    }
+
+    .page-counter{
+      font-size:12px;
+      color:#a38f79;
+      position:absolute;
+      bottom:8px;
+      right:14px;
+    }
+
+    /* Controls + instructions */
+
+    .controls-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-top:16px;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .nav-buttons{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+    }
+
+    button.nav-btn{
+      border:none;
+      border-radius:999px;
+      padding:8px 18px;
+      font-size:14px;
+      font-weight:600;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      cursor:pointer;
+      background:linear-gradient(135deg,#ffb347,#ff9248);
+      color:#3b2413;
+      box-shadow:0 10px 20px rgba(0,0,0,0.18);
+      transition:transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+    }
+
+    button.nav-btn:disabled{
+      opacity:0.4;
+      cursor:default;
+      box-shadow:none;
+      transform:none;
+    }
+
+    button.nav-btn:not(:disabled):hover{
+      transform:translateY(-1px);
+      box-shadow:0 13px 26px rgba(0,0,0,0.22);
+    }
+
+    .instructions{
+      flex:1 1 200px;
+      font-size:14px;
+      color:#6e5c62;
+      text-align:center;
+    }
+
+    .instructions strong{
+      font-weight:600;
+    }
+
+    .mode-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px 11px;
+      border-radius:999px;
+      background:#f6ebda;
+      font-size:12px;
+      color:#675248;
+    }
+
+    .mode-pill input{
+      accent-color:#ff9248;
+    }
+
+    @media (max-width:800px){
+      .book-inner{
+        flex-direction:column;
+      }
+    }
+
+    @media (max-width:520px){
+      h1.app-title{font-size:22px;}
+      .story-text{font-size:16px;}
+      button.nav-btn{font-size:12px;padding:7px 14px;}
+    }
+
+    /* =========================================================
+       PRESCHOOL PORTAL CLEANUP
+       Symmetrical, youthful, readable, and overflow-safe
+       ========================================================= */
+
+    html{
+      overflow-x:hidden;
+    }
+
+    body{
+      padding:28px 12px 42px;
+      overflow-x:hidden;
+    }
+
+    .app-shell{
+      width:min(100%,980px);
+      margin:0 auto;
+    }
+
+    .lt-badge{
+      padding:7px 15px;
+      margin-bottom:10px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      line-height:1.25;
+      text-align:center;
+      white-space:normal;
+    }
+
+    h1.app-title{
+      max-width:850px;
+      margin:8px auto 8px;
+      padding:0 10px;
+      color:#8a4d16;
+      font-size:clamp(2rem,5.7vw,3.65rem);
+      line-height:1.08;
+      letter-spacing:-.015em;
+      text-transform:none;
+      overflow-wrap:anywhere;
+    }
+
+    .app-subtitle{
+      max-width:760px;
+      margin:0 auto 20px;
+      padding:0 12px;
+      color:#6c5c6f;
+      font-size:clamp(.96rem,2vw,1.06rem);
+      line-height:1.65;
+      text-wrap:balance;
+      overflow-wrap:anywhere;
+    }
+
+    .book-wrap{
+      width:100%;
+      max-width:920px;
+      margin:12px auto 0;
+      padding:16px;
+      border-radius:24px;
+      overflow:hidden;
+    }
+
+    .book-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      gap:14px;
+      align-items:stretch;
+      width:100%;
+      min-width:0;
+    }
+
+    .page{
+      min-width:0;
+      min-height:430px;
+      padding:20px 18px 42px;
+      border-radius:18px;
+      overflow:hidden;
+    }
+
+    .page-left,
+    .page-right{
+      display:flex;
+      flex-direction:column;
+    }
+
+    .page-left{
+      justify-content:space-between;
+    }
+
+    .page-right{
+      justify-content:flex-start;
+    }
+
+    .page-label,
+    .step-tag{
+      max-width:100%;
+      font-size:11px;
+      line-height:1.4;
+      letter-spacing:.08em;
+      overflow-wrap:anywhere;
+    }
+
+    .page-title{
+      max-width:100%;
+      margin:5px 0 10px;
+      color:#59391f;
+      font-size:clamp(1.22rem,2.5vw,1.55rem);
+      line-height:1.22;
+      overflow-wrap:anywhere;
+      word-break:normal;
+      text-wrap:balance;
+    }
+
+    .story-text{
+      max-width:100%;
+      margin:3px 0 14px;
+      color:#352d38;
+      font-size:clamp(1rem,1.8vw,1.08rem);
+      line-height:1.62;
+      overflow-wrap:anywhere;
+      word-break:normal;
+      hyphens:auto;
+    }
+
+    .story-tip{
+      max-width:100%;
+      margin-top:auto;
+      padding:11px 12px;
+      border:1px solid rgba(122,75,18,.12);
+      border-radius:13px;
+      background:rgba(255,255,255,.62);
+      color:#716258;
+      font-size:clamp(.82rem,1.5vw,.9rem);
+      line-height:1.5;
+      overflow-wrap:anywhere;
+      word-break:normal;
+    }
+
+    .kitchen-graphic{
+      width:min(100%,230px);
+      margin:12px auto 22px;
+      flex:0 0 auto;
+    }
+
+    .kid-helper{
+      width:76px;
+      height:76px;
+      right:2px;
+      bottom:-8px;
+      padding:7px;
+      font-size:10px;
+      line-height:1.2;
+      overflow-wrap:anywhere;
+    }
+
+    .page-counter{
+      left:14px;
+      right:14px;
+      bottom:10px;
+      text-align:center;
+      font-size:11px;
+      line-height:1.3;
+    }
+
+    .controls-row{
+      display:grid;
+      grid-template-columns:auto minmax(0,1fr) auto;
+      gap:12px;
+      align-items:center;
+      margin-top:16px;
+    }
+
+    .nav-buttons{
+      min-width:max-content;
+    }
+
+    button.nav-btn{
+      min-width:104px;
+      padding:9px 15px;
+      font-size:12px;
+      line-height:1.25;
+      letter-spacing:.04em;
+      white-space:normal;
+    }
+
+    .instructions{
+      min-width:0;
+      padding:0 8px;
+      font-size:13px;
+      line-height:1.5;
+      overflow-wrap:anywhere;
+    }
+
+    .mode-pill{
+      max-width:190px;
+      justify-content:center;
+      padding:7px 10px;
+      font-size:11px;
+      line-height:1.35;
+      text-align:left;
+      white-space:normal;
+    }
+
+    /* Long pages receive a tiny automatic type reduction without
+       changing any story wording or lesson sequence. */
+    .page-right.compact .page-title{
+      font-size:1.16rem;
+    }
+
+    .page-right.compact .story-text{
+      font-size:.96rem;
+      line-height:1.52;
+    }
+
+    .page-right.compact .story-tip{
+      font-size:.8rem;
+      line-height:1.42;
+    }
+
+    @media (max-width:800px){
+      .book-wrap{
+        padding:13px;
+      }
+
+      .book-inner{
+        grid-template-columns:1fr;
+      }
+
+      .page{
+        min-height:auto;
+      }
+
+      .page-left{
+        min-height:340px;
+      }
+
+      .page-right{
+        min-height:390px;
+      }
+
+      .controls-row{
+        grid-template-columns:1fr;
+        justify-items:center;
+      }
+
+      .instructions{
+        order:3;
+        max-width:620px;
+      }
+
+      .mode-pill{
+        order:2;
+        max-width:100%;
+      }
+    }
+
+    @media (max-width:520px){
+      body{
+        padding:18px 8px 30px;
+      }
+
+      .book-wrap{
+        padding:10px;
+        border-radius:20px;
+      }
+
+      .page{
+        padding:17px 14px 40px;
+      }
+
+      .page-left{
+        min-height:310px;
+      }
+
+      .page-right{
+        min-height:420px;
+      }
+
+      .nav-buttons{
+        width:100%;
+      }
+
+      button.nav-btn{
+        flex:1;
+        min-width:0;
+      }
+
+      .mode-pill{
+        width:100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <div class="lt-badge">Little Tikes Life Skills</div>
+    <h1 class="app-title">Little Kitchen Helper</h1>
+    <p class="app-subtitle">
+      A gentle 15-step story for cooking, table manners, mealtime, cleanup, handwashing, and putting things away.
+    </p>
+
+    <div class="book-wrap">
+      <div id="bookInner" class="book-inner">
+        <!-- Left page (scene) -->
+        <div class="page page-left">
+          <div>
+            <div class="page-label">Kitchen Story</div>
+            <h2 id="leftTitle" class="page-title">Welcome to the Kitchen!</h2>
+          </div>
+
+          <div class="kitchen-graphic">
+            <div class="bubble-row">
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+            </div>
+            <div class="kitchen-pot"></div>
+            <div class="kid-helper">Little Kitchen Helper</div>
+          </div>
+
+          <div class="page-counter" id="pageCounterLeft">Page 1 of 15</div>
+        </div>
+
+        <!-- Right page (text) -->
+        <div class="page page-right">
+          <div class="step-tag" id="stepTag">Step 1 · Welcome to the team</div>
+          <div class="page-title" id="rightTitle">You’re part of the team!</div>
+          <div class="story-text" id="storyText">
+            Today you get to be a <strong>Little Kitchen Helper</strong>!  
+            The kitchen is where we make yummy food and spend time together.  
+            Grown-ups and kids are a team here, and your helping hands matter.
+          </div>
+          <div class="story-tip" id="storyTip">
+            Grown-up note: Invite your child to look around the kitchen and name what they see. “Fridge, sink, table…”
+          </div>
+          <div class="page-counter" id="pageCounterRight">Page 1 of 15</div>
+        </div>
+      </div>
+
+      <div class="controls-row">
+        <div class="nav-buttons">
+          <button id="prevBtn" class="nav-btn" type="button" disabled>&larr; Back</button>
+          <button id="nextBtn" class="nav-btn" type="button">Next &rarr;</button>
+        </div>
+        <div class="instructions">
+          <strong>How to read:</strong> Sit together, tap <em>Next</em> to turn the pages,
+          and talk about each step your Little Kitchen Helper can try.
+        </div>
+        <div class="mode-pill">
+          <input type="checkbox" id="quietMode" />
+          <label for="quietMode">Quiet Mode (no sound effects)</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Story data: 15 simple, gentle kitchen and mealtime steps
+    const pages = [
+      {
+        leftTitle: "Welcome to the Kitchen!",
+        stepTag: "Step 1 · Welcome to the team",
+        rightTitle: "You’re part of the team!",
+        text: "Today you get to be a Little Kitchen Helper! The kitchen is where we make yummy food and spend time together. Grown-ups and kids are a team here, and your helping hands matter.",
+        tip: "Grown-up note: Invite your child to look around the kitchen and name what they see. “Fridge, sink, table…”"
+      },
+      {
+        leftTitle: "Safety First",
+        stepTag: "Step 2 · Safety comes first",
+        rightTitle: "We cook with care.",
+        text: "In the kitchen, we stay safe together. Grown-ups use the stove, oven, and sharp knives. Little helpers use eyes, ears, and listening. When a grown-up says “stop” or “wait,” we pause like statues.",
+        tip: "Practice a fun “freeze” game: say “freeze” and let your child hold still, then “melt” and wiggle."
+      },
+      {
+        leftTitle: "Wash, Wash, Wash",
+        stepTag: "Step 3 · Clean hands before cooking",
+        rightTitle: "We start with clean hands.",
+        text: "Before we touch any food, we wash our hands with warm water and soap. We scrub the fronts, the backs, between our fingers, and even our thumbs. Then we rinse and dry with a clean towel.",
+        tip: "Try singing a quick song while washing so they scrub for about 20 seconds."
+      },
+      {
+        leftTitle: "Helping with Veggies",
+        stepTag: "Step 4 · Wash the fruits and veggies",
+        rightTitle: "You can wash the food!",
+        text: "Now you can help wash fruits or veggies. Hold them gently and let the water run over them. You can turn them in your hands like you’re giving them a little bath.",
+        tip: "Offer a low bowl or safe sink space so the child can rinse soft fruits or sturdy vegetables with supervision."
+      },
+      {
+        leftTitle: "Stirring & Sprinkling",
+        stepTag: "Step 5 · Mix and sprinkle",
+        rightTitle: "Stir, stir, sprinkle!",
+        text: "Little hands are great at stirring and sprinkling. You might stir batter in a bowl or sprinkle cheese on top of pasta. We keep one hand holding the bowl if it wiggles.",
+        tip: "Give the child a small bowl and a safe spoon for the mixing job. A grown-up handles hot foods and appliances."
+      },
+      {
+        leftTitle: "Setting the Table",
+        stepTag: "Step 6 · Get ready to eat",
+        rightTitle: "You can set the table.",
+        text: "You can help put napkins, spoons, or forks on the table. Place one for each person. You might place cups next and make sure everyone has a safe, comfortable place to sit.",
+        tip: "Show a simple place setting and let the child copy it. Use unbreakable dishes when helpful."
+      },
+      {
+        leftTitle: "Mind Your Manners",
+        stepTag: "Step 7 · Use kind table manners",
+        rightTitle: "Kind words belong at the table.",
+        text: "At the table, we use kind words and patient hands. We can say “please,” “thank you,” and “may I have some more?” We wait our turn, chew carefully, and listen when someone else is talking.",
+        tip: "Model one or two manners at a time. Praise specific actions such as waiting, asking kindly, or using a napkin."
+      },
+      {
+        leftTitle: "Try Every Bite",
+        stepTag: "Step 8 · Taste the meal",
+        rightTitle: "We give our food a fair try.",
+        text: "The meal was made with care, so we try each safe food on our plate. We take small bites, chew slowly, and do our best to eat what was served. We can also tell a grown-up when our body feels full or when a food does not feel safe.",
+        tip: "Keep portions small and pressure low. Respect allergies, sensory needs, choking safety, and the child’s signals of hunger and fullness."
+      },
+      {
+        leftTitle: "Clear the Table",
+        stepTag: "Step 9 · Help after the meal",
+        rightTitle: "Everyone can help clear.",
+        text: "When the meal is finished, we carry safe dishes, cups, and napkins to the kitchen. We take one item at a time and walk carefully. Hot, sharp, heavy, or breakable items are jobs for a grown-up.",
+        tip: "Give the child one predictable clearing job, such as carrying napkins or an unbreakable cup."
+      },
+      {
+        leftTitle: "Wash the Dishes",
+        stepTag: "Step 10 · Wash safe dishes",
+        rightTitle: "Scrub, rinse, and place safely.",
+        text: "With a grown-up nearby, little helpers can wash safe dishes in warm, soapy water. We scrub gently, rinse carefully, and place each dish where the grown-up says. Knives, glass, and very hot pans are always grown-up jobs.",
+        tip: "Use a stable stool, a shallow basin, and unbreakable dishes. Keep the floor dry and supervise continuously."
+      },
+      {
+        leftTitle: "Wipe the Counter",
+        stepTag: "Step 11 · Clean the work space",
+        rightTitle: "A clean counter is ready for next time.",
+        text: "After the dishes are moved, we wipe crumbs and little spills from the countertop. We use the cloth or paper towel a grown-up gives us and wipe from one side to the other.",
+        tip: "Use only child-safe cleaning materials. A grown-up should handle disinfectants, chemical sprays, and raw-meat cleanup."
+      },
+      {
+        leftTitle: "Wash Hands Again",
+        stepTag: "Step 12 · Clean hands after cleanup",
+        rightTitle: "Cleanup ends with clean hands.",
+        text: "After touching dishes, crumbs, and cleaning cloths, we wash our hands again. We use soap and warm water, scrub every side of our hands, and rinse all the bubbles away.",
+        tip: "Remind the child to wash after cleanup, especially after touching dirty dishes, pet bowls, raw ingredients, or the trash area."
+      },
+      {
+        leftTitle: "Dry Your Hands",
+        stepTag: "Step 13 · Dry carefully",
+        rightTitle: "Dry hands help keep us safe.",
+        text: "We dry the fronts and backs of our hands and between our fingers. Dry hands are less slippery, so we can move safely when the kitchen floor or counters are busy.",
+        tip: "Use a clean, reachable towel. Help the child dry thoroughly without rubbing sensitive skin too hard."
+      },
+      {
+        leftTitle: "Hang the Towel",
+        stepTag: "Step 14 · Put the towel away",
+        rightTitle: "Every tool has a home.",
+        text: "When our hands are dry, we hang the towel neatly on its hook or bar. Putting things back where they belong helps the kitchen stay tidy and makes the towel ready for the next person.",
+        tip: "Place the towel hook at a reachable height and show the child how to spread the towel so it can dry."
+      },
+      {
+        leftTitle: "We Did It Together!",
+        stepTag: "Step 15 · Proud kitchen helper",
+        rightTitle: "The whole kitchen routine is complete.",
+        text: "Look at everything you practiced! You washed, helped prepare food, used kind manners, tasted the meal, cleared the table, washed safe dishes, wiped the counter, washed and dried your hands, and hung the towel. You are a thoughtful Little Kitchen Helper.",
+        tip: "Name the child’s real contribution: “You helped our family by clearing your cup and hanging the towel. Thank you.”"
+      }
+    ];
+
+    const bookInner = document.getElementById('bookInner');
+    const leftTitleEl = document.getElementById('leftTitle');
+    const stepTagEl = document.getElementById('stepTag');
+    const rightTitleEl = document.getElementById('rightTitle');
+    const storyTextEl = document.getElementById('storyText');
+    const storyTipEl = document.getElementById('storyTip');
+    const pageCounterLeftEl = document.getElementById('pageCounterLeft');
+    const pageCounterRightEl = document.getElementById('pageCounterRight');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const quietModeEl = document.getElementById('quietMode');
+
+    let currentPage = 0;
+    let pageTurnSound = null;
+
+    function initSound(){
+      // tiny click sound using Web Audio API (very soft)
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      pageTurnSound = () => {
+        if(quietModeEl.checked) return;
+        const o = ctx.createOscillator();
+        const g = ctx.createGain();
+        o.type = 'triangle';
+        o.frequency.value = 880;
+        g.gain.setValueAtTime(0.03, ctx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.15);
+        o.connect(g);
+        g.connect(ctx.destination);
+        o.start();
+        o.stop(ctx.currentTime + 0.16);
+      };
+    }
+
+    function renderPage(){
+      const total = pages.length;
+      const p = pages[currentPage];
+      leftTitleEl.textContent = p.leftTitle;
+      stepTagEl.textContent = p.stepTag;
+      rightTitleEl.textContent = p.rightTitle;
+      storyTextEl.textContent = p.text;
+      storyTipEl.textContent = p.tip;
+
+      const rightPage = document.querySelector('.page-right');
+      const combinedLength = `${p.rightTitle} ${p.text} ${p.tip}`.length;
+      rightPage.classList.toggle('compact', combinedLength > 510);
+      pageCounterLeftEl.textContent = `Page ${currentPage+1} of ${total}`;
+      pageCounterRightEl.textContent = `Page ${currentPage+1} of ${total}`;
+
+      prevBtn.disabled = currentPage === 0;
+      nextBtn.disabled = currentPage === total - 1;
+    }
+
+    function turnPage(direction){
+      const total = pages.length;
+      let newPage = currentPage + direction;
+      if(newPage < 0 || newPage >= total) return;
+      currentPage = newPage;
+
+      // tiny flip effect
+      bookInner.classList.add('page-turn');
+      setTimeout(() => {
+        bookInner.classList.remove('page-turn');
+      }, 260);
+
+      if(pageTurnSound){
+        pageTurnSound();
+      }
+
+      renderPage();
+    }
+
+    prevBtn.addEventListener('click', () => turnPage(-1));
+    nextBtn.addEventListener('click', () => turnPage(1));
+
+    // Keyboard support (optional)
+    document.addEventListener('keydown',(e)=>{
+      if(e.key === 'ArrowRight') turnPage(1);
+      if(e.key === 'ArrowLeft') turnPage(-1);
+    });
+
+    // Init
+    renderPage();
+    // Delay audio init slightly so it doesn't block
+    setTimeout(initSound, 400);
+  </script>
+</body>
+</html>
