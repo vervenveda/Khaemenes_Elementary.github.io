@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Solanar for Kids — an all-in-one elementary weather portal with live forecasts, weather science, safety, observations, experiments, quizzes, moon phase, air quality, and private local progress.">
+<title>Solanar for Kids™ — Elementary Weather Portal</title>
+<style>
+:root{
+  --sky:#dff5ff;
+  --sun:#ffd95f;
+  --coral:#ff8e77;
+  --blue:#2f73bd;
+  --navy:#17355d;
+  --mint:#bce8d0;
+  --lav:#d7c9f4;
+  --paper:#fffdf8;
+  --panel:#ffffff;
+  --ink:#26384e;
+  --muted:#66758a;
+  --line:rgba(23,53,93,.15);
+  --good:#3fa96e;
+  --warn:#d98536;
+  --bad:#ce5663;
+  --shadow:0 18px 42px rgba(30,65,105,.13);
+  --r7:7px;
+  --r11:11px;
+  --r21:21px;
+  --r33:33px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  padding:20px 12px 48px;
+  color:var(--ink);
+  font-family:"Trebuchet MS","Arial Rounded MT Bold",system-ui,sans-serif;
+  background:
+    radial-gradient(circle at 12% 7%,rgba(255,255,255,.88),transparent 18%),
+    linear-gradient(180deg,#bfeaff 0%,#eefaff 35%,#fff7cf 74%,#ffd9af 100%);
+  overflow-x:hidden;
+}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:4px solid rgba(47,115,189,.25);
+  outline-offset:3px;
+}
+.portal-header{
+  width:min(1260px,100%);
+  margin:0 auto 14px;
+  padding:12px 14px;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  gap:12px;
+  align-items:center;
+  border:2px solid #fff;
+  border-radius:22px;
+  background:rgba(255,255,255,.91);
+  box-shadow:0 12px 28px rgba(27,66,108,.12);
+}
+.portal-mark{
+  width:58px;height:58px;display:grid;place-items:center;border-radius:18px;
+  background:linear-gradient(145deg,#43b9ef,#ffd94f);
+  border:3px solid #fff;
+  font-size:2rem;
+}
+.portal-eyebrow{
+  margin:0;color:var(--coral);font-size:.68rem;font-weight:900;
+  letter-spacing:.12em;text-transform:uppercase
+}
+.portal-title{margin:2px 0 0;color:var(--navy);font-size:clamp(1.05rem,2.2vw,1.42rem);line-height:1.2}
+.portal-links{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.portal-link{
+  min-height:38px;padding:8px 12px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--blue);
+  text-decoration:none;font-weight:900;font-size:.78rem
+}
+.portal-link.current{color:#fff;background:linear-gradient(135deg,var(--blue),#7b66c7);border-color:transparent}
+.wrap{width:min(1260px,100%);margin:auto}
+.hero{
+  padding:28px 20px;
+  border-radius:30px;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(255,255,255,.16),transparent 18%),
+    linear-gradient(135deg,var(--navy),#295c91 58%,#397fb0 100%);
+  color:#fff;
+  box-shadow:var(--shadow);
+  text-align:center;
+  overflow:hidden;
+  position:relative;
+}
+.hero:after{
+  content:"☀️  ☁️  🌦️  🌈";
+  position:absolute;right:18px;bottom:12px;font-size:1.4rem;opacity:.42;letter-spacing:.25em
+}
+.hero .eyebrow{
+  display:inline-flex;gap:8px;align-items:center;padding:7px 13px;border-radius:999px;
+  background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.24);
+  font-size:.76rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase
+}
+.hero h1{
+  margin:16px auto 8px;
+  font-size:clamp(2.5rem,6vw,5.3rem);
+  line-height:1.04;
+  letter-spacing:-.025em
+}
+.hero p{max-width:900px;margin:auto;line-height:1.7;color:#edf8ff}
+.toolbar{
+  margin:14px 0;
+  display:grid;
+  grid-template-columns:2fr repeat(4,minmax(130px,1fr));
+  gap:9px;
+}
+.control{
+  min-width:0;padding:10px;border:1px solid var(--line);border-radius:17px;
+  background:rgba(255,255,255,.91);box-shadow:0 7px 16px rgba(34,73,115,.06)
+}
+.control label{display:block;margin-bottom:5px;color:var(--muted);font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.control input,.control select{
+  width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink)
+}
+.search-row{display:flex;gap:7px}
+.search-row input{flex:1;min-width:0}
+.btn{
+  border:1px solid var(--line);border-radius:13px;padding:9px 12px;background:#fff;color:var(--blue);
+  font-weight:900;box-shadow:0 5px 12px rgba(32,70,110,.07);transition:.16s ease
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{color:#fff;border-color:transparent;background:linear-gradient(135deg,var(--blue),#48a6d8)}
+.btn.sunny{color:#564213;border-color:transparent;background:linear-gradient(135deg,#ffe36d,#ffad5f)}
+.btn.good{color:#fff;border-color:transparent;background:linear-gradient(135deg,#4db67a,#3f9e78)}
+.status{
+  margin-bottom:12px;padding:10px 13px;border:1px solid var(--line);border-radius:15px;
+  background:rgba(255,255,255,.82);color:var(--muted);line-height:1.45
+}
+.status.error{background:#fff0f2;color:#8d3c49;border-color:#efbac1}
+.dashboard{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:14px
+}
+.card{
+  min-width:0;padding:16px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.92);
+  box-shadow:var(--shadow)
+}
+.card h2,.card h3{margin-top:0;color:var(--navy)}
+.current-card{
+  display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;
+  background:linear-gradient(145deg,#fff,#eef9ff)
+}
+.current-icon{font-size:5.2rem;filter:drop-shadow(0 9px 10px rgba(40,65,90,.12))}
+.current-temp{font-size:clamp(3rem,8vw,6.3rem);font-weight:950;line-height:.95;color:var(--blue)}
+.current-summary{font-size:1.15rem;font-weight:900;color:var(--navy)}
+.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.metric{
+  padding:10px;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:center
+}
+.metric strong{display:block;color:var(--blue);font-size:1.05rem}
+.metric small{color:var(--muted);font-size:.7rem}
+.advice{
+  margin-top:12px;padding:12px 13px;border-radius:16px;background:#fff8cb;border:1px solid #ead77b;line-height:1.5
+}
+.air-card{
+  background:linear-gradient(145deg,#fff,#effaf5)
+}
+.aqi-ring{
+  width:130px;height:130px;margin:8px auto;display:grid;place-items:center;border-radius:50%;
+  background:conic-gradient(var(--good) 0deg,#e8eef3 0deg);
+  position:relative
+}
+.aqi-ring:after{
+  content:"";position:absolute;inset:13px;border-radius:50%;background:#fff
+}
+.aqi-value{position:relative;z-index:2;text-align:center}
+.aqi-value strong{display:block;font-size:2rem;color:var(--navy)}
+.aqi-value small{color:var(--muted)}
+.hourly,.daily{
+  margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.9);box-shadow:var(--shadow)
+}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.section-head h2{margin:0;color:var(--navy)}
+.hours{
+  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(106px,1fr);
+  gap:8px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x proximity
+}
+.hour,.day{
+  scroll-snap-align:start;padding:10px;border:1px solid var(--line);border-radius:15px;background:#fff;text-align:center
+}
+.hour .ico,.day .ico{font-size:2rem}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.day strong{display:block;color:var(--navy)}
+.day small{display:block;color:var(--muted);margin-top:3px}
+.science-grid{
+  margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px
+}
+.module{
+  min-width:0;padding:14px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.91);box-shadow:var(--shadow)
+}
+.module h3{margin:0 0 7px;color:var(--navy)}
+.module p{color:var(--muted);line-height:1.5}
+.module .big{font-size:3rem;text-align:center;margin:8px 0}
+.fact-box,.safety-box,.experiment-box{
+  padding:11px;border-radius:15px;line-height:1.5
+}
+.fact-box{background:#eef9ff;border:1px solid #b8daeb}
+.safety-box{background:#fff0f2;border:1px solid #efbac2}
+.experiment-box{background:#fff8cb;border:1px solid #ead77b}
+.quiz{
+  margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.92);box-shadow:var(--shadow)
+}
+.options{display:grid;gap:8px;margin-top:9px}
+.option{
+  border:1px solid var(--line);border-radius:13px;padding:10px;background:#fff;color:var(--ink);font-weight:900;text-align:left
+}
+.option.correct{background:#e3f7e8;border-color:#82c99a}
+.option.wrong{background:#ffe7ea;border-color:#e7a3ad}
+.feedback{min-height:26px;margin-top:8px;color:var(--muted);font-weight:900}
+.journal{
+  margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.92);box-shadow:var(--shadow)
+}
+.journal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.journal input,.journal select,.journal textarea{
+  width:100%;padding:9px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink)
+}
+.journal textarea{grid-column:1/-1;min-height:88px;resize:vertical}
+.log{
+  margin-top:10px;display:grid;gap:7px;max-height:260px;overflow:auto
+}
+.log-item{
+  padding:10px;border:1px solid var(--line);border-radius:14px;background:#fff
+}
+.log-item strong{color:var(--navy)}
+.moon{
+  width:118px;height:118px;margin:8px auto;border-radius:50%;position:relative;overflow:hidden;
+  background:#f2ebce;box-shadow:0 0 28px rgba(255,229,126,.45),inset -11px -8px 20px rgba(80,80,90,.14)
+}
+.moon-shadow{
+  position:absolute;inset:0;border-radius:50%;background:#152442;transform:translateX(50%)
+}
+.voice-panel{
+  margin-top:14px;padding:13px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#fff,#f3f7ff)
+}
+.voice-guides{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.voice-guide{
+  min-height:58px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--blue);font-weight:900
+}
+.voice-guide.active{color:#fff;background:linear-gradient(135deg,var(--blue),#7769c8)}
+.voice-controls{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:8px}
+.stats{
+  margin-top:14px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px
+}
+.stat{
+  padding:10px;border:1px solid var(--line);border-radius:15px;background:#fff;text-align:center
+}
+.stat strong{display:block;color:var(--blue);font-size:1.2rem}
+footer{
+  margin-top:16px;padding:14px;border:1px solid rgba(255,255,255,.8);border-radius:18px;
+  background:rgba(255,255,255,.72);text-align:center;color:var(--muted);line-height:1.5;font-size:.82rem
+}
+.sparkle{position:fixed;pointer-events:none;z-index:80;font-size:1.5rem;animation:spark 1s ease forwards}
+@keyframes spark{to{transform:translateY(-85px) rotate(55deg);opacity:0}}
+@media(max-width:1000px){
+  .toolbar{grid-template-columns:repeat(2,1fr)}
+  .toolbar .control:first-child{grid-column:1/-1}
+  .dashboard{grid-template-columns:1fr}
+  .science-grid{grid-template-columns:repeat(2,1fr)}
+  .days{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:720px){
+  body{padding:12px 8px 34px}
+  .portal-header{grid-template-columns:auto 1fr}
+  .portal-links{grid-column:1/-1;justify-content:center}
+  .toolbar{grid-template-columns:1fr}
+  .toolbar .control:first-child{grid-column:auto}
+  .current-card{grid-template-columns:1fr;text-align:center}
+  .metric-grid{grid-template-columns:repeat(2,1fr)}
+  .science-grid{grid-template-columns:1fr}
+  .days{grid-template-columns:repeat(2,1fr)}
+  .journal-grid{grid-template-columns:1fr}
+  .journal textarea{grid-column:auto}
+  .voice-guides{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:460px){
+  .portal-header{grid-template-columns:1fr;text-align:center}
+  .portal-mark{margin:auto}
+  .portal-links{grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+<header class="portal-header" aria-label="Khaemenes Academy Elementary Portal">
+  <div class="portal-mark" aria-hidden="true">🌤️</div>
+  <div>
+    <p class="portal-eyebrow">Khaemenes Academy · Elementary Portal</p>
+    <div class="portal-title">Solanar for Kids™ · Weather, Sky & Earth Science</div>
+  </div>
+  <nav class="portal-links" aria-label="Elementary navigation">
+    <a class="portal-link" href="../index.html">🏡 Elementary Home</a>
+    <a class="portal-link current" href="#" aria-current="page">🌤️ Solanar for Kids</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">☀️ Live Weather · Science · Safety · Observation</div>
+    <h1>Solanar for Kids™</h1>
+    <p>An all-in-one elementary weather portal for live forecasts, sky science, moon phases, air quality, experiments, weather safety, quizzes, and a private observation journal.</p>
+  </section>
+
+  <section class="toolbar" aria-label="Weather controls">
+    <div class="control">
+      <label for="locationInput">Search a city or postal code</label>
+      <div class="search-row">
+        <input id="locationInput" placeholder="Example: Tampa, Florida">
+        <button class="btn primary" id="searchBtn" type="button">Search</button>
+      </div>
+    </div>
+    <div class="control"><label for="unitSelect">Temperature</label><select id="unitSelect"><option value="fahrenheit">Fahrenheit</option><option value="celsius">Celsius</option></select></div>
+    <div class="control"><label for="themeSelect">Theme</label><select id="themeSelect"><option value="day">Bright Day</option><option value="ocean">Ocean Sky</option><option value="sunset">Sunset Lab</option><option value="night">Night Watch</option></select></div>
+    <div class="control"><label for="motionSelect">Motion</label><select id="motionSelect"><option value="on">On</option><option value="off">Reduced</option></select></div>
+    <div class="control"><label>Location tools</label><button class="btn sunny" id="locateBtn" type="button">📍 Use My Location</button></div>
+  </section>
+
+  <div class="status" id="status" role="status" aria-live="polite">Loading weather…</div>
+
+  <section class="dashboard">
+    <article class="card current-card">
+      <div class="current-icon" id="currentIcon">🌤️</div>
+      <div>
+        <div class="current-temp" id="currentTemp">—</div>
+        <div class="current-summary" id="currentSummary">Waiting for forecast</div>
+        <div id="locationLabel">—</div>
+        <div class="metric-grid">
+          <div class="metric"><strong id="feelsLike">—</strong><small>Feels like</small></div>
+          <div class="metric"><strong id="humidity">—</strong><small>Humidity</small></div>
+          <div class="metric"><strong id="wind">—</strong><small>Wind</small></div>
+          <div class="metric"><strong id="rainChance">—</strong><small>Rain chance</small></div>
+          <div class="metric"><strong id="uv">—</strong><small>UV index</small></div>
+          <div class="metric"><strong id="pressure">—</strong><small>Pressure</small></div>
+        </div>
+        <div class="advice" id="weatherAdvice">A trusted adult should always help with outdoor safety decisions.</div>
+      </div>
+    </article>
+
+    <article class="card air-card">
+      <h2>🌿 Air Quality</h2>
+      <div class="aqi-ring" id="aqiRing">
+        <div class="aqi-value"><strong id="aqiValue">—</strong><small>US AQI</small></div>
+      </div>
+      <p id="aqiLabel">Waiting for air-quality data.</p>
+      <div class="fact-box" id="airAdvice">Air quality tells us how clean or polluted the outdoor air may be.</div>
+    </article>
+  </section>
+
+  <section class="hourly">
+    <div class="section-head">
+      <h2>🕒 Next 24 Hours</h2>
+      <button class="btn" id="readForecastBtn" type="button">🔊 Read Forecast</button>
+    </div>
+    <div class="hours" id="hours"></div>
+  </section>
+
+  <section class="daily">
+    <div class="section-head"><h2>📅 Seven-Day Forecast</h2><span id="timezoneLabel"></span></div>
+    <div class="days" id="days"></div>
+  </section>
+
+  <section class="science-grid">
+    <article class="module">
+      <h3>🌡️ Weather Instruments</h3>
+      <div class="big">🌡️ 🧭 🌧️</div>
+      <div class="fact-box"><strong>Thermometer:</strong> measures temperature.<br><strong>Anemometer:</strong> measures wind speed.<br><strong>Rain gauge:</strong> measures rainfall.<br><strong>Barometer:</strong> measures air pressure.</div>
+    </article>
+
+    <article class="module">
+      <h3>💧 Water Cycle</h3>
+      <div class="big">☀️ → ☁️ → 🌧️</div>
+      <div class="experiment-box"><strong>Try this:</strong> Put a small amount of water in a clear cup, mark the level, and place it safely near a sunny window. Check the level over several days with an adult.</div>
+    </article>
+
+    <article class="module">
+      <h3>🌙 Moon & Sky</h3>
+      <div class="moon"><div class="moon-shadow" id="moonShadow"></div></div>
+      <p id="moonText">Calculating today’s Moon phase…</p>
+      <div class="fact-box" id="sunTimes">Sunrise: — · Sunset: —</div>
+    </article>
+
+    <article class="module">
+      <h3>⚠️ Weather Safety</h3>
+      <div class="safety-box" id="safetyLesson">When thunder can be heard, go indoors with a trusted adult. Avoid trees, water, metal fences, and open fields.</div>
+      <button class="btn" id="newSafetyBtn" type="button">New Safety Lesson</button>
+    </article>
+
+    <article class="module">
+      <h3>🔬 Mini Experiment</h3>
+      <div class="experiment-box" id="experimentText">Make a wind streamer from ribbon and observe which direction it points. Use it only in a safe place with an adult.</div>
+      <button class="btn" id="newExperimentBtn" type="button">New Experiment</button>
+    </article>
+
+    <article class="module">
+      <h3>💡 Weather Fact</h3>
+      <div class="fact-box" id="factText">A cloud can contain millions of tiny water droplets or ice crystals.</div>
+      <button class="btn" id="newFactBtn" type="button">New Fact</button>
+    </article>
+  </section>
+
+  <section class="quiz">
+    <div class="section-head"><h2>🧠 Weather Knowledge Challenge</h2><button class="btn" id="newQuizBtn" type="button">New Question</button></div>
+    <div id="quizQuestion"></div>
+    <div class="options" id="quizOptions"></div>
+    <div class="feedback" id="quizFeedback" aria-live="polite"></div>
+  </section>
+
+  <section class="journal">
+    <div class="section-head"><h2>📓 My Weather Observation Journal</h2><button class="btn" id="exportJournalBtn" type="button">⬇️ Export Journal</button></div>
+    <div class="journal-grid">
+      <input id="journalDate" type="date" aria-label="Observation date">
+      <select id="journalWeather" aria-label="Observed weather">
+        <option>Sunny</option><option>Partly Cloudy</option><option>Cloudy</option><option>Windy</option><option>Rainy</option><option>Thunderstorm</option><option>Snowy</option><option>Foggy</option>
+      </select>
+      <input id="journalTemp" type="number" placeholder="Temperature">
+      <select id="journalUnit" aria-label="Temperature unit"><option>°F</option><option>°C</option></select>
+      <textarea id="journalNotes" placeholder="What did you notice? Clouds, wind, shadows, rain, sounds, or changes?"></textarea>
+    </div>
+    <button class="btn good" id="saveJournalBtn" type="button">✓ Save Observation</button>
+    <div class="log" id="journalLog"></div>
+  </section>
+
+  <section class="voice-panel">
+    <h2 style="text-align:center;margin-top:0">Choose a Solanar Guide</h2>
+    <div class="voice-guides" id="voiceGuides">
+      <button class="voice-guide" data-voice="sola" type="button">☀️ Sola</button>
+      <button class="voice-guide" data-voice="cirrus" type="button">☁️ Cirrus</button>
+      <button class="voice-guide" data-voice="owl" type="button">🦉 Weather Owl</button>
+      <button class="voice-guide" data-voice="nova" type="button">🌈 Nova</button>
+    </div>
+    <div class="voice-controls">
+      <select id="voiceSpeed"><option value="slow">Slow and clear</option><option value="normal">Just right</option><option value="lively">A little lively</option></select>
+      <button class="btn" id="meetGuideBtn" type="button">👋 Meet My Guide</button>
+      <button class="btn" id="repeatBtn" type="button">🔁 Repeat Last</button>
+      <button class="btn" id="stopVoiceBtn" type="button">⏹ Stop Voice</button>
+    </div>
+    <p id="voiceStatus" style="text-align:center;color:var(--muted);min-height:1.2em"></p>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><strong id="searchStat">0</strong>Locations explored</div>
+    <div class="stat"><strong id="quizStat">0</strong>Questions learned</div>
+    <div class="stat"><strong id="journalStat">0</strong>Observations saved</div>
+    <div class="stat"><strong id="factStat">0</strong>Facts discovered</div>
+    <div class="stat"><strong id="safetyStat">0</strong>Safety lessons</div>
+  </section>
+
+  <footer>
+    <strong>© 2026 Solanar for Kids™ · Verve N Veda · Khaemenes Academy · Jennifer Kay Pearl</strong><br>
+    Live weather data requires internet access. Educational guidance does not replace official alerts or adult judgment.
+  </footer>
+</main>
+
+<script>
+(() => {
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+  const KEY = "solanar-for-kids-elementary-v1";
+  const WMO = {
+    0:["Clear sky","☀️"],1:["Mostly clear","🌤️"],2:["Partly cloudy","⛅"],3:["Overcast","☁️"],
+    45:["Fog","🌫️"],48:["Rime fog","🌫️"],51:["Light drizzle","🌦️"],53:["Drizzle","🌦️"],55:["Heavy drizzle","🌧️"],
+    61:["Light rain","🌦️"],63:["Rain","🌧️"],65:["Heavy rain","🌧️"],66:["Freezing rain","🌧️"],67:["Heavy freezing rain","🌧️"],
+    71:["Light snow","🌨️"],73:["Snow","❄️"],75:["Heavy snow","❄️"],77:["Snow grains","❄️"],
+    80:["Rain showers","🌦️"],81:["Rain showers","🌧️"],82:["Heavy showers","🌧️"],
+    85:["Snow showers","🌨️"],86:["Heavy snow showers","❄️"],95:["Thunderstorm","⛈️"],96:["Thunderstorm with hail","⛈️"],99:["Strong thunderstorm with hail","⛈️"]
+  };
+  const FACTS = [
+    "A cloud can contain millions of tiny water droplets or ice crystals.",
+    "Wind is air moving from an area of higher pressure toward lower pressure.",
+    "The warmest part of the day often happens after noon because Earth keeps absorbing sunlight.",
+    "Fog is a cloud that forms close to the ground.",
+    "Lightning can heat the nearby air to temperatures hotter than the surface of the Sun.",
+    "Snowflakes usually have six-sided symmetry.",
+    "Weather describes short-term conditions; climate describes long-term patterns.",
+    "A barometer measures air pressure. Falling pressure can signal changing weather."
+  ];
+  const SAFETY = [
+    "When thunder can be heard, go indoors with a trusted adult. Avoid trees, water, metal fences, and open fields.",
+    "Never enter floodwater. It may be deeper, faster, colder, or more contaminated than it looks.",
+    "On very hot days, rest in shade or air conditioning, drink water, and tell an adult if you feel dizzy or sick.",
+    "In strong wind, stay away from trees, power lines, signs, and loose objects.",
+    "During winter weather, wear warm layers and watch for slippery ice.",
+    "Never stare directly at the Sun, even through clouds or sunglasses.",
+    "Weather alerts from local authorities and trusted adults are more important than any learning app."
+  ];
+  const EXPERIMENTS = [
+    "Make a wind streamer from ribbon and observe which direction it points. Use it only in a safe place with an adult.",
+    "Place an ice cube on two surfaces—one in sunlight and one in shade—and compare melting time with an adult.",
+    "Use a clear jar to collect rainfall, then measure the depth with a ruler after the storm has safely passed.",
+    "Track shadow length at morning, noon, and afternoon from one safe location.",
+    "Make a simple cloud chart and draw the cloud types you observe for one week.",
+    "Mark the water level in a clear cup and watch evaporation over several days."
+  ];
+  const QUIZ = [
+    {q:"Which instrument measures wind speed?",a:["Anemometer","Thermometer","Rain gauge"],c:0},
+    {q:"What should you do when you hear thunder?",a:["Go indoors","Stand under a tree","Keep swimming"],c:0},
+    {q:"What is fog?",a:["A cloud near the ground","Smoke from every house","Frozen sunlight"],c:0},
+    {q:"Which part of the water cycle turns liquid water into water vapor?",a:["Evaporation","Precipitation","Collection"],c:0},
+    {q:"What does a barometer measure?",a:["Air pressure","Temperature","Rain depth"],c:0},
+    {q:"Why should you never enter floodwater?",a:["It may be dangerous even when it looks shallow","It is always warm","It cannot move"],c:0},
+    {q:"What is climate?",a:["Long-term weather patterns","One afternoon's weather","Only thunderstorms"],c:0}
+  ];
+
+  const THEMES = {
+    day:{bg1:"#bfeaff",bg2:"#fff3ba",panel:"#fff",ink:"#26384e",blue:"#2f73bd"},
+    ocean:{bg1:"#ccefff",bg2:"#d9f7ec",panel:"#fbffff",ink:"#224052",blue:"#2d84a7"},
+    sunset:{bg1:"#ffd7bc",bg2:"#ffe8ef",panel:"#fffaf8",ink:"#513b44",blue:"#b85c72"},
+    night:{bg1:"#1e2a50",bg2:"#3b3e6b",panel:"#2d345a",ink:"#f6f4ff",blue:"#a9b7ff"}
+  };
+
+  function fresh(){
+    return {
+      unit:"fahrenheit",theme:"day",motion:"on",voice:"sola",voiceSpeed:"slow",
+      location:null,lastWeather:null,journal:[],locations:[],quizLearned:0,facts:0,safety:0
+    };
+  }
+  function load(){
+    try{return Object.assign(fresh(),JSON.parse(localStorage.getItem(KEY)||"{}"))}
+    catch{return fresh()}
+  }
+  let state=load(),voices=[],speechToken=0,lastSpoken="",quizWrong=0,currentQuiz=null;
+
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{}}
+  function setStatus(msg,error=false){$("status").textContent=msg;$("status").classList.toggle("error",error)}
+  function sparkle(count=12){
+    for(let i=0;i<count;i++){
+      const s=document.createElement("span");s.className="sparkle";s.textContent=["✨","⭐","🌤️","🌈"][i%4];
+      s.style.left=(20+Math.random()*60)+"vw";s.style.top=(45+Math.random()*25)+"vh";
+      document.body.appendChild(s);setTimeout(()=>s.remove(),1100)
+    }
+  }
+  function applyTheme(name){
+    const t=THEMES[name]||THEMES.day;
+    document.body.style.background=`linear-gradient(180deg,${t.bg1},${t.bg2})`;
+    document.documentElement.style.setProperty("--panel",t.panel);
+    document.documentElement.style.setProperty("--ink",t.ink);
+    document.documentElement.style.setProperty("--blue",t.blue);
+    state.theme=name;save()
+  }
+  async function fetchJSON(url,timeout=16000){
+    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeout);
+    try{
+      const r=await fetch(url,{signal:controller.signal});
+      if(!r.ok)throw Error(`Weather service returned ${r.status}.`);
+      return await r.json()
+    }catch(e){
+      if(e.name==="AbortError")throw Error("The weather service took too long to respond.");
+      if(!navigator.onLine)throw Error("This device appears to be offline.");
+      throw e
+    }finally{clearTimeout(timer)}
+  }
+  async function geocode(q){
+    const url=`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=8&language=en&format=json`;
+    const d=await fetchJSON(url);
+    if(!d.results?.length)throw Error("No matching location was found.");
+    const x=d.results[0];
+    return {lat:x.latitude,lon:x.longitude,label:[x.name,x.admin1,x.country].filter(Boolean).join(", ")}
+  }
+  function weatherURL(loc){
+    const temp=state.unit==="fahrenheit"?"fahrenheit":"celsius";
+    const wind=state.unit==="fahrenheit"?"mph":"kmh";
+    return `https://api.open-meteo.com/v1/forecast?latitude=${loc.lat}&longitude=${loc.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,weather_code,cloud_cover,pressure_msl,surface_pressure,wind_speed_10m,wind_direction_10m&hourly=temperature_2m,apparent_temperature,precipitation_probability,weather_code,is_day,wind_speed_10m,relative_humidity_2m&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,precipitation_probability_max,wind_speed_10m_max&temperature_unit=${temp}&wind_speed_unit=${wind}&timezone=auto&forecast_days=7`;
+  }
+  function airURL(loc){
+    return `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${loc.lat}&longitude=${loc.lon}&current=us_aqi,pm10,pm2_5,ozone,nitrogen_dioxide&timezone=auto`;
+  }
+  async function loadWeather(loc){
+    setStatus(`Loading weather for ${loc.label}…`);
+    const [weather,air]=await Promise.all([
+      fetchJSON(weatherURL(loc)),
+      fetchJSON(airURL(loc)).catch(()=>null)
+    ]);
+    state.location=loc;state.lastWeather=weather;
+    if(!state.locations.includes(loc.label))state.locations.push(loc.label);
+    save();renderWeather(weather,air);setStatus(`Updated for ${loc.label}. Forecast times use the location's local time.`)
+  }
+  function unit(){return state.unit==="fahrenheit"?"°F":"°C"}
+  function windUnit(){return state.unit==="fahrenheit"?"mph":"km/h"}
+  function icon(code,isDay=true){
+    const base=WMO[code]?.[1]||"🌤️";
+    if(!isDay&&[0,1,2].includes(code))return code===0?"🌙":"☁️";
+    return base
+  }
+  function label(code){return WMO[code]?.[0]||"Weather"}
+  function fmtHour(t){
+    const m=String(t).match(/T(\d{2}):/);if(!m)return"—";
+    let h=Number(m[1]),s=h>=12?"PM":"AM";h=h%12||12;return `${h} ${s}`
+  }
+  function fmtTime(t){
+    const m=String(t).match(/T(\d{2}):(\d{2})/);if(!m)return"—";
+    let h=Number(m[1]),s=h>=12?"PM":"AM";h=h%12||12;return `${h}:${m[2]} ${s}`
+  }
+  function adviceFor(code,temp,uv,wind){
+    if([95,96,99].includes(code))return"Thunderstorm safety: go indoors with a trusted adult and stay away from windows, water, and corded electronics.";
+    if([61,63,65,80,81,82].includes(code))return"Rain is possible. Wear suitable shoes and stay away from floodwater and fast-moving water.";
+    if([71,73,75,77,85,86].includes(code))return"Snow or ice may make surfaces slippery. Wear warm layers and stay with a trusted adult.";
+    if(uv>=6)return"UV is high. Ask an adult about shade, protective clothing, water, and sunscreen.";
+    if(wind>=25)return"Wind is strong. Stay away from trees, signs, power lines, and loose outdoor objects.";
+    if(state.unit==="fahrenheit"&&temp>=90 || state.unit==="celsius"&&temp>=32)return"Hot-weather caution: drink water, take breaks, and tell an adult if you feel dizzy, weak, or sick.";
+    return"Check the real sky and official alerts with a trusted adult before outdoor plans."
+  }
+  function renderWeather(d,air){
+    const c=d.current,day=d.daily;
+    $("currentIcon").textContent=icon(c.weather_code,!!c.is_day);
+    $("currentTemp").textContent=`${Math.round(c.temperature_2m)}${unit()}`;
+    $("currentSummary").textContent=label(c.weather_code);
+    $("locationLabel").textContent=state.location.label;
+    $("feelsLike").textContent=`${Math.round(c.apparent_temperature)}${unit()}`;
+    $("humidity").textContent=`${Math.round(c.relative_humidity_2m)}%`;
+    $("wind").textContent=`${Math.round(c.wind_speed_10m)} ${windUnit()}`;
+    $("rainChance").textContent=`${day.precipitation_probability_max?.[0]??0}%`;
+    $("uv").textContent=(day.uv_index_max?.[0]??0).toFixed(1);
+    $("pressure").textContent=`${Math.round(c.pressure_msl||c.surface_pressure||0)} hPa`;
+    $("weatherAdvice").textContent=adviceFor(c.weather_code,c.temperature_2m,day.uv_index_max?.[0]||0,c.wind_speed_10m||0);
+    $("timezoneLabel").textContent=d.timezone||"Local time";
+    $("sunTimes").textContent=`Sunrise: ${fmtTime(day.sunrise[0])} · Sunset: ${fmtTime(day.sunset[0])}`;
+    renderHours(d.hourly,c.time);
+    renderDays(day);
+    renderAir(air);
+    renderMoon(new Date());
+    updateStats()
+  }
+  function renderHours(h,currentTime){
+    $("hours").innerHTML="";
+    let idx=h.time.indexOf(currentTime);if(idx<0)idx=h.time.findIndex(t=>String(t)>=String(currentTime));if(idx<0)idx=0;
+    for(let i=idx;i<Math.min(idx+24,h.time.length);i++){
+      const el=document.createElement("div");el.className="hour";
+      el.innerHTML=`<strong>${fmtHour(h.time[i])}</strong><div class="ico">${icon(h.weather_code[i],!!h.is_day[i])}</div><strong>${Math.round(h.temperature_2m[i])}${unit()}</strong><small>${h.precipitation_probability[i]??0}% rain</small>`;
+      $("hours").appendChild(el)
+    }
+  }
+  function renderDays(d){
+    $("days").innerHTML="";
+    d.time.forEach((t,i)=>{
+      const date=new Date(`${t}T12:00:00`);
+      const el=document.createElement("div");el.className="day";
+      el.innerHTML=`<strong>${date.toLocaleDateString([],{weekday:"short"})}</strong><div class="ico">${icon(d.weather_code[i],true)}</div><strong>${Math.round(d.temperature_2m_max[i])}${unit()}</strong><small>Low ${Math.round(d.temperature_2m_min[i])}${unit()}</small><small>${d.precipitation_probability_max[i]??0}% rain</small>`;
+      $("days").appendChild(el)
+    })
+  }
+  function renderAir(air){
+    if(!air?.current){$("aqiValue").textContent="—";$("aqiLabel").textContent="Air-quality data unavailable.";return}
+    const aqi=Math.round(air.current.us_aqi||0);
+    $("aqiValue").textContent=aqi;
+    const info=aqi<=50?["Good","#3fa96e","Air quality is generally good."]:aqi<=100?["Moderate","#e0b83f","Air quality is acceptable, but unusually sensitive people may need care."]:aqi<=150?["Unhealthy for sensitive groups","#df8d3e","Children with asthma or breathing conditions should follow adult and medical guidance."]:aqi<=200?["Unhealthy","#cf5c63","Reduce prolonged outdoor activity and follow local guidance."]:["Very unhealthy","#7f4f9d","Stay informed and follow official local health guidance."];
+    $("aqiLabel").textContent=info[0];$("airAdvice").textContent=info[2];
+    $("aqiRing").style.background=`conic-gradient(${info[1]} ${Math.min(360,aqi/300*360)}deg,#e8eef3 0deg)`
+  }
+  function renderMoon(date){
+    const syn=29.530588853,known=Date.UTC(2000,0,6,18,14),days=(date.getTime()-known)/86400000;
+    const phase=((days%syn)+syn)%syn/syn;
+    const illum=(1-Math.cos(2*Math.PI*phase))/2;
+    const names=["New Moon","Waxing Crescent","First Quarter","Waxing Gibbous","Full Moon","Waning Gibbous","Last Quarter","Waning Crescent"];
+    const idx=Math.round(phase*8)%8;
+    $("moonText").textContent=`${names[idx]} · ${(illum*100).toFixed(0)}% illuminated`;
+    const shift=(phase<=.5?50-phase*200:-50+(phase-.5)*200);
+    $("moonShadow").style.transform=`translateX(${shift}%)`;
+    $("moonShadow").style.background=phase>.5?"#152442":"#152442"
+  }
+
+  const VOICES={
+    sola:{name:"Sola",rate:.82,pitch:1.08,match:/samantha|aria|jenny|ava|karen|victoria/i,greeting:"Hello, weather scientist. Sola is ready to explore the sky with you."},
+    cirrus:{name:"Cirrus",rate:.78,pitch:.98,match:/daniel|david|alex|fred|george/i,greeting:"Hello, cloud watcher. Cirrus is ready for a weather investigation."},
+    owl:{name:"Weather Owl",rate:.74,pitch:1,match:/daniel|samantha|alex|serena|moira/i,greeting:"Welcome, young meteorologist. Weather Owl is ready for careful science learning."},
+    nova:{name:"Nova",rate:.84,pitch:1.1,match:/natural|enhanced|premium|samantha|aria|jenny|ava/i,greeting:"Hello, bright explorer. Nova is ready for a colorful sky adventure."}
+  };
+  const SPEEDS={slow:.88,normal:1,lively:1.1};
+  function refreshVoices(){if("speechSynthesis"in window)voices=speechSynthesis.getVoices()||[]}
+  function chooseVoice(){
+    refreshVoices();const g=VOICES[state.voice]||VOICES.sola;
+    const en=voices.filter(v=>/^en([-_]|$)/i.test(v.lang||"")),pool=en.length?en:voices;
+    return pool.find(v=>g.match.test(v.name))||pool[0]||null
+  }
+  function stopVoice(msg="Voice stopped."){
+    speechToken++;if("speechSynthesis"in window)speechSynthesis.cancel();$("voiceStatus").textContent=msg
+  }
+  function speak(text,preview=false){
+    if(!("speechSynthesis"in window))return;
+    const g=VOICES[state.voice]||VOICES.sola,phrase=preview?g.greeting:String(text||"").trim();if(!phrase)return;
+    stopVoice("");lastSpoken=phrase;const token=++speechToken,u=new SpeechSynthesisUtterance(phrase),v=chooseVoice();
+    if(v)u.voice=v;u.lang=v?.lang||"en-US";u.rate=Math.max(.55,Math.min(1.15,g.rate*(SPEEDS[state.voiceSpeed]||1)));u.pitch=g.pitch;
+    u.onstart=()=>$("voiceStatus").textContent=`${g.name} is reading.`;
+    u.onend=()=>{if(token===speechToken)$("voiceStatus").textContent="Ready for another weather discovery!"};
+    u.onerror=()=>{if(token===speechToken)$("voiceStatus").textContent="The voice had a little hiccup."};
+    speechSynthesis.speak(u)
+  }
+  function updateVoiceButtons(){
+    document.querySelectorAll("[data-voice]").forEach(b=>b.classList.toggle("active",b.dataset.voice===state.voice));
+    $("voiceSpeed").value=state.voiceSpeed
+  }
+
+  function newFact(read=false){
+    const t=FACTS[Math.floor(Math.random()*FACTS.length)];$("factText").textContent=t;state.facts++;save();updateStats();if(read)speak(t)
+  }
+  function newSafety(read=false){
+    const t=SAFETY[Math.floor(Math.random()*SAFETY.length)];$("safetyLesson").textContent=t;state.safety++;save();updateStats();if(read)speak(t)
+  }
+  function newExperiment(read=false){
+    const t=EXPERIMENTS[Math.floor(Math.random()*EXPERIMENTS.length)];$("experimentText").textContent=t;if(read)speak(t)
+  }
+  function newQuiz(){
+    currentQuiz=QUIZ[Math.floor(Math.random()*QUIZ.length)];quizWrong=0;
+    $("quizQuestion").textContent=currentQuiz.q;$("quizOptions").innerHTML="";$("quizFeedback").textContent="";
+    currentQuiz.a.map((text,i)=>({text,correct:i===currentQuiz.c})).sort(()=>Math.random()-.5).forEach(x=>{
+      const b=document.createElement("button");b.className="option";b.textContent=x.text;
+      b.onclick=()=>{
+        if(x.correct){
+          [...$("quizOptions").children].forEach(n=>n.disabled=true);b.classList.add("correct");
+          $("quizFeedback").textContent="Excellent weather thinking!";state.quizLearned++;save();updateStats();sparkle();speak(`Excellent. ${x.text} is correct.`)
+        }else{
+          quizWrong++;b.classList.add("wrong");b.disabled=true;
+          if(quizWrong<2){$("quizFeedback").textContent="Good try. Use the science clue and try once more.";speak("Good try. Use the science clue and try once more.")}
+          else{
+            [...$("quizOptions").children].forEach(n=>n.disabled=true);
+            const right=[...$("quizOptions").children].find(n=>n.textContent===currentQuiz.a[currentQuiz.c]);right?.classList.add("correct");
+            $("quizFeedback").textContent=`The correct answer is ${currentQuiz.a[currentQuiz.c]}.`;speak(`The correct answer is ${currentQuiz.a[currentQuiz.c]}.`)
+          }
+        }
+      };
+      $("quizOptions").appendChild(b)
+    })
+  }
+  function renderJournal(){
+    $("journalLog").innerHTML=state.journal.length?state.journal.slice().reverse().map((j,i)=>`
+      <div class="log-item"><strong>${j.date} · ${j.weather} · ${j.temp}${j.unit}</strong><br>${escapeHTML(j.notes||"No notes.")}</div>`).join(""):`<div class="log-item">No observations saved yet.</div>`
+  }
+  function escapeHTML(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+  function updateStats(){
+    $("searchStat").textContent=state.locations.length;$("quizStat").textContent=state.quizLearned;
+    $("journalStat").textContent=state.journal.length;$("factStat").textContent=state.facts;$("safetyStat").textContent=state.safety
+  }
+
+  $("searchBtn").onclick=async()=>{
+    const q=$("locationInput").value.trim();if(!q)return setStatus("Enter a city or postal code.",true);
+    try{await loadWeather(await geocode(q))}catch(e){setStatus(e.message,true)}
+  };
+  $("locationInput").addEventListener("keydown",e=>{if(e.key==="Enter")$("searchBtn").click()});
+  $("locateBtn").onclick=()=>{
+    if(!navigator.geolocation)return setStatus("Geolocation is unavailable in this browser.",true);
+    setStatus("Requesting location permission…");
+    navigator.geolocation.getCurrentPosition(
+      p=>loadWeather({lat:p.coords.latitude,lon:p.coords.longitude,label:"My Location"}).catch(e=>setStatus(e.message,true)),
+      ()=>setStatus("Location permission was not granted. Search for a city instead.",true),
+      {enableHighAccuracy:false,timeout:12000,maximumAge:300000}
+    )
+  };
+  $("unitSelect").onchange=e=>{state.unit=e.target.value;save();if(state.location)loadWeather(state.location).catch(err=>setStatus(err.message,true))};
+  $("themeSelect").onchange=e=>applyTheme(e.target.value);
+  $("motionSelect").onchange=e=>{state.motion=e.target.value;save();document.documentElement.style.scrollBehavior=state.motion==="off"?"auto":"smooth"};
+  $("readForecastBtn").onclick=()=>{
+    if(!state.lastWeather)return setStatus("Load a forecast first.",true);
+    const c=state.lastWeather.current,d=state.lastWeather.daily;
+    speak(`${state.location.label}. ${label(c.weather_code)}. ${Math.round(c.temperature_2m)} degrees ${state.unit==="fahrenheit"?"Fahrenheit":"Celsius"}, feels like ${Math.round(c.apparent_temperature)}. Humidity ${Math.round(c.relative_humidity_2m)} percent. Wind ${Math.round(c.wind_speed_10m)} ${windUnit()}. Today's high ${Math.round(d.temperature_2m_max[0])}, low ${Math.round(d.temperature_2m_min[0])}. Rain chance ${d.precipitation_probability_max[0]||0} percent.`)
+  };
+  $("newFactBtn").onclick=()=>newFact(true);
+  $("newSafetyBtn").onclick=()=>newSafety(true);
+  $("newExperimentBtn").onclick=()=>newExperiment(true);
+  $("newQuizBtn").onclick=newQuiz;
+  $("saveJournalBtn").onclick=()=>{
+    const item={date:$("journalDate").value,weather:$("journalWeather").value,temp:$("journalTemp").value||"—",unit:$("journalUnit").value,notes:$("journalNotes").value.trim()};
+    if(!item.date)return setStatus("Choose an observation date.",true);
+    state.journal.push(item);if(state.journal.length>200)state.journal.shift();save();renderJournal();updateStats();sparkle();setStatus("Weather observation saved.")
+  };
+  $("exportJournalBtn").onclick=()=>{
+    const blob=new Blob([JSON.stringify({app:"Solanar for Kids",exportedAt:new Date().toISOString(),journal:state.journal},null,2)],{type:"application/json"});
+    const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="solanar-kids-weather-journal.json";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},0)
+  };
+  $("voiceGuides").onclick=e=>{const b=e.target.closest("[data-voice]");if(!b)return;state.voice=b.dataset.voice;save();updateVoiceButtons();$("voiceStatus").textContent=`${VOICES[state.voice].name} selected.`};
+  $("voiceSpeed").onchange=e=>{state.voiceSpeed=e.target.value;save()};
+  $("meetGuideBtn").onclick=()=>speak("",true);
+  $("repeatBtn").onclick=()=>lastSpoken?speak(lastSpoken):speak("Search for a location to begin.");
+  $("stopVoiceBtn").onclick=()=>stopVoice();
+
+  $("unitSelect").value=state.unit;$("themeSelect").value=state.theme;$("motionSelect").value=state.motion;
+  $("journalDate").value=new Date().toLocaleDateString("en-CA");$("journalUnit").value=state.unit==="fahrenheit"?"°F":"°C";
+  applyTheme(state.theme);updateVoiceButtons();renderJournal();updateStats();newQuiz();refreshVoices();
+  if("speechSynthesis"in window){speechSynthesis.addEventListener?.("voiceschanged",refreshVoices);speechSynthesis.onvoiceschanged=refreshVoices}
+  const defaultLocation=state.location||{lat:28.1878,lon:-82.7395,label:"Holiday, Florida"};
+  loadWeather(defaultLocation).catch(e=>setStatus(e.message,true));
+  window.addEventListener("offline",()=>setStatus("This device is offline. Live weather cannot refresh.",true));
+  window.addEventListener("online",()=>setStatus("Internet connection restored. Search or refresh the saved location."));
+  window.addEventListener("beforeunload",()=>stopVoice(""));
+})();
+</script>
+</body>
+</html>
