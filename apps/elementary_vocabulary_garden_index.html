@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Vocabulary Garden Academy — a K–5 drag-and-drop vocabulary game with grade-level word banks, definitions, context clues, synonyms, antonyms, roots, narration, quizzes, and private local progress.">
+<title>Vocabulary Garden Academy™ — K–5 Word Quest</title>
+<style>
+:root{
+  --sky:#dff5ff;
+  --sun:#ffd75f;
+  --coral:#ff8f78;
+  --blue:#2f73bd;
+  --navy:#17355d;
+  --green:#55ae75;
+  --mint:#c8efd7;
+  --lav:#d9cdf5;
+  --paper:#fffdf8;
+  --panel:#ffffff;
+  --ink:#26384e;
+  --muted:#68778b;
+  --line:rgba(23,53,93,.15);
+  --good:#3fa96e;
+  --warn:#dc8a3e;
+  --bad:#ce5663;
+  --shadow:0 18px 42px rgba(30,65,105,.13);
+  --r7:7px;
+  --r11:11px;
+  --r21:21px;
+  --r33:33px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  padding:18px 10px 46px;
+  overflow-x:hidden;
+  color:var(--ink);
+  font-family:"Trebuchet MS","Arial Rounded MT Bold",system-ui,sans-serif;
+  background:
+    radial-gradient(circle at 12% 7%,rgba(255,255,255,.9),transparent 18%),
+    linear-gradient(180deg,#bce9ff 0%,#eefaff 34%,#fff5c8 73%,#ffd9b2 100%);
+}
+button,input,select{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:4px solid rgba(47,115,189,.25);
+  outline-offset:3px;
+}
+.portal-header{
+  width:min(1280px,100%);
+  margin:0 auto 14px;
+  padding:12px 14px;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:12px;
+  border:2px solid #fff;
+  border-radius:22px;
+  background:rgba(255,255,255,.93);
+  box-shadow:0 12px 28px rgba(27,66,108,.12);
+}
+.portal-mark{
+  width:58px;height:58px;display:grid;place-items:center;border-radius:18px;
+  background:linear-gradient(145deg,#69cf99,#ffd75d);
+  border:3px solid #fff;font-size:2rem
+}
+.portal-eyebrow{margin:0;color:var(--coral);font-size:.68rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.portal-title{margin:2px 0 0;color:var(--navy);font-size:clamp(1.05rem,2.2vw,1.42rem);line-height:1.2}
+.portal-links{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.portal-link{
+  min-height:38px;padding:8px 12px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--blue);
+  text-decoration:none;font-weight:900;font-size:.78rem
+}
+.portal-link.current{color:#fff;border-color:transparent;background:linear-gradient(135deg,var(--blue),#7868c7)}
+.wrap{width:min(1280px,100%);margin:auto}
+.hero{
+  padding:28px 20px;
+  border-radius:30px;
+  color:#fff;
+  text-align:center;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(255,255,255,.16),transparent 18%),
+    linear-gradient(135deg,var(--navy),#2f659a 58%,#438cb8);
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+.hero:after{
+  content:"A  B  C  📚  🌿";
+  position:absolute;right:18px;bottom:12px;font-size:1.3rem;letter-spacing:.22em;opacity:.35
+}
+.hero .eyebrow{
+  display:inline-flex;gap:8px;align-items:center;
+  padding:7px 13px;border-radius:999px;
+  background:rgba(255,255,255,.11);
+  border:1px solid rgba(255,255,255,.24);
+  font-size:.76rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase
+}
+.hero h1{
+  margin:16px auto 8px;
+  max-width:1020px;
+  font-size:clamp(2.45rem,6vw,5.15rem);
+  line-height:1.05;
+  letter-spacing:-.025em
+}
+.hero p{max-width:940px;margin:auto;color:#eef9ff;line-height:1.72}
+.toolbar{
+  margin:14px 0;
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:9px
+}
+.control{
+  min-width:0;padding:10px;border:1px solid var(--line);border-radius:17px;
+  background:rgba(255,255,255,.93);box-shadow:0 7px 16px rgba(34,73,115,.06)
+}
+.control label{display:block;margin-bottom:5px;color:var(--muted);font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.control select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink)}
+.btn{
+  border:1px solid var(--line);border-radius:13px;padding:9px 12px;background:#fff;color:var(--blue);
+  font-weight:900;box-shadow:0 5px 12px rgba(32,70,110,.07);transition:.16s ease
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{color:#fff;border-color:transparent;background:linear-gradient(135deg,var(--blue),#48a6d8)}
+.btn.sunny{color:#564313;border-color:transparent;background:linear-gradient(135deg,#ffe36d,#ffad5f)}
+.btn.good{color:#fff;border-color:transparent;background:linear-gradient(135deg,#4db67a,#3f9e78)}
+.status{
+  margin-bottom:12px;padding:10px 13px;border:1px solid var(--line);border-radius:15px;
+  background:rgba(255,255,255,.84);color:var(--muted);line-height:1.5
+}
+.layout{
+  display:grid;
+  grid-template-columns:310px minmax(0,1fr);
+  gap:14px;
+  align-items:start
+}
+.sidebar,.game-panel{
+  border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.94);box-shadow:var(--shadow)
+}
+.sidebar{overflow:hidden}
+.side-head{padding:13px 15px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,#f7fbff)}
+.side-head h2{margin:0;color:var(--navy);font-size:1.05rem}
+.side-body{padding:14px}
+.grade-map{display:grid;gap:8px}
+.grade-card{
+  width:100%;min-height:72px;padding:11px;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;
+  border:2px solid transparent;border-radius:16px;background:linear-gradient(145deg,#fff,#fff9ec);text-align:left;color:var(--ink)
+}
+.grade-card.active{border-color:var(--sun);box-shadow:0 0 0 4px rgba(255,215,95,.18)}
+.grade-card .icon{font-size:1.7rem}
+.grade-card strong{display:block;color:var(--navy)}
+.grade-card small{display:block;color:var(--muted);font-size:.68rem;line-height:1.35;margin-top:2px}
+.grade-card .count{min-width:34px;padding:4px 7px;border-radius:999px;background:#eef5fb;color:var(--navy);font-size:.68rem;text-align:center}
+.word-garden{
+  margin-top:12px;padding:11px;border:1px solid var(--line);border-radius:17px;
+  background:linear-gradient(180deg,#e7f8ff 0 61%,#d8b675 62% 100%)
+}
+.word-garden h3{margin:0 0 7px;text-align:center;color:var(--navy);font-size:.9rem}
+.garden-row{min-height:98px;display:flex;align-items:flex-end;justify-content:center;gap:8px;flex-wrap:wrap}
+.plant{width:48px;text-align:center;opacity:.28;filter:grayscale(.4);transform:scale(.9);transition:.2s}
+.plant.grown{opacity:1;filter:none;transform:scale(1)}
+.plant span{display:block;font-size:2rem}
+.plant small{font-size:.56rem;font-weight:900;color:#4f4854;background:#ffffffcc;border-radius:999px;padding:2px 5px}
+.game-panel{padding:16px;min-width:0}
+.game-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.game-head h2{margin:0;color:var(--navy)}
+.progress{margin-top:10px;height:14px;border-radius:999px;overflow:hidden;background:#e8edf3;border:1px solid var(--line)}
+.progress>div{height:100%;width:0;background:linear-gradient(90deg,var(--coral),var(--sun),var(--green));transition:.25s}
+.prompt{
+  margin:14px 0;padding:13px;border-radius:17px;background:#eef8ff;border:1px solid #bddbeb;
+  font-size:1.08rem;font-weight:900;color:var(--navy);text-align:center
+}
+.drag-stage{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  min-height:470px
+}
+.word-bank,.drop-bank{
+  min-width:0;padding:14px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#fff,#f9fcff)
+}
+.bank-title{margin:0 0 10px;color:var(--navy);text-align:center;font-size:.95rem}
+.word-list,.drop-list{display:grid;gap:9px}
+.word-card{
+  padding:11px;border:2px solid #c9dbea;border-radius:15px;background:#fff;color:var(--navy);
+  font-size:1rem;font-weight:900;text-align:center;box-shadow:0 6px 12px rgba(34,73,115,.06);
+  user-select:none;touch-action:none
+}
+.word-card.dragging{opacity:.48;transform:scale(.98)}
+.word-card.selected{box-shadow:0 0 0 5px rgba(255,215,95,.35);border-color:var(--sun)}
+.word-card.used{opacity:.36;pointer-events:none}
+.drop-zone{
+  min-height:86px;padding:10px;border:3px dashed #b9cfe1;border-radius:16px;background:#fff;display:grid;place-items:center;text-align:center;
+  transition:.16s ease
+}
+.drop-zone.dragover{background:#eef9ff;border-color:var(--blue);transform:scale(1.01)}
+.drop-zone.correct{background:#e2f7e8;border-color:#77c490}
+.drop-zone.wrong{background:#ffe8eb;border-color:#e49ba6}
+.drop-zone strong{display:block;color:var(--navy);margin-bottom:4px}
+.drop-zone small{color:var(--muted);line-height:1.4}
+.feedback{min-height:32px;margin-top:10px;text-align:center;color:var(--muted);font-weight:900}
+.word-card-tools{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+.lesson-grid{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.lesson-card{padding:12px;border:1px solid var(--line);border-radius:17px;background:#fff}
+.lesson-card h3{margin:0 0 6px;color:var(--navy);font-size:.9rem}
+.lesson-card p{margin:0;color:var(--muted);font-size:.8rem;line-height:1.45}
+.voice-panel{
+  margin-top:14px;padding:13px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#fff,#f5f7ff)
+}
+.voice-guides{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.voice-guide{min-height:58px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--blue);font-weight:900}
+.voice-guide.active{color:#fff;background:linear-gradient(135deg,var(--blue),#7768c7)}
+.voice-controls{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:8px}
+.stats{margin-top:14px;display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.stat{padding:10px;border:1px solid var(--line);border-radius:15px;background:#fff;text-align:center}
+.stat strong{display:block;color:var(--blue);font-size:1.2rem}
+.collection{
+  margin-top:14px;padding:13px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.91)
+}
+.collection h2{margin:0 0 8px;text-align:center;color:var(--navy);font-size:1rem}
+.collection-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:7px}
+.collection-card{
+  min-height:72px;padding:7px;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:center;opacity:.34;filter:grayscale(.4)
+}
+.collection-card.learned{opacity:1;filter:none}
+.collection-card span{display:block;font-size:1.35rem}
+.collection-card small{font-size:.6rem;color:var(--muted);font-weight:900}
+footer{
+  margin-top:16px;padding:14px;border:1px solid rgba(255,255,255,.8);border-radius:18px;
+  background:rgba(255,255,255,.72);text-align:center;color:var(--muted);line-height:1.5;font-size:.82rem
+}
+.sparkle{position:fixed;pointer-events:none;z-index:80;font-size:1.5rem;animation:spark 1s ease forwards}
+@keyframes spark{to{transform:translateY(-85px) rotate(55deg);opacity:0}}
+@media(max-width:1000px){
+  .toolbar{grid-template-columns:repeat(3,1fr)}
+  .layout{grid-template-columns:1fr}
+  .grade-map{grid-template-columns:repeat(2,1fr)}
+  .collection-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:760px){
+  body{padding:10px 7px 34px}
+  .portal-header{grid-template-columns:auto 1fr}
+  .portal-links{grid-column:1/-1;justify-content:center}
+  .toolbar{grid-template-columns:1fr}
+  .grade-map{grid-template-columns:1fr}
+  .drag-stage{grid-template-columns:1fr}
+  .lesson-grid{grid-template-columns:1fr}
+  .voice-guides{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .collection-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:460px){
+  .portal-header{grid-template-columns:1fr;text-align:center}
+  .portal-mark{margin:auto}
+  .portal-links{grid-column:auto}
+  .collection-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+<header class="portal-header" aria-label="Khaemenes Academy Elementary Portal">
+  <div class="portal-mark" aria-hidden="true">📚</div>
+  <div>
+    <p class="portal-eyebrow">Khaemenes Academy · Elementary Portal</p>
+    <div class="portal-title">Vocabulary Garden Academy™ · K–5 Word Quest</div>
+  </div>
+  <nav class="portal-links" aria-label="Elementary navigation">
+    <a class="portal-link" href="../index.html">🏡 Elementary Home</a>
+    <a class="portal-link current" href="#" aria-current="page">📚 Vocabulary Garden</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">🌱 Kindergarten through Grade 5 · Drag · Match · Read · Learn</div>
+    <h1>Vocabulary Garden Academy™</h1>
+    <p>Match words with meanings, context clues, synonyms, antonyms, and roots. Every grade has its own vocabulary bank, and every correct match helps the word garden grow.</p>
+  </section>
+
+  <section class="toolbar">
+    <div class="control">
+      <label for="gradeSelect">Grade Level</label>
+      <select id="gradeSelect">
+        <option value="K">Kindergarten</option>
+        <option value="1">Grade 1</option>
+        <option value="2">Grade 2</option>
+        <option value="3">Grade 3</option>
+        <option value="4">Grade 4</option>
+        <option value="5">Grade 5</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="modeSelect">Learning Mode</label>
+      <select id="modeSelect">
+        <option value="definition">Word to Definition</option>
+        <option value="context">Context Clues</option>
+        <option value="synonym">Synonyms</option>
+        <option value="antonym">Antonyms</option>
+        <option value="roots">Roots & Word Parts</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="roundSizeSelect">Round Size</label>
+      <select id="roundSizeSelect">
+        <option value="4">4 words</option>
+        <option value="6">6 words</option>
+        <option value="8">8 words</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="difficultySelect">Support Level</label>
+      <select id="difficultySelect">
+        <option value="guided">Guided</option>
+        <option value="standard">Standard</option>
+        <option value="challenge">Challenge</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="themeSelect">Theme</label>
+      <select id="themeSelect">
+        <option value="day">Bright Garden</option>
+        <option value="ocean">Ocean Words</option>
+        <option value="sunset">Sunset Library</option>
+        <option value="night">Night Reader</option>
+      </select>
+    </div>
+    <div class="control">
+      <label>Round Tools</label>
+      <button class="btn sunny" id="newRoundBtn" type="button">New Word Quest</button>
+    </div>
+  </section>
+
+  <div class="status" id="status">Choose a grade and begin a vocabulary quest.</div>
+
+  <section class="layout">
+    <aside class="sidebar">
+      <div class="side-head"><h2>Grade-Level Word Path</h2></div>
+      <div class="side-body">
+        <div class="grade-map" id="gradeMap"></div>
+        <div class="word-garden">
+          <h3>🌿 My Vocabulary Garden</h3>
+          <div class="garden-row" id="gardenRow"></div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="game-panel">
+      <div class="game-head">
+        <h2 id="lessonTitle">Word to Definition</h2>
+        <div>
+          <button class="btn" id="hearBtn" type="button">🔊 Hear Directions</button>
+          <button class="btn" id="hintBtn" type="button">💡 Hint</button>
+        </div>
+      </div>
+
+      <div class="progress"><div id="progressBar"></div></div>
+      <div class="prompt" id="prompt">Drag each word to its matching clue. On touch screens, tap a word and then tap its match.</div>
+
+      <div class="drag-stage">
+        <section class="word-bank">
+          <h3 class="bank-title">Word Cards</h3>
+          <div class="word-list" id="wordList"></div>
+        </section>
+
+        <section class="drop-bank">
+          <h3 class="bank-title">Meaning & Clue Cards</h3>
+          <div class="drop-list" id="dropList"></div>
+        </section>
+      </div>
+
+      <div class="feedback" id="feedback" aria-live="polite"></div>
+
+      <div class="word-card-tools">
+        <button class="btn" id="checkRoundBtn" type="button">✓ Check Round</button>
+        <button class="btn" id="resetRoundBtn" type="button">↺ Reset Round</button>
+        <button class="btn primary" id="nextRoundBtn" type="button">Next Quest</button>
+      </div>
+
+      <section class="lesson-grid">
+        <article class="lesson-card"><h3>Vocabulary Strategy</h3><p id="strategyCard">Read the whole clue. Think about the word’s meaning, parts, and how it is used.</p></article>
+        <article class="lesson-card"><h3>Context Connection</h3><p id="contextCard">Use nearby words in a sentence to help determine an unfamiliar word’s meaning.</p></article>
+        <article class="lesson-card"><h3>Word Study</h3><p id="studyCard">Prefixes, suffixes, roots, synonyms, and antonyms help unlock new vocabulary.</p></article>
+      </section>
+
+      <section class="voice-panel">
+        <h2 style="text-align:center;margin-top:0">Choose a Vocabulary Guide</h2>
+        <div class="voice-guides" id="voiceGuides">
+          <button class="voice-guide" data-voice="flora" type="button">🌿 Flora</button>
+          <button class="voice-guide" data-voice="lex" type="button">📖 Lex</button>
+          <button class="voice-guide" data-voice="owl" type="button">🦉 Word Owl</button>
+          <button class="voice-guide" data-voice="nova" type="button">✨ Nova</button>
+        </div>
+        <div class="voice-controls">
+          <select id="voiceSpeed"><option value="slow">Slow and clear</option><option value="normal">Just right</option><option value="lively">A little lively</option></select>
+          <button class="btn" id="meetGuideBtn" type="button">👋 Meet My Guide</button>
+          <button class="btn" id="repeatBtn" type="button">🔁 Repeat Last</button>
+          <button class="btn" id="stopVoiceBtn" type="button">⏹ Stop Voice</button>
+        </div>
+        <p id="voiceStatus" style="text-align:center;color:var(--muted);min-height:1.2em"></p>
+      </section>
+    </section>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><strong id="scoreStat">0</strong>Score</div>
+    <div class="stat"><strong id="streakStat">0</strong>Streak</div>
+    <div class="stat"><strong id="roundStat">0</strong>Rounds</div>
+    <div class="stat"><strong id="learnedStat">0</strong>Words learned</div>
+    <div class="stat"><strong id="accuracyStat">0%</strong>Accuracy</div>
+    <div class="stat"><strong id="levelStat">K</strong>Current grade</div>
+  </section>
+
+  <section class="collection">
+    <h2>📘 My Vocabulary Collection</h2>
+    <div class="collection-grid" id="collectionGrid"></div>
+  </section>
+
+  <footer>
+    <strong>© 2026 Vocabulary Garden Academy™ · Verve N Veda · Khaemenes Academy · Jennifer Kay Pearl</strong><br>
+    Single-file vanilla JavaScript · Private local progress · No accounts, advertisements, or outside game services
+  </footer>
+</main>
+
+<script>
+(() => {
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+  const KEY = "vocabulary-garden-k5-v1";
+
+  const BANK = {
+    K:[
+      {word:"big",def:"large in size",context:"The elephant is very ___ compared with the mouse.",syn:"large",ant:"small",root:"A basic describing word.",emoji:"🐘"},
+      {word:"tiny",def:"very small",context:"The ant is ___ beside the shoe.",syn:"little",ant:"huge",root:"A basic describing word.",emoji:"🐜"},
+      {word:"happy",def:"feeling joy",context:"Mia felt ___ when her friend arrived.",syn:"glad",ant:"sad",root:"A feeling word.",emoji:"😊"},
+      {word:"quiet",def:"making little or no sound",context:"The library was ___ during story time.",syn:"silent",ant:"loud",root:"A describing word.",emoji:"🤫"},
+      {word:"jump",def:"to push your body up from the ground",context:"The frog can ___ over the log.",syn:"leap",ant:"stay",root:"An action word.",emoji:"🐸"},
+      {word:"kind",def:"helpful and caring",context:"It was ___ to share the crayons.",syn:"caring",ant:"mean",root:"A character word.",emoji:"💛"},
+      {word:"bright",def:"giving a lot of light",context:"The sun looked ___ in the morning sky.",syn:"shiny",ant:"dim",root:"A describing word.",emoji:"☀️"},
+      {word:"begin",def:"to start",context:"We will ___ the game after lunch.",syn:"start",ant:"finish",root:"A basic action word.",emoji:"▶️"}
+    ],
+    1:[
+      {word:"brave",def:"ready to face something difficult",context:"The ___ firefighter entered the smoky room.",syn:"courageous",ant:"afraid",root:"brave is the base word",emoji:"🦁"},
+      {word:"search",def:"to look carefully for something",context:"We will ___ for shells on the beach.",syn:"seek",ant:"ignore",root:"search is the base word",emoji:"🔎"},
+      {word:"gentle",def:"soft, calm, and careful",context:"Use a ___ touch with the baby bird.",syn:"tender",ant:"rough",root:"gentle is the base word",emoji:"🕊️"},
+      {word:"enormous",def:"extremely large",context:"The blue whale is an ___ animal.",syn:"huge",ant:"tiny",root:"enormous is the base word",emoji:"🐋"},
+      {word:"collect",def:"to gather things together",context:"We ___ leaves for the science table.",syn:"gather",ant:"scatter",root:"collect is the base word",emoji:"🧺"},
+      {word:"observe",def:"to watch carefully",context:"Scientists ___ the caterpillar each day.",syn:"watch",ant:"overlook",root:"observe is the base word",emoji:"👀"},
+      {word:"swift",def:"moving very quickly",context:"The ___ rabbit crossed the field.",syn:"fast",ant:"slow",root:"swift is the base word",emoji:"🐇"},
+      {word:"protect",def:"to keep safe from harm",context:"A helmet helps ___ your head.",syn:"guard",ant:"endanger",root:"pro- can mean forward; protect means guard",emoji:"🛡️"}
+    ],
+    2:[
+      {word:"ancient",def:"very old or from long ago",context:"The museum displayed an ___ tool.",syn:"old",ant:"modern",root:"ancient comes from a word meaning before",emoji:"🏺"},
+      {word:"fragile",def:"easy to break or damage",context:"The glass ornament is ___, so carry it carefully.",syn:"delicate",ant:"sturdy",root:"fragile relates to breaking",emoji:"🥚"},
+      {word:"predict",def:"to say what may happen before it happens",context:"Use the clouds to ___ tomorrow's weather.",syn:"forecast",ant:"doubt",root:"pre- means before; dict means say",emoji:"🔮"},
+      {word:"compare",def:"to examine how things are alike and different",context:"We will ___ the two animal habitats.",syn:"contrast",ant:"separate",root:"com- means together; pare means equal",emoji:"⚖️"},
+      {word:"journey",def:"a trip from one place to another",context:"The family began a long ___ across the country.",syn:"trip",ant:"stay",root:"journey relates to a day's travel",emoji:"🧭"},
+      {word:"scarce",def:"hard to find because there is not much",context:"Water was ___ during the dry season.",syn:"limited",ant:"plentiful",root:"scarce is the base word",emoji:"💧"},
+      {word:"drowsy",def:"sleepy and ready to rest",context:"The warm room made him feel ___.",syn:"sleepy",ant:"alert",root:"drowse means to sleep lightly",emoji:"😴"},
+      {word:"fortunate",def:"having good luck",context:"We were ___ to find shelter before the storm.",syn:"lucky",ant:"unlucky",root:"fortune + -ate",emoji:"🍀"}
+    ],
+    3:[
+      {word:"adapt",def:"to change in order to fit new conditions",context:"Animals ___ to survive in different habitats.",syn:"adjust",ant:"resist",root:"ad- means toward; apt means fit",emoji:"🦎"},
+      {word:"conclude",def:"to decide after thinking about evidence",context:"From the clues, we can ___ that the fox passed by.",syn:"infer",ant:"begin",root:"con- means together; clude means close",emoji:"🧠"},
+      {word:"essential",def:"completely necessary",context:"Clean water is ___ for life.",syn:"necessary",ant:"optional",root:"essence relates to what something is",emoji:"💧"},
+      {word:"fortunate",def:"having good luck or favorable results",context:"The hikers were ___ to find the trail marker.",syn:"lucky",ant:"unfortunate",root:"fortune + -ate",emoji:"🍀"},
+      {word:"identify",def:"to recognize and name",context:"Use the field guide to ___ the bird.",syn:"recognize",ant:"confuse",root:"identity + -fy, meaning make or form",emoji:"🪪"},
+      {word:"method",def:"a planned way of doing something",context:"The class tested a new ___ for measuring rainfall.",syn:"procedure",ant:"guess",root:"method comes from a word meaning pursuit",emoji:"🧪"},
+      {word:"reluctant",def:"not willing or eager",context:"He was ___ to enter the dark cave.",syn:"hesitant",ant:"eager",root:"reluctant relates to struggling against",emoji:"😬"},
+      {word:"significant",def:"important or meaningful",context:"The invention caused a ___ change in travel.",syn:"important",ant:"minor",root:"sign means mark; -fic means make",emoji:"⭐"}
+    ],
+    4:[
+      {word:"analyze",def:"to examine something carefully in parts",context:"Students ___ the data before writing a conclusion.",syn:"examine",ant:"ignore",root:"ana- means apart; -lyze means loosen",emoji:"🔬"},
+      {word:"contrast",def:"to show how things are different",context:"The essay will ___ desert and rainforest climates.",syn:"differentiate",ant:"compare",root:"contra- means against",emoji:"⚫"},
+      {word:"demonstrate",def:"to show clearly by example or evidence",context:"The model will ___ how erosion changes land.",syn:"show",ant:"conceal",root:"de- + monstr means show",emoji:"🎯"},
+      {word:"environment",def:"the surroundings and conditions where something lives",context:"Pollution can damage the natural ___.",syn:"surroundings",ant:"isolation",root:"environ means surround; -ment forms a noun",emoji:"🌎"},
+      {word:"infer",def:"to form a conclusion from evidence and reasoning",context:"Readers ___ the character's feelings from her actions.",syn:"deduce",ant:"state",root:"in- means into; fer means carry",emoji:"🧩"},
+      {word:"perspective",def:"a particular way of seeing or thinking about something",context:"The story is told from the dog's ___.",syn:"viewpoint",ant:"certainty",root:"per- means through; spect means look",emoji:"👓"},
+      {word:"resourceful",def:"able to find clever ways to solve problems",context:"The ___ campers repaired the tent with cord.",syn:"inventive",ant:"helpless",root:"resource + -ful, meaning full of",emoji:"🛠️"},
+      {word:"transform",def:"to change greatly in form or appearance",context:"Heat can ___ ice into liquid water.",syn:"change",ant:"preserve",root:"trans- means across; form means shape",emoji:"🦋"}
+    ],
+    5:[
+      {word:"ambiguous",def:"having more than one possible meaning",context:"The directions were ___, so the group interpreted them differently.",syn:"unclear",ant:"definite",root:"ambi- means both; agere relates to drive",emoji:"❓"},
+      {word:"coherent",def:"clear, logical, and connected",context:"The writer organized the ideas into a ___ argument.",syn:"logical",ant:"confusing",root:"co- means together; here means stick",emoji:"🔗"},
+      {word:"derive",def:"to obtain something from a source",context:"Many English words ___ from Latin and Greek.",syn:"originate",ant:"create",root:"de- means from; riv means stream",emoji:"🌊"},
+      {word:"evaluate",def:"to judge value or quality using evidence",context:"Scientists ___ whether the results support the hypothesis.",syn:"assess",ant:"accept blindly",root:"e- means out; value relates to worth",emoji:"📊"},
+      {word:"inevitable",def:"certain to happen and impossible to avoid",context:"Without repair, further damage was ___.",syn:"unavoidable",ant:"preventable",root:"in- means not; evit means avoid",emoji:"⏳"},
+      {word:"justify",def:"to support an answer with reasons or evidence",context:"Use details from the text to ___ your response.",syn:"defend",ant:"deny",root:"just means right; -fy means make",emoji:"⚖️"},
+      {word:"meticulous",def:"showing great care and attention to detail",context:"The engineer kept ___ notes during every test.",syn:"careful",ant:"careless",root:"meticulous relates to fear or carefulness",emoji:"📝"},
+      {word:"synthesize",def:"to combine ideas or information into a new whole",context:"Students ___ facts from several sources in the report.",syn:"combine",ant:"separate",root:"syn- means together; thesis means placing",emoji:"🧬"}
+    ]
+  };
+
+  const GRADE_INFO = {
+    K:{icon:"🌱",name:"Kindergarten",desc:"Basic describing and action words"},
+    1:{icon:"🌼",name:"Grade 1",desc:"Everyday academic vocabulary"},
+    2:{icon:"🐝",name:"Grade 2",desc:"Meaning, clues, and word relationships"},
+    3:{icon:"🌳",name:"Grade 3",desc:"Academic words and word parts"},
+    4:{icon:"📘",name:"Grade 4",desc:"Analysis, perspective, and evidence"},
+    5:{icon:"🏆",name:"Grade 5",desc:"Complex academic vocabulary"}
+  };
+
+  const THEMES = {
+    day:{bg1:"#bce9ff",bg2:"#fff5c8",panel:"#fff",ink:"#26384e",blue:"#2f73bd"},
+    ocean:{bg1:"#ccefff",bg2:"#d9f7ec",panel:"#fbffff",ink:"#224052",blue:"#2d84a7"},
+    sunset:{bg1:"#ffd7bc",bg2:"#ffe8ef",panel:"#fffaf8",ink:"#513b44",blue:"#b85c72"},
+    night:{bg1:"#1e2a50",bg2:"#3b3e6b",panel:"#2d345a",ink:"#f6f4ff",blue:"#a9b7ff"}
+  };
+
+  function fresh(){
+    return {
+      grade:"K",mode:"definition",roundSize:4,difficulty:"guided",theme:"day",
+      voice:"flora",voiceSpeed:"slow",score:0,streak:0,bestStreak:0,rounds:0,
+      correct:0,totalAttempts:0,learned:[],mastery:{K:0,1:0,2:0,3:0,4:0,5:0}
+    };
+  }
+  function load(){
+    try{return Object.assign(fresh(),JSON.parse(localStorage.getItem(KEY)||"{}"))}
+    catch{return fresh()}
+  }
+  let state=load(),roundWords=[],matches={},selectedWord=null,voices=[],speechToken=0,lastSpoken="";
+
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{}}
+  function setStatus(text){$("status").textContent=text}
+  function shuffle(a){return a.slice().sort(()=>Math.random()-.5)}
+  function applyTheme(name){
+    const t=THEMES[name]||THEMES.day;
+    document.body.style.background=`linear-gradient(180deg,${t.bg1},${t.bg2})`;
+    document.documentElement.style.setProperty("--panel",t.panel);
+    document.documentElement.style.setProperty("--ink",t.ink);
+    document.documentElement.style.setProperty("--blue",t.blue);
+    state.theme=name;save()
+  }
+  function sparkle(count=12){
+    for(let i=0;i<count;i++){
+      const s=document.createElement("span");s.className="sparkle";s.textContent=["✨","⭐","📚","🌿"][i%4];
+      s.style.left=(20+Math.random()*60)+"vw";s.style.top=(45+Math.random()*25)+"vh";
+      document.body.appendChild(s);setTimeout(()=>s.remove(),1100)
+    }
+  }
+
+  const GUIDES={
+    flora:{name:"Flora",rate:.82,pitch:1.07,match:/samantha|aria|jenny|ava|karen|victoria/i,greeting:"Hello, word gardener. Flora is ready to grow your vocabulary one word at a time."},
+    lex:{name:"Lex",rate:.79,pitch:.99,match:/daniel|david|alex|fred|george/i,greeting:"Welcome, reader. Lex is ready to match words with meanings and clues."},
+    owl:{name:"Word Owl",rate:.74,pitch:1,match:/daniel|samantha|alex|serena|moira/i,greeting:"Welcome, careful thinker. Word Owl is ready to study context, roots, synonyms, and antonyms."},
+    nova:{name:"Nova",rate:.84,pitch:1.1,match:/natural|enhanced|premium|samantha|aria|jenny|ava/i,greeting:"Hello, bright reader. Nova is ready for a sparkling vocabulary quest."}
+  };
+  const SPEEDS={slow:.88,normal:1,lively:1.1};
+  function refreshVoices(){if("speechSynthesis"in window)voices=speechSynthesis.getVoices()||[]}
+  function chooseVoice(){
+    refreshVoices();const g=GUIDES[state.voice]||GUIDES.flora;
+    const en=voices.filter(v=>/^en([-_]|$)/i.test(v.lang||"")),pool=en.length?en:voices;
+    return pool.find(v=>g.match.test(v.name))||pool.find(v=>/natural|enhanced|premium/i.test(v.name))||pool[0]||null
+  }
+  function stopVoice(msg="Voice stopped."){
+    speechToken++;if("speechSynthesis"in window)speechSynthesis.cancel();$("voiceStatus").textContent=msg
+  }
+  function speak(text,preview=false){
+    const phrase=preview?(GUIDES[state.voice]||GUIDES.flora).greeting:String(text||"").trim();
+    if(!phrase||!("speechSynthesis"in window))return;
+    stopVoice("");lastSpoken=phrase;const token=++speechToken,g=GUIDES[state.voice]||GUIDES.flora,u=new SpeechSynthesisUtterance(phrase),v=chooseVoice();
+    if(v)u.voice=v;u.lang=v?.lang||"en-US";u.rate=Math.max(.55,Math.min(1.15,g.rate*(SPEEDS[state.voiceSpeed]||1)));u.pitch=g.pitch;
+    u.onstart=()=>$("voiceStatus").textContent=`${g.name} is reading.`;
+    u.onend=()=>{if(token===speechToken)$("voiceStatus").textContent="Ready for another word quest!"};
+    u.onerror=()=>{if(token===speechToken)$("voiceStatus").textContent="The voice had a little hiccup."};
+    speechSynthesis.speak(u)
+  }
+
+  function clueFor(item){
+    if(state.mode==="context")return item.context;
+    if(state.mode==="synonym")return `Synonym: ${item.syn}`;
+    if(state.mode==="antonym")return `Antonym: ${item.ant}`;
+    if(state.mode==="roots")return item.root;
+    return item.def
+  }
+  function modeTitle(){
+    return {
+      definition:"Word to Definition",
+      context:"Context Clues",
+      synonym:"Synonyms",
+      antonym:"Antonyms",
+      roots:"Roots & Word Parts"
+    }[state.mode]
+  }
+  function modeDirections(){
+    return {
+      definition:"Match each word with its meaning.",
+      context:"Match each word with the sentence where it belongs.",
+      synonym:"Match each word with a word that has a similar meaning.",
+      antonym:"Match each word with a word that has an opposite meaning.",
+      roots:"Match each word with its root or word-part clue."
+    }[state.mode]
+  }
+
+  function renderGradeMap(){
+    $("gradeMap").innerHTML="";
+    Object.keys(GRADE_INFO).forEach(g=>{
+      const info=GRADE_INFO[g],b=document.createElement("button");
+      b.className="grade-card"+(state.grade===g?" active":"");
+      b.innerHTML=`<span class="icon">${info.icon}</span><span><strong>${info.name}</strong><small>${info.desc}</small></span><span class="count">${state.mastery[g]||0}</span>`;
+      b.onclick=()=>{state.grade=g;$("gradeSelect").value=g;save();renderGradeMap();newRound()};
+      $("gradeMap").appendChild(b)
+    })
+  }
+  function renderGarden(){
+    $("gardenRow").innerHTML=Object.keys(GRADE_INFO).map((g,i)=>{
+      const grown=(state.mastery[g]||0)>=5;
+      return `<div class="plant ${grown?"grown":""}"><span>${grown?["🌻","🌷","🌳","🍎","📘","🏆"][i]:"🌱"}</span><small>${g==="K"?"K":`G${g}`}</small></div>`
+    }).join("")
+  }
+  function renderCollection(){
+    const learnedItems=[];
+    Object.keys(BANK).forEach(g=>BANK[g].forEach(item=>{
+      const key=`${g}:${item.word}`;
+      if(state.learned.includes(key))learnedItems.push({...item,grade:g})
+    }));
+    $("collectionGrid").innerHTML=learnedItems.length
+      ?learnedItems.slice(-32).reverse().map(item=>`<button class="collection-card learned" data-learned="${item.grade}:${item.word}"><span>${item.emoji}</span><small>${item.word}</small></button>`).join("")
+      :`<div class="collection-card learned" style="grid-column:1/-1"><span>🌱</span><small>Complete matches to begin your collection.</small></div>`
+  }
+  function updateStats(){
+    $("scoreStat").textContent=state.score;
+    $("streakStat").textContent=state.streak;
+    $("roundStat").textContent=state.rounds;
+    $("learnedStat").textContent=state.learned.length;
+    $("accuracyStat").textContent=`${state.totalAttempts?Math.round(state.correct/state.totalAttempts*100):0}%`;
+    $("levelStat").textContent=state.grade;
+    $("progressBar").style.width=`${roundWords.length?Object.keys(matches).length/roundWords.length*100:0}%`;
+    renderGradeMap();renderGarden();renderCollection();save()
+  }
+
+  function createWordCard(item){
+    const b=document.createElement("button");
+    b.type="button";b.className="word-card";b.draggable=true;b.dataset.word=item.word;
+    b.textContent=item.word;
+    b.addEventListener("dragstart",e=>{
+      selectedWord=item.word;b.classList.add("dragging");e.dataTransfer.setData("text/plain",item.word)
+    });
+    b.addEventListener("dragend",()=>b.classList.remove("dragging"));
+    b.addEventListener("click",()=>{
+      document.querySelectorAll(".word-card").forEach(x=>x.classList.remove("selected"));
+      if(b.classList.contains("used"))return;
+      selectedWord=item.word;b.classList.add("selected");
+      speak(item.word)
+    });
+    return b
+  }
+  function createDropZone(item,index){
+    const z=document.createElement("button");
+    z.type="button";z.className="drop-zone";z.dataset.answer=item.word;
+    z.innerHTML=`<div><strong>Clue ${index+1}</strong><small>${clueFor(item)}</small></div>`;
+    z.addEventListener("dragover",e=>{e.preventDefault();z.classList.add("dragover")});
+    z.addEventListener("dragleave",()=>z.classList.remove("dragover"));
+    z.addEventListener("drop",e=>{
+      e.preventDefault();z.classList.remove("dragover");
+      const word=e.dataTransfer.getData("text/plain")||selectedWord;
+      attemptMatch(word,z)
+    });
+    z.addEventListener("click",()=>{if(selectedWord)attemptMatch(selectedWord,z);else speak(clueFor(item))});
+    return z
+  }
+
+  function newRound(){
+    state.rounds++;selectedWord=null;matches={};
+    const size=Math.min(Number(state.roundSize)||4,BANK[state.grade].length);
+    roundWords=shuffle(BANK[state.grade]).slice(0,size);
+    $("lessonTitle").textContent=modeTitle();
+    $("prompt").textContent=`${modeDirections()} Drag a word to a clue, or tap a word and then tap its match.`;
+    $("feedback").textContent="";
+    $("wordList").innerHTML="";
+    $("dropList").innerHTML="";
+    roundWords.forEach(item=>$("wordList").appendChild(createWordCard(item)));
+    shuffle(roundWords).forEach((item,i)=>$("dropList").appendChild(createDropZone(item,i)));
+    setStatus(`${GRADE_INFO[state.grade].name} ${modeTitle()} quest ready.`);
+    updateStats();
+    if(state.difficulty==="guided")setTimeout(()=>speak(modeDirections()),220)
+  }
+
+  function attemptMatch(word,zone){
+    if(!word||zone.classList.contains("correct"))return;
+    state.totalAttempts++;
+    const correct=word===zone.dataset.answer;
+    if(correct){
+      matches[word]=zone.dataset.answer;
+      zone.classList.remove("wrong");zone.classList.add("correct");
+      zone.innerHTML=`<div><strong>${word}</strong><small>${clueFor(roundWords.find(x=>x.word===word))}</small></div>`;
+      const card=[...document.querySelectorAll(".word-card")].find(b=>b.dataset.word===word);
+      card?.classList.add("used");card?.classList.remove("selected");
+      state.correct++;state.score+=10+state.streak*2;state.streak++;state.bestStreak=Math.max(state.bestStreak,state.streak);
+      state.mastery[state.grade]=(state.mastery[state.grade]||0)+1;
+      const key=`${state.grade}:${word}`;if(!state.learned.includes(key))state.learned.push(key);
+      $("feedback").textContent=`Excellent match: ${word}.`;
+      speak(`Excellent match. ${word}. ${roundWords.find(x=>x.word===word).def}`);
+      sparkle(8);
+      selectedWord=null;
+      if(Object.keys(matches).length===roundWords.length){
+        $("feedback").textContent="Quest complete! Every word found its match.";
+        speak("Quest complete. Every word found its match.");
+        sparkle(18)
+      }
+    }else{
+      state.streak=0;zone.classList.add("wrong");
+      $("feedback").textContent="Good try. Read the clue again and test another word.";
+      speak("Good try. Read the clue again and test another word.");
+      setTimeout(()=>zone.classList.remove("wrong"),650);
+      if(state.difficulty==="guided"){
+        const right=[...document.querySelectorAll(".drop-zone")].find(z=>z.dataset.answer===word);
+        right?.classList.add("dragover");setTimeout(()=>right?.classList.remove("dragover"),1300)
+      }
+    }
+    updateStats()
+  }
+
+  function resetRound(){
+    selectedWord=null;matches={};
+    document.querySelectorAll(".word-card").forEach(b=>b.classList.remove("used","selected"));
+    document.querySelectorAll(".drop-zone").forEach((z,i)=>{
+      const item=roundWords.find(x=>x.word===z.dataset.answer);
+      z.className="drop-zone";
+      z.innerHTML=`<div><strong>Clue ${i+1}</strong><small>${clueFor(item)}</small></div>`
+    });
+    $("feedback").textContent="The round is ready again.";
+    updateStats()
+  }
+  function checkRound(){
+    if(Object.keys(matches).length===roundWords.length){
+      $("feedback").textContent="Everything is matched correctly. Wonderful work!";
+      sparkle(14);speak("Everything is matched correctly. Wonderful work.")
+    }else{
+      const remain=roundWords.length-Object.keys(matches).length;
+      $("feedback").textContent=`${remain} match${remain===1?"":"es"} still remain.`;
+      speak(`${remain} matches still remain.`)
+    }
+  }
+  function giveHint(){
+    const unfilled=roundWords.find(item=>!matches[item.word]);
+    if(!unfilled)return;
+    const wordCard=[...document.querySelectorAll(".word-card")].find(b=>b.dataset.word===unfilled.word);
+    const zone=[...document.querySelectorAll(".drop-zone")].find(z=>z.dataset.answer===unfilled.word);
+    wordCard?.classList.add("selected");zone?.classList.add("dragover");
+    $("feedback").textContent=`Hint: listen for ${unfilled.word}. ${unfilled.def}`;
+    speak(`Hint. ${unfilled.word}. ${unfilled.def}`);
+    setTimeout(()=>{wordCard?.classList.remove("selected");zone?.classList.remove("dragover")},1700)
+  }
+
+  function updateVoiceButtons(){
+    document.querySelectorAll("[data-voice]").forEach(b=>b.classList.toggle("active",b.dataset.voice===state.voice));
+    $("voiceSpeed").value=state.voiceSpeed
+  }
+
+  $("gradeSelect").onchange=e=>{state.grade=e.target.value;save();newRound()};
+  $("modeSelect").onchange=e=>{state.mode=e.target.value;save();newRound()};
+  $("roundSizeSelect").onchange=e=>{state.roundSize=Number(e.target.value);save();newRound()};
+  $("difficultySelect").onchange=e=>{state.difficulty=e.target.value;save()};
+  $("themeSelect").onchange=e=>applyTheme(e.target.value);
+  $("newRoundBtn").onclick=newRound;
+  $("nextRoundBtn").onclick=newRound;
+  $("resetRoundBtn").onclick=resetRound;
+  $("checkRoundBtn").onclick=checkRound;
+  $("hintBtn").onclick=giveHint;
+  $("hearBtn").onclick=()=>speak(modeDirections());
+  $("voiceGuides").onclick=e=>{const b=e.target.closest("[data-voice]");if(!b)return;state.voice=b.dataset.voice;save();updateVoiceButtons();$("voiceStatus").textContent=`${GUIDES[state.voice].name} selected.`};
+  $("voiceSpeed").onchange=e=>{state.voiceSpeed=e.target.value;save()};
+  $("meetGuideBtn").onclick=()=>speak("",true);
+  $("repeatBtn").onclick=()=>lastSpoken?speak(lastSpoken):speak(modeDirections());
+  $("stopVoiceBtn").onclick=()=>stopVoice();
+  $("collectionGrid").onclick=e=>{
+    const b=e.target.closest("[data-learned]");if(!b)return;
+    const [grade,word]=b.dataset.learned.split(":");
+    const item=BANK[grade].find(x=>x.word===word);
+    if(item)speak(`${item.word}. ${item.def}. Example. ${item.context.replace("___",item.word)}.`)
+  };
+
+  $("gradeSelect").value=state.grade;
+  $("modeSelect").value=state.mode;
+  $("roundSizeSelect").value=String(state.roundSize);
+  $("difficultySelect").value=state.difficulty;
+  $("themeSelect").value=state.theme;
+  applyTheme(state.theme);
+  updateVoiceButtons();renderGradeMap();renderGarden();renderCollection();refreshVoices();
+  if("speechSynthesis"in window){speechSynthesis.addEventListener?.("voiceschanged",refreshVoices);speechSynthesis.onvoiceschanged=refreshVoices}
+  newRound();
+  window.addEventListener("beforeunload",()=>stopVoice(""));
+})();
+</script>
+</body>
+</html>
