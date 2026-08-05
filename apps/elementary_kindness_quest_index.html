@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Kindness Quest Academy — a K–5 elementary social-emotional learning and service game with grade-level challenges, reflection, friendly narration, badges, favorites, and private local progress.">
+<title>Kindness Quest Academy™ — K–5 Elementary</title>
+<style>
+:root{
+  --sky:#dff5ff;
+  --sun:#ffd75f;
+  --coral:#ff8f78;
+  --blue:#2f73bd;
+  --navy:#17355d;
+  --green:#55ae75;
+  --mint:#c8efd7;
+  --lav:#d9cdf5;
+  --paper:#fffdf8;
+  --panel:#ffffff;
+  --ink:#26384e;
+  --muted:#68778b;
+  --line:rgba(23,53,93,.15);
+  --good:#3fa96e;
+  --warn:#dc8a3e;
+  --bad:#ce5663;
+  --shadow:0 18px 42px rgba(30,65,105,.13);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  padding:18px 10px 46px;
+  overflow-x:hidden;
+  color:var(--ink);
+  font-family:"Trebuchet MS","Arial Rounded MT Bold",system-ui,sans-serif;
+  background:
+    radial-gradient(circle at 12% 7%,rgba(255,255,255,.9),transparent 18%),
+    linear-gradient(180deg,#bdeaff 0%,#eefaff 34%,#fff5c8 73%,#ffd9b2 100%);
+}
+button,select,textarea,input{font:inherit}
+button{cursor:pointer}
+button:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-visible{
+  outline:4px solid rgba(47,115,189,.25);
+  outline-offset:3px;
+}
+.portal-header{
+  width:min(1260px,100%);
+  margin:0 auto 14px;
+  padding:12px 14px;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:12px;
+  border:2px solid #fff;
+  border-radius:22px;
+  background:rgba(255,255,255,.93);
+  box-shadow:0 12px 28px rgba(27,66,108,.12);
+}
+.portal-mark{
+  width:58px;height:58px;display:grid;place-items:center;border-radius:18px;
+  background:linear-gradient(145deg,#69cf99,#ffd75d);
+  border:3px solid #fff;font-size:2rem
+}
+.portal-eyebrow{
+  margin:0;color:var(--coral);
+  font-size:.68rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase
+}
+.portal-title{
+  margin:2px 0 0;color:var(--navy);
+  font-size:clamp(1.05rem,2.2vw,1.42rem);line-height:1.2
+}
+.portal-links{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.portal-link{
+  min-height:38px;padding:8px 12px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--blue);
+  text-decoration:none;font-weight:900;font-size:.78rem
+}
+.portal-link.current{color:#fff;border-color:transparent;background:linear-gradient(135deg,var(--blue),#7868c7)}
+
+.wrap{width:min(1260px,100%);margin:auto}
+.hero{
+  padding:30px 20px;
+  border-radius:30px;
+  color:#fff;
+  text-align:center;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(255,255,255,.16),transparent 18%),
+    linear-gradient(135deg,var(--navy),#2f659a 58%,#438cb8);
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+.hero:after{
+  content:"💛  🌿  🤝  🌎";
+  position:absolute;right:18px;bottom:12px;font-size:1.3rem;letter-spacing:.22em;opacity:.35
+}
+.hero .eyebrow{
+  display:inline-flex;gap:8px;align-items:center;
+  padding:7px 13px;border-radius:999px;
+  background:rgba(255,255,255,.11);
+  border:1px solid rgba(255,255,255,.24);
+  font-size:.76rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase
+}
+.hero h1{
+  margin:16px auto 8px;
+  max-width:1020px;
+  font-size:clamp(2.45rem,6vw,5.15rem);
+  line-height:1.05;
+  letter-spacing:-.025em
+}
+.hero p{max-width:940px;margin:auto;color:#eef9ff;line-height:1.72}
+
+.shell{
+  margin-top:14px;
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:rgba(255,255,255,.94);
+  box-shadow:var(--shadow);
+}
+.toolbar{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px;
+}
+.control{
+  min-width:0;padding:10px;
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:#fff
+}
+.control label{
+  display:block;margin-bottom:5px;
+  color:var(--muted);
+  font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase
+}
+.control select{
+  width:100%;padding:9px 10px;
+  border:1px solid var(--line);border-radius:11px;
+  background:#fff;color:var(--ink)
+}
+.btn{
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:9px 12px;
+  background:#fff;
+  color:var(--blue);
+  font-weight:900;
+  box-shadow:0 5px 12px rgba(32,70,110,.07);
+  transition:.16s ease
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{color:#fff;border-color:transparent;background:linear-gradient(135deg,var(--blue),#48a6d8)}
+.btn.sunny{color:#574313;border-color:transparent;background:linear-gradient(135deg,#ffe36d,#ffad5f)}
+.btn.good{color:#fff;border-color:transparent;background:linear-gradient(135deg,#4db67a,#3f9e78)}
+.btn.danger{color:#fff;border-color:transparent;background:linear-gradient(135deg,#d96b78,#ba4b5e)}
+.btn.active{color:#fff;border-color:transparent;background:linear-gradient(135deg,var(--blue),#7768c7)}
+
+.voice-panel{
+  margin:14px 0;
+  padding:13px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:linear-gradient(145deg,#fff,#f5f7ff)
+}
+.voice-panel h2{margin:0 0 8px;text-align:center;color:var(--navy);font-size:1rem}
+.voice-guides{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.voice-guide{
+  min-height:58px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--blue);font-weight:900
+}
+.voice-guide.active{color:#fff;background:linear-gradient(135deg,var(--blue),#7768c7)}
+.voice-controls{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:8px}
+.voice-status{text-align:center;color:var(--muted);min-height:1.2em;margin:7px 0 0}
+
+.simple-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
+body.large-type{font-size:18px}
+body.simple-mode .stats,
+body.simple-mode .lower,
+body.simple-mode .safety,
+body.simple-mode .service-planner{display:none!important}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:8px;
+  margin-bottom:14px
+}
+.stat{
+  padding:10px;border:1px solid var(--line);border-radius:15px;background:#fff;text-align:center
+}
+.stat strong{display:block;color:var(--blue);font-size:1.2rem}
+.stat span{font-size:.68rem;color:var(--muted)}
+
+.main-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);
+  gap:14px;
+  align-items:start
+}
+.quest-card{
+  position:relative;
+  overflow:hidden;
+  min-height:390px;
+  padding:24px 18px 20px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(145deg,#fff,#fff9ed);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+}
+.quest-card:before{
+  content:"";
+  position:absolute;inset:0 0 auto 0;height:9px;
+  background:linear-gradient(90deg,var(--sun),var(--coral),var(--lav),var(--blue),var(--mint))
+}
+.quest-card.speaking{box-shadow:0 0 0 5px rgba(255,215,95,.36)}
+.quest-icon{font-size:clamp(3.5rem,8vw,5.4rem)}
+.quest-category{
+  margin-top:6px;
+  color:var(--blue);
+  font-size:.72rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase
+}
+.quest-text{
+  max-width:760px;margin:10px auto;
+  color:var(--navy);
+  font-size:clamp(1.45rem,3vw,2.1rem);
+  line-height:1.35;
+  font-weight:900
+}
+.quest-note{max-width:700px;margin:auto;color:var(--muted);line-height:1.55}
+.actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px}
+.feedback{min-height:32px;margin-top:10px;text-align:center;color:var(--muted);font-weight:900}
+.progress-wrap{display:flex;align-items:center;gap:10px;margin:13px auto 0;max-width:680px}
+.track{height:12px;flex:1;background:#e8edf3;border-radius:999px;overflow:hidden}
+.bar{height:100%;width:0;background:linear-gradient(90deg,var(--coral),var(--sun),var(--green));transition:.3s}
+.progress-text{font-size:.75rem;color:var(--muted);min-width:105px}
+
+.side-stack{display:grid;gap:12px}
+.panel{
+  padding:14px;border:1px solid var(--line);border-radius:20px;background:#fff
+}
+.panel h2{margin:0 0 7px;color:var(--navy);font-size:1rem}
+.panel p{margin:0 0 9px;color:var(--muted);font-size:.8rem;line-height:1.45}
+.badges{display:flex;flex-wrap:wrap;gap:7px}
+.award{
+  padding:7px 10px;border-radius:999px;background:#eef3f8;color:#8591a0;font-size:.72rem;font-weight:900
+}
+.award.earned{background:#fff0a8;color:#745500;border:1px solid #efd35d}
+.history{display:grid;gap:7px;max-height:245px;overflow:auto}
+.history-item{
+  display:grid;grid-template-columns:auto 1fr;gap:9px;
+  padding:9px;border-radius:13px;background:#f8fafc
+}
+.history-icon{font-size:1.35rem}
+.history-text{font-size:.75rem;line-height:1.4;color:#526174}
+.empty{text-align:center;padding:14px;color:var(--muted);font-size:.75rem}
+
+.kindness-garden{
+  margin-top:14px;padding:12px;border:1px dashed var(--line);border-radius:18px;
+  background:linear-gradient(145deg,#fff,#f2fff0,#eef9ff)
+}
+.kindness-garden h3{margin:0 0 8px;text-align:center;color:var(--navy);font-size:1rem}
+.garden-row{display:flex;justify-content:center;align-items:flex-end;gap:12px;min-height:70px;flex-wrap:wrap}
+.garden-step{font-size:2rem;opacity:.28;transform:scale(.86);transition:.2s}
+.garden-step.on{opacity:1;transform:scale(1)}
+.garden-label{text-align:center;color:var(--muted);font-size:.74rem;margin-top:5px}
+
+.lower{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:14px
+}
+.reflection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.reflect-btn{
+  border:1px solid var(--line);border-radius:14px;padding:10px;background:#fff;color:var(--blue);font-weight:900
+}
+.reflect-btn.active{color:#fff;background:linear-gradient(135deg,var(--blue),#7768c7)}
+textarea{
+  width:100%;min-height:105px;margin-top:9px;padding:11px;
+  border:1px solid var(--line);border-radius:14px;resize:vertical
+}
+.service-planner{
+  margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:20px;background:#fff
+}
+.planner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.planner-field label{display:block;margin-bottom:5px;color:var(--muted);font-size:.68rem;font-weight:900}
+.planner-field input,.planner-field textarea{
+  width:100%;margin:0;padding:9px;border:1px solid var(--line);border-radius:12px;background:#fff
+}
+.planner-field textarea{min-height:86px}
+.safety{
+  margin-top:14px;padding:12px 14px;border-radius:17px;background:#fff9df;border:1px solid #edd8a2;
+  color:#6b5727;font-size:.8rem;line-height:1.5
+}
+footer{
+  margin-top:16px;padding:14px;border:1px solid rgba(255,255,255,.8);border-radius:18px;
+  background:rgba(255,255,255,.72);text-align:center;color:var(--muted);line-height:1.5;font-size:.82rem
+}
+.toast{
+  position:fixed;left:50%;bottom:20px;transform:translate(-50%,30px);
+  background:#172438;color:#fff;padding:10px 15px;border-radius:999px;font-weight:900;
+  opacity:0;pointer-events:none;transition:.25s;z-index:20
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1000px){
+  .toolbar{grid-template-columns:repeat(3,1fr)}
+  .main-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:760px){
+  .portal-header{grid-template-columns:auto 1fr}
+  .portal-links{grid-column:1/-1;justify-content:center}
+  .toolbar{grid-template-columns:1fr}
+  .voice-guides{grid-template-columns:repeat(2,1fr)}
+  .lower{grid-template-columns:1fr}
+  .planner-grid{grid-template-columns:1fr}
+}
+@media(max-width:460px){
+  .portal-header{grid-template-columns:1fr;text-align:center}
+  .portal-mark{margin:auto}
+  .portal-links{grid-column:auto}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .reflection-grid{grid-template-columns:1fr}
+  .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+
+<header class="portal-header" aria-label="Khaemenes Academy Elementary Portal">
+  <div class="portal-mark" aria-hidden="true">💛</div>
+  <div>
+    <p class="portal-eyebrow">Khaemenes Academy · Elementary Portal</p>
+    <div class="portal-title">Kindness Quest Academy™ · K–5 Life Skills</div>
+  </div>
+  <nav class="portal-links" aria-label="Elementary navigation">
+    <a class="portal-link" href="../index.html">🏡 Elementary Home</a>
+    <a class="portal-link current" href="#" aria-current="page">💛 Kindness Quest</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">🌿 Empathy · Responsibility · Service · Reflection</div>
+    <h1>Kindness Quest Academy™</h1>
+    <p>A K–5 elementary kindness and service adventure with grade-level challenges, thoughtful reflection, classroom and community ideas, and private local progress.</p>
+  </section>
+
+  <section class="shell">
+    <section class="voice-panel">
+      <h2>Choose a Kindness Guide</h2>
+      <div class="voice-guides" id="voiceGuides">
+        <button class="voice-guide" data-voice="flora" type="button">🌿 Flora</button>
+        <button class="voice-guide" data-voice="lex" type="button">📖 Lex</button>
+        <button class="voice-guide" data-voice="owl" type="button">🦉 Kindness Owl</button>
+        <button class="voice-guide" data-voice="nova" type="button">✨ Nova</button>
+      </div>
+      <div class="voice-controls">
+        <select id="voiceSpeed">
+          <option value="slow">Slow and clear</option>
+          <option value="normal">Just right</option>
+          <option value="lively">A little lively</option>
+        </select>
+        <button class="btn" id="meetGuideBtn" type="button">👋 Meet My Guide</button>
+        <button class="btn" id="repeatBtn" type="button">🔁 Repeat Last</button>
+        <button class="btn" id="stopVoiceBtn" type="button">⏹ Stop Voice</button>
+      </div>
+      <p id="voiceStatus" class="voice-status" aria-live="polite"></p>
+    </section>
+
+    <div class="simple-row">
+      <button class="btn" id="largeTypeBtn" type="button">🔎 Larger Type</button>
+      <button class="btn" id="simpleModeBtn" type="button">🧘 Focus Mode</button>
+      <button class="btn" id="autoReadBtn" type="button">🗣️ Auto Read On</button>
+    </div>
+
+    <div class="toolbar">
+      <div class="control">
+        <label for="gradeBand">Grade Band</label>
+        <select id="gradeBand">
+          <option value="K1">Kindergarten–Grade 1</option>
+          <option value="23">Grades 2–3</option>
+          <option value="45">Grades 4–5</option>
+          <option value="classroom">Classroom & Family</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="category">Kindness Area</label>
+        <select id="category">
+          <option value="all">Surprise Me</option>
+          <option value="home">At Home</option>
+          <option value="school">At School</option>
+          <option value="friendship">Friendship</option>
+          <option value="community">Community</option>
+          <option value="earth">Earth & Animals</option>
+          <option value="self">Kindness to Myself</option>
+          <option value="leadership">Leadership</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="challengeSize">Daily Goal</label>
+        <select id="challengeSize">
+          <option value="1">1 quest</option>
+          <option value="3" selected>3 quests</option>
+          <option value="5">5 quests</option>
+          <option value="7">7 quests</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="difficulty">Challenge Style</label>
+        <select id="difficulty">
+          <option value="guided">Guided</option>
+          <option value="independent">Independent</option>
+          <option value="service">Service Project</option>
+        </select>
+      </div>
+      <div class="control">
+        <label>Quest Tools</label>
+        <button class="btn sunny" id="newBtn" type="button">🎲 New Quest</button>
+      </div>
+    </div>
+
+    <section class="stats">
+      <div class="stat"><strong id="todayCount">0</strong><span>Today</span></div>
+      <div class="stat"><strong id="allTimeCount">0</strong><span>All Time</span></div>
+      <div class="stat"><strong id="streakCount">0</strong><span>Day Streak</span></div>
+      <div class="stat"><strong id="savedCount">0</strong><span>Favorites</span></div>
+      <div class="stat"><strong id="reflectionCount">0</strong><span>Reflections</span></div>
+      <div class="stat"><strong id="serviceCount">0</strong><span>Service Plans</span></div>
+    </section>
+
+    <section class="main-grid">
+      <div>
+        <article id="questCard" class="quest-card" aria-live="polite">
+          <div>
+            <div id="questIcon" class="quest-icon">🌟</div>
+            <div id="questCategory" class="quest-category">Kindness Quest</div>
+            <div id="questText" class="quest-text">Loading a thoughtful challenge…</div>
+            <div id="questNote" class="quest-note"></div>
+          </div>
+        </article>
+
+        <div class="actions">
+          <button class="btn primary" id="hearBtn" type="button">🔊 Hear Quest</button>
+          <button class="btn" id="saveBtn" type="button">🔖 Save Quest</button>
+          <button class="btn good" id="doneBtn" type="button">✅ I Completed It</button>
+          <button class="btn" id="adaptBtn" type="button">🛠️ Adapt This</button>
+        </div>
+
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+        <div class="progress-wrap">
+          <div class="track"><div id="goalBar" class="bar"></div></div>
+          <div id="goalText" class="progress-text">0 of 3 today</div>
+        </div>
+
+        <section class="kindness-garden">
+          <h3>🌱 My Kindness Garden</h3>
+          <div class="garden-row" id="gardenRow">
+            <span class="garden-step" data-step="0">🌱</span>
+            <span class="garden-step" data-step="1">🌿</span>
+            <span class="garden-step" data-step="2">🌼</span>
+            <span class="garden-step" data-step="3">🌳</span>
+            <span class="garden-step" data-step="4">🌈</span>
+          </div>
+          <div id="gardenLabel" class="garden-label">Complete thoughtful quests to grow the garden.</div>
+        </section>
+      </div>
+
+      <aside class="side-stack">
+        <section class="panel">
+          <h2>🏆 Quest Badges</h2>
+          <p>Badges celebrate steady practice, empathy, and responsibility.</p>
+          <div id="badges" class="badges"></div>
+        </section>
+        <section class="panel">
+          <h2>📚 Recent Kindness</h2>
+          <div id="history" class="history"></div>
+          <div class="actions"><button class="btn" id="clearHistory" type="button">Clear History</button></div>
+        </section>
+      </aside>
+    </section>
+
+    <section class="lower">
+      <section class="panel">
+        <h2>🌈 Reflection</h2>
+        <p>How did this action affect you or someone else?</p>
+        <div class="reflection-grid" id="reflectionChoices">
+          <button class="reflect-btn" data-feel="proud">😊 Proud</button>
+          <button class="reflect-btn" data-feel="connected">🤝 Connected</button>
+          <button class="reflect-btn" data-feel="calm">🌿 Calm</button>
+          <button class="reflect-btn" data-feel="challenged">🧠 Challenged</button>
+          <button class="reflect-btn" data-feel="thoughtful">💭 Thoughtful</button>
+          <button class="reflect-btn" data-feel="other">✨ Something Else</button>
+        </div>
+        <textarea id="journal" maxlength="800" placeholder="What happened? What changed? What would you do next time?"></textarea>
+        <div class="actions">
+          <button class="btn good" id="saveReflection" type="button">💾 Save Reflection</button>
+          <button class="btn" id="clearJournal" type="button">Clear</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>🧭 Think Like a Kind Leader</h2>
+        <p>Before acting, consider these questions:</p>
+        <ul style="margin:0;color:var(--muted);line-height:1.65">
+          <li>Is this safe and welcome?</li>
+          <li>Did I ask before helping or touching belongings?</li>
+          <li>Does this solve a real need?</li>
+          <li>Can the other person say no?</li>
+          <li>Am I helping without taking over?</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="service-planner">
+      <h2 style="margin-top:0;color:var(--navy)">🌎 Mini Service Project Planner</h2>
+      <p style="color:var(--muted)">For Grades 2–5, families, or classrooms. Plan a small project with adult guidance.</p>
+      <div class="planner-grid">
+        <div class="planner-field">
+          <label for="serviceNeed">Need or Problem</label>
+          <textarea id="serviceNeed" placeholder="What need did you notice?"></textarea>
+        </div>
+        <div class="planner-field">
+          <label for="servicePlan">Safe Plan</label>
+          <textarea id="servicePlan" placeholder="What can you do safely and respectfully?"></textarea>
+        </div>
+        <div class="planner-field">
+          <label for="serviceTeam">People and Supplies</label>
+          <textarea id="serviceTeam" placeholder="Who should help? What supplies are needed?"></textarea>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn good" id="saveServiceBtn" type="button">💾 Save Service Plan</button>
+        <button class="btn" id="clearServiceBtn" type="button">Clear Planner</button>
+      </div>
+    </section>
+
+    <div class="safety">
+      <strong>Kindness and service safety:</strong> Students should ask an adult before helping strangers, sharing food, handling animals, collecting donations, cleaning litter, going outdoors, carrying heavy objects, or contacting organizations. Kindness never requires unwanted touch, secrecy, unsafe work, personal information, or giving away belongings without permission.
+    </div>
+  </section>
+
+  <footer>
+    <strong>© 2026 Kindness Quest Academy™ · Verve N Veda · Khaemenes Academy · Jennifer Kay Pearl</strong><br>
+    Single-file vanilla JavaScript · Private local progress · No accounts, advertisements, or outside game services
+  </footer>
+</main>
+
+<div id="toast" class="toast"></div>
+
+<script>
+(() => {
+"use strict";
+
+const QUESTS=[
+  {grade:"K1",cat:"home",icon:"🧸",text:"Choose five toys and return them to their proper places.",note:"Ask where unfamiliar items belong. Work slowly and carefully."},
+  {grade:"K1",cat:"school",icon:"🖍️",text:"Offer to share classroom supplies or take turns with permission.",note:"Kindness includes listening if the other person says no."},
+  {grade:"K1",cat:"friendship",icon:"👋",text:"Invite someone to join a game or sit nearby.",note:"Respect their answer if they prefer a different activity."},
+  {grade:"K1",cat:"earth",icon:"🌱",text:"Help water a plant or care for a class garden with an adult.",note:"Learn how much water the plant actually needs."},
+  {grade:"K1",cat:"self",icon:"💛",text:"Say one true and kind sentence about yourself.",note:"Try: “I am learning,” “I kept trying,” or “I asked for help.”"},
+  {grade:"K1",cat:"leadership",icon:"⭐",text:"Be the first person to model a calm transition or cleanup.",note:"Leadership can be quiet, helpful, and respectful."},
+
+  {grade:"23",cat:"home",icon:"🧺",text:"Complete one household task without being reminded twice.",note:"Choose a task that is safe for your age and ask what “finished” looks like."},
+  {grade:"23",cat:"school",icon:"📚",text:"Help organize a shared classroom area and explain your sorting rule.",note:"Ask the teacher before moving materials."},
+  {grade:"23",cat:"friendship",icon:"👂",text:"Listen to someone’s story and ask one thoughtful follow-up question.",note:"Listening does not require constant eye contact."},
+  {grade:"23",cat:"community",icon:"💌",text:"Write a specific thank-you note to a community helper.",note:"Name the action you appreciate and why it matters."},
+  {grade:"23",cat:"earth",icon:"💧",text:"Find one place where water or electricity can be saved today.",note:"Make a realistic change and explain how it helps."},
+  {grade:"23",cat:"self",icon:"🌿",text:"Take a short kindness break: breathe, stretch, drink water, and name what you need.",note:"Caring for yourself helps you care for others."},
+  {grade:"23",cat:"leadership",icon:"🤝",text:"Help a group make sure every person gets a turn or a voice.",note:"Leadership includes noticing who may be left out."},
+
+  {grade:"45",cat:"home",icon:"🍽️",text:"Take responsibility for one complete household routine today.",note:"Examples include setting and clearing the table, folding laundry, or organizing a shared area."},
+  {grade:"45",cat:"school",icon:"📝",text:"Give a classmate useful feedback that is specific, kind, and actionable.",note:"Try: “This part was clear. One idea that might help is…”"},
+  {grade:"45",cat:"friendship",icon:"🔄",text:"Repair a small misunderstanding with honest words and careful listening.",note:"State what happened, listen to the other view, and agree on a next step."},
+  {grade:"45",cat:"community",icon:"📦",text:"Identify one useful item or supply that could be donated with adult permission.",note:"Check what an organization actually accepts before collecting anything."},
+  {grade:"45",cat:"earth",icon:"🌍",text:"Plan a short, supervised cleanup or conservation action.",note:"Use gloves, avoid hazardous objects, and record what was collected or improved."},
+  {grade:"45",cat:"self",icon:"🧠",text:"Replace one harsh self-statement with a fair and useful one.",note:"Change “I am terrible at this” to “I need another strategy or more practice.”"},
+  {grade:"45",cat:"leadership",icon:"🧭",text:"Notice a shared problem and propose a safe solution that does not blame anyone.",note:"Describe the need, invite ideas, and ask an adult before acting."},
+
+  {grade:"classroom",cat:"school",icon:"🌈",text:"Create a class appreciation chain with one specific, truthful note from each participant.",note:"Participation should be optional and comments should focus on actions or strengths."},
+  {grade:"classroom",cat:"community",icon:"📋",text:"Research a local need and list three safe ways a class or family could help.",note:"Contact organizations only with adult guidance."},
+  {grade:"classroom",cat:"earth",icon:"♻️",text:"Complete a small waste audit and choose one realistic improvement.",note:"Sort only clean, safe items and wash hands afterward."},
+  {grade:"classroom",cat:"friendship",icon:"💬",text:"Hold a short listening circle where people may share or pass.",note:"Do not pressure anyone to reveal private feelings or experiences."},
+  {grade:"classroom",cat:"leadership",icon:"🏫",text:"Create a simple plan to improve one shared space.",note:"Include the need, permissions, people, supplies, and cleanup steps."},
+  {grade:"classroom",cat:"self",icon:"🫶",text:"Create a group reset routine with breathing, stretching, and one encouraging statement.",note:"Everyone may choose a quiet alternative."}
+];
+
+const $=id=>document.getElementById(id);
+const KEY="kindness-quest-elementary-k5-v1";
+
+function fresh(){
+  return {
+    todayDate:"",today:0,allTime:0,streak:0,lastDoneDate:"",
+    favorites:[],history:[],reflections:[],servicePlans:[],
+    current:null,lastText:"",selectedFeeling:"",
+    voice:"flora",voiceSpeed:"slow",autoRead:true,largeType:false,simpleMode:false
+  };
+}
+function load(){
+  try{return Object.assign(fresh(),JSON.parse(localStorage.getItem(KEY)||"{}"))}
+  catch{return fresh()}
+}
+let state=load(),voices=[],speechToken=0,lastSpoken="";
+
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{}}
+function localDate(){
+  const d=new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`
+}
+function yesterdayString(){
+  const d=new Date();d.setDate(d.getDate()-1);
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`
+}
+function toast(msg){
+  const t=$("toast");t.textContent=msg;t.classList.add("show");
+  clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove("show"),1800)
+}
+function titleCase(s){return s.charAt(0).toUpperCase()+s.slice(1)}
+
+const GUIDES={
+  flora:{name:"Flora",rate:.82,pitch:1.07,match:/samantha|aria|jenny|ava|karen|victoria/i,greeting:"Hello, kindness gardener. Flora is ready to help you grow empathy, responsibility, and service."},
+  lex:{name:"Lex",rate:.79,pitch:.99,match:/daniel|david|alex|fred|george/i,greeting:"Welcome, thoughtful learner. Lex is ready to read a new kindness quest."},
+  owl:{name:"Kindness Owl",rate:.74,pitch:1,match:/daniel|samantha|alex|serena|moira/i,greeting:"Welcome, careful thinker. Kindness Owl is ready to consider safety, consent, and real needs."},
+  nova:{name:"Nova",rate:.84,pitch:1.1,match:/natural|enhanced|premium|samantha|aria|jenny|ava/i,greeting:"Hello, bright leader. Nova is ready for a meaningful kindness quest."}
+};
+const SPEEDS={slow:.88,normal:1,lively:1.1};
+
+function refreshVoices(){if("speechSynthesis"in window)voices=speechSynthesis.getVoices()||[]}
+function chooseVoice(){
+  refreshVoices();
+  const g=GUIDES[state.voice]||GUIDES.flora;
+  const en=voices.filter(v=>/^en([-_]|$)/i.test(v.lang||"")),pool=en.length?en:voices;
+  return pool.find(v=>g.match.test(v.name))||pool.find(v=>/natural|enhanced|premium/i.test(v.name))||pool[0]||null
+}
+function stopVoice(msg="Voice stopped."){
+  speechToken++;
+  if("speechSynthesis"in window)speechSynthesis.cancel();
+  $("questCard")?.classList.remove("speaking");
+  $("voiceStatus").textContent=msg
+}
+function speak(text,preview=false){
+  const phrase=preview?(GUIDES[state.voice]||GUIDES.flora).greeting:String(text||"").trim();
+  if(!phrase||!("speechSynthesis"in window))return;
+  stopVoice("");lastSpoken=phrase;
+  const token=++speechToken,g=GUIDES[state.voice]||GUIDES.flora,u=new SpeechSynthesisUtterance(phrase),v=chooseVoice();
+  if(v)u.voice=v;
+  u.lang=v?.lang||"en-US";
+  u.rate=Math.max(.55,Math.min(1.15,g.rate*(SPEEDS[state.voiceSpeed]||1)));
+  u.pitch=g.pitch;
+  u.onstart=()=>{$("questCard")?.classList.add("speaking");$("voiceStatus").textContent=`${g.name} is reading.`};
+  u.onend=()=>{if(token!==speechToken)return;$("questCard")?.classList.remove("speaking");$("voiceStatus").textContent="Ready for another kindness quest!"};
+  u.onerror=()=>{if(token!==speechToken)return;$("questCard")?.classList.remove("speaking");$("voiceStatus").textContent="The voice had a little hiccup."};
+  speechSynthesis.speak(u)
+}
+
+function eligible(){
+  const grade=$("gradeBand").value,cat=$("category").value,style=$("difficulty").value;
+  let list=QUESTS.filter(q=>q.grade===grade&&(cat==="all"||q.cat===cat));
+  if(style==="service")list=list.filter(q=>["community","earth","leadership"].includes(q.cat));
+  return list
+}
+function chooseQuest(){
+  let list=eligible();
+  if(!list.length)list=QUESTS.filter(q=>q.grade===$("gradeBand").value);
+  if(!list.length)list=QUESTS;
+  let pick=list[Math.floor(Math.random()*list.length)],guard=0;
+  while(pick.text===state.lastText&&list.length>1&&guard++<20)pick=list[Math.floor(Math.random()*list.length)];
+  state.current=pick;state.lastText=pick.text;save();renderQuest(true)
+}
+function currentNarration(){
+  const q=state.current;
+  return q?`${q.text} ${q.note}`:"";
+}
+function renderQuest(pop=false){
+  const q=state.current||QUESTS[0];
+  $("questIcon").textContent=q.icon;
+  $("questCategory").textContent=titleCase(q.cat.replace("self","kindness to myself"));
+  $("questText").textContent=q.text;
+  $("questNote").textContent=q.note;
+  const saved=state.favorites.some(x=>x.text===q.text);
+  $("saveBtn").textContent=saved?"🔖 Saved":"🔖 Save Quest";
+  $("saveBtn").classList.toggle("active",saved);
+  if(pop){
+    $("questCard").animate?.(
+      [{transform:"scale(.97)",opacity:.45},{transform:"scale(1.02)",opacity:1},{transform:"scale(1)",opacity:1}],
+      {duration:330,easing:"ease"}
+    )
+  }
+  if(state.autoRead)setTimeout(()=>speak(currentNarration()),220)
+}
+function updateVoiceButtons(){
+  document.querySelectorAll("[data-voice]").forEach(b=>b.classList.toggle("active",b.dataset.voice===state.voice));
+  $("voiceSpeed").value=state.voiceSpeed
+}
+function applyAccessibility(){
+  document.body.classList.toggle("large-type",state.largeType);
+  document.body.classList.toggle("simple-mode",state.simpleMode);
+  $("largeTypeBtn").classList.toggle("active",state.largeType);
+  $("simpleModeBtn").classList.toggle("active",state.simpleMode);
+  $("autoReadBtn").classList.toggle("active",state.autoRead);
+  $("autoReadBtn").textContent=state.autoRead?"🗣️ Auto Read On":"🤫 Auto Read Off"
+}
+function updateGarden(){
+  const stage=Math.min(4,Math.floor(state.allTime/7));
+  document.querySelectorAll("[data-step]").forEach(el=>el.classList.toggle("on",Number(el.dataset.step)<=stage));
+  $("gardenLabel").textContent=state.allTime>=28
+    ?"Your kindness garden is growing into a community forest!"
+    :`${state.allTime} completed quests have helped the garden grow.`
+}
+function updateStats(){
+  const goal=Number($("challengeSize").value);
+  $("todayCount").textContent=state.today;
+  $("allTimeCount").textContent=state.allTime;
+  $("streakCount").textContent=state.streak;
+  $("savedCount").textContent=state.favorites.length;
+  $("reflectionCount").textContent=state.reflections.length;
+  $("serviceCount").textContent=state.servicePlans.length;
+  $("goalBar").style.width=Math.min(100,state.today/goal*100)+"%";
+  $("goalText").textContent=`${state.today} of ${goal} today`;
+  renderBadges();renderHistory();updateGarden();save()
+}
+function markDone(){
+  if(!state.current)return;
+  const today=localDate();
+  if(state.lastDoneDate!==today){
+    state.streak=state.lastDoneDate===yesterdayString()?state.streak+1:1;
+    state.lastDoneDate=today
+  }
+  state.today++;state.allTime++;
+  state.history.unshift({
+    text:state.current.text,icon:state.current.icon,date:new Date().toLocaleDateString(),
+    feel:state.selectedFeeling||"",grade:$("gradeBand").value
+  });
+  state.history=state.history.slice(0,30);
+  $("feedback").textContent="Quest complete. Reflect on the impact, not just the task.";
+  speak("Quest complete. Reflect on the impact, not just the task.");
+  toast("🌟 Kindness quest counted");
+  updateStats();
+  if(state.today>=Number($("challengeSize").value))celebrate()
+}
+function toggleFavorite(){
+  const q=state.current;if(!q)return;
+  const i=state.favorites.findIndex(x=>x.text===q.text);
+  if(i>=0)state.favorites.splice(i,1);else state.favorites.push(q);
+  save();renderQuest();updateStats();toast(i>=0?"Removed from favorites":"Saved to favorites")
+}
+function adaptQuest(){
+  if(!state.current)return;
+  const adaptations=[
+    "Make it smaller: complete one safe part of the quest.",
+    "Work with a partner or trusted adult.",
+    "Use words, a note, or a quiet action instead of speaking aloud.",
+    "Ask the person what help would actually be useful.",
+    "Choose a different quest if this one is not safe, welcome, or possible."
+  ];
+  const idea=adaptations[Math.floor(Math.random()*adaptations.length)];
+  $("feedback").textContent=`Adaptation idea: ${idea}`;
+  speak(`Adaptation idea. ${idea}`)
+}
+function saveReflection(){
+  const text=$("journal").value.trim();
+  if(!text&&!state.selectedFeeling){toast("Choose a feeling or write a reflection first");return}
+  state.reflections.unshift({
+    date:new Date().toLocaleString(),feel:state.selectedFeeling,text,
+    quest:state.current?.text||"",grade:$("gradeBand").value
+  });
+  state.reflections=state.reflections.slice(0,50);
+  $("journal").value="";
+  state.selectedFeeling="";
+  document.querySelectorAll(".reflect-btn").forEach(b=>b.classList.remove("active"));
+  updateStats();toast("Reflection saved on this device")
+}
+function saveServicePlan(){
+  const need=$("serviceNeed").value.trim(),plan=$("servicePlan").value.trim(),team=$("serviceTeam").value.trim();
+  if(!need&&!plan&&!team){toast("Add at least one service-planning detail");return}
+  state.servicePlans.unshift({date:new Date().toLocaleString(),need,plan,team});
+  state.servicePlans=state.servicePlans.slice(0,30);
+  updateStats();toast("Service plan saved on this device")
+}
+function clearService(){
+  $("serviceNeed").value="";$("servicePlan").value="";$("serviceTeam").value=""
+}
+function renderHistory(){
+  const h=$("history");h.innerHTML="";
+  if(!state.history.length){h.innerHTML='<div class="empty">Completed kindness quests will appear here.</div>';return}
+  state.history.slice(0,10).forEach(x=>{
+    const d=document.createElement("div");d.className="history-item";
+    d.innerHTML=`<div class="history-icon">${x.icon}</div><div class="history-text"><strong>${x.text}</strong><br>${x.date}${x.feel?` · ${titleCase(x.feel)}`:""}</div>`;
+    h.appendChild(d)
+  })
+}
+function renderBadges(){
+  const defs=[
+    ["🌱 First Quest",1],["🌼 Kindness Builder",5],["🤝 Empathy Explorer",10],
+    ["🌎 Community Helper",20],["🧭 Kind Leader",35],["🏆 Service Champion",60]
+  ];
+  $("badges").innerHTML=defs.map(([name,n])=>`<span class="award ${state.allTime>=n?"earned":""}">${name} · ${n}</span>`).join("")
+}
+function celebrate(){
+  const bits=["⭐","🌈","💛","🌼","✨"];
+  for(let i=0;i<20;i++){
+    const e=document.createElement("span");e.textContent=bits[i%bits.length];
+    e.style.cssText=`position:fixed;left:${Math.random()*100}vw;top:-30px;font-size:24px;z-index:12;pointer-events:none;transition:transform 1.7s ease-out,opacity 1.7s`;
+    document.body.appendChild(e);
+    requestAnimationFrame(()=>{e.style.transform=`translate(${Math.random()*160-80}px,105vh) rotate(540deg)`;e.style.opacity="0"});
+    setTimeout(()=>e.remove(),1900)
+  }
+  toast("Daily kindness goal reached!")
+}
+function resetDailyIfNeeded(){
+  if(state.todayDate!==localDate()){state.todayDate=localDate();state.today=0;save()}
+}
+
+$("newBtn").onclick=chooseQuest;
+$("hearBtn").onclick=()=>speak(currentNarration());
+$("saveBtn").onclick=toggleFavorite;
+$("doneBtn").onclick=markDone;
+$("adaptBtn").onclick=adaptQuest;
+$("gradeBand").onchange=chooseQuest;
+$("category").onchange=chooseQuest;
+$("difficulty").onchange=chooseQuest;
+$("challengeSize").onchange=updateStats;
+$("voiceGuides").onclick=e=>{
+  const b=e.target.closest("[data-voice]");if(!b)return;
+  state.voice=b.dataset.voice;save();updateVoiceButtons();
+  $("voiceStatus").textContent=`${GUIDES[state.voice].name} selected.`
+};
+$("voiceSpeed").onchange=e=>{state.voiceSpeed=e.target.value;save()};
+$("meetGuideBtn").onclick=()=>speak("",true);
+$("repeatBtn").onclick=()=>lastSpoken?speak(lastSpoken):speak(currentNarration());
+$("stopVoiceBtn").onclick=()=>stopVoice();
+$("largeTypeBtn").onclick=()=>{state.largeType=!state.largeType;save();applyAccessibility()};
+$("simpleModeBtn").onclick=()=>{state.simpleMode=!state.simpleMode;save();applyAccessibility()};
+$("autoReadBtn").onclick=()=>{state.autoRead=!state.autoRead;save();applyAccessibility()};
+$("saveReflection").onclick=saveReflection;
+$("clearJournal").onclick=()=>{$("journal").value=""};
+$("saveServiceBtn").onclick=saveServicePlan;
+$("clearServiceBtn").onclick=clearService;
+$("clearHistory").onclick=()=>{
+  if(confirm("Clear recent kindness history on this device?")){
+    state.history=[];save();updateStats()
+  }
+};
+document.querySelectorAll(".reflect-btn").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".reflect-btn").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active");state.selectedFeeling=b.dataset.feel
+});
+
+if("speechSynthesis"in window){
+  refreshVoices();
+  speechSynthesis.addEventListener?.("voiceschanged",refreshVoices);
+  speechSynthesis.onvoiceschanged=refreshVoices
+}else{
+  $("meetGuideBtn").disabled=true;$("repeatBtn").disabled=true;$("stopVoiceBtn").disabled=true;$("hearBtn").disabled=true;
+  $("voiceStatus").textContent="Read-aloud voices are not available in this browser."
+}
+
+resetDailyIfNeeded();
+state.current=state.current||QUESTS[0];
+updateVoiceButtons();
+applyAccessibility();
+renderQuest();
+updateStats();
+window.addEventListener("beforeunload",()=>stopVoice(""));
+})();
+</script>
+</body>
+</html>
