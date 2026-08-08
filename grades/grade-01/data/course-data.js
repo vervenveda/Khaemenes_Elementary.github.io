@@ -48,7 +48,7 @@ window.KHAE_GRADE1_DATA = {
     {
       "code": "KHAE-ART-1",
       "label": "Arts, Music, Drama, and Creative Expression",
-      "description": "Creating, performing, responding, connecting, rhythm, visual design, storytelling, movement, critique, and portfolios."
+      "description": "Creating, performing/presenting, responding, connecting, rhythm, visual design, storytelling, movement, critique, and portfolios."
     },
     {
       "code": "KHAE-PEH-1",
@@ -71,13 +71,13 @@ window.KHAE_GRADE1_DATA = {
       "unit": 1,
       "week": 1,
       "title": "Welcome to First Grade Scholars",
-      "theme": "Routines, classroom citizenship, stamina, baseline reading/math/writing, and joyful independence",
+      "theme": "Routines, classroom citizenship, learning stamina, baseline reading, writing, math, and portfolio setup",
       "essentialQuestion": "How do first graders learn with courage, kindness, and careful work?",
-      "literacyFocus": "Names, classroom print, listening, speaking, sentence frames",
-      "mathFocus": "Count, compare, sort, and explain strategies",
-      "inquiryFocus": "Classroom community, routines, maps, and learner responsibilities",
-      "selFocus": "Self-awareness, courage, and asking for help",
-      "makerProject": "My First Grade Scholar shield",
+      "literacyFocus": "names, classroom print, listening, speaking, sentence frames",
+      "mathFocus": "count, compare, sort, and explain strategies",
+      "inquiryFocus": "classroom community, routines, maps, and responsibilities",
+      "selFocus": "self-awareness, courage, and asking for help",
+      "makerProject": "My First Grade Scholar Shield",
       "printableType": "baseline",
       "primaryDomain": "civics",
       "standards": [
@@ -96,27 +96,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through welcome to first grade scholars using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about welcome to first grade scholars.",
-            "Ask: “How do first graders learn with courage, kindness, and careful work?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Names, classroom print, listening, speaking, sentence frames",
-          "math": "Count, compare, sort, and explain strategies",
-          "inquiry": "Classroom community, routines, maps, and learner responsibilities",
-          "sel": "Self-awareness, courage, and asking for help",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "names, classroom print, listening, speaking, sentence frames",
+          "math": "count, compare, sort, and explain strategies",
+          "inquiry": "classroom community, routines, maps, and responsibilities",
+          "sel": "self-awareness, courage, and asking for help",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -126,35 +110,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about welcome to first grade scholars.",
+            "Ask: “How do first graders learn with courage, kindness, and careful work?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about welcome to first grade scholars and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through welcome to first grade scholars using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about welcome to first grade scholars.",
-            "Ask: “How do first graders learn with courage, kindness, and careful work?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Names, classroom print, listening, speaking, sentence frames",
-          "math": "Count, compare, sort, and explain strategies",
-          "inquiry": "Classroom community, routines, maps, and learner responsibilities",
-          "sel": "Self-awareness, courage, and asking for help",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "names, classroom print, listening, speaking, sentence frames",
+          "math": "count, compare, sort, and explain strategies",
+          "inquiry": "classroom community, routines, maps, and responsibilities",
+          "sel": "self-awareness, courage, and asking for help",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -164,35 +139,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about welcome to first grade scholars.",
+            "Ask: “How do first graders learn with courage, kindness, and careful work?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about welcome to first grade scholars and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through welcome to first grade scholars using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about welcome to first grade scholars.",
-            "Ask: “How do first graders learn with courage, kindness, and careful work?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Names, classroom print, listening, speaking, sentence frames",
-          "math": "Count, compare, sort, and explain strategies",
-          "inquiry": "Classroom community, routines, maps, and learner responsibilities",
-          "sel": "Self-awareness, courage, and asking for help",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "names, classroom print, listening, speaking, sentence frames",
+          "math": "count, compare, sort, and explain strategies",
+          "inquiry": "classroom community, routines, maps, and responsibilities",
+          "sel": "self-awareness, courage, and asking for help",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -202,35 +168,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about welcome to first grade scholars.",
+            "Ask: “How do first graders learn with courage, kindness, and careful work?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about welcome to first grade scholars and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through welcome to first grade scholars using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about welcome to first grade scholars.",
-            "Ask: “How do first graders learn with courage, kindness, and careful work?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Names, classroom print, listening, speaking, sentence frames",
-          "math": "Count, compare, sort, and explain strategies",
-          "inquiry": "Classroom community, routines, maps, and learner responsibilities",
-          "sel": "Self-awareness, courage, and asking for help",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "names, classroom print, listening, speaking, sentence frames",
+          "math": "count, compare, sort, and explain strategies",
+          "inquiry": "classroom community, routines, maps, and responsibilities",
+          "sel": "self-awareness, courage, and asking for help",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -240,35 +197,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about welcome to first grade scholars.",
+            "Ask: “How do first graders learn with courage, kindness, and careful work?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about welcome to first grade scholars and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through welcome to first grade scholars using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about welcome to first grade scholars.",
-            "Ask: “How do first graders learn with courage, kindness, and careful work?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Names, classroom print, listening, speaking, sentence frames",
-          "math": "Count, compare, sort, and explain strategies",
-          "inquiry": "Classroom community, routines, maps, and learner responsibilities",
-          "sel": "Self-awareness, courage, and asking for help",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "names, classroom print, listening, speaking, sentence frames",
+          "math": "count, compare, sort, and explain strategies",
+          "inquiry": "classroom community, routines, maps, and responsibilities",
+          "sel": "self-awareness, courage, and asking for help",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -278,8 +226,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about welcome to first grade scholars.",
+            "Ask: “How do first graders learn with courage, kindness, and careful work?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about welcome to first grade scholars and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -289,7 +244,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Names, classroom print, listening, speaking, sentence frames."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: names, classroom print, listening, speaking, sentence frames."
           },
           {
             "domain": "Writing",
@@ -299,12 +254,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Count, compare, sort, and explain strategies."
+            "prompt": "Completes and explains the weekly math focus: count, compare, sort, and explain strategies."
           },
           {
             "domain": "Math Reasoning",
@@ -314,17 +269,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Classroom community, routines, maps, and learner responsibilities."
+            "prompt": "Observes, maps, tests, researches, or explains: classroom community, routines, maps, and responsibilities."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: My First Grade Scholar shield."
+            "prompt": "Completes or contributes to the project/workshop: My First Grade Scholar Shield."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Self-awareness, courage, and asking for help."
+            "prompt": "Practices the weekly SEL focus: self-awareness, courage, and asking for help."
           },
           {
             "domain": "Independence",
@@ -345,11 +300,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Short Vowels and Number Sense",
       "theme": "CVC words, phonemic awareness, handwriting, counting, comparing, and number representations",
       "essentialQuestion": "How do sounds and numbers help us read and solve?",
-      "literacyFocus": "Short a/e/i/o/u CVC decoding and spelling",
-      "mathFocus": "Numbers to 20, ten-frames, compare more/less/equal",
-      "inquiryFocus": "Observation notebooks and careful tool use",
-      "selFocus": "Effort, focus, and listening",
-      "makerProject": "CVC word garden",
+      "literacyFocus": "short a/e/i/o/u CVC decoding and spelling",
+      "mathFocus": "numbers to 20, ten-frames, compare more/less/equal",
+      "inquiryFocus": "observation notebooks and careful tool use",
+      "selFocus": "effort, focus, and listening",
+      "makerProject": "CVC Word Garden",
       "printableType": "phonics",
       "primaryDomain": "math",
       "standards": [
@@ -367,27 +322,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through short vowels and number sense using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about short vowels and number sense.",
-            "Ask: “How do sounds and numbers help us read and solve?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Short a/e/i/o/u CVC decoding and spelling",
-          "math": "Numbers to 20, ten-frames, compare more/less/equal",
-          "inquiry": "Observation notebooks and careful tool use",
-          "sel": "Effort, focus, and listening",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "short a/e/i/o/u CVC decoding and spelling",
+          "math": "numbers to 20, ten-frames, compare more/less/equal",
+          "inquiry": "observation notebooks and careful tool use",
+          "sel": "effort, focus, and listening",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -397,35 +336,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about short vowels and number sense.",
+            "Ask: “How do sounds and numbers help us read and solve?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about short vowels and number sense and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through short vowels and number sense using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about short vowels and number sense.",
-            "Ask: “How do sounds and numbers help us read and solve?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Short a/e/i/o/u CVC decoding and spelling",
-          "math": "Numbers to 20, ten-frames, compare more/less/equal",
-          "inquiry": "Observation notebooks and careful tool use",
-          "sel": "Effort, focus, and listening",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "short a/e/i/o/u CVC decoding and spelling",
+          "math": "numbers to 20, ten-frames, compare more/less/equal",
+          "inquiry": "observation notebooks and careful tool use",
+          "sel": "effort, focus, and listening",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -435,35 +365,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about short vowels and number sense.",
+            "Ask: “How do sounds and numbers help us read and solve?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about short vowels and number sense and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through short vowels and number sense using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about short vowels and number sense.",
-            "Ask: “How do sounds and numbers help us read and solve?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Short a/e/i/o/u CVC decoding and spelling",
-          "math": "Numbers to 20, ten-frames, compare more/less/equal",
-          "inquiry": "Observation notebooks and careful tool use",
-          "sel": "Effort, focus, and listening",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "short a/e/i/o/u CVC decoding and spelling",
+          "math": "numbers to 20, ten-frames, compare more/less/equal",
+          "inquiry": "observation notebooks and careful tool use",
+          "sel": "effort, focus, and listening",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -473,35 +394,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about short vowels and number sense.",
+            "Ask: “How do sounds and numbers help us read and solve?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about short vowels and number sense and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through short vowels and number sense using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about short vowels and number sense.",
-            "Ask: “How do sounds and numbers help us read and solve?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Short a/e/i/o/u CVC decoding and spelling",
-          "math": "Numbers to 20, ten-frames, compare more/less/equal",
-          "inquiry": "Observation notebooks and careful tool use",
-          "sel": "Effort, focus, and listening",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "short a/e/i/o/u CVC decoding and spelling",
+          "math": "numbers to 20, ten-frames, compare more/less/equal",
+          "inquiry": "observation notebooks and careful tool use",
+          "sel": "effort, focus, and listening",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -511,35 +423,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about short vowels and number sense.",
+            "Ask: “How do sounds and numbers help us read and solve?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about short vowels and number sense and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through short vowels and number sense using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about short vowels and number sense.",
-            "Ask: “How do sounds and numbers help us read and solve?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Short a/e/i/o/u CVC decoding and spelling",
-          "math": "Numbers to 20, ten-frames, compare more/less/equal",
-          "inquiry": "Observation notebooks and careful tool use",
-          "sel": "Effort, focus, and listening",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "short a/e/i/o/u CVC decoding and spelling",
+          "math": "numbers to 20, ten-frames, compare more/less/equal",
+          "inquiry": "observation notebooks and careful tool use",
+          "sel": "effort, focus, and listening",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -549,8 +452,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about short vowels and number sense.",
+            "Ask: “How do sounds and numbers help us read and solve?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about short vowels and number sense and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -560,7 +470,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Short a/e/i/o/u CVC decoding and spelling."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: short a/e/i/o/u CVC decoding and spelling."
           },
           {
             "domain": "Writing",
@@ -570,12 +480,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Numbers to 20, ten-frames, compare more/less/equal."
+            "prompt": "Completes and explains the weekly math focus: numbers to 20, ten-frames, compare more/less/equal."
           },
           {
             "domain": "Math Reasoning",
@@ -585,17 +495,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Observation notebooks and careful tool use."
+            "prompt": "Observes, maps, tests, researches, or explains: observation notebooks and careful tool use."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: CVC word garden."
+            "prompt": "Completes or contributes to the project/workshop: CVC Word Garden."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Effort, focus, and listening."
+            "prompt": "Practices the weekly SEL focus: effort, focus, and listening."
           },
           {
             "domain": "Independence",
@@ -616,11 +526,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Families, Feelings, and Personal Narratives",
       "theme": "Personal narratives, sentence writing, family/community stories, feelings vocabulary, and oral storytelling",
       "essentialQuestion": "How do our stories help us understand ourselves and others?",
-      "literacyFocus": "Narrative sequence: beginning, middle, end",
-      "mathFocus": "Story problems with joining and separating within 10",
-      "inquiryFocus": "Family, tradition, past/present, and respectful questions",
-      "selFocus": "Feelings language and friendship repair",
-      "makerProject": "Family story booklet",
+      "literacyFocus": "narrative sequence: beginning, middle, end",
+      "mathFocus": "story problems with joining and separating within 10",
+      "inquiryFocus": "family, tradition, past/present, and respectful questions",
+      "selFocus": "feelings language and friendship repair",
+      "makerProject": "Family Story Booklet",
       "printableType": "writing",
       "primaryDomain": "social",
       "standards": [
@@ -631,8 +541,8 @@ window.KHAE_GRADE1_DATA = {
         "KHAE-ART-1",
         "KHAE-PEH-1",
         "KHAE-PORT-1",
-        "KHAE-SS-1",
-        "KHAE-SCI-1"
+        "KHAE-SCI-1",
+        "KHAE-SS-1"
       ],
       "lessons": [
         {
@@ -640,27 +550,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through families, feelings, and personal narratives using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about families, feelings, and personal narratives.",
-            "Ask: “How do our stories help us understand ourselves and others?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Narrative sequence: beginning, middle, end",
-          "math": "Story problems with joining and separating within 10",
-          "inquiry": "Family, tradition, past/present, and respectful questions",
-          "sel": "Feelings language and friendship repair",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "narrative sequence: beginning, middle, end",
+          "math": "story problems with joining and separating within 10",
+          "inquiry": "family, tradition, past/present, and respectful questions",
+          "sel": "feelings language and friendship repair",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -670,35 +564,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about families, feelings, and personal narratives.",
+            "Ask: “How do our stories help us understand ourselves and others?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about families, feelings, and personal narratives and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through families, feelings, and personal narratives using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about families, feelings, and personal narratives.",
-            "Ask: “How do our stories help us understand ourselves and others?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Narrative sequence: beginning, middle, end",
-          "math": "Story problems with joining and separating within 10",
-          "inquiry": "Family, tradition, past/present, and respectful questions",
-          "sel": "Feelings language and friendship repair",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "narrative sequence: beginning, middle, end",
+          "math": "story problems with joining and separating within 10",
+          "inquiry": "family, tradition, past/present, and respectful questions",
+          "sel": "feelings language and friendship repair",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -708,35 +593,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about families, feelings, and personal narratives.",
+            "Ask: “How do our stories help us understand ourselves and others?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about families, feelings, and personal narratives and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through families, feelings, and personal narratives using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about families, feelings, and personal narratives.",
-            "Ask: “How do our stories help us understand ourselves and others?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Narrative sequence: beginning, middle, end",
-          "math": "Story problems with joining and separating within 10",
-          "inquiry": "Family, tradition, past/present, and respectful questions",
-          "sel": "Feelings language and friendship repair",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "narrative sequence: beginning, middle, end",
+          "math": "story problems with joining and separating within 10",
+          "inquiry": "family, tradition, past/present, and respectful questions",
+          "sel": "feelings language and friendship repair",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -746,35 +622,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about families, feelings, and personal narratives.",
+            "Ask: “How do our stories help us understand ourselves and others?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about families, feelings, and personal narratives and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through families, feelings, and personal narratives using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about families, feelings, and personal narratives.",
-            "Ask: “How do our stories help us understand ourselves and others?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Narrative sequence: beginning, middle, end",
-          "math": "Story problems with joining and separating within 10",
-          "inquiry": "Family, tradition, past/present, and respectful questions",
-          "sel": "Feelings language and friendship repair",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "narrative sequence: beginning, middle, end",
+          "math": "story problems with joining and separating within 10",
+          "inquiry": "family, tradition, past/present, and respectful questions",
+          "sel": "feelings language and friendship repair",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -784,35 +651,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about families, feelings, and personal narratives.",
+            "Ask: “How do our stories help us understand ourselves and others?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about families, feelings, and personal narratives and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through families, feelings, and personal narratives using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about families, feelings, and personal narratives.",
-            "Ask: “How do our stories help us understand ourselves and others?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Narrative sequence: beginning, middle, end",
-          "math": "Story problems with joining and separating within 10",
-          "inquiry": "Family, tradition, past/present, and respectful questions",
-          "sel": "Feelings language and friendship repair",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "narrative sequence: beginning, middle, end",
+          "math": "story problems with joining and separating within 10",
+          "inquiry": "family, tradition, past/present, and respectful questions",
+          "sel": "feelings language and friendship repair",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -822,8 +680,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about families, feelings, and personal narratives.",
+            "Ask: “How do our stories help us understand ourselves and others?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about families, feelings, and personal narratives and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -833,7 +698,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Narrative sequence: beginning, middle, end."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: narrative sequence: beginning, middle, end."
           },
           {
             "domain": "Writing",
@@ -843,12 +708,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Story problems with joining and separating within 10."
+            "prompt": "Completes and explains the weekly math focus: story problems with joining and separating within 10."
           },
           {
             "domain": "Math Reasoning",
@@ -858,17 +723,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Family, tradition, past/present, and respectful questions."
+            "prompt": "Observes, maps, tests, researches, or explains: family, tradition, past/present, and respectful questions."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Family story booklet."
+            "prompt": "Completes or contributes to the project/workshop: Family Story Booklet."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Feelings language and friendship repair."
+            "prompt": "Practices the weekly SEL focus: feelings language and friendship repair."
           },
           {
             "domain": "Independence",
@@ -889,11 +754,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Addition Stories to 10",
       "theme": "Addition as joining, counting on, number bonds, equations, and visual models",
       "essentialQuestion": "How can we show joining stories with pictures, numbers, and words?",
-      "literacyFocus": "Math story vocabulary and complete sentences",
-      "mathFocus": "Addition within 10 with objects, drawings, and equations",
-      "inquiryFocus": "Design fair-share classroom game rules",
-      "selFocus": "Partner talk and turn-taking",
-      "makerProject": "Addition story mini-book",
+      "literacyFocus": "math story vocabulary and complete sentences",
+      "mathFocus": "addition within 10 with objects, drawings, and equations",
+      "inquiryFocus": "design fair-share classroom game rules",
+      "selFocus": "partner talk and turn-taking",
+      "makerProject": "Addition Story Mini-Book",
       "printableType": "addition",
       "primaryDomain": "math",
       "standards": [
@@ -912,27 +777,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through addition stories to 10 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about addition stories to 10.",
-            "Ask: “How can we show joining stories with pictures, numbers, and words?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Math story vocabulary and complete sentences",
-          "math": "Addition within 10 with objects, drawings, and equations",
-          "inquiry": "Design fair-share classroom game rules",
-          "sel": "Partner talk and turn-taking",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "math story vocabulary and complete sentences",
+          "math": "addition within 10 with objects, drawings, and equations",
+          "inquiry": "design fair-share classroom game rules",
+          "sel": "partner talk and turn-taking",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -942,35 +791,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about addition stories to 10.",
+            "Ask: “How can we show joining stories with pictures, numbers, and words?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about addition stories to 10 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through addition stories to 10 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about addition stories to 10.",
-            "Ask: “How can we show joining stories with pictures, numbers, and words?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Math story vocabulary and complete sentences",
-          "math": "Addition within 10 with objects, drawings, and equations",
-          "inquiry": "Design fair-share classroom game rules",
-          "sel": "Partner talk and turn-taking",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "math story vocabulary and complete sentences",
+          "math": "addition within 10 with objects, drawings, and equations",
+          "inquiry": "design fair-share classroom game rules",
+          "sel": "partner talk and turn-taking",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -980,35 +820,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about addition stories to 10.",
+            "Ask: “How can we show joining stories with pictures, numbers, and words?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about addition stories to 10 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through addition stories to 10 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about addition stories to 10.",
-            "Ask: “How can we show joining stories with pictures, numbers, and words?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Math story vocabulary and complete sentences",
-          "math": "Addition within 10 with objects, drawings, and equations",
-          "inquiry": "Design fair-share classroom game rules",
-          "sel": "Partner talk and turn-taking",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "math story vocabulary and complete sentences",
+          "math": "addition within 10 with objects, drawings, and equations",
+          "inquiry": "design fair-share classroom game rules",
+          "sel": "partner talk and turn-taking",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1018,35 +849,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about addition stories to 10.",
+            "Ask: “How can we show joining stories with pictures, numbers, and words?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about addition stories to 10 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through addition stories to 10 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about addition stories to 10.",
-            "Ask: “How can we show joining stories with pictures, numbers, and words?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Math story vocabulary and complete sentences",
-          "math": "Addition within 10 with objects, drawings, and equations",
-          "inquiry": "Design fair-share classroom game rules",
-          "sel": "Partner talk and turn-taking",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "math story vocabulary and complete sentences",
+          "math": "addition within 10 with objects, drawings, and equations",
+          "inquiry": "design fair-share classroom game rules",
+          "sel": "partner talk and turn-taking",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1056,35 +878,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about addition stories to 10.",
+            "Ask: “How can we show joining stories with pictures, numbers, and words?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about addition stories to 10 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through addition stories to 10 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about addition stories to 10.",
-            "Ask: “How can we show joining stories with pictures, numbers, and words?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Math story vocabulary and complete sentences",
-          "math": "Addition within 10 with objects, drawings, and equations",
-          "inquiry": "Design fair-share classroom game rules",
-          "sel": "Partner talk and turn-taking",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "math story vocabulary and complete sentences",
+          "math": "addition within 10 with objects, drawings, and equations",
+          "inquiry": "design fair-share classroom game rules",
+          "sel": "partner talk and turn-taking",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1094,8 +907,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about addition stories to 10.",
+            "Ask: “How can we show joining stories with pictures, numbers, and words?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about addition stories to 10 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -1105,7 +925,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Math story vocabulary and complete sentences."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: math story vocabulary and complete sentences."
           },
           {
             "domain": "Writing",
@@ -1115,12 +935,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Addition within 10 with objects, drawings, and equations."
+            "prompt": "Completes and explains the weekly math focus: addition within 10 with objects, drawings, and equations."
           },
           {
             "domain": "Math Reasoning",
@@ -1130,17 +950,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Design fair-share classroom game rules."
+            "prompt": "Observes, maps, tests, researches, or explains: design fair-share classroom game rules."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Addition story mini-book."
+            "prompt": "Completes or contributes to the project/workshop: Addition Story Mini-Book."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Partner talk and turn-taking."
+            "prompt": "Practices the weekly SEL focus: partner talk and turn-taking."
           },
           {
             "domain": "Independence",
@@ -1161,11 +981,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Plants, Seeds, and Living Things",
       "theme": "Plant structures, needs, observation journals, informational text, and measurement",
       "essentialQuestion": "What do plants need, and how can we observe growth?",
-      "literacyFocus": "Informational text features and labeled diagrams",
-      "mathFocus": "Compare lengths; tally plant observations",
-      "inquiryFocus": "Plant parts, needs, growth, and evidence",
-      "selFocus": "Care and responsibility",
-      "makerProject": "Plant life-cycle foldable",
+      "literacyFocus": "informational text features and labeled diagrams",
+      "mathFocus": "compare lengths; tally plant observations",
+      "inquiryFocus": "plant parts, needs, growth, and evidence",
+      "selFocus": "care and responsibility",
+      "makerProject": "Plant Life-Cycle Foldable",
       "printableType": "science",
       "primaryDomain": "life",
       "standards": [
@@ -1184,27 +1004,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through plants, seeds, and living things using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about plants, seeds, and living things.",
-            "Ask: “What do plants need, and how can we observe growth?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Informational text features and labeled diagrams",
-          "math": "Compare lengths; tally plant observations",
-          "inquiry": "Plant parts, needs, growth, and evidence",
-          "sel": "Care and responsibility",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "informational text features and labeled diagrams",
+          "math": "compare lengths; tally plant observations",
+          "inquiry": "plant parts, needs, growth, and evidence",
+          "sel": "care and responsibility",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1214,35 +1018,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about plants, seeds, and living things.",
+            "Ask: “What do plants need, and how can we observe growth?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about plants, seeds, and living things and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through plants, seeds, and living things using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about plants, seeds, and living things.",
-            "Ask: “What do plants need, and how can we observe growth?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Informational text features and labeled diagrams",
-          "math": "Compare lengths; tally plant observations",
-          "inquiry": "Plant parts, needs, growth, and evidence",
-          "sel": "Care and responsibility",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "informational text features and labeled diagrams",
+          "math": "compare lengths; tally plant observations",
+          "inquiry": "plant parts, needs, growth, and evidence",
+          "sel": "care and responsibility",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1252,35 +1047,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about plants, seeds, and living things.",
+            "Ask: “What do plants need, and how can we observe growth?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about plants, seeds, and living things and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through plants, seeds, and living things using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about plants, seeds, and living things.",
-            "Ask: “What do plants need, and how can we observe growth?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Informational text features and labeled diagrams",
-          "math": "Compare lengths; tally plant observations",
-          "inquiry": "Plant parts, needs, growth, and evidence",
-          "sel": "Care and responsibility",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "informational text features and labeled diagrams",
+          "math": "compare lengths; tally plant observations",
+          "inquiry": "plant parts, needs, growth, and evidence",
+          "sel": "care and responsibility",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1290,35 +1076,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about plants, seeds, and living things.",
+            "Ask: “What do plants need, and how can we observe growth?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about plants, seeds, and living things and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through plants, seeds, and living things using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about plants, seeds, and living things.",
-            "Ask: “What do plants need, and how can we observe growth?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Informational text features and labeled diagrams",
-          "math": "Compare lengths; tally plant observations",
-          "inquiry": "Plant parts, needs, growth, and evidence",
-          "sel": "Care and responsibility",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "informational text features and labeled diagrams",
+          "math": "compare lengths; tally plant observations",
+          "inquiry": "plant parts, needs, growth, and evidence",
+          "sel": "care and responsibility",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1328,35 +1105,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about plants, seeds, and living things.",
+            "Ask: “What do plants need, and how can we observe growth?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about plants, seeds, and living things and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through plants, seeds, and living things using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about plants, seeds, and living things.",
-            "Ask: “What do plants need, and how can we observe growth?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Informational text features and labeled diagrams",
-          "math": "Compare lengths; tally plant observations",
-          "inquiry": "Plant parts, needs, growth, and evidence",
-          "sel": "Care and responsibility",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "informational text features and labeled diagrams",
+          "math": "compare lengths; tally plant observations",
+          "inquiry": "plant parts, needs, growth, and evidence",
+          "sel": "care and responsibility",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1366,8 +1134,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about plants, seeds, and living things.",
+            "Ask: “What do plants need, and how can we observe growth?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about plants, seeds, and living things and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -1377,7 +1152,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Informational text features and labeled diagrams."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: informational text features and labeled diagrams."
           },
           {
             "domain": "Writing",
@@ -1387,12 +1162,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Compare lengths; tally plant observations."
+            "prompt": "Completes and explains the weekly math focus: compare lengths; tally plant observations."
           },
           {
             "domain": "Math Reasoning",
@@ -1402,17 +1177,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Plant parts, needs, growth, and evidence."
+            "prompt": "Observes, maps, tests, researches, or explains: plant parts, needs, growth, and evidence."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Plant life-cycle foldable."
+            "prompt": "Completes or contributes to the project/workshop: Plant Life-Cycle Foldable."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Care and responsibility."
+            "prompt": "Practices the weekly SEL focus: care and responsibility."
           },
           {
             "domain": "Independence",
@@ -1433,11 +1208,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Consonant Digraphs and Word Building",
       "theme": "sh/ch/th/wh, decoding, spelling patterns, fluency, and word sorting",
       "essentialQuestion": "How do two letters work together to make one sound?",
-      "literacyFocus": "Digraph decoding, spelling, and word families",
-      "mathFocus": "Sort, count, and graph digraph words",
-      "inquiryFocus": "Sound as vibration introduction through voice and tapping",
-      "selFocus": "Confidence reading aloud",
-      "makerProject": "Digraph detective board",
+      "literacyFocus": "digraph decoding, spelling, and word families",
+      "mathFocus": "sort, count, and graph digraph words",
+      "inquiryFocus": "sound as vibration through voice and tapping",
+      "selFocus": "confidence reading aloud",
+      "makerProject": "Digraph Detective Board",
       "printableType": "phonics",
       "primaryDomain": "sound",
       "standards": [
@@ -1456,27 +1231,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through consonant digraphs and word building using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about consonant digraphs and word building.",
-            "Ask: “How do two letters work together to make one sound?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Digraph decoding, spelling, and word families",
-          "math": "Sort, count, and graph digraph words",
-          "inquiry": "Sound as vibration introduction through voice and tapping",
-          "sel": "Confidence reading aloud",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "digraph decoding, spelling, and word families",
+          "math": "sort, count, and graph digraph words",
+          "inquiry": "sound as vibration through voice and tapping",
+          "sel": "confidence reading aloud",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1486,35 +1245,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about consonant digraphs and word building.",
+            "Ask: “How do two letters work together to make one sound?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about consonant digraphs and word building and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through consonant digraphs and word building using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about consonant digraphs and word building.",
-            "Ask: “How do two letters work together to make one sound?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Digraph decoding, spelling, and word families",
-          "math": "Sort, count, and graph digraph words",
-          "inquiry": "Sound as vibration introduction through voice and tapping",
-          "sel": "Confidence reading aloud",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "digraph decoding, spelling, and word families",
+          "math": "sort, count, and graph digraph words",
+          "inquiry": "sound as vibration through voice and tapping",
+          "sel": "confidence reading aloud",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1524,35 +1274,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about consonant digraphs and word building.",
+            "Ask: “How do two letters work together to make one sound?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about consonant digraphs and word building and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through consonant digraphs and word building using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about consonant digraphs and word building.",
-            "Ask: “How do two letters work together to make one sound?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Digraph decoding, spelling, and word families",
-          "math": "Sort, count, and graph digraph words",
-          "inquiry": "Sound as vibration introduction through voice and tapping",
-          "sel": "Confidence reading aloud",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "digraph decoding, spelling, and word families",
+          "math": "sort, count, and graph digraph words",
+          "inquiry": "sound as vibration through voice and tapping",
+          "sel": "confidence reading aloud",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1562,35 +1303,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about consonant digraphs and word building.",
+            "Ask: “How do two letters work together to make one sound?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about consonant digraphs and word building and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through consonant digraphs and word building using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about consonant digraphs and word building.",
-            "Ask: “How do two letters work together to make one sound?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Digraph decoding, spelling, and word families",
-          "math": "Sort, count, and graph digraph words",
-          "inquiry": "Sound as vibration introduction through voice and tapping",
-          "sel": "Confidence reading aloud",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "digraph decoding, spelling, and word families",
+          "math": "sort, count, and graph digraph words",
+          "inquiry": "sound as vibration through voice and tapping",
+          "sel": "confidence reading aloud",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1600,35 +1332,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about consonant digraphs and word building.",
+            "Ask: “How do two letters work together to make one sound?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about consonant digraphs and word building and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through consonant digraphs and word building using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about consonant digraphs and word building.",
-            "Ask: “How do two letters work together to make one sound?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Digraph decoding, spelling, and word families",
-          "math": "Sort, count, and graph digraph words",
-          "inquiry": "Sound as vibration introduction through voice and tapping",
-          "sel": "Confidence reading aloud",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "digraph decoding, spelling, and word families",
+          "math": "sort, count, and graph digraph words",
+          "inquiry": "sound as vibration through voice and tapping",
+          "sel": "confidence reading aloud",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1638,8 +1361,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about consonant digraphs and word building.",
+            "Ask: “How do two letters work together to make one sound?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about consonant digraphs and word building and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -1649,7 +1379,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Digraph decoding, spelling, and word families."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: digraph decoding, spelling, and word families."
           },
           {
             "domain": "Writing",
@@ -1659,12 +1389,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Sort, count, and graph digraph words."
+            "prompt": "Completes and explains the weekly math focus: sort, count, and graph digraph words."
           },
           {
             "domain": "Math Reasoning",
@@ -1674,17 +1404,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Sound as vibration introduction through voice and tapping."
+            "prompt": "Observes, maps, tests, researches, or explains: sound as vibration through voice and tapping."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Digraph detective board."
+            "prompt": "Completes or contributes to the project/workshop: Digraph Detective Board."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Confidence reading aloud."
+            "prompt": "Practices the weekly SEL focus: confidence reading aloud."
           },
           {
             "domain": "Independence",
@@ -1705,11 +1435,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Subtraction Stories to 10",
       "theme": "Subtraction as take-away, comparison, missing parts, equations, and story mats",
       "essentialQuestion": "How can we show what is left, missing, or different?",
-      "literacyFocus": "Subtraction language and question words",
-      "mathFocus": "Subtraction within 10 using drawings, objects, and equations",
-      "inquiryFocus": "Use evidence to explain a change",
-      "selFocus": "Persistence when a problem has steps",
-      "makerProject": "Subtraction story mat",
+      "literacyFocus": "subtraction language and question words",
+      "mathFocus": "subtraction within 10 using drawings, objects, and equations",
+      "inquiryFocus": "use evidence to explain a change",
+      "selFocus": "persistence when a problem has steps",
+      "makerProject": "Subtraction Story Mat",
       "printableType": "subtraction",
       "primaryDomain": "math",
       "standards": [
@@ -1727,27 +1457,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through subtraction stories to 10 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about subtraction stories to 10.",
-            "Ask: “How can we show what is left, missing, or different?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Subtraction language and question words",
-          "math": "Subtraction within 10 using drawings, objects, and equations",
-          "inquiry": "Use evidence to explain a change",
-          "sel": "Persistence when a problem has steps",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "subtraction language and question words",
+          "math": "subtraction within 10 using drawings, objects, and equations",
+          "inquiry": "use evidence to explain a change",
+          "sel": "persistence when a problem has steps",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1757,35 +1471,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about subtraction stories to 10.",
+            "Ask: “How can we show what is left, missing, or different?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about subtraction stories to 10 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through subtraction stories to 10 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about subtraction stories to 10.",
-            "Ask: “How can we show what is left, missing, or different?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Subtraction language and question words",
-          "math": "Subtraction within 10 using drawings, objects, and equations",
-          "inquiry": "Use evidence to explain a change",
-          "sel": "Persistence when a problem has steps",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "subtraction language and question words",
+          "math": "subtraction within 10 using drawings, objects, and equations",
+          "inquiry": "use evidence to explain a change",
+          "sel": "persistence when a problem has steps",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1795,35 +1500,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about subtraction stories to 10.",
+            "Ask: “How can we show what is left, missing, or different?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about subtraction stories to 10 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through subtraction stories to 10 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about subtraction stories to 10.",
-            "Ask: “How can we show what is left, missing, or different?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Subtraction language and question words",
-          "math": "Subtraction within 10 using drawings, objects, and equations",
-          "inquiry": "Use evidence to explain a change",
-          "sel": "Persistence when a problem has steps",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "subtraction language and question words",
+          "math": "subtraction within 10 using drawings, objects, and equations",
+          "inquiry": "use evidence to explain a change",
+          "sel": "persistence when a problem has steps",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1833,35 +1529,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about subtraction stories to 10.",
+            "Ask: “How can we show what is left, missing, or different?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about subtraction stories to 10 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through subtraction stories to 10 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about subtraction stories to 10.",
-            "Ask: “How can we show what is left, missing, or different?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Subtraction language and question words",
-          "math": "Subtraction within 10 using drawings, objects, and equations",
-          "inquiry": "Use evidence to explain a change",
-          "sel": "Persistence when a problem has steps",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "subtraction language and question words",
+          "math": "subtraction within 10 using drawings, objects, and equations",
+          "inquiry": "use evidence to explain a change",
+          "sel": "persistence when a problem has steps",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1871,35 +1558,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about subtraction stories to 10.",
+            "Ask: “How can we show what is left, missing, or different?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about subtraction stories to 10 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through subtraction stories to 10 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about subtraction stories to 10.",
-            "Ask: “How can we show what is left, missing, or different?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Subtraction language and question words",
-          "math": "Subtraction within 10 using drawings, objects, and equations",
-          "inquiry": "Use evidence to explain a change",
-          "sel": "Persistence when a problem has steps",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "subtraction language and question words",
+          "math": "subtraction within 10 using drawings, objects, and equations",
+          "inquiry": "use evidence to explain a change",
+          "sel": "persistence when a problem has steps",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -1909,8 +1587,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about subtraction stories to 10.",
+            "Ask: “How can we show what is left, missing, or different?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about subtraction stories to 10 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -1920,7 +1605,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Subtraction language and question words."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: subtraction language and question words."
           },
           {
             "domain": "Writing",
@@ -1930,12 +1615,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Subtraction within 10 using drawings, objects, and equations."
+            "prompt": "Completes and explains the weekly math focus: subtraction within 10 using drawings, objects, and equations."
           },
           {
             "domain": "Math Reasoning",
@@ -1945,17 +1630,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Use evidence to explain a change."
+            "prompt": "Observes, maps, tests, researches, or explains: use evidence to explain a change."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Subtraction story mat."
+            "prompt": "Completes or contributes to the project/workshop: Subtraction Story Mat."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Persistence when a problem has steps."
+            "prompt": "Practices the weekly SEL focus: persistence when a problem has steps."
           },
           {
             "domain": "Independence",
@@ -1976,11 +1661,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Maps, Places, and Community Helpers",
       "theme": "Maps, symbols, directions, community helpers, goods/services, and civic belonging",
       "essentialQuestion": "How do maps and helpers support a community?",
-      "literacyFocus": "Labels, captions, question sentences, and interviews",
-      "mathFocus": "Ordinal numbers, routes, and simple grids",
-      "inquiryFocus": "Maps, symbols, places, roles, and responsibility",
-      "selFocus": "Respect and gratitude",
-      "makerProject": "Community map mural",
+      "literacyFocus": "labels, captions, question sentences, and interviews",
+      "mathFocus": "ordinal numbers, routes, and simple grids",
+      "inquiryFocus": "maps, symbols, places, roles, and responsibility",
+      "selFocus": "respect and gratitude",
+      "makerProject": "Community Map Mural",
       "printableType": "maps",
       "primaryDomain": "civics",
       "standards": [
@@ -1999,27 +1684,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through maps, places, and community helpers using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about maps, places, and community helpers.",
-            "Ask: “How do maps and helpers support a community?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Labels, captions, question sentences, and interviews",
-          "math": "Ordinal numbers, routes, and simple grids",
-          "inquiry": "Maps, symbols, places, roles, and responsibility",
-          "sel": "Respect and gratitude",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "labels, captions, question sentences, and interviews",
+          "math": "ordinal numbers, routes, and simple grids",
+          "inquiry": "maps, symbols, places, roles, and responsibility",
+          "sel": "respect and gratitude",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2029,35 +1698,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about maps, places, and community helpers.",
+            "Ask: “How do maps and helpers support a community?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about maps, places, and community helpers and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through maps, places, and community helpers using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about maps, places, and community helpers.",
-            "Ask: “How do maps and helpers support a community?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Labels, captions, question sentences, and interviews",
-          "math": "Ordinal numbers, routes, and simple grids",
-          "inquiry": "Maps, symbols, places, roles, and responsibility",
-          "sel": "Respect and gratitude",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "labels, captions, question sentences, and interviews",
+          "math": "ordinal numbers, routes, and simple grids",
+          "inquiry": "maps, symbols, places, roles, and responsibility",
+          "sel": "respect and gratitude",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2067,35 +1727,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about maps, places, and community helpers.",
+            "Ask: “How do maps and helpers support a community?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about maps, places, and community helpers and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through maps, places, and community helpers using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about maps, places, and community helpers.",
-            "Ask: “How do maps and helpers support a community?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Labels, captions, question sentences, and interviews",
-          "math": "Ordinal numbers, routes, and simple grids",
-          "inquiry": "Maps, symbols, places, roles, and responsibility",
-          "sel": "Respect and gratitude",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "labels, captions, question sentences, and interviews",
+          "math": "ordinal numbers, routes, and simple grids",
+          "inquiry": "maps, symbols, places, roles, and responsibility",
+          "sel": "respect and gratitude",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2105,35 +1756,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about maps, places, and community helpers.",
+            "Ask: “How do maps and helpers support a community?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about maps, places, and community helpers and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through maps, places, and community helpers using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about maps, places, and community helpers.",
-            "Ask: “How do maps and helpers support a community?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Labels, captions, question sentences, and interviews",
-          "math": "Ordinal numbers, routes, and simple grids",
-          "inquiry": "Maps, symbols, places, roles, and responsibility",
-          "sel": "Respect and gratitude",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "labels, captions, question sentences, and interviews",
+          "math": "ordinal numbers, routes, and simple grids",
+          "inquiry": "maps, symbols, places, roles, and responsibility",
+          "sel": "respect and gratitude",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2143,35 +1785,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about maps, places, and community helpers.",
+            "Ask: “How do maps and helpers support a community?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about maps, places, and community helpers and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through maps, places, and community helpers using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about maps, places, and community helpers.",
-            "Ask: “How do maps and helpers support a community?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Labels, captions, question sentences, and interviews",
-          "math": "Ordinal numbers, routes, and simple grids",
-          "inquiry": "Maps, symbols, places, roles, and responsibility",
-          "sel": "Respect and gratitude",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "labels, captions, question sentences, and interviews",
+          "math": "ordinal numbers, routes, and simple grids",
+          "inquiry": "maps, symbols, places, roles, and responsibility",
+          "sel": "respect and gratitude",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2181,8 +1814,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about maps, places, and community helpers.",
+            "Ask: “How do maps and helpers support a community?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about maps, places, and community helpers and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -2192,7 +1832,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Labels, captions, question sentences, and interviews."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: labels, captions, question sentences, and interviews."
           },
           {
             "domain": "Writing",
@@ -2202,12 +1842,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Ordinal numbers, routes, and simple grids."
+            "prompt": "Completes and explains the weekly math focus: ordinal numbers, routes, and simple grids."
           },
           {
             "domain": "Math Reasoning",
@@ -2217,17 +1857,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Maps, symbols, places, roles, and responsibility."
+            "prompt": "Observes, maps, tests, researches, or explains: maps, symbols, places, roles, and responsibility."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Community map mural."
+            "prompt": "Completes or contributes to the project/workshop: Community Map Mural."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Respect and gratitude."
+            "prompt": "Practices the weekly SEL focus: respect and gratitude."
           },
           {
             "domain": "Independence",
@@ -2249,10 +1889,10 @@ window.KHAE_GRADE1_DATA = {
       "theme": "Silent e, long vowel patterns, word comparison, fluency, and spelling",
       "essentialQuestion": "How can one letter change the sound and meaning of a word?",
       "literacyFocus": "CVC/CVCe comparison and decodable reading",
-      "mathFocus": "Pattern tables and count word features",
-      "inquiryFocus": "Light words and observation language",
-      "selFocus": "Careful checking and revision",
-      "makerProject": "Magic-e word cards",
+      "mathFocus": "pattern tables and count word features",
+      "inquiryFocus": "light words and observation language",
+      "selFocus": "careful checking and revision",
+      "makerProject": "Magic-E Word Cards",
       "printableType": "phonics",
       "primaryDomain": "light",
       "standards": [
@@ -2271,27 +1911,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through long vowels and silent e using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about long vowels and silent e.",
-            "Ask: “How can one letter change the sound and meaning of a word?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
           "literacy": "CVC/CVCe comparison and decodable reading",
-          "math": "Pattern tables and count word features",
-          "inquiry": "Light words and observation language",
-          "sel": "Careful checking and revision",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "math": "pattern tables and count word features",
+          "inquiry": "light words and observation language",
+          "sel": "careful checking and revision",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2301,35 +1925,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about long vowels and silent e.",
+            "Ask: “How can one letter change the sound and meaning of a word?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about long vowels and silent e and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through long vowels and silent e using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about long vowels and silent e.",
-            "Ask: “How can one letter change the sound and meaning of a word?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
           "literacy": "CVC/CVCe comparison and decodable reading",
-          "math": "Pattern tables and count word features",
-          "inquiry": "Light words and observation language",
-          "sel": "Careful checking and revision",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "math": "pattern tables and count word features",
+          "inquiry": "light words and observation language",
+          "sel": "careful checking and revision",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2339,35 +1954,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about long vowels and silent e.",
+            "Ask: “How can one letter change the sound and meaning of a word?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about long vowels and silent e and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through long vowels and silent e using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about long vowels and silent e.",
-            "Ask: “How can one letter change the sound and meaning of a word?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
           "literacy": "CVC/CVCe comparison and decodable reading",
-          "math": "Pattern tables and count word features",
-          "inquiry": "Light words and observation language",
-          "sel": "Careful checking and revision",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "math": "pattern tables and count word features",
+          "inquiry": "light words and observation language",
+          "sel": "careful checking and revision",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2377,35 +1983,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about long vowels and silent e.",
+            "Ask: “How can one letter change the sound and meaning of a word?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about long vowels and silent e and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through long vowels and silent e using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about long vowels and silent e.",
-            "Ask: “How can one letter change the sound and meaning of a word?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
           "literacy": "CVC/CVCe comparison and decodable reading",
-          "math": "Pattern tables and count word features",
-          "inquiry": "Light words and observation language",
-          "sel": "Careful checking and revision",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "math": "pattern tables and count word features",
+          "inquiry": "light words and observation language",
+          "sel": "careful checking and revision",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2415,35 +2012,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about long vowels and silent e.",
+            "Ask: “How can one letter change the sound and meaning of a word?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about long vowels and silent e and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through long vowels and silent e using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about long vowels and silent e.",
-            "Ask: “How can one letter change the sound and meaning of a word?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
           "literacy": "CVC/CVCe comparison and decodable reading",
-          "math": "Pattern tables and count word features",
-          "inquiry": "Light words and observation language",
-          "sel": "Careful checking and revision",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "math": "pattern tables and count word features",
+          "inquiry": "light words and observation language",
+          "sel": "careful checking and revision",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2453,8 +2041,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about long vowels and silent e.",
+            "Ask: “How can one letter change the sound and meaning of a word?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about long vowels and silent e and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -2474,12 +2069,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Pattern tables and count word features."
+            "prompt": "Completes and explains the weekly math focus: pattern tables and count word features."
           },
           {
             "domain": "Math Reasoning",
@@ -2489,17 +2084,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Light words and observation language."
+            "prompt": "Observes, maps, tests, researches, or explains: light words and observation language."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Magic-e word cards."
+            "prompt": "Completes or contributes to the project/workshop: Magic-E Word Cards."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Careful checking and revision."
+            "prompt": "Practices the weekly SEL focus: careful checking and revision."
           },
           {
             "domain": "Independence",
@@ -2520,11 +2115,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Addition and Subtraction to 20",
       "theme": "Make-ten, doubles, near doubles, fact families, and strategy choice",
       "essentialQuestion": "Which strategy helps me solve accurately and explain?",
-      "literacyFocus": "Read and write math explanations",
-      "mathFocus": "Add/subtract within 20; make-ten and fact families",
-      "inquiryFocus": "Fair tests and recording results",
-      "selFocus": "Math confidence and correction habits",
-      "makerProject": "Strategy toolbox",
+      "literacyFocus": "read and write math explanations",
+      "mathFocus": "add/subtract within 20; make-ten and fact families",
+      "inquiryFocus": "fair tests and recording results",
+      "selFocus": "math confidence and correction habits",
+      "makerProject": "Strategy Toolbox",
       "printableType": "operations",
       "primaryDomain": "math",
       "standards": [
@@ -2542,27 +2137,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through addition and subtraction to 20 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about addition and subtraction to 20.",
-            "Ask: “Which strategy helps me solve accurately and explain?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Read and write math explanations",
-          "math": "Add/subtract within 20; make-ten and fact families",
-          "inquiry": "Fair tests and recording results",
-          "sel": "Math confidence and correction habits",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "read and write math explanations",
+          "math": "add/subtract within 20; make-ten and fact families",
+          "inquiry": "fair tests and recording results",
+          "sel": "math confidence and correction habits",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2572,35 +2151,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about addition and subtraction to 20.",
+            "Ask: “Which strategy helps me solve accurately and explain?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about addition and subtraction to 20 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through addition and subtraction to 20 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about addition and subtraction to 20.",
-            "Ask: “Which strategy helps me solve accurately and explain?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Read and write math explanations",
-          "math": "Add/subtract within 20; make-ten and fact families",
-          "inquiry": "Fair tests and recording results",
-          "sel": "Math confidence and correction habits",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "read and write math explanations",
+          "math": "add/subtract within 20; make-ten and fact families",
+          "inquiry": "fair tests and recording results",
+          "sel": "math confidence and correction habits",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2610,35 +2180,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about addition and subtraction to 20.",
+            "Ask: “Which strategy helps me solve accurately and explain?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about addition and subtraction to 20 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through addition and subtraction to 20 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about addition and subtraction to 20.",
-            "Ask: “Which strategy helps me solve accurately and explain?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Read and write math explanations",
-          "math": "Add/subtract within 20; make-ten and fact families",
-          "inquiry": "Fair tests and recording results",
-          "sel": "Math confidence and correction habits",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "read and write math explanations",
+          "math": "add/subtract within 20; make-ten and fact families",
+          "inquiry": "fair tests and recording results",
+          "sel": "math confidence and correction habits",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2648,35 +2209,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about addition and subtraction to 20.",
+            "Ask: “Which strategy helps me solve accurately and explain?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about addition and subtraction to 20 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through addition and subtraction to 20 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about addition and subtraction to 20.",
-            "Ask: “Which strategy helps me solve accurately and explain?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Read and write math explanations",
-          "math": "Add/subtract within 20; make-ten and fact families",
-          "inquiry": "Fair tests and recording results",
-          "sel": "Math confidence and correction habits",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "read and write math explanations",
+          "math": "add/subtract within 20; make-ten and fact families",
+          "inquiry": "fair tests and recording results",
+          "sel": "math confidence and correction habits",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2686,35 +2238,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about addition and subtraction to 20.",
+            "Ask: “Which strategy helps me solve accurately and explain?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about addition and subtraction to 20 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through addition and subtraction to 20 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about addition and subtraction to 20.",
-            "Ask: “Which strategy helps me solve accurately and explain?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Read and write math explanations",
-          "math": "Add/subtract within 20; make-ten and fact families",
-          "inquiry": "Fair tests and recording results",
-          "sel": "Math confidence and correction habits",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "read and write math explanations",
+          "math": "add/subtract within 20; make-ten and fact families",
+          "inquiry": "fair tests and recording results",
+          "sel": "math confidence and correction habits",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2724,8 +2267,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about addition and subtraction to 20.",
+            "Ask: “Which strategy helps me solve accurately and explain?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about addition and subtraction to 20 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -2735,7 +2285,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Read and write math explanations."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: read and write math explanations."
           },
           {
             "domain": "Writing",
@@ -2745,12 +2295,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Add/subtract within 20; make-ten and fact families."
+            "prompt": "Completes and explains the weekly math focus: add/subtract within 20; make-ten and fact families."
           },
           {
             "domain": "Math Reasoning",
@@ -2760,17 +2310,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Fair tests and recording results."
+            "prompt": "Observes, maps, tests, researches, or explains: fair tests and recording results."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Strategy toolbox."
+            "prompt": "Completes or contributes to the project/workshop: Strategy Toolbox."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Math confidence and correction habits."
+            "prompt": "Practices the weekly SEL focus: math confidence and correction habits."
           },
           {
             "domain": "Independence",
@@ -2791,11 +2341,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Sound, Vibration, and Music",
       "theme": "Sound, vibration, rhythm, volume, pitch, poetry, and instrument design",
       "essentialQuestion": "How can we make, hear, feel, and describe sound?",
-      "literacyFocus": "Sound words, rhythm, syllables, and poems",
-      "mathFocus": "Patterns, beats, tally marks, and comparison graphs",
-      "inquiryFocus": "Sound/vibration investigations and engineering",
-      "selFocus": "Listening and respectful performance",
-      "makerProject": "Classroom instrument build",
+      "literacyFocus": "sound words, rhythm, syllables, and poems",
+      "mathFocus": "patterns, beats, tally marks, and comparison graphs",
+      "inquiryFocus": "sound/vibration investigations and engineering",
+      "selFocus": "listening and respectful performance",
+      "makerProject": "Classroom Instrument Build",
       "printableType": "science",
       "primaryDomain": "sound",
       "standards": [
@@ -2814,27 +2364,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through sound, vibration, and music using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about sound, vibration, and music.",
-            "Ask: “How can we make, hear, feel, and describe sound?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Sound words, rhythm, syllables, and poems",
-          "math": "Patterns, beats, tally marks, and comparison graphs",
-          "inquiry": "Sound/vibration investigations and engineering",
-          "sel": "Listening and respectful performance",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "sound words, rhythm, syllables, and poems",
+          "math": "patterns, beats, tally marks, and comparison graphs",
+          "inquiry": "sound/vibration investigations and engineering",
+          "sel": "listening and respectful performance",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2844,35 +2378,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about sound, vibration, and music.",
+            "Ask: “How can we make, hear, feel, and describe sound?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about sound, vibration, and music and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through sound, vibration, and music using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about sound, vibration, and music.",
-            "Ask: “How can we make, hear, feel, and describe sound?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Sound words, rhythm, syllables, and poems",
-          "math": "Patterns, beats, tally marks, and comparison graphs",
-          "inquiry": "Sound/vibration investigations and engineering",
-          "sel": "Listening and respectful performance",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "sound words, rhythm, syllables, and poems",
+          "math": "patterns, beats, tally marks, and comparison graphs",
+          "inquiry": "sound/vibration investigations and engineering",
+          "sel": "listening and respectful performance",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2882,35 +2407,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about sound, vibration, and music.",
+            "Ask: “How can we make, hear, feel, and describe sound?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about sound, vibration, and music and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through sound, vibration, and music using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about sound, vibration, and music.",
-            "Ask: “How can we make, hear, feel, and describe sound?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Sound words, rhythm, syllables, and poems",
-          "math": "Patterns, beats, tally marks, and comparison graphs",
-          "inquiry": "Sound/vibration investigations and engineering",
-          "sel": "Listening and respectful performance",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "sound words, rhythm, syllables, and poems",
+          "math": "patterns, beats, tally marks, and comparison graphs",
+          "inquiry": "sound/vibration investigations and engineering",
+          "sel": "listening and respectful performance",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2920,35 +2436,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about sound, vibration, and music.",
+            "Ask: “How can we make, hear, feel, and describe sound?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about sound, vibration, and music and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through sound, vibration, and music using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about sound, vibration, and music.",
-            "Ask: “How can we make, hear, feel, and describe sound?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Sound words, rhythm, syllables, and poems",
-          "math": "Patterns, beats, tally marks, and comparison graphs",
-          "inquiry": "Sound/vibration investigations and engineering",
-          "sel": "Listening and respectful performance",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "sound words, rhythm, syllables, and poems",
+          "math": "patterns, beats, tally marks, and comparison graphs",
+          "inquiry": "sound/vibration investigations and engineering",
+          "sel": "listening and respectful performance",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2958,35 +2465,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about sound, vibration, and music.",
+            "Ask: “How can we make, hear, feel, and describe sound?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about sound, vibration, and music and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through sound, vibration, and music using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about sound, vibration, and music.",
-            "Ask: “How can we make, hear, feel, and describe sound?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Sound words, rhythm, syllables, and poems",
-          "math": "Patterns, beats, tally marks, and comparison graphs",
-          "inquiry": "Sound/vibration investigations and engineering",
-          "sel": "Listening and respectful performance",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "sound words, rhythm, syllables, and poems",
+          "math": "patterns, beats, tally marks, and comparison graphs",
+          "inquiry": "sound/vibration investigations and engineering",
+          "sel": "listening and respectful performance",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -2996,8 +2494,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about sound, vibration, and music.",
+            "Ask: “How can we make, hear, feel, and describe sound?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about sound, vibration, and music and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -3007,7 +2512,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Sound words, rhythm, syllables, and poems."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: sound words, rhythm, syllables, and poems."
           },
           {
             "domain": "Writing",
@@ -3017,12 +2522,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Patterns, beats, tally marks, and comparison graphs."
+            "prompt": "Completes and explains the weekly math focus: patterns, beats, tally marks, and comparison graphs."
           },
           {
             "domain": "Math Reasoning",
@@ -3032,17 +2537,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Sound/vibration investigations and engineering."
+            "prompt": "Observes, maps, tests, researches, or explains: sound/vibration investigations and engineering."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Classroom instrument build."
+            "prompt": "Completes or contributes to the project/workshop: Classroom Instrument Build."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Listening and respectful performance."
+            "prompt": "Practices the weekly SEL focus: listening and respectful performance."
           },
           {
             "domain": "Independence",
@@ -3063,11 +2568,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Opinion Writing and Respectful Voice",
       "theme": "Opinion writing, reasons, because statements, listening, respectful disagreement, and class choices",
       "essentialQuestion": "How can we share an opinion respectfully and support it with reasons?",
-      "literacyFocus": "Opinion sentence frames and reason words",
-      "mathFocus": "Survey data and simple picture graphs",
-      "inquiryFocus": "Classroom civics: voting, fairness, and voice",
-      "selFocus": "Responsible decision-making",
-      "makerProject": "Opinion poster",
+      "literacyFocus": "opinion sentence frames and reason words",
+      "mathFocus": "survey data and simple picture graphs",
+      "inquiryFocus": "classroom civics: voting, fairness, and voice",
+      "selFocus": "responsible decision-making",
+      "makerProject": "Opinion Poster",
       "printableType": "writing",
       "primaryDomain": "civics",
       "standards": [
@@ -3078,8 +2583,8 @@ window.KHAE_GRADE1_DATA = {
         "KHAE-ART-1",
         "KHAE-PEH-1",
         "KHAE-PORT-1",
-        "KHAE-SS-1",
-        "KHAE-SCI-1"
+        "KHAE-SCI-1",
+        "KHAE-SS-1"
       ],
       "lessons": [
         {
@@ -3087,27 +2592,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through opinion writing and respectful voice using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about opinion writing and respectful voice.",
-            "Ask: “How can we share an opinion respectfully and support it with reasons?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Opinion sentence frames and reason words",
-          "math": "Survey data and simple picture graphs",
-          "inquiry": "Classroom civics: voting, fairness, and voice",
-          "sel": "Responsible decision-making",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "opinion sentence frames and reason words",
+          "math": "survey data and simple picture graphs",
+          "inquiry": "classroom civics: voting, fairness, and voice",
+          "sel": "responsible decision-making",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3117,35 +2606,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about opinion writing and respectful voice.",
+            "Ask: “How can we share an opinion respectfully and support it with reasons?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about opinion writing and respectful voice and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through opinion writing and respectful voice using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about opinion writing and respectful voice.",
-            "Ask: “How can we share an opinion respectfully and support it with reasons?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Opinion sentence frames and reason words",
-          "math": "Survey data and simple picture graphs",
-          "inquiry": "Classroom civics: voting, fairness, and voice",
-          "sel": "Responsible decision-making",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "opinion sentence frames and reason words",
+          "math": "survey data and simple picture graphs",
+          "inquiry": "classroom civics: voting, fairness, and voice",
+          "sel": "responsible decision-making",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3155,35 +2635,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about opinion writing and respectful voice.",
+            "Ask: “How can we share an opinion respectfully and support it with reasons?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about opinion writing and respectful voice and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through opinion writing and respectful voice using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about opinion writing and respectful voice.",
-            "Ask: “How can we share an opinion respectfully and support it with reasons?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Opinion sentence frames and reason words",
-          "math": "Survey data and simple picture graphs",
-          "inquiry": "Classroom civics: voting, fairness, and voice",
-          "sel": "Responsible decision-making",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "opinion sentence frames and reason words",
+          "math": "survey data and simple picture graphs",
+          "inquiry": "classroom civics: voting, fairness, and voice",
+          "sel": "responsible decision-making",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3193,35 +2664,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about opinion writing and respectful voice.",
+            "Ask: “How can we share an opinion respectfully and support it with reasons?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about opinion writing and respectful voice and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through opinion writing and respectful voice using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about opinion writing and respectful voice.",
-            "Ask: “How can we share an opinion respectfully and support it with reasons?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Opinion sentence frames and reason words",
-          "math": "Survey data and simple picture graphs",
-          "inquiry": "Classroom civics: voting, fairness, and voice",
-          "sel": "Responsible decision-making",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "opinion sentence frames and reason words",
+          "math": "survey data and simple picture graphs",
+          "inquiry": "classroom civics: voting, fairness, and voice",
+          "sel": "responsible decision-making",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3231,35 +2693,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about opinion writing and respectful voice.",
+            "Ask: “How can we share an opinion respectfully and support it with reasons?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about opinion writing and respectful voice and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through opinion writing and respectful voice using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about opinion writing and respectful voice.",
-            "Ask: “How can we share an opinion respectfully and support it with reasons?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Opinion sentence frames and reason words",
-          "math": "Survey data and simple picture graphs",
-          "inquiry": "Classroom civics: voting, fairness, and voice",
-          "sel": "Responsible decision-making",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "opinion sentence frames and reason words",
+          "math": "survey data and simple picture graphs",
+          "inquiry": "classroom civics: voting, fairness, and voice",
+          "sel": "responsible decision-making",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3269,8 +2722,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about opinion writing and respectful voice.",
+            "Ask: “How can we share an opinion respectfully and support it with reasons?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about opinion writing and respectful voice and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -3280,7 +2740,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Opinion sentence frames and reason words."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: opinion sentence frames and reason words."
           },
           {
             "domain": "Writing",
@@ -3290,12 +2750,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Survey data and simple picture graphs."
+            "prompt": "Completes and explains the weekly math focus: survey data and simple picture graphs."
           },
           {
             "domain": "Math Reasoning",
@@ -3305,17 +2765,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Classroom civics: voting, fairness, and voice."
+            "prompt": "Observes, maps, tests, researches, or explains: classroom civics: voting, fairness, and voice."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Opinion poster."
+            "prompt": "Completes or contributes to the project/workshop: Opinion Poster."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Responsible decision-making."
+            "prompt": "Practices the weekly SEL focus: responsible decision-making."
           },
           {
             "domain": "Independence",
@@ -3336,11 +2796,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Place Value: Tens and Ones",
       "theme": "Tens/ones, bundles, base-ten models, expanded thinking, and numbers to 120",
       "essentialQuestion": "How do tens and ones help us understand bigger numbers?",
-      "literacyFocus": "Number words and explanatory sentences",
-      "mathFocus": "Place value, bundles, expanded form, compare numbers",
-      "inquiryFocus": "Build and test structures with groups of ten",
-      "selFocus": "Patience with multi-step tasks",
-      "makerProject": "Tens-and-ones town",
+      "literacyFocus": "number words and explanatory sentences",
+      "mathFocus": "place value, bundles, expanded form, compare numbers",
+      "inquiryFocus": "build and test structures with groups of ten",
+      "selFocus": "patience with multi-step tasks",
+      "makerProject": "Tens-and-Ones Town",
       "printableType": "place_value",
       "primaryDomain": "math",
       "standards": [
@@ -3358,27 +2818,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through place value: tens and ones using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about place value: tens and ones.",
-            "Ask: “How do tens and ones help us understand bigger numbers?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Number words and explanatory sentences",
-          "math": "Place value, bundles, expanded form, compare numbers",
-          "inquiry": "Build and test structures with groups of ten",
-          "sel": "Patience with multi-step tasks",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "number words and explanatory sentences",
+          "math": "place value, bundles, expanded form, compare numbers",
+          "inquiry": "build and test structures with groups of ten",
+          "sel": "patience with multi-step tasks",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3388,35 +2832,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about place value: tens and ones.",
+            "Ask: “How do tens and ones help us understand bigger numbers?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about place value: tens and ones and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through place value: tens and ones using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about place value: tens and ones.",
-            "Ask: “How do tens and ones help us understand bigger numbers?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Number words and explanatory sentences",
-          "math": "Place value, bundles, expanded form, compare numbers",
-          "inquiry": "Build and test structures with groups of ten",
-          "sel": "Patience with multi-step tasks",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "number words and explanatory sentences",
+          "math": "place value, bundles, expanded form, compare numbers",
+          "inquiry": "build and test structures with groups of ten",
+          "sel": "patience with multi-step tasks",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3426,35 +2861,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about place value: tens and ones.",
+            "Ask: “How do tens and ones help us understand bigger numbers?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about place value: tens and ones and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through place value: tens and ones using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about place value: tens and ones.",
-            "Ask: “How do tens and ones help us understand bigger numbers?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Number words and explanatory sentences",
-          "math": "Place value, bundles, expanded form, compare numbers",
-          "inquiry": "Build and test structures with groups of ten",
-          "sel": "Patience with multi-step tasks",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "number words and explanatory sentences",
+          "math": "place value, bundles, expanded form, compare numbers",
+          "inquiry": "build and test structures with groups of ten",
+          "sel": "patience with multi-step tasks",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3464,35 +2890,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about place value: tens and ones.",
+            "Ask: “How do tens and ones help us understand bigger numbers?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about place value: tens and ones and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through place value: tens and ones using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about place value: tens and ones.",
-            "Ask: “How do tens and ones help us understand bigger numbers?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Number words and explanatory sentences",
-          "math": "Place value, bundles, expanded form, compare numbers",
-          "inquiry": "Build and test structures with groups of ten",
-          "sel": "Patience with multi-step tasks",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "number words and explanatory sentences",
+          "math": "place value, bundles, expanded form, compare numbers",
+          "inquiry": "build and test structures with groups of ten",
+          "sel": "patience with multi-step tasks",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3502,35 +2919,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about place value: tens and ones.",
+            "Ask: “How do tens and ones help us understand bigger numbers?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about place value: tens and ones and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through place value: tens and ones using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about place value: tens and ones.",
-            "Ask: “How do tens and ones help us understand bigger numbers?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Number words and explanatory sentences",
-          "math": "Place value, bundles, expanded form, compare numbers",
-          "inquiry": "Build and test structures with groups of ten",
-          "sel": "Patience with multi-step tasks",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "number words and explanatory sentences",
+          "math": "place value, bundles, expanded form, compare numbers",
+          "inquiry": "build and test structures with groups of ten",
+          "sel": "patience with multi-step tasks",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3540,8 +2948,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about place value: tens and ones.",
+            "Ask: “How do tens and ones help us understand bigger numbers?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about place value: tens and ones and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -3551,7 +2966,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Number words and explanatory sentences."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: number words and explanatory sentences."
           },
           {
             "domain": "Writing",
@@ -3561,12 +2976,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Place value, bundles, expanded form, compare numbers."
+            "prompt": "Completes and explains the weekly math focus: place value, bundles, expanded form, compare numbers."
           },
           {
             "domain": "Math Reasoning",
@@ -3576,17 +2991,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Build and test structures with groups of ten."
+            "prompt": "Observes, maps, tests, researches, or explains: build and test structures with groups of ten."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Tens-and-ones town."
+            "prompt": "Completes or contributes to the project/workshop: Tens-and-Ones Town."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Patience with multi-step tasks."
+            "prompt": "Practices the weekly SEL focus: patience with multi-step tasks."
           },
           {
             "domain": "Independence",
@@ -3607,11 +3022,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Light, Shadows, and Sight",
       "theme": "Light sources, shadows, transparent/translucent/opaque materials, and observation",
       "essentialQuestion": "How does light help us see, and how do shadows change?",
-      "literacyFocus": "Science vocabulary and cause/effect sentences",
-      "mathFocus": "Measure and compare shadow lengths",
-      "inquiryFocus": "Light and shadow investigation with evidence",
-      "selFocus": "Wonder and careful observation",
-      "makerProject": "Shadow theatre",
+      "literacyFocus": "science vocabulary and cause/effect sentences",
+      "mathFocus": "measure and compare shadow lengths",
+      "inquiryFocus": "light and shadow investigation with evidence",
+      "selFocus": "wonder and careful observation",
+      "makerProject": "Shadow Theatre",
       "printableType": "science",
       "primaryDomain": "light",
       "standards": [
@@ -3630,27 +3045,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through light, shadows, and sight using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about light, shadows, and sight.",
-            "Ask: “How does light help us see, and how do shadows change?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Science vocabulary and cause/effect sentences",
-          "math": "Measure and compare shadow lengths",
-          "inquiry": "Light and shadow investigation with evidence",
-          "sel": "Wonder and careful observation",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "science vocabulary and cause/effect sentences",
+          "math": "measure and compare shadow lengths",
+          "inquiry": "light and shadow investigation with evidence",
+          "sel": "wonder and careful observation",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3660,35 +3059,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about light, shadows, and sight.",
+            "Ask: “How does light help us see, and how do shadows change?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about light, shadows, and sight and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through light, shadows, and sight using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about light, shadows, and sight.",
-            "Ask: “How does light help us see, and how do shadows change?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Science vocabulary and cause/effect sentences",
-          "math": "Measure and compare shadow lengths",
-          "inquiry": "Light and shadow investigation with evidence",
-          "sel": "Wonder and careful observation",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "science vocabulary and cause/effect sentences",
+          "math": "measure and compare shadow lengths",
+          "inquiry": "light and shadow investigation with evidence",
+          "sel": "wonder and careful observation",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3698,35 +3088,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about light, shadows, and sight.",
+            "Ask: “How does light help us see, and how do shadows change?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about light, shadows, and sight and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through light, shadows, and sight using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about light, shadows, and sight.",
-            "Ask: “How does light help us see, and how do shadows change?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Science vocabulary and cause/effect sentences",
-          "math": "Measure and compare shadow lengths",
-          "inquiry": "Light and shadow investigation with evidence",
-          "sel": "Wonder and careful observation",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "science vocabulary and cause/effect sentences",
+          "math": "measure and compare shadow lengths",
+          "inquiry": "light and shadow investigation with evidence",
+          "sel": "wonder and careful observation",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3736,35 +3117,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about light, shadows, and sight.",
+            "Ask: “How does light help us see, and how do shadows change?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about light, shadows, and sight and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through light, shadows, and sight using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about light, shadows, and sight.",
-            "Ask: “How does light help us see, and how do shadows change?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Science vocabulary and cause/effect sentences",
-          "math": "Measure and compare shadow lengths",
-          "inquiry": "Light and shadow investigation with evidence",
-          "sel": "Wonder and careful observation",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "science vocabulary and cause/effect sentences",
+          "math": "measure and compare shadow lengths",
+          "inquiry": "light and shadow investigation with evidence",
+          "sel": "wonder and careful observation",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3774,35 +3146,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about light, shadows, and sight.",
+            "Ask: “How does light help us see, and how do shadows change?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about light, shadows, and sight and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through light, shadows, and sight using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about light, shadows, and sight.",
-            "Ask: “How does light help us see, and how do shadows change?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Science vocabulary and cause/effect sentences",
-          "math": "Measure and compare shadow lengths",
-          "inquiry": "Light and shadow investigation with evidence",
-          "sel": "Wonder and careful observation",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "science vocabulary and cause/effect sentences",
+          "math": "measure and compare shadow lengths",
+          "inquiry": "light and shadow investigation with evidence",
+          "sel": "wonder and careful observation",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3812,8 +3175,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about light, shadows, and sight.",
+            "Ask: “How does light help us see, and how do shadows change?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about light, shadows, and sight and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -3823,7 +3193,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Science vocabulary and cause/effect sentences."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: science vocabulary and cause/effect sentences."
           },
           {
             "domain": "Writing",
@@ -3833,12 +3203,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Measure and compare shadow lengths."
+            "prompt": "Completes and explains the weekly math focus: measure and compare shadow lengths."
           },
           {
             "domain": "Math Reasoning",
@@ -3848,17 +3218,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Light and shadow investigation with evidence."
+            "prompt": "Observes, maps, tests, researches, or explains: light and shadow investigation with evidence."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Shadow theatre."
+            "prompt": "Completes or contributes to the project/workshop: Shadow Theatre."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Wonder and careful observation."
+            "prompt": "Practices the weekly SEL focus: wonder and careful observation."
           },
           {
             "domain": "Independence",
@@ -3879,11 +3249,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Informational Reading and Research",
       "theme": "Facts, questions, diagrams, captions, text features, research notebooks, and oral reports",
       "essentialQuestion": "How do readers learn facts and teach others?",
-      "literacyFocus": "Main topic, details, text features, and note-taking",
-      "mathFocus": "Count facts, sort categories, and make simple data displays",
-      "inquiryFocus": "Research as question, source, evidence, and share",
-      "selFocus": "Curiosity and careful truth-telling",
-      "makerProject": "Mini research poster",
+      "literacyFocus": "main topic, details, text features, and note-taking",
+      "mathFocus": "count facts, sort categories, and make data displays",
+      "inquiryFocus": "research as question, source, evidence, and share",
+      "selFocus": "curiosity and careful truth-telling",
+      "makerProject": "Mini Research Poster",
       "printableType": "research",
       "primaryDomain": "inquiry",
       "standards": [
@@ -3902,27 +3272,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through informational reading and research using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about informational reading and research.",
-            "Ask: “How do readers learn facts and teach others?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Main topic, details, text features, and note-taking",
-          "math": "Count facts, sort categories, and make simple data displays",
-          "inquiry": "Research as question, source, evidence, and share",
-          "sel": "Curiosity and careful truth-telling",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "main topic, details, text features, and note-taking",
+          "math": "count facts, sort categories, and make data displays",
+          "inquiry": "research as question, source, evidence, and share",
+          "sel": "curiosity and careful truth-telling",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3932,35 +3286,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about informational reading and research.",
+            "Ask: “How do readers learn facts and teach others?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about informational reading and research and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through informational reading and research using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about informational reading and research.",
-            "Ask: “How do readers learn facts and teach others?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Main topic, details, text features, and note-taking",
-          "math": "Count facts, sort categories, and make simple data displays",
-          "inquiry": "Research as question, source, evidence, and share",
-          "sel": "Curiosity and careful truth-telling",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "main topic, details, text features, and note-taking",
+          "math": "count facts, sort categories, and make data displays",
+          "inquiry": "research as question, source, evidence, and share",
+          "sel": "curiosity and careful truth-telling",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -3970,35 +3315,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about informational reading and research.",
+            "Ask: “How do readers learn facts and teach others?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about informational reading and research and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through informational reading and research using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about informational reading and research.",
-            "Ask: “How do readers learn facts and teach others?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Main topic, details, text features, and note-taking",
-          "math": "Count facts, sort categories, and make simple data displays",
-          "inquiry": "Research as question, source, evidence, and share",
-          "sel": "Curiosity and careful truth-telling",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "main topic, details, text features, and note-taking",
+          "math": "count facts, sort categories, and make data displays",
+          "inquiry": "research as question, source, evidence, and share",
+          "sel": "curiosity and careful truth-telling",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4008,35 +3344,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about informational reading and research.",
+            "Ask: “How do readers learn facts and teach others?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about informational reading and research and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through informational reading and research using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about informational reading and research.",
-            "Ask: “How do readers learn facts and teach others?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Main topic, details, text features, and note-taking",
-          "math": "Count facts, sort categories, and make simple data displays",
-          "inquiry": "Research as question, source, evidence, and share",
-          "sel": "Curiosity and careful truth-telling",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "main topic, details, text features, and note-taking",
+          "math": "count facts, sort categories, and make data displays",
+          "inquiry": "research as question, source, evidence, and share",
+          "sel": "curiosity and careful truth-telling",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4046,35 +3373,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about informational reading and research.",
+            "Ask: “How do readers learn facts and teach others?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about informational reading and research and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through informational reading and research using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about informational reading and research.",
-            "Ask: “How do readers learn facts and teach others?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Main topic, details, text features, and note-taking",
-          "math": "Count facts, sort categories, and make simple data displays",
-          "inquiry": "Research as question, source, evidence, and share",
-          "sel": "Curiosity and careful truth-telling",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "main topic, details, text features, and note-taking",
+          "math": "count facts, sort categories, and make data displays",
+          "inquiry": "research as question, source, evidence, and share",
+          "sel": "curiosity and careful truth-telling",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4084,8 +3402,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about informational reading and research.",
+            "Ask: “How do readers learn facts and teach others?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about informational reading and research and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -4095,7 +3420,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Main topic, details, text features, and note-taking."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: main topic, details, text features, and note-taking."
           },
           {
             "domain": "Writing",
@@ -4105,12 +3430,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Count facts, sort categories, and make simple data displays."
+            "prompt": "Completes and explains the weekly math focus: count facts, sort categories, and make data displays."
           },
           {
             "domain": "Math Reasoning",
@@ -4120,17 +3445,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Research as question, source, evidence, and share."
+            "prompt": "Observes, maps, tests, researches, or explains: research as question, source, evidence, and share."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Mini research poster."
+            "prompt": "Completes or contributes to the project/workshop: Mini Research Poster."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Curiosity and careful truth-telling."
+            "prompt": "Practices the weekly SEL focus: curiosity and careful truth-telling."
           },
           {
             "domain": "Independence",
@@ -4151,11 +3476,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Measurement and Data",
       "theme": "Nonstandard units, length comparison, data collection, picture graphs, and tally charts",
       "essentialQuestion": "How can measurement and data help us answer questions?",
-      "literacyFocus": "Measurement words and data statements",
-      "mathFocus": "Measure length, compare, tally, graph, interpret",
-      "inquiryFocus": "Fair measurement and observation routines",
-      "selFocus": "Accuracy and teamwork",
-      "makerProject": "Measurement museum",
+      "literacyFocus": "measurement words and data statements",
+      "mathFocus": "measure length, compare, tally, graph, interpret",
+      "inquiryFocus": "fair measurement and observation routines",
+      "selFocus": "accuracy and teamwork",
+      "makerProject": "Measurement Museum",
       "printableType": "measurement",
       "primaryDomain": "math",
       "standards": [
@@ -4174,27 +3499,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through measurement and data using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about measurement and data.",
-            "Ask: “How can measurement and data help us answer questions?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Measurement words and data statements",
-          "math": "Measure length, compare, tally, graph, interpret",
-          "inquiry": "Fair measurement and observation routines",
-          "sel": "Accuracy and teamwork",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "measurement words and data statements",
+          "math": "measure length, compare, tally, graph, interpret",
+          "inquiry": "fair measurement and observation routines",
+          "sel": "accuracy and teamwork",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4204,35 +3513,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about measurement and data.",
+            "Ask: “How can measurement and data help us answer questions?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about measurement and data and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through measurement and data using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about measurement and data.",
-            "Ask: “How can measurement and data help us answer questions?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Measurement words and data statements",
-          "math": "Measure length, compare, tally, graph, interpret",
-          "inquiry": "Fair measurement and observation routines",
-          "sel": "Accuracy and teamwork",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "measurement words and data statements",
+          "math": "measure length, compare, tally, graph, interpret",
+          "inquiry": "fair measurement and observation routines",
+          "sel": "accuracy and teamwork",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4242,35 +3542,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about measurement and data.",
+            "Ask: “How can measurement and data help us answer questions?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about measurement and data and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through measurement and data using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about measurement and data.",
-            "Ask: “How can measurement and data help us answer questions?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Measurement words and data statements",
-          "math": "Measure length, compare, tally, graph, interpret",
-          "inquiry": "Fair measurement and observation routines",
-          "sel": "Accuracy and teamwork",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "measurement words and data statements",
+          "math": "measure length, compare, tally, graph, interpret",
+          "inquiry": "fair measurement and observation routines",
+          "sel": "accuracy and teamwork",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4280,35 +3571,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about measurement and data.",
+            "Ask: “How can measurement and data help us answer questions?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about measurement and data and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through measurement and data using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about measurement and data.",
-            "Ask: “How can measurement and data help us answer questions?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Measurement words and data statements",
-          "math": "Measure length, compare, tally, graph, interpret",
-          "inquiry": "Fair measurement and observation routines",
-          "sel": "Accuracy and teamwork",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "measurement words and data statements",
+          "math": "measure length, compare, tally, graph, interpret",
+          "inquiry": "fair measurement and observation routines",
+          "sel": "accuracy and teamwork",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4318,35 +3600,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about measurement and data.",
+            "Ask: “How can measurement and data help us answer questions?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about measurement and data and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through measurement and data using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about measurement and data.",
-            "Ask: “How can measurement and data help us answer questions?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Measurement words and data statements",
-          "math": "Measure length, compare, tally, graph, interpret",
-          "inquiry": "Fair measurement and observation routines",
-          "sel": "Accuracy and teamwork",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "measurement words and data statements",
+          "math": "measure length, compare, tally, graph, interpret",
+          "inquiry": "fair measurement and observation routines",
+          "sel": "accuracy and teamwork",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4356,8 +3629,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about measurement and data.",
+            "Ask: “How can measurement and data help us answer questions?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about measurement and data and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -4367,7 +3647,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Measurement words and data statements."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: measurement words and data statements."
           },
           {
             "domain": "Writing",
@@ -4377,12 +3657,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Measure length, compare, tally, graph, interpret."
+            "prompt": "Completes and explains the weekly math focus: measure length, compare, tally, graph, interpret."
           },
           {
             "domain": "Math Reasoning",
@@ -4392,17 +3672,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Fair measurement and observation routines."
+            "prompt": "Observes, maps, tests, researches, or explains: fair measurement and observation routines."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Measurement museum."
+            "prompt": "Completes or contributes to the project/workshop: Measurement Museum."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Accuracy and teamwork."
+            "prompt": "Practices the weekly SEL focus: accuracy and teamwork."
           },
           {
             "domain": "Independence",
@@ -4423,11 +3703,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Winter Traditions and World Stories",
       "theme": "World stories, traditions, geography, culture, empathy, and story comparison",
       "essentialQuestion": "How do stories and traditions connect people across places?",
-      "literacyFocus": "Compare folktales, characters, settings, morals",
-      "mathFocus": "Compare quantities in story collections",
-      "inquiryFocus": "Maps, culture, traditions, respect, and history",
-      "selFocus": "Social awareness and gratitude",
-      "makerProject": "Story suitcase",
+      "literacyFocus": "compare folktales, characters, settings, morals",
+      "mathFocus": "compare quantities in story collections",
+      "inquiryFocus": "maps, culture, traditions, respect, and history",
+      "selFocus": "social awareness and gratitude",
+      "makerProject": "Story Suitcase",
       "printableType": "reading",
       "primaryDomain": "social",
       "standards": [
@@ -4446,27 +3726,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through winter traditions and world stories using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about winter traditions and world stories.",
-            "Ask: “How do stories and traditions connect people across places?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Compare folktales, characters, settings, morals",
-          "math": "Compare quantities in story collections",
-          "inquiry": "Maps, culture, traditions, respect, and history",
-          "sel": "Social awareness and gratitude",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "compare folktales, characters, settings, morals",
+          "math": "compare quantities in story collections",
+          "inquiry": "maps, culture, traditions, respect, and history",
+          "sel": "social awareness and gratitude",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4476,35 +3740,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about winter traditions and world stories.",
+            "Ask: “How do stories and traditions connect people across places?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about winter traditions and world stories and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through winter traditions and world stories using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about winter traditions and world stories.",
-            "Ask: “How do stories and traditions connect people across places?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Compare folktales, characters, settings, morals",
-          "math": "Compare quantities in story collections",
-          "inquiry": "Maps, culture, traditions, respect, and history",
-          "sel": "Social awareness and gratitude",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "compare folktales, characters, settings, morals",
+          "math": "compare quantities in story collections",
+          "inquiry": "maps, culture, traditions, respect, and history",
+          "sel": "social awareness and gratitude",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4514,35 +3769,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about winter traditions and world stories.",
+            "Ask: “How do stories and traditions connect people across places?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about winter traditions and world stories and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through winter traditions and world stories using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about winter traditions and world stories.",
-            "Ask: “How do stories and traditions connect people across places?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Compare folktales, characters, settings, morals",
-          "math": "Compare quantities in story collections",
-          "inquiry": "Maps, culture, traditions, respect, and history",
-          "sel": "Social awareness and gratitude",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "compare folktales, characters, settings, morals",
+          "math": "compare quantities in story collections",
+          "inquiry": "maps, culture, traditions, respect, and history",
+          "sel": "social awareness and gratitude",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4552,35 +3798,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about winter traditions and world stories.",
+            "Ask: “How do stories and traditions connect people across places?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about winter traditions and world stories and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through winter traditions and world stories using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about winter traditions and world stories.",
-            "Ask: “How do stories and traditions connect people across places?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Compare folktales, characters, settings, morals",
-          "math": "Compare quantities in story collections",
-          "inquiry": "Maps, culture, traditions, respect, and history",
-          "sel": "Social awareness and gratitude",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "compare folktales, characters, settings, morals",
+          "math": "compare quantities in story collections",
+          "inquiry": "maps, culture, traditions, respect, and history",
+          "sel": "social awareness and gratitude",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4590,35 +3827,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about winter traditions and world stories.",
+            "Ask: “How do stories and traditions connect people across places?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about winter traditions and world stories and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through winter traditions and world stories using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about winter traditions and world stories.",
-            "Ask: “How do stories and traditions connect people across places?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Compare folktales, characters, settings, morals",
-          "math": "Compare quantities in story collections",
-          "inquiry": "Maps, culture, traditions, respect, and history",
-          "sel": "Social awareness and gratitude",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "compare folktales, characters, settings, morals",
+          "math": "compare quantities in story collections",
+          "inquiry": "maps, culture, traditions, respect, and history",
+          "sel": "social awareness and gratitude",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4628,8 +3856,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about winter traditions and world stories.",
+            "Ask: “How do stories and traditions connect people across places?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about winter traditions and world stories and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -4639,7 +3874,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Compare folktales, characters, settings, morals."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: compare folktales, characters, settings, morals."
           },
           {
             "domain": "Writing",
@@ -4649,12 +3884,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Compare quantities in story collections."
+            "prompt": "Completes and explains the weekly math focus: compare quantities in story collections."
           },
           {
             "domain": "Math Reasoning",
@@ -4664,17 +3899,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Maps, culture, traditions, respect, and history."
+            "prompt": "Observes, maps, tests, researches, or explains: maps, culture, traditions, respect, and history."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Story suitcase."
+            "prompt": "Completes or contributes to the project/workshop: Story Suitcase."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Social awareness and gratitude."
+            "prompt": "Practices the weekly SEL focus: social awareness and gratitude."
           },
           {
             "domain": "Independence",
@@ -4695,11 +3930,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Midyear Review and Demonstration",
       "theme": "Cumulative review, portfolio conference, midterm, reading/writing/math/inquiry demonstration",
       "essentialQuestion": "How can I show what I have learned so far?",
-      "literacyFocus": "Midyear reading, writing, speaking, and listening",
-      "mathFocus": "Midyear operations, place value, measurement, and data review",
-      "inquiryFocus": "Inquiry review and evidence explanation",
-      "selFocus": "Pride, reflection, and goal setting",
-      "makerProject": "Midyear portfolio cover",
+      "literacyFocus": "midyear reading, writing, speaking, and listening",
+      "mathFocus": "midyear operations, place value, measurement, and data",
+      "inquiryFocus": "inquiry review and evidence explanation",
+      "selFocus": "pride, reflection, and goal setting",
+      "makerProject": "Midyear Portfolio Cover",
       "printableType": "midterm",
       "primaryDomain": "review",
       "standards": [
@@ -4718,27 +3953,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through midyear review and demonstration using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about midyear review and demonstration.",
-            "Ask: “How can I show what I have learned so far?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Midyear reading, writing, speaking, and listening",
-          "math": "Midyear operations, place value, measurement, and data review",
-          "inquiry": "Inquiry review and evidence explanation",
-          "sel": "Pride, reflection, and goal setting",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "midyear reading, writing, speaking, and listening",
+          "math": "midyear operations, place value, measurement, and data",
+          "inquiry": "inquiry review and evidence explanation",
+          "sel": "pride, reflection, and goal setting",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4748,35 +3967,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about midyear review and demonstration.",
+            "Ask: “How can I show what I have learned so far?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about midyear review and demonstration and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through midyear review and demonstration using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about midyear review and demonstration.",
-            "Ask: “How can I show what I have learned so far?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Midyear reading, writing, speaking, and listening",
-          "math": "Midyear operations, place value, measurement, and data review",
-          "inquiry": "Inquiry review and evidence explanation",
-          "sel": "Pride, reflection, and goal setting",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "midyear reading, writing, speaking, and listening",
+          "math": "midyear operations, place value, measurement, and data",
+          "inquiry": "inquiry review and evidence explanation",
+          "sel": "pride, reflection, and goal setting",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4786,35 +3996,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about midyear review and demonstration.",
+            "Ask: “How can I show what I have learned so far?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about midyear review and demonstration and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through midyear review and demonstration using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about midyear review and demonstration.",
-            "Ask: “How can I show what I have learned so far?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Midyear reading, writing, speaking, and listening",
-          "math": "Midyear operations, place value, measurement, and data review",
-          "inquiry": "Inquiry review and evidence explanation",
-          "sel": "Pride, reflection, and goal setting",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "midyear reading, writing, speaking, and listening",
+          "math": "midyear operations, place value, measurement, and data",
+          "inquiry": "inquiry review and evidence explanation",
+          "sel": "pride, reflection, and goal setting",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4824,35 +4025,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about midyear review and demonstration.",
+            "Ask: “How can I show what I have learned so far?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about midyear review and demonstration and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through midyear review and demonstration using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about midyear review and demonstration.",
-            "Ask: “How can I show what I have learned so far?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Midyear reading, writing, speaking, and listening",
-          "math": "Midyear operations, place value, measurement, and data review",
-          "inquiry": "Inquiry review and evidence explanation",
-          "sel": "Pride, reflection, and goal setting",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "midyear reading, writing, speaking, and listening",
+          "math": "midyear operations, place value, measurement, and data",
+          "inquiry": "inquiry review and evidence explanation",
+          "sel": "pride, reflection, and goal setting",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4862,35 +4054,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about midyear review and demonstration.",
+            "Ask: “How can I show what I have learned so far?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about midyear review and demonstration and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through midyear review and demonstration using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about midyear review and demonstration.",
-            "Ask: “How can I show what I have learned so far?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Midyear reading, writing, speaking, and listening",
-          "math": "Midyear operations, place value, measurement, and data review",
-          "inquiry": "Inquiry review and evidence explanation",
-          "sel": "Pride, reflection, and goal setting",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "midyear reading, writing, speaking, and listening",
+          "math": "midyear operations, place value, measurement, and data",
+          "inquiry": "inquiry review and evidence explanation",
+          "sel": "pride, reflection, and goal setting",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -4900,8 +4083,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about midyear review and demonstration.",
+            "Ask: “How can I show what I have learned so far?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about midyear review and demonstration and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -4911,7 +4101,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Midyear reading, writing, speaking, and listening."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: midyear reading, writing, speaking, and listening."
           },
           {
             "domain": "Writing",
@@ -4921,12 +4111,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Midyear operations, place value, measurement, and data review."
+            "prompt": "Completes and explains the weekly math focus: midyear operations, place value, measurement, and data."
           },
           {
             "domain": "Math Reasoning",
@@ -4936,17 +4126,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Inquiry review and evidence explanation."
+            "prompt": "Observes, maps, tests, researches, or explains: inquiry review and evidence explanation."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Midyear portfolio cover."
+            "prompt": "Completes or contributes to the project/workshop: Midyear Portfolio Cover."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Pride, reflection, and goal setting."
+            "prompt": "Practices the weekly SEL focus: pride, reflection, and goal setting."
           },
           {
             "domain": "Independence",
@@ -4967,11 +4157,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Goal Setting and Growth Mindset",
       "theme": "New-year goals, revision, learning strategies, reading stamina, math correction, and reflection",
       "essentialQuestion": "How do learners improve with practice and feedback?",
-      "literacyFocus": "Goal statements, self-reflection, and revision",
-      "mathFocus": "Review strategies and explain choices",
-      "inquiryFocus": "Growth as change over time",
-      "selFocus": "Self-management and perseverance",
-      "makerProject": "Goal ladder",
+      "literacyFocus": "goal statements, self-reflection, and revision",
+      "mathFocus": "review strategies and explain choices",
+      "inquiryFocus": "growth as change over time",
+      "selFocus": "self-management and perseverance",
+      "makerProject": "Goal Ladder",
       "printableType": "sel",
       "primaryDomain": "growth",
       "standards": [
@@ -4989,27 +4179,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through goal setting and growth mindset using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about goal setting and growth mindset.",
-            "Ask: “How do learners improve with practice and feedback?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Goal statements, self-reflection, and revision",
-          "math": "Review strategies and explain choices",
-          "inquiry": "Growth as change over time",
-          "sel": "Self-management and perseverance",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "goal statements, self-reflection, and revision",
+          "math": "review strategies and explain choices",
+          "inquiry": "growth as change over time",
+          "sel": "self-management and perseverance",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5019,35 +4193,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about goal setting and growth mindset.",
+            "Ask: “How do learners improve with practice and feedback?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about goal setting and growth mindset and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through goal setting and growth mindset using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about goal setting and growth mindset.",
-            "Ask: “How do learners improve with practice and feedback?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Goal statements, self-reflection, and revision",
-          "math": "Review strategies and explain choices",
-          "inquiry": "Growth as change over time",
-          "sel": "Self-management and perseverance",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "goal statements, self-reflection, and revision",
+          "math": "review strategies and explain choices",
+          "inquiry": "growth as change over time",
+          "sel": "self-management and perseverance",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5057,35 +4222,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about goal setting and growth mindset.",
+            "Ask: “How do learners improve with practice and feedback?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about goal setting and growth mindset and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through goal setting and growth mindset using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about goal setting and growth mindset.",
-            "Ask: “How do learners improve with practice and feedback?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Goal statements, self-reflection, and revision",
-          "math": "Review strategies and explain choices",
-          "inquiry": "Growth as change over time",
-          "sel": "Self-management and perseverance",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "goal statements, self-reflection, and revision",
+          "math": "review strategies and explain choices",
+          "inquiry": "growth as change over time",
+          "sel": "self-management and perseverance",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5095,35 +4251,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about goal setting and growth mindset.",
+            "Ask: “How do learners improve with practice and feedback?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about goal setting and growth mindset and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through goal setting and growth mindset using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about goal setting and growth mindset.",
-            "Ask: “How do learners improve with practice and feedback?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Goal statements, self-reflection, and revision",
-          "math": "Review strategies and explain choices",
-          "inquiry": "Growth as change over time",
-          "sel": "Self-management and perseverance",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "goal statements, self-reflection, and revision",
+          "math": "review strategies and explain choices",
+          "inquiry": "growth as change over time",
+          "sel": "self-management and perseverance",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5133,35 +4280,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about goal setting and growth mindset.",
+            "Ask: “How do learners improve with practice and feedback?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about goal setting and growth mindset and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through goal setting and growth mindset using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about goal setting and growth mindset.",
-            "Ask: “How do learners improve with practice and feedback?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Goal statements, self-reflection, and revision",
-          "math": "Review strategies and explain choices",
-          "inquiry": "Growth as change over time",
-          "sel": "Self-management and perseverance",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "goal statements, self-reflection, and revision",
+          "math": "review strategies and explain choices",
+          "inquiry": "growth as change over time",
+          "sel": "self-management and perseverance",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5171,8 +4309,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about goal setting and growth mindset.",
+            "Ask: “How do learners improve with practice and feedback?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about goal setting and growth mindset and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -5182,7 +4327,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Goal statements, self-reflection, and revision."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: goal statements, self-reflection, and revision."
           },
           {
             "domain": "Writing",
@@ -5192,12 +4337,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Review strategies and explain choices."
+            "prompt": "Completes and explains the weekly math focus: review strategies and explain choices."
           },
           {
             "domain": "Math Reasoning",
@@ -5207,17 +4352,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Growth as change over time."
+            "prompt": "Observes, maps, tests, researches, or explains: growth as change over time."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Goal ladder."
+            "prompt": "Completes or contributes to the project/workshop: Goal Ladder."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Self-management and perseverance."
+            "prompt": "Practices the weekly SEL focus: self-management and perseverance."
           },
           {
             "domain": "Independence",
@@ -5238,11 +4383,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "R-Controlled Vowels and Fluency",
       "theme": "ar/or/er/ir/ur, fluency, expression, phrasing, and word study",
       "essentialQuestion": "How does r change vowel sounds?",
-      "literacyFocus": "R-controlled vowel decoding and fluency",
-      "mathFocus": "Sort and count word patterns",
-      "inquiryFocus": "Sound patterns and communication",
-      "selFocus": "Confidence and performance",
-      "makerProject": "R-controlled reading theatre",
+      "literacyFocus": "r-controlled vowel decoding and fluency",
+      "mathFocus": "sort and count word patterns",
+      "inquiryFocus": "sound patterns and communication",
+      "selFocus": "confidence and performance",
+      "makerProject": "R-Controlled Reading Theatre",
       "printableType": "phonics",
       "primaryDomain": "sound",
       "standards": [
@@ -5262,27 +4407,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through r-controlled vowels and fluency using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about r-controlled vowels and fluency.",
-            "Ask: “How does r change vowel sounds?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "R-controlled vowel decoding and fluency",
-          "math": "Sort and count word patterns",
-          "inquiry": "Sound patterns and communication",
-          "sel": "Confidence and performance",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "r-controlled vowel decoding and fluency",
+          "math": "sort and count word patterns",
+          "inquiry": "sound patterns and communication",
+          "sel": "confidence and performance",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5292,35 +4421,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about r-controlled vowels and fluency.",
+            "Ask: “How does r change vowel sounds?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about r-controlled vowels and fluency and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through r-controlled vowels and fluency using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about r-controlled vowels and fluency.",
-            "Ask: “How does r change vowel sounds?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "R-controlled vowel decoding and fluency",
-          "math": "Sort and count word patterns",
-          "inquiry": "Sound patterns and communication",
-          "sel": "Confidence and performance",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "r-controlled vowel decoding and fluency",
+          "math": "sort and count word patterns",
+          "inquiry": "sound patterns and communication",
+          "sel": "confidence and performance",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5330,35 +4450,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about r-controlled vowels and fluency.",
+            "Ask: “How does r change vowel sounds?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about r-controlled vowels and fluency and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through r-controlled vowels and fluency using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about r-controlled vowels and fluency.",
-            "Ask: “How does r change vowel sounds?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "R-controlled vowel decoding and fluency",
-          "math": "Sort and count word patterns",
-          "inquiry": "Sound patterns and communication",
-          "sel": "Confidence and performance",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "r-controlled vowel decoding and fluency",
+          "math": "sort and count word patterns",
+          "inquiry": "sound patterns and communication",
+          "sel": "confidence and performance",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5368,35 +4479,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about r-controlled vowels and fluency.",
+            "Ask: “How does r change vowel sounds?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about r-controlled vowels and fluency and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through r-controlled vowels and fluency using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about r-controlled vowels and fluency.",
-            "Ask: “How does r change vowel sounds?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "R-controlled vowel decoding and fluency",
-          "math": "Sort and count word patterns",
-          "inquiry": "Sound patterns and communication",
-          "sel": "Confidence and performance",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "r-controlled vowel decoding and fluency",
+          "math": "sort and count word patterns",
+          "inquiry": "sound patterns and communication",
+          "sel": "confidence and performance",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5406,35 +4508,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about r-controlled vowels and fluency.",
+            "Ask: “How does r change vowel sounds?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about r-controlled vowels and fluency and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through r-controlled vowels and fluency using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about r-controlled vowels and fluency.",
-            "Ask: “How does r change vowel sounds?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "R-controlled vowel decoding and fluency",
-          "math": "Sort and count word patterns",
-          "inquiry": "Sound patterns and communication",
-          "sel": "Confidence and performance",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "r-controlled vowel decoding and fluency",
+          "math": "sort and count word patterns",
+          "inquiry": "sound patterns and communication",
+          "sel": "confidence and performance",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5444,8 +4537,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about r-controlled vowels and fluency.",
+            "Ask: “How does r change vowel sounds?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about r-controlled vowels and fluency and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -5455,7 +4555,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: R-controlled vowel decoding and fluency."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: r-controlled vowel decoding and fluency."
           },
           {
             "domain": "Writing",
@@ -5465,12 +4565,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Sort and count word patterns."
+            "prompt": "Completes and explains the weekly math focus: sort and count word patterns."
           },
           {
             "domain": "Math Reasoning",
@@ -5480,17 +4580,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Sound patterns and communication."
+            "prompt": "Observes, maps, tests, researches, or explains: sound patterns and communication."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: R-controlled reading theatre."
+            "prompt": "Completes or contributes to the project/workshop: R-Controlled Reading Theatre."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Confidence and performance."
+            "prompt": "Practices the weekly SEL focus: confidence and performance."
           },
           {
             "domain": "Independence",
@@ -5511,11 +4611,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Geometry and Shape Design",
       "theme": "2D/3D shapes, attributes, composing, partitioning, symmetry, and art design",
       "essentialQuestion": "How do shapes help us build, design, and describe?",
-      "literacyFocus": "Shape vocabulary and descriptive sentences",
-      "mathFocus": "Identify, compose, partition, and compare shapes",
-      "inquiryFocus": "Design, structure, and spatial reasoning",
-      "selFocus": "Creative courage and revision",
-      "makerProject": "Shape design studio",
+      "literacyFocus": "shape vocabulary and descriptive sentences",
+      "mathFocus": "identify, compose, partition, and compare shapes",
+      "inquiryFocus": "design, structure, and spatial reasoning",
+      "selFocus": "creative courage and revision",
+      "makerProject": "Shape Design Studio",
       "printableType": "geometry",
       "primaryDomain": "design",
       "standards": [
@@ -5534,27 +4634,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through geometry and shape design using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about geometry and shape design.",
-            "Ask: “How do shapes help us build, design, and describe?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Shape vocabulary and descriptive sentences",
-          "math": "Identify, compose, partition, and compare shapes",
-          "inquiry": "Design, structure, and spatial reasoning",
-          "sel": "Creative courage and revision",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "shape vocabulary and descriptive sentences",
+          "math": "identify, compose, partition, and compare shapes",
+          "inquiry": "design, structure, and spatial reasoning",
+          "sel": "creative courage and revision",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5564,35 +4648,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about geometry and shape design.",
+            "Ask: “How do shapes help us build, design, and describe?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about geometry and shape design and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through geometry and shape design using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about geometry and shape design.",
-            "Ask: “How do shapes help us build, design, and describe?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Shape vocabulary and descriptive sentences",
-          "math": "Identify, compose, partition, and compare shapes",
-          "inquiry": "Design, structure, and spatial reasoning",
-          "sel": "Creative courage and revision",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "shape vocabulary and descriptive sentences",
+          "math": "identify, compose, partition, and compare shapes",
+          "inquiry": "design, structure, and spatial reasoning",
+          "sel": "creative courage and revision",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5602,35 +4677,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about geometry and shape design.",
+            "Ask: “How do shapes help us build, design, and describe?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about geometry and shape design and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through geometry and shape design using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about geometry and shape design.",
-            "Ask: “How do shapes help us build, design, and describe?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Shape vocabulary and descriptive sentences",
-          "math": "Identify, compose, partition, and compare shapes",
-          "inquiry": "Design, structure, and spatial reasoning",
-          "sel": "Creative courage and revision",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "shape vocabulary and descriptive sentences",
+          "math": "identify, compose, partition, and compare shapes",
+          "inquiry": "design, structure, and spatial reasoning",
+          "sel": "creative courage and revision",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5640,35 +4706,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about geometry and shape design.",
+            "Ask: “How do shapes help us build, design, and describe?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about geometry and shape design and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through geometry and shape design using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about geometry and shape design.",
-            "Ask: “How do shapes help us build, design, and describe?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Shape vocabulary and descriptive sentences",
-          "math": "Identify, compose, partition, and compare shapes",
-          "inquiry": "Design, structure, and spatial reasoning",
-          "sel": "Creative courage and revision",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "shape vocabulary and descriptive sentences",
+          "math": "identify, compose, partition, and compare shapes",
+          "inquiry": "design, structure, and spatial reasoning",
+          "sel": "creative courage and revision",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5678,35 +4735,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about geometry and shape design.",
+            "Ask: “How do shapes help us build, design, and describe?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about geometry and shape design and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through geometry and shape design using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about geometry and shape design.",
-            "Ask: “How do shapes help us build, design, and describe?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Shape vocabulary and descriptive sentences",
-          "math": "Identify, compose, partition, and compare shapes",
-          "inquiry": "Design, structure, and spatial reasoning",
-          "sel": "Creative courage and revision",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "shape vocabulary and descriptive sentences",
+          "math": "identify, compose, partition, and compare shapes",
+          "inquiry": "design, structure, and spatial reasoning",
+          "sel": "creative courage and revision",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5716,8 +4764,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about geometry and shape design.",
+            "Ask: “How do shapes help us build, design, and describe?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about geometry and shape design and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -5727,7 +4782,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Shape vocabulary and descriptive sentences."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: shape vocabulary and descriptive sentences."
           },
           {
             "domain": "Writing",
@@ -5737,12 +4792,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Identify, compose, partition, and compare shapes."
+            "prompt": "Completes and explains the weekly math focus: identify, compose, partition, and compare shapes."
           },
           {
             "domain": "Math Reasoning",
@@ -5752,17 +4807,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Design, structure, and spatial reasoning."
+            "prompt": "Observes, maps, tests, researches, or explains: design, structure, and spatial reasoning."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Shape design studio."
+            "prompt": "Completes or contributes to the project/workshop: Shape Design Studio."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Creative courage and revision."
+            "prompt": "Practices the weekly SEL focus: creative courage and revision."
           },
           {
             "domain": "Independence",
@@ -5783,11 +4838,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Animals, Parents, and Offspring",
       "theme": "Animal structures, survival, parent/offspring traits, observation, and animal reports",
       "essentialQuestion": "How do animals grow, survive, and resemble their parents?",
-      "literacyFocus": "Animal reports and labeled diagrams",
-      "mathFocus": "Sort animals and compare data",
-      "inquiryFocus": "Structures, needs, offspring, and survival",
-      "selFocus": "Gentleness and care for living things",
-      "makerProject": "Animal family report",
+      "literacyFocus": "animal reports and labeled diagrams",
+      "mathFocus": "sort animals and compare data",
+      "inquiryFocus": "structures, needs, offspring, and survival",
+      "selFocus": "gentleness and care for living things",
+      "makerProject": "Animal Family Report",
       "printableType": "science",
       "primaryDomain": "life",
       "standards": [
@@ -5806,27 +4861,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through animals, parents, and offspring using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about animals, parents, and offspring.",
-            "Ask: “How do animals grow, survive, and resemble their parents?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Animal reports and labeled diagrams",
-          "math": "Sort animals and compare data",
-          "inquiry": "Structures, needs, offspring, and survival",
-          "sel": "Gentleness and care for living things",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "animal reports and labeled diagrams",
+          "math": "sort animals and compare data",
+          "inquiry": "structures, needs, offspring, and survival",
+          "sel": "gentleness and care for living things",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5836,35 +4875,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about animals, parents, and offspring.",
+            "Ask: “How do animals grow, survive, and resemble their parents?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about animals, parents, and offspring and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through animals, parents, and offspring using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about animals, parents, and offspring.",
-            "Ask: “How do animals grow, survive, and resemble their parents?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Animal reports and labeled diagrams",
-          "math": "Sort animals and compare data",
-          "inquiry": "Structures, needs, offspring, and survival",
-          "sel": "Gentleness and care for living things",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "animal reports and labeled diagrams",
+          "math": "sort animals and compare data",
+          "inquiry": "structures, needs, offspring, and survival",
+          "sel": "gentleness and care for living things",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5874,35 +4904,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about animals, parents, and offspring.",
+            "Ask: “How do animals grow, survive, and resemble their parents?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about animals, parents, and offspring and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through animals, parents, and offspring using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about animals, parents, and offspring.",
-            "Ask: “How do animals grow, survive, and resemble their parents?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Animal reports and labeled diagrams",
-          "math": "Sort animals and compare data",
-          "inquiry": "Structures, needs, offspring, and survival",
-          "sel": "Gentleness and care for living things",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "animal reports and labeled diagrams",
+          "math": "sort animals and compare data",
+          "inquiry": "structures, needs, offspring, and survival",
+          "sel": "gentleness and care for living things",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5912,35 +4933,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about animals, parents, and offspring.",
+            "Ask: “How do animals grow, survive, and resemble their parents?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about animals, parents, and offspring and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through animals, parents, and offspring using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about animals, parents, and offspring.",
-            "Ask: “How do animals grow, survive, and resemble their parents?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Animal reports and labeled diagrams",
-          "math": "Sort animals and compare data",
-          "inquiry": "Structures, needs, offspring, and survival",
-          "sel": "Gentleness and care for living things",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "animal reports and labeled diagrams",
+          "math": "sort animals and compare data",
+          "inquiry": "structures, needs, offspring, and survival",
+          "sel": "gentleness and care for living things",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5950,35 +4962,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about animals, parents, and offspring.",
+            "Ask: “How do animals grow, survive, and resemble their parents?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about animals, parents, and offspring and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through animals, parents, and offspring using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about animals, parents, and offspring.",
-            "Ask: “How do animals grow, survive, and resemble their parents?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Animal reports and labeled diagrams",
-          "math": "Sort animals and compare data",
-          "inquiry": "Structures, needs, offspring, and survival",
-          "sel": "Gentleness and care for living things",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "animal reports and labeled diagrams",
+          "math": "sort animals and compare data",
+          "inquiry": "structures, needs, offspring, and survival",
+          "sel": "gentleness and care for living things",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -5988,8 +4991,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about animals, parents, and offspring.",
+            "Ask: “How do animals grow, survive, and resemble their parents?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about animals, parents, and offspring and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -5999,7 +5009,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Animal reports and labeled diagrams."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: animal reports and labeled diagrams."
           },
           {
             "domain": "Writing",
@@ -6009,12 +5019,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Sort animals and compare data."
+            "prompt": "Completes and explains the weekly math focus: sort animals and compare data."
           },
           {
             "domain": "Math Reasoning",
@@ -6024,17 +5034,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Structures, needs, offspring, and survival."
+            "prompt": "Observes, maps, tests, researches, or explains: structures, needs, offspring, and survival."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Animal family report."
+            "prompt": "Completes or contributes to the project/workshop: Animal Family Report."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Gentleness and care for living things."
+            "prompt": "Practices the weekly SEL focus: gentleness and care for living things."
           },
           {
             "domain": "Independence",
@@ -6055,11 +5065,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Narrative Writing Workshop",
       "theme": "Characters, setting, problem, events, endings, dialogue, revision, and publishing",
       "essentialQuestion": "How can I write a story that others can follow?",
-      "literacyFocus": "Narrative craft, sequence, details, and revision",
-      "mathFocus": "Story maps, ordinal sequence, and timeline counting",
-      "inquiryFocus": "Human stories across time and place",
-      "selFocus": "Creative risk and peer feedback",
-      "makerProject": "Published narrative booklet",
+      "literacyFocus": "narrative craft, sequence, details, and revision",
+      "mathFocus": "story maps, ordinal sequence, and timeline counting",
+      "inquiryFocus": "human stories across time and place",
+      "selFocus": "creative risk and peer feedback",
+      "makerProject": "Published Narrative Booklet",
       "printableType": "writing",
       "primaryDomain": "story",
       "standards": [
@@ -6077,27 +5087,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through narrative writing workshop using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about narrative writing workshop.",
-            "Ask: “How can I write a story that others can follow?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Narrative craft, sequence, details, and revision",
-          "math": "Story maps, ordinal sequence, and timeline counting",
-          "inquiry": "Human stories across time and place",
-          "sel": "Creative risk and peer feedback",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "narrative craft, sequence, details, and revision",
+          "math": "story maps, ordinal sequence, and timeline counting",
+          "inquiry": "human stories across time and place",
+          "sel": "creative risk and peer feedback",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6107,35 +5101,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about narrative writing workshop.",
+            "Ask: “How can I write a story that others can follow?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about narrative writing workshop and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through narrative writing workshop using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about narrative writing workshop.",
-            "Ask: “How can I write a story that others can follow?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Narrative craft, sequence, details, and revision",
-          "math": "Story maps, ordinal sequence, and timeline counting",
-          "inquiry": "Human stories across time and place",
-          "sel": "Creative risk and peer feedback",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "narrative craft, sequence, details, and revision",
+          "math": "story maps, ordinal sequence, and timeline counting",
+          "inquiry": "human stories across time and place",
+          "sel": "creative risk and peer feedback",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6145,35 +5130,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about narrative writing workshop.",
+            "Ask: “How can I write a story that others can follow?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about narrative writing workshop and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through narrative writing workshop using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about narrative writing workshop.",
-            "Ask: “How can I write a story that others can follow?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Narrative craft, sequence, details, and revision",
-          "math": "Story maps, ordinal sequence, and timeline counting",
-          "inquiry": "Human stories across time and place",
-          "sel": "Creative risk and peer feedback",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "narrative craft, sequence, details, and revision",
+          "math": "story maps, ordinal sequence, and timeline counting",
+          "inquiry": "human stories across time and place",
+          "sel": "creative risk and peer feedback",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6183,35 +5159,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about narrative writing workshop.",
+            "Ask: “How can I write a story that others can follow?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about narrative writing workshop and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through narrative writing workshop using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about narrative writing workshop.",
-            "Ask: “How can I write a story that others can follow?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Narrative craft, sequence, details, and revision",
-          "math": "Story maps, ordinal sequence, and timeline counting",
-          "inquiry": "Human stories across time and place",
-          "sel": "Creative risk and peer feedback",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "narrative craft, sequence, details, and revision",
+          "math": "story maps, ordinal sequence, and timeline counting",
+          "inquiry": "human stories across time and place",
+          "sel": "creative risk and peer feedback",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6221,35 +5188,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about narrative writing workshop.",
+            "Ask: “How can I write a story that others can follow?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about narrative writing workshop and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through narrative writing workshop using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about narrative writing workshop.",
-            "Ask: “How can I write a story that others can follow?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Narrative craft, sequence, details, and revision",
-          "math": "Story maps, ordinal sequence, and timeline counting",
-          "inquiry": "Human stories across time and place",
-          "sel": "Creative risk and peer feedback",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "narrative craft, sequence, details, and revision",
+          "math": "story maps, ordinal sequence, and timeline counting",
+          "inquiry": "human stories across time and place",
+          "sel": "creative risk and peer feedback",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6259,8 +5217,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about narrative writing workshop.",
+            "Ask: “How can I write a story that others can follow?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about narrative writing workshop and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -6270,7 +5235,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Narrative craft, sequence, details, and revision."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: narrative craft, sequence, details, and revision."
           },
           {
             "domain": "Writing",
@@ -6280,12 +5245,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Story maps, ordinal sequence, and timeline counting."
+            "prompt": "Completes and explains the weekly math focus: story maps, ordinal sequence, and timeline counting."
           },
           {
             "domain": "Math Reasoning",
@@ -6295,17 +5260,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Human stories across time and place."
+            "prompt": "Observes, maps, tests, researches, or explains: human stories across time and place."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Published narrative booklet."
+            "prompt": "Completes or contributes to the project/workshop: Published Narrative Booklet."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Creative risk and peer feedback."
+            "prompt": "Practices the weekly SEL focus: creative risk and peer feedback."
           },
           {
             "domain": "Independence",
@@ -6326,11 +5291,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Time, Calendars, and Schedules",
       "theme": "Hour/half-hour time, calendar patterns, sequence, routines, and planning",
       "essentialQuestion": "How does time help us plan and tell what happened?",
-      "literacyFocus": "Time words and sequence writing",
-      "mathFocus": "Tell time to hour/half-hour; calendar patterns",
-      "inquiryFocus": "Daily routines, seasons, and responsible planning",
-      "selFocus": "Time management and preparation",
-      "makerProject": "My weekly schedule",
+      "literacyFocus": "time words and sequence writing",
+      "mathFocus": "tell time to hour/half-hour; calendar patterns",
+      "inquiryFocus": "daily routines, seasons, and planning",
+      "selFocus": "time management and preparation",
+      "makerProject": "My Weekly Schedule",
       "printableType": "time",
       "primaryDomain": "math",
       "standards": [
@@ -6350,27 +5315,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through time, calendars, and schedules using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about time, calendars, and schedules.",
-            "Ask: “How does time help us plan and tell what happened?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Time words and sequence writing",
-          "math": "Tell time to hour/half-hour; calendar patterns",
-          "inquiry": "Daily routines, seasons, and responsible planning",
-          "sel": "Time management and preparation",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "time words and sequence writing",
+          "math": "tell time to hour/half-hour; calendar patterns",
+          "inquiry": "daily routines, seasons, and planning",
+          "sel": "time management and preparation",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6380,35 +5329,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about time, calendars, and schedules.",
+            "Ask: “How does time help us plan and tell what happened?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about time, calendars, and schedules and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through time, calendars, and schedules using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about time, calendars, and schedules.",
-            "Ask: “How does time help us plan and tell what happened?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Time words and sequence writing",
-          "math": "Tell time to hour/half-hour; calendar patterns",
-          "inquiry": "Daily routines, seasons, and responsible planning",
-          "sel": "Time management and preparation",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "time words and sequence writing",
+          "math": "tell time to hour/half-hour; calendar patterns",
+          "inquiry": "daily routines, seasons, and planning",
+          "sel": "time management and preparation",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6418,35 +5358,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about time, calendars, and schedules.",
+            "Ask: “How does time help us plan and tell what happened?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about time, calendars, and schedules and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through time, calendars, and schedules using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about time, calendars, and schedules.",
-            "Ask: “How does time help us plan and tell what happened?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Time words and sequence writing",
-          "math": "Tell time to hour/half-hour; calendar patterns",
-          "inquiry": "Daily routines, seasons, and responsible planning",
-          "sel": "Time management and preparation",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "time words and sequence writing",
+          "math": "tell time to hour/half-hour; calendar patterns",
+          "inquiry": "daily routines, seasons, and planning",
+          "sel": "time management and preparation",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6456,35 +5387,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about time, calendars, and schedules.",
+            "Ask: “How does time help us plan and tell what happened?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about time, calendars, and schedules and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through time, calendars, and schedules using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about time, calendars, and schedules.",
-            "Ask: “How does time help us plan and tell what happened?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Time words and sequence writing",
-          "math": "Tell time to hour/half-hour; calendar patterns",
-          "inquiry": "Daily routines, seasons, and responsible planning",
-          "sel": "Time management and preparation",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "time words and sequence writing",
+          "math": "tell time to hour/half-hour; calendar patterns",
+          "inquiry": "daily routines, seasons, and planning",
+          "sel": "time management and preparation",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6494,35 +5416,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about time, calendars, and schedules.",
+            "Ask: “How does time help us plan and tell what happened?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about time, calendars, and schedules and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through time, calendars, and schedules using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about time, calendars, and schedules.",
-            "Ask: “How does time help us plan and tell what happened?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Time words and sequence writing",
-          "math": "Tell time to hour/half-hour; calendar patterns",
-          "inquiry": "Daily routines, seasons, and responsible planning",
-          "sel": "Time management and preparation",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "time words and sequence writing",
+          "math": "tell time to hour/half-hour; calendar patterns",
+          "inquiry": "daily routines, seasons, and planning",
+          "sel": "time management and preparation",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6532,8 +5445,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about time, calendars, and schedules.",
+            "Ask: “How does time help us plan and tell what happened?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about time, calendars, and schedules and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -6543,7 +5463,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Time words and sequence writing."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: time words and sequence writing."
           },
           {
             "domain": "Writing",
@@ -6553,12 +5473,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Tell time to hour/half-hour; calendar patterns."
+            "prompt": "Completes and explains the weekly math focus: tell time to hour/half-hour; calendar patterns."
           },
           {
             "domain": "Math Reasoning",
@@ -6568,17 +5488,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Daily routines, seasons, and responsible planning."
+            "prompt": "Observes, maps, tests, researches, or explains: daily routines, seasons, and planning."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: My weekly schedule."
+            "prompt": "Completes or contributes to the project/workshop: My Weekly Schedule."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Time management and preparation."
+            "prompt": "Practices the weekly SEL focus: time management and preparation."
           },
           {
             "domain": "Independence",
@@ -6599,11 +5519,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Economics: Needs, Wants, Goods, Services",
       "theme": "Needs/wants, goods/services, saving/spending, choices, jobs, and classroom market",
       "essentialQuestion": "How do people make choices with resources?",
-      "literacyFocus": "Opinion and explanation about choices",
-      "mathFocus": "Money sense, addition/subtraction in market play",
-      "inquiryFocus": "Economics, jobs, goods, services, and community",
-      "selFocus": "Responsibility and fairness",
-      "makerProject": "Classroom market",
+      "literacyFocus": "opinion and explanation about choices",
+      "mathFocus": "money sense, addition/subtraction in market play",
+      "inquiryFocus": "economics, jobs, goods, services, and community",
+      "selFocus": "responsibility and fairness",
+      "makerProject": "Classroom Market",
       "printableType": "economics",
       "primaryDomain": "civics",
       "standards": [
@@ -6622,27 +5542,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through economics: needs, wants, goods, services using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about economics: needs, wants, goods, services.",
-            "Ask: “How do people make choices with resources?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Opinion and explanation about choices",
-          "math": "Money sense, addition/subtraction in market play",
-          "inquiry": "Economics, jobs, goods, services, and community",
-          "sel": "Responsibility and fairness",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "opinion and explanation about choices",
+          "math": "money sense, addition/subtraction in market play",
+          "inquiry": "economics, jobs, goods, services, and community",
+          "sel": "responsibility and fairness",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6652,35 +5556,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about economics: needs, wants, goods, services.",
+            "Ask: “How do people make choices with resources?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about economics: needs, wants, goods, services and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through economics: needs, wants, goods, services using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about economics: needs, wants, goods, services.",
-            "Ask: “How do people make choices with resources?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Opinion and explanation about choices",
-          "math": "Money sense, addition/subtraction in market play",
-          "inquiry": "Economics, jobs, goods, services, and community",
-          "sel": "Responsibility and fairness",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "opinion and explanation about choices",
+          "math": "money sense, addition/subtraction in market play",
+          "inquiry": "economics, jobs, goods, services, and community",
+          "sel": "responsibility and fairness",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6690,35 +5585,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about economics: needs, wants, goods, services.",
+            "Ask: “How do people make choices with resources?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about economics: needs, wants, goods, services and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through economics: needs, wants, goods, services using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about economics: needs, wants, goods, services.",
-            "Ask: “How do people make choices with resources?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Opinion and explanation about choices",
-          "math": "Money sense, addition/subtraction in market play",
-          "inquiry": "Economics, jobs, goods, services, and community",
-          "sel": "Responsibility and fairness",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "opinion and explanation about choices",
+          "math": "money sense, addition/subtraction in market play",
+          "inquiry": "economics, jobs, goods, services, and community",
+          "sel": "responsibility and fairness",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6728,35 +5614,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about economics: needs, wants, goods, services.",
+            "Ask: “How do people make choices with resources?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about economics: needs, wants, goods, services and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through economics: needs, wants, goods, services using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about economics: needs, wants, goods, services.",
-            "Ask: “How do people make choices with resources?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Opinion and explanation about choices",
-          "math": "Money sense, addition/subtraction in market play",
-          "inquiry": "Economics, jobs, goods, services, and community",
-          "sel": "Responsibility and fairness",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "opinion and explanation about choices",
+          "math": "money sense, addition/subtraction in market play",
+          "inquiry": "economics, jobs, goods, services, and community",
+          "sel": "responsibility and fairness",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6766,35 +5643,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about economics: needs, wants, goods, services.",
+            "Ask: “How do people make choices with resources?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about economics: needs, wants, goods, services and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through economics: needs, wants, goods, services using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about economics: needs, wants, goods, services.",
-            "Ask: “How do people make choices with resources?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Opinion and explanation about choices",
-          "math": "Money sense, addition/subtraction in market play",
-          "inquiry": "Economics, jobs, goods, services, and community",
-          "sel": "Responsibility and fairness",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "opinion and explanation about choices",
+          "math": "money sense, addition/subtraction in market play",
+          "inquiry": "economics, jobs, goods, services, and community",
+          "sel": "responsibility and fairness",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6804,8 +5672,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about economics: needs, wants, goods, services.",
+            "Ask: “How do people make choices with resources?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about economics: needs, wants, goods, services and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -6815,7 +5690,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Opinion and explanation about choices."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: opinion and explanation about choices."
           },
           {
             "domain": "Writing",
@@ -6825,12 +5700,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Money sense, addition/subtraction in market play."
+            "prompt": "Completes and explains the weekly math focus: money sense, addition/subtraction in market play."
           },
           {
             "domain": "Math Reasoning",
@@ -6840,17 +5715,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Economics, jobs, goods, services, and community."
+            "prompt": "Observes, maps, tests, researches, or explains: economics, jobs, goods, services, and community."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Classroom market."
+            "prompt": "Completes or contributes to the project/workshop: Classroom Market."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Responsibility and fairness."
+            "prompt": "Practices the weekly SEL focus: responsibility and fairness."
           },
           {
             "domain": "Independence",
@@ -6871,11 +5746,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Weather Patterns and Sky Watch",
       "theme": "Weather data, seasonal patterns, sky observation, tools, and safety",
       "essentialQuestion": "How can we observe and record weather patterns?",
-      "literacyFocus": "Weather reports and descriptive language",
-      "mathFocus": "Collect weather data and graph patterns",
-      "inquiryFocus": "Weather, sunlight, patterns, and safety",
-      "selFocus": "Preparation and safe choices",
-      "makerProject": "Weather station",
+      "literacyFocus": "weather reports and descriptive language",
+      "mathFocus": "collect weather data and graph patterns",
+      "inquiryFocus": "weather, sunlight, patterns, and safety",
+      "selFocus": "preparation and safe choices",
+      "makerProject": "Weather Station",
       "printableType": "science",
       "primaryDomain": "weather",
       "standards": [
@@ -6894,27 +5769,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through weather patterns and sky watch using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about weather patterns and sky watch.",
-            "Ask: “How can we observe and record weather patterns?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Weather reports and descriptive language",
-          "math": "Collect weather data and graph patterns",
-          "inquiry": "Weather, sunlight, patterns, and safety",
-          "sel": "Preparation and safe choices",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "weather reports and descriptive language",
+          "math": "collect weather data and graph patterns",
+          "inquiry": "weather, sunlight, patterns, and safety",
+          "sel": "preparation and safe choices",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6924,35 +5783,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about weather patterns and sky watch.",
+            "Ask: “How can we observe and record weather patterns?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about weather patterns and sky watch and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through weather patterns and sky watch using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about weather patterns and sky watch.",
-            "Ask: “How can we observe and record weather patterns?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Weather reports and descriptive language",
-          "math": "Collect weather data and graph patterns",
-          "inquiry": "Weather, sunlight, patterns, and safety",
-          "sel": "Preparation and safe choices",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "weather reports and descriptive language",
+          "math": "collect weather data and graph patterns",
+          "inquiry": "weather, sunlight, patterns, and safety",
+          "sel": "preparation and safe choices",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -6962,35 +5812,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about weather patterns and sky watch.",
+            "Ask: “How can we observe and record weather patterns?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about weather patterns and sky watch and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through weather patterns and sky watch using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about weather patterns and sky watch.",
-            "Ask: “How can we observe and record weather patterns?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Weather reports and descriptive language",
-          "math": "Collect weather data and graph patterns",
-          "inquiry": "Weather, sunlight, patterns, and safety",
-          "sel": "Preparation and safe choices",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "weather reports and descriptive language",
+          "math": "collect weather data and graph patterns",
+          "inquiry": "weather, sunlight, patterns, and safety",
+          "sel": "preparation and safe choices",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7000,35 +5841,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about weather patterns and sky watch.",
+            "Ask: “How can we observe and record weather patterns?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about weather patterns and sky watch and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through weather patterns and sky watch using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about weather patterns and sky watch.",
-            "Ask: “How can we observe and record weather patterns?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Weather reports and descriptive language",
-          "math": "Collect weather data and graph patterns",
-          "inquiry": "Weather, sunlight, patterns, and safety",
-          "sel": "Preparation and safe choices",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "weather reports and descriptive language",
+          "math": "collect weather data and graph patterns",
+          "inquiry": "weather, sunlight, patterns, and safety",
+          "sel": "preparation and safe choices",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7038,35 +5870,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about weather patterns and sky watch.",
+            "Ask: “How can we observe and record weather patterns?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about weather patterns and sky watch and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through weather patterns and sky watch using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about weather patterns and sky watch.",
-            "Ask: “How can we observe and record weather patterns?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Weather reports and descriptive language",
-          "math": "Collect weather data and graph patterns",
-          "inquiry": "Weather, sunlight, patterns, and safety",
-          "sel": "Preparation and safe choices",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "weather reports and descriptive language",
+          "math": "collect weather data and graph patterns",
+          "inquiry": "weather, sunlight, patterns, and safety",
+          "sel": "preparation and safe choices",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7076,8 +5899,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about weather patterns and sky watch.",
+            "Ask: “How can we observe and record weather patterns?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about weather patterns and sky watch and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -7087,7 +5917,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Weather reports and descriptive language."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: weather reports and descriptive language."
           },
           {
             "domain": "Writing",
@@ -7097,12 +5927,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Collect weather data and graph patterns."
+            "prompt": "Completes and explains the weekly math focus: collect weather data and graph patterns."
           },
           {
             "domain": "Math Reasoning",
@@ -7112,17 +5942,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Weather, sunlight, patterns, and safety."
+            "prompt": "Observes, maps, tests, researches, or explains: weather, sunlight, patterns, and safety."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Weather station."
+            "prompt": "Completes or contributes to the project/workshop: Weather Station."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Preparation and safe choices."
+            "prompt": "Practices the weekly SEL focus: preparation and safe choices."
           },
           {
             "domain": "Independence",
@@ -7143,11 +5973,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Advanced Phonics Review",
       "theme": "Vowel teams, blends, inflectional endings, multisyllable starts, spelling review, and fluency",
       "essentialQuestion": "How do readers use patterns to solve longer words?",
-      "literacyFocus": "Vowel teams, blends, endings, and fluency",
-      "mathFocus": "Sort and graph word patterns",
-      "inquiryFocus": "Pattern recognition across learning domains",
-      "selFocus": "Independent practice habits",
-      "makerProject": "Word pattern portfolio",
+      "literacyFocus": "vowel teams, blends, endings, and fluency",
+      "mathFocus": "sort and graph word patterns",
+      "inquiryFocus": "pattern recognition across learning domains",
+      "selFocus": "independent practice habits",
+      "makerProject": "Word Pattern Portfolio",
       "printableType": "phonics",
       "primaryDomain": "review",
       "standards": [
@@ -7166,27 +5996,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through advanced phonics review using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about advanced phonics review.",
-            "Ask: “How do readers use patterns to solve longer words?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Vowel teams, blends, endings, and fluency",
-          "math": "Sort and graph word patterns",
-          "inquiry": "Pattern recognition across learning domains",
-          "sel": "Independent practice habits",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "vowel teams, blends, endings, and fluency",
+          "math": "sort and graph word patterns",
+          "inquiry": "pattern recognition across learning domains",
+          "sel": "independent practice habits",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7196,35 +6010,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about advanced phonics review.",
+            "Ask: “How do readers use patterns to solve longer words?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about advanced phonics review and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through advanced phonics review using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about advanced phonics review.",
-            "Ask: “How do readers use patterns to solve longer words?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Vowel teams, blends, endings, and fluency",
-          "math": "Sort and graph word patterns",
-          "inquiry": "Pattern recognition across learning domains",
-          "sel": "Independent practice habits",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "vowel teams, blends, endings, and fluency",
+          "math": "sort and graph word patterns",
+          "inquiry": "pattern recognition across learning domains",
+          "sel": "independent practice habits",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7234,35 +6039,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about advanced phonics review.",
+            "Ask: “How do readers use patterns to solve longer words?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about advanced phonics review and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through advanced phonics review using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about advanced phonics review.",
-            "Ask: “How do readers use patterns to solve longer words?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Vowel teams, blends, endings, and fluency",
-          "math": "Sort and graph word patterns",
-          "inquiry": "Pattern recognition across learning domains",
-          "sel": "Independent practice habits",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "vowel teams, blends, endings, and fluency",
+          "math": "sort and graph word patterns",
+          "inquiry": "pattern recognition across learning domains",
+          "sel": "independent practice habits",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7272,35 +6068,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about advanced phonics review.",
+            "Ask: “How do readers use patterns to solve longer words?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about advanced phonics review and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through advanced phonics review using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about advanced phonics review.",
-            "Ask: “How do readers use patterns to solve longer words?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Vowel teams, blends, endings, and fluency",
-          "math": "Sort and graph word patterns",
-          "inquiry": "Pattern recognition across learning domains",
-          "sel": "Independent practice habits",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "vowel teams, blends, endings, and fluency",
+          "math": "sort and graph word patterns",
+          "inquiry": "pattern recognition across learning domains",
+          "sel": "independent practice habits",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7310,35 +6097,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about advanced phonics review.",
+            "Ask: “How do readers use patterns to solve longer words?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about advanced phonics review and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through advanced phonics review using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about advanced phonics review.",
-            "Ask: “How do readers use patterns to solve longer words?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Vowel teams, blends, endings, and fluency",
-          "math": "Sort and graph word patterns",
-          "inquiry": "Pattern recognition across learning domains",
-          "sel": "Independent practice habits",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "vowel teams, blends, endings, and fluency",
+          "math": "sort and graph word patterns",
+          "inquiry": "pattern recognition across learning domains",
+          "sel": "independent practice habits",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7348,8 +6126,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about advanced phonics review.",
+            "Ask: “How do readers use patterns to solve longer words?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about advanced phonics review and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -7359,7 +6144,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Vowel teams, blends, endings, and fluency."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: vowel teams, blends, endings, and fluency."
           },
           {
             "domain": "Writing",
@@ -7369,12 +6154,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Sort and graph word patterns."
+            "prompt": "Completes and explains the weekly math focus: sort and graph word patterns."
           },
           {
             "domain": "Math Reasoning",
@@ -7384,17 +6169,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Pattern recognition across learning domains."
+            "prompt": "Observes, maps, tests, researches, or explains: pattern recognition across learning domains."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Word pattern portfolio."
+            "prompt": "Completes or contributes to the project/workshop: Word Pattern Portfolio."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Independent practice habits."
+            "prompt": "Practices the weekly SEL focus: independent practice habits."
           },
           {
             "domain": "Independence",
@@ -7415,11 +6200,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Numbers to 120",
       "theme": "Counting to 120, skip counting, place value extension, comparison, and number lines",
       "essentialQuestion": "How do number patterns continue beyond 100?",
-      "literacyFocus": "Number words and compare statements",
-      "mathFocus": "Count/read/write to 120; compare and order numbers",
-      "inquiryFocus": "Patterns in tools, calendars, and nature",
-      "selFocus": "Accuracy and checking",
-      "makerProject": "Number scroll",
+      "literacyFocus": "number words and compare statements",
+      "mathFocus": "count/read/write to 120; compare and order numbers",
+      "inquiryFocus": "patterns in tools, calendars, and nature",
+      "selFocus": "accuracy and checking",
+      "makerProject": "Number Scroll",
       "printableType": "numbers_120",
       "primaryDomain": "math",
       "standards": [
@@ -7438,27 +6223,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through numbers to 120 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about numbers to 120.",
-            "Ask: “How do number patterns continue beyond 100?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Number words and compare statements",
-          "math": "Count/read/write to 120; compare and order numbers",
-          "inquiry": "Patterns in tools, calendars, and nature",
-          "sel": "Accuracy and checking",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "number words and compare statements",
+          "math": "count/read/write to 120; compare and order numbers",
+          "inquiry": "patterns in tools, calendars, and nature",
+          "sel": "accuracy and checking",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7468,35 +6237,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about numbers to 120.",
+            "Ask: “How do number patterns continue beyond 100?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about numbers to 120 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through numbers to 120 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about numbers to 120.",
-            "Ask: “How do number patterns continue beyond 100?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Number words and compare statements",
-          "math": "Count/read/write to 120; compare and order numbers",
-          "inquiry": "Patterns in tools, calendars, and nature",
-          "sel": "Accuracy and checking",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "number words and compare statements",
+          "math": "count/read/write to 120; compare and order numbers",
+          "inquiry": "patterns in tools, calendars, and nature",
+          "sel": "accuracy and checking",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7506,35 +6266,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about numbers to 120.",
+            "Ask: “How do number patterns continue beyond 100?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about numbers to 120 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through numbers to 120 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about numbers to 120.",
-            "Ask: “How do number patterns continue beyond 100?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Number words and compare statements",
-          "math": "Count/read/write to 120; compare and order numbers",
-          "inquiry": "Patterns in tools, calendars, and nature",
-          "sel": "Accuracy and checking",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "number words and compare statements",
+          "math": "count/read/write to 120; compare and order numbers",
+          "inquiry": "patterns in tools, calendars, and nature",
+          "sel": "accuracy and checking",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7544,35 +6295,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about numbers to 120.",
+            "Ask: “How do number patterns continue beyond 100?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about numbers to 120 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through numbers to 120 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about numbers to 120.",
-            "Ask: “How do number patterns continue beyond 100?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Number words and compare statements",
-          "math": "Count/read/write to 120; compare and order numbers",
-          "inquiry": "Patterns in tools, calendars, and nature",
-          "sel": "Accuracy and checking",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "number words and compare statements",
+          "math": "count/read/write to 120; compare and order numbers",
+          "inquiry": "patterns in tools, calendars, and nature",
+          "sel": "accuracy and checking",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7582,35 +6324,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about numbers to 120.",
+            "Ask: “How do number patterns continue beyond 100?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about numbers to 120 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through numbers to 120 using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about numbers to 120.",
-            "Ask: “How do number patterns continue beyond 100?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Number words and compare statements",
-          "math": "Count/read/write to 120; compare and order numbers",
-          "inquiry": "Patterns in tools, calendars, and nature",
-          "sel": "Accuracy and checking",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "number words and compare statements",
+          "math": "count/read/write to 120; compare and order numbers",
+          "inquiry": "patterns in tools, calendars, and nature",
+          "sel": "accuracy and checking",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7620,8 +6353,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about numbers to 120.",
+            "Ask: “How do number patterns continue beyond 100?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about numbers to 120 and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -7631,7 +6371,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Number words and compare statements."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: number words and compare statements."
           },
           {
             "domain": "Writing",
@@ -7641,12 +6381,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Count/read/write to 120; compare and order numbers."
+            "prompt": "Completes and explains the weekly math focus: count/read/write to 120; compare and order numbers."
           },
           {
             "domain": "Math Reasoning",
@@ -7656,17 +6396,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Patterns in tools, calendars, and nature."
+            "prompt": "Observes, maps, tests, researches, or explains: patterns in tools, calendars, and nature."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Number scroll."
+            "prompt": "Completes or contributes to the project/workshop: Number Scroll."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Accuracy and checking."
+            "prompt": "Practices the weekly SEL focus: accuracy and checking."
           },
           {
             "domain": "Independence",
@@ -7687,11 +6427,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Citizenship, Symbols, and Service",
       "theme": "Civic symbols, classroom constitution, rights/responsibilities, helpers, service, and belonging",
       "essentialQuestion": "How can we help our classroom and community?",
-      "literacyFocus": "Shared writing, pledge of care, civic words",
-      "mathFocus": "Vote, tally, graph, and interpret class choices",
-      "inquiryFocus": "Citizenship, symbols, community service",
-      "selFocus": "Relationship skills and responsibility",
-      "makerProject": "Class constitution",
+      "literacyFocus": "shared writing, pledge of care, civic words",
+      "mathFocus": "vote, tally, graph, and interpret class choices",
+      "inquiryFocus": "citizenship, symbols, community service",
+      "selFocus": "relationship skills and responsibility",
+      "makerProject": "Class Constitution",
       "printableType": "civics",
       "primaryDomain": "social",
       "standards": [
@@ -7710,27 +6450,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through citizenship, symbols, and service using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about citizenship, symbols, and service.",
-            "Ask: “How can we help our classroom and community?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Shared writing, pledge of care, civic words",
-          "math": "Vote, tally, graph, and interpret class choices",
-          "inquiry": "Citizenship, symbols, community service",
-          "sel": "Relationship skills and responsibility",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "shared writing, pledge of care, civic words",
+          "math": "vote, tally, graph, and interpret class choices",
+          "inquiry": "citizenship, symbols, community service",
+          "sel": "relationship skills and responsibility",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7740,35 +6464,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about citizenship, symbols, and service.",
+            "Ask: “How can we help our classroom and community?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about citizenship, symbols, and service and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through citizenship, symbols, and service using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about citizenship, symbols, and service.",
-            "Ask: “How can we help our classroom and community?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Shared writing, pledge of care, civic words",
-          "math": "Vote, tally, graph, and interpret class choices",
-          "inquiry": "Citizenship, symbols, community service",
-          "sel": "Relationship skills and responsibility",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "shared writing, pledge of care, civic words",
+          "math": "vote, tally, graph, and interpret class choices",
+          "inquiry": "citizenship, symbols, community service",
+          "sel": "relationship skills and responsibility",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7778,35 +6493,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about citizenship, symbols, and service.",
+            "Ask: “How can we help our classroom and community?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about citizenship, symbols, and service and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through citizenship, symbols, and service using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about citizenship, symbols, and service.",
-            "Ask: “How can we help our classroom and community?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Shared writing, pledge of care, civic words",
-          "math": "Vote, tally, graph, and interpret class choices",
-          "inquiry": "Citizenship, symbols, community service",
-          "sel": "Relationship skills and responsibility",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "shared writing, pledge of care, civic words",
+          "math": "vote, tally, graph, and interpret class choices",
+          "inquiry": "citizenship, symbols, community service",
+          "sel": "relationship skills and responsibility",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7816,35 +6522,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about citizenship, symbols, and service.",
+            "Ask: “How can we help our classroom and community?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about citizenship, symbols, and service and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through citizenship, symbols, and service using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about citizenship, symbols, and service.",
-            "Ask: “How can we help our classroom and community?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Shared writing, pledge of care, civic words",
-          "math": "Vote, tally, graph, and interpret class choices",
-          "inquiry": "Citizenship, symbols, community service",
-          "sel": "Relationship skills and responsibility",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "shared writing, pledge of care, civic words",
+          "math": "vote, tally, graph, and interpret class choices",
+          "inquiry": "citizenship, symbols, community service",
+          "sel": "relationship skills and responsibility",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7854,35 +6551,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about citizenship, symbols, and service.",
+            "Ask: “How can we help our classroom and community?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about citizenship, symbols, and service and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through citizenship, symbols, and service using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about citizenship, symbols, and service.",
-            "Ask: “How can we help our classroom and community?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Shared writing, pledge of care, civic words",
-          "math": "Vote, tally, graph, and interpret class choices",
-          "inquiry": "Citizenship, symbols, community service",
-          "sel": "Relationship skills and responsibility",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "shared writing, pledge of care, civic words",
+          "math": "vote, tally, graph, and interpret class choices",
+          "inquiry": "citizenship, symbols, community service",
+          "sel": "relationship skills and responsibility",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -7892,8 +6580,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about citizenship, symbols, and service.",
+            "Ask: “How can we help our classroom and community?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about citizenship, symbols, and service and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -7903,7 +6598,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Shared writing, pledge of care, civic words."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: shared writing, pledge of care, civic words."
           },
           {
             "domain": "Writing",
@@ -7913,12 +6608,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Vote, tally, graph, and interpret class choices."
+            "prompt": "Completes and explains the weekly math focus: vote, tally, graph, and interpret class choices."
           },
           {
             "domain": "Math Reasoning",
@@ -7928,17 +6623,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Citizenship, symbols, community service."
+            "prompt": "Observes, maps, tests, researches, or explains: citizenship, symbols, community service."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Class constitution."
+            "prompt": "Completes or contributes to the project/workshop: Class Constitution."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Relationship skills and responsibility."
+            "prompt": "Practices the weekly SEL focus: relationship skills and responsibility."
           },
           {
             "domain": "Independence",
@@ -7959,11 +6654,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Earth Materials and Building",
       "theme": "Rocks, soil, water, materials, properties, building, testing, and design challenge",
       "essentialQuestion": "How do Earth materials help people build and create?",
-      "literacyFocus": "Property words and evidence sentences",
-      "mathFocus": "Measure, compare, and graph material tests",
-      "inquiryFocus": "Earth materials, properties, design, and testing",
-      "selFocus": "Safety and fair testing",
-      "makerProject": "Material bridge challenge",
+      "literacyFocus": "property words and evidence sentences",
+      "mathFocus": "measure, compare, and graph material tests",
+      "inquiryFocus": "earth materials, properties, design, and testing",
+      "selFocus": "safety and fair testing",
+      "makerProject": "Material Bridge Challenge",
       "printableType": "science",
       "primaryDomain": "earth",
       "standards": [
@@ -7982,27 +6677,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through earth materials and building using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about earth materials and building.",
-            "Ask: “How do Earth materials help people build and create?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Property words and evidence sentences",
-          "math": "Measure, compare, and graph material tests",
-          "inquiry": "Earth materials, properties, design, and testing",
-          "sel": "Safety and fair testing",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "property words and evidence sentences",
+          "math": "measure, compare, and graph material tests",
+          "inquiry": "earth materials, properties, design, and testing",
+          "sel": "safety and fair testing",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8012,35 +6691,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about earth materials and building.",
+            "Ask: “How do Earth materials help people build and create?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about earth materials and building and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through earth materials and building using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about earth materials and building.",
-            "Ask: “How do Earth materials help people build and create?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Property words and evidence sentences",
-          "math": "Measure, compare, and graph material tests",
-          "inquiry": "Earth materials, properties, design, and testing",
-          "sel": "Safety and fair testing",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "property words and evidence sentences",
+          "math": "measure, compare, and graph material tests",
+          "inquiry": "earth materials, properties, design, and testing",
+          "sel": "safety and fair testing",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8050,35 +6720,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about earth materials and building.",
+            "Ask: “How do Earth materials help people build and create?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about earth materials and building and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through earth materials and building using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about earth materials and building.",
-            "Ask: “How do Earth materials help people build and create?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Property words and evidence sentences",
-          "math": "Measure, compare, and graph material tests",
-          "inquiry": "Earth materials, properties, design, and testing",
-          "sel": "Safety and fair testing",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "property words and evidence sentences",
+          "math": "measure, compare, and graph material tests",
+          "inquiry": "earth materials, properties, design, and testing",
+          "sel": "safety and fair testing",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8088,35 +6749,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about earth materials and building.",
+            "Ask: “How do Earth materials help people build and create?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about earth materials and building and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through earth materials and building using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about earth materials and building.",
-            "Ask: “How do Earth materials help people build and create?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Property words and evidence sentences",
-          "math": "Measure, compare, and graph material tests",
-          "inquiry": "Earth materials, properties, design, and testing",
-          "sel": "Safety and fair testing",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "property words and evidence sentences",
+          "math": "measure, compare, and graph material tests",
+          "inquiry": "earth materials, properties, design, and testing",
+          "sel": "safety and fair testing",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8126,35 +6778,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about earth materials and building.",
+            "Ask: “How do Earth materials help people build and create?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about earth materials and building and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through earth materials and building using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about earth materials and building.",
-            "Ask: “How do Earth materials help people build and create?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Property words and evidence sentences",
-          "math": "Measure, compare, and graph material tests",
-          "inquiry": "Earth materials, properties, design, and testing",
-          "sel": "Safety and fair testing",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "property words and evidence sentences",
+          "math": "measure, compare, and graph material tests",
+          "inquiry": "earth materials, properties, design, and testing",
+          "sel": "safety and fair testing",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8164,8 +6807,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about earth materials and building.",
+            "Ask: “How do Earth materials help people build and create?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about earth materials and building and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -8175,7 +6825,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Property words and evidence sentences."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: property words and evidence sentences."
           },
           {
             "domain": "Writing",
@@ -8185,12 +6835,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Measure, compare, and graph material tests."
+            "prompt": "Completes and explains the weekly math focus: measure, compare, and graph material tests."
           },
           {
             "domain": "Math Reasoning",
@@ -8200,17 +6850,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Earth materials, properties, design, and testing."
+            "prompt": "Observes, maps, tests, researches, or explains: earth materials, properties, design, and testing."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Material bridge challenge."
+            "prompt": "Completes or contributes to the project/workshop: Material Bridge Challenge."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Safety and fair testing."
+            "prompt": "Practices the weekly SEL focus: safety and fair testing."
           },
           {
             "domain": "Independence",
@@ -8231,11 +6881,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Poetry, Rhythm, and Art",
       "theme": "Poetry, rhythm, imagery, line breaks, art response, movement, music, and performance",
       "essentialQuestion": "How can words, music, and art help us feel and imagine?",
-      "literacyFocus": "Poems, sensory words, rhythm, and expression",
-      "mathFocus": "Count syllables, beats, patterns, and repeated structures",
-      "inquiryFocus": "Sound, art, culture, and response",
-      "selFocus": "Creative courage and audience respect",
-      "makerProject": "Poetry gallery",
+      "literacyFocus": "poems, sensory words, rhythm, and expression",
+      "mathFocus": "count syllables, beats, patterns, and repeated structures",
+      "inquiryFocus": "sound, art, culture, and response",
+      "selFocus": "creative courage and audience respect",
+      "makerProject": "Poetry Gallery",
       "printableType": "arts",
       "primaryDomain": "music",
       "standards": [
@@ -8253,27 +6903,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through poetry, rhythm, and art using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about poetry, rhythm, and art.",
-            "Ask: “How can words, music, and art help us feel and imagine?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Poems, sensory words, rhythm, and expression",
-          "math": "Count syllables, beats, patterns, and repeated structures",
-          "inquiry": "Sound, art, culture, and response",
-          "sel": "Creative courage and audience respect",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "poems, sensory words, rhythm, and expression",
+          "math": "count syllables, beats, patterns, and repeated structures",
+          "inquiry": "sound, art, culture, and response",
+          "sel": "creative courage and audience respect",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8283,35 +6917,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about poetry, rhythm, and art.",
+            "Ask: “How can words, music, and art help us feel and imagine?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about poetry, rhythm, and art and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through poetry, rhythm, and art using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about poetry, rhythm, and art.",
-            "Ask: “How can words, music, and art help us feel and imagine?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Poems, sensory words, rhythm, and expression",
-          "math": "Count syllables, beats, patterns, and repeated structures",
-          "inquiry": "Sound, art, culture, and response",
-          "sel": "Creative courage and audience respect",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "poems, sensory words, rhythm, and expression",
+          "math": "count syllables, beats, patterns, and repeated structures",
+          "inquiry": "sound, art, culture, and response",
+          "sel": "creative courage and audience respect",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8321,35 +6946,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about poetry, rhythm, and art.",
+            "Ask: “How can words, music, and art help us feel and imagine?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about poetry, rhythm, and art and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through poetry, rhythm, and art using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about poetry, rhythm, and art.",
-            "Ask: “How can words, music, and art help us feel and imagine?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Poems, sensory words, rhythm, and expression",
-          "math": "Count syllables, beats, patterns, and repeated structures",
-          "inquiry": "Sound, art, culture, and response",
-          "sel": "Creative courage and audience respect",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "poems, sensory words, rhythm, and expression",
+          "math": "count syllables, beats, patterns, and repeated structures",
+          "inquiry": "sound, art, culture, and response",
+          "sel": "creative courage and audience respect",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8359,35 +6975,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about poetry, rhythm, and art.",
+            "Ask: “How can words, music, and art help us feel and imagine?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about poetry, rhythm, and art and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through poetry, rhythm, and art using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about poetry, rhythm, and art.",
-            "Ask: “How can words, music, and art help us feel and imagine?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Poems, sensory words, rhythm, and expression",
-          "math": "Count syllables, beats, patterns, and repeated structures",
-          "inquiry": "Sound, art, culture, and response",
-          "sel": "Creative courage and audience respect",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "poems, sensory words, rhythm, and expression",
+          "math": "count syllables, beats, patterns, and repeated structures",
+          "inquiry": "sound, art, culture, and response",
+          "sel": "creative courage and audience respect",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8397,35 +7004,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about poetry, rhythm, and art.",
+            "Ask: “How can words, music, and art help us feel and imagine?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about poetry, rhythm, and art and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through poetry, rhythm, and art using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about poetry, rhythm, and art.",
-            "Ask: “How can words, music, and art help us feel and imagine?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Poems, sensory words, rhythm, and expression",
-          "math": "Count syllables, beats, patterns, and repeated structures",
-          "inquiry": "Sound, art, culture, and response",
-          "sel": "Creative courage and audience respect",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "poems, sensory words, rhythm, and expression",
+          "math": "count syllables, beats, patterns, and repeated structures",
+          "inquiry": "sound, art, culture, and response",
+          "sel": "creative courage and audience respect",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8435,8 +7033,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about poetry, rhythm, and art.",
+            "Ask: “How can words, music, and art help us feel and imagine?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about poetry, rhythm, and art and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -8446,7 +7051,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Poems, sensory words, rhythm, and expression."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: poems, sensory words, rhythm, and expression."
           },
           {
             "domain": "Writing",
@@ -8456,12 +7061,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Count syllables, beats, patterns, and repeated structures."
+            "prompt": "Completes and explains the weekly math focus: count syllables, beats, patterns, and repeated structures."
           },
           {
             "domain": "Math Reasoning",
@@ -8471,17 +7076,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Sound, art, culture, and response."
+            "prompt": "Observes, maps, tests, researches, or explains: sound, art, culture, and response."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Poetry gallery."
+            "prompt": "Completes or contributes to the project/workshop: Poetry Gallery."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Creative courage and audience respect."
+            "prompt": "Practices the weekly SEL focus: creative courage and audience respect."
           },
           {
             "domain": "Independence",
@@ -8502,11 +7107,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Fractions as Equal Shares",
       "theme": "Halves, fourths, equal shares, partitions, fairness, shapes, and food/design contexts",
       "essentialQuestion": "What makes a share fair?",
-      "literacyFocus": "Explain equal shares and fairness",
-      "mathFocus": "Partition circles/rectangles into halves/fourths",
-      "inquiryFocus": "Fairness, design, food, and community sharing",
-      "selFocus": "Fairness and empathy",
-      "makerProject": "Fraction picnic mat",
+      "literacyFocus": "explain equal shares and fairness",
+      "mathFocus": "partition circles/rectangles into halves/fourths",
+      "inquiryFocus": "fairness, design, food, and community sharing",
+      "selFocus": "fairness and empathy",
+      "makerProject": "Fraction Picnic Mat",
       "printableType": "fractions",
       "primaryDomain": "math",
       "standards": [
@@ -8525,27 +7130,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through fractions as equal shares using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about fractions as equal shares.",
-            "Ask: “What makes a share fair?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Explain equal shares and fairness",
-          "math": "Partition circles/rectangles into halves/fourths",
-          "inquiry": "Fairness, design, food, and community sharing",
-          "sel": "Fairness and empathy",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "explain equal shares and fairness",
+          "math": "partition circles/rectangles into halves/fourths",
+          "inquiry": "fairness, design, food, and community sharing",
+          "sel": "fairness and empathy",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8555,35 +7144,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about fractions as equal shares.",
+            "Ask: “What makes a share fair?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about fractions as equal shares and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through fractions as equal shares using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about fractions as equal shares.",
-            "Ask: “What makes a share fair?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Explain equal shares and fairness",
-          "math": "Partition circles/rectangles into halves/fourths",
-          "inquiry": "Fairness, design, food, and community sharing",
-          "sel": "Fairness and empathy",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "explain equal shares and fairness",
+          "math": "partition circles/rectangles into halves/fourths",
+          "inquiry": "fairness, design, food, and community sharing",
+          "sel": "fairness and empathy",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8593,35 +7173,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about fractions as equal shares.",
+            "Ask: “What makes a share fair?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about fractions as equal shares and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through fractions as equal shares using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about fractions as equal shares.",
-            "Ask: “What makes a share fair?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Explain equal shares and fairness",
-          "math": "Partition circles/rectangles into halves/fourths",
-          "inquiry": "Fairness, design, food, and community sharing",
-          "sel": "Fairness and empathy",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "explain equal shares and fairness",
+          "math": "partition circles/rectangles into halves/fourths",
+          "inquiry": "fairness, design, food, and community sharing",
+          "sel": "fairness and empathy",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8631,35 +7202,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about fractions as equal shares.",
+            "Ask: “What makes a share fair?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about fractions as equal shares and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through fractions as equal shares using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about fractions as equal shares.",
-            "Ask: “What makes a share fair?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Explain equal shares and fairness",
-          "math": "Partition circles/rectangles into halves/fourths",
-          "inquiry": "Fairness, design, food, and community sharing",
-          "sel": "Fairness and empathy",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "explain equal shares and fairness",
+          "math": "partition circles/rectangles into halves/fourths",
+          "inquiry": "fairness, design, food, and community sharing",
+          "sel": "fairness and empathy",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8669,35 +7231,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about fractions as equal shares.",
+            "Ask: “What makes a share fair?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about fractions as equal shares and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through fractions as equal shares using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about fractions as equal shares.",
-            "Ask: “What makes a share fair?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Explain equal shares and fairness",
-          "math": "Partition circles/rectangles into halves/fourths",
-          "inquiry": "Fairness, design, food, and community sharing",
-          "sel": "Fairness and empathy",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "explain equal shares and fairness",
+          "math": "partition circles/rectangles into halves/fourths",
+          "inquiry": "fairness, design, food, and community sharing",
+          "sel": "fairness and empathy",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8707,8 +7260,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about fractions as equal shares.",
+            "Ask: “What makes a share fair?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about fractions as equal shares and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -8718,7 +7278,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Explain equal shares and fairness."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: explain equal shares and fairness."
           },
           {
             "domain": "Writing",
@@ -8728,12 +7288,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Partition circles/rectangles into halves/fourths."
+            "prompt": "Completes and explains the weekly math focus: partition circles/rectangles into halves/fourths."
           },
           {
             "domain": "Math Reasoning",
@@ -8743,17 +7303,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Fairness, design, food, and community sharing."
+            "prompt": "Observes, maps, tests, researches, or explains: fairness, design, food, and community sharing."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Fraction picnic mat."
+            "prompt": "Completes or contributes to the project/workshop: Fraction Picnic Mat."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Fairness and empathy."
+            "prompt": "Practices the weekly SEL focus: fairness and empathy."
           },
           {
             "domain": "Independence",
@@ -8774,11 +7334,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Digital Citizenship and Unplugged Coding",
       "theme": "Sequencing, algorithms, patterns, safe tools, kindness, creation, and debugging",
       "essentialQuestion": "How can tools and steps help us create safely?",
-      "literacyFocus": "Sequence words and how-to writing",
-      "mathFocus": "Directional language, patterns, and coding paths",
-      "inquiryFocus": "Safe tools, unplugged algorithms, debugging",
-      "selFocus": "Responsible choices and kindness",
-      "makerProject": "Robot map challenge",
+      "literacyFocus": "sequence words and how-to writing",
+      "mathFocus": "directional language, patterns, and coding paths",
+      "inquiryFocus": "safe tools, unplugged algorithms, debugging",
+      "selFocus": "responsible choices and kindness",
+      "makerProject": "Robot Map Challenge",
       "printableType": "technology",
       "primaryDomain": "coding",
       "standards": [
@@ -8789,8 +7349,8 @@ window.KHAE_GRADE1_DATA = {
         "KHAE-ART-1",
         "KHAE-PEH-1",
         "KHAE-PORT-1",
-        "KHAE-TECH-1",
-        "KHAE-SCI-1"
+        "KHAE-SCI-1",
+        "KHAE-TECH-1"
       ],
       "lessons": [
         {
@@ -8798,27 +7358,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through digital citizenship and unplugged coding using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about digital citizenship and unplugged coding.",
-            "Ask: “How can tools and steps help us create safely?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Sequence words and how-to writing",
-          "math": "Directional language, patterns, and coding paths",
-          "inquiry": "Safe tools, unplugged algorithms, debugging",
-          "sel": "Responsible choices and kindness",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "sequence words and how-to writing",
+          "math": "directional language, patterns, and coding paths",
+          "inquiry": "safe tools, unplugged algorithms, debugging",
+          "sel": "responsible choices and kindness",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8828,35 +7372,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about digital citizenship and unplugged coding.",
+            "Ask: “How can tools and steps help us create safely?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about digital citizenship and unplugged coding and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through digital citizenship and unplugged coding using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about digital citizenship and unplugged coding.",
-            "Ask: “How can tools and steps help us create safely?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Sequence words and how-to writing",
-          "math": "Directional language, patterns, and coding paths",
-          "inquiry": "Safe tools, unplugged algorithms, debugging",
-          "sel": "Responsible choices and kindness",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "sequence words and how-to writing",
+          "math": "directional language, patterns, and coding paths",
+          "inquiry": "safe tools, unplugged algorithms, debugging",
+          "sel": "responsible choices and kindness",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8866,35 +7401,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about digital citizenship and unplugged coding.",
+            "Ask: “How can tools and steps help us create safely?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about digital citizenship and unplugged coding and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through digital citizenship and unplugged coding using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about digital citizenship and unplugged coding.",
-            "Ask: “How can tools and steps help us create safely?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Sequence words and how-to writing",
-          "math": "Directional language, patterns, and coding paths",
-          "inquiry": "Safe tools, unplugged algorithms, debugging",
-          "sel": "Responsible choices and kindness",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "sequence words and how-to writing",
+          "math": "directional language, patterns, and coding paths",
+          "inquiry": "safe tools, unplugged algorithms, debugging",
+          "sel": "responsible choices and kindness",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8904,35 +7430,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about digital citizenship and unplugged coding.",
+            "Ask: “How can tools and steps help us create safely?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about digital citizenship and unplugged coding and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through digital citizenship and unplugged coding using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about digital citizenship and unplugged coding.",
-            "Ask: “How can tools and steps help us create safely?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Sequence words and how-to writing",
-          "math": "Directional language, patterns, and coding paths",
-          "inquiry": "Safe tools, unplugged algorithms, debugging",
-          "sel": "Responsible choices and kindness",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "sequence words and how-to writing",
+          "math": "directional language, patterns, and coding paths",
+          "inquiry": "safe tools, unplugged algorithms, debugging",
+          "sel": "responsible choices and kindness",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8942,35 +7459,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about digital citizenship and unplugged coding.",
+            "Ask: “How can tools and steps help us create safely?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about digital citizenship and unplugged coding and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through digital citizenship and unplugged coding using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about digital citizenship and unplugged coding.",
-            "Ask: “How can tools and steps help us create safely?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Sequence words and how-to writing",
-          "math": "Directional language, patterns, and coding paths",
-          "inquiry": "Safe tools, unplugged algorithms, debugging",
-          "sel": "Responsible choices and kindness",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "sequence words and how-to writing",
+          "math": "directional language, patterns, and coding paths",
+          "inquiry": "safe tools, unplugged algorithms, debugging",
+          "sel": "responsible choices and kindness",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -8980,8 +7488,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about digital citizenship and unplugged coding.",
+            "Ask: “How can tools and steps help us create safely?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about digital citizenship and unplugged coding and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -8991,7 +7506,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Sequence words and how-to writing."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: sequence words and how-to writing."
           },
           {
             "domain": "Writing",
@@ -9001,12 +7516,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Directional language, patterns, and coding paths."
+            "prompt": "Completes and explains the weekly math focus: directional language, patterns, and coding paths."
           },
           {
             "domain": "Math Reasoning",
@@ -9016,17 +7531,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Safe tools, unplugged algorithms, debugging."
+            "prompt": "Observes, maps, tests, researches, or explains: safe tools, unplugged algorithms, debugging."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Robot map challenge."
+            "prompt": "Completes or contributes to the project/workshop: Robot Map Challenge."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Responsible choices and kindness."
+            "prompt": "Practices the weekly SEL focus: responsible choices and kindness."
           },
           {
             "domain": "Independence",
@@ -9047,11 +7562,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Research Project: My Big Question",
       "theme": "Question, plan, investigate, draw, write, revise, and present a first-grade research project",
       "essentialQuestion": "What big question can I investigate and teach?",
-      "literacyFocus": "Research question, facts, notes, and oral report",
-      "mathFocus": "Use measurement, counting, graphing, or comparison in project",
-      "inquiryFocus": "Inquiry, evidence, sources, design, and presentation",
-      "selFocus": "Confidence and collaboration",
-      "makerProject": "Big question research board",
+      "literacyFocus": "research question, facts, notes, and oral report",
+      "mathFocus": "use measurement, counting, graphing, or comparison in project",
+      "inquiryFocus": "inquiry, evidence, sources, design, and presentation",
+      "selFocus": "confidence and collaboration",
+      "makerProject": "Big Question Research Board",
       "printableType": "research",
       "primaryDomain": "capstone",
       "standards": [
@@ -9069,27 +7584,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through research project: my big question using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about research project: my big question.",
-            "Ask: “What big question can I investigate and teach?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Research question, facts, notes, and oral report",
-          "math": "Use measurement, counting, graphing, or comparison in project",
-          "inquiry": "Inquiry, evidence, sources, design, and presentation",
-          "sel": "Confidence and collaboration",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "research question, facts, notes, and oral report",
+          "math": "use measurement, counting, graphing, or comparison in project",
+          "inquiry": "inquiry, evidence, sources, design, and presentation",
+          "sel": "confidence and collaboration",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9099,35 +7598,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about research project: my big question.",
+            "Ask: “What big question can I investigate and teach?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about research project: my big question and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through research project: my big question using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about research project: my big question.",
-            "Ask: “What big question can I investigate and teach?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Research question, facts, notes, and oral report",
-          "math": "Use measurement, counting, graphing, or comparison in project",
-          "inquiry": "Inquiry, evidence, sources, design, and presentation",
-          "sel": "Confidence and collaboration",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "research question, facts, notes, and oral report",
+          "math": "use measurement, counting, graphing, or comparison in project",
+          "inquiry": "inquiry, evidence, sources, design, and presentation",
+          "sel": "confidence and collaboration",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9137,35 +7627,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about research project: my big question.",
+            "Ask: “What big question can I investigate and teach?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about research project: my big question and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through research project: my big question using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about research project: my big question.",
-            "Ask: “What big question can I investigate and teach?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Research question, facts, notes, and oral report",
-          "math": "Use measurement, counting, graphing, or comparison in project",
-          "inquiry": "Inquiry, evidence, sources, design, and presentation",
-          "sel": "Confidence and collaboration",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "research question, facts, notes, and oral report",
+          "math": "use measurement, counting, graphing, or comparison in project",
+          "inquiry": "inquiry, evidence, sources, design, and presentation",
+          "sel": "confidence and collaboration",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9175,35 +7656,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about research project: my big question.",
+            "Ask: “What big question can I investigate and teach?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about research project: my big question and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through research project: my big question using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about research project: my big question.",
-            "Ask: “What big question can I investigate and teach?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Research question, facts, notes, and oral report",
-          "math": "Use measurement, counting, graphing, or comparison in project",
-          "inquiry": "Inquiry, evidence, sources, design, and presentation",
-          "sel": "Confidence and collaboration",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "research question, facts, notes, and oral report",
+          "math": "use measurement, counting, graphing, or comparison in project",
+          "inquiry": "inquiry, evidence, sources, design, and presentation",
+          "sel": "confidence and collaboration",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9213,35 +7685,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about research project: my big question.",
+            "Ask: “What big question can I investigate and teach?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about research project: my big question and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through research project: my big question using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about research project: my big question.",
-            "Ask: “What big question can I investigate and teach?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Research question, facts, notes, and oral report",
-          "math": "Use measurement, counting, graphing, or comparison in project",
-          "inquiry": "Inquiry, evidence, sources, design, and presentation",
-          "sel": "Confidence and collaboration",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "research question, facts, notes, and oral report",
+          "math": "use measurement, counting, graphing, or comparison in project",
+          "inquiry": "inquiry, evidence, sources, design, and presentation",
+          "sel": "confidence and collaboration",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9251,8 +7714,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about research project: my big question.",
+            "Ask: “What big question can I investigate and teach?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about research project: my big question and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -9262,7 +7732,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Research question, facts, notes, and oral report."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: research question, facts, notes, and oral report."
           },
           {
             "domain": "Writing",
@@ -9272,12 +7742,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Use measurement, counting, graphing, or comparison in project."
+            "prompt": "Completes and explains the weekly math focus: use measurement, counting, graphing, or comparison in project."
           },
           {
             "domain": "Math Reasoning",
@@ -9287,17 +7757,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Inquiry, evidence, sources, design, and presentation."
+            "prompt": "Observes, maps, tests, researches, or explains: inquiry, evidence, sources, design, and presentation."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Big question research board."
+            "prompt": "Completes or contributes to the project/workshop: Big Question Research Board."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Confidence and collaboration."
+            "prompt": "Practices the weekly SEL focus: confidence and collaboration."
           },
           {
             "domain": "Independence",
@@ -9318,11 +7788,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "First Grade Capstone Workshop",
       "theme": "Portfolio, final project, speaking/listening, revision, peer questions, and family share",
       "essentialQuestion": "How can I show my best learning from first grade?",
-      "literacyFocus": "Presentation, revision, reading/writing showcase",
-      "mathFocus": "Math portfolio and problem-solving defense",
-      "inquiryFocus": "Capstone evidence and communication",
-      "selFocus": "Pride, gratitude, and resilience",
-      "makerProject": "First grade showcase",
+      "literacyFocus": "presentation, revision, reading/writing showcase",
+      "mathFocus": "math portfolio and problem-solving defense",
+      "inquiryFocus": "capstone evidence and communication",
+      "selFocus": "pride, gratitude, and resilience",
+      "makerProject": "First Grade Showcase",
       "printableType": "capstone",
       "primaryDomain": "review",
       "standards": [
@@ -9340,27 +7810,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through first grade capstone workshop using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about first grade capstone workshop.",
-            "Ask: “How can I show my best learning from first grade?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Presentation, revision, reading/writing showcase",
-          "math": "Math portfolio and problem-solving defense",
-          "inquiry": "Capstone evidence and communication",
-          "sel": "Pride, gratitude, and resilience",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "presentation, revision, reading/writing showcase",
+          "math": "math portfolio and problem-solving defense",
+          "inquiry": "capstone evidence and communication",
+          "sel": "pride, gratitude, and resilience",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9370,35 +7824,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about first grade capstone workshop.",
+            "Ask: “How can I show my best learning from first grade?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about first grade capstone workshop and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through first grade capstone workshop using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about first grade capstone workshop.",
-            "Ask: “How can I show my best learning from first grade?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Presentation, revision, reading/writing showcase",
-          "math": "Math portfolio and problem-solving defense",
-          "inquiry": "Capstone evidence and communication",
-          "sel": "Pride, gratitude, and resilience",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "presentation, revision, reading/writing showcase",
+          "math": "math portfolio and problem-solving defense",
+          "inquiry": "capstone evidence and communication",
+          "sel": "pride, gratitude, and resilience",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9408,35 +7853,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about first grade capstone workshop.",
+            "Ask: “How can I show my best learning from first grade?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about first grade capstone workshop and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through first grade capstone workshop using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about first grade capstone workshop.",
-            "Ask: “How can I show my best learning from first grade?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Presentation, revision, reading/writing showcase",
-          "math": "Math portfolio and problem-solving defense",
-          "inquiry": "Capstone evidence and communication",
-          "sel": "Pride, gratitude, and resilience",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "presentation, revision, reading/writing showcase",
+          "math": "math portfolio and problem-solving defense",
+          "inquiry": "capstone evidence and communication",
+          "sel": "pride, gratitude, and resilience",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9446,35 +7882,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about first grade capstone workshop.",
+            "Ask: “How can I show my best learning from first grade?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about first grade capstone workshop and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through first grade capstone workshop using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about first grade capstone workshop.",
-            "Ask: “How can I show my best learning from first grade?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Presentation, revision, reading/writing showcase",
-          "math": "Math portfolio and problem-solving defense",
-          "inquiry": "Capstone evidence and communication",
-          "sel": "Pride, gratitude, and resilience",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "presentation, revision, reading/writing showcase",
+          "math": "math portfolio and problem-solving defense",
+          "inquiry": "capstone evidence and communication",
+          "sel": "pride, gratitude, and resilience",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9484,35 +7911,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about first grade capstone workshop.",
+            "Ask: “How can I show my best learning from first grade?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about first grade capstone workshop and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through first grade capstone workshop using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about first grade capstone workshop.",
-            "Ask: “How can I show my best learning from first grade?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Presentation, revision, reading/writing showcase",
-          "math": "Math portfolio and problem-solving defense",
-          "inquiry": "Capstone evidence and communication",
-          "sel": "Pride, gratitude, and resilience",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "presentation, revision, reading/writing showcase",
+          "math": "math portfolio and problem-solving defense",
+          "inquiry": "capstone evidence and communication",
+          "sel": "pride, gratitude, and resilience",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9522,8 +7940,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about first grade capstone workshop.",
+            "Ask: “How can I show my best learning from first grade?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about first grade capstone workshop and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -9533,7 +7958,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Presentation, revision, reading/writing showcase."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: presentation, revision, reading/writing showcase."
           },
           {
             "domain": "Writing",
@@ -9543,12 +7968,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Math portfolio and problem-solving defense."
+            "prompt": "Completes and explains the weekly math focus: math portfolio and problem-solving defense."
           },
           {
             "domain": "Math Reasoning",
@@ -9558,17 +7983,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Capstone evidence and communication."
+            "prompt": "Observes, maps, tests, researches, or explains: capstone evidence and communication."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: First grade showcase."
+            "prompt": "Completes or contributes to the project/workshop: First Grade Showcase."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Pride, gratitude, and resilience."
+            "prompt": "Practices the weekly SEL focus: pride, gratitude, and resilience."
           },
           {
             "domain": "Independence",
@@ -9589,11 +8014,11 @@ window.KHAE_GRADE1_DATA = {
       "title": "Final Review and Celebration",
       "theme": "Cumulative review, final assessment, portfolio, certificate, grade 2 readiness, and celebration",
       "essentialQuestion": "How am I ready for second grade?",
-      "literacyFocus": "Final reading/writing/speaking demonstration",
-      "mathFocus": "Final operations, place value, geometry, time, data, and fractions review",
-      "inquiryFocus": "Science/social studies/arts/technology review",
-      "selFocus": "Gratitude and next steps",
-      "makerProject": "Grade 2 readiness portfolio",
+      "literacyFocus": "final reading/writing/speaking demonstration",
+      "mathFocus": "final operations, place value, geometry, time, data, and fractions review",
+      "inquiryFocus": "science/social studies/arts/technology review",
+      "selFocus": "gratitude and next steps",
+      "makerProject": "Grade 2 Readiness Portfolio",
       "printableType": "final",
       "primaryDomain": "review",
       "standards": [
@@ -9613,27 +8038,11 @@ window.KHAE_GRADE1_DATA = {
           "title": "Launch and Read",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through final review and celebration using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about final review and celebration.",
-            "Ask: “How am I ready for second grade?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Final reading/writing/speaking demonstration",
-          "math": "Final operations, place value, geometry, time, data, and fractions review",
-          "inquiry": "Science/social studies/arts/technology review",
-          "sel": "Gratitude and next steps",
-          "workshop": "Introduce the essential question, vocabulary, read-aloud/decodable text, discussion routine, and anchor chart.",
+          "literacy": "final reading/writing/speaking demonstration",
+          "math": "final operations, place value, geometry, time, data, and fractions review",
+          "inquiry": "science/social studies/arts/technology review",
+          "sel": "gratitude and next steps",
+          "activity": "Introduce the essential question, vocabulary, read-aloud or decodable text, discussion routine, and anchor chart.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9643,35 +8052,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about final review and celebration.",
+            "Ask: “How am I ready for second grade?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about final review and celebration and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Tuesday",
           "title": "Skill Practice",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through final review and celebration using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about final review and celebration.",
-            "Ask: “How am I ready for second grade?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Final reading/writing/speaking demonstration",
-          "math": "Final operations, place value, geometry, time, data, and fractions review",
-          "inquiry": "Science/social studies/arts/technology review",
-          "sel": "Gratitude and next steps",
-          "workshop": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
+          "literacy": "final reading/writing/speaking demonstration",
+          "math": "final operations, place value, geometry, time, data, and fractions review",
+          "inquiry": "science/social studies/arts/technology review",
+          "sel": "gratitude and next steps",
+          "activity": "Teach the targeted reading, writing, or math skill with explicit modeling, guided practice, and partner talk.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9681,35 +8081,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about final review and celebration.",
+            "Ask: “How am I ready for second grade?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about final review and celebration and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Wednesday",
           "title": "Inquiry and Workshop",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through final review and celebration using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about final review and celebration.",
-            "Ask: “How am I ready for second grade?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Final reading/writing/speaking demonstration",
-          "math": "Final operations, place value, geometry, time, data, and fractions review",
-          "inquiry": "Science/social studies/arts/technology review",
-          "sel": "Gratitude and next steps",
-          "workshop": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
+          "literacy": "final reading/writing/speaking demonstration",
+          "math": "final operations, place value, geometry, time, data, and fractions review",
+          "inquiry": "science/social studies/arts/technology review",
+          "sel": "gratitude and next steps",
+          "activity": "Investigate, build, test, observe, map, sort, measure, dramatize, or research through hands-on learning.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9719,35 +8110,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about final review and celebration.",
+            "Ask: “How am I ready for second grade?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about final review and celebration and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Thursday",
           "title": "Create, Write, and Explain",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through final review and celebration using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about final review and celebration.",
-            "Ask: “How am I ready for second grade?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Final reading/writing/speaking demonstration",
-          "math": "Final operations, place value, geometry, time, data, and fractions review",
-          "inquiry": "Science/social studies/arts/technology review",
-          "sel": "Gratitude and next steps",
-          "workshop": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
+          "literacy": "final reading/writing/speaking demonstration",
+          "math": "final operations, place value, geometry, time, data, and fractions review",
+          "inquiry": "science/social studies/arts/technology review",
+          "sel": "gratitude and next steps",
+          "activity": "Create a product, solve a challenge, write or dictate thinking, and share reasoning with a partner.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9757,35 +8139,26 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about final review and celebration.",
+            "Ask: “How am I ready for second grade?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about final review and celebration and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         },
         {
           "day": "Friday",
           "title": "Review and Mastery Check",
           "duration": "60–90 minute flexible first-grade block plus centers",
           "objective": "Students build first-grade mastery through final review and celebration using reading, writing, math, inquiry, talk, movement, art, and reflection.",
-          "materials": [
-            "Pencils",
-            "Crayons",
-            "Counters",
-            "Ten-frame or number line",
-            "Primary writing paper",
-            "Cards or manipulatives",
-            "Portfolio folder"
-          ],
-          "teacherScript": [
-            "Today we are learning about final review and celebration.",
-            "Ask: “How am I ready for second grade?”",
-            "Model the skill with think-aloud language.",
-            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
-            "Close with one complete sentence: “I learned ___ because ___.”"
-          ],
-          "literacy": "Final reading/writing/speaking demonstration",
-          "math": "Final operations, place value, geometry, time, data, and fractions review",
-          "inquiry": "Science/social studies/arts/technology review",
-          "sel": "Gratitude and next steps",
-          "workshop": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
+          "literacy": "final reading/writing/speaking demonstration",
+          "math": "final operations, place value, geometry, time, data, and fractions review",
+          "inquiry": "science/social studies/arts/technology review",
+          "sel": "gratitude and next steps",
+          "activity": "Review the week, complete the weekly assessment, file portfolio evidence, and reflect on growth.",
           "centers": [
             "Teacher table",
             "Word work",
@@ -9795,8 +8168,15 @@ window.KHAE_GRADE1_DATA = {
             "Art/music/movement",
             "Independent reading"
           ],
+          "teacherScript": [
+            "Today we are learning about final review and celebration.",
+            "Ask: “How am I ready for second grade?”",
+            "Model the skill with think-aloud language.",
+            "Invite students to practice with objects, drawings, words, numbers, movement, or partner talk.",
+            "Close with one complete sentence: “I learned ___ because ___.”"
+          ],
           "familyConnection": "Ask your child to explain one thing about final review and celebration and show it with words, numbers, pictures, or movement.",
-          "evidence": "Work sample, oral explanation, teacher observation, student correction, completed printable, and weekly assessment."
+          "evidence": "Work sample, oral explanation, teacher observation, correction/revision, completed printable, and weekly assessment."
         }
       ],
       "weeklyAssessment": {
@@ -9806,7 +8186,7 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Reading/Phonics",
             "points": 1,
-            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: Final reading/writing/speaking demonstration."
+            "prompt": "Reads, decodes, explains, or responds to the weekly literacy focus: final reading/writing/speaking demonstration."
           },
           {
             "domain": "Writing",
@@ -9816,12 +8196,12 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Speaking/Listening",
             "points": 1,
-            "prompt": "Uses a complete sentence, listens to peers, and asks or answers a relevant question."
+            "prompt": "Uses a complete sentence, listens to peers, and answers or asks a relevant question."
           },
           {
             "domain": "Math",
             "points": 1,
-            "prompt": "Completes and explains the weekly math focus: Final operations, place value, geometry, time, data, and fractions review."
+            "prompt": "Completes and explains the weekly math focus: final operations, place value, geometry, time, data, and fractions review."
           },
           {
             "domain": "Math Reasoning",
@@ -9831,17 +8211,17 @@ window.KHAE_GRADE1_DATA = {
           {
             "domain": "Inquiry/Social Studies",
             "points": 1,
-            "prompt": "Observes, maps, tests, researches, or explains: Science/social studies/arts/technology review."
+            "prompt": "Observes, maps, tests, researches, or explains: science/social studies/arts/technology review."
           },
           {
             "domain": "Arts/Workshop",
             "points": 1,
-            "prompt": "Completes or contributes to the project/workshop: Grade 2 readiness portfolio."
+            "prompt": "Completes or contributes to the project/workshop: Grade 2 Readiness Portfolio."
           },
           {
             "domain": "SEL/Participation",
             "points": 1,
-            "prompt": "Practices the weekly SEL focus: Gratitude and next steps."
+            "prompt": "Practices the weekly SEL focus: gratitude and next steps."
           },
           {
             "domain": "Independence",
