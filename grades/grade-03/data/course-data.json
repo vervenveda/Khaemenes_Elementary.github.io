@@ -1,0 +1,796 @@
+{
+  "course": {
+    "title": "Khaemenes Academy Third Grade — Subject-Based 36 Week A+ Curriculum",
+    "subtitle": "Advanced Whole-Child Elementary Program · In-House Curriculum · Subject Halls",
+    "code": "KHAE-GRADE3-SUBJECT-36-APLUS",
+    "grade": "Third Grade",
+    "weeks": 36,
+    "subjects": 8,
+    "lessonBlocksPerSubjectPerWeek": 5,
+    "subjectLessonBlocks": 1440,
+    "weeklyAssessments": 36,
+    "passingScore": 80,
+    "authors": "Jennifer Kay Pearl",
+    "generated": "2026-08-08",
+    "dependencyPolicy": "No outside fonts, scripts, images, libraries, or curriculum calls. All pages use local files only.",
+    "localReviewNote": "Designed to exceed a single-state checklist by spanning broad Grade 3 academics, arts, health, technology, inquiry, and portfolio requirements. Local compliance review is still recommended."
+  },
+  "subjects": [
+    {
+      "id": "language-arts",
+      "title": "Language Arts",
+      "icon": "LA",
+      "color": "#3f6fb2",
+      "description": "reading evidence, morphology, fluency, vocabulary, discussion, grammar, writing craft, research, publication"
+    },
+    {
+      "id": "mathematics",
+      "title": "Mathematics",
+      "icon": "M",
+      "color": "#2f7a66",
+      "description": "multiplication, division, place value, fractions, area, perimeter, measurement, data, geometry"
+    },
+    {
+      "id": "science",
+      "title": "Science",
+      "icon": "SCI",
+      "color": "#527b3f",
+      "description": "forces, motion, magnetism, life cycles, traits, ecosystems, fossils, weather, climate, engineering"
+    },
+    {
+      "id": "social-studies",
+      "title": "Social Studies",
+      "icon": "SS",
+      "color": "#9a6a2f",
+      "description": "communities, geography, maps, culture, local history, government, citizenship, economics, resources"
+    },
+    {
+      "id": "arts-music",
+      "title": "Arts & Music",
+      "icon": "ART",
+      "color": "#8a5aa4",
+      "description": "drawing, design, critique, rhythm, notation, performance, drama, movement, cultural connection"
+    },
+    {
+      "id": "health-pe-sel",
+      "title": "Health, PE & SEL",
+      "icon": "H",
+      "color": "#c45f55",
+      "description": "fitness, coordination, nutrition, safety, self-management, teamwork, leadership, resilience"
+    },
+    {
+      "id": "technology-tools",
+      "title": "Technology & Tools",
+      "icon": "T",
+      "color": "#42677e",
+      "description": "keyboarding, files, digital citizenship, algorithms, debugging, data tools, presentations, ethical creation"
+    },
+    {
+      "id": "integrated-projects",
+      "title": "Integrated Projects",
+      "icon": "IP",
+      "color": "#b88a3b",
+      "description": "inquiry questions, planning, evidence, calculation, prototypes, revision, presentation, reflection"
+    }
+  ],
+  "standardsFamilies": [
+    {
+      "code": "KHAE-ELA-3",
+      "label": "Grade 3 Language Arts",
+      "description": "Text evidence, literature, informational text, morphology, fluency, vocabulary, speaking/listening, grammar, writing, research, publishing."
+    },
+    {
+      "code": "KHAE-MATH-3",
+      "label": "Grade 3 Mathematics",
+      "description": "Multiplication/division, place value, multi-step problems, fractions, area, perimeter, measurement, data, time, geometry."
+    },
+    {
+      "code": "KHAE-SCI-3",
+      "label": "Grade 3 Science and Engineering",
+      "description": "Forces, motion, life cycles, inherited traits, habitats, ecosystems, fossils, weather, climate, engineering, evidence."
+    },
+    {
+      "code": "KHAE-SS-3",
+      "label": "Grade 3 Social Studies and Civics",
+      "description": "Communities, geography, history, culture, citizenship, government, economics, trade, resources, informed action."
+    },
+    {
+      "code": "KHAE-ART-3",
+      "label": "Arts and Music",
+      "description": "Create, perform, present, respond, connect, design, rhythm, critique, media, movement, portfolio."
+    },
+    {
+      "code": "KHAE-PEH-3",
+      "label": "Health, PE, and SEL",
+      "description": "Movement, fitness, health literacy, nutrition, safety, self-awareness, self-management, relationships, resilience."
+    },
+    {
+      "code": "KHAE-TECH-3",
+      "label": "Technology and Tools",
+      "description": "Digital citizenship, keyboarding, files, notes, data tools, algorithms, debugging, presentations, ethical creation."
+    },
+    {
+      "code": "KHAE-IP-3",
+      "label": "Integrated Projects",
+      "description": "Cross-disciplinary inquiry, evidence gathering, calculations, research writing, design, revision, presentation, reflection."
+    },
+    {
+      "code": "KHAE-PORT-3",
+      "label": "Portfolio and Assessment",
+      "description": "Weekly mastery, performance tasks, midterm, final, reflection, teacher evidence, family reports, certification."
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Third Grade Scholar Launch",
+      "theme": "Baseline routines, reading stamina, math fluency, inquiry notebooks, collaboration, and portfolio setup",
+      "essentialQuestion": "How do strong third-grade scholars learn with independence and evidence?",
+      "lens": "Launch",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Text Evidence and Place Value",
+      "theme": "Explicit text evidence, place value to thousands, map grids, community identity, and notebook organization",
+      "essentialQuestion": "How do evidence and structure help us explain clearly?",
+      "lens": "Evidence",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Characters, Traits, and Multiplication Arrays",
+      "theme": "Character analysis, trait evidence, equal groups, arrays, life-cycle introductions, and visual design",
+      "essentialQuestion": "How do patterns reveal character, number, and living systems?",
+      "lens": "Patterns",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Informational Text and Area Models",
+      "theme": "Main idea, details, multiplication area models, forces, push/pull tests, and community systems",
+      "essentialQuestion": "How do readers and mathematicians build meaning from parts?",
+      "lens": "Structure",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 5,
+      "title": "Opinion Writing and Civic Voice",
+      "theme": "Opinion essays, reasons/evidence, multiplication facts, classroom constitution, voting, and debate",
+      "essentialQuestion": "How can a voice be strong, fair, and supported by evidence?",
+      "lens": "Civics",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 6,
+      "title": "Division and Fair Sharing",
+      "theme": "Division stories, equal shares, fact families, procedural writing, cooperation, and fair exchange",
+      "essentialQuestion": "How do we divide fairly and explain our process?",
+      "lens": "Division",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 7,
+      "title": "Forces, Motion, and Technical Reading",
+      "theme": "Technical text, diagrams, motion investigations, data tables, line plots, and engineering sketches",
+      "essentialQuestion": "How can diagrams and data explain motion?",
+      "lens": "Forces",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 8,
+      "title": "Culture, Folktales, and Multiplication Fluency",
+      "theme": "Folktales, central message, culture, multiplication fluency, patterns in music, and maps",
+      "essentialQuestion": "How do stories carry wisdom across communities?",
+      "lens": "Stories",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 9,
+      "title": "Weather, Climate, and Data",
+      "theme": "Weather data, climate patterns, graphing, informational writing, measurement, and seasonal safety",
+      "essentialQuestion": "How can data help us understand weather and climate?",
+      "lens": "Weather",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 10,
+      "title": "Multi-Step Word Problems",
+      "theme": "Two-step problems, close reading in math, unknowns, bar models, perseverance, and explanation",
+      "essentialQuestion": "How do we solve complex problems without getting lost?",
+      "lens": "Problem Solving",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 11,
+      "title": "Prefixes, Suffixes, and Morphology",
+      "theme": "Word parts, vocabulary, spelling generalizations, roots, fact fluency, and academic language",
+      "essentialQuestion": "How do word parts unlock meaning?",
+      "lens": "Morphology",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 12,
+      "title": "Communities Then and Now",
+      "theme": "Local history, timelines, sources, narrative writing, measurement, and community change",
+      "essentialQuestion": "How do communities change over time?",
+      "lens": "History",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 13,
+      "title": "Life Cycles and Research Notes",
+      "theme": "Life cycles, animal groups, research notes, diagrams, paragraph writing, and source sorting",
+      "essentialQuestion": "How do living things grow and change?",
+      "lens": "Life Science",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 14,
+      "title": "Traits, Variation, and Data Displays",
+      "theme": "Inherited/acquired traits, variation, bar graphs, explanatory writing, and evidence",
+      "essentialQuestion": "Why are living things alike and different?",
+      "lens": "Traits",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 15,
+      "title": "Fractions as Numbers",
+      "theme": "Unit fractions, number lines, equal parts, vocabulary precision, and real-world models",
+      "essentialQuestion": "How can fractions be numbers on a line?",
+      "lens": "Fractions",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 16,
+      "title": "Equivalent Fractions and Visual Models",
+      "theme": "Equivalent fractions, area models, comparison, explanation, symmetry, and design critique",
+      "essentialQuestion": "How can different fractions name the same amount?",
+      "lens": "Equivalence",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 17,
+      "title": "Midyear Portfolio and Assessment",
+      "theme": "Cumulative review, midterm demonstration, revised writing, math proof, and project audit",
+      "essentialQuestion": "How can I prove my growth with evidence?",
+      "lens": "Midterm",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 18,
+      "title": "Research Writing Workshop",
+      "theme": "Research questions, notes, paragraph structure, source ethics, diagrams, and mini-presentation",
+      "essentialQuestion": "How do researchers turn questions into trustworthy writing?",
+      "lens": "Research",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 19,
+      "title": "Area and Perimeter Design Studio",
+      "theme": "Area, perimeter, constraints, city planning, arrays, measurement, and blueprint writing",
+      "essentialQuestion": "How do designers use measurement to solve problems?",
+      "lens": "Area",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 20,
+      "title": "Poetry, Rhythm, and Measurement",
+      "theme": "Poetry, figurative language, rhythm, meter, measurement, sound, movement, and performance",
+      "essentialQuestion": "How can patterns make language and music powerful?",
+      "lens": "Poetry",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 21,
+      "title": "Fossils and Earth History",
+      "theme": "Fossils, past environments, evidence from rocks, sequence, timelines, and scientific claims",
+      "essentialQuestion": "How do clues from the past help us explain Earth history?",
+      "lens": "Fossils",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 22,
+      "title": "Habitats, Adaptations, and Survival",
+      "theme": "Habitats, adaptations, food chains, cause/effect text, ecosystem models, and conservation",
+      "essentialQuestion": "How do organisms survive in changing habitats?",
+      "lens": "Habitats",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 23,
+      "title": "Government, Rights, and Responsibilities",
+      "theme": "Local government, rules/laws, rights/responsibilities, persuasive writing, and civic action",
+      "essentialQuestion": "How do communities make decisions and protect fairness?",
+      "lens": "Government",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 24,
+      "title": "Economics, Resources, and Trade",
+      "theme": "Goods/services, producers/consumers, resources, budgets, multiplication/division contexts, and market design",
+      "essentialQuestion": "How do choices shape a community economy?",
+      "lens": "Economics",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 25,
+      "title": "Measurement: Mass, Volume, and Time",
+      "theme": "Standard measurement, elapsed time foundations, liquid volume, mass, estimation, and lab records",
+      "essentialQuestion": "How do precise measurements help us compare and decide?",
+      "lens": "Measurement",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 26,
+      "title": "Geometry and Quadrilaterals",
+      "theme": "Attributes, categories, quadrilaterals, symmetry, perimeter, shape sorting, and geometry vocabulary",
+      "essentialQuestion": "How do attributes define and connect shapes?",
+      "lens": "Geometry",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 27,
+      "title": "Reading Across Genres",
+      "theme": "Compare fiction, nonfiction, poetry, drama, point of view, theme, and evidence discussion",
+      "essentialQuestion": "How do readers adjust thinking across genres?",
+      "lens": "Genres",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 28,
+      "title": "Advanced Multiplication and Division",
+      "theme": "Products within 100, division fluency, unknown factors, patterns, mental strategies, and explanations",
+      "essentialQuestion": "How do multiplication and division work together?",
+      "lens": "Fluency",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 29,
+      "title": "Fractions in the Real World",
+      "theme": "Compare fractions, fraction word problems, measurement fractions, fair-share contexts, and cooking/design",
+      "essentialQuestion": "How do fractions help us compare and share fairly?",
+      "lens": "Fraction Applications",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 30,
+      "title": "Environmental Stewardship",
+      "theme": "Natural resources, community science, water/soil care, civic responsibility, data, and action proposal",
+      "essentialQuestion": "How can evidence guide care for the Earth?",
+      "lens": "Stewardship",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 31,
+      "title": "Biography and Leadership",
+      "theme": "Biography, timelines, leadership traits, point of view, opinion writing, and public speaking",
+      "essentialQuestion": "What can we learn from people who lead and serve?",
+      "lens": "Biography",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 32,
+      "title": "Innovation, Tools, and Engineering",
+      "theme": "Engineering design, prototypes, constraints, failures, tool safety, algorithms, and presentation",
+      "essentialQuestion": "How do inventors improve a design?",
+      "lens": "Engineering",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 33,
+      "title": "Digital Citizenship and Data Tools",
+      "theme": "Online safety, ethical creation, keyboarding, spreadsheets, graphs, citations, and digital presentation",
+      "essentialQuestion": "How can digital tools help us create responsibly?",
+      "lens": "Technology",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 34,
+      "title": "Big Question Capstone Research",
+      "theme": "Independent research, project planning, data/evidence collection, draft, model, and conference",
+      "essentialQuestion": "What big question can I investigate deeply?",
+      "lens": "Capstone Research",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 35,
+      "title": "Capstone Studio and Public Presentation",
+      "theme": "Final project, writing revision, math evidence, visual design, oral presentation, and peer questions",
+      "essentialQuestion": "How can I present evidence clearly and confidently?",
+      "lens": "Capstone Studio",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    },
+    {
+      "week": 36,
+      "title": "Final Review and Grade 4 Readiness",
+      "theme": "Cumulative final, portfolio defense, celebration, certificate, transition skills, and reflection",
+      "essentialQuestion": "How am I ready for fourth grade?",
+      "lens": "Final",
+      "standards": [
+        "KHAE-ELA-3",
+        "KHAE-MATH-3",
+        "KHAE-SCI-3",
+        "KHAE-SS-3",
+        "KHAE-ART-3",
+        "KHAE-PEH-3",
+        "KHAE-TECH-3",
+        "KHAE-IP-3",
+        "KHAE-PORT-3"
+      ]
+    }
+  ],
+  "assessments": {
+    "midterm": {
+      "title": "Third Grade Midyear Subject Demonstration",
+      "week": 18,
+      "passingScore": 80,
+      "itemCount": 80
+    },
+    "final": {
+      "title": "Third Grade Final Readiness Demonstration",
+      "week": 36,
+      "passingScore": 80,
+      "itemCount": 100
+    },
+    "certification": {
+      "threshold": 80,
+      "requires": [
+        "Weekly assessment average at or above 80%",
+        "Midterm score at or above 80%",
+        "Final score at or above 80%",
+        "Portfolio evidence approved by adult mentor"
+      ]
+    }
+  }
+}
