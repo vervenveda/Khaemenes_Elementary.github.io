@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Math Market — a sovereign, dependency-free second-grade math and economics simulation covering money, change, budgeting, needs and wants, producers and consumers, and entrepreneurship.">
+<meta name="theme-color" content="#2e6a58">
+<title>Math Market 🛒 · Khaemenes Second Grade</title>
+<style>
+:root{
+  --ink:#243942;--muted:#66767b;--paper:#fffdf8;--cream:#fff7de;
+  --green:#4ea76f;--green2:#2e6a58;--mint:#e6f7eb;--gold:#f2c760;
+  --orange:#ee914f;--blue:#58aede;--sky:#e8f7ff;--purple:#7e68c8;
+  --pink:#e978a4;--rose:#e46e8a;--line:rgba(36,57,66,.14);
+  --shadow:0 20px 50px rgba(46,106,88,.14);
+  --serif:Georgia,"Times New Roman",serif;--sans:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;min-height:100vh;color:var(--ink);font:17px/1.55 var(--sans);
+  background:
+    radial-gradient(circle at 9% 3%,rgba(242,199,96,.28),transparent 23rem),
+    radial-gradient(circle at 93% 4%,rgba(88,174,222,.2),transparent 27rem),
+    linear-gradient(180deg,#edfaff 0,#fffdf8 32rem,#f5fbf6 100%)
+}
+button,input,select{font:inherit}
+button{cursor:pointer;touch-action:manipulation}
+:focus-visible{outline:3px solid rgba(126,104,200,.4);outline-offset:3px}
+.shell{width:min(calc(100% - 24px),1220px);margin:auto}
+
+header{
+  position:sticky;top:0;z-index:80;background:rgba(255,253,248,.95);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(14px)
+}
+.nav{min-height:74px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-align:left}
+.brand-mark{
+  width:50px;height:50px;display:grid;place-items:center;border-radius:16px;border:3px solid #fff;
+  background:linear-gradient(145deg,var(--gold),var(--green));box-shadow:var(--shadow);font-size:1.55rem
+}
+.brand strong{display:block;color:var(--green2);font:700 1.08rem var(--serif)}
+.brand small{display:block;color:var(--muted);font-size:.66rem;letter-spacing:.09em;text-transform:uppercase}
+.header-actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.header-actions button{min-height:40px;padding:8px 11px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--green2);font-weight:850}
+
+.hero{padding:36px 0 24px}
+.hero-card{
+  overflow:hidden;padding:28px 20px;border:4px solid #fff;border-radius:28px;color:#fff;text-align:center;
+  background:
+    radial-gradient(circle at 18% 20%,rgba(255,255,255,.24),transparent 13rem),
+    linear-gradient(135deg,#35795f,#4b9973 58%,#6c64b4);
+  box-shadow:var(--shadow)
+}
+.eyebrow{
+  display:inline-flex;gap:7px;align-items:center;padding:7px 11px;border-radius:999px;
+  background:rgba(255,255,255,.14);font-size:.74rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase
+}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:700;text-wrap:balance}
+h1{margin:10px auto 4px;max-width:960px;font-size:clamp(2.9rem,7vw,5.3rem);line-height:.96}
+.hero p{max-width:860px;margin:10px auto 0;color:#f6fff9}
+.hero-badges{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:14px}
+.hero-badges span{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.23);font-size:.72rem;font-weight:800}
+
+.layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(310px,.55fr);gap:14px;align-items:start;padding-bottom:46px}
+.card{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+.main{padding:16px}.side{padding:15px;position:sticky;top:90px}
+.toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.control{padding:10px;border:1px solid var(--line);border-radius:14px;background:#fbfdff}
+.control label{display:block;margin-bottom:4px;color:var(--muted);font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.control select{width:100%;padding:8px 9px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+.control-value{font-size:1.2rem;font-weight:900;color:var(--green2)}
+
+.challenge{
+  margin-top:12px;padding:15px;border:2px solid #ead27b;border-radius:18px;background:linear-gradient(145deg,#fff6c9,#fffef8);text-align:center
+}
+.challenge-label{color:#82631f;font-size:.7rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.challenge h2{margin:5px 0 0;color:#355d4c;font-size:clamp(1.5rem,4vw,2.3rem)}
+.challenge p{max-width:850px;margin:8px auto 0;color:var(--muted);font-weight:800}
+.chips{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:10px}
+.chip{padding:5px 9px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.72rem;font-weight:850}
+
+.market{
+  margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px
+}
+.product{
+  display:flex;flex-direction:column;min-height:235px;padding:12px;border:1px solid var(--line);
+  border-radius:18px;background:#fff;box-shadow:0 8px 20px rgba(46,106,88,.07)
+}
+.product-icon{font-size:2.6rem}.product h3{margin:5px 0 0;color:var(--green2)}
+.product-type{margin-top:3px;color:var(--muted);font-size:.72rem;font-weight:800}
+.price{margin-top:7px;font:800 1.4rem var(--serif);color:#725414}
+.product button{margin-top:auto}
+.basket{
+  margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#f9fff9,#fff9e8)
+}
+.basket h3{margin:0;color:var(--green2)}
+.basket-items{display:grid;gap:7px;margin-top:8px}
+.basket-item{display:flex;justify-content:space-between;gap:10px;padding:8px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.basket-total{margin-top:10px;text-align:right;font:800 1.25rem var(--serif);color:#5e4b1b}
+.money-lab{
+  margin-top:12px;padding:13px;border:1px solid var(--line);border-radius:17px;background:#eef8ff
+}
+.wallet{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:9px}
+.money-btn{
+  min-width:78px;min-height:50px;padding:8px;border:2px solid #fff;border-radius:13px;color:#29445a;font-weight:900;
+  background:linear-gradient(145deg,#fff,#dff5ff);box-shadow:0 6px 13px rgba(47,91,116,.08)
+}
+.money-btn.bill{background:linear-gradient(145deg,#edf9ef,#cdebd3);color:#2e6842}
+.pay-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+.payment-display{font-size:1.3rem;font-weight:900;color:#315f50}
+.feedback{min-height:30px;margin-top:8px;text-align:center;font-weight:900;color:var(--muted)}
+.feedback.good{color:#2e8a50}.feedback.try{color:#a36827}
+
+.tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px}
+.tab{min-height:42px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--green2);font-weight:900}
+.tab.active{color:#fff;background:linear-gradient(145deg,var(--green2),var(--purple));border-color:transparent}
+.workspace{display:none;margin-top:12px}.workspace.active{display:block}
+.panel{padding:14px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.need-want-grid,.econ-grid,.entre-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.econ-card,.entre-card{padding:12px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.econ-card strong,.entre-card strong{display:block;color:var(--green2)}
+.sort-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+.sort-choice{min-height:46px;padding:9px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;font-weight:900}
+.sort-choice.selected{color:#fff;background:linear-gradient(145deg,var(--purple),var(--pink));border-color:transparent}
+
+.creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.creator-field{padding:9px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.creator-field label{display:block;margin-bottom:4px;color:var(--muted);font-size:.68rem;font-weight:900;text-transform:uppercase}
+.creator-field input,.creator-field select{width:100%;padding:8px;border:1px solid var(--line);border-radius:9px}
+.preview{margin-top:10px;padding:12px;border:1px dashed #d7c681;border-radius:13px;background:#fffdf3}
+
+.actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{min-height:44px;padding:9px 13px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--green2);font-weight:900}
+.btn.primary{color:#fff;background:linear-gradient(145deg,var(--green2),#43856a);border-color:transparent}
+.btn.gold{color:#624918;background:linear-gradient(145deg,#ffe995,var(--gold));border-color:#e2c25c}
+.btn.blue{color:#fff;background:linear-gradient(145deg,var(--blue),#447fbd);border-color:transparent}
+.btn.pink{color:#fff;background:linear-gradient(145deg,var(--pink),var(--rose));border-color:transparent}
+.btn.purple{color:#fff;background:linear-gradient(145deg,var(--purple),#6650a8);border-color:transparent}
+.btn:disabled{opacity:.45;cursor:default}
+
+.save-strip{margin-top:12px;padding:11px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#f8fff8,#fff9e8)}
+.save-strip strong{display:block;color:#466d51;text-align:center}
+.save-status{min-height:1.2em;margin-top:6px;text-align:center;color:var(--muted);font-size:.78rem}
+
+.side h2{margin:0;color:var(--green2);font-size:1.35rem}.side p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.stat{padding:10px;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:center}
+.stat strong{display:block;font-size:1.35rem;color:var(--green2)}
+.mastery{margin-top:12px;padding:12px;border-radius:16px;background:linear-gradient(145deg,#eefaf0,#fff9df);border:1px solid rgba(78,167,111,.18)}
+.mastery-bar{height:13px;margin-top:7px;border-radius:999px;overflow:hidden;background:#e6ece7}
+.mastery-bar span{display:block;width:40%;height:100%;background:linear-gradient(90deg,var(--green),var(--gold),var(--pink));transition:.25s}
+.skill-list{display:grid;gap:7px;margin-top:12px}
+.skill{display:flex;justify-content:space-between;gap:10px;padding:9px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.skill span:last-child{font-weight:900;color:var(--green2)}
+.mentor{margin-top:12px;padding:12px;border-radius:16px;background:#eef8ff;border:1px solid #c8e1ef}.mentor strong{color:#416d86}
+.mentor-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.monte{margin-top:12px;padding:12px;border-radius:16px;background:#fff8e6;border:1px solid #ecd58b}.monte strong{color:#805f20}
+.monte-grid{display:grid;grid-template-columns:1fr auto;gap:6px;margin-top:8px;font-size:.78rem}.monte-grid span:nth-child(even){font-weight:900;color:#6c5220}
+.history{margin-top:12px;max-height:220px;overflow:auto;display:grid;gap:6px}
+.history-item{padding:8px;border:1px solid var(--line);border-radius:11px;background:#fff;font-size:.78rem;text-align:left}
+.footer-note{padding:0 0 28px;text-align:center;color:var(--muted);font-size:.8rem}
+
+@media(max-width:940px){.layout{grid-template-columns:1fr}.side{position:static}}
+@media(max-width:760px){.toolbar{grid-template-columns:repeat(2,1fr)}.market{grid-template-columns:repeat(2,1fr)}.creator-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.toolbar,.market,.creator-grid,.need-want-grid,.econ-grid,.entre-grid{grid-template-columns:1fr}.nav{grid-template-columns:1fr auto}.brand small{display:none}.header-actions button:first-child{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{
+  header,.header-actions,.tabs,.actions,.save-strip,.side,.footer-note{display:none!important}
+  body{background:#fff;color:#111}.hero{padding:8px 0}.hero-card{background:#fff!important;color:#111;border:1px solid #999;box-shadow:none}
+  .hero-card p,.eyebrow{color:#111}.eyebrow{background:#fff;border:1px solid #aaa}
+  .layout{display:block;padding:0}.card,.challenge,.basket,.money-lab,.panel{box-shadow:none;background:#fff;border:1px solid #999}
+  .workspace{display:block!important;page-break-inside:avoid;margin-top:12px}
+}
+
+.voice-studio{
+  margin-top:12px;padding:12px;border-radius:16px;
+  background:linear-gradient(145deg,#fff8e7,#eef9f2);
+  border:1px solid rgba(78,167,111,.2)
+}
+.voice-studio strong{display:block;color:var(--green2);font-family:var(--serif);font-size:1rem}
+.voice-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
+.voice-control{padding:8px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.voice-control label{display:block;color:var(--muted);font-size:.66rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+.voice-control select{width:100%;margin-top:4px;padding:7px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink)}
+.voice-buttons{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:9px}
+.voice-status{min-height:1.2em;margin-top:7px;color:var(--muted);font-size:.76rem;text-align:center}
+@media(max-width:520px){.voice-controls{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="shell nav">
+    <div class="brand"><div class="brand-mark">🛒</div><div><strong>Khaemenes Second Grade · Math Market</strong><small>Money · Change · Budgeting · Economics · Entrepreneurship</small></div></div>
+    <div></div>
+    <div class="header-actions"><button id="soundBtn">🔊 Read Aloud On</button><button id="printHeaderBtn">🖨 Print</button><button id="resetBtn">↺ Reset</button></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="shell">
+    <div class="hero-card">
+      <div class="eyebrow">Second Grade Math + Economics · Shop · Budget · Make Change · Build a Business</div>
+      <h1>Math Market 🛒</h1>
+      <p>Run a friendly classroom market. Count coins and bills, compare prices, make change, stay inside a budget, sort needs and wants, explore producers and consumers, and build a tiny business.</p>
+      <div class="hero-badges"><span>Sovereign Local App</span><span>No Outside Dependencies</span><span>Monte Carlo Adaptation</span><span>Save Everything</span><span>Printable</span><span>Week 32 Entrepreneurship Ready</span></div>
+    </div>
+  </div>
+</section>
+
+<main class="shell layout">
+  <section class="card main">
+    <div class="toolbar">
+      <div class="control"><label for="modeSelect">Market Mode</label><select id="modeSelect"><option value="shop">Shopping</option><option value="change">Make Change</option><option value="budget">Budget Challenge</option><option value="mixed">Mixed Market</option></select></div>
+      <div class="control"><label for="difficultySelect">Difficulty</label><select id="difficultySelect"><option value="adaptive">Adaptive Monte Carlo</option><option value="1">Level 1 · Coins & Small Prices</option><option value="2">Level 2 · Mixed Money</option><option value="3">Level 3 · Budget & Change</option></select></div>
+      <div class="control"><label for="moneyView">Money View</label><select id="moneyView"><option value="cents">Cents</option><option value="dollars">Dollars & Cents</option></select></div>
+      <div class="control"><label>Market Wallet</label><div class="control-value" id="walletValue">$5.00</div></div>
+    </div>
+
+    <section class="challenge">
+      <div class="challenge-label">Current Market Challenge</div>
+      <h2 id="challengeTitle">Buy something and pay the exact amount.</h2>
+      <p id="challengeText"></p>
+      <div class="chips"><span class="chip" id="levelChip">Level 1</span><span class="chip" id="skillChip">Money</span><span class="chip" id="mcChip">Adaptive</span></div>
+    </section>
+
+    <section class="market" id="marketGrid"></section>
+
+    <section class="basket">
+      <h3>🧺 My Basket</h3>
+      <div class="basket-items" id="basketItems"></div>
+      <div class="basket-total">Total: <span id="basketTotal">$0.00</span></div>
+    </section>
+
+    <section class="money-lab">
+      <h3 style="margin:0;color:var(--green2)">💵 Money Lab</h3>
+      <p style="text-align:center;color:var(--muted);margin:.35rem 0">Tap money to build your payment.</p>
+      <div class="wallet" id="moneyButtons"></div>
+      <div class="pay-row"><span class="payment-display">Payment: <span id="paymentValue">$0.00</span></span></div>
+      <div class="actions"><button class="btn primary" id="checkPaymentBtn">Check Payment</button><button class="btn" id="clearPaymentBtn">Clear Payment</button><button class="btn gold" id="hintBtn">💡 Hint</button><button class="btn blue" id="nextBtn">Next Challenge →</button></div>
+      <div class="feedback" id="feedback" aria-live="polite"></div>
+    </section>
+
+    <section class="save-strip">
+      <strong>💾 Save & Print Market</strong>
+      <div class="actions"><button class="btn green" id="saveSessionBtn">Save Session</button><button class="btn" id="exportJsonBtn">Export Session JSON</button><button class="btn gold" id="printBtn">Print / Save PDF</button></div>
+      <div class="save-status" id="saveStatus">Progress auto-saves locally.</div>
+    </section>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="needs">🧠 Needs & Wants</button>
+      <button class="tab" data-tab="economics">🏭 Producers & Consumers</button>
+      <button class="tab" data-tab="entrepreneur">💡 Entrepreneurship Lab</button>
+    </div>
+
+    <section class="workspace active" data-workspace="needs">
+      <div class="panel">
+        <h3 style="margin-top:0;color:var(--green2)">Needs & Wants Sort</h3>
+        <p>Choose whether each item is usually a need or a want. Some answers can depend on context, so the goal is to explain your thinking.</p>
+        <div class="need-want-grid" id="needWantGrid"></div>
+        <div class="feedback" id="needWantFeedback"></div>
+      </div>
+    </section>
+
+    <section class="workspace" data-workspace="economics">
+      <div class="panel">
+        <h3 style="margin-top:0;color:var(--green2)">Producers & Consumers</h3>
+        <div class="econ-grid">
+          <div class="econ-card"><strong>🏭 Producer</strong><span>Makes or provides a good or service.</span></div>
+          <div class="econ-card"><strong>🛒 Consumer</strong><span>Buys or uses a good or service.</span></div>
+        </div>
+        <div class="actions"><button class="btn purple" id="econQuestionBtn">Give Me an Economics Question</button></div>
+        <div class="feedback" id="econFeedback"></div>
+      </div>
+    </section>
+
+    <section class="workspace" data-workspace="entrepreneur">
+      <div class="panel">
+        <h3 style="margin-top:0;color:var(--green2)">Week 32 · Tiny Business Builder</h3>
+        <div class="creator-grid">
+          <div class="creator-field"><label for="businessName">Business Name</label><input id="businessName" value="Sunny Stand"></div>
+          <div class="creator-field"><label for="businessProduct">Product</label><select id="businessProduct"></select></div>
+          <div class="creator-field"><label for="businessPrice">Price</label><input id="businessPrice" type="number" min="0.05" max="20" step="0.05" value="1.00"></div>
+          <div class="creator-field"><label for="businessCost">Cost to Make</label><input id="businessCost" type="number" min="0" max="20" step="0.05" value="0.40"></div>
+          <div class="creator-field"><label for="businessQuantity">How Many Sold?</label><input id="businessQuantity" type="number" min="1" max="50" value="5"></div>
+          <div class="creator-field"><label for="businessNeedWant">Mostly a...</label><select id="businessNeedWant"><option value="want">Want</option><option value="need">Need</option><option value="depends">Depends</option></select></div>
+        </div>
+        <div class="actions"><button class="btn pink" id="buildBusinessBtn">✨ Build My Business</button><button class="btn green" id="saveBusinessBtn">💾 Save Business</button></div>
+        <div class="preview" id="businessPreview">Build a business to see revenue, cost, and profit.</div>
+      </div>
+    </section>
+  </section>
+
+  <aside class="card side">
+    <h2>Market Progress</h2>
+    <p>The adaptive engine balances money values, exact payment, change, budget size, and recent success.</p>
+    <div class="stats">
+      <div class="stat"><strong id="correctStat">0</strong>Correct</div>
+      <div class="stat"><strong id="salesStat">0</strong>Sales</div>
+      <div class="stat"><strong id="streakStat">0</strong>Streak</div>
+      <div class="stat"><strong id="levelStat">1</strong>Level</div>
+    </div>
+    <div class="mastery"><strong>Market Mastery</strong><div class="mastery-bar"><span id="masteryFill"></span></div><div style="margin-top:6px;color:var(--muted);font-size:.78rem" id="masteryText"></div></div>
+    <div class="skill-list">
+      <div class="skill"><span>Counting Money</span><span id="skillMoney">🌱</span></div>
+      <div class="skill"><span>Making Change</span><span id="skillChange">🌱</span></div>
+      <div class="skill"><span>Budgeting</span><span id="skillBudget">🌱</span></div>
+      <div class="skill"><span>Economics</span><span id="skillEcon">🌱</span></div>
+    </div>
+    <div class="mentor"><strong>Market Guide</strong><p id="mentorText">Check the price, then build the amount one coin or bill at a time.</p><div class="mentor-actions"><button class="btn" id="readBtn">🔊 Read It</button><button class="btn" id="firstStepBtn">🪜 First Step</button></div></div>
+
+    <div class="voice-studio">
+      <strong>🎙 Friendly Market Guide</strong>
+      <div class="voice-controls">
+        <div class="voice-control">
+          <label for="voiceFriend">Guide</label>
+          <select id="voiceFriend">
+            <option value="sunny">☀️ Sunny</option>
+            <option value="sage">🦉 Market Sage</option>
+            <option value="bloom">🌼 Bloom</option>
+            <option value="rainbow">🌈 Rainbow Friend</option>
+          </select>
+        </div>
+        <div class="voice-control">
+          <label for="voiceSpeed">Reading Speed</label>
+          <select id="voiceSpeed">
+            <option value="slow">Slow & Clear</option>
+            <option value="normal">Gentle</option>
+            <option value="lively">A Little Lively</option>
+          </select>
+        </div>
+      </div>
+      <div class="voice-buttons">
+        <button class="btn" id="previewVoiceBtn">▶ Hear Guide</button>
+        <button class="btn" id="repeatVoiceBtn">↻ Repeat</button>
+        <button class="btn" id="stopVoiceBtn">■ Stop</button>
+      </div>
+      <div class="voice-status" id="voiceStatus">Loading a friendly voice…</div>
+    </div>
+    <div class="monte"><strong>Monte Carlo Adaptation</strong><div class="monte-grid"><span>Estimated success</span><span id="mcSuccess">—</span><span>Candidate simulations</span><span id="mcSims">—</span><span>Selected level</span><span id="mcLevel">—</span><span>Target skill</span><span id="mcTarget">—</span></div></div>
+    <div class="history" id="history"></div>
+  </aside>
+</main>
+
+<div class="shell footer-note">Khaemenes Elementary · Second Grade · Math + Economics · Sovereign vanilla HTML/CSS/JavaScript · No external libraries, APIs, trackers, fonts, or services</div>
+
+<script>
+(() => {
+"use strict";
+const $=id=>document.getElementById(id);
+const KEY="khaemenes_math_market_v1";
+const PRODUCTS=[
+  {id:"apple",name:"Apple",icon:"🍎",price:35,type:"need",producer:"farmer"},
+  {id:"bread",name:"Bread",icon:"🍞",price:75,type:"need",producer:"baker"},
+  {id:"milk",name:"Milk",icon:"🥛",price:90,type:"need",producer:"dairy farmer"},
+  {id:"book",name:"Book",icon:"📘",price:125,type:"want",producer:"publisher"},
+  {id:"crayon",name:"Crayons",icon:"🖍️",price:80,type:"want",producer:"factory"},
+  {id:"soap",name:"Soap",icon:"🧼",price:60,type:"need",producer:"manufacturer"},
+  {id:"ball",name:"Ball",icon:"⚽",price:150,type:"want",producer:"factory"},
+  {id:"flower",name:"Flower",icon:"🌼",price:55,type:"want",producer:"grower"},
+  {id:"pencil",name:"Pencil",icon:"✏️",price:25,type:"need",producer:"manufacturer"}
+];
+const MONEY=[{label:"1¢",value:1},{label:"5¢",value:5},{label:"10¢",value:10},{label:"25¢",value:25},{label:"$1",value:100,bill:true},{label:"$5",value:500,bill:true}];
+const baseState={
+  mode:"shop",difficulty:"adaptive",moneyView:"dollars",wallet:500,payment:0,basket:[],
+  correct:0,sales:0,streak:0,best:0,level:1,mastery:42,history:[],recent:[],voiceFriend:"sunny",voiceSpeed:"normal",
+  challenge:null,needWant:{},business:null,lastSaved:null,
+  skills:{
+    money:{a:0,c:0,confidence:.52},change:{a:0,c:0,confidence:.46},
+    budget:{a:0,c:0,confidence:.48},econ:{a:0,c:0,confidence:.5}
+  },
+  mc:{success:0,sims:0,level:1,target:"money"}
+};
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function load(){
+  const s=clone(baseState);
+  try{
+    const saved=JSON.parse(localStorage.getItem(KEY)||"null");if(!saved)return s;
+    Object.assign(s,saved);s.skills=Object.assign(clone(baseState.skills),saved.skills||{});
+    for(const k of Object.keys(baseState.skills))s.skills[k]=Object.assign(clone(baseState.skills[k]),saved.skills?.[k]||{});
+    s.mc=Object.assign(clone(baseState.mc),saved.mc||{});
+    return s;
+  }catch{return s}
+}
+let state=load();
+function save(note="Auto-saved locally"){
+  state.lastSaved=new Date().toISOString();
+  try{localStorage.setItem(KEY,JSON.stringify(state))}catch{}
+  $("saveStatus").textContent=`${note} · ${new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})}`;
+}
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+function rand(min,max){return Math.floor(Math.random()*(max-min+1))+min}
+function pick(a){return a[rand(0,a.length-1)]}
+function money(c){return state.moneyView==="cents"?`${c}¢`:`$${(c/100).toFixed(2)}`}
+function feedback(text,kind=""){const e=$("feedback");e.className="feedback"+(kind?` ${kind}`:"");e.textContent=text}
+
+function estimatedSuccess(skill,level){
+  const conf=state.skills[skill].confidence;
+  return clamp(conf-{1:0,2:.12,3:.23}[level]+(state.mastery-50)/280+Math.min(state.streak,4)*.01,.12,.94);
+}
+function selectAdaptive(){
+  if(state.difficulty!=="adaptive"){
+    const level=Number(state.difficulty);state.mc={success:0,sims:0,level,target:state.mode};return {level,skill:state.mode==="change"?"change":state.mode==="budget"?"budget":"money"};
+  }
+  const mode=state.mode==="mixed"?pick(["shop","change","budget"]):state.mode;
+  const skill=mode==="change"?"change":mode==="budget"?"budget":"money";
+  let best=null;const sims=180,target=.72;
+  for(const level of [1,2,3]){
+    const p=estimatedSuccess(skill,level);let wins=0;
+    for(let i=0;i<sims;i++)if(Math.random()<p)wins++;
+    const rate=wins/sims,score=Math.abs(rate-target);
+    if(!best||score<best.score)best={level,skill,rate,score};
+  }
+  state.level=best.level;state.mc={success:best.rate,sims:sims*3,level:best.level,target:best.skill};return best;
+}
+function pricedProducts(level){
+  return PRODUCTS.map(p=>Object.assign({},p,{price:Math.max(5,Math.round((p.price*(level===1?.7:level===2?1:1.35))/5)*5)}));
+}
+function newChallenge(){
+  const a=selectAdaptive();const level=a.level;const products=pricedProducts(level);
+  state.basket=[];state.payment=0;renderMarket(products);renderBasket();renderPayment();
+  let mode=state.mode==="mixed"?pick(["shop","change","budget"]):state.mode;
+  if(mode==="shop"){
+    const product=pick(products);
+    state.challenge={mode,skill:"money",level,product,total:product.price,target:product.price};
+    $("challengeTitle").textContent=`Buy the ${product.name}.`;
+    $("challengeText").textContent=`The ${product.name.toLowerCase()} costs ${money(product.price)}. Add it to your basket and pay the exact amount.`;
+  }else if(mode==="change"){
+    const product=pick(products);
+    const tender=[100,500,1000].find(v=>v>product.price)||1000;
+    state.challenge={mode,skill:"change",level,product,total:product.price,tender,target:tender-product.price};
+    $("challengeTitle").textContent=`Make change for the ${product.name}.`;
+    $("challengeText").textContent=`The ${product.name.toLowerCase()} costs ${money(product.price)}. The customer pays ${money(tender)}. Build the change: ${money(tender-product.price)}.`;
+  }else{
+    const budget=level===1?200:level===2?500:800;
+    state.wallet=budget;
+    state.challenge={mode,skill:"budget",level,budget,target:null};
+    $("challengeTitle").textContent="Stay inside your budget.";
+    $("challengeText").textContent=`You have ${money(budget)}. Choose at least two items without spending more than your budget.`;
+  }
+  $("levelChip").textContent=`Level ${level}`;$("skillChip").textContent=state.challenge.skill[0].toUpperCase()+state.challenge.skill.slice(1);$("mcChip").textContent=state.difficulty==="adaptive"?"Monte Carlo Selected":"Manual";
+  $("mentorText").textContent=mentorText();renderMonte();renderStats();save();
+  if(state.sound)speak($("challengeText").textContent);
+}
+function renderMarket(products=pricedProducts(state.level)){
+  $("marketGrid").innerHTML=products.map(p=>`<article class="product"><div class="product-icon">${p.icon}</div><h3>${p.name}</h3><div class="product-type">${p.type==="need"?"Usually a need":"Usually a want"} · Producer: ${p.producer}</div><div class="price">${money(p.price)}</div><button class="btn primary" data-buy="${p.id}" data-price="${p.price}">Add to Basket</button></article>`).join("");
+  document.querySelectorAll("[data-buy]").forEach(b=>b.onclick=()=>addToBasket(b.dataset.buy,Number(b.dataset.price)));
+}
+function addToBasket(id,price){
+  const p=PRODUCTS.find(x=>x.id===id);state.basket.push({id,name:p.name,icon:p.icon,price});renderBasket();save();
+}
+function renderBasket(){
+  $("basketItems").innerHTML=state.basket.length?state.basket.map((x,i)=>`<div class="basket-item"><span>${x.icon} ${x.name}</span><span>${money(x.price)} <button data-remove-basket="${i}" style="border:0;background:none;cursor:pointer">✕</button></span></div>`).join(""):`<div class="basket-item"><span>Your basket is empty.</span><span>🧺</span></div>`;
+  document.querySelectorAll("[data-remove-basket]").forEach(b=>b.onclick=()=>{state.basket.splice(Number(b.dataset.removeBasket),1);renderBasket();save()});
+  $("basketTotal").textContent=money(state.basket.reduce((s,x)=>s+x.price,0));
+}
+function renderMoneyButtons(){
+  $("moneyButtons").innerHTML=MONEY.map(m=>`<button class="money-btn ${m.bill?"bill":""}" data-money="${m.value}">${m.label}</button>`).join("");
+  document.querySelectorAll("[data-money]").forEach(b=>b.onclick=()=>{state.payment+=Number(b.dataset.money);renderPayment();save()});
+}
+function renderPayment(){$("paymentValue").textContent=money(state.payment);$("walletValue").textContent=money(state.wallet)}
+function mentorText(){
+  const c=state.challenge;if(!c)return"";
+  if(c.mode==="shop")return`Find the ${c.product.name}. Check its price, then build exactly ${money(c.total)}.`;
+  if(c.mode==="change")return`Think: amount paid minus price equals change. Build ${money(c.target)}.`;
+  return`Add the prices in your basket. Stop before you go over ${money(c.budget)}.`;
+}
+function checkPayment(){
+  const c=state.challenge;if(!c)return;
+  let correct=false,detail="";
+  const basketTotal=state.basket.reduce((s,x)=>s+x.price,0);
+  if(c.mode==="shop"){
+    correct=state.basket.some(x=>x.id===c.product.id)&&state.payment===c.total;
+    detail=correct?"You bought the right item and paid the exact amount.":"Check the basket and payment amount.";
+  }else if(c.mode==="change"){
+    correct=state.payment===c.target;
+    detail=correct?"That is the correct change.":"Use paid amount minus price to find the change.";
+  }else{
+    correct=state.basket.length>=2&&basketTotal<=c.budget;
+    detail=correct?`Great budget choice. You spent ${money(basketTotal)} and stayed within ${money(c.budget)}.`:"Choose at least two items without going over the budget.";
+  }
+  updateSkill(c.skill,correct);
+  if(correct){
+    state.correct++;state.sales++;state.streak++;state.best=Math.max(state.best,state.streak);state.mastery=clamp(state.mastery+5,0,100);
+    feedback(detail,"good");state.history.unshift(`${c.mode}: ${detail} ✓`);if(state.sound)speak("Great thinking. "+detail);
+  }else{
+    state.streak=0;state.mastery=clamp(state.mastery-2,0,100);feedback(detail,"try");state.history.unshift(`${c.mode}: try again`);if(state.sound)speak("Good try. "+detail);
+  }
+  state.history=state.history.slice(0,12);renderStats();save();
+}
+function updateSkill(k,correct){
+  const s=state.skills[k];s.a++;if(correct)s.c++;
+  const empirical=(s.c+2)/(s.a+4),rec=correct?.63:.37;s.confidence=clamp(empirical*.8+rec*.2,.08,.96);
+}
+function hint(){
+  const c=state.challenge;if(!c)return;
+  const text=c.mode==="shop"?`Start with the largest coin or bill that does not go over ${money(c.total)}.`
+    :c.mode==="change"?`Subtract ${money(c.total)} from ${money(c.tender)}. Then build that amount with money.`
+    :`Add prices one at a time. Keep a running total and compare it to ${money(c.budget)}.`;
+  $("mentorText").textContent=text;feedback(text);if(state.sound)speak(text);
+}
+function firstStep(){const t=mentorText();$("mentorText").textContent=t;if(state.sound)speak(t)}
+function renderMonte(){
+  $("mcSuccess").textContent=state.mc.sims?`${Math.round(state.mc.success*100)}%`:"Manual";$("mcSims").textContent=state.mc.sims||"—";$("mcLevel").textContent=state.mc.level;$("mcTarget").textContent=state.mc.target;
+}
+function renderStats(){
+  $("correctStat").textContent=state.correct;$("salesStat").textContent=state.sales;$("streakStat").textContent=state.streak;$("levelStat").textContent=state.level;
+  $("masteryFill").style.width=`${state.mastery}%`;
+  $("masteryText").textContent=state.mastery>=85?"Strong market mastery — ready for complex budgets.":state.mastery>=65?"Growing strong — money and change practice.":state.mastery>=45?"Building confidence — keep comparing values.":"Foundation practice — count slowly and use the money model.";
+  const icon=k=>state.skills[k].confidence>=.82?"🌳":state.skills[k].confidence>=.68?"🌼":state.skills[k].confidence>=.54?"🌿":"🌱";
+  $("skillMoney").textContent=icon("money");$("skillChange").textContent=icon("change");$("skillBudget").textContent=icon("budget");$("skillEcon").textContent=icon("econ");
+  $("history").innerHTML=state.history.length?state.history.map(x=>`<div class="history-item">${x}</div>`).join(""):`<div class="history-item">Recent market work will appear here.</div>`;
+}
+
+/* Needs / wants */
+function renderNeedWant(){
+  $("needWantGrid").innerHTML=PRODUCTS.slice(0,6).map(p=>`<div class="econ-card"><strong>${p.icon} ${p.name}</strong><div class="sort-row"><button class="sort-choice" data-nw="${p.id}:need">Need</button><button class="sort-choice" data-nw="${p.id}:want">Want</button><button class="sort-choice" data-nw="${p.id}:depends">Depends</button></div></div>`).join("");
+  document.querySelectorAll("[data-nw]").forEach(b=>b.onclick=()=>{
+    const [id,val]=b.dataset.nw.split(":");state.needWant[id]=val;
+    b.parentElement.querySelectorAll(".sort-choice").forEach(x=>x.classList.toggle("selected",x===b));
+    const p=PRODUCTS.find(x=>x.id===id);let msg;
+    if(val===p.type)msg=`Good reasoning. ${p.name} is usually considered a ${p.type}.`;
+    else if(val==="depends")msg=`Good thinking. Context can matter when deciding whether something is a need or a want.`;
+    else msg=`That can be argued in some situations. Explain your reasoning.`;
+    $("needWantFeedback").textContent=msg;state.skills.econ.a++;state.skills.econ.c+=val===p.type?1:0;save();renderStats();
+  });
+}
+
+/* Economics questions */
+$("econQuestionBtn").onclick=()=>{
+  const p=pick(PRODUCTS),ask=Math.random()<.5;
+  const q=ask?`Who is the producer of the ${p.name.toLowerCase()}?`:`If you buy the ${p.name.toLowerCase()}, are you acting as a producer or a consumer?`;
+  const a=ask?`A ${p.producer} is the producer.`:`You are the consumer because you are buying or using the product.`;
+  $("econFeedback").textContent=`${q}  ${a}`;state.skills.econ.a++;state.skills.econ.c++;save();renderStats();
+};
+
+/* Entrepreneurship */
+function populateBusiness(){
+  $("businessProduct").innerHTML=PRODUCTS.map(p=>`<option value="${p.id}">${p.icon} ${p.name}</option>`).join("");
+}
+function buildBusiness(){
+  const name=$("businessName").value.trim()||"My Market";
+  const product=PRODUCTS.find(p=>p.id===$("businessProduct").value)||PRODUCTS[0];
+  const price=Math.round((Number($("businessPrice").value)||0)*100);
+  const cost=Math.round((Number($("businessCost").value)||0)*100);
+  const qty=Math.max(1,Number($("businessQuantity").value)||1);
+  const revenue=price*qty,totalCost=cost*qty,profit=revenue-totalCost;
+  state.business={name,productId:product.id,price,cost,qty,revenue,totalCost,profit,kind:$("businessNeedWant").value};
+  $("businessPreview").innerHTML=`<strong>${product.icon} ${name}</strong><br>Sell ${qty} ${product.name.toLowerCase()}${qty===1?"":"s"} at ${money(price)} each.<br>Revenue: ${money(revenue)} · Cost: ${money(totalCost)} · <strong>Profit: ${money(profit)}</strong>`;
+  save("Business plan auto-saved");
+}
+$("saveBusinessBtn").onclick=()=>{buildBusiness();state.history.unshift(`Business saved: ${state.business.name} · profit ${money(state.business.profit)}`);state.history=state.history.slice(0,12);state.skills.econ.a++;state.skills.econ.c++;renderStats();save("Business saved locally")};
+
+/* Save / export / print */
+function exportJson(){
+  const blob=new Blob([JSON.stringify({app:"Math Market",version:1,exportedAt:new Date().toISOString(),state},null,2)],{type:"application/json"});
+  const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="math-market-session.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),500);
+  $("saveStatus").textContent="Session JSON exported";
+}
+function printApp(){save("Saved before printing");window.print()}
+/* Friendly voice architecture adapted from the proven Artist Studio / Story Studio pattern. */
+let voices=[];
+let speechToken=0;
+let lastSpokenText="";
+
+const VOICE_FRIENDS={
+  sunny:{
+    name:"Sunny",emoji:"☀️",rate:.88,pitch:1.05,
+    preferred:/samantha|aria|jenny|zira|ava|victoria|karen|serena|moira|allison|susan/i,
+    greeting:"Hi! Sunny is ready to help at the market."
+  },
+  sage:{
+    name:"Market Sage",emoji:"🦉",rate:.82,pitch:1.0,
+    preferred:/samantha|serena|moira|ava|aria|allison|daniel|alex/i,
+    greeting:"Hello, market thinker. Market Sage is ready to help you count carefully."
+  },
+  bloom:{
+    name:"Bloom",emoji:"🌼",rate:.84,pitch:1.08,
+    preferred:/aria|jenny|ava|samantha|victoria|karen|serena|zira/i,
+    greeting:"Hello! Bloom is ready to practice money and choices with you."
+  },
+  rainbow:{
+    name:"Rainbow Friend",emoji:"🌈",rate:.88,pitch:1.06,
+    preferred:/samantha|aria|jenny|ava|karen|moira|serena|victoria|zira/i,
+    greeting:"Hi, market explorer! Rainbow Friend is ready."
+  }
+};
+const VOICE_SPEEDS={slow:.88,normal:1,lively:1.08};
+
+function refreshVoices(){
+  if(!("speechSynthesis" in window)){
+    $("voiceStatus").textContent="Read-aloud is not available in this browser.";
+    return;
+  }
+  voices=speechSynthesis.getVoices()||[];
+  const friend=VOICE_FRIENDS[state.voiceFriend]||VOICE_FRIENDS.sunny;
+  $("voiceStatus").textContent=voices.length
+    ?`${friend.emoji} ${friend.name} is ready.`
+    :"Loading a friendly voice…";
+}
+
+function chooseFriendlyVoice(friendKey){
+  if(!voices.length)refreshVoices();
+  const friend=VOICE_FRIENDS[friendKey]||VOICE_FRIENDS.sunny;
+  const english=voices.filter(v=>/^en([-_]|$)/i.test(v.lang||""));
+  const pool=english.length?english:voices;
+
+  const safePool=pool.filter(v=>!/whisper|bells|boing|bubbles|cellos|organ|trinoids|zarvox|wobble|jester|novelty|robot/i.test(v.name||""));
+  const usable=safePool.length?safePool:pool;
+
+  return usable.find(v=>friend.preferred.test(v.name||""))
+    ||usable.find(v=>/natural|enhanced|premium/i.test(v.name||""))
+    ||usable[0]
+    ||null;
+}
+
+function stopVoice(message){
+  speechToken++;
+  if("speechSynthesis" in window)speechSynthesis.cancel();
+  if($("voiceStatus"))$("voiceStatus").textContent=message||"Voice stopped.";
+}
+
+function speak(text,options){
+  options=options||{};
+  if(!state.sound||!("speechSynthesis" in window))return;
+  text=String(text||"").trim();
+  if(!text&&!options.preview)return;
+
+  stopVoice("");
+  if(text)lastSpokenText=text;
+
+  const token=++speechToken;
+  const friend=VOICE_FRIENDS[state.voiceFriend]||VOICE_FRIENDS.sunny;
+  const message=options.preview ? friend.greeting : text;
+
+  const utterance=new SpeechSynthesisUtterance(message);
+  const voice=chooseFriendlyVoice(state.voiceFriend);
+  if(voice)utterance.voice=voice;
+  utterance.lang=(voice&&voice.lang)||"en-US";
+  utterance.rate=Math.max(.65,Math.min(1.08,friend.rate*(VOICE_SPEEDS[state.voiceSpeed]||1)));
+  utterance.pitch=friend.pitch;
+  utterance.volume=1;
+
+  utterance.onstart=function(){
+    if($("voiceStatus"))$("voiceStatus").textContent=`${friend.emoji} ${friend.name} is reading.`;
+  };
+  utterance.onend=function(){
+    if(token!==speechToken)return;
+    if($("voiceStatus"))$("voiceStatus").textContent=`${friend.emoji} ${friend.name} is ready.`;
+  };
+  utterance.onerror=function(){
+    if(token!==speechToken)return;
+    if($("voiceStatus"))$("voiceStatus").textContent="The voice paused. You can try again.";
+  };
+
+  speechSynthesis.speak(utterance);
+}
+
+function repeatVoice(){
+  if(lastSpokenText)speak(lastSpokenText);
+  else if(state.challenge)speak($("challengeText").textContent||mentorText());
+}
+
+/* Tabs */
+document.querySelectorAll(".tab").forEach(tab=>tab.onclick=()=>{
+  document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t===tab));
+  document.querySelectorAll(".workspace").forEach(w=>w.classList.toggle("active",w.dataset.workspace===tab.dataset.tab));
+});
+
+/* UI */
+$("modeSelect").onchange=e=>{state.mode=e.target.value;newChallenge()};
+$("difficultySelect").onchange=e=>{state.difficulty=e.target.value;newChallenge()};
+$("moneyView").onchange=e=>{state.moneyView=e.target.value;renderMoneyButtons();renderMarket();renderBasket();renderPayment();newChallenge()};
+$("checkPaymentBtn").onclick=checkPayment;$("clearPaymentBtn").onclick=()=>{state.payment=0;renderPayment();save()};
+$("hintBtn").onclick=hint;$("nextBtn").onclick=newChallenge;$("readBtn").onclick=()=>speak($("mentorText").textContent);$("firstStepBtn").onclick=firstStep;
+$("buildBusinessBtn").onclick=buildBusiness;
+$("saveSessionBtn").onclick=()=>save("Session saved locally");$("exportJsonBtn").onclick=exportJson;$("printBtn").onclick=printApp;$("printHeaderBtn").onclick=printApp;
+$("soundBtn").onclick=function(){
+  state.sound=!state.sound;
+  $("soundBtn").textContent=state.sound?"🔊 Read Aloud On":"🔇 Read Aloud Off";
+  if(!state.sound)stopVoice("Read-aloud is off.");
+  save();
+};
+$("voiceFriend").onchange=function(e){
+  state.voiceFriend=e.target.value;
+  refreshVoices();
+  save("Friendly guide saved");
+  if(state.sound)speak("",{preview:true});
+};
+$("voiceSpeed").onchange=function(e){
+  state.voiceSpeed=e.target.value;
+  save("Reading speed saved");
+};
+$("previewVoiceBtn").onclick=function(){
+  if(!state.sound){
+    state.sound=true;
+    $("soundBtn").textContent="🔊 Read Aloud On";
+  }
+  speak("",{preview:true});
+  save();
+};
+$("repeatVoiceBtn").onclick=repeatVoice;
+$("stopVoiceBtn").onclick=function(){stopVoice("Voice stopped.");};
+$("resetBtn").onclick=()=>{if(confirm("Reset all Math Market progress on this device?")){localStorage.removeItem(KEY);location.reload()}};
+
+populateBusiness();renderMoneyButtons();renderNeedWant();
+$("modeSelect").value=state.mode;
+$("difficultySelect").value=state.difficulty;
+$("moneyView").value=state.moneyView;
+$("soundBtn").textContent=state.sound?"🔊 Read Aloud On":"🔇 Read Aloud Off";
+$("voiceFriend").value=VOICE_FRIENDS[state.voiceFriend]?state.voiceFriend:"sunny";
+$("voiceSpeed").value=VOICE_SPEEDS[state.voiceSpeed]?state.voiceSpeed:"normal";
+
+if("speechSynthesis" in window){
+  refreshVoices();
+  if(typeof speechSynthesis.onvoiceschanged!=="undefined"){
+    speechSynthesis.onvoiceschanged=refreshVoices;
+  }
+}
+
+renderStats();
+newChallenge();
+
+document.addEventListener("visibilitychange",function(){
+  if(document.hidden)stopVoice("Voice stopped.");
+});
+window.addEventListener("beforeunload",function(){stopVoice("");});
+})();
+</script>
+</body>
+</html>
