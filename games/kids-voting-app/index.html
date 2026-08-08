@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kids Voting App – By Voti the Owl</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(135deg, #033052 60%, #033052 100%);
+      font-family: 'Comic Sans MS', 'Comic Sans', Arial, sans-serif;
+      margin: 0; padding: 0; min-height: 100vh;
+    }
+    .center { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; }
+    .card { background: #fff; border-radius: 2rem; box-shadow: 0 6px 32px #b2aee2a6; padding: 2rem; width: 95%; max-width: 370px; margin: 2rem auto; }
+    .title { font-size: 2rem; font-weight: bold; color: #582bf2; margin-bottom: .5rem; }
+    .owl { font-size: 3.7rem; }
+    label { display: block; margin: 1rem 0 .3rem; font-weight: bold; }
+    input, select, button { font-size: 1rem; padding: .5rem .8rem; border-radius: .7rem; border: 1px solid #888; margin-bottom: .7rem; }
+    button { cursor: pointer; background: #6b70e1; color: #fff; border: none; font-weight: bold; transition: 0.1s; }
+    button:hover { background: #452bc2; }
+    .candidate-list, .ballot-list, .issues-list { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .candidate-card { border: 2px solid #e1e7ff; border-radius: 1.5rem; padding: 1rem; background: #fcfbff; width: 160px; text-align: center; box-shadow: 0 2px 12px #d4daf2a0; }
+    .cand-emoji { font-size: 2.1rem; }
+    .signed { background: #b6f5b0 !important; border: 2px solid #65d17d !important; }
+    .ballot-btn { min-width: 120px; margin: .6rem; }
+    .winner { font-size: 2.5rem; font-weight: bold; color: #1ebd57; margin: 1rem 0 .5rem; }
+    .sticker { background: #ffe01f; border-radius: 999px; display: inline-block; padding: .7rem 1.6rem; font-size: 1.2rem; font-weight: bold; color: #673ab7; margin-top: 1rem; box-shadow: 0 2px 14px #ffecb3; }
+    .confetti { animation: confetti 1.5s linear infinite; }
+    @keyframes confetti {
+      0% { text-shadow: 0 0 0 #f2a,0 0 0 #2cf,0 0 0 #fa2; }
+      33% { text-shadow: 2px 2px 12px #f2a, -2px 2px 8px #2cf, 2px -2px 8px #fa2; }
+      66% { text-shadow: -2px -2px 10px #f2a, 2px -2px 10px #2cf, -2px 2px 6px #fa2; }
+      100% { text-shadow: 0 0 0 #f2a,0 0 0 #2cf,0 0 0 #fa2; }
+    }
+    .desc { color: #555; font-size: 1rem; margin-bottom: 1.5rem; }
+    .fact { font-size: .98rem; margin: .15rem 0; }
+    .issue-badge { display:inline-block; padding:.25rem .6rem; border-radius:999px; font-size:.78rem; background:#e8f6ff; color:#006b9a; margin-top:.6rem; }
+    .issue-card { width: 160px; border-radius:12px; padding:10px; background:#fff7e6; box-shadow:0 2px 8px rgba(0,0,0,.06); text-align:left; }
+    .issue-title { font-weight:700; color:#b65100; margin-bottom:.4rem; }
+    .small-note { font-size:.9rem; color:#666; margin-top:.6rem; }
+    @media (max-width:480px) {
+      .card { padding: 1rem; }
+      .candidate-list, .ballot-list { gap: .5rem; }
+      .candidate-card { width: 99vw; max-width: 170px; }
+      .issue-card { width: 99vw; max-width: 170px; }
+    }
+  </style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+/* ---------- Data: candidates + issues ---------- */
+const candidates = [
+  { name: "Sunny the Fox", emoji: "🦊", breakfast: "Pancakes", classFav: "Art", color: "Orange", animal: "Butterfly",
+    positions: ["parks","animals"] },
+  { name: "Ollie the Owl", emoji: "🦉", breakfast: "Oatmeal", classFav: "Science", color: "Blue", animal: "Turtle",
+    positions: ["cleanwater","schools"] },
+  { name: "Penny the Penguin", emoji: "🐧", breakfast: "Fruit", classFav: "Music", color: "Pink", animal: "Dolphin",
+    positions: ["animals","recycling"] },
+  { name: "Max the Mouse", emoji: "🐭", breakfast: "Toast", classFav: "Math", color: "Green", animal: "Elephant",
+    positions: ["schools","parks"] },
+  { name: "Bella the Bunny", emoji: "🐰", breakfast: "Cereal", classFav: "Reading", color: "Purple", animal: "Kitten",
+    positions: ["recycling","cleanwater"] }
+];
+
+const issues = [
+  { id:"cleanwater", title:"Clean Water", emoji:"💧", desc:"Keep our beaches, rivers, and drinking water safe." },
+  { id:"parks", title:"Parks & Playgrounds", emoji:"🌳", desc:"Make nice parks where kids can play and families can picnic." },
+  { id:"schools", title:"Better Schools", emoji:"📚", desc:"Help schools get books, supplies, and fun learning activities." },
+  { id:"animals", title:"Protect Animals", emoji:"🐾", desc:"Care for sea animals and pets and keep them safe." },
+  { id:"recycling", title:"Recycling", emoji:"♻️", desc:"Make recycling easy so we can keep the world clean." }
+];
+
+/* ---------- App State ---------- */
+let appState = {
+  page: 0,
+  reg: { name: "", age: "", favColor: "" },
+  signed: [],
+  issue: "",        // new: chosen issue id
+  ballot: "",
+  votes: [0,0,0,0,0]
+};
+
+/* ---------- Storage helpers ---------- */
+function saveState() { sessionStorage.setItem("votingAppState", JSON.stringify(appState)); }
+function loadState() { const s = sessionStorage.getItem("votingAppState"); if (s) appState = JSON.parse(s); }
+function resetState() { sessionStorage.removeItem("votingAppState"); appState = { page:0, reg:{name:"",age:"",favColor:""}, signed:[], issue:"", ballot:"", votes:[0,0,0,0,0] }; }
+
+/* ---------- DOM render ---------- */
+function render() {
+  let html = '';
+  switch(appState.page) {
+    case 0: // Welcome
+      html = `
+      <div class="center"><div class="card">
+        <div class="owl">🦉</div>
+        <div class="title">Welcome!</div>
+        <div class="desc">Hi, I'm <b>Voti the Owl</b>. Ready to learn how voting works?<br><br>
+        We will sign petitions, learn about issues, and cast a mock vote.</div>
+        <button onclick="nextStep()">Start</button>
+      </div></div>`;
+      break;
+
+    case 1: // Register
+      html = `
+      <div class="center"><div class="card">
+        <div class="owl">🦉</div>
+        <div class="title">Register to Vote</div>
+        <div class="desc">Fill out this fun registration card! ✏️</div>
+        <label>Name</label>
+        <input id="regName" maxlength="20" value="${escapeHtml(appState.reg.name)||""}" />
+        <label>How old are you?</label>
+        <input id="regAge" type="number" min="3" max="18" value="${appState.reg.age||""}" />
+        <label>Favorite color?</label>
+        <input id="regColor" maxlength="15" value="${escapeHtml(appState.reg.favColor)||""}" />
+        <button onclick="submitReg()">Next</button>
+      </div></div>`;
+      break;
+
+    case 2: // Petition
+      html = `
+      <div class="center"><div class="card">
+        <div class="owl">🦉</div>
+        <div class="title">Sign a Candidate Petition</div>
+        <div class="desc">To get on the ballot, candidates need signatures! Click “Sign” for your favorite friend(s):</div>
+        <div class="candidate-list">
+          ${candidates.map((c, i) => `
+            <div class="candidate-card${appState.signed.includes(i) ? " signed":""}">
+              <div class="cand-emoji">${c.emoji}</div>
+              <div style="font-weight:bold">${c.name}</div>
+              <button onclick="signPetition(${i})">${appState.signed.includes(i)?"Signed!":"Sign"}</button>
+              <div class="fact" style="color:#888;font-size:.92rem">${c.classFav} class, likes ${c.breakfast}</div>
+            </div>
+          `).join("")}
+        </div>
+        <button style="margin-top:1.5rem" onclick="nextStep()" ${appState.signed.length===0?"disabled":""}>Next: Learn Issues</button>
+      </div></div>`;
+      break;
+
+    case 3: // Issues (NEW)
+      html = `
+      <div class="center"><div class="card">
+        <div class="owl">🦉</div>
+        <div class="title">Issues — What matters to you?</div>
+        <div class="desc">Learn a little about these topics. Pick the one you care about most:</div>
+        <div class="issues-list">
+          ${issues.map((it)=>`
+            <div class="issue-card" style="${appState.issue===it.id? 'outline:3px solid #7fd6ff;': ''}">
+              <div style="font-size:1.6rem">${it.emoji} <span class="issue-title">${it.title}</span></div>
+              <div class="small-note">${it.desc}</div>
+              <div style="text-align:right; margin-top:.6rem;">
+                <button onclick="chooseIssue('${it.id}')">${appState.issue===it.id?'Chosen':'Choose'}</button>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+        <div style="margin-top:12px; text-align:center;">
+          <button onclick="nextStep()" ${appState.issue? '': 'disabled'}>Next: Sign Ballot</button>
+        </div>
+      </div></div>`;
+      break;
+
+    case 4: // Ballot (shifted index)
+      html = `
+      <div class="center"><div class="card">
+        <div class="owl">🦉</div>
+        <div class="title">Mock Ballot</div>
+        <div class="desc">Pick <b>your favorite candidate</b>! Look at which issues they support (badges):</div>
+        <div class="ballot-list">
+          ${candidates.map((c, i) => `
+            <button class="candidate-card ballot-btn${appState.ballot==i?" signed":""}" onclick="vote(${i})">
+              <div class="cand-emoji">${c.emoji}</div>
+              <div style="font-weight:bold">${c.name}</div>
+              <div class="fact">Class: <b>${c.classFav}</b></div>
+              <div class="fact">Color: <b>${c.color}</b></div>
+              <div style="margin-top:.5rem">
+                ${c.positions.map(pid => {
+                  const it = issues.find(x=>x.id===pid);
+                  return `<span class="issue-badge">${it? it.title : pid}</span>`;
+                }).join(" ")}
+              </div>
+            </button>
+          `).join("")}
+        </div>
+        <div style="text-align:center; margin-top:12px;">
+          <button onclick="submitBallot()" ${appState.ballot===""?"disabled":""}>Submit Vote</button>
+        </div>
+      </div></div>`;
+      break;
+
+    case 5: // Results (shifted)
+      const max = Math.max(...appState.votes);
+      const winnerIdx = appState.votes.indexOf(max);
+      const chosenIssue = issues.find(i => i.id === appState.issue);
+      html = `
+      <div class="center"><div class="card">
+        <div class="owl confetti">🎉🦉🎉</div>
+        <div class="title">Results!</div>
+        <div class="winner">${candidates[winnerIdx].emoji} ${candidates[winnerIdx].name} Wins!</div>
+        <div class="desc">Votes: ${appState.votes.map((v,i)=>`${candidates[i].emoji} ${v}`).join(" | ")}</div>
+        <div class="small-note" style="margin-top:10px;">
+          Your chosen issue: <strong>${chosenIssue? chosenIssue.emoji + " " + chosenIssue.title : "—"}</strong>
+        </div>
+        <div class="sticker">🗳️ I Voted! 🗳️</div>
+        <button onclick="resetAndRestart()">Vote Again</button>
+      </div></div>`;
+      break;
+  }
+
+  document.getElementById('app').innerHTML = html;
+}
+
+/* ---------- Helpers & actions ---------- */
+function nextStep() { appState.page++; saveState(); render(); }
+function submitReg() {
+  const name = (document.getElementById('regName')||{}).value || "";
+  const age  = (document.getElementById('regAge')||{}).value || "";
+  const fav  = (document.getElementById('regColor')||{}).value || "";
+  appState.reg = { name: name.trim(), age: age, favColor: fav.trim() };
+  if(!appState.reg.name || !appState.reg.age || !appState.reg.favColor) {
+    alert("Please fill in all fields!");
+    return;
+  }
+  nextStep();
+}
+function signPetition(idx) {
+  if (!appState.signed.includes(idx)) appState.signed.push(idx);
+  saveState(); render();
+}
+function chooseIssue(id) {
+  appState.issue = id;
+  saveState(); render();
+}
+function vote(idx) {
+  appState.ballot = idx;
+  saveState(); render();
+}
+function submitBallot() {
+  if (appState.ballot !== "") {
+    appState.votes[appState.ballot] = (appState.votes[appState.ballot] || 0) + 1;
+    appState.page++;
+    saveState(); render();
+  }
+}
+function resetAndRestart() { resetState(); render(); }
+
+/* safe HTML escape for inputs */
+function escapeHtml(str){ return String(str||"").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+/* ---------- init ---------- */
+window.onload = function() {
+  loadState(); render();
+};
+</script>
+</body>
+</html>
