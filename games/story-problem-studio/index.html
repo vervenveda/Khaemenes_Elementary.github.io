@@ -156,6 +156,21 @@ canvas{width:100%;height:330px;display:block;border:2px solid #d9d2eb;border-rad
   canvas{height:280px;border:1px solid #777}
   .answer-panel{background:#fff}
 }
+
+.voice-studio{
+  margin-top:12px;padding:12px;border-radius:16px;
+  background:linear-gradient(145deg,#fff8e7,#f5efff);
+  border:1px solid rgba(124,103,201,.18)
+}
+.voice-studio strong{display:block;color:var(--plum);font-family:var(--serif);font-size:1rem}
+.voice-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
+.voice-control{padding:8px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.voice-control label{display:block;color:var(--muted);font-size:.66rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+.voice-control select{width:100%;margin-top:4px;padding:7px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink)}
+.voice-buttons{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:9px}
+.voice-status{min-height:1.2em;margin-top:7px;color:var(--muted);font-size:.76rem;text-align:center}
+@media(max-width:520px){.voice-controls{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -289,6 +304,35 @@ canvas{width:100%;height:330px;display:block;border:2px solid #d9d2eb;border-rad
       <div class="skill"><span>Reading the Story</span><span id="skillLanguage">🌱</span></div>
     </div>
     <div class="mentor"><strong>Story Guide</strong><p id="mentorText">Read the story once for meaning. Then ask: what do I know, and what am I trying to find?</p><div class="mentor-actions"><button class="btn" id="firstStepBtn">🪜 First Step</button><button class="btn" id="explainBtn">💬 Explain the Structure</button></div></div>
+
+    <div class="voice-studio">
+      <strong>🎙 Friendly Reading Guide</strong>
+      <div class="voice-controls">
+        <div class="voice-control">
+          <label for="voiceFriend">Guide</label>
+          <select id="voiceFriend">
+            <option value="sunny">☀️ Sunny</option>
+            <option value="sage">🦉 Story Sage</option>
+            <option value="bloom">🌼 Bloom</option>
+            <option value="rainbow">🌈 Rainbow Friend</option>
+          </select>
+        </div>
+        <div class="voice-control">
+          <label for="voiceSpeed">Reading Speed</label>
+          <select id="voiceSpeed">
+            <option value="slow">Slow & Clear</option>
+            <option value="normal">Gentle</option>
+            <option value="lively">A Little Lively</option>
+          </select>
+        </div>
+      </div>
+      <div class="voice-buttons">
+        <button class="btn" id="previewVoiceBtn">▶ Hear Guide</button>
+        <button class="btn" id="repeatVoiceBtn">↻ Repeat</button>
+        <button class="btn" id="stopVoiceBtn">■ Stop</button>
+      </div>
+      <div class="voice-status" id="voiceStatus">Loading a friendly voice…</div>
+    </div>
     <div class="monte"><strong>Monte Carlo Adaptation</strong><div class="monte-grid"><span>Estimated success</span><span id="mcSuccess">—</span><span>Candidate simulations</span><span id="mcSims">—</span><span>Selected level</span><span id="mcLevel">—</span><span>Target structure</span><span id="mcTarget">—</span></div></div>
     <div class="history" id="history"></div>
   </aside>
@@ -316,7 +360,7 @@ const OBJECTS=[
 
 const baseState={
   current:null,createdProblem:null,correct:0,created:0,streak:0,best:0,mastery:42,level:1,
-  sound:true,mode:"solve",operation:"adaptive",unknown:"adaptive",history:[],recent:[],
+  sound:true,voiceFriend:"sunny",voiceSpeed:"normal",mode:"solve",operation:"adaptive",unknown:"adaptive",history:[],recent:[],
   creator:{character:"Maya",object:"apples",operation:"add",unknown:"result",a:12,b:7},
   skills:{
     add:{a:0,c:0,confidence:.52},sub:{a:0,c:0,confidence:.49},
@@ -444,12 +488,12 @@ function checkAnswer(){
     state.correct++;state.streak++;state.best=Math.max(state.best,state.streak);state.mastery=clamp(state.mastery+5,0,100);
     feedback(`Yes! ${p.answer} makes the story and equation work.`,"good");
     state.history.unshift(`${p.equation.replace("?",String(p.answer))} ✓`);
-    if(state.sound)speak(`Correct. ${p.answer} makes the story work.`);
+    if(state.sound)speak(`Great thinking. ${p.answer} makes the story work.`);
   }else{
     state.streak=0;state.mastery=clamp(state.mastery-2,0,100);
     feedback("Not yet. Re-read what happened and decide which quantity is missing.","try");
     state.history.unshift(`${p.equation} → tried ${n}`);
-    if(state.sound)speak("Not yet. Read the story again and decide what quantity is missing.");
+    if(state.sound)speak("Good try. Read the story again, find what is missing, and try once more.");
   }
   state.history=state.history.slice(0,12);renderStats();saveState();
 }
@@ -497,9 +541,107 @@ function renderStats(){
   $("skillAdd").textContent=icon("add");$("skillSub").textContent=icon("sub");$("skillUnknown").textContent=icon("unknown");$("skillLanguage").textContent=icon("language");
   $("history").innerHTML=state.history.length?state.history.map(x=>`<div class="history-item">${x}</div>`).join(""):`<div class="history-item">Solved and created story work will appear here.</div>`;
 }
-function speak(text){
-  if(!state.sound||!("speechSynthesis"in window))return;
-  speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.rate=.9;u.pitch=1.02;speechSynthesis.speak(u);
+/* Friendly voice architecture adapted from the proven Artist Studio pattern. */
+let voices=[];
+let speechToken=0;
+let lastSpokenText="";
+
+const VOICE_FRIENDS={
+  sunny:{
+    name:"Sunny",emoji:"☀️",rate:.88,pitch:1.05,
+    preferred:/samantha|aria|jenny|zira|ava|victoria|karen|serena|moira|allison|susan/i,
+    greeting:"Hi! Sunny is ready to read this story with you."
+  },
+  sage:{
+    name:"Story Sage",emoji:"🦉",rate:.82,pitch:1.0,
+    preferred:/samantha|serena|moira|ava|aria|allison|daniel|alex/i,
+    greeting:"Hello, reader. Story Sage is ready to help you think through the story."
+  },
+  bloom:{
+    name:"Bloom",emoji:"🌼",rate:.84,pitch:1.08,
+    preferred:/aria|jenny|ava|samantha|victoria|karen|serena|zira/i,
+    greeting:"Hello! Bloom is ready to read gently with you."
+  },
+  rainbow:{
+    name:"Rainbow Friend",emoji:"🌈",rate:.88,pitch:1.06,
+    preferred:/samantha|aria|jenny|ava|karen|moira|serena|victoria|zira/i,
+    greeting:"Hi, math storyteller! Rainbow Friend is ready."
+  }
+};
+const VOICE_SPEEDS={slow:.88,normal:1,lively:1.08};
+
+function refreshVoices(){
+  if(!("speechSynthesis" in window)){
+    $("voiceStatus").textContent="Read-aloud is not available in this browser.";
+    return;
+  }
+  voices=speechSynthesis.getVoices()||[];
+  const friend=VOICE_FRIENDS[state.voiceFriend]||VOICE_FRIENDS.sunny;
+  $("voiceStatus").textContent=voices.length
+    ?`${friend.emoji} ${friend.name} is ready.`
+    :"Loading a friendly voice…";
+}
+
+function chooseFriendlyVoice(friendKey){
+  if(!voices.length)refreshVoices();
+  const friend=VOICE_FRIENDS[friendKey]||VOICE_FRIENDS.sunny;
+  const english=voices.filter(v=>/^en([-_]|$)/i.test(v.lang||""));
+  const pool=english.length?english:voices;
+
+  /* Explicitly reject common novelty/effect names. */
+  const safePool=pool.filter(v=>!/whisper|bells|boing|bubbles|cellos|organ|trinoids|zarvox|wobble|jester|novelty|robot/i.test(v.name||""));
+  const usable=safePool.length?safePool:pool;
+
+  return usable.find(v=>friend.preferred.test(v.name||""))
+    ||usable.find(v=>/natural|enhanced|premium/i.test(v.name||""))
+    ||usable[0]
+    ||null;
+}
+
+function stopVoice(message){
+  speechToken++;
+  if("speechSynthesis" in window)speechSynthesis.cancel();
+  if($("voiceStatus"))$("voiceStatus").textContent=message||"Voice stopped.";
+}
+
+function speak(text,options){
+  options=options||{};
+  if(!state.sound||!("speechSynthesis" in window))return;
+  text=String(text||"").trim();
+  if(!text)return;
+
+  stopVoice("");
+  lastSpokenText=text;
+  const token=++speechToken;
+  const friend=VOICE_FRIENDS[state.voiceFriend]||VOICE_FRIENDS.sunny;
+  const message=options.preview ? friend.greeting : text;
+
+  const utterance=new SpeechSynthesisUtterance(message);
+  const voice=chooseFriendlyVoice(state.voiceFriend);
+  if(voice)utterance.voice=voice;
+  utterance.lang=(voice&&voice.lang)||"en-US";
+  utterance.rate=Math.max(.65,Math.min(1.08,friend.rate*(VOICE_SPEEDS[state.voiceSpeed]||1)));
+  utterance.pitch=friend.pitch;
+  utterance.volume=1;
+
+  utterance.onstart=function(){
+    if($("voiceStatus"))$("voiceStatus").textContent=`${friend.emoji} ${friend.name} is reading.`;
+  };
+  utterance.onend=function(){
+    if(token!==speechToken)return;
+    if($("voiceStatus"))$("voiceStatus").textContent=`${friend.emoji} ${friend.name} is ready.`;
+  };
+  utterance.onerror=function(){
+    if(token!==speechToken)return;
+    if($("voiceStatus"))$("voiceStatus").textContent="The voice paused. You can try again.";
+  };
+
+  speechSynthesis.speak(utterance);
+}
+
+function repeatVoice(){
+  if(lastSpokenText)speak(lastSpokenText);
+  else if(state.current)speak(state.current.text);
 }
 
 /* Creator */
@@ -614,7 +756,32 @@ $("saveCanvasLocalBtn").onclick=()=>saveCanvasLocal();
 $("saveSessionBtn").onclick=()=>saveState("Session saved locally");
 $("exportJsonBtn").onclick=exportSession;$("saveDrawingBtn").onclick=downloadDrawing;
 $("printBtn").onclick=printStudio;$("printHeaderBtn").onclick=printStudio;
-$("soundBtn").onclick=()=>{state.sound=!state.sound;$("soundBtn").textContent=state.sound?"🔊 Read Aloud On":"🔇 Read Aloud Off";saveState()};
+$("soundBtn").onclick=function(){
+  state.sound=!state.sound;
+  $("soundBtn").textContent=state.sound?"🔊 Read Aloud On":"🔇 Read Aloud Off";
+  if(!state.sound)stopVoice("Read-aloud is off.");
+  saveState();
+};
+$("voiceFriend").onchange=function(e){
+  state.voiceFriend=e.target.value;
+  refreshVoices();
+  saveState("Friendly guide saved");
+  if(state.sound)speak("",{preview:true});
+};
+$("voiceSpeed").onchange=function(e){
+  state.voiceSpeed=e.target.value;
+  saveState("Reading speed saved");
+};
+$("previewVoiceBtn").onclick=function(){
+  if(!state.sound){
+    state.sound=true;
+    $("soundBtn").textContent="🔊 Read Aloud On";
+  }
+  speak("",{preview:true});
+  saveState();
+};
+$("repeatVoiceBtn").onclick=repeatVoice;
+$("stopVoiceBtn").onclick=function(){stopVoice("Voice stopped.");};
 $("resetBtn").onclick=()=>{
   if(confirm("Reset all Story Problem Studio progress and the saved drawing on this device?")){
     localStorage.removeItem(STORAGE_KEY);localStorage.removeItem(CANVAS_KEY);location.reload();
@@ -625,8 +792,18 @@ $("resetBtn").onclick=()=>{
 populateCreator();
 $("modeSelect").value=state.mode;$("operationSelect").value=state.operation;$("unknownSelect").value=state.unknown;
 $("soundBtn").textContent=state.sound?"🔊 Read Aloud On":"🔇 Read Aloud Off";
+$("voiceFriend").value=VOICE_FRIENDS[state.voiceFriend]?state.voiceFriend:"sunny";
+$("voiceSpeed").value=VOICE_SPEEDS[state.voiceSpeed]?state.voiceSpeed:"normal";
+if("speechSynthesis" in window){
+  refreshVoices();
+  if(typeof speechSynthesis.onvoiceschanged!=="undefined"){
+    speechSynthesis.onvoiceschanged=refreshVoices;
+  }
+}
 renderStats();restoreCanvas();
 if(state.current){renderProblem();renderLanguage();renderMonte()}else newProblem();
+document.addEventListener("visibilitychange",function(){if(document.hidden)stopVoice("Voice stopped.");});
+window.addEventListener("beforeunload",function(){stopVoice("");});
 })();
 </script>
 </body>
