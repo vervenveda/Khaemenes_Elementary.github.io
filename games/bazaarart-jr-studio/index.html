@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Bazaar Junior Art Studio — Khaemenes Elementary Grades 1–5 digital art, symmetry, shapes, collage, patterns, stamps, color theory, posters, labels, print and export.">
+<title>Bazaar Junior Art Studio 🎨 · Khaemenes Elementary</title>
+<style>
+:root{
+  --ink:#243341;--muted:#6c7986;--paper:#fffefa;--navy:#315b76;--blue:#5ba9d7;--teal:#4ba294;
+  --gold:#efc35a;--orange:#ec9352;--green:#5ab874;--violet:#806bc9;--pink:#e67c9f;--red:#d76363;
+  --line:rgba(36,51,65,.14);--shadow:0 20px 50px rgba(49,91,118,.14);
+  --serif:Georgia,"Times New Roman",serif;--sans:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;min-height:100vh;color:var(--ink);font:17px/1.55 var(--sans);
+  background:
+    radial-gradient(circle at 8% 1%,rgba(239,195,90,.27),transparent 24rem),
+    radial-gradient(circle at 95% 2%,rgba(91,169,215,.22),transparent 27rem),
+    linear-gradient(180deg,#eef9ff,#fffefa 34rem,#f7f7ff)
+}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer;touch-action:manipulation}
+:focus-visible{outline:3px solid rgba(128,107,201,.38);outline-offset:2px}
+.shell{width:min(calc(100% - 24px),1320px);margin:auto}
+header{position:sticky;top:0;z-index:60;background:rgba(255,254,250,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.nav{min-height:74px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}
+.brand{display:flex;gap:10px;align-items:center}.mark{width:52px;height:52px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(145deg,var(--gold),var(--blue),var(--violet));font-size:1.55rem;box-shadow:var(--shadow)}
+.brand strong{display:block;color:var(--navy);font:700 1.08rem var(--serif)}.brand small{display:block;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em}
+.head-actions{display:flex;gap:7px;flex-wrap:wrap}.btn,.head-actions button{min-height:42px;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);font-weight:900}
+.btn.primary{color:#fff;background:linear-gradient(145deg,var(--navy),var(--blue));border:0}.btn.gold{color:#604817;background:linear-gradient(145deg,#ffe99b,var(--gold))}.btn.green{color:#fff;background:linear-gradient(145deg,var(--green),#3c9658);border:0}.btn.purple{color:#fff;background:linear-gradient(145deg,var(--violet),#6653a7);border:0}.btn.danger{color:#fff;background:linear-gradient(145deg,#ec7a81,#d6575f);border:0}
+.hero{padding:34px 0 22px}.hero-card{padding:28px 20px;border:4px solid #fff;border-radius:28px;text-align:center;color:#fff;background:radial-gradient(circle at 15% 20%,rgba(255,255,255,.22),transparent 14rem),linear-gradient(135deg,#315b76,#4f9696 48%,#7967ba 78%,#df759d);box-shadow:var(--shadow)}
+.eyebrow{display:inline-block;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.14);font-size:.73rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+h1,h2,h3,h4{font-family:var(--serif)}h1{margin:10px 0 4px;font-size:clamp(2.9rem,7vw,5.15rem);line-height:.98}.hero p{max-width:1000px;margin:9px auto;color:#f8feff}
+.badges{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:13px}.badges span{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.14);font-size:.72rem;font-weight:850}
+.layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(330px,.45fr);gap:14px;align-items:start;padding-bottom:44px}.card{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.main{padding:16px}.side{padding:15px;position:sticky;top:90px}
+.toolbar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.control{padding:10px;border:1px solid var(--line);border-radius:14px;background:#fbfdff}.control label{display:block;color:var(--muted);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.control select,.control input{width:100%;margin-top:4px;padding:8px;border:1px solid var(--line);border-radius:9px;background:#fff}
+.challenge{margin-top:12px;padding:15px;border:2px solid #e7cf79;border-radius:18px;background:linear-gradient(145deg,#fff6ca,#fffef9);text-align:center}.challenge small{font-size:.7rem;font-weight:900;color:#81631e;text-transform:uppercase;letter-spacing:.1em}.challenge h2{margin:5px 0;color:var(--navy);font-size:clamp(1.5rem,4vw,2.2rem)}.challenge p{margin:6px auto;max-width:900px;color:var(--muted);font-weight:800}
+.studio-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:10px;margin-top:12px}
+.canvas-shell{padding:12px;border:1px solid var(--line);border-radius:18px;background:#fff}.canvas-wrap{position:relative;overflow:auto;border-radius:15px;background:#f0f4f8}
+canvas{display:block;width:100%;max-width:100%;background:#fff;touch-action:none;cursor:crosshair;border-radius:15px}.canvas-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(49,91,118,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(49,91,118,.08) 1px,transparent 1px);background-size:40px 40px;display:none}
+.symmetry-line{position:absolute;pointer-events:none;background:rgba(128,107,201,.45);display:none}.symmetry-line.vertical{width:2px;top:0;bottom:0;left:50%}.symmetry-line.horizontal{height:2px;left:0;right:0;top:50%}
+.tool-panel{display:grid;gap:9px}.tool-section{padding:11px;border:1px solid var(--line);border-radius:15px;background:#fbfdff}.tool-section h3{margin:0 0 7px;color:var(--navy);font-size:1rem}.tool-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.tool-btn{padding:9px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--navy);font-weight:900}.tool-btn.active{color:#fff;background:linear-gradient(145deg,var(--blue),var(--violet));border:0}
+.range-row{display:grid;grid-template-columns:1fr 80px;gap:7px;align-items:center}.range-row input{width:100%}.color-row{display:grid;grid-template-columns:50px 1fr;gap:8px;align-items:center}.color-row input[type=color]{width:50px;height:42px;border:1px solid var(--line);border-radius:10px;padding:2px;background:#fff}
+.palette-row{display:flex;gap:6px;flex-wrap:wrap}.swatch{width:32px;height:32px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.15);padding:0;min-height:32px}.shape-grid,.stamp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.shape-btn,.stamp-btn{padding:8px;border:1px solid var(--line);border-radius:10px;background:#fff;font-weight:900}.stamp-btn{font-size:1.3rem}
+.label-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}.panel{padding:14px;border:1px solid var(--line);border-radius:18px;background:#fff}.panel h3{margin:0;color:var(--navy)}.panel input,.panel textarea,.panel select{width:100%;padding:9px;border:1px solid var(--line);border-radius:10px;background:#fff}.panel textarea{min-height:90px;resize:vertical}
+.poster-preview{min-height:250px;padding:20px;border:10px solid #fff;border-radius:17px;background:linear-gradient(145deg,#eef8ff,#fff4cb);box-shadow:0 12px 28px rgba(49,91,118,.12);text-align:center}.poster-preview h2{margin:8px 0;color:var(--navy);font-size:2rem}.poster-preview p{color:#526374}
+.tabs{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:13px}.tab{padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--navy);font-weight:900}.tab.active{color:#fff;background:linear-gradient(145deg,var(--navy),var(--violet));border:0}.workspace{display:none;margin-top:12px}.workspace.active{display:block}
+.color-theory{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.theory-card{padding:12px;border:1px solid var(--line);border-radius:14px;background:#fff}.theory-card strong{color:var(--navy)}.wheel{width:210px;height:210px;border-radius:50%;margin:12px auto;background:conic-gradient(#ef4444 0 60deg,#f59e0b 60deg 120deg,#eab308 120deg 180deg,#22c55e 180deg 240deg,#3b82f6 240deg 300deg,#8b5cf6 300deg);border:10px solid #fff;box-shadow:0 10px 28px rgba(0,0,0,.1)}
+.pattern-sampler{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.pattern-sample{min-height:90px;border-radius:12px;border:1px solid var(--line)}.p1{background:repeating-linear-gradient(45deg,#ffd76f 0 12px,#7fd6c3 12px 24px)}.p2{background:radial-gradient(circle,#7b68cc 0 14%,transparent 15%) 0 0/32px 32px,#ffe8f0}.p3{background:linear-gradient(90deg,#5ba9d7 50%,#fff 50%) 0 0/24px 24px}.p4{background:repeating-linear-gradient(0deg,#f28f79 0 10px,#fff 10px 20px)}
+.portfolio{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.entry{padding:11px;border:1px solid var(--line);border-radius:14px;background:#fff}.entry img{width:100%;border-radius:10px;border:1px solid var(--line)}.entry h4{margin:7px 0 2px;color:var(--navy)}.entry p{font-size:.8rem;color:var(--muted)}
+.actions{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:9px}.status{text-align:center;min-height:28px;margin-top:8px;font-weight:900;color:var(--muted)}.status.good{color:#2f8c50}.status.warn{color:#9e6a28}
+.save{margin-top:12px;padding:11px;border:1px solid var(--line);border-radius:15px;background:#f5fff3;text-align:center}.save strong{color:#477154}.save-status{font-size:.77rem;color:var(--muted);margin-top:6px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.stat{padding:10px;text-align:center;border:1px solid var(--line);border-radius:13px}.stat strong{display:block;color:var(--navy);font-size:1.35rem}.mastery{margin-top:11px;padding:11px;border-radius:15px;background:#fff8df}.bar{height:12px;background:#e7e4de;border-radius:999px;overflow:hidden}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--blue),var(--pink))}
+.mentor,.voice,.grade-note,.adult{margin-top:11px;padding:11px;border-radius:15px;border:1px solid var(--line)}.mentor{background:#eaf8ff}.voice{background:#fff4f8}.grade-note{background:#f5f2ff}.adult{background:#fff8df}.mentor strong,.voice strong,.grade-note strong,.adult strong{color:var(--navy)}.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:7px}.voice select{width:100%;padding:7px;border:1px solid var(--line);border-radius:9px;background:#fff}.voice-status{text-align:center;color:var(--muted);font-size:.75rem;margin-top:6px}.history{display:grid;gap:6px;margin-top:11px;max-height:190px;overflow:auto}.hist{padding:7px;border:1px solid var(--line);border-radius:10px;font-size:.76rem}
+@media(max-width:1040px){.layout{grid-template-columns:1fr}.side{position:static}}@media(max-width:860px){.studio-grid{grid-template-columns:1fr}.toolbar{grid-template-columns:repeat(2,1fr)}.label-grid,.color-theory{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}}@media(max-width:520px){.toolbar,.voice-grid{grid-template-columns:1fr}.nav{grid-template-columns:1fr auto}.brand small{display:none}.shape-grid,.stamp-grid,.pattern-sampler{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}@media print{header,.head-actions,.side,.actions,.tabs,.tool-panel,.toolbar{display:none!important}body{background:#fff}.hero{padding:6px}.hero-card{background:#fff!important;color:#111;border:1px solid #999;box-shadow:none}.hero p{color:#111}.layout{display:block}.card,.panel,.challenge{box-shadow:none}.workspace{display:block!important}.canvas-wrap{border:1px solid #bbb}}
+</style>
+</head>
+<body>
+<header><div class="shell nav"><div class="brand"><div class="mark">🎨</div><div><strong>Khaemenes Elementary · Bazaar Junior Art Studio</strong><small>Grades 1–5 · Drawing · Symmetry · Pattern · Color · Posters · Exhibit Labels</small></div></div><div></div><div class="head-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></header>
+
+<section class="hero"><div class="shell"><div class="hero-card"><span class="eyebrow">Elementary Visual Arts · Create → Refine → Label → Exhibit</span><h1>Bazaar Junior Art Studio 🎨</h1><p>A child-centered digital art studio for Grades 1–5 with brushes, symmetry, shapes, collage-style stamps, pattern tools, color theory, poster design, exhibit labels, local saving, and print/export. Finished work can link outward to the broader Bazaar Art world with adult supervision.</p><div class="badges"><span>Grades 1–5</span><span>Digital Canvas</span><span>Symmetry</span><span>Shapes</span><span>Pattern Tools</span><span>Stamps</span><span>Poster Mode</span><span>Exhibit Labels</span><span>PNG Export</span><span>Local Save</span></div></div></div></section>
+
+<main class="shell layout">
+<section class="card main">
+<div class="toolbar">
+<div class="control"><label>Grade Level</label><select id="gradeSelect"><option value="1">1st Grade</option><option value="2" selected>2nd Grade</option><option value="3">3rd Grade</option><option value="4">4th Grade</option><option value="5">5th Grade</option></select></div>
+<div class="control"><label>Studio Mode</label><select id="modeSelect"><option value="free">Free Studio</option><option value="symmetry">Symmetry Lab</option><option value="pattern">Pattern Studio</option><option value="poster">Poster Mode</option><option value="color">Color Theory</option></select></div>
+<div class="control"><label>Canvas Background</label><select id="bgSelect"><option value="#ffffff">White</option><option value="#fff8dd">Warm Cream</option><option value="#eef7ff">Sky Wash</option><option value="#f5efff">Lavender Wash</option><option value="#edf9f0">Garden Wash</option></select></div>
+<div class="control"><label>Artwork Title</label><input id="artTitle" placeholder="Untitled artwork"></div>
+</div>
+
+<section class="challenge"><small>Studio Prompt</small><h2 id="promptTitle">Create something that uses line, shape, and color.</h2><p id="promptText">Start with one idea. Add details slowly. You can undo, revise, and explain your choices afterward.</p></section>
+
+<div class="studio-grid">
+<article class="canvas-shell">
+<div class="canvas-wrap">
+<canvas id="canvas" width="1000" height="700"></canvas>
+<div class="canvas-grid" id="gridOverlay"></div>
+<div class="symmetry-line vertical" id="symV"></div>
+<div class="symmetry-line horizontal" id="symH"></div>
+</div>
+<div class="actions"><button class="btn" id="undoBtn">↶ Undo</button><button class="btn" id="redoBtn">↷ Redo</button><button class="btn" id="clearBtn">Clear Canvas</button><button class="btn gold" id="pngBtn">Save PNG</button></div>
+<div class="status" id="status">Studio ready.</div>
+</article>
+
+<aside class="tool-panel">
+<div class="tool-section"><h3>Drawing Tools</h3><div class="tool-grid"><button class="tool-btn active" data-tool="brush">🖌 Brush</button><button class="tool-btn" data-tool="eraser">🧽 Eraser</button><button class="tool-btn" data-tool="line">╱ Line</button><button class="tool-btn" data-tool="shape">▢ Shape</button></div></div>
+<div class="tool-section"><h3>Brush</h3><div class="range-row"><input id="brushSize" type="range" min="1" max="50" value="10"><span id="brushSizeLabel">10 px</span></div><div class="color-row" style="margin-top:8px"><input id="colorPicker" type="color" value="#315b76"><strong id="colorName">Studio Blue</strong></div><div class="palette-row" id="palette"></div></div>
+<div class="tool-section"><h3>Symmetry</h3><select id="symmetrySelect" style="width:100%;padding:8px;border:1px solid var(--line);border-radius:9px"><option value="none">Off</option><option value="vertical">Vertical Mirror</option><option value="horizontal">Horizontal Mirror</option><option value="both">Four-Way</option></select><label style="display:block;margin-top:8px"><input type="checkbox" id="gridToggle"> Show Grid</label></div>
+<div class="tool-section"><h3>Shapes</h3><div class="shape-grid"><button class="shape-btn" data-shape="rect">▭</button><button class="shape-btn" data-shape="circle">◯</button><button class="shape-btn" data-shape="triangle">△</button><button class="shape-btn" data-shape="star">☆</button></div></div>
+<div class="tool-section"><h3>Stamps / Collage</h3><div class="stamp-grid"><button class="stamp-btn" data-stamp="🌸">🌸</button><button class="stamp-btn" data-stamp="⭐">⭐</button><button class="stamp-btn" data-stamp="🍃">🍃</button><button class="stamp-btn" data-stamp="🦋">🦋</button><button class="stamp-btn" data-stamp="☀️">☀️</button><button class="stamp-btn" data-stamp="🌙">🌙</button><button class="stamp-btn" data-stamp="🏠">🏠</button><button class="stamp-btn" data-stamp="🎈">🎈</button></div></div>
+<div class="tool-section"><h3>Pattern Tool</h3><select id="patternSelect" style="width:100%;padding:8px;border:1px solid var(--line);border-radius:9px"><option value="dots">Dots</option><option value="stripes">Stripes</option><option value="checker">Checker</option><option value="confetti">Confetti</option></select><button class="btn purple" id="applyPatternBtn" style="width:100%;margin-top:8px">Apply Pattern</button></div>
+</aside>
+</div>
+
+<div class="label-grid">
+<article class="panel"><h3>Exhibit Label</h3><input id="artistName" placeholder="Artist first name or initials"><textarea id="artistStatement" placeholder="My artwork is about... I used... I want viewers to notice..."></textarea><select id="mediumSelect"><option>Digital drawing</option><option>Symmetry study</option><option>Pattern study</option><option>Poster design</option><option>Digital collage</option></select></article>
+<article class="panel"><h3>Poster Mode</h3><div class="poster-preview" id="posterPreview"><div style="font-size:3rem">🎨</div><h2 id="posterTitle">Create With Color</h2><p id="posterMessage">Art can communicate an idea, feeling, place, or story.</p></div><input id="posterTitleInput" value="Create With Color"><textarea id="posterMessageInput">Art can communicate an idea, feeling, place, or story.</textarea></article>
+</div>
+
+<div class="tabs"><button class="tab active" data-tab="color">🌈 Color Theory</button><button class="tab" data-tab="patterns">🧩 Pattern Lab</button><button class="tab" data-tab="portfolio">🖼 Local Exhibit</button></div>
+
+<section class="workspace active" data-workspace="color"><div class="panel"><h3>Simple Color Theory</h3><div class="wheel"></div><div class="color-theory"><article class="theory-card"><strong>Primary Colors</strong><p>Red, yellow, and blue are traditional primary colors in elementary art instruction.</p></article><article class="theory-card"><strong>Warm & Cool</strong><p>Warm colors often include reds, oranges, and yellows. Cool colors often include blues, greens, and violets.</p></article><article class="theory-card"><strong>Contrast</strong><p>Light/dark and complementary-like color differences can make parts of an artwork stand out.</p></article></div></div></section>
+
+<section class="workspace" data-workspace="patterns"><div class="panel"><h3>Pattern Samples</h3><p style="color:var(--muted)">A pattern repeats a visual rule. Try line, shape, color, spacing, or alternating forms.</p><div class="pattern-sampler"><div class="pattern-sample p1"></div><div class="pattern-sample p2"></div><div class="pattern-sample p3"></div><div class="pattern-sample p4"></div></div></div></section>
+
+<section class="workspace" data-workspace="portfolio"><div class="portfolio" id="portfolio"></div></section>
+
+<div class="actions"><button class="btn green" id="saveArtworkBtn">Save to Local Exhibit</button><button class="btn" id="exportProjectBtn">Export Project JSON</button><button class="btn gold" id="printBtn">Print / Save PDF</button></div>
+<div class="save"><strong>💾 Local-first elementary art studio</strong><div class="save-status" id="saveStatus">Artwork settings auto-save locally. Canvas images are stored only when you save to the Local Exhibit.</div></div>
+</section>
+
+<aside class="card side">
+<h2 style="margin-top:0;color:var(--navy)">Studio Learning</h2>
+<div class="stats"><div class="stat"><strong id="savedStat">0</strong>Saved Works</div><div class="stat"><strong id="undoStat">0</strong>Revisions</div><div class="stat"><strong id="gradeStat">2</strong>Grade</div><div class="stat"><strong id="growthStat">0%</strong>Studio Growth</div></div>
+<div class="mastery"><strong>Creative Process</strong><div class="bar"><span id="masteryFill"></span></div><div id="masteryText" style="font-size:.78rem;color:var(--muted);margin-top:6px">Growth reflects saved work, revision, labeling, and reflection—not artistic ranking.</div></div>
+<div class="mentor"><strong>Art Guide</strong><p id="mentorText">Artists make choices, revise ideas, and explain what they notice. There is more than one good solution.</p><div class="actions"><button class="btn" id="readGuideBtn">🔊 Read It</button><button class="btn" id="firstStepBtn">🪜 First Step</button></div></div>
+<div class="voice"><strong>🎙 Friendly Studio Guide</strong><div class="voice-grid"><select id="voiceFriend"><option value="sunny">☀️ Sunny</option><option value="sage">🦉 Art Sage</option><option value="bloom">🌼 Bloom</option><option value="rainbow">🌈 Rainbow Friend</option></select><select id="voiceSpeed"><option value="slow">Slow & Clear</option><option value="normal">Gentle</option><option value="lively">A Little Lively</option></select></div><div class="actions"><button class="btn" id="previewVoice">▶ Hear Guide</button><button class="btn" id="repeatVoice">↻ Repeat</button><button class="btn" id="stopVoice">■ Stop</button></div><div class="voice-status" id="voiceStatus">Loading a friendly voice…</div></div>
+<div class="grade-note"><strong id="gradeTitle">Second Grade Focus</strong><div id="gradeNote"></div></div>
+<div class="adult"><strong>Adult-supervised Bazaar Art Gateway</strong><p style="font-size:.79rem;color:var(--muted)">The studio itself is local-first. A responsible adult can use the button below to open the broader Bazaar Art website in a new tab.</p><div class="actions"><button class="btn purple" id="bazaarBtn">Open Bazaar Art</button></div></div>
+<div class="history" id="history"></div>
+</aside>
+</main>
+
+<script>
+(()=>{"use strict";
+const $=id=>document.getElementById(id),KEY="khaemenes_bazaar_junior_art_k5_v1";
+const canvas=$("canvas"),ctx=canvas.getContext("2d",{willReadFrequently:true});
+const GRADE={
+1:{note:"Explore line, shape, color, texture-like patterns, stamping, and simple art vocabulary. Focus on making, noticing, and describing."},
+2:{note:"Combine line, shape, symmetry, pattern, warm/cool color choices, simple posters, and short exhibit labels."},
+3:{note:"Plan compositions more intentionally, use repetition and contrast, compare color choices, revise work, and write fuller artist statements."},
+4:{note:"Use balance, emphasis, pattern, symmetry/asymmetry, poster hierarchy, and more purposeful color relationships."},
+5:{note:"Develop multi-step compositions, refine visual communication, compare design choices, create exhibit-ready labels, and prepare work for broader supervised art contexts."}
+};
+const PALETTE=[["Studio Blue","#315b76"],["Sky","#5ba9d7"],["Garden","#5ab874"],["Sun","#efc35a"],["Coral","#ec9352"],["Berry","#d76386"],["Violet","#806bc9"],["Ink","#243341"]];
+const base={grade:2,mode:"free",bg:"#ffffff",tool:"brush",brushSize:10,color:"#315b76",symmetry:"none",shape:"rect",pattern:"dots",artTitle:"",artistName:"",artistStatement:"",medium:"Digital drawing",posterTitle:"Create With Color",posterMessage:"Art can communicate an idea, feeling, place, or story.",portfolio:[],voiceFriend:"sunny",voiceSpeed:"normal",sound:true,revisions:0,history:[]};
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function load(){try{return Object.assign(clone(base),JSON.parse(localStorage.getItem(KEY)||"null")||{})}catch{return clone(base)}}let s=load();
+let drawing=false,start=null,history=[],redo=[],stamp=null;
+function save(msg="Settings auto-saved locally"){try{localStorage.setItem(KEY,JSON.stringify(s))}catch{};$("saveStatus").textContent=msg+" · "+new Date().toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}
+function fillBackground(){ctx.save();ctx.globalCompositeOperation="source-over";ctx.fillStyle=s.bg;ctx.fillRect(0,0,canvas.width,canvas.height);ctx.restore()}
+function snapshot(){try{history.push(canvas.toDataURL("image/png"));if(history.length>40)history.shift();redo=[]}catch{}}
+function restoreData(data){const im=new Image();im.onload=()=>{ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(im,0,0)};im.src=data}
+function pos(e){const r=canvas.getBoundingClientRect(),p=e.touches?e.touches[0]:e;return{x:(p.clientX-r.left)*(canvas.width/r.width),y:(p.clientY-r.top)*(canvas.height/r.height)}}
+function mirrorPoints(p){const pts=[p];if(s.symmetry==="vertical"||s.symmetry==="both")pts.push({x:canvas.width-p.x,y:p.y});if(s.symmetry==="horizontal"||s.symmetry==="both")pts.push({x:p.x,y:canvas.height-p.y});if(s.symmetry==="both")pts.push({x:canvas.width-p.x,y:canvas.height-p.y});return pts}
+function begin(e){e.preventDefault();drawing=true;start=pos(e);if(s.tool==="brush"||s.tool==="eraser"){snapshot();drawFree(e)}}
+function move(e){if(!drawing)return;e.preventDefault();if(s.tool==="brush"||s.tool==="eraser")drawFree(e)}
+function end(e){if(!drawing)return;drawing=false;if((s.tool==="line"||s.tool==="shape")&&start){snapshot();const p=pos(e.changedTouches?{touches:e.changedTouches}:e);drawFinal(start,p)}start=null}
+function drawFree(e){const p=pos(e),pts=mirrorPoints(p);ctx.lineCap="round";ctx.lineJoin="round";ctx.lineWidth=s.brushSize;ctx.strokeStyle=s.color;ctx.globalCompositeOperation=s.tool==="eraser"?"destination-out":"source-over";for(const q of pts){ctx.lineTo(q.x,q.y);ctx.stroke();ctx.beginPath();ctx.moveTo(q.x,q.y)}ctx.globalCompositeOperation="source-over"}
+function drawFinal(a,b){const variants=[[a,b]];if(s.symmetry==="vertical"||s.symmetry==="both")variants.push([{x:canvas.width-a.x,y:a.y},{x:canvas.width-b.x,y:b.y}]);if(s.symmetry==="horizontal"||s.symmetry==="both")variants.push([{x:a.x,y:canvas.height-a.y},{x:b.x,y:canvas.height-b.y}]);if(s.symmetry==="both")variants.push([{x:canvas.width-a.x,y:canvas.height-a.y},{x:canvas.width-b.x,y:canvas.height-b.y}]);for(const [aa,bb] of variants){if(s.tool==="line")drawLine(aa,bb);else drawShape(aa,bb)}}
+function drawLine(a,b){ctx.strokeStyle=s.color;ctx.lineWidth=s.brushSize;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}
+function drawShape(a,b){const x=Math.min(a.x,b.x),y=Math.min(a.y,b.y),w=Math.abs(b.x-a.x),h=Math.abs(b.y-a.y);ctx.strokeStyle=s.color;ctx.lineWidth=Math.max(2,s.brushSize/3);ctx.fillStyle=s.color+"22";ctx.beginPath();if(s.shape==="rect"){ctx.rect(x,y,w,h)}else if(s.shape==="circle"){ctx.ellipse(x+w/2,y+h/2,w/2,h/2,0,0,Math.PI*2)}else if(s.shape==="triangle"){ctx.moveTo(x+w/2,y);ctx.lineTo(x+w,y+h);ctx.lineTo(x,y+h);ctx.closePath()}else{starPath(x+w/2,y+h/2,Math.min(w,h)/2,5)}ctx.fill();ctx.stroke()}
+function starPath(cx,cy,r,n){const inner=r*.45;ctx.moveTo(cx,cy-r);for(let i=1;i<n*2;i++){const rr=i%2?inner:r,a=-Math.PI/2+i*Math.PI/n;ctx.lineTo(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr)}ctx.closePath()}
+function placeStamp(e){if(!stamp)return;const p=pos(e);snapshot();ctx.font=`${Math.max(36,s.brushSize*4)}px serif`;ctx.textAlign="center";ctx.textBaseline="middle";for(const q of mirrorPoints(p))ctx.fillText(stamp,q.x,q.y);status(`Placed ${stamp} stamp.`,"good")}
+function applyPattern(){snapshot();const p=s.pattern;ctx.save();if(p==="dots"){for(let y=30;y<canvas.height;y+=60)for(let x=30;x<canvas.width;x+=60){ctx.fillStyle=(x/60+y/60)%2?s.color:"#ffffff";ctx.beginPath();ctx.arc(x,y,10,0,Math.PI*2);ctx.fill()}}else if(p==="stripes"){for(let x=-canvas.height;x<canvas.width;x+=42){ctx.strokeStyle=s.color+"99";ctx.lineWidth=18;ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x+canvas.height,canvas.height);ctx.stroke()}}else if(p==="checker"){for(let y=0;y<canvas.height;y+=50)for(let x=0;x<canvas.width;x+=50)if(((x+y)/50)%2===0){ctx.fillStyle=s.color+"66";ctx.fillRect(x,y,50,50)}}else{for(let i=0;i<220;i++){ctx.fillStyle=PALETTE[i%PALETTE.length][1];ctx.fillRect(Math.random()*canvas.width,Math.random()*canvas.height,6+Math.random()*10,6+Math.random()*10)}}ctx.restore();status("Pattern applied. Use Undo if you want to try another.","good")}
+function undo(){if(history.length){redo.push(canvas.toDataURL());const d=history.pop();restoreData(d);s.revisions++;renderStats();save("Undo applied")}}
+function redoFn(){if(redo.length){history.push(canvas.toDataURL());restoreData(redo.pop());s.revisions++;renderStats();save("Redo applied")}}
+function clearCanvas(){snapshot();ctx.clearRect(0,0,canvas.width,canvas.height);fillBackground();status("Canvas cleared.","warn")}
+function exportPNG(){const a=document.createElement("a"),title=(s.artTitle||"Bazaar_Junior_Artwork").replace(/[^\w\-]+/g,"_");a.href=canvas.toDataURL("image/png");a.download=title+".png";a.click()}
+function saveArtwork(){capture();const img=canvas.toDataURL("image/png");s.portfolio.unshift({id:Date.now(),date:new Date().toISOString(),grade:s.grade,title:s.artTitle||"Untitled",artist:s.artistName,statement:s.artistStatement,medium:s.medium,image:img});s.portfolio=s.portfolio.slice(0,18);s.history.unshift(`${new Date().toLocaleDateString()} · ${s.artTitle||"Untitled"} · Grade ${s.grade}`);s.history=s.history.slice(0,18);renderPortfolio();renderStats();save("Artwork saved to Local Exhibit");status("Artwork saved locally with its exhibit label.","good")}
+function capture(){s.artTitle=$("artTitle").value;s.artistName=$("artistName").value;s.artistStatement=$("artistStatement").value;s.medium=$("mediumSelect").value;s.posterTitle=$("posterTitleInput").value;s.posterMessage=$("posterMessageInput").value}
+function renderPortfolio(){$("portfolio").innerHTML=s.portfolio.length?s.portfolio.map(p=>`<article class="entry"><img src="${p.image}" alt="Saved artwork preview"><h4>${escapeHtml(p.title)}</h4><p>${escapeHtml(p.medium)} · Grade ${p.grade}<br>${escapeHtml(p.statement||"No artist statement yet.")}</p><div class="actions"><button class="btn" data-open="${p.id}">Open</button><button class="btn" data-del="${p.id}">Delete</button></div></article>`).join(""):`<div class="panel">No saved artworks yet.</div>`;document.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>{const p=s.portfolio.find(x=>x.id===Number(b.dataset.open));if(!p)return;restoreData(p.image);$("artTitle").value=p.title;$("artistName").value=p.artist||"";$("artistStatement").value=p.statement||"";$("mediumSelect").value=p.medium||"Digital drawing";s.grade=p.grade;$("gradeSelect").value=s.grade;renderGrade();status("Saved artwork opened.","good")});document.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{s.portfolio=s.portfolio.filter(x=>x.id!==Number(b.dataset.del));renderPortfolio();renderStats();save("Artwork removed from Local Exhibit")})}
+function renderGrade(){$("gradeTitle").textContent=["","First Grade Focus","Second Grade Focus","Third Grade Focus","Fourth Grade Focus","Fifth Grade Focus"][s.grade];$("gradeNote").textContent=GRADE[s.grade].note;$("gradeStat").textContent=s.grade;const prompts={1:["Explore line and shape.","Try thick and thin lines, then add 3 shapes."],2:["Create with symmetry or pattern.","Use at least two colors and explain one choice."],3:["Build repetition and contrast.","Revise one part after you look at the whole composition."],4:["Create emphasis and balance.","Choose where you want the viewer to look first."],5:["Design for communication.","Plan, revise, label, and prepare the work for an exhibit."]}[s.grade];$("promptTitle").textContent=prompts[0];$("promptText").textContent=prompts[1]}
+function renderStats(){const n=s.portfolio.length,g=Math.min(100,n*8+s.revisions*2+(s.artistStatement?10:0));$("savedStat").textContent=n;$("undoStat").textContent=s.revisions;$("growthStat").textContent=g+"%";$("masteryFill").style.width=g+"%";$("history").innerHTML=s.history.length?s.history.map(x=>`<div class="hist">${escapeHtml(x)}</div>`).join(""):`<div class="hist">Saved artwork history will appear here.</div>`}
+function status(t,k=""){$("status").textContent=t;$("status").className="status "+k}
+function renderPoster(){$("posterTitle").textContent=$("posterTitleInput").value;$("posterMessage").textContent=$("posterMessageInput").value}
+function exportProject(){capture();const blob=new Blob([JSON.stringify({app:"Bazaar Junior Art Studio",version:1,exportedAt:new Date().toISOString(),settings:s,canvasPNG:canvas.toDataURL("image/png")},null,2)],{type:"application/json"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="bazaar-junior-art-project.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)}
+function escapeHtml(x){return String(x||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+let voices=[],lastSpeech="";const FRIENDS={sunny:{n:"Sunny",e:"☀️",r:.88,p:1.05,re:/samantha|aria|jenny|zira|ava|victoria|karen|serena/i},sage:{n:"Art Sage",e:"🦉",r:.82,p:1,re:/samantha|serena|moira|ava|aria|daniel|alex/i},bloom:{n:"Bloom",e:"🌼",r:.84,p:1.08,re:/aria|jenny|ava|samantha|victoria|karen|serena/i},rainbow:{n:"Rainbow Friend",e:"🌈",r:.88,p:1.06,re:/samantha|aria|jenny|ava|karen|moira|serena/i}},SPEED={slow:.88,normal:1,lively:1.08};
+function refresh(){if(!("speechSynthesis"in window))return;voices=speechSynthesis.getVoices()||[];const f=FRIENDS[s.voiceFriend];$("voiceStatus").textContent=`${f.e} ${f.n} is ready.`}
+function stop(msg="Voice stopped."){if("speechSynthesis"in window)speechSynthesis.cancel();$("voiceStatus").textContent=msg}
+function speak(text,opt={}){if(!s.sound||!("speechSynthesis"in window))return;text=String(text||"").trim();if(!text&&!opt.preview)return;stop("");if(text)lastSpeech=text;const f=FRIENDS[s.voiceFriend],msg=opt.preview?`Hi! ${f.n} is ready for art studio.`:text,u=new SpeechSynthesisUtterance(msg),pool=voices.filter(v=>/^en/i.test(v.lang||"")).filter(v=>!/whisper|bells|boing|robot|novelty|zarvox/i.test(v.name||""));u.voice=pool.find(v=>f.re.test(v.name||""))||pool[0]||null;u.rate=f.r*SPEED[s.voiceSpeed];u.pitch=f.p;u.onstart=()=>$("voiceStatus").textContent=`${f.e} ${f.n} is reading.`;u.onend=()=>$("voiceStatus").textContent=`${f.e} ${f.n} is ready.`;speechSynthesis.speak(u)}
+
+canvas.addEventListener("pointerdown",e=>{if(stamp){placeStamp(e);return}begin(e)});canvas.addEventListener("pointermove",move);canvas.addEventListener("pointerup",end);canvas.addEventListener("pointerleave",()=>{drawing=false;ctx.beginPath()});
+document.querySelectorAll("[data-tool]").forEach(b=>b.onclick=()=>{s.tool=b.dataset.tool;stamp=null;document.querySelectorAll("[data-tool]").forEach(x=>x.classList.toggle("active",x===b));save()});
+document.querySelectorAll("[data-shape]").forEach(b=>b.onclick=()=>{s.shape=b.dataset.shape;s.tool="shape";stamp=null;document.querySelectorAll("[data-tool]").forEach(x=>x.classList.toggle("active",x.dataset.tool==="shape"));save()});
+document.querySelectorAll("[data-stamp]").forEach(b=>b.onclick=()=>{stamp=b.dataset.stamp;s.tool="stamp";status(`Stamp selected: ${stamp}. Click the canvas to place it.`,"good")});
+$("brushSize").oninput=e=>{s.brushSize=Number(e.target.value);$("brushSizeLabel").textContent=s.brushSize+" px";save()};$("colorPicker").oninput=e=>{s.color=e.target.value;$("colorName").textContent=e.target.value;save()};$("symmetrySelect").onchange=e=>{s.symmetry=e.target.value;$("symV").style.display=(s.symmetry==="vertical"||s.symmetry==="both")?"block":"none";$("symH").style.display=(s.symmetry==="horizontal"||s.symmetry==="both")?"block":"none";save()};$("gridToggle").onchange=e=>$("gridOverlay").style.display=e.target.checked?"block":"none";
+$("patternSelect").onchange=e=>{s.pattern=e.target.value;save()};$("applyPatternBtn").onclick=applyPattern;$("undoBtn").onclick=undo;$("redoBtn").onclick=redoFn;$("clearBtn").onclick=clearCanvas;$("pngBtn").onclick=exportPNG;
+$("gradeSelect").onchange=e=>{s.grade=Number(e.target.value);renderGrade();save()};$("modeSelect").onchange=e=>{s.mode=e.target.value;if(s.mode==="symmetry")$("symmetrySelect").value=s.symmetry="vertical";if(s.mode==="poster"){document.querySelector('[data-tab="color"]').click()}renderGrade();save()};$("bgSelect").onchange=e=>{s.bg=e.target.value;snapshot();fillBackground();save()};$("artTitle").oninput=e=>{s.artTitle=e.target.value;save()};
+$("artistName").oninput=e=>{s.artistName=e.target.value;save()};$("artistStatement").oninput=e=>{s.artistStatement=e.target.value;renderStats();save()};$("mediumSelect").onchange=e=>{s.medium=e.target.value;save()};$("posterTitleInput").oninput=e=>{s.posterTitle=e.target.value;renderPoster();save()};$("posterMessageInput").oninput=e=>{s.posterMessage=e.target.value;renderPoster();save()};
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===t));document.querySelectorAll(".workspace").forEach(w=>w.classList.toggle("active",w.dataset.workspace===t.dataset.tab))});
+$("saveArtworkBtn").onclick=saveArtwork;$("exportProjectBtn").onclick=exportProject;$("printBtn").onclick=()=>window.print();$("printTop").onclick=()=>window.print();$("readGuideBtn").onclick=()=>speak($("mentorText").textContent);$("firstStepBtn").onclick=()=>speak("First, choose one tool and one color. Make one mark, then decide what the artwork needs next.");
+$("soundBtn").onclick=()=>{s.sound=!s.sound;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";if(!s.sound)stop("Voice is off.");save()};$("voiceFriend").onchange=e=>{s.voiceFriend=e.target.value;refresh();speak("",{preview:true});save()};$("voiceSpeed").onchange=e=>{s.voiceSpeed=e.target.value;save()};$("previewVoice").onclick=()=>speak("",{preview:true});$("repeatVoice").onclick=()=>speak(lastSpeech||$("promptText").textContent);$("stopVoice").onclick=()=>stop();$("bazaarBtn").onclick=()=>window.open("https://vervenveda.github.io/bazaarart.github.io/","_blank","noopener,noreferrer");$("resetBtn").onclick=()=>{if(confirm("Reset Bazaar Junior Art Studio settings and local exhibit on this device?")){localStorage.removeItem(KEY);location.reload()}};
+
+$("palette").innerHTML=PALETTE.map(([n,c])=>`<button class="swatch" title="${n}" data-color="${c}" style="background:${c}"></button>`).join("");document.querySelectorAll("[data-color]").forEach(b=>b.onclick=()=>{s.color=b.dataset.color;$("colorPicker").value=s.color;$("colorName").textContent=b.title;save()});
+$("gradeSelect").value=s.grade;$("modeSelect").value=s.mode;$("bgSelect").value=s.bg;$("artTitle").value=s.artTitle;$("brushSize").value=s.brushSize;$("brushSizeLabel").textContent=s.brushSize+" px";$("colorPicker").value=s.color;$("symmetrySelect").value=s.symmetry;$("patternSelect").value=s.pattern;$("artistName").value=s.artistName;$("artistStatement").value=s.artistStatement;$("mediumSelect").value=s.medium;$("posterTitleInput").value=s.posterTitle;$("posterMessageInput").value=s.posterMessage;$("voiceFriend").value=s.voiceFriend;$("voiceSpeed").value=s.voiceSpeed;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";
+fillBackground();snapshot();renderPoster();renderGrade();renderPortfolio();renderStats();if("speechSynthesis"in window){refresh();speechSynthesis.onvoiceschanged=refresh}
+})();
+</script>
+</body>
+</html>
