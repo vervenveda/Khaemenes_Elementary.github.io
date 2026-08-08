@@ -2,7 +2,7 @@
 
 **Khaemenes Elementary · Second Grade · Mathematics + Economics**
 
-Math Market is a sovereign, sandboxed, dependency-free classroom market simulation that helps second-grade learners apply mathematics to real-world economic decisions.
+Math Market is a dependency-free classroom market simulation that helps second-grade learners apply mathematics to real-world economic decisions.
 
 The core cycle is:
 
