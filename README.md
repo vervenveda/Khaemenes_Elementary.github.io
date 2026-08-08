@@ -1,6 +1,6 @@
 #Khaemenes Elementary Academy
 
-Generated: 2026-08-08
+Published: 2026-08-08
 
 Khaemenes Elementary Academy is the root landing hub for the elementary school division of Khaemenes Academy. It organizes the student-friendly entry experience, parent/family profile tools, grade pathways, progress snapshots, and the bridge into the separate Khaemenes Middle School repository.
 
