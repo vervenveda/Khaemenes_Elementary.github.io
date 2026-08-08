@@ -1,0 +1,832 @@
+window.KHAE_GRADE4_DATA = {
+  "course": {
+    "title": "Khaemenes Academy Fourth Grade — Subject-Based 36 Week A++ Curriculum",
+    "subtitle": "Advanced Elementary Honors Foundation · In-House Curriculum · Subject Halls",
+    "code": "KHAE-GRADE4-SUBJECT-36-APLUSPLUS",
+    "grade": "Fourth Grade",
+    "weeks": 36,
+    "subjects": 8,
+    "lessonBlocksPerSubjectPerWeek": 5,
+    "subjectLessonBlocks": 1440,
+    "weeklyAssessments": 36,
+    "passingScore": 80,
+    "authors": "Jennifer Kay Pearl",
+    "generated": "2026-08-08",
+    "dependencyPolicy": "No outside fonts, scripts, images, libraries, or curriculum calls. All pages use local files only.",
+    "localReviewNote": "Designed to exceed a single-state checklist by spanning broad Grade 4 academic, arts, health, technology, inquiry, research, and portfolio requirements. Local compliance review is still recommended."
+  },
+  "subjects": [
+    {
+      "id": "language-arts",
+      "title": "Language Arts",
+      "icon": "LA",
+      "color": "#345fa8",
+      "description": "Advanced Grade 4 literature, informational text, theme, point of view, morphology, academic vocabulary, grammar, discussion, essay writing, research, revision, and publication."
+    },
+    {
+      "id": "mathematics",
+      "title": "Mathematics",
+      "icon": "M",
+      "color": "#28765f",
+      "description": "Place value through millions, multi-digit multiplication and division, factors, multiples, fraction equivalence, fraction operations, decimals, measurement, data, geometry, angles, and problem solving."
+    },
+    {
+      "id": "science",
+      "title": "Science",
+      "icon": "SCI",
+      "color": "#5c7f39",
+      "description": "Energy, waves, light, sound, information transfer, Earth materials, erosion, fossils, natural hazards, life structures, engineering, modeling, and evidence-based explanations."
+    },
+    {
+      "id": "social-studies",
+      "title": "Social Studies",
+      "icon": "SS",
+      "color": "#9b6b31",
+      "description": "Geography, regions, Indigenous histories, exploration, colonization, local/state/national civics, economics, resources, migration, rights/responsibilities, and informed action."
+    },
+    {
+      "id": "arts-music",
+      "title": "Arts & Music",
+      "icon": "ART",
+      "color": "#8359a8",
+      "description": "Visual design, art critique, music literacy, rhythm, melody, dramatic interpretation, media arts, creative process, cultural arts, and portfolio presentation."
+    },
+    {
+      "id": "health-pe-sel",
+      "title": "Health, PE & SEL",
+      "icon": "H",
+      "color": "#b95853",
+      "description": "Physical literacy, movement combinations, fitness planning, health decisions, nutrition, safety, emotional regulation, teamwork, leadership, resilience, and self-advocacy."
+    },
+    {
+      "id": "technology-tools",
+      "title": "Technology & Tools",
+      "icon": "T",
+      "color": "#41677f",
+      "description": "Keyboarding, files, spreadsheets, charts, source notes, digital citizenship, algorithms, debugging, presentations, accessibility, ethical creation, and computational thinking."
+    },
+    {
+      "id": "integrated-projects",
+      "title": "Integrated Projects",
+      "icon": "IP",
+      "color": "#b78834",
+      "description": "Capstone studios where students research, calculate, model, write, build, revise, defend evidence, present, and reflect across all subjects."
+    }
+  ],
+  "standardsFamilies": [
+    {
+      "code": "KHAE-ELA-4",
+      "label": "Grade 4 Language Arts",
+      "description": "Text evidence, theme, summary, point of view, poetry/drama/prose, informational structures, reasons/evidence, morphology, grammar, discussion, essay writing, research, revision, and publishing."
+    },
+    {
+      "code": "KHAE-MATH-4",
+      "label": "Grade 4 Mathematics",
+      "description": "Place value, multi-digit multiplication, division, factors, multiples, fractions, decimals, measurement conversion, data, line plots, lines, angles, symmetry, and problem solving."
+    },
+    {
+      "code": "KHAE-SCI-4",
+      "label": "Grade 4 Science and Engineering",
+      "description": "Energy, waves, light, sound, information transfer, Earth materials, weathering, erosion, fossils, natural hazards, life structures, engineering design, models, and evidence."
+    },
+    {
+      "code": "KHAE-SS-4",
+      "label": "Grade 4 Social Studies and Civics",
+      "description": "Regions, geography, Indigenous histories, exploration, settlement, state/local/national civics, rights, responsibilities, economics, resources, trade, and informed action."
+    },
+    {
+      "code": "KHAE-ART-4",
+      "label": "Arts and Music",
+      "description": "Creative process, visual design, media arts, music literacy, rhythm, melody, drama, performance, critique, cultural arts, and portfolio presentation."
+    },
+    {
+      "code": "KHAE-PEH-4",
+      "label": "Health, PE, and SEL",
+      "description": "Physical literacy, movement combinations, fitness planning, nutrition, safety, emotional regulation, self-management, relationships, leadership, and resilience."
+    },
+    {
+      "code": "KHAE-TECH-4",
+      "label": "Technology and Tools",
+      "description": "Digital citizenship, keyboarding, file organization, spreadsheets, charts, ethical research notes, algorithms, debugging, accessible presentations, and computational thinking."
+    },
+    {
+      "code": "KHAE-IP-4",
+      "label": "Integrated A++ Projects",
+      "description": "Cross-disciplinary inquiry, evidence gathering, quantitative reasoning, research writing, design, revision, oral defense, portfolio, and reflection."
+    },
+    {
+      "code": "KHAE-PORT-4",
+      "label": "Portfolio and Assessment",
+      "description": "Weekly mastery, performance tasks, midterm, final, capstone checkpoints, student reflection, teacher evidence, family reports, and 80% certification."
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "unit": 1,
+      "title": "Fourth Grade Scholar Launch",
+      "theme": "Baseline diagnostics, independent reading routines, math fluency audit, inquiry notebooks, executive function, portfolio setup, and A++ expectations",
+      "essentialQuestion": "How do independent scholars prove learning with evidence and revision?",
+      "lens": "Launch",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 2,
+      "unit": 2,
+      "title": "Text Evidence, Place Value, and Learning Systems",
+      "theme": "Close reading, citing details, place value to millions, classroom systems, maps, and learning contracts",
+      "essentialQuestion": "How do structure and evidence help us think with precision?",
+      "lens": "Evidence",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 3,
+      "unit": 3,
+      "title": "Theme, Character, and Multi-Digit Addition/Subtraction",
+      "theme": "Literary theme, character change, summaries, algorithm review, error analysis, and personal narrative craft",
+      "essentialQuestion": "How do stories and strategies reveal change over time?",
+      "lens": "Theme",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 4,
+      "unit": 4,
+      "title": "Multiplication Models and Informational Text Structure",
+      "theme": "Area models, partial products, text structures, diagrams, main idea, and technical vocabulary",
+      "essentialQuestion": "How do parts, patterns, and structure create meaning?",
+      "lens": "Multiplication",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 5,
+      "unit": 5,
+      "title": "Multi-Digit Multiplication and Opinion Essays",
+      "theme": "Multi-digit multiplication, claim/reasons/evidence, civic voice, survey data, and formal paragraphing",
+      "essentialQuestion": "How can strong reasons and accurate calculations support a claim?",
+      "lens": "Argument",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 6,
+      "unit": 6,
+      "title": "Division Foundations and Procedural Writing",
+      "theme": "Division as fair sharing/grouping, remainders, procedural writing, process diagrams, and critique",
+      "essentialQuestion": "How do we explain a process so another person can follow it?",
+      "lens": "Division",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 7,
+      "unit": 7,
+      "title": "Long Division, Estimation, and Problem Solving",
+      "theme": "Partial quotients, estimation, remainders in context, multi-step word problems, and math writing",
+      "essentialQuestion": "How do mathematicians decide what a remainder means?",
+      "lens": "Remainders",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 8,
+      "unit": 8,
+      "title": "Factors, Multiples, and Patterns in Nature",
+      "theme": "Factors, multiples, prime/composite, pattern rules, poetry rhythm, and science patterns",
+      "essentialQuestion": "Where do patterns help us classify, predict, and create?",
+      "lens": "Patterns",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 9,
+      "unit": 9,
+      "title": "Energy: Motion, Heat, Light, and Sound",
+      "theme": "Energy transfer, evidence tables, cause/effect text, measurement, and engineering safety",
+      "essentialQuestion": "How does energy move, change, and cause effects?",
+      "lens": "Energy",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 10,
+      "unit": 10,
+      "title": "Waves and Information Transfer",
+      "theme": "Waves, sound/light communication, model building, data displays, and explanatory writing",
+      "essentialQuestion": "How can waves carry information from one place to another?",
+      "lens": "Waves",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 11,
+      "unit": 11,
+      "title": "Morphology: Greek and Latin Roots",
+      "theme": "Greek/Latin roots, affixes, domain vocabulary, word families, etymology notebook, and precise language",
+      "essentialQuestion": "How do word parts unlock complex ideas?",
+      "lens": "Morphology",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 12,
+      "unit": 12,
+      "title": "Geography: Regions, Landforms, and Maps",
+      "theme": "Regions, landforms, map scale, latitude/longitude foundations, resources, and spatial reasoning",
+      "essentialQuestion": "How do maps help us explain where and why communities develop?",
+      "lens": "Geography",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 13,
+      "unit": 13,
+      "title": "Fractions as Numbers and Equivalence",
+      "theme": "Unit fractions, equivalent fractions, number lines, visual models, fraction language, and precision",
+      "essentialQuestion": "How can different fractions name the same value?",
+      "lens": "Fractions",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 14,
+      "unit": 14,
+      "title": "Comparing and Ordering Fractions",
+      "theme": "Benchmark fractions, common denominators, comparison strategies, data displays, and explanations",
+      "essentialQuestion": "How can we compare parts fairly and accurately?",
+      "lens": "Fraction Comparison",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 15,
+      "unit": 15,
+      "title": "Adding and Subtracting Fractions",
+      "theme": "Like denominators, mixed numbers foundations, measurement fractions, and multi-step contexts",
+      "essentialQuestion": "How do fraction operations help solve real problems?",
+      "lens": "Fraction Operations",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 16,
+      "unit": 16,
+      "title": "Fractions, Measurement, and Design",
+      "theme": "Line plots with fractions, recipe/math lab, measurement conversion foundations, and design constraints",
+      "essentialQuestion": "How do precise measurements improve a design?",
+      "lens": "Measurement Fractions",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 17,
+      "unit": 17,
+      "title": "Midyear Portfolio and Assessment",
+      "theme": "Cumulative review, midterm, essay conference, math defense, subject evidence audit, and portfolio reflection",
+      "essentialQuestion": "How can I prove growth across every subject?",
+      "lens": "Midterm",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 18,
+      "unit": 18,
+      "title": "Research Writing: Question to Thesis",
+      "theme": "Research questions, note systems, paraphrase, citations, paragraphs, visual supports, and oral report planning",
+      "essentialQuestion": "How do researchers turn questions into trustworthy explanations?",
+      "lens": "Research",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 19,
+      "unit": 19,
+      "title": "Earth Materials, Weathering, and Erosion",
+      "theme": "Rocks, minerals, soil, weathering, erosion, landform change, models, maps, and CER writing",
+      "essentialQuestion": "How do Earth materials change landscapes over time?",
+      "lens": "Earth Systems",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 20,
+      "unit": 20,
+      "title": "Fossils, Time, and Evidence of the Past",
+      "theme": "Fossil evidence, geologic time foundations, claims from evidence, timelines, and informational writing",
+      "essentialQuestion": "How do clues in Earth materials reveal the past?",
+      "lens": "Fossils",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 21,
+      "unit": 21,
+      "title": "Natural Hazards and Engineering Solutions",
+      "theme": "Earthquakes, volcanoes, floods, storms, hazard maps, design solutions, and risk communication",
+      "essentialQuestion": "How can communities reduce risk from natural hazards?",
+      "lens": "Hazards",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 22,
+      "unit": 22,
+      "title": "Life Structures and Function",
+      "theme": "Plant/animal structures, senses, survival, models, comparison text, and evidence diagrams",
+      "essentialQuestion": "How do structures help living things survive?",
+      "lens": "Life Structures",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 23,
+      "unit": 23,
+      "title": "Indigenous Histories and Cultural Geography",
+      "theme": "Indigenous nations, culture, geography, primary sources, respectful language, and map evidence",
+      "essentialQuestion": "How do geography, culture, and history shape communities?",
+      "lens": "Indigenous Studies",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 24,
+      "unit": 24,
+      "title": "Exploration, Encounter, and Historical Perspective",
+      "theme": "Multiple perspectives, timelines, cause/effect, source analysis, and ethical historical thinking",
+      "essentialQuestion": "How can we study encounters with accuracy and respect?",
+      "lens": "Perspective",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 25,
+      "unit": 25,
+      "title": "Colonial Regions, Labor, and Economy",
+      "theme": "Colonial regions, resources, labor systems, trade, geography, economics, and evidence-based comparison",
+      "essentialQuestion": "How do geography and resources shape economies?",
+      "lens": "Colonial Regions",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 26,
+      "unit": 26,
+      "title": "Government, Rights, and Responsibilities",
+      "theme": "Constitutions, branches/levels of government, rights, responsibilities, laws, civic participation, and debate",
+      "essentialQuestion": "How do rules and rights protect a community?",
+      "lens": "Civics",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 27,
+      "unit": 27,
+      "title": "Decimal Fractions and Money",
+      "theme": "Tenths/hundredths, decimal notation, money, comparisons, models, and real-world decision-making",
+      "essentialQuestion": "How do decimals help us describe parts and value?",
+      "lens": "Decimals",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 28,
+      "unit": 28,
+      "title": "Measurement Conversions and Data",
+      "theme": "Customary/metric units, elapsed time, conversion tables, line plots, data interpretation, and precision",
+      "essentialQuestion": "How do units and data help us make accurate decisions?",
+      "lens": "Conversions",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 29,
+      "unit": 29,
+      "title": "Geometry: Lines, Angles, and Symmetry",
+      "theme": "Points, lines, rays, angles, perpendicular/parallel lines, symmetry, classification, and drawing tools",
+      "essentialQuestion": "How do geometric properties help us classify and design?",
+      "lens": "Geometry",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 30,
+      "unit": 30,
+      "title": "Angle Measurement and Problem Solving",
+      "theme": "Protractors, angle addition, missing angle problems, design constraints, and math arguments",
+      "essentialQuestion": "How can angles be measured, combined, and reasoned about?",
+      "lens": "Angles",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 31,
+      "unit": 31,
+      "title": "Poetry, Drama, and Performance",
+      "theme": "Poetry, drama, verse, rhythm, stage directions, voice, movement, art response, and performance critique",
+      "essentialQuestion": "How do structure, voice, and performance change meaning?",
+      "lens": "Performance",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 32,
+      "unit": 32,
+      "title": "Economics, Entrepreneurship, and Budgets",
+      "theme": "Producers/consumers, supply/demand foundations, budgets, profit/loss, decimals, and market ethics",
+      "essentialQuestion": "How do economic choices affect people and communities?",
+      "lens": "Economics",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 33,
+      "unit": 33,
+      "title": "Digital Citizenship, Data, and Spreadsheets",
+      "theme": "Digital safety, source ethics, spreadsheets, tables, charts, accessibility, algorithms, and debugging",
+      "essentialQuestion": "How can digital tools help us organize and share evidence responsibly?",
+      "lens": "Technology",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 34,
+      "unit": 34,
+      "title": "A++ Big Question Capstone Research",
+      "theme": "Independent inquiry, research plan, source notes, math/data component, model/prototype, and project schedule",
+      "essentialQuestion": "What big question can I investigate with evidence, calculation, and design?",
+      "lens": "Capstone Research",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 35,
+      "unit": 35,
+      "title": "Capstone Studio, Revision, and Defense",
+      "theme": "Draft, revise, build, calculate, design, peer review, oral defense practice, and presentation media",
+      "essentialQuestion": "How can I make my evidence clear enough to defend?",
+      "lens": "Capstone Studio",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    },
+    {
+      "week": 36,
+      "unit": 36,
+      "title": "Final Review and Grade 5 Readiness",
+      "theme": "Cumulative final, portfolio defense, certificate, reflection, transition skills, and celebration",
+      "essentialQuestion": "How am I ready for fifth grade?",
+      "lens": "Final",
+      "standards": [
+        "KHAE-ELA-4",
+        "KHAE-MATH-4",
+        "KHAE-SCI-4",
+        "KHAE-SS-4",
+        "KHAE-ART-4",
+        "KHAE-PEH-4",
+        "KHAE-TECH-4",
+        "KHAE-IP-4",
+        "KHAE-PORT-4"
+      ]
+    }
+  ],
+  "assessments": {
+    "midterm": {
+      "title": "Fourth Grade Midyear Subject Demonstration",
+      "week": 18,
+      "passingScore": 80,
+      "itemCount": 100
+    },
+    "final": {
+      "title": "Fourth Grade Final Readiness Demonstration",
+      "week": 36,
+      "passingScore": 80,
+      "itemCount": 120
+    },
+    "certification": {
+      "threshold": 80,
+      "requires": [
+        "Weekly assessment average at or above 80%",
+        "Midterm score at or above 80%",
+        "Final score at or above 80%",
+        "Portfolio evidence approved by adult mentor"
+      ]
+    }
+  }
+};
