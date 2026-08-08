@@ -162,6 +162,8 @@ h1{margin:10px auto 4px;max-width:900px;font-size:clamp(2.9rem,7vw,5.4rem);line-
     <div></div>
     <div class="header-actions">
       <button id="soundBtn">🔊 Read Aloud On</button>
+      <button id="repeatVoiceBtn">↻ Repeat</button>
+      <button id="stopVoiceBtn">■ Stop Voice</button>
       <button id="resetBtn">↺ Reset</button>
     </div>
   </div>
@@ -647,10 +649,78 @@ function renderStats(){
   $("skillSub").textContent=icon("sub");
   $("history").innerHTML=state.history.length?state.history.map(x=>`<div class="history-item">${x}</div>`).join(""):`<div class="history-item">Recent forge work will appear here.</div>`;
 }
+/* Friendly Voice System
+   Uses only local browser SpeechSynthesis voices. It does not download,
+   record, transmit, or require an outside voice service. */
+let friendlyVoices=[];
+let activeVoice=null;
+let lastSpokenText="";
+
+function friendlyVoiceScore(v){
+  const name=(v.name||"").toLowerCase();
+  const lang=(v.lang||"").toLowerCase();
+  let score=0;
+
+  // Prefer English voices for the English-language Number Forge lesson.
+  if(lang.startsWith("en-us"))score+=45;
+  else if(lang.startsWith("en-ca"))score+=39;
+  else if(lang.startsWith("en-gb"))score+=36;
+  else if(lang.startsWith("en-au"))score+=34;
+  else if(lang.startsWith("en"))score+=30;
+  else score-=100;
+
+  // Common natural/local voice families tend to be clearer and warmer.
+  const preferred=["samantha","ava","allison","susan","zira","aria","jenny","emma","serena",
+                   "victoria","karen","moira","fiona","siri","natural","premium","enhanced"];
+  preferred.forEach((term,i)=>{if(name.includes(term))score+=Math.max(5,28-i);});
+
+  // Avoid voices whose labels commonly indicate novelty/effects or utility output.
+  const avoid=["whisper","bad news","good news","bells","boing","bubbles","cellos","organ",
+               "trinoids","zarvox","wobble","jester","superstar","novelty","robot",
+               "compact","telephone","albert","fred"];
+  if(avoid.some(term=>name.includes(term)))score-=120;
+
+  if(v.localService)score+=5;
+  return score;
+}
+function refreshFriendlyVoices(){
+  if(!("speechSynthesis" in window))return;
+  const all=speechSynthesis.getVoices();
+  friendlyVoices=all
+    .map(v=>({voice:v,score:friendlyVoiceScore(v)}))
+    .filter(x=>x.score>0)
+    .sort((a,b)=>b.score-a.score)
+    .map(x=>x.voice);
+
+  // If the device exposes no suitable English voice, use the browser's
+  // own English/default voice rather than selecting a novelty voice.
+  activeVoice=friendlyVoices[0]||
+    all.find(v=>(v.lang||"").toLowerCase().startsWith("en"))||
+    all.find(v=>v.default)||null;
+}
+function stopVoice(){
+  if("speechSynthesis" in window)speechSynthesis.cancel();
+}
 function speak(text){
-  if(!state.sound||!("speechSynthesis"in window))return;
-  speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(text);u.rate=.9;u.pitch=1.02;speechSynthesis.speak(u);
+  if(!state.sound||!("speechSynthesis"in window)||!text)return;
+  lastSpokenText=String(text);
+  refreshFriendlyVoices();
+  stopVoice();
+  const u=new SpeechSynthesisUtterance(lastSpokenText);
+  if(activeVoice){u.voice=activeVoice;u.lang=activeVoice.lang||"en-US";}
+  else u.lang="en-US";
+  u.rate=.90;
+  u.pitch=1.03;
+  u.volume=1;
+  speechSynthesis.speak(u);
+}
+function repeatVoice(){
+  if(lastSpokenText)speak(lastSpokenText);
+  else if(state.problem)speak(state.problem.text);
+}
+if("speechSynthesis" in window){
+  refreshFriendlyVoices();
+  speechSynthesis.addEventListener?.("voiceschanged",refreshFriendlyVoices);
 }
 
 $("modeSelect").onchange=e=>{state.mode=e.target.value;newProblem()};
@@ -671,7 +741,14 @@ $("showBtn").onclick=showStartingBlocks;
 $("stepBtn").onclick=firstStep;
 $("readBtn").onclick=()=>speak($("mentorText").textContent);
 $("answerInput").addEventListener("keydown",e=>{if(e.key==="Enter")checkAnswer()});
-$("soundBtn").onclick=()=>{state.sound=!state.sound;$("soundBtn").textContent=state.sound?"🔊 Read Aloud On":"🔇 Read Aloud Off";save()};
+$("soundBtn").onclick=()=>{
+  state.sound=!state.sound;
+  $("soundBtn").textContent=state.sound?"🔊 Read Aloud On":"🔇 Read Aloud Off";
+  if(!state.sound)stopVoice();
+  save();
+};
+$("repeatVoiceBtn").onclick=repeatVoice;
+$("stopVoiceBtn").onclick=stopVoice;
 $("resetBtn").onclick=()=>{if(confirm("Reset Number Forge progress on this device?")){localStorage.removeItem(STORAGE_KEY);location.reload()}};
 
 load();
