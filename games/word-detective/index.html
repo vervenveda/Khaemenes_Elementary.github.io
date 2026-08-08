@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Word Detective — Khaemenes Elementary grades 1–5 morphology, phonics, syllables, grammar, and word-analysis game.">
+<title>Word Detective 🔎 · Khaemenes Elementary</title>
+<style>
+:root{
+  --ink:#273744;--muted:#6c7b87;--paper:#fffefa;--navy:#365c73;--teal:#4f9b91;--blue:#5aa8d4;
+  --gold:#efc45c;--orange:#ed9555;--green:#5eb57a;--purple:#816cc8;--pink:#e678a0;--red:#d46666;
+  --line:rgba(39,55,68,.14);--shadow:0 20px 50px rgba(54,92,115,.14);
+  --serif:Georgia,"Times New Roman",serif;--sans:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--ink);font:17px/1.55 var(--sans);background:
+radial-gradient(circle at 8% 1%,rgba(239,196,92,.28),transparent 25rem),
+radial-gradient(circle at 95% 2%,rgba(90,168,212,.22),transparent 27rem),
+linear-gradient(#eef9ff,#fffefa 34rem,#f4faf7)}
+button,input,select,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}
+.shell{width:min(calc(100% - 24px),1240px);margin:auto}
+header{position:sticky;top:0;z-index:60;background:rgba(255,254,250,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.nav{min-height:74px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}
+.brand{display:flex;gap:10px;align-items:center}.mark{width:50px;height:50px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(145deg,var(--gold),var(--purple));font-size:1.55rem;box-shadow:var(--shadow)}
+.brand strong{display:block;color:var(--navy);font:700 1.08rem var(--serif)}.brand small{display:block;color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.09em}
+.head-actions{display:flex;gap:7px;flex-wrap:wrap}.head-actions button,.btn{min-height:42px;padding:8px 12px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--navy);font-weight:900}
+.btn.primary{color:#fff;background:linear-gradient(145deg,var(--navy),var(--teal));border:0}.btn.gold{color:#5d4614;background:linear-gradient(145deg,#ffe99a,var(--gold))}.btn.purple{color:#fff;background:linear-gradient(145deg,var(--purple),#6754a5);border:0}
+.hero{padding:34px 0 22px}.hero-card{padding:27px 20px;border:4px solid #fff;border-radius:28px;text-align:center;color:#fff;background:radial-gradient(circle at 15% 20%,rgba(255,255,255,.22),transparent 14rem),linear-gradient(135deg,#365c73,#4d908d 48%,#7768b8);box-shadow:var(--shadow)}
+.eyebrow{display:inline-block;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.14);font-size:.73rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+h1,h2,h3,h4{font-family:var(--serif)}h1{margin:10px 0 4px;font-size:clamp(2.9rem,7vw,5.1rem);line-height:.98}.hero p{max-width:920px;margin:9px auto;color:#f8feff}
+.badges{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:13px}.badges span{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.14);font-size:.72rem;font-weight:850}
+.layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(310px,.55fr);gap:14px;align-items:start;padding-bottom:44px}.card{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.main{padding:16px}.side{padding:15px;position:sticky;top:90px}
+.toolbar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.control{padding:10px;border:1px solid var(--line);border-radius:14px;background:#fbfdff}.control label{display:block;color:var(--muted);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.control select{width:100%;margin-top:4px;padding:8px;border:1px solid var(--line);border-radius:9px;background:#fff}
+.challenge{margin-top:12px;padding:15px;border:2px solid #e7cf79;border-radius:18px;background:linear-gradient(145deg,#fff6ca,#fffef9);text-align:center}.challenge small{font-size:.7rem;font-weight:900;color:#81631e;text-transform:uppercase;letter-spacing:.1em}.challenge h2{margin:5px 0;color:var(--navy);font-size:clamp(1.5rem,4vw,2.2rem)}.challenge p{margin:6px auto;max-width:900px;color:var(--muted);font-weight:800}
+.case-file{margin-top:12px;padding:15px;border:1px solid var(--line);border-radius:18px;background:#fff}.case-word{text-align:center;font:800 clamp(2.3rem,7vw,4.5rem)/1.05 var(--serif);color:var(--navy);letter-spacing:.03em}.token-row{display:flex;justify-content:center;gap:3px;flex-wrap:wrap;margin-top:12px}.token{padding:6px 8px;border:1px solid var(--line);border-radius:9px;background:#fff;font-weight:900}.token.selected{background:#fff0a9;border-color:#d7b54f}.token.correct{background:#dff6e7;border-color:#5eb57a}.token.wrong{background:#ffe1e1;border-color:#d46666}
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.tool{padding:10px;border:1px solid var(--line);border-radius:13px;background:#fbfdff;text-align:center}.tool strong{display:block;color:var(--navy)}.tool small{color:var(--muted)}
+.clues{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:10px}.clue{padding:7px 10px;border-radius:999px;background:#eef8ff;border:1px solid #cae1ee;color:#456477;font-weight:850}
+.evidence-board{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.panel{padding:14px;border:1px solid var(--line);border-radius:18px;background:#fff}.panel h3{margin:0;color:var(--navy)}.panel textarea{width:100%;min-height:100px;margin-top:8px;padding:9px;border:1px solid var(--line);border-radius:10px;resize:vertical}
+.highlight-legend{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.legend{padding:5px 8px;border-radius:999px;font-size:.72rem;font-weight:900}.prefix{background:#e6f2ff;color:#386b91}.suffix{background:#fde6ef;color:#9b4668}.vowel{background:#fff2b8;color:#84691e}.syllable{background:#e9e3ff;color:#6754a5}.compound{background:#dff5e8;color:#397451}.rcontrolled{background:#ffe6cd;color:#9a5d28}.noun{background:#e8f4ff;color:#406887}.verb{background:#fbe6ef;color:#9b4668}.adjective{background:#e7f7e8;color:#3d7649}
+.actions{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:9px}.feedback{min-height:28px;text-align:center;margin-top:8px;font-weight:900;color:var(--muted)}.feedback.good{color:#2e8750}.feedback.try{color:#a36b2b}
+.tabs{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:13px}.tab{padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--navy);font-weight:900}.tab.active{color:#fff;background:linear-gradient(145deg,var(--navy),var(--purple));border:0}.workspace{display:none;margin-top:12px}.workspace.active{display:block}
+.sort-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.sort-bin{min-height:150px;padding:10px;border:2px dashed #cad8df;border-radius:14px;background:#fbfdff;text-align:center}.sort-bin strong{color:var(--navy)}.word-chip{display:inline-block;margin:4px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font-weight:850}
+.portfolio{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.entry{padding:11px;border:1px solid var(--line);border-radius:14px;background:#fff}.entry h4{margin:0;color:var(--navy)}.entry p{font-size:.8rem;color:var(--muted)}
+.save{margin-top:12px;padding:11px;border:1px solid var(--line);border-radius:15px;background:#f5fff3;text-align:center}.save strong{color:#477154}.save-status{font-size:.77rem;color:var(--muted);margin-top:6px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.stat{padding:10px;text-align:center;border:1px solid var(--line);border-radius:13px}.stat strong{display:block;color:var(--navy);font-size:1.35rem}.mastery{margin-top:11px;padding:11px;border-radius:15px;background:#fff8df}.bar{height:12px;background:#e7e4de;border-radius:999px;overflow:hidden}.bar span{display:block;height:100%;width:42%;background:linear-gradient(90deg,var(--green),var(--blue),var(--pink))}.mentor,.voice,.grade-note{margin-top:11px;padding:11px;border-radius:15px;border:1px solid var(--line)}.mentor{background:#eaf8ff}.voice{background:#fff4f8}.grade-note{background:#f5f2ff}.mentor strong,.voice strong,.grade-note strong{color:var(--navy)}.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:7px}.voice select{width:100%;padding:7px;border:1px solid var(--line);border-radius:9px;background:#fff}.voice-status{text-align:center;color:var(--muted);font-size:.75rem;margin-top:6px}.history{display:grid;gap:6px;margin-top:11px;max-height:190px;overflow:auto}.hist{padding:7px;border:1px solid var(--line);border-radius:10px;font-size:.76rem}
+@media(max-width:950px){.layout{grid-template-columns:1fr}.side{position:static}}@media(max-width:760px){.toolbar{grid-template-columns:repeat(2,1fr)}.evidence-board,.sort-grid{grid-template-columns:1fr}.tools{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}}@media(max-width:490px){.toolbar,.voice-grid{grid-template-columns:1fr}.nav{grid-template-columns:1fr auto}.brand small{display:none}}
+@media print{header,.head-actions,.side,.actions,.tabs{display:none!important}body{background:#fff}.hero{padding:6px}.hero-card{background:#fff!important;color:#111;border:1px solid #999;box-shadow:none}.hero p{color:#111}.layout{display:block}.card,.panel,.challenge{box-shadow:none}.workspace{display:block!important}}
+</style>
+</head>
+<body>
+<header><div class="shell nav"><div class="brand"><div class="mark">🔎</div><div><strong>Khaemenes Elementary · Word Detective</strong><small>Grades 1–5 · Phonics · Morphology · Grammar · Vocabulary</small></div></div><div></div><div class="head-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></header>
+<section class="hero"><div class="shell"><div class="hero-card"><span class="eyebrow">Elementary Language Arts · Weeks 2, 5, 14, 27–28 · Earn Clues, Not Points</span><h1>Word Detective 🔎</h1><p>Investigate words by highlighting meaningful parts, spotting vowel patterns, breaking syllables, finding compounds, identifying r-controlled vowels, and sorting nouns, verbs, and adjectives.</p><div class="badges"><span>Grades 1–5</span><span>Clue-Based Progress</span><span>Storybird-Inspired Gentle Language</span><span>Aurora-Inspired Word Analysis</span><span>Friendly Voices</span><span>Local Save</span><span>No Dependencies</span></div></div></div></section>
+<main class="shell layout">
+<section class="card main">
+<div class="toolbar">
+<div class="control"><label>Grade Level</label><select id="gradeSelect"><option value="1">1st Grade</option><option value="2" selected>2nd Grade</option><option value="3">3rd Grade</option><option value="4">4th Grade</option><option value="5">5th Grade</option></select></div>
+<div class="control"><label>Detective Skill</label><select id="skillSelect"><option value="prefix">Prefixes</option><option value="suffix">Suffixes</option><option value="vowel">Vowel Teams</option><option value="syllable">Syllables</option><option value="compound">Compound Words</option><option value="rcontrolled">R-Controlled Vowels</option><option value="grammar">Noun / Verb / Adjective</option><option value="mixed">Adaptive Case Files</option></select></div>
+<div class="control"><label>Case Mode</label><select id="modeSelect"><option value="guided">Guided</option><option value="mystery">Mystery</option><option value="story">Story Clue</option></select></div>
+<div class="control"><label>Clues Earned</label><div style="margin-top:5px;font-weight:900;color:var(--navy)" id="clueCountTop">0</div></div>
+</div>
+
+<section class="challenge"><small>Current Case File</small><h2 id="challengeTitle">Find the clue hidden in the word.</h2><p id="challengeText"></p></section>
+
+<section class="case-file">
+<div class="case-word" id="caseWord">sunflower</div>
+<div class="token-row" id="tokenRow"></div>
+<div class="highlight-legend"><span class="legend prefix">Prefix</span><span class="legend suffix">Suffix</span><span class="legend vowel">Vowel Team</span><span class="legend syllable">Syllable</span><span class="legend compound">Compound</span><span class="legend rcontrolled">R-Controlled</span><span class="legend noun">Noun</span><span class="legend verb">Verb</span><span class="legend adjective">Adjective</span></div>
+<div class="clues" id="clues"></div>
+<div class="actions"><button class="btn primary" id="checkBtn">Check Evidence</button><button class="btn gold" id="hintBtn">Reveal a Clue</button><button class="btn" id="newCaseBtn">New Case</button></div><div class="feedback" id="feedback"></div>
+</section>
+
+<div class="evidence-board">
+<article class="panel"><h3>Detective Notes</h3><textarea id="notes" placeholder="What did you notice about the word?"></textarea></article>
+<article class="panel"><h3>Explain the Clue</h3><textarea id="explain" placeholder="Explain how the word part or grammar clue helped you."></textarea></article>
+</div>
+
+<div class="tools">
+<div class="tool"><strong>Word Parts</strong><small>Prefixes, suffixes, roots, compounds</small></div>
+<div class="tool"><strong>Sound Patterns</strong><small>Vowel teams, syllables, r-controlled vowels</small></div>
+<div class="tool"><strong>Grammar Clues</strong><small>Nouns, verbs, adjectives in context</small></div>
+</div>
+
+<div class="tabs"><button class="tab active" data-tab="sort">🗃 Sort Evidence</button><button class="tab" data-tab="story">📖 Story Clue</button><button class="tab" data-tab="portfolio">🗂 Case Portfolio</button></div>
+<section class="workspace active" data-workspace="sort"><div class="panel"><h3>Sort the Evidence</h3><p style="color:var(--muted)">Tap a word chip, then choose the matching category.</p><div id="sortWords" style="text-align:center;margin-bottom:9px"></div><div class="sort-grid"><button class="sort-bin" data-bin="noun"><strong>Nouns</strong><div id="nounBin"></div></button><button class="sort-bin" data-bin="verb"><strong>Verbs</strong><div id="verbBin"></div></button><button class="sort-bin" data-bin="adjective"><strong>Adjectives</strong><div id="adjectiveBin"></div></button></div><div class="feedback" id="sortFeedback"></div></div></section>
+<section class="workspace" data-workspace="story"><div class="panel"><h3>Story Clue</h3><p id="storyText"></p><div class="actions"><button class="btn purple" id="newStoryBtn">New Story Clue</button><button class="btn" id="readStoryBtn">🔊 Read Story</button></div></div></section>
+<section class="workspace" data-workspace="portfolio"><div class="portfolio" id="portfolio"></div></section>
+
+<div class="actions"><button class="btn primary" id="saveCaseBtn">Save Case Evidence</button><button class="btn" id="readCaseBtn">🔊 Read Case</button></div>
+<div class="save"><strong>💾 Save & Export Word Detective</strong><div class="actions"><button class="btn" id="saveBtn">Save Session</button><button class="btn" id="exportBtn">Export JSON</button><button class="btn gold" id="printBtn">Print / Save PDF</button></div><div class="save-status" id="saveStatus">Progress auto-saves locally.</div></div>
+</section>
+
+<aside class="card side">
+<h2 style="margin-top:0;color:var(--navy)">Detective Progress</h2>
+<div class="stats"><div class="stat"><strong id="clueStat">0</strong>Clues</div><div class="stat"><strong id="caseStat">0</strong>Cases</div><div class="stat"><strong id="gradeStat">2</strong>Grade</div><div class="stat"><strong id="masteryStat">42%</strong>Word Mastery</div></div>
+<div class="mastery"><strong>Language Investigation Growth</strong><div class="bar"><span id="masteryFill"></span></div><div id="masteryText" style="font-size:.78rem;color:var(--muted);margin-top:6px"></div></div>
+<div class="mentor"><strong>Word Guide</strong><p id="mentorText">Look for the smallest useful clue: a beginning, ending, vowel pattern, syllable, or word job.</p><div class="actions"><button class="btn" id="readGuideBtn">🔊 Read It</button><button class="btn" id="firstStepBtn">🪜 First Step</button></div></div>
+<div class="voice"><strong>🎙 Friendly Detective Guide</strong><div class="voice-grid"><select id="voiceFriend"><option value="sunny">☀️ Sunny</option><option value="sage">🦉 Word Sage</option><option value="bloom">🌼 Bloom</option><option value="rainbow">🌈 Rainbow Friend</option></select><select id="voiceSpeed"><option value="slow">Slow & Clear</option><option value="normal">Gentle</option><option value="lively">A Little Lively</option></select></div><div class="actions"><button class="btn" id="previewVoice">▶ Hear Guide</button><button class="btn" id="repeatVoice">↻ Repeat</button><button class="btn" id="stopVoice">■ Stop</button></div><div class="voice-status" id="voiceStatus">Loading a friendly voice…</div></div>
+<div class="grade-note"><strong id="gradeTitle">Second Grade Focus</strong><div id="gradeNote"></div></div><div class="history" id="history"></div>
+</aside></main>
+
+<script>
+(()=>{"use strict";
+const $=id=>document.getElementById(id),KEY="khaemenes_word_detective_k5_v1";
+const GRADE={
+1:{note:"Foundation phonics and grammar: simple compounds, common vowel teams, basic syllable awareness, and identifying nouns/verbs/adjectives in simple sentences.",skills:["vowel","syllable","compound","grammar"]},
+2:{note:"Prefixes/suffixes, vowel teams, syllables, compounds, r-controlled vowels, and basic parts of speech—matching the current second-grade curriculum focus.",skills:["prefix","suffix","vowel","syllable","compound","rcontrolled","grammar"]},
+3:{note:"Deeper morphology, multisyllabic decoding, affixes, word families, context clues, and grammar in increasingly complex sentences.",skills:["prefix","suffix","syllable","compound","rcontrolled","grammar"]},
+4:{note:"Greek/Latin-style word-part awareness, derivational morphology, multisyllabic analysis, and grammar choices that affect meaning.",skills:["prefix","suffix","syllable","grammar"]},
+5:{note:"Advanced morphology, roots/affixes, syllable structure, nuanced word class, vocabulary relationships, and context-driven analysis.",skills:["prefix","suffix","syllable","grammar"]}
+};
+const CASES={
+prefix:[["unhappy","un","The beginning changes the meaning to 'not happy'."],["replay","re","The beginning means 'again'."],["preview","pre","The beginning means 'before'."],["dislike","dis","The beginning can mean 'not' or 'opposite'."]],
+suffix:[["helpful","ful","The ending means 'full of'."],["kindness","ness","The ending turns an adjective into a noun."],["jumped","ed","The ending shows past time."],["slowly","ly","The ending helps make an adverb."]],
+vowel:[["rain","ai","Two vowels work together in this word."],["team","ea","The vowel team represents the long e sound here."],["boat","oa","The vowel team represents the long o sound here."],["seed","ee","The vowel team represents the long e sound."]],
+syllable:[["sunset","sun|set","This word has two spoken beats."],["rabbit","rab|bit","This word has two syllables."],["fantastic","fan|tas|tic","This word has three syllables."],["remember","re|mem|ber","This word has three syllables."]],
+compound:[["sunflower","sun|flower","Two complete words join to make one new word."],["raincoat","rain|coat","Two complete words join together."],["playground","play|ground","Each part can stand as a word."],["bedroom","bed|room","The word is built from two smaller words."]],
+rcontrolled:[["star","ar","The vowel sound is changed by r."],["bird","ir","The r controls the vowel sound."],["storm","or","The vowel-r pattern makes a special sound."],["turn","ur","The r-controlled pattern is ur."]],
+grammar:[["bright","adjective","This word describes a noun."],["running","verb","This word names an action."],["garden","noun","This word names a place or thing."],["gentle","adjective","This word describes a quality."]]
+};
+const STORIES=["The bright bird carried a raincoat toward the garden. Which words give you grammar or vowel-team clues?","Mila replayed the sunset story slowly. Which words contain a prefix, suffix, or two syllables?","The helpful child walked into the bedroom before the storm. Which words can be split into useful word parts?"];
+const base={grade:2,skill:"prefix",mode:"guided",clues:0,mastery:42,cases:[],history:[],current:null,selected:[],hintLevel:0,notes:"",explain:"",voiceFriend:"sunny",voiceSpeed:"normal",sound:true,sort:{current:null,bins:{noun:[],verb:[],adjective:[]}}};
+function clone(o){return JSON.parse(JSON.stringify(o))}function load(){try{return Object.assign(clone(base),JSON.parse(localStorage.getItem(KEY)||"null")||{})}catch{return clone(base)}}let s=load();
+function save(msg="Auto-saved locally"){s.notes=$("notes").value;s.explain=$("explain").value;try{localStorage.setItem(KEY,JSON.stringify(s))}catch{};$("saveStatus").textContent=msg+" · "+new Date().toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}
+function pick(a){return a[Math.floor(Math.random()*a.length)]}function allowedSkill(){const a=GRADE[s.grade].skills;return s.skill==="mixed"?pick(a):(a.includes(s.skill)?s.skill:a[0])}
+function tokenize(word,skill,answer){
+ if(skill==="syllable"||skill==="compound")return answer.split("|");
+ if(skill==="prefix"&&word.startsWith(answer))return [answer,word.slice(answer.length)];
+ if(skill==="suffix"&&word.endsWith(answer))return [word.slice(0,-answer.length),answer];
+ if(skill==="vowel"||skill==="rcontrolled"){const i=word.indexOf(answer);return [word.slice(0,i),answer,word.slice(i+answer.length)].filter(Boolean)}
+ return [word]
+}
+function newCase(){const skill=allowedSkill(),c=pick(CASES[skill]);s.current={word:c[0],answer:c[1],clue:c[2],skill};s.selected=[];s.hintLevel=0;$("challengeTitle").textContent=`Investigate ${c[0]}`;$("challengeText").textContent=skill==="grammar"?"Identify the job this word does.":`Find the ${skill==="rcontrolled"?"r-controlled vowel":skill} clue.`;$("caseWord").textContent=c[0];renderTokens();renderClues();renderAll();save();if(s.sound)speak(`${$("challengeTitle").textContent}. ${$("challengeText").textContent}`)}
+function renderTokens(){const c=s.current;if(!c)return;const parts=tokenize(c.word,c.skill,c.answer);$("tokenRow").innerHTML=parts.map((p,i)=>`<button class="token ${s.selected.includes(i)?"selected":""}" data-token="${i}">${p}</button>`).join("");document.querySelectorAll("[data-token]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.token);s.selected.includes(i)?s.selected=s.selected.filter(x=>x!==i):s.selected.push(i);renderTokens();save()})}
+function renderClues(){$("clues").innerHTML=s.hintLevel?Array.from({length:s.hintLevel},(_,i)=>`<span class="clue">${i===0?s.current.clue:"Look at the highlighted word part and say it aloud."}</span>`).join(""):""}
+function check(){
+ const c=s.current;if(!c)return;let ok=false;
+ if(c.skill==="grammar"){const ans=prompt("Is this word a noun, verb, or adjective?","");if(ans===null)return;ok=ans.trim().toLowerCase()===c.answer}
+ else{const parts=tokenize(c.word,c.skill,c.answer),targets=parts.map((p,i)=>p===c.answer||p.includes("|")?i:null).filter(i=>i!==null);if(c.skill==="syllable"||c.skill==="compound")ok=s.selected.length===parts.length;else ok=targets.some(i=>s.selected.includes(i))}
+ if(ok){s.clues++;s.mastery=Math.min(100,s.mastery+4);feedback("Case solved. You earned a clue because your evidence matched the word pattern.","good");s.history.unshift(`🔎 ${c.word} · ${c.skill} clue found`);speak("Case solved. You earned a clue.")}else{feedback("Good investigation. Try a smaller clue: beginning, ending, vowel pattern, syllable, or word job.","try");s.mastery=Math.max(0,s.mastery-1);speak("Good investigation. Try a smaller clue.")}s.history=s.history.slice(0,15);renderAll();save()}
+function feedback(t,k=""){$("feedback").className="feedback "+k;$("feedback").textContent=t}
+function hint(){s.hintLevel=Math.min(2,s.hintLevel+1);renderClues();save();speak(s.hintLevel===1?s.current.clue:"Look closely at the word part and say the word slowly.")}
+function renderGrade(){$("gradeTitle").textContent=["","First Grade Focus","Second Grade Focus","Third Grade Focus","Fourth Grade Focus","Fifth Grade Focus"][s.grade];$("gradeNote").textContent=GRADE[s.grade].note;$("gradeStat").textContent=s.grade}
+function renderAll(){$("clueStat").textContent=s.clues;$("clueCountTop").textContent=s.clues;$("caseStat").textContent=s.cases.length;$("masteryStat").textContent=Math.round(s.mastery)+"%";$("masteryFill").style.width=s.mastery+"%";$("masteryText").textContent=s.mastery>80?"Strong word-analysis habits are developing.":s.mastery>60?"Good progress — keep using evidence from word parts and context.":"Build confidence by finding one useful clue at a time.";$("history").innerHTML=s.history.length?s.history.map(x=>`<div class="hist">${x}</div>`).join(""):`<div class="hist">Solved cases will appear here.</div>`;renderGrade()}
+function saveCase(){s.cases.unshift({id:Date.now(),date:new Date().toISOString(),grade:s.grade,current:clone(s.current),notes:$("notes").value,explain:$("explain").value});s.cases=s.cases.slice(0,40);renderPortfolio();renderAll();save("Case evidence saved")}
+function renderPortfolio(){$("portfolio").innerHTML=s.cases.length?s.cases.map(x=>`<article class="entry"><h4>🔎 ${x.current.word}</h4><p>${new Date(x.date).toLocaleDateString()} · Grade ${x.grade}<br>${x.current.clue}</p><div class="actions"><button class="btn" data-open="${x.id}">Open</button><button class="btn" data-del="${x.id}">Delete</button></div></article>`).join(""):`<div class="panel">No saved case files yet.</div>`;document.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>{const x=s.cases.find(v=>v.id===Number(b.dataset.open));if(!x)return;s.grade=x.grade;s.current=x.current;$("notes").value=x.notes||"";$("explain").value=x.explain||"";$("gradeSelect").value=s.grade;$("caseWord").textContent=s.current.word;renderTokens();renderGrade();save("Case opened")});document.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{s.cases=s.cases.filter(x=>x.id!==Number(b.dataset.del));renderPortfolio();renderAll();save("Case deleted")})}
+let sortPool=[["garden","noun"],["jump","verb"],["bright","adjective"],["teacher","noun"],["whisper","verb"],["gentle","adjective"]];
+function renderSort(){const remaining=sortPool.filter(([w])=>![...s.sort.bins.noun,...s.sort.bins.verb,...s.sort.bins.adjective].includes(w));$("sortWords").innerHTML=remaining.map(([w])=>`<button class="word-chip ${s.sort.current===w?"selected":""}" data-sort-word="${w}">${w}</button>`).join("");["noun","verb","adjective"].forEach(k=>$(k+"Bin").innerHTML=s.sort.bins[k].map(w=>`<span class="word-chip">${w}</span>`).join(""));document.querySelectorAll("[data-sort-word]").forEach(b=>b.onclick=()=>{s.sort.current=b.dataset.sortWord;renderSort()})}
+document.querySelectorAll("[data-bin]").forEach(b=>b.onclick=()=>{if(!s.sort.current)return;const pair=sortPool.find(x=>x[0]===s.sort.current),bin=b.dataset.bin;if(pair[1]===bin){s.sort.bins[bin].push(pair[0]);$("sortFeedback").textContent="Evidence sorted correctly.";s.clues++;}else $("sortFeedback").textContent="Try another category. Think about the job the word does.";s.sort.current=null;renderSort();renderAll();save()});
+function newStory(){$("storyText").textContent=pick(STORIES)}
+function exportJson(){save();const blob=new Blob([JSON.stringify({app:"Word Detective",version:1,exportedAt:new Date().toISOString(),state:s},null,2)],{type:"application/json"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="word-detective-session.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)}
+let voices=[],lastSpeech="";const FRIENDS={sunny:{n:"Sunny",e:"☀️",r:.88,p:1.05,re:/samantha|aria|jenny|zira|ava|victoria|karen|serena/i},sage:{n:"Word Sage",e:"🦉",r:.82,p:1,re:/samantha|serena|moira|ava|aria|daniel|alex/i},bloom:{n:"Bloom",e:"🌼",r:.84,p:1.08,re:/aria|jenny|ava|samantha|victoria|karen|serena/i},rainbow:{n:"Rainbow Friend",e:"🌈",r:.88,p:1.06,re:/samantha|aria|jenny|ava|karen|moira|serena/i}},SPEED={slow:.88,normal:1,lively:1.08};
+function refresh(){if(!("speechSynthesis"in window))return;voices=speechSynthesis.getVoices()||[];const f=FRIENDS[s.voiceFriend];$("voiceStatus").textContent=`${f.e} ${f.n} is ready.`}
+function stop(msg="Voice stopped."){if("speechSynthesis"in window)speechSynthesis.cancel();$("voiceStatus").textContent=msg}
+function speak(text,opt={}){if(!s.sound||!("speechSynthesis"in window))return;text=String(text||"").trim();if(!text&&!opt.preview)return;stop("");if(text)lastSpeech=text;const f=FRIENDS[s.voiceFriend],msg=opt.preview?`Hi! ${f.n} is ready for a word case.`:text,u=new SpeechSynthesisUtterance(msg),pool=voices.filter(v=>/^en/i.test(v.lang||"")).filter(v=>!/whisper|bells|boing|robot|novelty|zarvox/i.test(v.name||""));u.voice=pool.find(v=>f.re.test(v.name||""))||pool[0]||null;u.rate=f.r*SPEED[s.voiceSpeed];u.pitch=f.p;u.onstart=()=>$("voiceStatus").textContent=`${f.e} ${f.n} is reading.`;u.onend=()=>$("voiceStatus").textContent=`${f.e} ${f.n} is ready.`;speechSynthesis.speak(u)}
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===t));document.querySelectorAll(".workspace").forEach(w=>w.classList.toggle("active",w.dataset.workspace===t.dataset.tab))});
+$("gradeSelect").onchange=e=>{s.grade=Number(e.target.value);newCase();renderAll()};$("skillSelect").onchange=e=>{s.skill=e.target.value;newCase()};$("modeSelect").onchange=e=>{s.mode=e.target.value;save()};$("checkBtn").onclick=check;$("hintBtn").onclick=hint;$("newCaseBtn").onclick=newCase;$("saveCaseBtn").onclick=saveCase;$("readCaseBtn").onclick=()=>speak(`${s.current.word}. ${$("challengeText").textContent}`);$("newStoryBtn").onclick=newStory;$("readStoryBtn").onclick=()=>speak($("storyText").textContent);$("notes").oninput=()=>save();$("explain").oninput=()=>save();
+$("saveBtn").onclick=()=>save("Session saved locally");$("exportBtn").onclick=exportJson;$("printBtn").onclick=()=>window.print();$("printTop").onclick=()=>window.print();$("readGuideBtn").onclick=()=>speak($("mentorText").textContent);$("firstStepBtn").onclick=()=>speak("First, say the word slowly and look for one useful clue.");
+$("soundBtn").onclick=()=>{s.sound=!s.sound;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";if(!s.sound)stop("Voice is off.");save()};$("voiceFriend").onchange=e=>{s.voiceFriend=e.target.value;refresh();speak("",{preview:true});save()};$("voiceSpeed").onchange=e=>{s.voiceSpeed=e.target.value;save()};$("previewVoice").onclick=()=>speak("",{preview:true});$("repeatVoice").onclick=()=>speak(lastSpeech||$("challengeText").textContent);$("stopVoice").onclick=()=>stop();$("resetBtn").onclick=()=>{if(confirm("Reset all Word Detective progress on this device?")){localStorage.removeItem(KEY);location.reload()}};
+$("gradeSelect").value=s.grade;$("skillSelect").value=s.skill;$("modeSelect").value=s.mode;$("voiceFriend").value=s.voiceFriend;$("voiceSpeed").value=s.voiceSpeed;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";$("notes").value=s.notes;$("explain").value=s.explain;renderPortfolio();renderSort();newStory();renderAll();if("speechSynthesis"in window){refresh();speechSynthesis.onvoiceschanged=refresh}if(!s.current)newCase();else{$("caseWord").textContent=s.current.word;renderTokens();renderClues()}
+})();
+</script>
+</body>
+</html>
