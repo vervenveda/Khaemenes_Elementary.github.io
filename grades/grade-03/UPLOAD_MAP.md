@@ -1,0 +1,1 @@
+Upload this folder into the third-grade repository or grade-03/. Open index.html. Required folders: assets, data, subjects, weekly-plans, printables, assessments, teacher-tools, records, docs. No outside dependencies.
