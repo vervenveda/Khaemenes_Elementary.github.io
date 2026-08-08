@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Force & Motion Ramp Lab — Khaemenes Elementary grades 1–5 interactive force, motion, engineering, data, and graphing simulator.">
+<meta name="theme-color" content="#355f7b">
+<title>Force & Motion Ramp Lab 🛹 · Khaemenes Elementary</title>
+<style>
+:root{
+  --ink:#26384a;--muted:#6e7d8c;--paper:#fffefa;--navy:#355f7b;--blue:#55a9db;--sky:#eaf7ff;
+  --green:#5db57a;--mint:#e7f8ec;--gold:#efc35c;--orange:#eb8f4f;--purple:#806cc9;--pink:#e978a2;
+  --red:#d86363;--line:rgba(38,56,74,.14);--shadow:0 20px 50px rgba(53,95,123,.14);
+  --serif:Georgia,"Times New Roman",serif;--sans:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--ink);font:17px/1.55 var(--sans);background:
+radial-gradient(circle at 8% 2%,rgba(239,195,92,.27),transparent 24rem),
+radial-gradient(circle at 95% 2%,rgba(85,169,219,.22),transparent 28rem),
+linear-gradient(180deg,#edf8ff 0,#fffefa 34rem,#f3fbf6 100%)}
+button,input,select{font:inherit}button{cursor:pointer;touch-action:manipulation}:focus-visible{outline:3px solid rgba(128,108,201,.4);outline-offset:3px}
+.shell{width:min(calc(100% - 24px),1240px);margin:auto}
+header{position:sticky;top:0;z-index:70;background:rgba(255,254,250,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.nav{min-height:74px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px}.brand{display:flex;gap:10px;align-items:center}.brand-mark{width:50px;height:50px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(145deg,var(--gold),var(--blue));font-size:1.55rem;box-shadow:var(--shadow);border:3px solid #fff}.brand strong{display:block;color:var(--navy);font:700 1.08rem var(--serif)}.brand small{display:block;color:var(--muted);font-size:.66rem;letter-spacing:.09em;text-transform:uppercase}.header-actions{display:flex;gap:7px;flex-wrap:wrap}.header-actions button{min-height:40px;padding:8px 11px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);font-weight:850}
+.hero{padding:36px 0 24px}.hero-card{padding:28px 20px;border:4px solid #fff;border-radius:28px;color:#fff;text-align:center;background:radial-gradient(circle at 18% 20%,rgba(255,255,255,.23),transparent 13rem),linear-gradient(135deg,#355f7b,#478ba4 54%,#7164b5);box-shadow:var(--shadow)}.eyebrow{display:inline-flex;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.14);font-size:.74rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}h1,h2,h3,h4{font-family:var(--serif);text-wrap:balance}h1{margin:10px auto 4px;max-width:960px;font-size:clamp(2.8rem,7vw,5.2rem);line-height:.97}.hero p{max-width:920px;margin:10px auto 0;color:#f5fbff}.badges{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:13px}.badges span{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.13);font-size:.72rem;font-weight:850}
+.layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(310px,.55fr);gap:14px;align-items:start;padding-bottom:44px}.card{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.main{padding:16px}.side{padding:15px;position:sticky;top:90px}
+.toolbar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.control{padding:10px;border:1px solid var(--line);border-radius:14px;background:#fbfdff}.control label{display:block;color:var(--muted);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.control select{width:100%;margin-top:4px;padding:8px;border:1px solid var(--line);border-radius:9px;background:#fff}
+.challenge{margin-top:12px;padding:15px;border:2px solid #e7cf79;border-radius:18px;background:linear-gradient(145deg,#fff6ca,#fffef9);text-align:center}.challenge small{font-size:.7rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#81631e}.challenge h2{margin:5px 0 0;color:var(--navy);font-size:clamp(1.5rem,4vw,2.2rem)}.challenge p{max-width:900px;margin:7px auto 0;color:var(--muted);font-weight:800}.chips{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:9px}.chip{padding:5px 9px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:.72rem;font-weight:850}
+.sim-grid{display:grid;grid-template-columns:1fr .75fr;gap:12px;margin-top:12px}.panel{padding:14px;border:1px solid var(--line);border-radius:18px;background:#fff}.panel h3{margin:0;color:var(--navy)}
+.ramp-stage{position:relative;min-height:390px;border-radius:18px;overflow:hidden;background:linear-gradient(#dff3ff 0 62%,#d9efc5 62% 100%);border:1px solid #cce0eb}.ground{position:absolute;left:0;right:0;bottom:56px;height:12px;background:#6e7b6c}.ramp{position:absolute;left:70px;bottom:68px;width:390px;height:18px;background:#7e6f60;border-radius:9px;transform-origin:left center;box-shadow:0 8px 18px #0002}.object{position:absolute;width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:#fff;border:3px solid var(--blue);font-size:1.9rem;box-shadow:0 7px 14px #0002;transition:left .15s linear,bottom .15s linear}.finish{position:absolute;right:40px;bottom:68px;width:6px;height:95px;background:#444}.finish::after{content:"🏁";position:absolute;top:-27px;left:-13px;font-size:1.7rem}
+.readout{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:9px}.metric{padding:9px;border:1px solid var(--line);border-radius:12px;text-align:center;background:#fff}.metric strong{display:block;color:var(--navy);font-size:1.15rem}
+.sliders{display:grid;gap:10px}.slider-card{padding:10px;border:1px solid var(--line);border-radius:13px;background:#fbfdff}.slider-card label{display:flex;justify-content:space-between;font-weight:900;color:var(--navy)}.slider-card input{width:100%}.slider-card select{width:100%;padding:8px;border:1px solid var(--line);border-radius:9px;background:#fff}
+.actions{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:9px}.btn{min-height:43px;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);font-weight:900}.btn.primary{color:#fff;background:linear-gradient(145deg,var(--navy),var(--blue));border:0}.btn.green{color:#fff;background:linear-gradient(145deg,var(--green),#438f5b);border:0}.btn.gold{color:#604817;background:linear-gradient(145deg,#ffe89a,var(--gold))}.btn.purple{color:#fff;background:linear-gradient(145deg,var(--purple),#6652a7);border:0}.feedback{min-height:28px;text-align:center;margin-top:8px;font-weight:900;color:var(--muted)}.feedback.good{color:#2f8650}.feedback.try{color:#a5692c}
+.graph-wrap{overflow:auto}.graph{width:100%;height:310px;border:1px solid var(--line);border-radius:14px;background:#fff}.graph-legend{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:7px;font-size:.76rem}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px}
+.data-table{width:100%;border-collapse:collapse;margin-top:9px}.data-table th,.data-table td{padding:8px;border-bottom:1px solid var(--line);text-align:left;font-size:.8rem}.data-table th{background:#eef7fb;color:var(--navy)}
+.explain textarea{width:100%;min-height:95px;padding:9px;border:1px solid var(--line);border-radius:11px;resize:vertical}
+.tabs{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:13px}.tab{padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--navy);font-weight:900}.tab.active{color:#fff;background:linear-gradient(145deg,var(--navy),var(--purple));border:0}.workspace{display:none;margin-top:12px}.workspace.active{display:block}
+.engineering{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mission{padding:12px;border:1px solid var(--line);border-radius:15px;background:#fff}.mission strong{color:var(--navy)}
+.save-strip{margin-top:12px;padding:11px;border:1px solid var(--line);border-radius:15px;background:#f5fff4;text-align:center}.save-strip strong{color:#477154}.save-status{font-size:.77rem;color:var(--muted);margin-top:6px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.stat{padding:10px;text-align:center;border:1px solid var(--line);border-radius:13px}.stat strong{display:block;color:var(--navy);font-size:1.35rem}.mastery{margin-top:11px;padding:11px;border-radius:15px;background:#fff8df}.bar{height:12px;background:#e6e4de;border-radius:999px;overflow:hidden}.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--blue),var(--pink));width:42%}.mentor,.voice,.monte,.grade-note{margin-top:11px;padding:11px;border-radius:15px;border:1px solid var(--line)}.mentor{background:#eaf8ff}.voice{background:#fff4f8}.monte{background:#fff8df}.grade-note{background:#f5f2ff}.mentor strong,.voice strong,.monte strong,.grade-note strong{color:var(--navy)}.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:7px}.voice select{width:100%;padding:7px;border:1px solid var(--line);border-radius:9px;background:#fff}.voice-status{text-align:center;color:var(--muted);font-size:.75rem;margin-top:6px}.mc-grid{display:grid;grid-template-columns:1fr auto;gap:5px;font-size:.78rem;margin-top:6px}.mc-grid span:nth-child(even){font-weight:900}.history{display:grid;gap:6px;margin-top:11px;max-height:190px;overflow:auto}.hist{padding:7px;border:1px solid var(--line);border-radius:10px;font-size:.76rem}
+@media(max-width:950px){.layout{grid-template-columns:1fr}.side{position:static}}@media(max-width:760px){.toolbar{grid-template-columns:repeat(2,1fr)}.sim-grid,.engineering{grid-template-columns:1fr}.readout{grid-template-columns:repeat(2,1fr)}}@media(max-width:490px){.toolbar,.voice-grid{grid-template-columns:1fr}.nav{grid-template-columns:1fr auto}.brand small{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media print{header,.header-actions,.side,.actions,.tabs{display:none!important}body{background:#fff}.hero{padding:6px}.hero-card{background:#fff!important;color:#111;border:1px solid #999;box-shadow:none}.hero p{color:#111}.layout{display:block}.card,.panel,.challenge{box-shadow:none}.workspace{display:block!important}.ramp-stage{min-height:300px}}
+</style>
+</head>
+<body>
+<header><div class="shell nav"><div class="brand"><div class="brand-mark">🛹</div><div><strong>Khaemenes Elementary · Force & Motion Ramp Lab</strong><small>Grades 1–5 · Forces · Motion · Engineering · Data</small></div></div><div></div><div class="header-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></header>
+<section class="hero"><div class="shell"><div class="hero-card"><span class="eyebrow">Elementary Science · Week 23 + Engineering · Predict · Test · Measure · Compare</span><h1>Force & Motion Ramp Lab 🛹</h1><p>Adjust ramp height, surface, object mass, and push strength. Run controlled trials, record measurements, compare outcomes, graph results, and explain which changes affected motion.</p><div class="badges"><span>Grades 1–5</span><span>Interactive Simulator</span><span>Trial Data</span><span>Graphing</span><span>Engineering Challenges</span><span>Friendly Voices</span><span>Local Save</span><span>No Dependencies</span></div></div></div></section>
+<main class="shell layout">
+<section class="card main">
+<div class="toolbar">
+<div class="control"><label>Grade Level</label><select id="gradeSelect"><option value="1">1st Grade</option><option value="2" selected>2nd Grade</option><option value="3">3rd Grade</option><option value="4">4th Grade</option><option value="5">5th Grade</option></select></div>
+<div class="control"><label>Lab Mode</label><select id="modeSelect"><option value="free">Free Explore</option><option value="compare">Compare One Variable</option><option value="engineering">Engineering Challenge</option><option value="mixed">Adaptive Lab</option></select></div>
+<div class="control"><label>Object</label><select id="objectSelect"><option value="skate">🛹 Skateboard</option><option value="ball">⚽ Ball</option><option value="car">🚗 Car</option><option value="block">📦 Block</option></select></div>
+<div class="control"><label>Surface</label><select id="surfaceSelect"><option value="smooth">Smooth</option><option value="wood">Wood</option><option value="carpet">Carpet</option><option value="rough">Rough</option></select></div>
+</div>
+<section class="challenge"><small>Force & Motion Mission</small><h2 id="challengeTitle">Run a fair test.</h2><p id="challengeText"></p><div class="chips"><span class="chip" id="gradeChip">Grade 2</span><span class="chip" id="skillChip">Compare Motion</span><span class="chip" id="mcChip">Grade-Guided</span></div></section>
+<div class="sim-grid">
+<div class="panel">
+<h3>Ramp Simulator</h3>
+<div class="ramp-stage" id="rampStage"><div class="ground"></div><div class="ramp" id="ramp"></div><div class="finish"></div><div class="object" id="object">🛹</div></div>
+<div class="readout"><div class="metric"><strong id="distanceVal">0.0 m</strong>Distance</div><div class="metric"><strong id="speedVal">0.0 m/s</strong>Final Speed</div><div class="metric"><strong id="timeVal">0.0 s</strong>Time</div><div class="metric"><strong id="energyVal">0.0 J</strong>Energy</div></div>
+<div class="actions"><button class="btn primary" id="runBtn">▶ Run Trial</button><button class="btn gold" id="recordBtn">Record Trial</button><button class="btn" id="resetTrialBtn">Reset Trial</button></div><div class="feedback" id="feedback"></div>
+</div>
+<div class="panel">
+<h3>Change the Test</h3>
+<div class="sliders">
+<div class="slider-card"><label>Ramp Height <span id="heightLabel">50%</span></label><input id="heightRange" type="range" min="10" max="90" value="50"></div>
+<div class="slider-card"><label>Object Mass <span id="massLabel">2.0 kg</span></label><input id="massRange" type="range" min="5" max="50" value="20"></div>
+<div class="slider-card"><label>Push Strength <span id="pushLabel">3.0 N</span></label><input id="pushRange" type="range" min="0" max="80" value="30"></div>
+<div class="slider-card"><label>Surface Friction <span id="frictionLabel">Medium</span></label><select id="frictionSelect"><option value="0.05">Very Low</option><option value="0.15">Low</option><option value="0.28" selected>Medium</option><option value="0.45">High</option><option value="0.65">Very High</option></select></div>
+</div>
+<div class="explain" style="margin-top:10px"><h3>Prediction</h3><textarea id="prediction" placeholder="What do you think will happen if you change one variable?"></textarea><h3>Conclusion</h3><textarea id="conclusion" placeholder="What did the data show? Which variable changed the outcome?"></textarea></div>
+</div>
+</div>
+<div class="tabs"><button class="tab active" data-tab="data">📊 Trial Data</button><button class="tab" data-tab="graph">📈 Graph</button><button class="tab" data-tab="engineering">🛠 Engineering</button></div>
+<section class="workspace active" data-workspace="data"><div class="panel"><h3>Trial Table</h3><div style="overflow:auto"><table class="data-table"><thead><tr><th>#</th><th>Height</th><th>Mass</th><th>Push</th><th>Surface</th><th>Distance</th><th>Speed</th><th>Time</th></tr></thead><tbody id="trialBody"></tbody></table></div><div class="actions"><button class="btn" id="clearTrialsBtn">Clear Trials</button><button class="btn" id="compareTrialsBtn">Compare Last Two</button></div><div class="feedback" id="compareFeedback"></div></div></section>
+<section class="workspace" data-workspace="graph"><div class="panel"><h3>Outcome Graph</h3><p style="color:var(--muted)">Each recorded trial becomes a point. Use the graph to look for patterns instead of guessing from one run.</p><div class="graph-wrap"><canvas id="graphCanvas" class="graph" width="900" height="310"></canvas></div><div class="graph-legend"><span><i class="dot" style="background:#55a9db"></i>Distance</span><span><i class="dot" style="background:#e978a2"></i>Speed</span></div></div></section>
+<section class="workspace" data-workspace="engineering"><div class="panel"><h3>Engineering Design Challenges</h3><div class="engineering"><div class="mission"><strong>Target Distance</strong><p>Adjust the ramp so the object travels as close as possible to the target distance.</p><div class="control-value" id="targetDistance">6.0 m</div></div><div class="mission"><strong>Fair Test Rule</strong><p id="fairTestRule">Change only one variable at a time so you know what caused the difference.</p></div></div><div class="actions"><button class="btn purple" id="newEngineeringBtn">New Engineering Target</button></div></div></section>
+<div class="save-strip"><strong>💾 Save & Print Ramp Lab</strong><div class="actions"><button class="btn green" id="saveBtn">Save Session</button><button class="btn" id="exportBtn">Export JSON</button><button class="btn gold" id="printBtn">Print / Save PDF</button></div><div class="save-status" id="saveStatus">Progress auto-saves locally.</div></div>
+</section>
+<aside class="card side">
+<h2 style="margin-top:0;color:var(--navy)">Ramp Lab Progress</h2><div class="stats"><div class="stat"><strong id="trialStat">0</strong>Trials</div><div class="stat"><strong id="gradeStat">2</strong>Grade</div><div class="stat"><strong id="masteryStat">42%</strong>Mastery</div><div class="stat"><strong id="bestStat">—</strong>Best Target</div></div>
+<div class="mastery"><strong>Engineering Growth</strong><div class="bar"><span id="masteryFill"></span></div><div id="masteryText" style="font-size:.78rem;color:var(--muted);margin-top:6px"></div></div>
+<div class="mentor"><strong>Science Guide</strong><p id="mentorText">For a fair test, change one thing and keep the others the same.</p><div class="actions"><button class="btn" id="readBtn">🔊 Read It</button><button class="btn" id="firstStepBtn">🪜 First Step</button></div></div>
+<div class="voice"><strong>🎙 Friendly Ramp Guide</strong><div class="voice-grid"><select id="voiceFriend"><option value="sunny">☀️ Sunny</option><option value="sage">🦉 Motion Sage</option><option value="bloom">🌼 Bloom</option><option value="rainbow">🌈 Rainbow Friend</option></select><select id="voiceSpeed"><option value="slow">Slow & Clear</option><option value="normal">Gentle</option><option value="lively">A Little Lively</option></select></div><div class="actions"><button class="btn" id="previewVoice">▶ Hear Guide</button><button class="btn" id="repeatVoice">↻ Repeat</button><button class="btn" id="stopVoice">■ Stop</button></div><div class="voice-status" id="voiceStatus">Loading a friendly voice…</div></div>
+<div class="monte"><strong>Monte Carlo Challenge Selection</strong><div class="mc-grid"><span>Estimated success</span><span id="mcSuccess">—</span><span>Simulations</span><span id="mcSims">—</span><span>Target skill</span><span id="mcTarget">—</span></div></div>
+<div class="grade-note"><strong id="gradeTitle">Second Grade Focus</strong><div id="gradeNote"></div></div><div class="history" id="history"></div>
+</aside></main>
+<script>
+(()=>{"use strict";
+const $=id=>document.getElementById(id),KEY="khaemenes_force_motion_ramp_lab_k5_v1";
+const GRADE={
+1:{note:"Pushes and pulls can change how objects move. Focus on faster/slower, farther/shorter, and simple cause/effect comparisons.",skill:"observe"},
+2:{note:"Compare changes in motion when one factor changes. Use simple measurements and fair-test language.",skill:"compare"},
+3:{note:"Measure motion repeatedly, look for patterns, and connect force or surface conditions to outcomes.",skill:"measure"},
+4:{note:"Plan controlled tests, identify variables, compare datasets, and reason about energy and friction qualitatively.",skill:"variables"},
+5:{note:"Use quantitative relationships, repeated trials, graphing, proportional reasoning, and engineering optimization.",skill:"analyze"}
+};
+const SURF={smooth:{mu:.08,label:"Smooth"},wood:{mu:.18,label:"Wood"},carpet:{mu:.38,label:"Carpet"},rough:{mu:.55,label:"Rough"}};
+const OBJ={skate:{emoji:"🛹",roll:.72},ball:{emoji:"⚽",roll:.82},car:{emoji:"🚗",roll:.76},block:{emoji:"📦",roll:.5}};
+const base={grade:2,mode:"free",object:"skate",surface:"smooth",height:50,mass:20,push:30,friction:.28,trials:[],last:null,mastery:42,target:6,best:null,prediction:"",conclusion:"",voiceFriend:"sunny",voiceSpeed:"normal",sound:true,skills:{observe:.56,compare:.52,measure:.48,variables:.43,analyze:.38},mc:{p:.7,sims:0,target:"compare"},history:[]};
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||"null");return Object.assign(clone(base),x||{}, {skills:Object.assign({},base.skills,(x||{}).skills||{})})}catch{return clone(base)}}let s=load();
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),rand=(a,b)=>Math.random()*(b-a)+a;
+function save(msg="Auto-saved locally"){s.prediction=$("prediction").value;s.conclusion=$("conclusion").value;try{localStorage.setItem(KEY,JSON.stringify(s))}catch{};$("saveStatus").textContent=msg+" · "+new Date().toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}
+function inputs(){return {height:s.height/100,mass:s.mass/10,push:s.push/10,mu:Number(s.friction),surfaceMu:SURF[s.surface].mu,roll:OBJ[s.object].roll}}
+function simulate(){
+ const x=inputs(),g=9.81,theta=Math.atan(x.height*1.4),rampLen=4.2;
+ const potential=x.mass*g*(x.height*1.6),pushWork=x.push*1.2;
+ const frictionRamp=(x.mu+x.surfaceMu)*x.mass*g*Math.cos(theta)*rampLen*.38;
+ const kinetic=Math.max(0,potential+pushWork-frictionRamp);
+ const v=Math.sqrt(Math.max(0,2*kinetic/x.mass))*x.roll;
+ const groundFriction=Math.max(.04,(x.mu+x.surfaceMu)*.5);
+ const decel=groundFriction*g*.7;
+ const distance=Math.max(.15,(v*v)/(2*decel));
+ const time=Math.max(.2,v/decel);
+ return {distance:clamp(distance,0,20),speed:clamp(v,0,12),time:clamp(time,0,20),energy:kinetic}
+}
+function renderControls(){
+ $("heightLabel").textContent=s.height+"%";$("massLabel").textContent=(s.mass/10).toFixed(1)+" kg";$("pushLabel").textContent=(s.push/10).toFixed(1)+" N";
+ const mu=Number(s.friction);$("frictionLabel").textContent=mu<.1?"Very Low":mu<.2?"Low":mu<.4?"Medium":mu<.55?"High":"Very High";
+ const angle=8+s.height*.38;$("ramp").style.transform=`rotate(-${angle}deg)`;$("ramp").style.width=`${340+s.height}px`;
+ $("object").textContent=OBJ[s.object].emoji;positionObject(0)
+}
+function positionObject(progress){
+ const angle=(8+s.height*.38)*Math.PI/180,len=340+s.height,x0=75,y0=79;
+ $("object").style.left=(x0+Math.cos(angle)*len*progress)+"px";
+ $("object").style.bottom=(y0+Math.sin(angle)*len*(1-progress))+"px"
+}
+function renderResult(r){
+ $("distanceVal").textContent=r.distance.toFixed(1)+" m";$("speedVal").textContent=r.speed.toFixed(1)+" m/s";$("timeVal").textContent=r.time.toFixed(1)+" s";$("energyVal").textContent=r.energy.toFixed(1)+" J"
+}
+function animateRun(result){
+ let t=0;const dur=900,reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+ if(reduce){positionObject(1);return}
+ function step(ts){if(!t)t=ts;let p=Math.min(1,(ts-t)/dur);positionObject(p);if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)
+}
+function run(){
+ const r=simulate();s.last=r;renderResult(r);animateRun(r);feedback(`Trial complete: ${r.distance.toFixed(1)} meters traveled.`,"good");
+ if(s.mode==="engineering"){const err=Math.abs(r.distance-s.target);if(s.best==null||err<s.best)s.best=err}
+ s.history.unshift(`Run: ${r.distance.toFixed(1)} m · ${r.speed.toFixed(1)} m/s`);s.history=s.history.slice(0,14);renderStats();save();if(s.sound)speak(`The object traveled ${r.distance.toFixed(1)} meters.`)
+}
+function record(){
+ if(!s.last)run();
+ const r=s.last;s.trials.push({id:Date.now(),height:s.height,mass:s.mass/10,push:s.push/10,surface:SURF[s.surface].label,friction:Number(s.friction),distance:r.distance,speed:r.speed,time:r.time,energy:r.energy});
+ s.mastery=clamp(s.mastery+3,0,100);let sk=GRADE[s.grade].skill;s.skills[sk]=clamp(s.skills[sk]+.03,.1,.96);renderTrials();drawGraph();renderStats();save("Trial recorded")
+}
+function renderTrials(){
+ $("trialBody").innerHTML=s.trials.length?s.trials.map((t,i)=>`<tr><td>${i+1}</td><td>${t.height}%</td><td>${t.mass.toFixed(1)} kg</td><td>${t.push.toFixed(1)} N</td><td>${t.surface}</td><td>${t.distance.toFixed(1)} m</td><td>${t.speed.toFixed(1)}</td><td>${t.time.toFixed(1)}</td></tr>`).join(""):`<tr><td colspan="8">No recorded trials yet.</td></tr>`
+}
+function compareLast(){
+ if(s.trials.length<2){$("compareFeedback").textContent="Record at least two trials first.";return}
+ const a=s.trials.at(-2),b=s.trials.at(-1),diff=b.distance-a.distance;
+ $("compareFeedback").textContent=`Trial ${s.trials.length} traveled ${Math.abs(diff).toFixed(1)} m ${diff>=0?"farther":"less far"} than Trial ${s.trials.length-1}. Compare which variable changed.`;
+ s.skills.compare=clamp(s.skills.compare+.025,.1,.96);save()
+}
+function drawGraph(){
+ const c=$("graphCanvas"),ctx=c.getContext("2d"),W=c.width,H=c.height,m=45;ctx.clearRect(0,0,W,H);ctx.strokeStyle="#384957";ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(m,20);ctx.lineTo(m,H-m);ctx.lineTo(W-20,H-m);ctx.stroke();
+ ctx.fillStyle="#384957";ctx.font="14px sans-serif";ctx.fillText("Outcome",8,18);ctx.fillText("Trial",W-45,H-12);
+ if(!s.trials.length)return;const maxD=Math.max(1,...s.trials.map(t=>t.distance)),maxS=Math.max(1,...s.trials.map(t=>t.speed)),w=W-m-35,h=H-m-35;
+ s.trials.forEach((t,i)=>{const x=m+(i+1)*(w/(s.trials.length+1)),yd=H-m-(t.distance/maxD)*h,ys=H-m-(t.speed/maxS)*h;ctx.fillStyle="#55a9db";ctx.beginPath();ctx.arc(x,yd,6,0,Math.PI*2);ctx.fill();ctx.fillStyle="#e978a2";ctx.beginPath();ctx.arc(x,ys,5,0,Math.PI*2);ctx.fill();ctx.fillStyle="#52606c";ctx.fillText(String(i+1),x-4,H-m+18)})
+}
+function feedback(t,k=""){$("feedback").className="feedback "+k;$("feedback").textContent=t}
+function gradeMission(){
+ const g=GRADE[s.grade],titles=["","Explore pushes and pulls.","Run a fair comparison.","Measure motion patterns.","Control the variables.","Optimize the design."];
+ $("challengeTitle").textContent=titles[s.grade];$("gradeChip").textContent="Grade "+s.grade;$("skillChip").textContent=g.skill[0].toUpperCase()+g.skill.slice(1);$("gradeTitle").textContent=["","First Grade Focus","Second Grade Focus","Third Grade Focus","Fourth Grade Focus","Fifth Grade Focus"][s.grade];$("gradeNote").textContent=g.note;
+ $("challengeText").textContent=s.grade===1?"Try a gentle push and a stronger push. Which makes the object move farther?":s.grade===2?"Change one thing—ramp height, surface, mass, or push strength—and compare the motion.":s.grade===3?"Record several trials and look for a pattern in distance or speed.":s.grade===4?"Keep three variables constant while changing one. Use the data to identify its effect.":"Use repeated trials, graphs, and quantitative reasoning to reach an engineering target efficiently.";
+ $("fairTestRule").textContent=s.grade<=2?"Change one thing at a time.":s.grade===3?"Repeat trials and compare the same measurement.":"Identify independent, dependent, and controlled variables before comparing results."
+}
+function adaptive(){
+ if(s.mode!=="mixed"){s.mc={p:s.skills[GRADE[s.grade].skill],sims:0,target:GRADE[s.grade].skill};return}
+ const skills=Object.keys(s.skills),target=.72;let best=null,N=140;
+ for(const sk of skills){let p=clamp(s.skills[sk]+(s.mastery-50)/250,.12,.94),win=0;for(let i=0;i<N;i++)if(Math.random()<p)win++;let r=win/N,d=Math.abs(r-target);if(!best||d<best.d)best={sk,r,d}}
+ s.mc={p:best.r,sims:N*skills.length,target:best.sk}
+}
+function renderStats(){
+ $("trialStat").textContent=s.trials.length;$("gradeStat").textContent=s.grade;$("masteryStat").textContent=Math.round(s.mastery)+"%";$("masteryFill").style.width=s.mastery+"%";$("bestStat").textContent=s.best==null?"—":s.best.toFixed(1)+" m";
+ $("masteryText").textContent=s.mastery>80?"Strong engineering habits are developing.":s.mastery>60?"Good growth — record, compare, and explain patterns.":"Build evidence with repeated fair tests.";
+ $("mcSuccess").textContent=Math.round(s.mc.p*100)+"%";$("mcSims").textContent=s.mc.sims||"Grade-guided";$("mcTarget").textContent=s.mc.target;
+ $("history").innerHTML=s.history.length?s.history.map(x=>`<div class="hist">${x}</div>`).join(""):`<div class="hist">Ramp runs will appear here.</div>`
+}
+function newEngineering(){s.target=Number(rand(3,10).toFixed(1));s.best=null;$("targetDistance").textContent=s.target.toFixed(1)+" m";save("New engineering target")}
+function exportJson(){save();const blob=new Blob([JSON.stringify({app:"Force & Motion Ramp Lab",version:1,exportedAt:new Date().toISOString(),state:s},null,2)],{type:"application/json"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="force-motion-ramp-lab-session.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)}
+let voices=[],lastSpeech="",token=0;const FRIENDS={sunny:{n:"Sunny",e:"☀️",r:.88,p:1.05,re:/samantha|aria|jenny|zira|ava|victoria|karen|serena/i},sage:{n:"Motion Sage",e:"🦉",r:.82,p:1,re:/samantha|serena|moira|ava|aria|daniel|alex/i},bloom:{n:"Bloom",e:"🌼",r:.84,p:1.08,re:/aria|jenny|ava|samantha|victoria|karen|serena/i},rainbow:{n:"Rainbow Friend",e:"🌈",r:.88,p:1.06,re:/samantha|aria|jenny|ava|karen|moira|serena/i}},SPEED={slow:.88,normal:1,lively:1.08};
+function refresh(){if(!("speechSynthesis"in window))return;voices=speechSynthesis.getVoices()||[];const f=FRIENDS[s.voiceFriend];$("voiceStatus").textContent=`${f.e} ${f.n} is ready.`}
+function stop(msg="Voice stopped."){token++;if("speechSynthesis"in window)speechSynthesis.cancel();$("voiceStatus").textContent=msg}
+function speak(text,opt={}){if(!s.sound||!("speechSynthesis"in window))return;text=String(text||"").trim();if(!text&&!opt.preview)return;stop("");if(text)lastSpeech=text;const f=FRIENDS[s.voiceFriend],msg=opt.preview?`Hi! ${f.n} is ready for the ramp lab.`:text,u=new SpeechSynthesisUtterance(msg),pool=voices.filter(v=>/^en/i.test(v.lang||"")).filter(v=>!/whisper|bells|boing|robot|novelty|zarvox/i.test(v.name||""));u.voice=pool.find(v=>f.re.test(v.name||""))||pool[0]||null;u.rate=f.r*SPEED[s.voiceSpeed];u.pitch=f.p;u.onstart=()=>$("voiceStatus").textContent=`${f.e} ${f.n} is reading.`;u.onend=()=>$("voiceStatus").textContent=`${f.e} ${f.n} is ready.`;speechSynthesis.speak(u)}
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===t));document.querySelectorAll(".workspace").forEach(w=>w.classList.toggle("active",w.dataset.workspace===t.dataset.tab))});
+$("heightRange").oninput=e=>{s.height=Number(e.target.value);renderControls();save()};$("massRange").oninput=e=>{s.mass=Number(e.target.value);renderControls();save()};$("pushRange").oninput=e=>{s.push=Number(e.target.value);renderControls();save()};$("frictionSelect").onchange=e=>{s.friction=Number(e.target.value);renderControls();save()};$("surfaceSelect").onchange=e=>{s.surface=e.target.value;save()};$("objectSelect").onchange=e=>{s.object=e.target.value;renderControls();save()};$("gradeSelect").onchange=e=>{s.grade=Number(e.target.value);adaptive();gradeMission();renderStats();save()};$("modeSelect").onchange=e=>{s.mode=e.target.value;adaptive();renderStats();save()};
+$("runBtn").onclick=run;$("recordBtn").onclick=record;$("resetTrialBtn").onclick=()=>{positionObject(0);s.last=null;renderResult({distance:0,speed:0,time:0,energy:0})};$("clearTrialsBtn").onclick=()=>{s.trials=[];renderTrials();drawGraph();renderStats();save("Trials cleared")};$("compareTrialsBtn").onclick=compareLast;$("newEngineeringBtn").onclick=newEngineering;
+$("saveBtn").onclick=()=>save("Session saved locally");$("exportBtn").onclick=exportJson;$("printBtn").onclick=()=>window.print();$("printTop").onclick=()=>window.print();$("prediction").oninput=()=>save();$("conclusion").oninput=()=>save();
+$("readBtn").onclick=()=>speak($("mentorText").textContent);$("firstStepBtn").onclick=()=>speak("First, choose one variable to change and keep the others the same.");$("soundBtn").onclick=()=>{s.sound=!s.sound;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";if(!s.sound)stop("Voice is off.");save()};$("voiceFriend").onchange=e=>{s.voiceFriend=e.target.value;refresh();speak("",{preview:true});save()};$("voiceSpeed").onchange=e=>{s.voiceSpeed=e.target.value;save()};$("previewVoice").onclick=()=>speak("",{preview:true});$("repeatVoice").onclick=()=>speak(lastSpeech||$("challengeText").textContent);$("stopVoice").onclick=()=>stop();$("resetBtn").onclick=()=>{if(confirm("Reset all Ramp Lab progress on this device?")){localStorage.removeItem(KEY);location.reload()}};
+$("gradeSelect").value=s.grade;$("modeSelect").value=s.mode;$("objectSelect").value=s.object;$("surfaceSelect").value=s.surface;$("heightRange").value=s.height;$("massRange").value=s.mass;$("pushRange").value=s.push;$("frictionSelect").value=String(s.friction);$("prediction").value=s.prediction;$("conclusion").value=s.conclusion;$("voiceFriend").value=s.voiceFriend;$("voiceSpeed").value=s.voiceSpeed;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";adaptive();gradeMission();renderControls();renderTrials();drawGraph();renderStats();newEngineering();if("speechSynthesis"in window){refresh();speechSynthesis.onvoiceschanged=refresh}document.addEventListener("visibilitychange",()=>{if(document.hidden)stop("")});
+})();
+</script></body></html>
