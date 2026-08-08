@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>1st Grade Math Portal — 42-week Program</title>
+  <style>
+    :root{
+      --bg:#0f172a; --card:#ffffff; --accent1:#FF6E3A; --accent2:#FFD1A4; --accent3:#FFE1C6; --muted:#6b7280;
+      --kid-font: 'Comic Sans MS', 'Trebuchet MS', Arial, sans-serif;
+      --touch-size: 48px; --large-font:22px;
+    }
+    html,body{height:100%;margin:0;font-family:var(--kid-font);background:linear-gradient(180deg,#071029 0%,#0f1f3a 60%);color:#06203a}
+    .app{max-width:1100px;margin:18px auto;padding:18px}
+    header{display:flex;align-items:center;gap:16px}
+    h1{margin:0;color:var(--accent1);font-size:28px;letter-spacing:0.5px}
+    .subtitle{color:var(--accent3);font-size:13px}
+
+    .topbar{display:flex;gap:12px;align-items:center;margin-top:12px}
+    .btn{background:var(--accent1);color:#fff;padding:10px 14px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.35);min-height:var(--touch-size);font-size:var(--large-font)}
+    .btn.secondary{background:transparent;color:var(--accent1);border:2px solid rgba(255,110,58,0.12)}
+
+    .grid{display:grid;grid-template-columns:320px 1fr;gap:16px;margin-top:16px}
+    .panel{background:linear-gradient(180deg,#ffffff 0%, #fff8f2 100%);border-radius:16px;padding:14px;box-shadow:0 8px 30px rgba(2,6,23,0.35)}
+    .sidebar{height:760px;overflow:auto}
+    .logo{width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px}
+
+    .weeks{display:flex;flex-direction:column;gap:8px}
+    .week-row{display:flex;gap:6px}
+    .week{flex:1;padding:10px;border-radius:12px;background:linear-gradient(180deg,#fff 0%,#fff6ee 100%);text-align:center;cursor:pointer;border:2px solid rgba(2,6,23,0.03);font-size:16px}
+    .week.small{padding:6px;font-size:13px}
+    .week.active{outline:4px solid rgba(255,110,58,0.18)}
+
+    .day-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .day{width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:linear-gradient(180deg,#fff,#fffdf8);cursor:pointer;font-weight:800;font-size:18px}
+    .day.weekend{background:linear-gradient(180deg,#f0f4ff,#f9fbff);color:#5a67d8}
+    .day.done{opacity:0.6}
+
+    main .panel{height:760px;overflow:auto}
+    .problem{background:#fff;border-radius:12px;padding:14px;margin:10px 0;display:flex;align-items:center;gap:12px}
+    .problem .q{font-size:22px;font-weight:800}
+    input.answer{font-size:20px;padding:10px;border-radius:10px;border:2px solid #eee;width:140px}
+    .controls{display:flex;gap:10px;align-items:center;margin-top:14px}
+
+    .progress{height:16px;border-radius:12px;background:linear-gradient(90deg,#e6e6e6,#fff);overflow:hidden}
+    .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent1),var(--accent2));width:0%}
+
+    .small{font-size:14px;color:var(--muted)}
+    .admin{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+
+    .footer{margin-top:10px;font-size:13px;color:var(--muted)}
+
+    /* confetti canvas overlay */
+    #confettiCanvas{position:fixed;left:0;top:0;pointer-events:none;width:100%;height:100%;z-index:9999;display:none}
+
+    /* palette buttons */
+    .palette{display:flex;gap:6px;margin-top:8px}
+    .swatch{width:28px;height:28px;border-radius:6px;border:2px solid rgba(255,255,255,0.18);cursor:pointer}
+
+    /* printable-friendly */
+    @media print{body{background:#fff} .panel{box-shadow:none} .topbar, .sidebar, .controls, #confettiCanvas{display:none} .problem{page-break-inside:avoid}}
+
+    /* printable worksheet layout (hidden, opened in new window for print) */
+    .worksheet{width:850px;margin:0 auto;padding:36px;font-family:Arial, Helvetica, sans-serif}
+    .worksheet h2{margin-top:0}
+  </style>
+</head>
+<body>
+  <canvas id="confettiCanvas"></canvas>
+  <div class="app">
+    <header>
+      <div class="logo">M1</div>
+      <div>
+        <h1>Math Portal — Grade 1 (42 weeks)</h1>
+        <div class="subtitle">Daily 10 problems · Weekly quiz · Midterm & Final with extended exams · Printable worksheets</div>
+      </div>
+    </header>
+
+    <div class="topbar">
+      <div class="small">Selected: <span id="selectedLabel">Week 1 · Day 1</span></div>
+      <button class="btn" id="startDay">Start Today's 10 Problems</button>
+      <button class="btn secondary" id="toggleWeekly">Open Weekly Quiz</button>
+      <button class="btn secondary" id="exportBtn">Export Progress</button>
+      <button class="btn secondary" id="worksheetBtn">Export Worksheet (Print)</button>
+      <input id="importFile" type="file" accept="application/json" style="display:none" />
+      <button class="btn secondary" id="importBtn">Import Progress</button>
+      <div style="margin-left:auto" class="small">Teacher: difficulty <select id="difficulty"><option value="easy">Easy</option><option value="med">Medium</option></select></div>
+    </div>
+
+    <div class="grid">
+      <aside class="panel sidebar">
+        <strong>Weeks</strong>
+        <div class="weeks" id="weeksContainer"></div>
+        <hr/>
+        <strong>Days in Week</strong>
+        <div class="day-list" id="dayList"></div>
+        <hr/>
+        <div class="small">Progress</div>
+        <div class="progress" aria-hidden><i id="progressBar"></i></div>
+        <div class="small" id="progressText"></div>
+        <div style="margin-top:8px"><strong>Palettes</strong>
+          <div class="palette" id="paletteRow">
+            <div class="swatch" data-a="#FF6E3A" data-b="#FFD1A4" style="background:linear-gradient(135deg,#FF6E3A,#FFD1A4)"></div>
+            <div class="swatch" data-a="#4ADE80" data-b="#86EFAC" style="background:linear-gradient(135deg,#4ADE80,#86EFAC)"></div>
+            <div class="swatch" data-a="#60A5FA" data-b="#A78BFA" style="background:linear-gradient(135deg,#60A5FA,#A78BFA)"></div>
+          </div>
+        </div>
+        <div class="admin">
+          <button class="btn secondary" id="resetAll">Reset All</button>
+          <button class="btn secondary" id="printBtn">Print Current</button>
+          <button class="btn secondary" id="midtermBtn">Midterm (Wk 21)</button>
+          <button class="btn secondary" id="finalBtn">Final (Wk 42)</button>
+        </div>
+        <div class="footer">Built for classroom or home. Save locally to keep scores across sessions. Worksheets open in a print-friendly window.</div>
+      </aside>
+
+      <main class="panel">
+        <div id="contentArea">
+          <div id="welcome">
+            <h2>Welcome!</h2>
+            <p class="small">This portal generates a 42-week curriculum (210 weekdays). Each school week contains 5 days of 10 simple problems aimed at 1st grade skills: counting, addition/subtraction within 20, missing addends, simple comparisons, and a few word problems. Weekly quizzes (every 5th day) review the week's skills. Midterm at week 21 and a Final at week 42 are longer (20–30 problems) and include printable answer sheets.</p>
+            <p class="small">How to use: choose a week and day on the left, click "Start Today's 10 Problems". Use the worksheet button to open a printable PDF-style page for the selected day. When a child completes a day (checks answers), confetti will play.</p>
+          </div>
+
+          <div id="problemsArea" style="display:none">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <h3 id="dayTitle">Week 1 · Day 1</h3>
+              <div class="small">Score: <span id="scoreOut">0/0</span></div>
+            </div>
+            <div id="problemsList"></div>
+            <div class="controls">
+              <button class="btn" id="checkAll">Check All</button>
+              <button class="btn secondary" id="saveBtn">Save Answers</button>
+              <button class="btn secondary" id="nextDay">Go to Next Day</button>
+            </div>
+            <div class="small" id="hint"></div>
+          </div>
+
+          <div id="quizArea" style="display:none">
+            <h3 id="quizTitle">Weekly Quiz</h3>
+            <div id="quizList"></div>
+            <div class="controls"><button class="btn" id="gradeQuiz">Grade Quiz</button><button class="btn secondary" id="backToDay">Back</button></div>
+            <div class="small" id="quizResult"></div>
+          </div>
+
+          <div id="examArea" style="display:none">
+            <h3 id="examTitle">Exam</h3>
+            <div id="examList"></div>
+            <div class="controls"><button class="btn" id="gradeExam">Grade Exam</button><button class="btn secondary" id="examPrint">Print Answer Sheet</button><button class="btn secondary" id="examBack">Back</button></div>
+            <div class="small" id="examResult"></div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // === CONFIG ===
+    const WEEKS = 42;
+    const DAYS_PER_WEEK = 5; // weekdays only
+    const TOTAL_DAYS = WEEKS * DAYS_PER_WEEK; // 210
+    const PROBLEMS_PER_DAY = 10;
+    const MIDTERM_WEEK = 21;
+    const FINAL_WEEK = 42;
+
+    // Storage keys
+    const STORAGE_KEY = 'mathPortal_v2_progress';
+
+    // State
+    let state = loadState();
+    let selected = {week:1, day:1};
+
+    // DOM refs
+    const weeksContainer = document.getElementById('weeksContainer');
+    const dayList = document.getElementById('dayList');
+    const selectedLabel = document.getElementById('selectedLabel');
+    const startDayBtn = document.getElementById('startDay');
+    const toggleWeekly = document.getElementById('toggleWeekly');
+    const problemsArea = document.getElementById('problemsArea');
+    const problemsList = document.getElementById('problemsList');
+    const dayTitle = document.getElementById('dayTitle');
+    const scoreOut = document.getElementById('scoreOut');
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+    const exportBtn = document.getElementById('exportBtn');
+    const importBtn = document.getElementById('importBtn');
+    const importFile = document.getElementById('importFile');
+    const resetAll = document.getElementById('resetAll');
+    const printBtn = document.getElementById('printBtn');
+    const midtermBtn = document.getElementById('midtermBtn');
+    const finalBtn = document.getElementById('finalBtn');
+    const worksheetBtn = document.getElementById('worksheetBtn');
+    const paletteRow = document.getElementById('paletteRow');
+    const confettiCanvas = document.getElementById('confettiCanvas');
+
+    // build weeks and days
+    for(let w=1; w<=WEEKS; w++){
+      const div = document.createElement('div'); div.className='week-row';
+      const wcard = document.createElement('div'); wcard.className='week small'; wcard.textContent = 'Week '+w; wcard.addEventListener('click', ()=>selectWeek(w));
+      div.appendChild(wcard);
+      weeksContainer.appendChild(div);
+    }
+    renderDays();
+    updateProgressUI();
+
+    // events
+    startDayBtn.addEventListener('click', ()=>openDay(selected.week, selected.day));
+    toggleWeekly.addEventListener('click', ()=>openWeekly(selected.week));
+    exportBtn.addEventListener('click', exportProgress);
+    worksheetBtn.addEventListener('click', ()=>openPrintableWorksheet(selected.week, selected.day));
+    importBtn.addEventListener('click', ()=>importFile.click());
+    importFile.addEventListener('change', handleImportFile);
+    resetAll.addEventListener('click', ()=>{ if(confirm('Reset all saved progress?')){state.progress={}; saveState(); location.reload();}});
+    printBtn.addEventListener('click', ()=>window.print());
+    document.getElementById('checkAll').addEventListener('click', checkAllAnswers);
+    document.getElementById('saveBtn').addEventListener('click', saveAnswersManually);
+    document.getElementById('nextDay').addEventListener('click', ()=>{const next = nextDay(selected.week, selected.day); selectWeek(next.week); openDay(next.week,next.day);});
+    document.getElementById('toggleWeekly').addEventListener('click', ()=>openWeekly(selected.week));
+    document.getElementById('gradeQuiz').addEventListener('click', gradeQuiz);
+    document.getElementById('backToDay').addEventListener('click', ()=>{document.getElementById('quizArea').style.display='none'; problemsArea.style.display='block';});
+    document.getElementById('gradeExam').addEventListener('click', gradeExam);
+    document.getElementById('examPrint').addEventListener('click', ()=>printExamAnswers(currentExam));
+    document.getElementById('examBack').addEventListener('click', ()=>{document.getElementById('examArea').style.display='none'; problemsArea.style.display='block';});
+    midtermBtn.addEventListener('click', ()=>openExam('midterm'));
+    finalBtn.addEventListener('click', ()=>openExam('final'));
+
+    paletteRow.querySelectorAll('.swatch').forEach(s=>s.addEventListener('click',(e)=>{ const a=e.currentTarget.dataset.a; const b=e.currentTarget.dataset.b; document.documentElement.style.setProperty('--accent1',a); document.documentElement.style.setProperty('--accent2',b); }));
+
+    // confetti helper
+    function playConfetti(){ startConfetti(); setTimeout(stopConfetti, 4500); }
+
+    // ========== Selection & UI ==========
+    function selectWeek(w){ selected.week=w; selected.day=1; renderDays(); updateSelectedLabel(); }
+
+    function renderDays(){
+      dayList.innerHTML='';
+      for(let d=1; d<=DAYS_PER_WEEK; d++){
+        const btn = document.createElement('div'); btn.className='day'; btn.textContent=d;
+        if(isQuizDay(selected.week,d)) btn.classList.add('weekend');
+        if(hasSaved(selected.week,d)) btn.classList.add('done');
+        btn.addEventListener('click', ()=>{ openDay(selected.week,d); selectDayUI(d); });
+        dayList.appendChild(btn);
+      }
+      updateSelectedLabel();
+    }
+    function selectDayUI(d){ selected.day=d; renderDays(); }
+
+    function updateSelectedLabel(){ selectedLabel.textContent = `Week ${selected.week} · Day ${selected.day}`; }
+
+    function openDay(w,d){
+      document.getElementById('welcome').style.display='none';
+      document.getElementById('quizArea').style.display='none';
+      document.getElementById('examArea').style.display='none';
+      problemsArea.style.display='block';
+      dayTitle.textContent = `Week ${w} · Day ${d}`;
+      selected.week=w; selected.day=d; updateSelectedLabel();
+      const problems = getProblemsForDay(w,d);
+      renderProblems(problems,w,d);
+    }
+
+    function openWeekly(w){ document.getElementById('welcome').style.display='none'; problemsArea.style.display='none'; document.getElementById('quizArea').style.display='block'; document.getElementById('quizTitle').textContent=`Weekly Quiz — Week ${w}`; renderWeeklyQuiz(w); }
+
+    // ========== Problems rendering ==========
+    function renderProblems(problems,w,d){ problemsList.innerHTML='';
+      const saved = getSaved(w,d) || {answers:[]};
+      problems.forEach((p,i)=>{
+        const div = document.createElement('div'); div.className='problem';
+        const q = document.createElement('div'); q.className='q'; q.textContent = (i+1)+'. '+p.text;
+        const input = document.createElement('input'); input.className='answer'; input.value = saved.answers[i] ?? '';
+        input.addEventListener('input', ()=>{ saved.answers[i]=input.value; setSaved(w,d,saved); updateScoreUI(w,d,problems); });
+        const hint = document.createElement('div'); hint.className='small'; hint.textContent = p.hint || '';
+        div.appendChild(q); div.appendChild(input); div.appendChild(hint);
+        problemsList.appendChild(div);
+      });
+      updateScoreUI(w,d,problems);
+    }
+
+    function renderWeeklyQuiz(w){ const quizList = document.getElementById('quizList'); quizList.innerHTML='';
+      const quiz = getWeeklyQuiz(w);
+      const saved = getSavedQuiz(w) || {answers:[]};
+      quiz.forEach((p,i)=>{
+        const div = document.createElement('div'); div.className='problem';
+        div.innerHTML = `<div class='q'>${i+1}. ${p.text}</div><input class='answer' data-i='${i}' value='${saved.answers[i]??''}' />`;
+        quizList.appendChild(div);
+      });
+    }
+
+    // ========== Exam (Midterm & Final) ==========
+    let currentExam = null;
+    function openExam(type){
+      const week = type==='midterm'?MIDTERM_WEEK:FINAL_WEEK;
+      const size = type==='midterm'?20:30;
+      currentExam = {type,week,size,questions:getExamQuestions(week,size)};
+      document.getElementById('welcome').style.display='none'; problemsArea.style.display='none'; document.getElementById('quizArea').style.display='none';
+      document.getElementById('examArea').style.display='block'; document.getElementById('examTitle').textContent = `${type==='midterm'?'Midterm':'Final'} — Week ${week}`;
+      renderExam(currentExam);
+    }
+    function renderExam(exam){ const list = document.getElementById('examList'); list.innerHTML='';
+      const saved = state.progress[`exam_${exam.type}`] || {answers:[]};
+      exam.questions.forEach((p,i)=>{
+        const div = document.createElement('div'); div.className='problem';
+        const q = document.createElement('div'); q.className='q'; q.textContent = (i+1)+'. '+p.text;
+        const input = document.createElement('input'); input.className='answer'; input.value = saved.answers[i] ?? '';
+        input.addEventListener('input', ()=>{ saved.answers[i]=input.value; state.progress[`exam_${exam.type}`]=saved; saveState(); });
+        div.appendChild(q); div.appendChild(input);
+        list.appendChild(div);
+      });
+      document.getElementById('examResult').textContent = `Questions: ${exam.size}`;
+    }
+    function gradeExam(){ if(!currentExam) return; const exam = currentExam; const saved = state.progress[`exam_${exam.type}`] || {answers:[]}; let correct=0;
+      exam.questions.forEach((q,i)=>{ if(normalize(saved.answers[i])===normalize(q.answer)) correct++; });
+      document.getElementById('examResult').textContent = `Score: ${correct}/${exam.size}`; state.progress[`exam_${exam.type}`].score=correct; saveState(); }
+    function printExamAnswers(exam){ if(!exam) exam=currentExam; const win = window.open('','_blank'); win.document.write(renderPrintableExam(exam)); win.document.close(); setTimeout(()=>win.print(),400);
+    }
+
+    // ===== Printable Worksheet for a day =====
+    function openPrintableWorksheet(week,day){ const problems = getProblemsForDay(week,day); const html = renderPrintableWorksheet(week,day,problems); const w = window.open('','_blank'); w.document.write(html); w.document.close(); setTimeout(()=>w.print(),300); }
+
+    // ======= Problem generation (extended) =======
+    function seededRandom(seed){ // simple LCG
+      let s = seed % 2147483647; if(s<=0) s+=2147483646;
+      return function(){ s = s * 16807 % 2147483647; return (s-1)/2147483646; }
+    }
+    function dayIndex(week,day){ return (week-1)*DAYS_PER_WEEK + (day-1); }
+    function isQuizDay(week,day){ return day === DAYS_PER_WEEK; }
+
+    function getProblemsForDay(week,day){ const idx = dayIndex(week,day); const rnd = seededRandom(1000 + idx);
+      const list = [];
+      const diff = state.settings.difficulty || 'easy';
+      for(let i=0;i<PROBLEMS_PER_DAY;i++){
+        const typeRoll = Math.floor(rnd()*100);
+        if(typeRoll<30) list.push(genCount(rnd));
+        else if(typeRoll<65) list.push(genAddSub(rnd,diff));
+        else if(typeRoll<85) list.push(genMissingAddend(rnd,diff));
+        else list.push(genCompare(rnd));
+      }
+      return list;
+    }
+
+    function getExamQuestions(week,size){ const idx = week-1; const rnd = seededRandom(3000 + idx);
+      const q=[];
+      for(let i=0;i<size;i++){
+        const roll = Math.floor(rnd()*100);
+        if(roll<25) q.push(genCount(rnd));
+        else if(roll<60) q.push(genAddSub(rnd,'med'));
+        else if(roll<85) q.push(genMissingAddend(rnd,'med'));
+        else if(roll<95) q.push(genWordProblem(rnd));
+        else q.push(genCompare(rnd));
+      }
+      return q;
+    }
+
+    function genCount(rnd){ const n = 3 + Math.floor(rnd()*12); return {text:`Count and write the number of stars: ${'★'.repeat(n)}`, answer:String(n), hint:'Count the stars.'}; }
+    function genAddSub(rnd,diff){ const max = diff==='easy'?10:20; const a = 1 + Math.floor(rnd()*max); const b = 1 + Math.floor(rnd()*Math.min(max,a)); const op = rnd()>0.45?'+':'-'; if(op==='+') return {text:`${a} + ${b} = ?`, answer:String(a+b), hint:'Try using your fingers or a number line.'}; else return {text:`${Math.max(a,b)} - ${Math.min(a,b)} = ?`, answer:String(Math.max(a,b)-Math.min(a,b)), hint:'Subtract the smaller from the larger.'}; }
+    function genMissingAddend(rnd,diff){ const max = diff==='easy'?10:20; const a = 1 + Math.floor(rnd()*max); const b = 1 + Math.floor(rnd()*max); const sum = a+b; const which = rnd()>0.5?'a':'b'; if(which==='a') return {text:`? + ${b} = ${sum}`, answer:String(a), hint:'What number plus '+b+' equals '+sum+'?'}; else return {text:`${a} + ? = ${sum}`, answer:String(b), hint:'What number plus '+a+' equals '+sum+'?'} }
+    function genCompare(rnd){ const a = 1 + Math.floor(rnd()*15); const b = 1 + Math.floor(rnd()*15); const symbol = a===b?'=':(a>b?'>':'<'); return {text:`Which is correct: ${a} ? ${b}  (write >, < or =)`, answer:symbol, hint:'Use < for smaller, > for bigger.'}; }
+    function genWordProblem(rnd){ const a = 1 + Math.floor(rnd()*12); const b = 1 + Math.floor(rnd()*8); return {text:`Sam has ${a} apples. She gets ${b} more. How many apples now?`, answer:String(a+b), hint:'Add the two numbers.'}; }
+
+    // ========== Save / load ==========
+    function loadState(){ try{ const raw = localStorage.getItem(STORAGE_KEY); if(raw) return JSON.parse(raw); }catch(e){}
+      return {progress:{}, settings:{difficulty:'easy'}};
+    }
+    function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); updateProgressUI(); }
+
+    function getSaved(w,d){ return state.progress[`w${w}d${d}`]; }
+    function setSaved(w,d,val){ state.progress[`w${w}d${d}`]=val; saveState(); }
+    function hasSaved(w,d){ return !!state.progress[`w${w}d${d}`]; }
+
+    function setSavedQuiz(w,val){ state.progress[`quiz_w${w}`]=val; saveState(); }
+    function getSavedQuiz(w){ return state.progress[`quiz_w${w}`]; }
+
+    function exportProgress(){ const data = JSON.stringify(state); const blob = new Blob([data],{type:'application/json'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='mathPortal_progress.json'; a.click(); URL.revokeObjectURL(url); }
+    function handleImportFile(e){ const f = e.target.files[0]; if(!f) return; const reader = new FileReader(); reader.onload = ()=>{ try{ const obj = JSON.parse(reader.result); if(confirm('Replace current progress with imported data?')){ state = obj; saveState(); location.reload(); } }catch(err){ alert('Invalid file'); } }; reader.readAsText(f); }
+
+    function saveAnswersManually(){ alert('Answers saved locally.'); saveState(); }
+
+    function checkAllAnswers(){ const problems = getProblemsForDay(selected.week,selected.day); const saved = getSaved(selected.week,selected.day) || {answers:[]}; let correct=0; for(let i=0;i<problems.length;i++){ if(normalize(saved.answers[i])===normalize(problems[i].answer)) correct++; }
+      alert(`You got ${correct}/${problems.length} correct.`); state.progress[`w${selected.week}d${selected.day}`]=saved; saveState(); updateScoreUI(selected.week,selected.day,problems); playConfetti(); }
+
+    function normalize(s){ if(s===undefined||s===null) return ''; return String(s).trim(); }
+
+    function updateScoreUI(w,d,problems){ const saved = getSaved(w,d) || {answers:[]}; let correct=0; for(let i=0;i<problems.length;i++) if(normalize(saved.answers[i])===normalize(problems[i].answer)) correct++;
+      scoreOut.textContent = `${correct}/${problems.length}`; const totalDone = countCompletedDays(); const pct = Math.round((totalDone / TOTAL_DAYS)*100);
+      progressBar.style.width = pct + '%'; progressText.textContent = `${totalDone} / ${TOTAL_DAYS} days completed (${pct}%)`;
+    }
+
+    function countCompletedDays(){ let c=0; for(let w=1;w<=WEEKS;w++) for(let d=1;d<=DAYS_PER_WEEK;d++) if(hasSaved(w,d)) c++; return c; }
+
+    function nextDay(w,d){ let global = dayIndex(w,d)+1; if(global>=TOTAL_DAYS) global=TOTAL_DAYS-1; const nw = Math.floor(global / DAYS_PER_WEEK)+1; const nd = (global % DAYS_PER_WEEK)+1; return {week:nw, day:nd}; }
+
+    // Weekly quiz grading
+    function gradeQuiz(){ const quiz = getWeeklyQuiz(selected.week); const answers = []; const inputs = document.querySelectorAll('#quizList .answer'); inputs.forEach((inp,i)=>answers[i]=inp.value);
+      let correct=0; for(let i=0;i<quiz.length;i++) if(normalize(answers[i])===normalize(quiz[i].answer)) correct++;
+      document.getElementById('quizResult').textContent = `Score: ${correct}/${quiz.length}`;
+      setSavedQuiz(selected.week,{answers,score:correct}); playConfetti(); }
+
+    function getSaved(w,d){ return state.progress[`w${w}d${d}`]; }
+
+    function updateProgressUI(){ const totalDone = countCompletedDays(); const pct = Math.round((totalDone / TOTAL_DAYS)*100); progressBar.style.width = pct+'%'; progressText.textContent = `${totalDone} / ${TOTAL_DAYS} days completed (${pct}%)`; }
+
+    // ===== Printable rendering helpers =====
+    function renderPrintableWorksheet(week,day,problems){ const dateStr = `Week ${week} — Day ${day}`;
+      let qhtml = '';
+      problems.forEach((p,i)=>{ qhtml += `<div style="margin-bottom:14px"><strong>${i+1}.</strong> ${p.text}<div style="height:28px;border-bottom:2px dashed #ccc;margin-top:8px"></div></div>`; });
+      const html = `<!doctype html><html><head><meta charset="utf-8"><title>Worksheet - ${dateStr}</title><style>body{font-family:Arial;margin:36px} .header{display:flex;justify-content:space-between;align-items:center} h2{margin:0} .q{margin-top:12px}</style></head><body><div class="worksheet"><div class="header"><h2>Math Worksheet</h2><div>${dateStr}</div></div><p>Complete these problems. Show your work below each question.</p>${qhtml}<hr><h3>Teacher answer key</h3><ol>${problems.map(p=>`<li>${p.answer}</li>`).join('')}</ol></div></body></html>`;
+      return html;
+    }
+
+    function renderPrintableExam(exam){ const title = `${exam.type==='midterm'?'Midterm':'Final'} — Week ${exam.week}`;
+      let qhtml=''; exam.questions.forEach((p,i)=>{ qhtml += `<div style="margin-bottom:12px"><strong>${i+1}.</strong> ${p.text}</div>`; });
+      const answers = exam.questions.map(q=>q.answer).join(', ');
+      return `<!doctype html><html><head><meta charset="utf-8"><title>${title}</title><style>body{font-family:Arial;margin:36px} h2{margin:0}</style></head><body><div class="worksheet"><h2>${title}</h2><p>Student copy</p>${qhtml}<hr><h3>Answer key</h3><p>${answers}</p></div></body></html>`;
+    }
+
+    // ===== Confetti implementation (lightweight) =====
+    let confettiCtx, confettiPieces=[], confettiTimer=null;
+    function startConfetti(){ confettiCanvas.style.display='block'; confettiCanvas.width = window.innerWidth; confettiCanvas.height = window.innerHeight; confettiCtx = confettiCanvas.getContext('2d'); confettiPieces = createConfettiPieces(120); if(confettiTimer) cancelAnimationFrame(confettiTimer); confettiLoop(); }
+    function stopConfetti(){ confettiCanvas.style.display='none'; confettiPieces=[]; if(confettiTimer) cancelAnimationFrame(confettiTimer); }
+    function createConfettiPieces(n){ const arr=[]; for(let i=0;i<n;i++){ arr.push({x:Math.random()*confettiCanvas.width, y:Math.random()*-confettiCanvas.height, r:4+Math.random()*8, vx:(Math.random()-0.5)*2, vy:1+Math.random()*4, c:['#FF6E3A','#FFD1A4','#FFE1C6','#60A5FA','#86EFAC'][Math.floor(Math.random()*5)]}); } return arr; }
+    function confettiLoop(){ confettiCtx.clearRect(0,0,confettiCanvas.width,confettiCanvas.height); for(let p of confettiPieces){ p.x += p.vx; p.y += p.vy; confettiCtx.fillStyle=p.c; confettiCtx.fillRect(p.x,p.y,p.r,p.r*0.6); if(p.y>confettiCanvas.height){ p.y = -10; p.x = Math.random()*confettiCanvas.width; } } confettiTimer = requestAnimationFrame(confettiLoop); }
+
+    // ===== Printable exam / worksheet utilities =====
+    // printExamAnswers and openPrintableWorksheet defined above
+
+    // ===== Initialization =====
+    updateSelectedLabel();
+
+  
+// --- Difficulty-scaled problem generator override ---
+function generateProblem(week, dayIndex) {
+  const w = Math.min(Math.max(week, 1), 42);
+  const diff = w;
+  let typePool = [];
+  if (w <= 3) typePool = ['count','add10','sub10'];
+  else if (w <= 7) typePool = ['count','add10','sub10','add20'];
+  else if (w <= 12) typePool = ['add20','sub20','compare'];
+  else if (w <= 20) typePool = ['add20','sub20','compare','missing'];
+  else typePool = ['add20','sub20','compare','missing','word'];
+  const type = typePool[Math.floor(Math.random()*typePool.length)];
+  function r(max){return 1+Math.floor(Math.random()*max);}  
+  switch(type){
+    case 'count':{const n=r(4+Math.floor(diff/2));return{q:`Count the objects: ${'🟢'.repeat(n)}`,a:n}};
+    case 'add10':{const a=r(5+Math.floor(diff/3)),b=r(5+Math.floor(diff/3));return{q:`${a}+${b}=?`,a:a+b}};
+    case 'sub10':{const a=r(6+Math.floor(diff/3)),b=r(a);return{q:`${a}-${b}=?`,a:a-b}};
+    case 'add20':{const a=r(10+Math.floor(diff/2)),b=r(10+Math.floor(diff/2));return{q:`${a}+${b}=?`,a:a+b}};
+    case 'sub20':{const a=r(20),b=r(a);return{q:`${a}-${b}=?`,a:a-b}};
+    case 'compare':{const a=r(20),b=r(20);return{q:`Which is bigger? ${a} or ${b}?`,a:a>b?a:b}};
+    case 'missing':{const a=r(15),b=r(15);return{q:`${a} + ? = ${a+b}` ,a:b}};
+    case 'word':{const apples=r(5+Math.floor(diff/2)),eaten=r(Math.floor(apples/2));return{q:`Sally has ${apples} apples. She eats ${eaten}. How many left?`,a:apples-eaten}};
+  }
+}
+</script>
+</body>
+</html>
+
