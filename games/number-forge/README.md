@@ -1,6 +1,6 @@
-#Number Forge 🔨
+Number Forge 🔨
 
-##Khaemenes Elementary · Second Grade Mathematics
+Khaemenes Elementary · Second Grade Mathematics
 
 Number Forge is a sovereign, sandboxed, dependency-free mathematics game designed to help second-grade learners understand place value, regrouping, addition, and subtraction through visual base-ten manipulation.
 
