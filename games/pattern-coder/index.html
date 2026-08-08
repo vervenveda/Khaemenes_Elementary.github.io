@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Pattern Coder — Khaemenes Elementary Grades 1–5 algorithm, maze, debugging, repetition, condition, testing, and systems learning game.">
+<title>Pattern Coder 🤖 · Khaemenes Elementary</title>
+<style>
+:root{
+  --ink:#243444;--muted:#6b7b89;--paper:#fffefa;--navy:#315b76;--blue:#5575ff;--violet:#816dd2;
+  --coral:#ef747d;--gold:#f0c45b;--green:#41b96f;--teal:#42a79b;--bad:#d95c64;--warn:#c8862a;
+  --line:rgba(36,52,68,.14);--shadow:0 20px 48px rgba(50,76,116,.14);
+  --serif:Georgia,"Times New Roman",serif;--sans:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,Arial,sans-serif;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--ink);font:17px/1.56 var(--sans);background:
+radial-gradient(circle at 7% 2%,rgba(240,196,91,.26),transparent 24rem),
+radial-gradient(circle at 96% 2%,rgba(85,117,255,.17),transparent 28rem),
+linear-gradient(180deg,#eef9ff,#fffefa 36rem,#f4faf7)}
+button,input,select,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}
+:focus-visible{outline:3px solid rgba(85,117,255,.38);outline-offset:2px}
+.shell{width:min(calc(100% - 24px),1260px);margin:auto}
+header{position:sticky;top:0;z-index:60;background:rgba(255,254,250,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.nav{min-height:74px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}
+.brand{display:flex;gap:10px;align-items:center}.mark{width:52px;height:52px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(145deg,var(--gold),var(--blue),var(--violet));font-size:1.55rem;box-shadow:var(--shadow)}
+.brand strong{display:block;font:700 1.08rem var(--serif);color:var(--navy)}.brand small{display:block;color:var(--muted);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase}
+.head-actions{display:flex;gap:7px;flex-wrap:wrap}
+.btn,.head-actions button{min-height:42px;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);font-weight:900}
+.btn.primary{color:#fff;background:linear-gradient(145deg,var(--blue),var(--violet));border:0}.btn.gold{color:#604817;background:linear-gradient(145deg,#ffe99b,var(--gold))}.btn.green{color:#fff;background:linear-gradient(145deg,var(--green),#30965a);border:0}.btn.danger{color:#fff;background:linear-gradient(145deg,#ed7c82,#d6575f);border:0}.btn.ghost{background:transparent}
+.hero{padding:34px 0 22px}.hero-card{padding:28px 20px;border:4px solid #fff;border-radius:28px;text-align:center;color:#fff;background:radial-gradient(circle at 15% 18%,rgba(255,255,255,.22),transparent 14rem),linear-gradient(135deg,#315b76,#5575ff 52%,#816dd2 77%,#ef747d);box-shadow:var(--shadow)}
+.eyebrow{display:inline-block;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.14);font-size:.73rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+h1,h2,h3,h4{font-family:var(--serif)}h1{margin:10px 0 4px;font-size:clamp(2.9rem,7vw,5.15rem);line-height:.98}.hero p{max-width:940px;margin:9px auto;color:#f9fbff}
+.badges{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:13px}.badges span{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.14);font-size:.72rem;font-weight:850}
+.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(315px,.5fr);gap:14px;align-items:start;padding-bottom:44px}
+.card{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.main{padding:16px}.side{padding:15px;position:sticky;top:90px}
+.toolbar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.control{padding:10px;border:1px solid var(--line);border-radius:14px;background:#fbfdff}.control label{display:block;color:var(--muted);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.control select{width:100%;margin-top:4px;padding:8px;border:1px solid var(--line);border-radius:9px;background:#fff}
+.challenge{margin-top:12px;padding:15px;border:2px solid #e7cf79;border-radius:18px;background:linear-gradient(145deg,#fff6ca,#fffef9);text-align:center}.challenge small{font-size:.7rem;font-weight:900;color:#81631e;text-transform:uppercase;letter-spacing:.1em}.challenge h2{margin:5px 0;color:var(--navy);font-size:clamp(1.5rem,4vw,2.2rem)}.challenge p{margin:6px auto;max-width:900px;color:var(--muted);font-weight:800}
+.game-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(290px,.9fr);gap:10px;margin-top:12px}.panel{padding:14px;border:1px solid var(--line);border-radius:18px;background:#fff}.panel h3{margin:0;color:var(--navy)}
+.maze-wrap{display:grid;place-items:center;overflow:auto}.maze{display:grid;gap:2px;padding:8px;border-radius:16px;background:#132033;box-shadow:inset 0 0 0 1px #23334b;touch-action:none}
+.cell{width:48px;height:48px;display:grid;place-items:center;border-radius:8px;background:#edf7ff;position:relative;overflow:hidden}.cell.wall{background:#324a62}.cell.goal{background:linear-gradient(145deg,#fff0a8,#f0c45b)}.cell.trail{background:#e5f8ed}.cell::after{content:"";position:absolute;inset:5px;border:1px dashed transparent;border-radius:6px}.cell.goal::after{border-color:#8b6e20}
+.robot{font-size:1.9rem;filter:drop-shadow(0 3px 4px #0002);transform-origin:center;transition:transform .18s,opacity .18s}.goal-icon{font-size:1.7rem}
+.program-shell{display:grid;gap:9px}.palette{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.command{padding:10px;border:1px solid var(--line);border-radius:12px;background:#fbfdff;text-align:center;font-weight:900;color:var(--navy)}
+.command small{display:block;color:var(--muted);font-weight:700;font-size:.68rem}
+.program{min-height:170px;padding:9px;border:2px dashed #ccd8e5;border-radius:14px;background:#fafcff}.program.empty::before{content:"Build your algorithm here.";color:#8c9aa7;font-weight:800}
+.prog-row{display:grid;grid-template-columns:auto 1fr auto;gap:6px;align-items:center;margin:5px 0;padding:7px;border:1px solid var(--line);border-radius:10px;background:#fff}.prog-num{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:#eef1ff;color:#3e55ad;font-weight:900}.prog-actions{display:flex;gap:4px}.prog-actions button{min-height:34px;padding:4px 7px}
+.execution{margin-top:8px;padding:10px;border-radius:12px;background:#0f1725;color:#dce7f7;font:13px/1.48 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;min-height:84px;white-space:pre-wrap}
+.status{min-height:28px;text-align:center;margin-top:8px;font-weight:900;color:var(--muted)}.status.good{color:#2e8b51}.status.bad{color:#bd4f57}.status.warn{color:var(--warn)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:9px}.metric{padding:9px;border:1px solid var(--line);border-radius:12px;text-align:center;background:#fbfdff}.metric strong{display:block;color:var(--navy);font-size:1.15rem}
+.explain textarea{width:100%;min-height:105px;padding:9px;border:1px solid var(--line);border-radius:10px;resize:vertical}
+.tabs{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:13px}.tab{padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--navy);font-weight:900}.tab.active{color:#fff;background:linear-gradient(145deg,var(--blue),var(--violet));border:0}.workspace{display:none;margin-top:12px}.workspace.active{display:block}
+.debug-board{display:grid;grid-template-columns:1fr 1fr;gap:9px}.bug-card{padding:11px;border:1px solid var(--line);border-radius:14px;background:#fff}.bug-card strong{color:var(--navy)}
+.data-table{width:100%;border-collapse:collapse;margin-top:8px}.data-table th,.data-table td{padding:8px;border-bottom:1px solid var(--line);text-align:left;font-size:.8rem}.data-table th{background:#eef7fb;color:var(--navy)}
+.portfolio{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.entry{padding:11px;border:1px solid var(--line);border-radius:14px;background:#fff}.entry h4{margin:0;color:var(--navy)}.entry p{font-size:.8rem;color:var(--muted)}
+.actions{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:9px}.save{margin-top:12px;padding:11px;border:1px solid var(--line);border-radius:15px;background:#f5fff3;text-align:center}.save strong{color:#477154}.save-status{font-size:.77rem;color:var(--muted);margin-top:6px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.stat{padding:10px;text-align:center;border:1px solid var(--line);border-radius:13px}.stat strong{display:block;color:var(--navy);font-size:1.35rem}
+.mastery{margin-top:11px;padding:11px;border-radius:15px;background:#fff8df}.bar{height:12px;background:#e7e4de;border-radius:999px;overflow:hidden}.bar span{display:block;height:100%;width:42%;background:linear-gradient(90deg,var(--green),var(--blue),var(--coral))}
+.mentor,.voice,.grade-note,.adaptive{margin-top:11px;padding:11px;border-radius:15px;border:1px solid var(--line)}.mentor{background:#eaf8ff}.voice{background:#fff4f8}.grade-note{background:#f5f2ff}.adaptive{background:#fff8df}.mentor strong,.voice strong,.grade-note strong,.adaptive strong{color:var(--navy)}
+.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:7px}.voice select{width:100%;padding:7px;border:1px solid var(--line);border-radius:9px;background:#fff}.voice-status{text-align:center;color:var(--muted);font-size:.75rem;margin-top:6px}
+.history{display:grid;gap:6px;margin-top:11px;max-height:190px;overflow:auto}.hist{padding:7px;border:1px solid var(--line);border-radius:10px;font-size:.76rem}
+@media(max-width:980px){.layout{grid-template-columns:1fr}.side{position:static}}@media(max-width:800px){.toolbar{grid-template-columns:repeat(2,1fr)}.game-grid,.debug-board{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}.cell{width:42px;height:42px}}@media(max-width:520px){.toolbar,.voice-grid{grid-template-columns:1fr}.nav{grid-template-columns:1fr auto}.brand small{display:none}.cell{width:36px;height:36px}.metrics{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}@media print{header,.head-actions,.side,.actions,.tabs,.palette{display:none!important}body{background:#fff}.hero{padding:6px}.hero-card{background:#fff!important;color:#111;border:1px solid #999;box-shadow:none}.hero p{color:#111}.layout{display:block}.card,.panel,.challenge{box-shadow:none}.workspace{display:block!important}}
+</style>
+</head>
+<body>
+<header><div class="shell nav"><div class="brand"><div class="mark">🤖</div><div><strong>Khaemenes Elementary · Pattern Coder</strong><small>Grades 1–5 · Algorithms · Patterns · Debugging · Systems</small></div></div><div></div><div class="head-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></header>
+
+<section class="hero"><div class="shell"><div class="hero-card"><span class="eyebrow">Technology · Weeks 2–5, 21, 23, 26, 33 · Build → Run → Observe → Debug → Explain</span><h1>Pattern Coder 🤖</h1><p>Guide a friendly robot through solvable mazes using forward, turn, repeat, and condition commands. Test the algorithm, inspect what happened, debug mistakes, then explain the solution in your own words.</p><div class="badges"><span>Grades 1–5</span><span>Block-Free Command Coding</span><span>Guaranteed Solvable Mazes</span><span>Repeat & Conditions</span><span>Debugging</span><span>Data Log</span><span>Friendly Voices</span><span>Local Save</span></div></div></div></section>
+
+<main class="shell layout">
+<section class="card main">
+<div class="toolbar">
+<div class="control"><label>Grade Level</label><select id="gradeSelect"><option value="1">1st Grade</option><option value="2" selected>2nd Grade</option><option value="3">3rd Grade</option><option value="4">4th Grade</option><option value="5">5th Grade</option></select></div>
+<div class="control"><label>Mission Mode</label><select id="modeSelect"><option value="guided">Guided Path</option><option value="debug">Debug Mission</option><option value="efficient">Efficient Algorithm</option><option value="adaptive">Adaptive Challenge</option></select></div>
+<div class="control"><label>Maze Size</label><select id="sizeSelect"><option value="5">5 × 5</option><option value="6" selected>6 × 6</option><option value="7">7 × 7</option><option value="8">8 × 8</option></select></div>
+<div class="control"><label>Mission</label><div style="margin-top:5px;font-weight:900;color:var(--navy)" id="missionNumber">1</div></div>
+</div>
+
+<section class="challenge"><small>Robot Mission</small><h2 id="challengeTitle">Guide Byte to the beacon.</h2><p id="challengeText"></p></section>
+
+<div class="game-grid">
+<article class="panel">
+<h3>Maze World</h3>
+<div class="maze-wrap"><div class="maze" id="maze"></div></div>
+<div class="metrics"><div class="metric"><strong id="stepsMetric">0</strong>Moves</div><div class="metric"><strong id="commandsMetric">0</strong>Commands</div><div class="metric"><strong id="bugsMetric">0</strong>Debugs</div><div class="metric"><strong id="bestMetric">—</strong>Best</div></div>
+<div class="status" id="status">Build an algorithm, then press Run.</div>
+</article>
+
+<article class="panel">
+<h3>Command Lab</h3>
+<div class="program-shell">
+<div class="palette" id="palette">
+<button class="command" data-cmd="F">⬆ Forward<small>move 1 cell</small></button>
+<button class="command" data-cmd="L">↶ Turn Left<small>rotate 90°</small></button>
+<button class="command" data-cmd="R">↷ Turn Right<small>rotate 90°</small></button>
+<button class="command grade3" data-cmd="RF2">🔁 Repeat ×2<small>repeat previous command</small></button>
+<button class="command grade3" data-cmd="RF3">🔁 Repeat ×3<small>repeat previous command</small></button>
+<button class="command grade4" data-cmd="IFW">🧠 If Wall → Right<small>condition</small></button>
+</div>
+<div class="program empty" id="program"></div>
+<div class="actions"><button class="btn primary" id="runBtn">▶ Run Algorithm</button><button class="btn" id="stepBtn">Step Once</button><button class="btn" id="undoBtn">↶ Undo</button><button class="btn danger" id="clearBtn">Clear</button></div>
+<div class="execution" id="execution">Program ready.</div>
+</div>
+</article>
+</div>
+
+<section class="panel explain" style="margin-top:12px">
+<h3>Explain the Algorithm</h3>
+<textarea id="explanation" placeholder="First my robot... Then... I used repeat because... I debugged..."></textarea>
+<div class="actions"><button class="btn green" id="saveMissionBtn">Save Mission Evidence</button><button class="btn gold" id="newMissionBtn">New Maze</button><button class="btn" id="readMissionBtn">🔊 Read Mission</button></div>
+</section>
+
+<div class="tabs"><button class="tab active" data-tab="debug">🪲 Debug Lab</button><button class="tab" data-tab="data">📊 Run Data</button><button class="tab" data-tab="portfolio">🗂 Portfolio</button></div>
+
+<section class="workspace active" data-workspace="debug"><div class="debug-board"><article class="bug-card"><strong>Observe</strong><p id="observeText">Run your algorithm and watch where Byte stops.</p></article><article class="bug-card"><strong>Hypothesis</strong><textarea id="hypothesis" style="width:100%;min-height:80px;padding:8px;border:1px solid var(--line);border-radius:9px" placeholder="I think the bug is..."></textarea></article><article class="bug-card"><strong>One Change</strong><p>Change one command at a time so you can tell whether the fix worked.</p></article><article class="bug-card"><strong>Retest</strong><p id="retestText">Use the same maze after your change and compare the new result.</p></article></div></section>
+
+<section class="workspace" data-workspace="data"><div class="panel"><h3>Algorithm Run Log</h3><div style="overflow:auto"><table class="data-table"><thead><tr><th>#</th><th>Grade</th><th>Commands</th><th>Moves</th><th>Result</th><th>Efficiency</th></tr></thead><tbody id="runBody"></tbody></table></div></div></section>
+
+<section class="workspace" data-workspace="portfolio"><div class="portfolio" id="portfolio"></div></section>
+
+<div class="save"><strong>💾 Save & Export Pattern Coder</strong><div class="actions"><button class="btn" id="saveBtn">Save Session</button><button class="btn" id="exportBtn">Export JSON</button><button class="btn gold" id="printBtn">Print / Save PDF</button></div><div class="save-status" id="saveStatus">Progress auto-saves locally.</div></div>
+</section>
+
+<aside class="card side">
+<h2 style="margin-top:0;color:var(--navy)">Coder Progress</h2>
+<div class="stats"><div class="stat"><strong id="missionStat">0</strong>Solved</div><div class="stat"><strong id="runStat">0</strong>Runs</div><div class="stat"><strong id="gradeStat">2</strong>Grade</div><div class="stat"><strong id="masteryStat">42%</strong>Mastery</div></div>
+<div class="mastery"><strong>Algorithm Growth</strong><div class="bar"><span id="masteryFill"></span></div><div id="masteryText" style="font-size:.78rem;color:var(--muted);margin-top:6px"></div></div>
+<div class="mentor"><strong>Coder Guide</strong><p id="mentorText">A strong algorithm is a clear sequence of steps that you can test and improve.</p><div class="actions"><button class="btn" id="readGuideBtn">🔊 Read It</button><button class="btn" id="firstStepBtn">🪜 First Step</button></div></div>
+<div class="adaptive"><strong>Adaptive Challenge</strong><p id="adaptiveText" style="font-size:.8rem;color:var(--muted)">Second grade: sequences, turns, testing, and simple debugging.</p><div style="font-size:.76rem;margin-top:5px"><span>Estimated readiness: </span><strong id="readiness">62%</strong></div></div>
+<div class="voice"><strong>🎙 Friendly Coding Guide</strong><div class="voice-grid"><select id="voiceFriend"><option value="sunny">☀️ Sunny</option><option value="sage">🦉 Code Sage</option><option value="bloom">🌼 Bloom</option><option value="rainbow">🌈 Rainbow Friend</option></select><select id="voiceSpeed"><option value="slow">Slow & Clear</option><option value="normal">Gentle</option><option value="lively">A Little Lively</option></select></div><div class="actions"><button class="btn" id="previewVoice">▶ Hear Guide</button><button class="btn" id="repeatVoice">↻ Repeat</button><button class="btn" id="stopVoice">■ Stop</button></div><div class="voice-status" id="voiceStatus">Loading a friendly voice…</div></div>
+<div class="grade-note"><strong id="gradeTitle">Second Grade Focus</strong><div id="gradeNote"></div></div>
+<div class="history" id="history"></div>
+</aside>
+</main>
+
+<script>
+(()=>{"use strict";
+const $=id=>document.getElementById(id),KEY="khaemenes_pattern_coder_k5_v1";
+const GRADE={
+1:{note:"Sequence simple commands, identify start and goal, follow arrows, and notice when one step is wrong.",adaptive:"Grade 1: short sequences, forward/turn commands, and visual testing.",wall:.12,size:5,repeat:false,condition:false},
+2:{note:"Build and test algorithms with forward and turn commands, then explain where a bug occurred and how it was fixed.",adaptive:"Grade 2: sequences, turns, testing, and simple debugging.",wall:.16,size:6,repeat:false,condition:false},
+3:{note:"Recognize repetition, use repeat commands to make algorithms shorter, collect run data, and compare solutions.",adaptive:"Grade 3: repetition, efficiency, run data, and systematic refinement.",wall:.19,size:6,repeat:true,condition:false},
+4:{note:"Use repeat and conditional behavior, test edge cases, isolate bugs, and compare command efficiency.",adaptive:"Grade 4: repetition + conditions, test cases, and one-change debugging.",wall:.22,size:7,repeat:true,condition:true},
+5:{note:"Design efficient algorithms, reason about state and systems, compare multiple solutions, and justify refinements with data.",adaptive:"Grade 5: optimization, conditional logic, systems thinking, and evidence-based refinement.",wall:.24,size:8,repeat:true,condition:true}
+};
+const DIRS=[[-1,0],[0,1],[1,0],[0,-1]],ARROW=["↑","→","↓","←"],CMD_LABEL={F:"Forward",L:"Turn Left",R:"Turn Right",RF2:"Repeat previous ×2",RF3:"Repeat previous ×3",IFW:"If wall ahead → turn right"};
+const base={grade:2,mode:"guided",size:6,mission:1,mastery:42,solved:0,runs:[],portfolio:[],program:[],explanation:"",hypothesis:"",voiceFriend:"sunny",voiceSpeed:"normal",sound:true,best:null,debugs:0,history:[],maze:null};
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||"null");return Object.assign(clone(base),x||{})}catch{return clone(base)}}let s=load();
+let player=null,startState=null,execQueue=[],execIndex=0,trail=new Set(),timer=null;
+function save(msg="Auto-saved locally"){s.explanation=$("explanation").value;s.hypothesis=$("hypothesis").value;try{localStorage.setItem(KEY,JSON.stringify(s))}catch{};$("saveStatus").textContent=msg+" · "+new Date().toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}
+function randInt(n){return Math.floor(Math.random()*n)}
+function key(r,c){return r+","+c}
+function neighbors(r,c,n){return DIRS.map((d,i)=>[r+d[0],c+d[1],i]).filter(([rr,cc])=>rr>=0&&cc>=0&&rr<n&&cc<n)}
+function pathExists(grid,start,goal){const n=grid.length,q=[start],seen=new Set([key(...start)]);while(q.length){const [r,c]=q.shift();if(r===goal[0]&&c===goal[1])return true;for(const [rr,cc] of neighbors(r,c,n)){if(!grid[rr][cc]&&!seen.has(key(rr,cc))){seen.add(key(rr,cc));q.push([rr,cc])}}}return false}
+function shortestPath(grid,start,goal){const n=grid.length,q=[start],prev=new Map(),seen=new Set([key(...start)]);while(q.length){const cur=q.shift(),[r,c]=cur;if(r===goal[0]&&c===goal[1]){const path=[];let k=key(r,c);while(k){const [rr,cc]=k.split(",").map(Number);path.push([rr,cc]);k=prev.get(k)}return path.reverse()}for(const [rr,cc] of neighbors(r,c,n)){const kk=key(rr,cc);if(!grid[rr][cc]&&!seen.has(kk)){seen.add(kk);prev.set(kk,key(r,c));q.push([rr,cc])}}}return []}
+function generateMaze(){
+ const g=GRADE[s.grade],n=Number(s.size)||g.size;let grid,start=[n-1,0],goal=[0,n-1],tries=0;
+ do{grid=Array.from({length:n},()=>Array(n).fill(0));for(let r=0;r<n;r++)for(let c=0;c<n;c++){if((r===start[0]&&c===start[1])||(r===goal[0]&&c===goal[1]))continue;if(Math.random()<g.wall)grid[r][c]=1}tries++;if(tries>300){grid=Array.from({length:n},()=>Array(n).fill(0));break}}while(!pathExists(grid,start,goal));
+ const p=shortestPath(grid,start,goal);s.maze={grid,start,goal,optimalMoves:Math.max(0,p.length-1)};startState={r:start[0],c:start[1],dir:0};player=clone(startState);trail=new Set([key(player.r,player.c)]);s.program=[];execQueue=[];execIndex=0;s.mission++;s.debugs=0;renderProgram();renderMaze();renderMetrics();challengeText();save("New solvable maze created")
+}
+function challengeText(){
+ const modes={guided:"Build a clear sequence. Run it, observe what happens, and fix one command at a time.",debug:"A strong coder expects to test and revise. Treat every wrong turn as evidence.",efficient:"Reach the beacon with as few commands as you can. Repeat commands can compress repeated work.",adaptive:"The challenge changes with grade level and recent performance."};
+ $("challengeText").textContent=modes[s.mode];$("challengeTitle").textContent=s.grade<=2?"Guide Byte to the beacon.":s.grade===3?"Find the pattern in the path.":s.grade===4?"Use repetition and conditions wisely.":"Design, test, and optimize the algorithm."; $("missionNumber").textContent=s.mission
+}
+function renderMaze(){
+ if(!s.maze)return;const n=s.maze.grid.length,host=$("maze");host.style.gridTemplateColumns=`repeat(${n},1fr)`;host.innerHTML="";
+ for(let r=0;r<n;r++)for(let c=0;c<n;c++){const cell=document.createElement("div");cell.className="cell"+(s.maze.grid[r][c]?" wall":"")+(r===s.maze.goal[0]&&c===s.maze.goal[1]?" goal":"")+(trail.has(key(r,c))?" trail":"");if(r===s.maze.goal[0]&&c===s.maze.goal[1])cell.innerHTML=`<span class="goal-icon">⭐</span>`;if(player&&r===player.r&&c===player.c){const bot=document.createElement("span");bot.className="robot";bot.textContent="🤖";bot.style.transform=`rotate(${player.dir*90}deg)`;cell.appendChild(bot)}host.appendChild(cell)}
+}
+function renderProgram(){
+ const h=$("program");h.classList.toggle("empty",!s.program.length);h.innerHTML=s.program.map((cmd,i)=>`<div class="prog-row"><span class="prog-num">${i+1}</span><span>${CMD_LABEL[cmd]}</span><span class="prog-actions"><button data-up="${i}">↑</button><button data-down="${i}">↓</button><button data-del="${i}">×</button></span></div>`).join("");
+ h.querySelectorAll("[data-up]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.up);if(i){[s.program[i-1],s.program[i]]=[s.program[i],s.program[i-1]];renderProgram();save()}});
+ h.querySelectorAll("[data-down]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.down);if(i<s.program.length-1){[s.program[i],s.program[i+1]]=[s.program[i+1],s.program[i]];renderProgram();save()}});
+ h.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{s.program.splice(Number(b.dataset.del),1);renderProgram();renderMetrics();save()});renderMetrics()
+}
+function addCmd(cmd){
+ const g=GRADE[s.grade];if((cmd==="RF2"||cmd==="RF3")&&!g.repeat){status("Repeat unlocks in Grade 3.","warn");return}if(cmd==="IFW"&&!g.condition){status("Conditions unlock in Grade 4.","warn");return}if((cmd==="RF2"||cmd==="RF3")&&!s.program.length){status("Add a command before Repeat.","warn");return}s.program.push(cmd);renderProgram();save()
+}
+function expandProgram(){
+ const q=[];for(const cmd of s.program){if(cmd==="RF2"||cmd==="RF3"){const count=cmd==="RF2"?2:3,prev=q[q.length-1];if(prev)for(let i=0;i<count;i++)q.push(prev)}else q.push(cmd)}return q.slice(0,200)
+}
+function wallAhead(p){const d=DIRS[p.dir],rr=p.r+d[0],cc=p.c+d[1],n=s.maze.grid.length;return rr<0||cc<0||rr>=n||cc>=n||s.maze.grid[rr][cc]===1}
+function executeCommand(cmd,p){
+ if(cmd==="L"){p.dir=(p.dir+3)%4;return {moved:false,msg:"Turned left."}}
+ if(cmd==="R"){p.dir=(p.dir+1)%4;return {moved:false,msg:"Turned right."}}
+ if(cmd==="IFW"){if(wallAhead(p)){p.dir=(p.dir+1)%4;return {moved:false,msg:"Condition true: wall ahead, turned right."}}return {moved:false,msg:"Condition false: path ahead is open."}}
+ if(cmd==="F"){if(wallAhead(p))return {moved:false,bug:true,msg:"Blocked: wall ahead."};const d=DIRS[p.dir];p.r+=d[0];p.c+=d[1];trail.add(key(p.r,p.c));return {moved:true,msg:"Moved forward."}}
+ return {moved:false,msg:"Skipped unknown command."}
+}
+function resetPlayer(){player=clone(startState);trail=new Set([key(player.r,player.c)]);execQueue=expandProgram();execIndex=0;renderMaze()}
+function run(){
+ if(!s.program.length){status("Add at least one command first.","warn");return}if(timer)clearTimeout(timer);resetPlayer();$("execution").textContent="Running algorithm…";let moves=0,bug=false,logs=[];
+ function tick(){if(execIndex>=execQueue.length||bug||atGoal()){finish();return}const cmd=execQueue[execIndex],res=executeCommand(cmd,player);if(res.moved)moves++;if(res.bug){bug=true;s.debugs++}logs.push(`${execIndex+1}. ${CMD_LABEL[cmd]} → ${res.msg}`);$("execution").textContent=logs.join("\n");execIndex++;renderMaze();timer=setTimeout(tick,240)}
+ function finish(){const solved=atGoal(),eff=Math.max(0,Math.round((s.maze.optimalMoves/Math.max(1,moves))*100));s.runs.push({id:Date.now(),grade:s.grade,commands:s.program.length,moves,result:solved?"Solved":bug?"Blocked":"Not solved",efficiency:Math.min(100,eff)});s.runs=s.runs.slice(-60);if(solved){s.solved++;s.mastery=Math.min(100,s.mastery+4);if(s.best==null||s.program.length<s.best)s.best=s.program.length;status(`Mission solved! ${moves} moves · ${s.program.length} program commands.`,"good");$("observeText").textContent="Byte reached the beacon. Compare your command count with another possible solution.";speak("Mission solved. Great testing and refining.")}else{s.mastery=Math.max(0,s.mastery-1);status(bug?"Byte hit a wall. That is useful debugging evidence.":"The program finished before Byte reached the beacon.","bad");$("observeText").textContent=bug?"The robot was blocked by a wall. Find the first command that caused the problem.":"The algorithm ended too early. Compare the robot's final position with the goal.";speak("The run gave us evidence. Change one thing and test again.")}renderRuns();renderStats();renderMetrics();save("Run recorded")}
+ tick()
+}
+function stepOnce(){
+ if(!s.program.length){status("Add a command first.","warn");return}
+ if(!execQueue.length||execIndex>=execQueue.length){resetPlayer();$("execution").textContent=""}
+ if(execIndex>=execQueue.length)return;const cmd=execQueue[execIndex],res=executeCommand(cmd,player);$("execution").textContent+=`${execIndex+1}. ${CMD_LABEL[cmd]} → ${res.msg}\n`;execIndex++;if(res.bug)s.debugs++;renderMaze();renderMetrics();if(atGoal())status("Beacon reached in step mode.","good");else if(res.bug)status("Blocked. Inspect the current direction and next cell.","bad")
+}
+function atGoal(){return player&&player.r===s.maze.goal[0]&&player.c===s.maze.goal[1]}
+function status(t,k=""){$("status").textContent=t;$("status").className="status "+k}
+function renderMetrics(){$("stepsMetric").textContent=Math.max(0,trail.size-1);$("commandsMetric").textContent=s.program.length;$("bugsMetric").textContent=s.debugs;$("bestMetric").textContent=s.best==null?"—":s.best}
+function renderRuns(){$("runBody").innerHTML=s.runs.length?s.runs.slice().reverse().map((r,i)=>`<tr><td>${s.runs.length-i}</td><td>${r.grade}</td><td>${r.commands}</td><td>${r.moves}</td><td>${r.result}</td><td>${r.efficiency}%</td></tr>`).join(""):`<tr><td colspan="6">No runs recorded yet.</td></tr>`}
+function saveMission(){s.explanation=$("explanation").value;s.hypothesis=$("hypothesis").value;s.portfolio.unshift({id:Date.now(),date:new Date().toISOString(),grade:s.grade,mode:s.mode,maze:clone(s.maze),program:[...s.program],explanation:s.explanation,hypothesis:s.hypothesis,best:s.best});s.portfolio=s.portfolio.slice(0,40);s.history.unshift(`${new Date().toLocaleDateString()} · Mission ${s.mission} · ${s.program.length} commands`);s.history=s.history.slice(0,15);renderPortfolio();renderStats();save("Mission evidence saved");status("Mission evidence saved to the local portfolio.","good")}
+function renderPortfolio(){$("portfolio").innerHTML=s.portfolio.length?s.portfolio.map(p=>`<article class="entry"><h4>🤖 Grade ${p.grade} Algorithm</h4><p>${new Date(p.date).toLocaleDateString()} · ${p.program.length} commands<br>${p.explanation||"No explanation saved yet."}</p><div class="actions"><button class="btn" data-open="${p.id}">Open</button><button class="btn" data-del="${p.id}">Delete</button></div></article>`).join(""):`<div class="panel">No saved missions yet.</div>`;document.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>openPortfolio(Number(b.dataset.open)));document.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{s.portfolio=s.portfolio.filter(p=>p.id!==Number(b.dataset.del));renderPortfolio();renderStats();save("Portfolio item deleted")})}
+function openPortfolio(id){const p=s.portfolio.find(x=>x.id===id);if(!p)return;s.grade=p.grade;s.mode=p.mode;s.maze=clone(p.maze);s.program=[...p.program];s.explanation=p.explanation||"";s.hypothesis=p.hypothesis||"";$("gradeSelect").value=s.grade;$("modeSelect").value=s.mode;$("explanation").value=s.explanation;$("hypothesis").value=s.hypothesis;startState={r:s.maze.start[0],c:s.maze.start[1],dir:0};player=clone(startState);trail=new Set([key(player.r,player.c)]);renderProgram();renderMaze();renderGrade();challengeText();save("Portfolio mission opened")}
+function readiness(){const recent=s.runs.slice(-8),success=recent.filter(r=>r.result==="Solved").length/(recent.length||1),gradeBase=.45+s.grade*.06,master=s.mastery/100;return Math.round(Math.min(.95,Math.max(.2,gradeBase*.35+success*.35+master*.30))*100)}
+function renderGrade(){const g=GRADE[s.grade];$("gradeTitle").textContent=["","First Grade Focus","Second Grade Focus","Third Grade Focus","Fourth Grade Focus","Fifth Grade Focus"][s.grade];$("gradeNote").textContent=g.note;$("adaptiveText").textContent=g.adaptive;$("gradeStat").textContent=s.grade;$("readiness").textContent=readiness()+"%";document.querySelectorAll(".grade3").forEach(x=>x.style.display=g.repeat?"block":"none");document.querySelectorAll(".grade4").forEach(x=>x.style.display=g.condition?"block":"none")}
+function renderStats(){$("missionStat").textContent=s.solved;$("runStat").textContent=s.runs.length;$("masteryStat").textContent=Math.round(s.mastery)+"%";$("masteryFill").style.width=s.mastery+"%";$("masteryText").textContent=s.mastery>80?"Strong algorithmic thinking is developing.":s.mastery>60?"Good progress — test, inspect, and refine.":"Build confidence with short algorithms and careful observation.";$("history").innerHTML=s.history.length?s.history.map(x=>`<div class="hist">${x}</div>`).join(""):`<div class="hist">Saved missions will appear here.</div>`;renderGrade()}
+function exportJson(){save();const blob=new Blob([JSON.stringify({app:"Pattern Coder",version:1,exportedAt:new Date().toISOString(),state:s},null,2)],{type:"application/json"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="pattern-coder-session.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)}
+
+let voices=[],lastSpeech="";const FRIENDS={sunny:{n:"Sunny",e:"☀️",r:.88,p:1.05,re:/samantha|aria|jenny|zira|ava|victoria|karen|serena/i},sage:{n:"Code Sage",e:"🦉",r:.82,p:1,re:/samantha|serena|moira|ava|aria|daniel|alex/i},bloom:{n:"Bloom",e:"🌼",r:.84,p:1.08,re:/aria|jenny|ava|samantha|victoria|karen|serena/i},rainbow:{n:"Rainbow Friend",e:"🌈",r:.88,p:1.06,re:/samantha|aria|jenny|ava|karen|moira|serena/i}},SPEED={slow:.88,normal:1,lively:1.08};
+function refresh(){if(!("speechSynthesis"in window))return;voices=speechSynthesis.getVoices()||[];const f=FRIENDS[s.voiceFriend];$("voiceStatus").textContent=`${f.e} ${f.n} is ready.`}
+function stop(msg="Voice stopped."){if("speechSynthesis"in window)speechSynthesis.cancel();$("voiceStatus").textContent=msg}
+function speak(text,opt={}){if(!s.sound||!("speechSynthesis"in window))return;text=String(text||"").trim();if(!text&&!opt.preview)return;stop("");if(text)lastSpeech=text;const f=FRIENDS[s.voiceFriend],msg=opt.preview?`Hi! ${f.n} is ready to code with you.`:text,u=new SpeechSynthesisUtterance(msg),pool=voices.filter(v=>/^en/i.test(v.lang||"")).filter(v=>!/whisper|bells|boing|robot|novelty|zarvox/i.test(v.name||""));u.voice=pool.find(v=>f.re.test(v.name||""))||pool[0]||null;u.rate=f.r*SPEED[s.voiceSpeed];u.pitch=f.p;u.onstart=()=>$("voiceStatus").textContent=`${f.e} ${f.n} is reading.`;u.onend=()=>$("voiceStatus").textContent=`${f.e} ${f.n} is ready.`;speechSynthesis.speak(u)}
+
+document.querySelectorAll("[data-cmd]").forEach(b=>b.onclick=()=>addCmd(b.dataset.cmd));
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===t));document.querySelectorAll(".workspace").forEach(w=>w.classList.toggle("active",w.dataset.workspace===t.dataset.tab))});
+$("runBtn").onclick=run;$("stepBtn").onclick=stepOnce;$("undoBtn").onclick=()=>{s.program.pop();renderProgram();save()};$("clearBtn").onclick=()=>{s.program=[];renderProgram();resetPlayer();$("execution").textContent="Program cleared.";status("Build a new algorithm.","");save()};
+$("gradeSelect").onchange=e=>{s.grade=Number(e.target.value);s.size=GRADE[s.grade].size;$("sizeSelect").value=s.size;renderGrade();generateMaze()};$("modeSelect").onchange=e=>{s.mode=e.target.value;challengeText();save()};$("sizeSelect").onchange=e=>{s.size=Number(e.target.value);generateMaze()};
+$("explanation").oninput=()=>save();$("hypothesis").oninput=()=>save();$("saveMissionBtn").onclick=saveMission;$("newMissionBtn").onclick=generateMaze;$("readMissionBtn").onclick=()=>speak($("challengeText").textContent);
+$("saveBtn").onclick=()=>save("Session saved locally");$("exportBtn").onclick=exportJson;$("printBtn").onclick=()=>window.print();$("printTop").onclick=()=>window.print();$("readGuideBtn").onclick=()=>speak($("mentorText").textContent);$("firstStepBtn").onclick=()=>speak("First, look at Byte's starting direction and identify the first safe move.");
+$("soundBtn").onclick=()=>{s.sound=!s.sound;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";if(!s.sound)stop("Voice is off.");save()};$("voiceFriend").onchange=e=>{s.voiceFriend=e.target.value;refresh();speak("",{preview:true});save()};$("voiceSpeed").onchange=e=>{s.voiceSpeed=e.target.value;save()};$("previewVoice").onclick=()=>speak("",{preview:true});$("repeatVoice").onclick=()=>speak(lastSpeech||$("challengeText").textContent);$("stopVoice").onclick=()=>stop();$("resetBtn").onclick=()=>{if(confirm("Reset all Pattern Coder progress on this device?")){localStorage.removeItem(KEY);location.reload()}};
+
+$("gradeSelect").value=s.grade;$("modeSelect").value=s.mode;$("sizeSelect").value=s.size;$("voiceFriend").value=s.voiceFriend;$("voiceSpeed").value=s.voiceSpeed;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";$("explanation").value=s.explanation||"";$("hypothesis").value=s.hypothesis||"";
+renderRuns();renderPortfolio();renderStats();if(s.maze&&s.maze.grid){startState={r:s.maze.start[0],c:s.maze.start[1],dir:0};player=clone(startState);trail=new Set([key(player.r,player.c)]);renderProgram();renderMaze();challengeText()}else generateMaze();if("speechSynthesis"in window){refresh();speechSynthesis.onvoiceschanged=refresh}
+})();
+</script>
+</body>
+</html>
