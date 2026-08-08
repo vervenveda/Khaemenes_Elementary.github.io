@@ -337,8 +337,8 @@ button{cursor:pointer}
   max-width:760px;
   margin:.7rem 0 0;
   color:#fff;
-  font:900 clamp(3.7rem,8.3vw,7.5rem)/.88 var(--serif);
-  letter-spacing:-.045em;
+  font:900 clamp(2.85rem,6.4vw,5.35rem)/.96 var(--serif);
+  letter-spacing:-.028em;
   text-wrap:balance;
 }
 
@@ -618,7 +618,7 @@ button{cursor:pointer}
 .heading h2{
   margin:.45rem auto 0;
   color:#36366e;
-  font:800 clamp(2.15rem,5vw,4rem)/1.05 var(--serif);
+  font:800 clamp(1.8rem,4vw,3.15rem)/1.12 var(--serif);
   text-wrap:balance;
 }
 
@@ -742,7 +742,7 @@ button{cursor:pointer}
 .explorer-id-copy h3{
   margin:.15rem 0 0;
   color:#3a4862;
-  font:800 clamp(1.7rem,3.8vw,2.5rem)/1.06 var(--serif);
+  font:800 clamp(1.45rem,3vw,2.05rem)/1.12 var(--serif);
 }
 
 .explorer-id-copy p{
@@ -826,7 +826,7 @@ button{cursor:pointer}
 
 .mentor-card h3{
   margin:.7rem auto 0;
-  font:800 1.8rem var(--serif);
+  font:800 1.52rem/1.18 var(--serif);
 }
 
 .mentor-card p{
@@ -890,7 +890,7 @@ button{cursor:pointer}
 .world-card h3{
   z-index:1;
   margin:.8rem 0 0;
-  font:800 1.25rem var(--serif);
+  font:800 1.12rem/1.2 var(--serif);
 }
 
 .world-card p{
@@ -1099,7 +1099,7 @@ button{cursor:pointer}
 .network-card h3{
   margin:.75rem 0 0;
   color:#3d4169;
-  font:800 1.35rem var(--serif);
+  font:800 1.18rem/1.2 var(--serif);
 }
 
 .network-card p{
@@ -1160,7 +1160,7 @@ button{cursor:pointer}
 .mission-card h3{
   position:relative;z-index:1;
   margin:.45rem 0 0;
-  font:800 clamp(1.7rem,3.8vw,2.45rem)/1.08 var(--serif);
+  font:800 clamp(1.45rem,3vw,2rem)/1.14 var(--serif);
 }
 
 .mission-card p{
@@ -1185,7 +1185,7 @@ button{cursor:pointer}
 
 .family-card h3{
   color:#3e4269;
-  font:800 1.65rem var(--serif);
+  font:800 1.45rem/1.2 var(--serif);
 }
 
 .family-card p{
@@ -1361,7 +1361,7 @@ button{cursor:pointer}
 .profile-box h3{
   margin:0;
   color:#3e4269;
-  font:800 1.4rem var(--serif);
+  font:800 1.25rem/1.2 var(--serif);
 }
 
 .profile-box label{
@@ -1447,7 +1447,7 @@ button{cursor:pointer}
   .brand small{display:none}
   .hero{min-height:auto}
   .hero-inner{min-height:auto;padding:54px 0 70px}
-  .hero h1{font-size:clamp(3.25rem,19vw,5.2rem)}
+  .hero h1{font-size:clamp(2.65rem,14vw,4.15rem);line-height:.98}
   .profile-launch{
     grid-template-columns:44px minmax(0,1fr) 22px;
     min-height:72px;
@@ -1496,6 +1496,88 @@ button{cursor:pointer}
     break-inside:avoid;
   }
 }
+
+/* ---------- v2 typography fit & border safety ---------- */
+h1,h2,h3,h4,
+.hero h1,
+.heading h2,
+.world-card h3,
+.network-card h3,
+.explorer-id-copy h3,
+.mentor-card h3,
+.mission-card h3,
+.family-card h3,
+.card h3,
+.profile-box h3{
+  max-width:100%;
+  overflow-wrap:break-word;
+  word-break:normal;
+  hyphens:auto;
+}
+
+.hero-copy,
+.heading,
+.world-card,
+.network-card,
+.explorer-card,
+.mentor-card,
+.mission-card,
+.family-card,
+.card,
+.profile-box{
+  min-width:0;
+}
+
+.hero h1{
+  width:min(100%,700px);
+}
+
+.hero h1 span{
+  font-size:.94em;
+  line-height:1;
+}
+
+.heading h2{
+  width:min(100%,780px);
+}
+
+.world-card h3,
+.network-card h3,
+.card h3{
+  width:100%;
+}
+
+@media(max-width:760px){
+  .heading h2{
+    font-size:clamp(1.65rem,8vw,2.45rem);
+    line-height:1.14;
+  }
+
+  .world-card h3,
+  .network-card h3{
+    font-size:1.08rem;
+  }
+
+  .mentor-card h3{
+    font-size:1.38rem;
+  }
+}
+
+@media(max-width:420px){
+  .hero h1{
+    font-size:clamp(2.3rem,12.5vw,3.25rem);
+    letter-spacing:-.015em;
+  }
+
+  .heading h2{
+    font-size:1.75rem;
+  }
+
+  .profile-launch-copy strong{
+    font-size:1rem;
+  }
+}
+
 </style>
 </head>
 
