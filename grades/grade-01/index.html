@@ -1578,6 +1578,67 @@ h1,h2,h3,h4,
   }
 }
 
+
+
+/* =========================================================
+   FIRST GRADE WONDERVERSE v3 · CONTINUITY + GATEKEEPING
+   ========================================================= */
+.network-bar{overflow:hidden;padding:0;background:linear-gradient(90deg,#23205e,#513cbc,#23205e)}
+.wonder-ticker{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.65rem;min-height:44px;color:#fff}
+.ticker-label{padding:.4rem .65rem;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#fff3a5;background:rgba(255,255,255,.08);font-size:.65rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.ticker-window{min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.ticker-track{width:max-content;display:flex;align-items:center;gap:0;animation:wonderTicker 112s linear infinite;will-change:transform}
+.ticker-track.paused{animation-play-state:paused}
+.ticker-set{display:flex;align-items:center;flex-shrink:0}
+.ticker-item{display:inline-flex;align-items:center;gap:.3rem;padding:0 1.05rem;color:rgba(255,255,255,.9);font-size:.72rem;font-weight:800;white-space:nowrap}
+.ticker-item::after{content:"✦";margin-left:1.05rem;color:#ffe889}
+.ticker-item strong{color:#fff4a9}
+.ticker-toggle{width:34px;height:34px;border:1px solid rgba(255,255,255,.22);border-radius:50%;color:#fff;background:rgba(255,255,255,.09);font-size:.78rem}
+@keyframes wonderTicker{to{transform:translateX(-50%)}}
+
+.profile-access-row{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:.7rem}
+.access-chip{min-height:54px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.5rem;border:2px solid rgba(255,255,255,.86);border-radius:13px;background:rgba(255,255,255,.58)}
+.access-chip strong{font:800 .82rem var(--serif);color:#4c437b}.access-chip span{font-size:.56rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#75758b}
+.access-chip.good{background:#e9f9e7}.access-chip.wait{background:#fff1d0}.access-chip.lock{background:#ffe7ed}
+
+.gate-panel{width:min(1080px,100%);margin:auto;padding:1.35rem;border:3px solid #fff;border-radius:26px;background:linear-gradient(145deg,#fff,#f2efff 48%,#eaf8ff);box-shadow:var(--shadow)}
+.gate-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem;margin-top:1rem}
+.gate-step{min-height:122px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.85rem;border:1px solid var(--line);border-radius:17px;background:#fff}
+.gate-step .gate-icon{font-size:1.65rem}.gate-step strong{margin-top:.35rem;color:#463f79;font:800 .95rem var(--serif)}.gate-step span{margin-top:.25rem;color:var(--muted);font-size:.65rem;line-height:1.35}
+.gate-step.good{border-color:#9bd7ad;background:#effbf1}.gate-step.current{border-color:#e4c25b;background:#fff8d9}.gate-step.locked{opacity:.72;background:#f5f4f8}
+.gate-note{margin:1rem 0 0;color:#5f6680;font-size:.78rem}
+
+.learning-rule{width:min(920px,100%);margin:0 auto 1.2rem;padding:.85rem 1rem;border:1px solid #ead17f;border-radius:16px;color:#65501d;background:#fff7d2;font-size:.78rem}
+.tray-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.tray-card{min-height:270px;display:flex;flex-direction:column;align-items:center;padding:1.2rem;border:2px solid #fff;border-radius:22px;background:#fff;box-shadow:var(--soft)}
+.tray-card[data-role="learn"]{background:linear-gradient(145deg,#fff,#fff3c5)}
+.tray-card[data-role="practice"]{background:linear-gradient(145deg,#fff,#e9f8ff)}
+.tray-card[data-role="explore"]{background:linear-gradient(145deg,#fff,#eaf9ec)}
+.tray-card[data-role="create"]{background:linear-gradient(145deg,#fff,#f8eaff)}
+.tray-icon{font-size:2rem}.tray-role{margin-top:.35rem;color:#7b64b2;font-size:.59rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.tray-card h3{margin:.4rem 0 0;color:#3f426e;font:800 1.08rem var(--serif)}.tray-card p{color:var(--muted);font-size:.72rem}.tray-card .btn{width:100%;margin-top:auto}
+.tray-card.locked .btn{color:#777;background:#ececf2;pointer-events:none}
+
+.week-card{position:relative}
+.week-card.is-locked{opacity:.73;background:linear-gradient(145deg,#fafafa,#f1f0f5)}
+.week-card.is-current{outline:3px solid rgba(232,190,74,.55);box-shadow:0 16px 36px rgba(194,148,35,.16)}
+.week-card.is-mastered{border-color:#a9d9b1;background:linear-gradient(145deg,#fff,#effbef)}
+.unit-state{display:inline-flex;align-items:center;justify-content:center;min-height:28px;margin:.25rem auto .55rem;padding:.28rem .55rem;border-radius:999px;font-size:.61rem;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
+.unit-state.mastered{color:#246139;background:#daf3df}.unit-state.current{color:#765510;background:#fff0a9}.unit-state.locked{color:#765a65;background:#f2e6eb}.unit-state.open{color:#315b82;background:#e4f2ff}
+.week-card input:disabled{cursor:not-allowed;color:#8b8b96;background:#efeff3}
+.button.locked{cursor:not-allowed;color:#777!important;background:#ececf2!important;border-color:#ddd!important}
+
+.gate-overlay{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;padding:1rem;background:rgba(18,17,55,.75);backdrop-filter:blur(8px)}
+.gate-dialog{width:min(650px,100%);max-height:90vh;overflow:auto;border:4px solid #fff;border-radius:24px;background:#fffdf8;box-shadow:0 30px 90px rgba(0,0,0,.35);text-align:center}
+.gate-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.15rem;color:#fff;background:linear-gradient(135deg,#4f45bd,#8057dc)}
+.gate-dialog-head h2{margin:0;color:#fff;font:800 1.35rem var(--serif)}
+.gate-close{width:40px;height:40px;border:1px solid rgba(255,255,255,.3);border-radius:50%;color:#fff;background:rgba(255,255,255,.12);font-size:1.2rem}
+.gate-dialog-body{padding:1.4rem}.gate-dialog-body .big-lock{font-size:3rem}.gate-dialog-body h3{color:#413d75;font:800 1.5rem var(--serif)}.gate-dialog-body p{color:var(--muted)}
+.gate-dialog-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.55rem;margin-top:1rem}
+
+@media(max-width:900px){.gate-grid{grid-template-columns:repeat(2,1fr)}.tray-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.wonder-ticker{grid-template-columns:1fr auto}.ticker-label{display:none}.ticker-track{animation-duration:145s}.profile-access-row,.gate-grid,.tray-grid{grid-template-columns:1fr}.gate-step{min-height:96px}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none;transform:none}.ticker-window{overflow-x:auto;mask-image:none;-webkit-mask-image:none}}
+
 </style>
 </head>
 
@@ -1586,13 +1647,35 @@ h1,h2,h3,h4,
 <a class="skip" href="#units">Skip to 36-week curriculum</a>
 
 <div class="network-bar no-print">
-  <div class="shell network-inner">
-    <strong>✦ Khaemenes Learning Network</strong>
-    <a href="https://vervenveda.com/Khaemenes_Preschool.github.io/">Crechè</a>
-    <a href="https://vervenveda.com/Khaemenes_KinderGarden.github.io/">Kinder Garden</a>
-    <a href="https://vervenveda.com/Khaemenes_Academy.github.io/">Khaemenes Academy</a>
-    <a href="https://www.vervenveda.com/bazaarart">Bazaar Art</a>
-    <a href="https://vervenveda.com/proresource_hub.github.io/">Pro Re Sources</a>
+  <div class="shell wonder-ticker" aria-label="First Grade learning network ticker">
+    <span class="ticker-label">First Grade Wire</span>
+    <div class="ticker-window">
+      <div class="ticker-track" id="tickerTrack">
+        <div class="ticker-set"><a class="ticker-item" href="#my-profile"><strong>🌈 My Explorer Profile</strong></a>
+<a class="ticker-item" data-ticker-next="1" href="#units">⭐ Next First Grade Week</a>
+<a class="ticker-item" href="#learning-tray">🌱 Today’s Learning Tray</a>
+<a class="ticker-item" href="#units">📚 36-Week Curriculum</a>
+<a class="ticker-item" href="#adventures">🎮 Games & Practice</a>
+<a class="ticker-item" href="https://vervenveda.com/Khaemenes_Preschool.github.io/">🎠 Crechè Review</a>
+<a class="ticker-item" href="https://vervenveda.com/Khaemenes_KinderGarden.github.io/">🌻 Kinder Garden Review</a>
+<a class="ticker-item" href="https://vervenveda.com/bazaarart.github.io/">🎨 Bazaar Art</a>
+<a class="ticker-item" href="https://vervenveda.com/the_refrain.github.io/">🎵 The Refrain · Music</a>
+<a class="ticker-item" href="https://vervenveda.com/aurora.github.io/">🌿 Aurora Reset</a>
+<a class="ticker-item" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">👨‍👩‍👧 Family Portal</a></div>
+        <div class="ticker-set" aria-hidden="true"><a class="ticker-item" href="#my-profile"><strong>🌈 My Explorer Profile</strong></a>
+<a class="ticker-item" data-ticker-next="1" href="#units">⭐ Next First Grade Week</a>
+<a class="ticker-item" href="#learning-tray">🌱 Today’s Learning Tray</a>
+<a class="ticker-item" href="#units">📚 36-Week Curriculum</a>
+<a class="ticker-item" href="#adventures">🎮 Games & Practice</a>
+<a class="ticker-item" href="https://vervenveda.com/Khaemenes_Preschool.github.io/">🎠 Crechè Review</a>
+<a class="ticker-item" href="https://vervenveda.com/Khaemenes_KinderGarden.github.io/">🌻 Kinder Garden Review</a>
+<a class="ticker-item" href="https://vervenveda.com/bazaarart.github.io/">🎨 Bazaar Art</a>
+<a class="ticker-item" href="https://vervenveda.com/the_refrain.github.io/">🎵 The Refrain · Music</a>
+<a class="ticker-item" href="https://vervenveda.com/aurora.github.io/">🌿 Aurora Reset</a>
+<a class="ticker-item" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">👨‍👩‍👧 Family Portal</a></div>
+      </div>
+    </div>
+    <button class="ticker-toggle" id="tickerToggle" type="button" aria-pressed="false" aria-label="Pause ticker">Ⅱ</button>
   </div>
 </div>
 
@@ -1727,7 +1810,13 @@ h1,h2,h3,h4,
         <div class="explorer-progress">
           <div><strong id="profileWeeks">0/36</strong><span>Weeks at Mastery</span></div>
           <div><strong id="profileAverage">0%</strong><span>Weekly Average</span></div>
-          <div><strong id="profileNext">01</strong><span>Next Week</span></div>
+          <div><strong id="profileNext">01</strong><span>Next Step</span></div>
+        </div>
+
+        <div class="profile-access-row" aria-label="First Grade access status">
+          <div class="access-chip lock" id="profileAccessChip"><strong>Checking…</strong><span>Learner profile</span></div>
+          <div class="access-chip lock" id="guardianAccessChip"><strong>Checking…</strong><span>Grown-up gate</span></div>
+          <div class="access-chip lock" id="curriculumAccessChip"><strong>Locked</strong><span>Formal curriculum</span></div>
         </div>
 
         <div class="explorer-actions">
@@ -1752,7 +1841,32 @@ h1,h2,h3,h4,
   </div>
 </section>
 
-<section class="section alt" id="worlds">
+<section class="section alt" id="progression-gate">
+  <div class="shell">
+    <div class="heading">
+      <p class="kicker">First Grade Progression Protector</p>
+      <h2>One learner. One next step. Mastery opens the path.</h2>
+      <p>Games, art, music, review, and creative exploration stay open. The formal First Grade curriculum follows the learner profile and opens sequentially at 80% mastery.</p>
+    </div>
+    <div class="gate-panel">
+      <div class="gate-grid">
+        <div class="gate-step" id="gateProfile"><span class="gate-icon">👤</span><strong>Profile</strong><span>Connect the learner identity.</span></div>
+        <div class="gate-step" id="gateGuardian"><span class="gate-icon">🛡️</span><strong>Family Gate</strong><span>Grown-up setup must be confirmed.</span></div>
+        <div class="gate-step" id="gateWeeks"><span class="gate-icon">📚</span><strong>Weeks 1–18</strong><span>Each week reaches 80% before the next opens.</span></div>
+        <div class="gate-step" id="gateMidterm"><span class="gate-icon">⭐</span><strong>Midyear</strong><span>Unlocks after Weeks 1–18; 80% opens Week 19.</span></div>
+        <div class="gate-step" id="gateFinal"><span class="gate-icon">🎓</span><strong>Final & Certificate</strong><span>All 36 weeks + final mastery + portfolio.</span></div>
+      </div>
+      <p class="gate-note" id="gateMessage">Checking the local learner profile and First Grade record…</p>
+      <div class="actions">
+        <button class="btn primary" id="gateContinue" type="button">Continue My Next Step</button>
+        <a class="btn gold" href="../../index.html#profiles">Elementary Profiles</a>
+        <a class="btn" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family Portal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="worlds">
   <div class="shell">
     <div class="heading">
       <p class="kicker">Choose a World</p>
@@ -1820,6 +1934,18 @@ h1,h2,h3,h4,
         <a class="btn" href="apps/elementary_kindness_quest_index.html">Open Kindness Quest</a>
       </article>
     </div>
+  </div>
+</section>
+
+<section class="section alt" id="learning-tray">
+  <div class="shell">
+    <div class="heading">
+      <p class="kicker">Learn · Practice · Explore · Create</p>
+      <h2>Today’s First Grade learning tray.</h2>
+      <p>The formal lesson stays at the center. Companion tools are selected from First Grade, Elementary, Kinder Garden, and Crechè according to the next curriculum unit.</p>
+    </div>
+    <div class="learning-rule"><strong>The lesson is the lesson.</strong> Practice games and creative tools do not unlock later curriculum weeks. Formal progression comes from the learner profile, the weekly mastery record, the 80% rule, and the midyear/final milestones.</div>
+    <div class="tray-grid" id="firstGradeLearningTray"></div>
   </div>
 </section>
 
@@ -2018,6 +2144,22 @@ h1,h2,h3,h4,
 
 </main>
 
+<div class="gate-overlay no-print" id="grade1GateOverlay" hidden>
+  <section class="gate-dialog" role="dialog" aria-modal="true" aria-labelledby="grade1GateTitle">
+    <div class="gate-dialog-head"><h2 id="grade1GateTitle">First Grade Progression Protector</h2><button class="gate-close" id="grade1GateClose" type="button" aria-label="Close">×</button></div>
+    <div class="gate-dialog-body">
+      <div class="big-lock" id="grade1GateIcon">🔒</div>
+      <h3 id="grade1GateHeading">This learning step is not open yet.</h3>
+      <p id="grade1GateText">Complete the current requirement first.</p>
+      <div class="gate-dialog-actions">
+        <button class="btn primary" id="grade1GateNext" type="button">Go to My Next Step</button>
+        <a class="btn gold" href="../../index.html#profiles">Open Elementary Profiles</a>
+        <a class="btn" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family Portal</a>
+      </div>
+    </div>
+  </section>
+</div>
+
 <footer class="footer no-print">
   <div class="shell">
     © <span id="year"></span> Jennifer Kay Pearl · Khaemenes Academy · First Grade Wonderverse
@@ -2034,8 +2176,11 @@ h1,h2,h3,h4,
 <!-- Shared family / learner continuity. The page still works if these are unavailable. -->
 <script src="https://vervenveda.com/Khaemenes_Preschool.github.io/assets/khaemenes-profile-bridge.js"></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
+<script src="https://vervenveda.com/Khaemenes_KinderGarden.github.io/assets/khaemenes-kinder-continuity.js"></script>
+<script src="assets/khaemenes-grade1-continuity.js"></script>
+<script>window.KhaemenesGrade1Continuity?.activate?.();</script>
 
-<!-- Existing First Grade curriculum data and record engine. -->
+<!-- First Grade curriculum data and mastery-gated record engine. -->
 <script src="data/course-data.js"></script>
 <script src="assets/app.js"></script>
 
@@ -2300,7 +2445,7 @@ function updatePersonalPortal(){
     $("#explorerAvatar").textContent = "🚀";
     $("#explorerName").textContent = "My Explorer Portal";
     $("#explorerMessage").textContent =
-      "A grown-up can create or connect the Khaemenes learner profile. First Grade can still use a local curriculum record without one.";
+      "A grown-up can create or connect the learner/family profile. Games and review remain open, while the formal First Grade curriculum waits for the profile gate.";
     $("#mentorAvatar").textContent = "✨";
     $("#mentorName").textContent = "Meet Your Khaemenes Mentor";
     $("#mentorMessage").textContent =
@@ -2456,5 +2601,8 @@ setMission(Math.floor(Date.now()/86400000));
 })();
 </script>
 
+<script src="assets/first-grade-landing-v3.js"></script>
+</body>
+</html>
 </body>
 </html>
