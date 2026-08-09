@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Number Bonds Garden 🌱</title>
+<meta name="description" content="A sovereign K–2 number bonds learning garden for composing and decomposing 0–10, early addition/subtraction, and handwriting numbers.">
+<style>
+:root{
+  --ink:#23404b;--green:#5ea86b;--leaf:#eaf7e8;--teal:#4fa5a0;--sky:#eaf8fb;--gold:#efc85b;
+  --coral:#ed8f73;--violet:#8978c8;--paper:#fffef8;--line:#d6e4df;--muted:#6d7b7f;--shadow:0 16px 42px #284b5118
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;background:linear-gradient(135deg,#eaf8ef,#fff7d9 55%,#eef7ff)}
+button,input,select{font:inherit}button{cursor:pointer}
+.app{max-width:1360px;margin:auto;padding:16px}
+.hero{background:#ffffffee;border:1px solid #fff;border-radius:24px;padding:18px;text-align:center;box-shadow:var(--shadow)}
+.hero h1{margin:2px;font:600 clamp(30px,5vw,54px) Georgia,serif;color:#356049}.hero p{max-width:880px;margin:8px auto;color:var(--muted)}
+.controls,.tabs,.actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+.controls select,.controls input,.tabs button,.actions button{border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px 11px}
+.tabs button.active,.primary{background:#356049!important;color:#fff!important;border-color:#356049!important}
+.panel{display:none;margin-top:14px}.panel.active{display:block}
+.grid{display:grid;grid-template-columns:300px 1fr;gap:14px}
+.card{background:#fffffff2;border:1px solid #fff;border-radius:18px;padding:14px;box-shadow:var(--shadow)}
+.card h2,.card h3{font-family:Georgia,serif;color:#356049;margin-top:0}
+.note{font-size:.82rem;color:var(--muted)}
+.skill{padding:9px;border:1px solid var(--line);border-radius:12px;background:#fff;margin:7px 0}.skill strong{display:block}
+.meter{height:8px;background:#e8eeee;border-radius:99px;overflow:hidden;margin-top:5px}.meter span{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--green),var(--gold))}
+.stage{text-align:center}
+.prompt{padding:11px;border-radius:12px;background:var(--sky);font-size:1.1rem}
+.bond{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:620px;margin:26px auto 10px;position:relative}
+.whole{grid-column:1/-1;justify-self:center;width:140px;height:140px;border-radius:50%;background:#fff6c9;border:4px solid var(--gold);display:grid;place-items:center;font-size:54px;font-weight:800}
+.part{width:130px;height:130px;border-radius:50%;background:#eefaf0;border:4px solid #8bc79a;display:grid;place-items:center;font-size:46px;font-weight:800;justify-self:center}
+.connector{position:absolute;left:50%;top:120px;width:4px;height:78px;background:#87989a;transform:translateX(-50%)}
+.connector:before,.connector:after{content:"";position:absolute;top:68px;width:170px;height:4px;background:#87989a}
+.connector:before{right:0;transform:rotate(25deg);transform-origin:right center}.connector:after{left:0;transform:rotate(-25deg);transform-origin:left center}
+.counterGarden{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:16px}.counter{width:38px;height:38px;border-radius:50%;background:#8fcf99;border:2px solid #4f9960;display:grid;place-items:center;font-size:18px}.counter.alt{background:#89c7d4;border-color:#498da0}
+.numberChoices{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:14px}.numberChoices button{width:52px;height:52px;border-radius:12px;border:1px solid var(--line);background:#fff;font-size:23px;font-weight:800}.numberChoices button:hover{background:#eef9f0}
+.feedback{min-height:38px;font-weight:800;color:#356049}
+.equation{font-size:44px;font-weight:800;margin:15px}.equation .blank{display:inline-block;min-width:70px;border-bottom:4px solid #5e777f;color:var(--coral)}
+.tenframe{display:grid;grid-template-columns:repeat(5,50px);grid-template-rows:repeat(2,50px);gap:4px;justify-content:center;margin:20px}.cell{border:2px solid #8aa0a5;border-radius:8px;background:#fff}.cell.on{background:#8fcf99}
+.storyBox{max-width:650px;margin:20px auto;padding:16px;border-radius:14px;background:#fff7df;border:1px solid #ead79d;font-size:1.15rem}
+.familyGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.familyCard{padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff;text-align:center}.familyCard strong{font-size:26px;color:#356049}
+.numberWrite{max-width:850px;margin:auto}.numberSheet{background:#fff;border:2px solid #222;border-radius:14px;padding:22px}.numTitle{text-align:center}.numTitle strong{font-size:86px}.traceRow{height:95px;position:relative;margin:10px 0}.traceRow:before,.traceRow:after,.traceRow .mid{content:"";position:absolute;left:0;right:0;border-top:1.3px solid #7d888b}.traceRow:before{top:8px}.traceRow .mid{top:50%;border-top:1px dashed #98a6a9}.traceRow:after{bottom:8px}.traceNums{position:absolute;left:10px;bottom:10px;font:64px "Comic Sans MS","Trebuchet MS",sans-serif;color:#c8d0d2;letter-spacing:18px}
+.numCanvasWrap{height:260px;position:relative;border:1px solid #d7e1df;border-radius:12px}.numCanvasWrap:before,.numCanvasWrap:after,.numCanvasWrap .mid{content:"";position:absolute;left:0;right:0;border-top:1.2px solid #8b9698}.numCanvasWrap:before{top:20%}.numCanvasWrap .mid{top:50%;border-top:1px dashed #a3afb1}.numCanvasWrap:after{bottom:20%}
+.numModel{position:absolute;inset:0;display:grid;place-items:center;font:190px "Comic Sans MS","Trebuchet MS",sans-serif;color:#d7dcde;pointer-events:none}
+canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.sample{border:1px solid var(--line);border-radius:12px;background:#fff;padding:10px}.sample img{width:100%;border-radius:8px}.sample h4{margin:0;color:#356049}
+.badge{display:inline-block;padding:4px 8px;border-radius:99px;background:var(--leaf);font-size:.74rem;margin:2px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.familyGrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.bond{gap:14px}.whole,.part{width:110px;height:110px}.connector{display:none}.portfolio{grid-template-columns:1fr}.tenframe{grid-template-columns:repeat(5,42px);grid-template-rows:repeat(2,42px)}}
+@media print{body{background:#fff}.hero,.tabs,.no-print,.card:first-child{display:none!important}.panel{display:none!important}#writePanel{display:block!important}.grid{display:block}.card{box-shadow:none;border:0}.numberSheet{border:1px solid #222}}
+</style>
+</head>
+<body><div class="app">
+<header class="hero">
+<div style="font-size:42px">🌱 🔢 🌼 ✍️</div>
+<h1>Number Bonds Garden</h1>
+<p>Compose and decompose 0–10, see the parts inside the whole, grow into early addition and subtraction, and practice writing the numbers you use.</p>
+<div class="controls">
+<select id="level"><option>Preschool Readiness</option><option selected>Kindergarten</option><option>Grade 1</option><option>Grade 2 Review</option></select>
+<input id="name" placeholder="Learner name">
+<button id="saveProfile">Save Learner</button>
+<button id="guide">🔊 Friendly Guide</button>
+</div>
+<div class="tabs">
+<button class="active" data-tab="build">🌱 Build a Bond</button>
+<button data-tab="tenframe">🔟 Ten-Frame Lab</button>
+<button data-tab="equation">➕➖ Equation Garden</button>
+<button data-tab="story">📖 Story Bonds</button>
+<button data-tab="families">🌻 Fact Families</button>
+<button data-tab="write">✍️ Write Numbers</button>
+<button data-tab="portfolio">📁 Growth</button>
+</div>
+</header>
+
+<section class="panel active" id="buildPanel">
+<div class="grid">
+<aside class="card"><h2>Adaptive Number Garden</h2><p class="note">Practice gently revisits number bonds that need more experience. No leaderboard or competitive scoring.</p><div id="skills"></div><div class="actions"><button id="newBond">New Bond</button></div></aside>
+<main class="card stage">
+<div class="prompt" id="bondPrompt">Find the missing part.</div>
+<div class="bond"><div class="whole" id="whole">7</div><div class="connector"></div><div class="part" id="partA">3</div><div class="part" id="partB">?</div></div>
+<div class="counterGarden" id="counters"></div>
+<div class="numberChoices" id="choices"></div>
+<div class="actions"><button id="hearBond">🔊 Hear It</button><button id="showBond">Show Parts</button></div>
+<div class="feedback" id="bondFeedback"></div>
+</main></div>
+</section>
+
+<section class="panel" id="tenframePanel">
+<div class="grid"><aside class="card"><h2>Ten-Frame Lab</h2><p>See how many spaces are filled and how many are empty.</p><div class="actions"><button id="newFrame">New Frame</button></div></aside>
+<main class="card stage"><div class="prompt" id="framePrompt"></div><div class="tenframe" id="tenframe"></div><div class="numberChoices" id="frameChoices"></div><div class="feedback" id="frameFeedback"></div></main></div>
+</section>
+
+<section class="panel" id="equationPanel">
+<div class="grid"><aside class="card"><h2>Equation Garden</h2><p>Connect number bonds to addition and subtraction symbols.</p><select id="operation" style="width:100%;padding:9px"><option value="add">Addition</option><option value="sub">Subtraction</option><option value="mixed">Mixed</option></select><div class="actions"><button id="newEquation">New Equation</button></div></aside>
+<main class="card stage"><div class="equation" id="equation"></div><div class="counterGarden" id="eqCounters"></div><div class="numberChoices" id="eqChoices"></div><div class="feedback" id="eqFeedback"></div></main></div>
+</section>
+
+<section class="panel" id="storyPanel">
+<div class="grid"><aside class="card"><h2>Story Bonds</h2><p>Turn a number bond into a little story.</p><div class="actions"><button id="newStory">New Story</button></div></aside>
+<main class="card stage"><div class="storyBox" id="storyBox"></div><div class="numberChoices" id="storyChoices"></div><div class="feedback" id="storyFeedback"></div></main></div>
+</section>
+
+<section class="panel" id="familiesPanel">
+<div class="grid"><aside class="card"><h2>Fact Family Garden</h2><p>One number bond can grow four related facts.</p><div class="actions"><button id="newFamily">New Family</button></div></aside>
+<main class="card stage"><div class="familyGrid" id="familyGrid"></div><div class="feedback" id="familyFeedback"></div></main></div>
+</section>
+
+<section class="panel" id="writePanel">
+<div class="grid">
+<aside class="card no-print"><h2>Write Numbers 0–10</h2><p>Trace the number, copy it, and write it independently.</p><select id="writeNumber" style="width:100%;padding:9px"></select><div class="actions"><button id="makeNumberSheet" class="primary">Make Page</button><button id="printNumber">🖨 Print</button><button id="clearNumberPad">Clear Writing</button><button id="saveNumberSample">Save Sample</button></div><p class="note">This handwriting section uses the same trace → copy → independent-writing logic as Letter & Handwriting Garden, but is focused only on numerals.</p></aside>
+<main class="card"><div class="numberWrite"><div class="numberSheet"><div class="numTitle"><div>My Number Writing Garden</div><strong id="numberTitle">7</strong><p id="numberWords">seven</p></div><div id="numberTraceRows"></div><h3>Write it by yourself:</h3><div class="numCanvasWrap"><span class="mid"></span><div class="numModel" id="numModel">7</div><canvas id="numberPad"></canvas></div><p>How many? Draw or make that many dots below:</p><div class="traceRow"><span class="mid"></span></div></div></div></main>
+</div>
+</section>
+
+<section class="panel" id="portfolioPanel">
+<div class="card"><h2>Number Growth Portfolio</h2><p>Save representative number-writing samples and learning milestones locally.</p><div class="actions no-print"><button id="exportPortfolio">Export JSON</button><button id="wipePortfolio">Clear Samples</button></div><div class="portfolio" id="portfolio"></div></div>
+</section>
+</div>
+
+<script>
+(()=>{"use strict";
+const $=id=>document.getElementById(id),KEY="khaemenes_number_bonds_garden_v1";
+const words=["zero","one","two","three","four","five","six","seven","eight","nine","ten"];
+let state={profile:{name:"",level:"Kindergarten"},mastery:{},samples:[],round:0},bond={},eq={},story={},family={};
+try{Object.assign(state,JSON.parse(localStorage.getItem(KEY)||"{}"))}catch{}
+$("name").value=state.profile.name||"";$("level").value=state.profile.level||"Kindergarten";
+$("writeNumber").innerHTML=Array.from({length:11},(_,i)=>`<option value="${i}">${i} — ${words[i]}</option>`).join("");
+function save(){localStorage.setItem(KEY,JSON.stringify(state))}
+function speak(t){if(!("speechSynthesis"in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);const vs=speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang||"")&&!/robot|novelty|whisper/i.test(v.name||""));u.voice=vs.find(v=>/samantha|aria|jenny|ava|victoria|karen/i.test(v.name||""))||vs[0]||null;u.rate=.86;u.pitch=1.02;speechSynthesis.speak(u)}
+$("guide").onclick=()=>speak("Welcome to Number Bonds Garden. A whole number can be made from two parts. Build it, break it apart, and write the numbers you use.");
+$("saveProfile").onclick=()=>{state.profile={name:$("name").value.trim(),level:$("level").value};save()};$("level").onchange=()=>{state.profile.level=$("level").value;save()};
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-tab]").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");$(b.dataset.tab+"Panel").classList.add("active");if(b.dataset.tab==="write")setTimeout(()=>pad.resize(),20)});
+
+function mastery(n){return state.mastery[n]||0}function bump(n,amt=8){state.mastery[n]=Math.min(100,mastery(n)+amt);save();renderSkills()}
+function adaptiveWhole(){const pool=Array.from({length:11},(_,i)=>i).map(n=>({n,w:100-mastery(n)+Math.random()*30})).sort((a,b)=>b.w-a.w);return pool[Math.floor(Math.random()*Math.min(5,pool.length))].n}
+function renderSkills(){$("skills").innerHTML=Array.from({length:11},(_,i)=>`<div class="skill"><strong>Number ${i}</strong><div class="meter"><span style="width:${mastery(i)}%"></span></div></div>`).join("")}
+function nums(correct){let opts=new Set([correct]);while(opts.size<5)opts.add(Math.max(0,Math.min(10,correct+Math.floor(Math.random()*7)-3)));return [...opts].sort((a,b)=>a-b)}
+function renderChoices(host,correct,cb){$(host).innerHTML=nums(correct).map(n=>`<button data-n="${n}">${n}</button>`).join("");document.querySelectorAll(`#${host} [data-n]`).forEach(b=>b.onclick=()=>cb(+b.dataset.n))}
+function counters(total,a){$("counters").innerHTML=Array.from({length:total},(_,i)=>`<span class="counter ${i>=a?"alt":""}">🌱</span>`).join("")}
+
+function newBond(){const whole=adaptiveWhole(),a=Math.floor(Math.random()*(whole+1)),b=whole-a;bond={whole,a,b};$("whole").textContent=whole;$("partA").textContent=a;$("partB").textContent="?";$("bondPrompt").textContent=`${whole} is the whole. One part is ${a}. What is the other part?`;counters(whole,a);renderChoices("choices",b,n=>{if(n===b){$("partB").textContent=b;$("bondFeedback").textContent=`🌼 Yes! ${a} and ${b} make ${whole}.`;bump(whole);state.round++;save()}else $("bondFeedback").textContent="Try another part. Count the second color of counters."});$("bondFeedback").textContent=""}
+$("newBond").onclick=newBond;$("hearBond").onclick=()=>speak(`${bond.a} and ${bond.b} make ${bond.whole}`);$("showBond").onclick=()=>{$("partB").textContent=bond.b;$("bondFeedback").textContent=`${bond.whole} can be decomposed into ${bond.a} and ${bond.b}.`};
+
+function newFrame(){const n=adaptiveWhole();$("tenframe").innerHTML=Array.from({length:10},(_,i)=>`<div class="cell ${i<n?"on":""}"></div>`).join("");$("framePrompt").textContent="How many spaces are filled?";renderChoices("frameChoices",n,x=>{if(x===n){$("frameFeedback").textContent=`Yes. The ten-frame shows ${n}.`;bump(n,5)}else $("frameFeedback").textContent="Count the filled spaces again."});$("frameFeedback").textContent=""}
+$("newFrame").onclick=newFrame;
+
+function newEquation(){let op=$("operation").value;if(op==="mixed")op=Math.random()<.5?"add":"sub";if(op==="add"){const whole=adaptiveWhole(),a=Math.floor(Math.random()*(whole+1)),b=whole-a;eq={op,a,b,ans:whole};$("equation").innerHTML=`${a} + ${b} = <span class="blank">?</span>`;$("eqCounters").innerHTML=Array.from({length:whole},(_,i)=>`<span class="counter ${i>=a?"alt":""}">${i<a?"●":"○"}</span>`).join("")}else{const whole=Math.max(1,adaptiveWhole()),b=Math.floor(Math.random()*(whole+1)),a=whole-b;eq={op,whole,b,ans:a};$("equation").innerHTML=`${whole} − ${b} = <span class="blank">?</span>`;$("eqCounters").innerHTML=Array.from({length:whole},(_,i)=>`<span class="counter ${i>=a?"alt":""}">${i<a?"●":"✕"}</span>`).join("")}renderChoices("eqChoices",eq.ans,n=>{if(n===eq.ans){$("eqFeedback").textContent="🌱 Correct. The number bond and equation tell the same story.";bump(eq.op==="add"?eq.ans:eq.whole,6)}else $("eqFeedback").textContent="Try again using the counters."});$("eqFeedback").textContent=""}
+$("newEquation").onclick=newEquation;$("operation").onchange=newEquation;
+
+const storyTypes=[
+(w,a,b)=>`There are ${w} flowers in the garden. ${a} are yellow. How many are another color?`,
+(w,a,b)=>`${a} birds are on a fence and ${b} more birds join them. How many birds are there altogether?`,
+(w,a,b)=>`A child has ${w} blocks. ${b} are put away. How many blocks are still out?`
+];
+function newStory(){const whole=Math.max(1,adaptiveWhole()),a=Math.floor(Math.random()*(whole+1)),b=whole-a,type=Math.floor(Math.random()*3);let ans;if(type===0)ans=b;else if(type===1)ans=whole;else ans=a;story={whole,a,b,type,ans};$("storyBox").textContent=storyTypes[type](whole,a,b);renderChoices("storyChoices",ans,n=>{if(n===ans){$("storyFeedback").textContent="🌼 You solved the story bond!";bump(whole,5)}else $("storyFeedback").textContent="Try drawing or counting the parts."});$("storyFeedback").textContent=""}
+$("newStory").onclick=newStory;
+
+function newFamily(){const whole=Math.max(1,adaptiveWhole()),a=Math.floor(Math.random()*(whole+1)),b=whole-a;family={whole,a,b};const facts=[`${a} + ${b} = ${whole}`,`${b} + ${a} = ${whole}`,`${whole} − ${a} = ${b}`,`${whole} − ${b} = ${a}`];$("familyGrid").innerHTML=facts.map(x=>`<div class="familyCard"><strong>${x}</strong></div>`).join("");$("familyFeedback").textContent=`The same three numbers — ${a}, ${b}, and ${whole} — make a fact family.`;bump(whole,3)}
+$("newFamily").onclick=newFamily;
+
+function makeSheet(){const n=+$("writeNumber").value;$("numberTitle").textContent=n;$("numberWords").textContent=words[n];$("numModel").textContent=n;$("numberTraceRows").innerHTML=`<h3>Trace it:</h3><div class="traceRow"><span class="mid"></span><span class="traceNums">${(`${n} `).repeat(8)}</span></div><div class="traceRow"><span class="mid"></span><span class="traceNums">${(`${n} `).repeat(8)}</span></div><h3>Copy it:</h3><div class="traceRow"><span class="mid"></span></div>`;clearPad()}
+$("makeNumberSheet").onclick=makeSheet;$("writeNumber").onchange=makeSheet;$("printNumber").onclick=()=>window.print();
+
+function makePad(){const c=$("numberPad"),ctx=c.getContext("2d"),o={c,ctx,paths:[],cur:null,down:false};function resize(){const r=c.getBoundingClientRect(),d=devicePixelRatio||1;c.width=r.width*d;c.height=r.height*d;ctx.setTransform(d,0,0,d,0,0);redraw()}c.onpointerdown=e=>{o.down=true;const r=c.getBoundingClientRect();o.cur=[[e.clientX-r.left,e.clientY-r.top]];o.paths.push(o.cur);try{c.setPointerCapture(e.pointerId)}catch{}};c.onpointermove=e=>{if(!o.down)return;const r=c.getBoundingClientRect();o.cur.push([e.clientX-r.left,e.clientY-r.top]);redraw()};c.onpointerup=()=>o.down=false;c.onpointerleave=()=>o.down=false;o.resize=resize;return o}
+function redraw(){pad.ctx.clearRect(0,0,pad.c.clientWidth,pad.c.clientHeight);pad.ctx.strokeStyle="#23404b";pad.ctx.lineWidth=5;pad.ctx.lineCap="round";pad.ctx.lineJoin="round";pad.paths.forEach(p=>{if(p.length<2)return;pad.ctx.beginPath();pad.ctx.moveTo(...p[0]);p.slice(1).forEach(q=>pad.ctx.lineTo(...q));pad.ctx.stroke()})}function clearPad(){pad.paths=[];redraw()}
+const pad=makePad();addEventListener("resize",()=>pad.resize());$("clearNumberPad").onclick=clearPad;
+$("saveNumberSample").onclick=()=>{const n=+$("writeNumber").value;state.samples.unshift({id:Date.now(),number:n,date:new Date().toLocaleDateString(),level:$("level").value,image:pad.c.toDataURL("image/png")});state.samples=state.samples.slice(0,40);bump(n,4);save();renderPortfolio()};
+function renderPortfolio(){$("portfolio").innerHTML=state.samples.length?state.samples.map(x=>`<div class="sample"><img src="${x.image}"><h4>Number ${x.number}</h4><div><span class="badge">${x.level}</span><span class="badge">${x.date}</span></div></div>`).join(""):`<p class="note">No saved number-writing samples yet.</p>`}
+$("exportPortfolio").onclick=()=>{const b=new Blob([JSON.stringify({schema:"khaemenes-number-bonds-v1",profile:state.profile,mastery:state.mastery,samples:state.samples},null,2)],{type:"application/json"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="number-bonds-garden-growth.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)};$("wipePortfolio").onclick=()=>{if(confirm("Clear saved number-writing samples?")){state.samples=[];save();renderPortfolio()}};
+
+renderSkills();newBond();newFrame();newEquation();newStory();newFamily();makeSheet();renderPortfolio();
+})();
+</script></body></html>
