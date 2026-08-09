@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceId": "khaemenes.elementary",
   "name": "Khaemenes Elementary",
   "classification": "educational",
@@ -19,7 +19,7 @@
     {
       "id": "elementary-home",
       "title": "Khaemenes Elementary",
-      "description": "",
+      "description": "Grades 1–5 learning hub with student and family pathways, progress tools, and grade navigation.",
       "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/",
       "audiences": [
         "elementary",
@@ -37,16 +37,162 @@
       "skills": [],
       "tags": [
         "elementary",
-        "learning-home"
+        "learning-home",
+        "grades-1-5"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "grade-01",
+      "title": "First Grade · Wonderverse",
+      "description": "Khaemenes Elementary Grade 1 curriculum portal.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-01/",
+      "audiences": [
+        "elementary",
+        "parent"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "education",
+        "grade-navigation"
+      ],
+      "skills": [
+        "course-navigation"
+      ],
+      "tags": [
+        "grade-01",
+        "curriculum",
+        "elementary"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "grade-02",
+      "title": "Second Grade",
+      "description": "Khaemenes Elementary Grade 2 curriculum portal.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-02/",
+      "audiences": [
+        "elementary",
+        "parent"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "education",
+        "grade-navigation"
+      ],
+      "skills": [
+        "course-navigation"
+      ],
+      "tags": [
+        "grade-02",
+        "curriculum",
+        "elementary"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "grade-03",
+      "title": "Third Grade",
+      "description": "Khaemenes Elementary Grade 3 curriculum portal.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-03/",
+      "audiences": [
+        "elementary",
+        "parent"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "education",
+        "grade-navigation"
+      ],
+      "skills": [
+        "course-navigation"
+      ],
+      "tags": [
+        "grade-03",
+        "curriculum",
+        "elementary"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "grade-04",
+      "title": "Fourth Grade",
+      "description": "Khaemenes Elementary Grade 4 curriculum portal.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-04/",
+      "audiences": [
+        "elementary",
+        "parent"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "education",
+        "grade-navigation"
+      ],
+      "skills": [
+        "course-navigation"
+      ],
+      "tags": [
+        "grade-04",
+        "curriculum",
+        "elementary"
+      ],
+      "mentorEligible": true,
+      "featured": true
+    },
+    {
+      "id": "grade-05",
+      "title": "Fifth Grade",
+      "description": "Khaemenes Elementary Grade 5 curriculum portal.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-05/",
+      "audiences": [
+        "elementary",
+        "parent"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "education",
+        "grade-navigation"
+      ],
+      "skills": [
+        "course-navigation"
+      ],
+      "tags": [
+        "grade-05",
+        "curriculum",
+        "elementary"
       ],
       "mentorEligible": true,
       "featured": true
     },
     {
       "id": "geometry-game",
-      "title": "Elementary Geometry Game",
-      "description": "",
-      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/apps/elementary_geometry_game_index.html",
+      "title": "Elementary Geometry",
+      "description": "K–5 geometry and spatial-reasoning practice.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/elementary_geometry/",
       "audiences": [
         "elementary"
       ],
@@ -64,6 +210,7 @@
       ],
       "tags": [
         "math",
+        "geometry",
         "game"
       ],
       "mentorEligible": true,
@@ -72,9 +219,9 @@
     },
     {
       "id": "kindness-quest",
-      "title": "Kindness Quest",
-      "description": "",
-      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/apps/elementary_kindness_quest_index.html",
+      "title": "Kindness Quest Academy",
+      "description": "K–5 social-emotional learning and service challenges with reflection and local progress.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/kindness_quest/",
       "audiences": [
         "elementary"
       ],
@@ -84,15 +231,18 @@
         "educator"
       ],
       "domains": [
-        "social-emotional"
+        "social-emotional",
+        "character-education"
       ],
       "skills": [
         "kindness",
-        "reflection"
+        "reflection",
+        "service"
       ],
       "tags": [
         "sel",
-        "character"
+        "character",
+        "service"
       ],
       "mentorEligible": true,
       "minutes": 12,
@@ -100,9 +250,9 @@
     },
     {
       "id": "vocabulary-garden",
-      "title": "Vocabulary Garden",
-      "description": "",
-      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/apps/elementary_vocabulary_garden_index.html",
+      "title": "Vocabulary Garden Academy",
+      "description": "K–5 vocabulary practice with definitions, context clues, synonyms, antonyms, roots, and quizzes.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/elementary_vocabulary_garden/",
       "audiences": [
         "elementary"
       ],
@@ -116,11 +266,14 @@
       ],
       "skills": [
         "vocabulary",
-        "reading"
+        "reading",
+        "context-clues",
+        "word-analysis"
       ],
       "tags": [
         "words",
-        "literacy"
+        "literacy",
+        "vocabulary"
       ],
       "mentorEligible": true,
       "minutes": 15,
@@ -128,9 +281,9 @@
     },
     {
       "id": "weather-portal",
-      "title": "Elementary Weather Portal",
-      "description": "",
-      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/apps/elementary_weather_portal_index.html",
+      "title": "Solanar for Kids · Elementary Weather Portal",
+      "description": "Elementary weather science, observation, safety, experiments, quizzes, moon phase, and air-quality learning.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/elementary_weather_portal/",
       "audiences": [
         "elementary"
       ],
@@ -140,25 +293,29 @@
         "educator"
       ],
       "domains": [
-        "science"
+        "science",
+        "earth-science"
       ],
       "skills": [
         "weather",
-        "observation"
+        "observation",
+        "weather-safety",
+        "scientific-inquiry"
       ],
       "tags": [
         "science",
-        "weather"
+        "weather",
+        "solanar"
       ],
       "mentorEligible": true,
-      "minutes": 15,
+      "minutes": 20,
       "energy": "curious"
     },
     {
       "id": "emotional-garden",
-      "title": "Emotional Garden",
-      "description": "",
-      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/apps/emotional_garden_index.html",
+      "title": "Noetic Elementary Psychology Garden",
+      "description": "Privacy-first Grades 1–5 emotional literacy and psychology learning.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/emotional_garden/",
       "audiences": [
         "elementary"
       ],
@@ -168,15 +325,18 @@
         "educator"
       ],
       "domains": [
-        "social-emotional"
+        "social-emotional",
+        "health"
       ],
       "skills": [
         "feelings-vocabulary",
-        "reflection"
+        "reflection",
+        "self-awareness"
       ],
       "tags": [
         "sel",
-        "feelings"
+        "feelings",
+        "wellness"
       ],
       "mentorEligible": true,
       "minutes": 10,
@@ -184,9 +344,9 @@
     },
     {
       "id": "learn-new-word",
-      "title": "Learn a New Word · Elementary",
-      "description": "",
-      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/apps/learn_a_new_word_elementary_index.html",
+      "title": "Learn a New Word · Enchanted Word Garden",
+      "description": "Elementary vocabulary and word-learning practice.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/learn_a_new_word/",
       "audiences": [
         "elementary"
       ],
@@ -211,10 +371,10 @@
       "energy": "steady"
     },
     {
-      "id": "little-kitchen-helper",
-      "title": "Little Kitchen Helper",
-      "description": "",
-      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/apps/little_kitchen_helper_index.html",
+      "id": "force-motion-ramp-lab",
+      "title": "Force & Motion Ramp Lab",
+      "description": "Grades 1–5 interactive force, motion, engineering, data, and graphing simulator.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/force-motion-ramp-lab-k-5/",
       "audiences": [
         "elementary"
       ],
@@ -224,26 +384,32 @@
         "educator"
       ],
       "domains": [
-        "life-skills"
+        "science",
+        "engineering",
+        "mathematics"
       ],
       "skills": [
-        "following-directions",
-        "practical-learning"
+        "force",
+        "motion",
+        "experimentation",
+        "data",
+        "graphing"
       ],
       "tags": [
-        "life-skills",
-        "family",
-        "off-screen"
+        "stem",
+        "physics",
+        "engineering",
+        "simulation"
       ],
       "mentorEligible": true,
       "minutes": 20,
-      "energy": "active"
+      "energy": "focused"
     },
     {
-      "id": "lunar-phase-explorer",
-      "title": "Lunar Phase Explorer",
-      "description": "",
-      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/apps/lunar_phase_explorer_index.html",
+      "id": "fraction-picnic",
+      "title": "Fraction Picnic",
+      "description": "Grades 1–5 visual fraction learning lab.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/fraction-picnic-k-5/",
       "audiences": [
         "elementary"
       ],
@@ -253,19 +419,152 @@
         "educator"
       ],
       "domains": [
-        "science"
+        "mathematics"
       ],
       "skills": [
-        "moon-phases",
-        "observation"
+        "fractions",
+        "visual-models",
+        "equivalence"
       ],
       "tags": [
-        "space",
-        "science"
+        "math",
+        "fractions",
+        "visual-learning"
       ],
       "mentorEligible": true,
       "minutes": 15,
+      "energy": "playful"
+    },
+    {
+      "id": "junior-city-council",
+      "title": "Junior City Council",
+      "description": "Grades 1–5 civics, viewpoints, voting, reasoning, and public-service simulation.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/jr-city-council/",
+      "audiences": [
+        "elementary"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "social-studies",
+        "civics"
+      ],
+      "skills": [
+        "civic-literacy",
+        "voting",
+        "reasoning",
+        "viewpoints"
+      ],
+      "tags": [
+        "civics",
+        "government",
+        "simulation"
+      ],
+      "mentorEligible": true,
+      "minutes": 25,
+      "energy": "curious"
+    },
+    {
+      "id": "junior-engineer-studio",
+      "title": "Junior Engineer Studio",
+      "description": "Grades 1–5 engineering design studio.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/junior-engineer-studio/",
+      "audiences": [
+        "elementary"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "engineering",
+        "technology",
+        "design"
+      ],
+      "skills": [
+        "engineering-design",
+        "problem-solving",
+        "design-thinking"
+      ],
+      "tags": [
+        "stem",
+        "engineering",
+        "design"
+      ],
+      "mentorEligible": true,
+      "minutes": 25,
+      "energy": "focused"
+    },
+    {
+      "id": "bazaar-junior-art-studio",
+      "title": "Bazaar Junior Art Studio",
+      "description": "Grades 1–5 digital art, symmetry, shapes, collage, patterns, color theory, posters, print, and export.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/bazaarart-jr-studio/",
+      "audiences": [
+        "elementary"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "arts",
+        "design"
+      ],
+      "skills": [
+        "visual-art",
+        "symmetry",
+        "color-theory",
+        "composition"
+      ],
+      "tags": [
+        "art",
+        "bazaar-art",
+        "creative"
+      ],
+      "mentorEligible": true,
+      "minutes": 25,
+      "energy": "creative"
+    },
+    {
+      "id": "curiosity-machine",
+      "title": "Curiosity Machine",
+      "description": "Grades 1–5 prediction, explanation, drawing, testing, observation, and reflection lab for science and writing.",
+      "url": "https://vervenveda.com/Khaemenes_Elementary.github.io/games/curiosity-machine/",
+      "audiences": [
+        "elementary"
+      ],
+      "roles": [
+        "student",
+        "parent",
+        "educator"
+      ],
+      "domains": [
+        "science",
+        "language-literacy"
+      ],
+      "skills": [
+        "prediction",
+        "observation",
+        "testing",
+        "explanation",
+        "reflection"
+      ],
+      "tags": [
+        "inquiry",
+        "science",
+        "writing",
+        "lab"
+      ],
+      "mentorEligible": true,
+      "minutes": 20,
       "energy": "curious"
     }
-  ]
+  ],
+  "mentorNotes": "Version 2 aligns Mentor routing to the current grade and games folder architecture. Only repository targets verified during the 2026-08-09 audit are included. Legacy Little Kitchen Helper and Lunar Phase Explorer entries were not carried forward because a current Elementary successor path was not verified."
 }
