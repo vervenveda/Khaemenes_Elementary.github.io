@@ -1,9 +1,9 @@
 /*
- * Khaemenes Elementary · Family Adapter v1.0.0
+ * Khaemenes Elementary · Family Adapter v1.1.0
  * ---------------------------------------------
  * Family Registry is authoritative for learner/family identity.
  * This adapter never creates a family, never auto-promotes a learner,
- * and never treats legacy mentor fields as authority.
+ * and never treats legacy mentor or local profile fields as authority.
  */
 (function attachElementaryFamilyAdapter(global){
   "use strict";
@@ -27,8 +27,8 @@
     try{localStorage.setItem(LEGACY_KEY,JSON.stringify(value));return true}catch{return false}
   }
 
-  function stripMentorAuthority(record){
-    if(!record||typeof record!=="object")return record;
+  function stripAuthority(record){
+    if(!record||typeof record!=="object")return {};
     const next={...record};
     if(next.student&&typeof next.student==="object"){
       next.student={...next.student};
@@ -36,36 +36,39 @@
       delete next.student.mentorId;
       delete next.student.mentorIdentity;
       delete next.student.personality;
+      delete next.student.name;
+      delete next.student.grade;
     }
     delete next.mentor;
     delete next.mentorId;
     delete next.mentorIdentity;
     delete next.personality;
+    delete next.parent;
+    delete next.guardian;
+    delete next.family;
+    delete next.learnerId;
+    delete next.familyId;
+    delete next.academyIdentity;
     return next;
   }
 
   function syncCompatibility(learner){
     if(!global.KhaemenesElementaryContinuity?.isElementaryLearner?.(learner))return false;
-    const prior=stripMentorAuthority(readLegacy()||{});
+    const prior=stripAuthority(readLegacy()||{});
     const student=prior.student&&typeof prior.student==="object"?prior.student:{};
-    const grade=global.KhaemenesElementaryContinuity.normalizeGrade(
-      learner.grade||learner.gradeLevel||student.grade
-    );
+    const grade=global.KhaemenesElementaryContinuity.normalizeGrade(learner.grade||learner.gradeLevel);
     const merged={
       ...prior,
       student:{
         ...student,
-        name:cleanText(learner.nickname||student.name||"Scholar",80),
-        grade,
         favoriteSubject:cleanText(student.favoriteSubject,100),
         goal:cleanText(student.goal,400),
-        pinned:grade||cleanText(student.pinned,20)
+        pinned:cleanText(student.pinned,20)
       },
-      academyIdentity:{
+      compatibility:{
         source:"KhaemenesFamilyRegistry",
-        learnerId:cleanText(learner.learnerId,120),
-        familyId:cleanText(learner.familyId,120)||null,
         stage:"elementary",
+        grade:grade||null,
         updatedAt:new Date().toISOString()
       }
     };
@@ -82,7 +85,7 @@
     const learner=family.getLearner?.();
     if(!learner){dispatch({connected:true,eligible:false,reason:"no-active-learner"});return}
     if(!global.KhaemenesElementaryContinuity?.isElementaryLearner?.(learner)){
-      dispatch({connected:true,eligible:false,reason:"stage-mismatch",stage:cleanText(learner.stage,40)});
+      dispatch({connected:true,eligible:false,reason:"stage-mismatch"});
       return;
     }
     syncCompatibility(learner);
@@ -91,7 +94,6 @@
       connected:true,
       eligible:true,
       reason:"ok",
-      learnerId:cleanText(learner.learnerId,120),
       grade:summary?.learner?.grade||null,
       mentorId:"archaemenes",
       presentationMode:summary?.mentor?.presentationMode||"young-scholar"
@@ -100,7 +102,7 @@
 
   function ensureRouter(){
     if(global.KhaemenesNAIB)return Promise.resolve(true);
-    const existing=document.querySelector('script[data-khaemenes-naib-router]');
+    const existing=document.querySelector('script[src="'+ROUTER_SRC+'"],script[data-khaemenes-naib-router]');
     if(existing){
       return new Promise(resolve=>{
         if(global.KhaemenesNAIB){resolve(true);return}
@@ -113,6 +115,7 @@
       script.src=ROUTER_SRC;
       script.async=true;
       script.referrerPolicy="no-referrer";
+      script.crossOrigin="anonymous";
       script.dataset.khaemenesNaibRouter="true";
       script.addEventListener("load",()=>{
         try{global.dispatchEvent(new CustomEvent("khaemenes-naib-ready"))}catch{}
@@ -139,10 +142,9 @@
   });
 
   global.KhaemenesElementaryFamilyAdapter=Object.freeze({
-    version:"1.0.0",
+    version:"1.1.0",
     refresh,
     syncCompatibility,
-    stripMentorAuthority,
     ensureRouter
   });
 
