@@ -1,5 +1,5 @@
 /*
- * Khaemenes Grade 01 · Continuity Bridge v1.0.0
+ * Khaemenes Grade 01 · Continuity Bridge v1.0.1
  * ------------------------------------------------
  * Academy Family Registry owns learner identity.
  * Elementary continuity owns mentor routing.
@@ -24,15 +24,13 @@
   function writeJSON(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true}catch{return false}}
   function remove(key){try{localStorage.removeItem(key);return true}catch{return false}}
 
-  function elementarySummary(){
-    return global.KhaemenesElementaryContinuity?.getSummary?.()||null;
-  }
+  function elementarySummary(){return global.KhaemenesElementaryContinuity?.getSummary?.()||null}
 
   function learner(){
     const summary=elementarySummary();
     if(!summary?.eligible||!summary.learner)return null;
     const grade=String(summary.learner.grade||"").toLowerCase();
-    if(grade && grade!=="grade-01")return null;
+    if(grade!=="grade-01")return null;
     return Object.freeze({
       learnerId:clean(summary.learner.learnerId,120),
       familyId:clean(summary.learner.familyId,120)||null,
@@ -72,13 +70,7 @@
     if(!id||records[id])return records;
     const legacy=readJSON(LEGACY_KEY,null);
     if(!legacy)return records;
-    records[id]={
-      ...normalizeState(legacy),
-      learnerId:id,
-      linkedAt:new Date().toISOString(),
-      updatedAt:new Date().toISOString(),
-      migration:{source:LEGACY_KEY,mode:"non-destructive-copy",migratedAt:new Date().toISOString()}
-    };
+    records[id]={...normalizeState(legacy),learnerId:id,linkedAt:new Date().toISOString(),updatedAt:new Date().toISOString(),migration:{source:LEGACY_KEY,mode:"non-destructive-copy",migratedAt:new Date().toISOString()}};
     writeJSON(RECORDS_KEY,records);
     return records;
   }
@@ -88,9 +80,7 @@
     if(!l)return normalizeState(readJSON(LEGACY_KEY,{}));
     const records=migrateLegacy(l.learnerId);
     const state=normalizeState(records[l.learnerId]||{});
-    state.student=l.nickname;
-    state.learnerId=l.learnerId;
-    state.linkedAt=state.linkedAt||new Date().toISOString();
+    state.student=l.nickname;state.learnerId=l.learnerId;state.linkedAt=state.linkedAt||new Date().toISOString();
     records[l.learnerId]=state;
     writeJSON(RECORDS_KEY,records);
     writeJSON(ACTIVE_KEY,{learnerId:l.learnerId,nickname:l.nickname,activatedAt:new Date().toISOString()});
@@ -100,20 +90,15 @@
   function saveState(value){
     const l=learner();
     const state=normalizeState(value);
-    if(!l){writeJSON(LEGACY_KEY,state);return state}
-    state.student=l.nickname;
-    state.learnerId=l.learnerId;
-    state.updatedAt=new Date().toISOString();
-    const records=allRecords();
-    records[l.learnerId]=state;
-    writeJSON(RECORDS_KEY,records);
-    writeJSON(LEGACY_KEY,state);
+    if(!l)return state;
+    state.student=l.nickname;state.learnerId=l.learnerId;state.updatedAt=new Date().toISOString();
+    const records=allRecords();records[l.learnerId]=state;
+    writeJSON(RECORDS_KEY,records);writeJSON(LEGACY_KEY,state);
     return normalizeState(state);
   }
 
   function clearActive(){
-    const l=learner();
-    if(!l){remove(LEGACY_KEY);return true}
+    const l=learner();if(!l)return false;
     const records=allRecords();delete records[l.learnerId];writeJSON(RECORDS_KEY,records);
     remove(LEGACY_KEY);remove(ACTIVE_KEY);return true;
   }
@@ -125,44 +110,16 @@
     const mastered=Object.values(state.weekly||{}).filter(v=>Number(v)>=80).length;
     const average=scores.length?Math.round(scores.reduce((a,b)=>a+b,0)/scores.length):0;
     let next=1;for(let i=1;i<=36;i++){if(Number(state.weekly?.[i]||0)<80){next=i;break}next=36}
-    return Object.freeze({
-      eligible:Boolean(l),
-      learner:l,
-      mentor:l?.mentor||null,
-      state,
-      mastered,
-      average,
-      next,
-      certificateReady:mastered>=36&&Number(state.midterm)>=80&&Number(state.final)>=80&&Boolean(state.portfolio)
-    });
+    return Object.freeze({eligible:Boolean(l),learner:l,mentor:l?.mentor||null,state,mastered,average,next,certificateReady:Boolean(l)&&mastered>=36&&Number(state.midterm)>=80&&Number(state.final)>=80&&Boolean(state.portfolio)});
   }
 
   function subscribe(listener){
     if(typeof listener!=="function")throw new TypeError("A listener function is required.");
     const emit=()=>listener(summary());
-    const storageHandler=event=>{
-      if([RECORDS_KEY,LEGACY_KEY,"khaemenes_family_registry_v1","khaemenes_active_family_v1","khaemenes_active_learner_v1"].includes(event.key))emit();
-    };
-    global.addEventListener("storage",storageHandler);
-    global.addEventListener("khaemenes-family-changed",emit);
-    global.addEventListener("khaemenes-elementary-family-ready",emit);
-    global.addEventListener("khaemenes-naib-ready",emit);
-    return ()=>{
-      global.removeEventListener("storage",storageHandler);
-      global.removeEventListener("khaemenes-family-changed",emit);
-      global.removeEventListener("khaemenes-elementary-family-ready",emit);
-      global.removeEventListener("khaemenes-naib-ready",emit);
-    };
+    const storageHandler=event=>{if([RECORDS_KEY,LEGACY_KEY,"khaemenes_family_registry_v1","khaemenes_active_family_v1","khaemenes_active_learner_v1"].includes(event.key))emit()};
+    global.addEventListener("storage",storageHandler);global.addEventListener("khaemenes-family-changed",emit);global.addEventListener("khaemenes-elementary-family-ready",emit);global.addEventListener("khaemenes-naib-ready",emit);
+    return ()=>{global.removeEventListener("storage",storageHandler);global.removeEventListener("khaemenes-family-changed",emit);global.removeEventListener("khaemenes-elementary-family-ready",emit);global.removeEventListener("khaemenes-naib-ready",emit)};
   }
 
-  global.KhaemenesGrade1Continuity=Object.freeze({
-    version:"1.0.0",
-    getLearner:learner,
-    getMentor:()=>learner()?.mentor||null,
-    loadState,
-    saveState,
-    clearActive,
-    getSummary:summary,
-    subscribe
-  });
+  global.KhaemenesGrade1Continuity=Object.freeze({version:"1.0.1",getLearner:learner,getMentor:()=>learner()?.mentor||null,loadState,saveState,clearActive,getSummary:summary,subscribe});
 })(window);
