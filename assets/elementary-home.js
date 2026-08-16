@@ -43,7 +43,7 @@
   function mentorSummary(summary){
     const mentor=summary?.mentor;
     if(mentor && String(mentor.id||"").toLowerCase()==="archaemenes") return mentor;
-    return {id:"archaemenes",name:"Archaemenes",avatar:"🦉",presentationMode:"young-scholar",assignedBy:"safe-fallback"};
+    return {id:"archaemenes",name:"Archaemenes",avatar:"🦉",presentationMode:"young-scholar",assignedBy:"Khaemenes Academy",delegatedBy:"NAIB"};
   }
 
   function renderGrades(activeGrade,pinnedGrade){
@@ -108,12 +108,12 @@
     $("greetingText").textContent=grade?`Your Academy Family Profile places you in ${grade.label} · ${grade.title}.`:`Choose an Elementary grade with your family in the Academy Family Profile. A pinned doorway is only a local preference.`;
     $("quickStudent").textContent=learner?nickname:"No active Academy learner";
     $("quickGrade").textContent=grade?`${grade.label} · ${grade.title}`:"No authoritative grade selected";
-    $("quickMentor").textContent=`${mentor.name} · Young Scholar`;
+    $("quickMentor").textContent=`${mentor.name} · Khaemenes Academy Mentor`;
     $("familyStatus").textContent=summary?.eligible?"Academy Family learner connected":learner?"Select an Elementary learner in the Academy Family Profile":"Open the Academy Family Profile to select a learner";
     $("familyStatus").className=summary?.eligible?"status-good":"status-review";
     $("mentorName").textContent=mentor.name;
-    $("mentorBadge").textContent="Young Scholar · assigned through NAIB";
-    $("mentorSpeech").textContent=summary?.eligible?`${mentor.name}: ${nickname}, I’m here to help you take one clear step at a time. We can find your grade, your next lesson, or a practice tool that fits what you are learning.`:`${mentor.name}: When your Academy Elementary learner profile is selected, I’ll meet you here as your mentor.`;
+    $("mentorBadge").textContent="Young Scholar · Khaemenes Academy Mentor · delegated through NAIB";
+    $("mentorSpeech").textContent=summary?.eligible?`${mentor.name}: ${nickname}, I’m here to help you take one clear step at a time. We can find your grade, your next lesson, or a practice tool that fits what you are learning.`:`${mentor.name}: When your Academy Elementary learner profile is selected, I’ll meet you here as your Khaemenes Academy mentor.`;
 
     $("favoriteSubject").value=prefs.favoriteSubject;
     $("learningGoal").value=prefs.goal;
