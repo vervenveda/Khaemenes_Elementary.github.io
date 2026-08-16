@@ -1,7 +1,7 @@
 (function attachKhaemenesElementaryAcademyAdapter(global){
   "use strict";
 
-  const VERSION="1.0.0";
+  const VERSION="1.1.0";
   const LEGACY_KEY="khaemenes_elementary_profiles_v1";
   const COURSE_ID="elementary-hub";
   const ELEMENTARY_GRADES=new Set(["01","02","03","04","05"]);
@@ -14,6 +14,16 @@
   function esc(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c])}
   function readJSON(key,fallback){try{const raw=global.localStorage.getItem(key);return raw?JSON.parse(raw):fallback}catch{return fallback}}
   function writeJSON(key,value){try{global.localStorage.setItem(key,JSON.stringify(value));return true}catch{return false}}
+
+  function ensureBetaProgramLink(){
+    if(!global.document)return;
+    if(global.document.querySelector('script[data-vnv-beta-link],script[src="https://vervenveda.com/assets/vnv-beta-link.js"]'))return;
+    const script=global.document.createElement("script");
+    script.src="https://vervenveda.com/assets/vnv-beta-link.js";
+    script.defer=true;
+    script.dataset.vnvBetaLink="elementary";
+    global.document.head.appendChild(script);
+  }
 
   function gradeId(value){
     const g=registry()?.normalizeGrade?.(value)||String(value||"").replace(/[^0-9]/g,"").padStart(2,"0");
@@ -120,9 +130,9 @@
 
   function continueCanonical(){const path=recommendedGradePath();if(path)global.location.href=path;else global.location.href=routeNotice().url}
 
-  const API=Object.freeze({version:VERSION,legacyKey:LEGACY_KEY,canonicalState,compatibilitySnapshot,importLegacyPreferences,learnerStorageKey,readLearnerState,writeLearnerState,recommendedGradePath,routeNotice,decoratePage,continueCanonical});
+  const API=Object.freeze({version:VERSION,legacyKey:LEGACY_KEY,canonicalState,compatibilitySnapshot,importLegacyPreferences,learnerStorageKey,readLearnerState,writeLearnerState,recommendedGradePath,routeNotice,decoratePage,continueCanonical,ensureBetaProgramLink});
   Object.defineProperty(global,"KhaemenesElementaryAcademyAdapter",{value:API,enumerable:false,configurable:true,writable:false});
-  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",()=>setTimeout(decoratePage,0));else setTimeout(decoratePage,0);
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",()=>{ensureBetaProgramLink();setTimeout(decoratePage,0)},{once:true});else{ensureBetaProgramLink();setTimeout(decoratePage,0)}
   global.addEventListener("khaemenes-family-changed",decoratePage);
   global.addEventListener("khaemenes-learner-placement-changed",decoratePage);
 })(window);
