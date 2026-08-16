@@ -4,7 +4,7 @@ Branch: `hardening/archaemenes-elementary`
 
 ## Current Checkpoint
 
-This branch begins the unification of Elementary with the same Academy identity and mentor formula used by Preschool and Kinder Garden.
+Elementary now follows the same Academy identity and mentor formula used by Preschool and Kinder Garden.
 
 ## Confirmed Repository Structure
 
@@ -16,7 +16,7 @@ This branch begins the unification of Elementary with the same Academy identity 
 
 ## Mentor Authority
 
-PASS — canonical mentor rule documented.
+PASS.
 
 - Current mentor: **Archaemenes**
 - Routing authority: **NAIB**
@@ -28,24 +28,73 @@ See `ARCHAEMENES_MENTOR_LOGIC.md`.
 
 ## Identity Boundary
 
-IN PROGRESS — root page still contains an older standalone local student/parent profile implementation.
+PASS at the Elementary root.
 
-New unification files have been added:
+The root homepage no longer creates or edits a second authoritative student/parent identity. It now reads the active learner from the Academy Family Registry and routes mentor continuity through the Elementary continuity layer.
+
+Runtime chain:
+
+```text
+Academy Family Registry
+        ↓
+Elementary continuity
+        ↓
+NAIB mentor routing
+        ↓
+Archaemenes · Young Scholar
+        ↓
+Grade 01–05 course context
+```
+
+New shared files:
 
 - `assets/khaemenes-elementary-continuity.js`
 - `assets/khaemenes-elementary-family-adapter.js`
+- `assets/elementary-home.js`
+- `assets/elementary-home.css`
 
-These establish the target runtime contract:
+The family adapter strips obsolete mentor identity fields from migrated compatibility records rather than carrying them forward.
 
-```text
-Academy Family Registry → NAIB → Archaemenes → grade context/resources
-```
+## Root Homepage Changes
 
-The adapter strips obsolete mentor identity fields from migrated compatibility records rather than carrying them forward.
+PASS.
+
+Removed from root authority:
+
+- free-form mentor naming;
+- standalone student identity creation;
+- duplicate parent/guardian identity administration;
+- manually entered root-level progress percentages that could disagree with course records.
+
+Preserved as learner-scoped local preferences only:
+
+- favorite subject;
+- current learning goal;
+- pinned grade doorway;
+- preference export and print overview.
+
+These preferences do not assign identity, mentor authority, or mastery.
+
+## Security Boundary
+
+PASS for the current root hardening target.
+
+The root now uses:
+
+- external local CSS/JS instead of a large inline application script;
+- Content Security Policy;
+- no-referrer policy;
+- restrictive Permissions Policy;
+- no iframe surface;
+- DOM construction/text assignment for grade cards rather than user-controlled HTML injection;
+- bounded local preference storage;
+- no credentials, access tokens, private keys, or privileged server configuration.
+
+GitHub Pages remains a public static surface; browser-side controls are not treated as authentication or authorization.
 
 ## Preserved Systems
 
-The hardening pass is intentionally preserving:
+The hardening pass intentionally preserves:
 
 - Grade 01–05 course architectures;
 - grade-level progress and mastery records;
@@ -53,22 +102,20 @@ The hardening pass is intentionally preserving:
 - printables and teacher tools;
 - Elementary mentor/resource manifest;
 - Middle School bridge;
-- local-first course state where it is still appropriate.
+- local-first course state where appropriate.
 
-## Next Required Runtime Work
+## Remaining Work
 
-1. Replace the root page's free-form `mentor` field with a read-only Archaemenes/NAIB presentation.
-2. Connect the root page to Academy Family Registry rather than creating a second authoritative learner identity.
-3. Preserve legacy local progress/preferences only as migration/compatibility data.
-4. Wire the two new Elementary continuity files into the root page.
-5. Remove stale root UI wording that instructs families to create a separate Elementary identity.
-6. Audit root dynamic rendering, CSP, storage, export behavior, route validation, and accessibility.
-7. Inspect each Grade 01–05 portal for duplicated identity/mentor logic and route them through the same shared boundary where needed.
+The Elementary **root** is unified. The next audit should inspect Grade 01–05 portals individually for:
 
-## Security Direction
-
-The public Elementary repository must not contain credentials, tokens, private API secrets, privileged routing, or internal topology. Browser storage remains local device data and is not treated as a secure vault.
+1. duplicate learner/profile systems;
+2. local mentor fields or alternate mentor authority;
+3. mastery/progress consistency;
+4. unsafe dynamic rendering;
+5. CSP and network boundaries;
+6. broken internal routes;
+7. compatibility records that should migrate rather than remain authoritative.
 
 ## Status
 
-**Architecture unification started; root runtime migration not yet complete.**
+**Elementary root identity and mentor unification complete on the hardening branch. Grade-level deep inspection remains.**
