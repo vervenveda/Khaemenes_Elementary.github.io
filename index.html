@@ -1,375 +1,25 @@
-
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Khaemenes Elementary Academy Grades 1–5 gateway with Academy Family learner continuity, Archaemenes mentoring, grade pathways, resources, records, and Middle School transition.">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), bluetooth=()">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://vervenveda.com; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://vervenveda.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <title>Khaemenes Elementary Academy</title>
-<meta name="description" content="Khaemenes Elementary Academy landing page for Grades 1–5 with student and parent profiles, grade pathways, progress tools, and a middle school bridge.">
-<style>
-:root{
-  --navy:#102b48;
-  --navy-2:#071b30;
-  --blue:#3f6fb2;
-  --sky:#eaf4ff;
-  --cream:#fff9ee;
-  --paper:#f5ead7;
-  --white:#fffefb;
-  --ink:#182533;
-  --muted:#65727d;
-  --gold:#c99a42;
-  --rose:#f7d9d5;
-  --mint:#e8f4e7;
-  --leaf:#6f915d;
-  --violet:#eee6ff;
-  --line:rgba(24,37,51,.15);
-  --shadow:0 18px 42px rgba(16,43,72,.12);
-  --radius:18px;
-  --serif:Georgia,"Times New Roman",serif;
-  --sans:Arial,"Helvetica Neue",Helvetica,sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  color:var(--ink);
-  background:
-    radial-gradient(circle at 10% 0%,rgba(63,111,178,.15),transparent 28rem),
-    radial-gradient(circle at 90% 5%,rgba(201,154,66,.16),transparent 28rem),
-    linear-gradient(180deg,var(--cream),var(--paper));
-  font-family:var(--sans);
-  font-size:18px;
-  line-height:1.62;
-  text-align:center;
-}
-a{color:inherit;text-decoration:none}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-.shell{width:min(calc(100% - 36px),1360px);margin:auto}
-.skip{position:absolute;left:-999px;top:12px;background:white;color:var(--navy);padding:10px 14px;border-radius:999px;z-index:20}
-.skip:focus{left:12px}
-.header{
-  position:sticky;top:0;z-index:10;
-  background:rgba(16,43,72,.97);
-  color:white;
-  border-bottom:1px solid rgba(255,255,255,.14);
-  backdrop-filter:blur(12px);
-}
-.nav{
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-  flex-wrap:wrap;
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  text-align:left;
-}
-.seal{
-  width:52px;height:52px;
-  display:grid;place-items:center;
-  border-radius:16px;
-  background:linear-gradient(145deg,#fff3cf,#d7b36a);
-  color:var(--navy);
-  font:900 1rem var(--serif);
-  box-shadow:0 8px 18px rgba(0,0,0,.16);
-}
-.brand strong{display:block;font-family:var(--serif);font-size:1.16rem;line-height:1.05}
-.brand small{display:block;color:rgba(255,255,255,.74);font-size:.84rem}
-.navlinks{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
-.navlinks a,.navlinks button{
-  border:1px solid rgba(255,255,255,.22);
-  background:rgba(255,255,255,.07);
-  color:white;
-  border-radius:999px;
-  padding:8px 12px;
-  font-size:.88rem;
-  font-weight:800;
-}
-.navlinks a:hover,.navlinks button:hover{background:rgba(255,255,255,.16)}
-.hero{
-  padding:82px 0 78px;
-  background:
-    radial-gradient(circle at 50% -10%,rgba(255,255,255,.22),transparent 25rem),
-    linear-gradient(145deg,#4b84c2,#102b48 62%,#071b30);
-  color:white;
-  overflow:hidden;
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:24px;
-  align-items:center;
-}
-.hero-copy{text-align:left}
-.kicker{
-  margin:0;
-  color:var(--gold);
-  font-size:.9rem;
-  font-weight:900;
-  letter-spacing:.13em;
-  text-transform:uppercase;
-}
-.hero .kicker{color:#f7dfaa}
-h1,h2,h3{
-  font-family:var(--serif);
-  font-weight:800;
-  text-wrap:balance;
-}
-h1{
-  margin:12px 0 0;
-  font-size:clamp(3.15rem,7vw,6.25rem);
-  line-height:.94;
-  letter-spacing:-.04em;
-}
-.lead{
-  max-width:760px;
-  margin:18px 0 0;
-  color:rgba(255,255,255,.84);
-  font-size:1.08rem;
-}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px;align-items:center}
-.actions.center{justify-content:center}
-.btn,.button{
-  min-height:46px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:11px 16px;
-  border-radius:999px;
-  border:1px solid var(--navy);
-  background:var(--navy);
-  color:white;
-  font-size:.88rem;
-  font-weight:900;
-  letter-spacing:.035em;
-  text-transform:uppercase;
-}
-.btn.light,.button.light{background:white;color:var(--navy);border-color:white}
-.btn.gold,.button.gold{background:var(--gold);border-color:var(--gold);color:#221707}
-.btn.soft,.button.soft{background:#e9f1ff;color:var(--navy);border-color:#d6e4fb}
-.btn:focus,.button:focus,input:focus,select:focus,textarea:focus{outline:3px solid rgba(201,154,66,.5);outline-offset:2px}
-.welcome-card{
-  background:rgba(255,255,255,.95);
-  color:var(--ink);
-  border:1px solid rgba(255,255,255,.7);
-  border-radius:26px;
-  padding:24px;
-  box-shadow:var(--shadow);
-  text-align:left;
-}
-.mascot{
-  width:88px;height:88px;
-  border-radius:24px;
-  background:
-    radial-gradient(circle at 28% 30%,#fff 0 7px,transparent 8px),
-    radial-gradient(circle at 66% 30%,#fff 0 7px,transparent 8px),
-    linear-gradient(145deg,#f7dfaa,#86b879);
-  display:grid;
-  place-items:end center;
-  padding-bottom:12px;
-  color:var(--navy);
-  font-weight:900;
-  margin-bottom:14px;
-}
-.quick-panel{
-  display:grid;
-  gap:10px;
-  margin-top:18px;
-}
-.quick-row{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  padding:12px 14px;
-  border-radius:16px;
-  background:#f6f9ff;
-  border:1px solid var(--line);
-}
-.quick-row strong{color:var(--navy)}
-.section{padding:72px 18px}
-.section.alt{background:rgba(255,255,255,.62);border-block:1px solid var(--line)}
-.heading{max-width:960px;margin:0 auto 34px}
-.heading h2{font-size:clamp(2.15rem,4vw,3.9rem);line-height:1.02;margin:10px 0 0;color:var(--navy)}
-.heading p{color:var(--muted);margin-bottom:0}
-.grid{display:grid;gap:16px}
-.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
-.card{
-  background:var(--white);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:24px;
-  box-shadow:var(--shadow);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  min-height:230px;
-}
-.card.left{text-align:left;align-items:stretch}
-.card h3{margin:10px 0 0;color:var(--navy);font-size:1.55rem;line-height:1.08}
-.card p{color:var(--muted);font-size:.98rem}
-.emblem{
-  width:60px;height:60px;
-  border-radius:17px;
-  display:grid;place-items:center;
-  background:#e9f1ff;
-  color:var(--navy);
-  font-weight:900;
-}
-.stat strong{display:block;color:var(--gold);font:900 2.1rem var(--serif);line-height:1}
-.badges{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:10px 0}
-.badge{
-  display:inline-flex;
-  padding:5px 9px;
-  border-radius:999px;
-  background:#e9f1ff;
-  color:#183c61;
-  font-size:.78rem;
-  font-weight:900;
-}
-.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
-.form-card{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:22px;
-  box-shadow:var(--shadow);
-  text-align:left;
-}
-.form-card h3{margin:0 0 8px;color:var(--navy);font-size:1.55rem}
-.form-card p{color:var(--muted)}
-label{display:block;margin:12px 0 6px;color:var(--navy);font-size:.86rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
-input,select,textarea{
-  width:100%;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:11px 12px;
-  background:#fffefb;
-  color:var(--ink);
-}
-textarea{min-height:104px;resize:vertical}
-.checkline{display:flex;align-items:center;gap:10px;justify-content:flex-start;margin-top:12px;color:var(--ink);font-weight:700;text-transform:none;letter-spacing:0}
-.checkline input{width:auto}
-.profile-output{
-  background:#f8fbff;
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:16px;
-  min-height:120px;
-}
-.progress{
-  height:13px;
-  border-radius:999px;
-  background:#eadfcb;
-  border:1px solid var(--line);
-  overflow:hidden;
-}
-.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--gold),var(--leaf));width:0%}
-.grade-card{position:relative;overflow:hidden}
-.grade-card:before{
-  content:"";
-  position:absolute;
-  inset:0 0 auto;
-  height:6px;
-  background:linear-gradient(90deg,var(--blue),var(--gold),var(--leaf));
-}
-.grade-card .emblem{margin-top:4px}
-.grade-card.active-choice{outline:3px solid rgba(201,154,66,.55)}
-.grade-card.pinned{box-shadow:0 20px 48px rgba(201,154,66,.18);border-color:rgba(201,154,66,.5)}
-.grade-card.pinned:after{
-  content:"Pinned";
-  position:absolute;
-  top:14px;right:14px;
-  padding:5px 9px;
-  border-radius:999px;
-  background:var(--gold);
-  color:#231707;
-  font-size:.72rem;
-  font-weight:900;
-  text-transform:uppercase;
-}
-.pathway{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
-.pathway-card{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:18px;
-  text-align:left;
-  box-shadow:var(--shadow);
-}
-.pathway-card h3{margin:0;color:var(--navy)}
-.pathway-card p{color:var(--muted)}
-.family-table{width:100%;border-collapse:collapse;background:white;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
-.family-table th,.family-table td{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-.family-table th{background:#e9f1ff;color:var(--navy)}
-.family-table tr:last-child td{border-bottom:0}
-.notice{
-  margin:18px auto 0;
-  padding:14px 16px;
-  border-radius:18px;
-  background:#fff7e5;
-  border:1px solid rgba(201,154,66,.35);
-  color:#5b421b;
-  text-align:left;
-}
-.footer{padding:36px 18px;background:#071b30;color:rgba(255,255,255,.72)}
-.footer strong{color:white}
-.print-only{display:none}
-@media(max-width:1080px){
-  .hero-grid,.profile-grid,.pathway{grid-template-columns:1fr}
-  .hero-copy{text-align:center}
-  .lead{margin-left:auto;margin-right:auto}
-  .actions{justify-content:center}
-  .cols-4{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media(max-width:720px){
-  body{font-size:16px}
-  .nav{justify-content:center;text-align:center}
-  .brand{text-align:center;justify-content:center}
-  .navlinks{display:none}
-  .section{padding:54px 14px}
-  .hero{padding:58px 0}
-  .cols-4,.cols-3,.cols-2{grid-template-columns:1fr}
-  .quick-row{display:block}
-  h1{font-size:clamp(2.7rem,14vw,4.5rem)}
-}
-@media print{
-  body{background:white;color:#111;text-align:left}
-  .header,.hero,.navlinks,.actions,.footer,.no-print{display:none!important}
-  .section{padding:0}
-  .shell{width:100%;margin:0}
-  .card,.form-card,.pathway-card{box-shadow:none;border:1px solid #999;page-break-inside:avoid}
-  .print-only{display:block}
-}
-</style>
+<link rel="stylesheet" href="assets/elementary-home.css">
 </head>
 <body>
-<a class="skip" href="#profiles">Skip to profiles</a>
+<a class="skip" href="#mentor">Skip to Archaemenes</a>
 <header class="header no-print">
   <div class="shell nav">
-    <a class="brand" href="./index.html" aria-label="Khaemenes Elementary Academy home">
+    <a class="brand" href="./" aria-label="Khaemenes Elementary Academy home">
       <span class="seal">K–5</span>
-      <span>
-        <strong>Khaemenes Elementary Academy</strong>
-        <small>Student paths · Parent profiles · Family records</small>
-      </span>
+      <span><strong>Khaemenes Elementary Academy</strong><small>One learner · one mentor · five grade paths</small></span>
     </a>
-    <nav class="navlinks" aria-label="Main navigation">
-      <a href="#start">Start</a>
-      <a href="#profiles">Profiles</a>
-      <a href="#grades">Grades</a>
-      <a href="#family">Family Tools</a>
-      <a href="#bridge">Middle School</a>
+    <nav class="navlinks" aria-label="Elementary navigation">
+      <a href="#mentor">Archaemenes</a><a href="#grades">Grades 1–5</a><a href="#preferences">My Learning</a><a href="#family">Family</a><a href="#bridge">Middle School</a>
     </nav>
   </div>
 </header>
@@ -377,559 +27,111 @@ textarea{min-height:104px;resize:vertical}
 <section class="hero" id="start">
   <div class="shell hero-grid">
     <div class="hero-copy">
-      <p class="kicker">Welcome, Young Scholar</p>
-      <h1>Choose your learning garden.</h1>
-      <p class="lead">
-        This is the student-friendly doorway into Khaemenes Elementary Academy.
-        Create a student profile, connect a parent profile, pin a favorite grade, and begin the right course path.
-      </p>
+      <p class="kicker">Khaemenes Academy · Elementary School</p>
+      <h1>Welcome, Young Scholar.</h1>
+      <p class="lead">Your Academy learner identity continues here. Archaemenes remains your mentor, NAIB handles mentor routing, and each grade portal keeps its own lessons, assessments, records, and certificates.</p>
       <div class="actions">
-        <a class="btn light" href="#profiles">Create Profile</a>
-        <a class="btn gold" href="#grades">Choose Grade</a>
-        <button class="btn" type="button" id="heroStartBtn">Start My Grade</button>
+        <a class="btn light" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Open Family Profile</a>
+        <a class="btn gold" id="startGrade" href="#grades">Choose a Grade</a>
+        <a class="btn" href="#mentor">Meet Archaemenes</a>
       </div>
     </div>
-    <aside class="welcome-card" aria-label="Student welcome panel">
-      <div class="mascot" aria-hidden="true">★</div>
+    <aside class="welcome-card" aria-label="Elementary learner status">
+      <div class="mentor-orb" aria-hidden="true">🦉</div>
       <p class="kicker">Today’s Compass</p>
-      <h2 id="greetingTitle" style="color:var(--navy);font-size:2.1rem;line-height:1.05;margin:8px 0 0;">Good day, Scholar</h2>
-      <p id="greetingText">Pick a grade, save your profile, and begin with confidence.</p>
+      <h2 id="greetingTitle">Welcome, Young Scholar</h2>
+      <p id="greetingText">Choose an Elementary grade path with your family, then begin when you are ready.</p>
       <div class="quick-panel">
-        <div class="quick-row"><strong>Student</strong><span id="quickStudent">Not set</span></div>
-        <div class="quick-row"><strong>Grade</strong><span id="quickGrade">Choose below</span></div>
-        <div class="quick-row"><strong>Pinned Path</strong><span id="quickPinned">None yet</span></div>
+        <div class="quick-row"><strong>Learner</strong><span id="quickStudent">Checking Academy Family Profile…</span></div>
+        <div class="quick-row"><strong>Grade</strong><span id="quickGrade">Not selected</span></div>
+        <div class="quick-row"><strong>Mentor</strong><span id="quickMentor">Archaemenes · Young Scholar</span></div>
       </div>
+      <p id="familyStatus" class="status-review">Checking Academy Family Registry…</p>
     </aside>
   </div>
 </section>
 
 <main>
-  <section class="section">
-    <div class="shell">
-      <div class="grid cols-4">
-        <article class="card stat"><span class="emblem">1–5</span><strong>5</strong><span>Elementary grade portals</span></article>
-        <article class="card stat"><span class="emblem">★</span><strong>2</strong><span>Student and parent profiles</span></article>
-        <article class="card stat"><span class="emblem">80%</span><strong>80</strong><span>Completion target per course</span></article>
-        <article class="card stat"><span class="emblem">MS</span><strong>6–8</strong><span>Middle school bridge</span></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt" id="profiles">
-    <div class="shell">
-      <div class="heading">
-        <p class="kicker">Profiles First</p>
-        <h2>Student and parent profiles organized in one place.</h2>
-        <p>Everything saves locally in this browser. No account, server, outside script, or external dependency is required.</p>
-      </div>
-
-      <div class="profile-grid">
-        <article class="form-card">
-          <h3>Student Profile</h3>
-          <p>Choose the active grade, student mentor name, favorite subject, and a learning goal.</p>
-          <label for="studentName">Student name</label>
-          <input id="studentName" placeholder="Student name">
-          <label for="studentGrade">Current grade path</label>
-          <select id="studentGrade">
-            <option value="">Choose grade</option>
-            <option value="grade-01">Grade 01 · First Grade</option>
-            <option value="grade-02">Grade 02 · Second Grade</option>
-            <option value="grade-03">Grade 03 · Third Grade</option>
-            <option value="grade-04">Grade 04 · Fourth Grade</option>
-            <option value="grade-05">Grade 05 · Fifth Grade</option>
-          </select>
-          <label for="mentorName">Mentor / guide name</label>
-          <input id="mentorName" placeholder="Mentor, teacher, or guide">
-          <label for="favoriteSubject">Favorite subject</label>
-          <select id="favoriteSubject">
-            <option value="">Choose one</option>
-            <option>Reading & Writing</option>
-            <option>Mathematics</option>
-            <option>Science</option>
-            <option>Social Studies</option>
-            <option>Art & Music</option>
-            <option>Technology</option>
-            <option>Movement & Wellness</option>
-          </select>
-          <label for="learningGoal">Student learning goal</label>
-          <textarea id="learningGoal" placeholder="This month I want to improve..."></textarea>
-          <div class="actions">
-            <button class="button gold" type="button" id="saveStudent">Save Student</button>
-            <button class="button soft" type="button" id="startGrade">Open Active Grade</button>
-          </div>
-        </article>
-
-        <article class="form-card">
-          <h3>Parent / Family Profile</h3>
-          <p>Keep local guardian notes, review cadence, and family learning preferences together.</p>
-          <label for="parentName">Parent / guardian name</label>
-          <input id="parentName" placeholder="Parent or guardian">
-          <label for="familyRole">Family role</label>
-          <select id="familyRole">
-            <option value="">Choose role</option>
-            <option>Parent</option>
-            <option>Guardian</option>
-            <option>Teacher</option>
-            <option>Mentor</option>
-            <option>Evaluator</option>
-          </select>
-          <label for="reviewCadence">Review cadence</label>
-          <select id="reviewCadence">
-            <option>Weekly review</option>
-            <option>Biweekly review</option>
-            <option>Monthly review</option>
-            <option>Quarterly portfolio review</option>
-          </select>
-          <label for="familyNotes">Family notes</label>
-          <textarea id="familyNotes" placeholder="Learning needs, accommodations, celebrations, evaluator notes, or family priorities..."></textarea>
-          <label class="checkline"><input id="portfolioReady" type="checkbox"> Portfolio folder created</label>
-          <label class="checkline"><input id="printReports" type="checkbox"> Family wants printable reports</label>
-          <div class="actions">
-            <button class="button gold" type="button" id="saveParent">Save Parent</button>
-            <button class="button soft" type="button" id="printProfile">Print Profile</button>
-          </div>
-        </article>
-      </div>
-
-      <div class="profile-grid" style="margin-top:18px;">
-        <article class="form-card">
-          <h3>Profile Summary</h3>
-          <div class="profile-output" id="profileSummary">No profile saved yet.</div>
-          <div class="actions">
-            <button class="button" type="button" id="exportProfiles">Export Profiles</button>
-            <button class="button soft" type="button" id="clearProfiles">Clear Local Profiles</button>
-          </div>
-        </article>
-        <article class="form-card">
-          <h3>Elementary Progress Snapshot</h3>
-          <p>Optional family overview. Each grade keeps its own detailed records inside its course portal.</p>
-          <div class="grid cols-2" id="progressInputs"></div>
-          <div style="margin-top:16px;">
-            <div class="progress"><span id="overallProgress"></span></div>
-            <p id="progressText">Overall snapshot: 0%</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="grades">
-    <div class="shell">
-      <div class="heading">
-        <p class="kicker">Grade Pathways</p>
-        <h2>Choose the elementary course doorway.</h2>
-        <p>Grades 01–02 use the early elementary unit-based structure. Grades 03–05 use the subject-hall structure. Both are valid course paths.</p>
-      </div>
-      <div class="grid cols-3" id="gradeGrid"></div>
-    </div>
-  </section>
-
-  <section class="section alt" id="family">
-    <div class="shell">
-      <div class="heading">
-        <p class="kicker">Parent Organization</p>
-        <h2>One family view for records, reviews, and next steps.</h2>
-        <p>Use this section as the landing page checklist before entering each grade portal.</p>
-      </div>
-      <div class="pathway">
-        <article class="pathway-card">
-          <h3>Student Daily Flow</h3>
-          <table class="family-table">
-            <tr><th>Step</th><th>Student action</th></tr>
-            <tr><td>1</td><td>Open the active grade path.</td></tr>
-            <tr><td>2</td><td>Complete the current lesson or weekly plan.</td></tr>
-            <tr><td>3</td><td>Finish the printable or activity evidence.</td></tr>
-            <tr><td>4</td><td>Record progress inside the grade portal.</td></tr>
-            <tr><td>5</td><td>Save one portfolio sample for family review.</td></tr>
-          </table>
-        </article>
-        <article class="pathway-card">
-          <h3>Parent Review Flow</h3>
-          <table class="family-table">
-            <tr><th>Step</th><th>Parent action</th></tr>
-            <tr><td>1</td><td>Check the student profile and active grade.</td></tr>
-            <tr><td>2</td><td>Review assessment scores inside the grade portal.</td></tr>
-            <tr><td>3</td><td>Print or export records when needed.</td></tr>
-            <tr><td>4</td><td>Confirm portfolio evidence and certificates.</td></tr>
-            <tr><td>5</td><td>Update the family notes before the next review.</td></tr>
-          </table>
-        </article>
-      </div>
-      <div class="notice">
-        <strong>Architecture note:</strong> First and second grade do not need subject folders to be correct. They can remain unit-based.
-        The root of this repository should be this elementary hub, while each grade keeps its own course architecture.
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="bridge">
-    <div class="shell">
-      <div class="heading">
-        <p class="kicker">Middle School Bridge</p>
-        <h2>When Grade 05 is complete, continue to the middle school repository.</h2>
-        <p>Grades 06–08 belong in the middle school repository. The buttons below use a sibling GitHub Pages path; adjust the paths in one place inside the script if your middle school repository name is different.</p>
-      </div>
-      <div class="grid cols-4">
-        <article class="card"><span class="emblem">MS</span><h3>Middle School Home</h3><p>Open the middle school academy landing page.</p><a class="button" id="middleHomeLink" href="/Khaemenes_Middle.github.io/">Open Middle School</a></article>
-        <article class="card"><span class="emblem">06</span><h3>Grade 06</h3><p>Middle School A++ foundation and Grade 7 readiness.</p><a class="button soft" id="grade06Link" href="/Khaemenes_Middle.github.io/grades/grade-06/index.html">Open Grade 06</a></article>
-        <article class="card"><span class="emblem">07</span><h3>Grade 07</h3><p>Middle School A++ advancement and Grade 8 readiness.</p><a class="button soft" id="grade07Link" href="/Khaemenes_Middle.github.io/grades/grade-07/index.html">Open Grade 07</a></article>
-        <article class="card"><span class="emblem">08</span><h3>Grade 08</h3><p>A++ high school readiness and entrance defense.</p><a class="button soft" id="grade08Link" href="/Khaemenes_Middle.github.io/grades/grade-08/index.html">Open Grade 08</a></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt">
-    <div class="shell">
-      <div class="heading">
-        <p class="kicker">Repository Root Repair</p>
-        <h2>This file is meant to replace the current root First Grade index.</h2>
-        <p>Upload this as the repository root <code>index.html</code>. Do not place it inside <code>grades/grade-01/</code>.</p>
-      </div>
-      <div class="actions center">
-        <a class="button gold" href="./grades/grade-01/index.html">Check Grade 01</a>
-        <a class="button" href="./grades/grade-02/index.html">Check Grade 02</a>
-        <a class="button" href="./grades/grade-03/index.html">Check Grade 03</a>
-        <a class="button" href="./grades/grade-04/index.html">Check Grade 04</a>
-        <a class="button" href="./grades/grade-05/index.html">Check Grade 05</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
+<section class="section" id="mentor">
   <div class="shell">
-    <strong>Khaemenes Elementary Academy</strong><br>
-    © <span id="year"></span> Jennifer Kay Pearl · Verve N Veda · Student and parent profiles remain local to this browser.
-  </div>
-</footer>
-
-<script>
-(() => {
-  "use strict";
-
-  const STORAGE_KEY = "khaemenes_elementary_profiles_v1";
-
-  /*
-    Middle School repository path:
-    If your middle school repository uses a different GitHub Pages path,
-    edit this one constant and the bridge links will update automatically.
-  */
-  const MIDDLE_SCHOOL_BASE = "/Khaemenes_Middle.github.io/";
-
-  const GRADES = [
-    {
-      id: "grade-01",
-      label: "Grade 01",
-      title: "First Grade",
-      subtitle: "Early Elementary Learning Garden",
-      type: "Unit-based daily lessons",
-      description: "A gentle A+ beginning path with 36 units, daily lessons, printables, assessments, teacher tools, records, and certificate.",
-      path: "grades/grade-01/index.html",
-      certificate: "grades/grade-01/records/certificate.html",
-      tools: "grades/grade-01/teacher-tools/index.html",
-      color: "#3f6fb2"
-    },
-    {
-      id: "grade-02",
-      label: "Grade 02",
-      title: "Second Grade",
-      subtitle: "Subject-Integrated Foundations",
-      type: "Integrated weekly / subject curriculum",
-      description: "A stronger A+ second-grade path with reading, writing, math, inquiry, printables, assessments, teacher tools, records, and certificate.",
-      path: "grades/grade-02/index.html",
-      certificate: "grades/grade-02/records/certificate.html",
-      tools: "grades/grade-02/teacher-tools/index.html",
-      color: "#2f7a66"
-    },
-    {
-      id: "grade-03",
-      label: "Grade 03",
-      title: "Third Grade",
-      subtitle: "Subject Hall Academy",
-      type: "Subject halls",
-      description: "A substantial A+ subject-based course with 8 subject halls, weekly plans, printables, assessments, records, and certificate.",
-      path: "grades/grade-03/index.html",
-      certificate: "grades/grade-03/records/certificate.html",
-      tools: "grades/grade-03/teacher-tools/index.html",
-      color: "#9a6a2f"
-    },
-    {
-      id: "grade-04",
-      label: "Grade 04",
-      title: "Fourth Grade",
-      subtitle: "A++ Elementary Honors",
-      type: "Subject halls",
-      description: "An advanced A++ course with research, essay writing, multi-step math, science models, civic reasoning, and portfolio proof.",
-      path: "grades/grade-04/index.html",
-      certificate: "grades/grade-04/records/certificate.html",
-      tools: "grades/grade-04/teacher-tools/index.html",
-      color: "#8359a8"
-    },
-    {
-      id: "grade-05",
-      label: "Grade 05",
-      title: "Fifth Grade",
-      subtitle: "Middle School Readiness",
-      type: "Subject halls",
-      description: "A++ upper-elementary course with stronger fractions, decimals, research, science systems, civics, capstone, and readiness portfolio.",
-      path: "grades/grade-05/index.html",
-      certificate: "grades/grade-05/records/certificate.html",
-      tools: "grades/grade-05/teacher-tools/index.html",
-      color: "#b47d30"
-    }
-  ];
-
-  const $ = (id) => document.getElementById(id);
-  const clamp = (n) => Math.max(0, Math.min(100, Number(n || 0)));
-  const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (c) => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-  }[c]));
-
-  let state = readState();
-
-  function defaultState(){
-    return {
-      student: {
-        name: "",
-        grade: "",
-        mentor: "",
-        favoriteSubject: "",
-        goal: "",
-        pinned: ""
-      },
-      parent: {
-        name: "",
-        role: "",
-        cadence: "Weekly review",
-        notes: "",
-        portfolioReady: false,
-        printReports: false
-      },
-      progress: {
-        "grade-01": "",
-        "grade-02": "",
-        "grade-03": "",
-        "grade-04": "",
-        "grade-05": ""
-      },
-      updated: ""
-    };
-  }
-
-  function readState(){
-    try{
-      return Object.assign(defaultState(), JSON.parse(localStorage.getItem(STORAGE_KEY)) || {});
-    }catch{
-      return defaultState();
-    }
-  }
-
-  function saveState(){
-    state.updated = new Date().toISOString();
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  }
-
-  function gradeById(id){
-    return GRADES.find((g) => g.id === id) || null;
-  }
-
-  function currentGrade(){
-    return gradeById(state.student.grade) || gradeById(state.student.pinned) || null;
-  }
-
-  function setGreeting(){
-    const hour = new Date().getHours();
-    const greeting = hour < 12 ? "Good morning" : hour < 18 ? "Good afternoon" : "Good evening";
-    const name = state.student.name ? ", " + state.student.name.split(" ")[0] : ", Scholar";
-    $("greetingTitle").textContent = greeting + name;
-    $("greetingText").textContent = currentGrade()
-      ? "Your active path is " + currentGrade().label + " · " + currentGrade().title + "."
-      : "Pick a grade, save your profile, and begin with confidence.";
-    $("quickStudent").textContent = state.student.name || "Not set";
-    $("quickGrade").textContent = currentGrade() ? currentGrade().label + " · " + currentGrade().title : "Choose below";
-    $("quickPinned").textContent = state.student.pinned ? gradeById(state.student.pinned).label : "None yet";
-  }
-
-  function populateForms(){
-    $("studentName").value = state.student.name || "";
-    $("studentGrade").value = state.student.grade || "";
-    $("mentorName").value = state.student.mentor || "";
-    $("favoriteSubject").value = state.student.favoriteSubject || "";
-    $("learningGoal").value = state.student.goal || "";
-
-    $("parentName").value = state.parent.name || "";
-    $("familyRole").value = state.parent.role || "";
-    $("reviewCadence").value = state.parent.cadence || "Weekly review";
-    $("familyNotes").value = state.parent.notes || "";
-    $("portfolioReady").checked = !!state.parent.portfolioReady;
-    $("printReports").checked = !!state.parent.printReports;
-  }
-
-  function renderProfileSummary(){
-    const grade = currentGrade();
-    $("profileSummary").innerHTML = `
-      <p><strong>Student:</strong> ${esc(state.student.name || "Not set")}</p>
-      <p><strong>Active path:</strong> ${grade ? esc(grade.label + " · " + grade.title) : "Not chosen"}</p>
-      <p><strong>Mentor:</strong> ${esc(state.student.mentor || "Not set")}</p>
-      <p><strong>Favorite subject:</strong> ${esc(state.student.favoriteSubject || "Not set")}</p>
-      <p><strong>Goal:</strong> ${esc(state.student.goal || "No goal saved yet.")}</p>
-      <hr style="border:0;border-top:1px solid var(--line);margin:14px 0;">
-      <p><strong>Parent / guardian:</strong> ${esc(state.parent.name || "Not set")}</p>
-      <p><strong>Review cadence:</strong> ${esc(state.parent.cadence || "Weekly review")}</p>
-      <p><strong>Portfolio folder:</strong> ${state.parent.portfolioReady ? "Created" : "Pending"}</p>
-      <p><strong>Printable reports:</strong> ${state.parent.printReports ? "Requested" : "Not requested"}</p>
-    `;
-  }
-
-  function renderProgressInputs(){
-    $("progressInputs").innerHTML = GRADES.map((g) => `
-      <div>
-        <label for="progress-${g.id}">${g.label}</label>
-        <input id="progress-${g.id}" type="number" min="0" max="100" placeholder="0–100" value="${esc(state.progress[g.id] || "")}">
-      </div>
-    `).join("");
-
-    GRADES.forEach((g) => {
-      $("progress-" + g.id).addEventListener("input", (event) => {
-        state.progress[g.id] = clamp(event.target.value);
-        saveState();
-        updateOverallProgress();
-      });
-    });
-
-    updateOverallProgress();
-  }
-
-  function updateOverallProgress(){
-    const scores = GRADES.map((g) => Number(state.progress[g.id] || 0)).filter((v) => v > 0);
-    const avg = scores.length ? Math.round(scores.reduce((a,b) => a + b, 0) / scores.length) : 0;
-    $("overallProgress").style.width = avg + "%";
-    $("progressText").textContent = "Overall snapshot: " + avg + "%";
-  }
-
-  function renderGradeGrid(){
-    const active = currentGrade();
-    $("gradeGrid").innerHTML = GRADES.map((g) => `
-      <article class="card grade-card ${active && active.id === g.id ? "active-choice" : ""} ${state.student.pinned === g.id ? "pinned" : ""}" style="border-top-color:${g.color}">
-        <span class="emblem" style="background:${softColor(g.color)}">${g.label.replace("Grade ","")}</span>
-        <h3>${esc(g.title)}</h3>
-        <p><strong>${esc(g.subtitle)}</strong></p>
-        <p>${esc(g.description)}</p>
-        <div class="badges">
-          <span class="badge">${esc(g.type)}</span>
-          <span class="badge">Records</span>
-          <span class="badge">Certificate</span>
-        </div>
-        <div class="actions center">
-          <a class="button gold" href="${g.path}">Enter Course</a>
-          <button class="button soft" type="button" data-pin="${g.id}">Pin</button>
-          <a class="button" href="${g.tools}">Tools</a>
+    <div class="heading"><p class="kicker">Your Academy Mentor</p><h2>Archaemenes grows with the learner.</h2><p>Elementary uses the same mentor authority established in Preschool and Kinder Garden. Archaemenes is one continuous identity; “Young Scholar” is his Elementary presentation, not a separate personality.</p></div>
+    <div class="mentor-wrap">
+      <article class="mentor-card">
+        <span class="mentor-badge" id="mentorBadge">Young Scholar · assigned through NAIB</span>
+        <h3 id="mentorName">Archaemenes</h3>
+        <div class="mentor-speech" id="mentorSpeech" aria-live="polite">Archaemenes: When your Academy learner profile is selected, I’ll meet you here as your Elementary mentor.</div>
+        <div class="mentor-actions">
+          <button type="button" data-mentor-action="next">What should I do next?</button>
+          <button type="button" data-mentor-action="stuck">I feel stuck.</button>
+          <button type="button" data-mentor-action="break">I need a break.</button>
+          <button type="button" data-mentor-action="goal">Help with my goal.</button>
         </div>
       </article>
-    `).join("");
+      <aside class="notice">
+        <strong>Unified authority:</strong> the Academy Family Registry owns learner identity; NAIB owns mentor routing; Archaemenes mentors; grade portals own lessons and records; assessments determine mastery. The Elementary homepage does not create a second child account and does not let a local field redefine the mentor.
+      </aside>
+    </div>
+  </div>
+</section>
 
-    document.querySelectorAll("[data-pin]").forEach((button) => {
-      button.addEventListener("click", () => {
-        state.student.pinned = button.getAttribute("data-pin");
-        if (!state.student.grade) state.student.grade = state.student.pinned;
-        saveState();
-        populateForms();
-        renderAll();
-      });
-    });
-  }
+<section class="section alt" id="grades">
+  <div class="shell">
+    <div class="heading"><p class="kicker">Grades 01–05</p><h2>Choose the learner’s Elementary course doorway.</h2><p>Grade 01 may remain unit-based, Grade 02 may use its integrated/subject structure, and Grades 03–05 may use subject halls. Different course structures do not create different identity systems.</p></div>
+    <div class="grid cols-3" id="gradeGrid"></div>
+  </div>
+</section>
 
-  function softColor(hex){
-    return "linear-gradient(145deg,#fff,#e9f1ff)";
-  }
+<section class="section" id="preferences">
+  <div class="shell">
+    <div class="heading"><p class="kicker">My Learning</p><h2>Keep preferences separate from identity.</h2><p>These optional local settings help Archaemenes and the learner remember broad interests and goals on this device. They do not create an account, assign a mentor, or award mastery.</p></div>
+    <div class="grid cols-2">
+      <article class="pref-card">
+        <h3>Learner preferences</h3>
+        <label for="favoriteSubject">Favorite subject</label>
+        <select id="favoriteSubject"><option value="">Choose one</option><option>Reading & Writing</option><option>Mathematics</option><option>Science</option><option>Social Studies</option><option>Art & Music</option><option>Technology</option><option>Movement & Wellness</option></select>
+        <label for="learningGoal">Current learning goal</label>
+        <textarea id="learningGoal" maxlength="400" placeholder="This month I want to improve…"></textarea>
+        <label for="pinnedGrade">Pinned grade doorway</label>
+        <select id="pinnedGrade"><option value="">None</option><option value="grade-01">Grade 01</option><option value="grade-02">Grade 02</option><option value="grade-03">Grade 03</option><option value="grade-04">Grade 04</option><option value="grade-05">Grade 05</option></select>
+        <div class="actions"><button class="button gold" type="button" id="savePreferences">Save Preferences</button><button class="button soft" type="button" id="exportPreferences">Export Preferences</button></div>
+      </article>
+      <article class="pref-card">
+        <h3>Where formal progress lives</h3>
+        <p>Each grade portal keeps its own lesson, assessment, record, and certificate state. The root homepage no longer asks families to type a second percentage that could disagree with the real course record.</p>
+        <p>Use the active grade portal for detailed progress, assessment evidence, printables, teacher tools, and certificate readiness.</p>
+        <div class="actions"><a class="button" href="#grades">Open Grade Paths</a><button class="button soft" type="button" id="printOverview">Print Overview</button></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-  function saveStudentFromForm(){
-    state.student.name = $("studentName").value.trim();
-    state.student.grade = $("studentGrade").value;
-    state.student.mentor = $("mentorName").value.trim();
-    state.student.favoriteSubject = $("favoriteSubject").value;
-    state.student.goal = $("learningGoal").value.trim();
-    if (state.student.grade && !state.student.pinned) state.student.pinned = state.student.grade;
-    saveState();
-    renderAll();
-  }
+<section class="section alt" id="family">
+  <div class="shell">
+    <div class="heading"><p class="kicker">Family & Educator Boundary</p><h2>Family administration stays in the Academy Family Profile.</h2><p>The Elementary homepage no longer duplicates parent names, guardian roles, family notes, or account authority. Those belong in the shared Academy family layer.</p></div>
+    <div class="grid cols-2">
+      <article class="card"><span class="emblem">👨‍👩‍👧</span><h3>Academy Family Profile</h3><p>Select the active learner, review family-level information, and manage the learner relationship from the shared Academy surface.</p><a class="button gold" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Open Family Profile</a></article>
+      <article class="card"><span class="emblem">📚</span><h3>Teacher & Records Tools</h3><p>Teacher tools and formal records stay within each grade course so the homepage never becomes a competing gradebook.</p><a class="button" href="#grades">Choose a Grade</a></article>
+    </div>
+  </div>
+</section>
 
-  function saveParentFromForm(){
-    state.parent.name = $("parentName").value.trim();
-    state.parent.role = $("familyRole").value;
-    state.parent.cadence = $("reviewCadence").value;
-    state.parent.notes = $("familyNotes").value.trim();
-    state.parent.portfolioReady = $("portfolioReady").checked;
-    state.parent.printReports = $("printReports").checked;
-    saveState();
-    renderAll();
-  }
+<section class="section" id="bridge">
+  <div class="shell">
+    <div class="heading"><p class="kicker">Middle School Bridge</p><h2>After Grade 05, continue the same learner journey.</h2><p>The learner should move forward through the Academy without creating a new identity simply because the repository changes.</p></div>
+    <div class="grid cols-2">
+      <article class="card"><span class="emblem">MS</span><h3>Middle School Home</h3><p>Grades 06–08 continue in the separate Khaemenes Middle School repository.</p><a class="button gold" href="https://vervenveda.com/Khaemenes_Middle.github.io/">Open Middle School</a></article>
+      <article class="card"><span class="emblem">→</span><h3>Continuity Rule</h3><p>Family identity, mentor continuity, and learner context should carry forward. Course-specific records remain owned by the course that created them.</p></article>
+    </div>
+  </div>
+</section>
+</main>
 
-  function openActiveGrade(){
-    const grade = currentGrade();
-    if (!grade){
-      location.hash = "#grades";
-      alert("Choose and save a grade path first.");
-      return;
-    }
-    window.location.href = grade.path;
-  }
+<footer class="footer"><div class="shell"><strong>Khaemenes Elementary Academy</strong><br>© <span id="year">2026</span> Jennifer Kay Pearl · Verve N Veda · Khaemenes Academy</div></footer>
 
-  function exportProfiles(){
-    const payload = {
-      title: "Khaemenes Elementary Academy Profiles",
-      exported: new Date().toISOString(),
-      state
-    };
-    const blob = new Blob([JSON.stringify(payload, null, 2)], {type:"application/json"});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "khaemenes-elementary-profiles.json";
-    a.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-  }
-
-  function clearProfiles(){
-    if (!confirm("Clear student and parent profiles saved in this browser?")) return;
-    localStorage.removeItem(STORAGE_KEY);
-    state = defaultState();
-    populateForms();
-    renderAll();
-  }
-
-  function updateMiddleLinks(){
-    $("middleHomeLink").href = MIDDLE_SCHOOL_BASE;
-    $("grade06Link").href = MIDDLE_SCHOOL_BASE + "grades/grade-06/index.html";
-    $("grade07Link").href = MIDDLE_SCHOOL_BASE + "grades/grade-07/index.html";
-    $("grade08Link").href = MIDDLE_SCHOOL_BASE + "grades/grade-08/index.html";
-  }
-
-  function bind(){
-    $("saveStudent").addEventListener("click", saveStudentFromForm);
-    $("saveParent").addEventListener("click", saveParentFromForm);
-    $("startGrade").addEventListener("click", openActiveGrade);
-    $("heroStartBtn").addEventListener("click", openActiveGrade);
-    $("exportProfiles").addEventListener("click", exportProfiles);
-    $("clearProfiles").addEventListener("click", clearProfiles);
-    $("printProfile").addEventListener("click", () => window.print());
-  }
-
-  function renderAll(){
-    setGreeting();
-    renderProfileSummary();
-    renderProgressInputs();
-    renderGradeGrid();
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    $("year").textContent = new Date().getFullYear();
-    updateMiddleLinks();
-    populateForms();
-    bind();
-    renderAll();
-  });
-})();
-</script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
+<script src="assets/khaemenes-elementary-family-adapter.js"></script>
+<script src="assets/khaemenes-elementary-continuity.js"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-naib-mentor-router.js"></script>
+<script src="assets/elementary-home.js"></script>
 </body>
 </html>
