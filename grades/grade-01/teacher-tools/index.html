@@ -1,20 +1,63 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Teacher Tools</title>
-  <link rel="stylesheet" href="../assets/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>First Grade Teacher Tools</title>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+<link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
-  <header class="header no-print">
-    <div class="shell nav">
-      <a class="brand" href="../index.html"><span class="seal">1</span><span><strong>Khaemenes First Grade</strong><small>36 Unit A+ Curriculum</small></span></a>
-      <nav class="navlinks"><a href="../index.html">Home</a><a href="../teacher-tools/index.html">Teacher Tools</a><a href="../assessments/weekly-assessments.html">Assessments</a><a href="../records/certificate.html">Certificate</a></nav>
-    </div>
-  </header>
-<main class="section"><div class="shell"><div class="heading"><p class="kicker">Teacher Tools</p><h1 style="color:var(--navy)">First Grade Mentor Toolkit</h1><p>Everything here is local, printable, and designed for a rigorous, developmentally appropriate A+ first grade program.</p></div><div class="grid cols-4"><article class='card'><div class='emblem'>01</div><h3>Pacing Guide</h3><p>Use one unit per week, five lessons per unit. Preserve time for reading groups, math centers, writing workshop, movement, play, and reteaching.</p></article><article class='card'><div class='emblem'>02</div><h3>Reading Intervention Map</h3><p>Support phonemic awareness, decoding, fluency, comprehension, vocabulary, handwriting, and oral language through small-group reteaching.</p></article><article class='card'><div class='emblem'>03</div><h3>Math Strategy Map</h3><p>Teach with objects, drawings, ten-frames, number lines, equations, place value tools, measurement, graphs, clocks, and explanations.</p></article><article class='card'><div class='emblem'>04</div><h3>Observation Checklist</h3><p>Track decoding, fluency, writing, math reasoning, inquiry, SEL, movement, creativity, independence, and portfolio evidence.</p></article><article class='card'><div class='emblem'>05</div><h3>Portfolio Rubric</h3><p>Collect weekly evidence: writing sample, math sheet, inquiry drawing, oral-language note, project record, assessment score, and teacher comments.</p></article><article class='card'><div class='emblem'>06</div><h3>Printable Workshop Guide</h3><p>Use the centered worksheets for calm practice. They support instruction and hands-on learning.</p></article><article class='card'><div class='emblem'>07</div><h3>Family Communication</h3><p>Send a weekly home note with essential question, phonics focus, math focus, read-aloud idea, family observation, and celebration.</p></article><article class='card'><div class='emblem'>08</div><h3>80% Certification Guide</h3><p>Certificate unlocks only when weekly average, midterm, final, and portfolio evidence all meet the completion gates.</p></article></div><section class="worksheet"><div class="worksheet-header"><div class="worksheet-title"><h1>Teacher Weekly Planning Sheet</h1><p>Plan, teach, observe, reteach, and document</p></div><div class="name-date"><div class="fill-box">Name:</div><div class="fill-box">Date:</div></div></div><table><tr><th>Area</th><th>Plan</th><th>Evidence</th></tr><tr><td>Reading / Phonics</td><td></td><td></td></tr><tr><td>Writing</td><td></td><td></td></tr><tr><td>Math</td><td></td><td></td></tr><tr><td>Science / Social Studies</td><td></td><td></td></tr><tr><td>SEL / Movement / Arts</td><td></td><td></td></tr><tr><td>Reteach / Enrichment</td><td></td><td></td></tr></table></section></div></main>
-  <footer class="footer no-print"><div class="shell">© <span id="year"></span> Jennifer Kay Pearl · Khaemenes Academy · In-house curriculum · No outside dependencies</div></footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<header class="header no-print"><div class="shell nav"><a class="brand" href="../index.html"><span class="seal">1</span><span><strong>Khaemenes First Grade</strong><small>Teacher & Family Review</small></span></a><nav class="navlinks"><a href="../index.html">Home</a><a href="../assessments/weekly-assessments.html">Assessments</a><a href="../records/certificate.html">Certificate</a></nav></div></header>
+<main class="section">
+<div class="shell">
+<div class="heading"><p class="kicker">Teacher Tools</p><h1 style="color:var(--navy)">First Grade Review & Record Toolkit</h1><p>Plan, observe, assess, reteach, and record verified evidence. Archaemenes may guide and explain, but mastery remains an assessment and adult-review decision.</p></div>
+
+<div class="grid cols-4">
+<article class="card"><div class="emblem">01</div><h3>Pacing Guide</h3><p>Use one unit per week, five lessons per unit, with time for reading groups, math centers, writing, movement, play, and reteaching.</p></article>
+<article class="card"><div class="emblem">02</div><h3>Observation Checklist</h3><p>Track decoding, fluency, writing, math reasoning, inquiry, SEL, creativity, independence, and portfolio evidence.</p></article>
+<article class="card"><div class="emblem">03</div><h3>Portfolio Rubric</h3><p>Collect meaningful work samples, projects, teacher notes, and assessment evidence across the year.</p></article>
+<article class="card"><div class="emblem">80</div><h3>Mastery Rule</h3><p>Weekly mastery requires 80%+. Certificate readiness requires all 36 mastered weeks, midterm 80%+, final 80%+, and portfolio approval.</p></article>
+</div>
+
+<section class="worksheet" style="margin-top:24px">
+<div class="worksheet-header"><div class="worksheet-title"><h1>Assessment Record</h1><p>Adult-reviewed local record for the active Academy learner</p></div></div>
+<div class="notice" id="recordStatus">Select a Grade 01 learner in the Academy Family Profile before recording formal results.</div>
+<p><strong>Active learner:</strong> <span id="recordLearner">No active Grade 01 learner</span></p>
+
+<div class="grid cols-2">
+<div class="card">
+<h3>Weekly Mastery Check</h3>
+<label for="weekNumber">Week</label>
+<select id="weekNumber"> 
+<option value="1">Week 01</option><option value="2">Week 02</option><option value="3">Week 03</option><option value="4">Week 04</option><option value="5">Week 05</option><option value="6">Week 06</option><option value="7">Week 07</option><option value="8">Week 08</option><option value="9">Week 09</option><option value="10">Week 10</option><option value="11">Week 11</option><option value="12">Week 12</option><option value="13">Week 13</option><option value="14">Week 14</option><option value="15">Week 15</option><option value="16">Week 16</option><option value="17">Week 17</option><option value="18">Week 18</option><option value="19">Week 19</option><option value="20">Week 20</option><option value="21">Week 21</option><option value="22">Week 22</option><option value="23">Week 23</option><option value="24">Week 24</option><option value="25">Week 25</option><option value="26">Week 26</option><option value="27">Week 27</option><option value="28">Week 28</option><option value="29">Week 29</option><option value="30">Week 30</option><option value="31">Week 31</option><option value="32">Week 32</option><option value="33">Week 33</option><option value="34">Week 34</option><option value="35">Week 35</option><option value="36">Week 36</option>
+</select>
+<label for="weekScore">Verified score</label><input id="weekScore" type="number" min="0" max="100" placeholder="0–100">
+<p>Enter the result only after reviewing the printable mastery check or equivalent documented evidence.</p>
+<button class="button gold" id="saveWeekScore" type="button">Record Weekly Result</button>
+</div>
+
+<div class="card">
+<h3>Year Milestones</h3>
+<label for="midtermScore">Midterm</label><input id="midtermScore" type="number" min="0" max="100" placeholder="0–100">
+<label for="finalScore">Final</label><input id="finalScore" type="number" min="0" max="100" placeholder="0–100">
+<label class="checkline"><input id="portfolioApproved" type="checkbox"> Portfolio evidence reviewed and approved</label>
+<button class="button gold" id="saveMilestones" type="button">Save Milestones</button>
+</div>
+</div>
+<p id="recordSummary" style="margin-top:1rem"></p>
+<div class="actions"><a class="button" href="../assessments/weekly-assessments.html">Open Assessment Index</a><a class="button" href="../records/certificate.html">Check Certificate</a><button class="button light" id="clearActiveRecord" type="button">Clear Active Local Record</button></div>
+</section>
+
+<section class="worksheet"><div class="worksheet-header"><div class="worksheet-title"><h1>Teacher Weekly Planning Sheet</h1><p>Plan, teach, observe, reteach, and document</p></div><div class="name-date"><div class="fill-box">Name:</div><div class="fill-box">Date:</div></div></div><table><tr><th>Area</th><th>Plan</th><th>Evidence</th></tr><tr><td>Reading / Phonics</td><td></td><td></td></tr><tr><td>Writing</td><td></td><td></td></tr><tr><td>Math</td><td></td><td></td></tr><tr><td>Science / Social Studies</td><td></td><td></td></tr><tr><td>SEL / Movement / Arts</td><td></td><td></td></tr><tr><td>Reteach / Enrichment</td><td></td><td></td></tr></table></section>
+</div>
+</main>
+<footer class="footer no-print"><div class="shell">© <span id="year"></span> Jennifer Kay Pearl · Khaemenes Academy</div></footer>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
+<script src="../../../assets/khaemenes-elementary-continuity.js"></script>
+<script src="../../../assets/khaemenes-elementary-family-adapter.js"></script>
+<script src="../assets/khaemenes-grade1-continuity.js"></script>
+<script src="../assets/grade1-records.js"></script>
 </body>
 </html>
