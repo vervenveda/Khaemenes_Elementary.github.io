@@ -1,32 +1,27 @@
 (() => {
   "use strict";
-  const DATA = window.KHAE_GRADE5_DATA;
-  const KEY = "khaemenes_grade5_subject_36_aplusplus_v1";
-  const $ = id => document.getElementById(id);
-  const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  function readState(){try{return JSON.parse(localStorage.getItem(KEY)) || {student:"Fifth Grade Scholar", weekly:{}, midterm:0, final:0, portfolio:false};}catch{return {student:"Fifth Grade Scholar", weekly:{}, midterm:0, final:0, portfolio:false};}}
-  let state = readState();
-  const save = () => localStorage.setItem(KEY, JSON.stringify(state));
-  const weeklyAverage = () => {const v=DATA.weeks.map(w=>Number(state.weekly[w.week]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0;};
-  const completedWeeks = () => DATA.weeks.filter(w=>Number(state.weekly[w.week]||0)>=DATA.course.passingScore).length;
-  const ready = () => weeklyAverage()>=80 && Number(state.midterm||0)>=80 && Number(state.final||0)>=80 && !!state.portfolio;
+  const DATA=window.KHAE_GRADE5_DATA;
+  const $=id=>document.getElementById(id);
+  const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const continuity=()=>window.KhaemenesGrade5Continuity;
+
+  function summary(){return continuity()?.getSummary?.()||{eligible:false,learner:null,mentor:null,state:{weekly:{},midterm:0,final:0,portfolio:false},mastered:0,average:0,next:1,certificateReady:false};}
   function renderDashboard(){
-    const avg=weeklyAverage(), done=completedWeeks(), ok=ready();
-    $("studentName").value=state.student||"";$("midtermScore").value=state.midterm||"";$("finalScore").value=state.final||"";$("portfolio").checked=!!state.portfolio;
-    $("summary").innerHTML=`<div class="grid cols-4"><article class="card stat"><strong>${done}/36</strong><span>Weeks at 80%+</span></article><article class="card stat"><strong>${avg}%</strong><span>Weekly average</span></article><article class="card stat"><strong>${state.midterm||0}%</strong><span>Midterm</span></article><article class="card stat"><strong>${state.final||0}%</strong><span>Final</span></article></div><div class="profile-box" style="margin-top:16px"><h3>${ok?"Certificate Ready":"Certificate Locked"}</h3><p>${ok?"All completion gates are met. The certificate page may be printed.":"Certificate requires weekly average 80%+, midterm 80%+, final 80%+, and adult portfolio approval."}</p><div class="progress"><span style="width:${Math.min(100,Math.round(done/36*100))}%"></span></div><div class="actions"><a class="button ${ok?"gold":""}" href="records/certificate.html">Open Certificate</a><button type="button" class="button" id="exportBtn">Export Records</button></div></div>`;
-    $("exportBtn").addEventListener("click", exportRecords);
+    const s=summary();const state=s.state||{};const learner=s.learner;const mentor=s.mentor||{name:"Archaemenes",avatar:"🦉"};
+    $("learnerName").textContent=learner?.nickname||"No active Grade 05 learner";
+    $("mentorName").textContent=`${mentor.avatar||"🦉"} ${mentor.name||"Archaemenes"} · Young Scholar`;
+    $("learnerStatus").textContent=s.eligible?"Academy Family learner connected":"Select a Grade 05 learner in the Academy Family Profile to open formal records.";
+    $("summary").innerHTML=`<div class="grid cols-4"><article class="card stat"><strong>${s.mastered||0}/36</strong><span>Weeks at 80%+</span></article><article class="card stat"><strong>${s.average||0}%</strong><span>Weekly average</span></article><article class="card stat"><strong>${state.midterm||0}%</strong><span>Midterm</span></article><article class="card stat"><strong>${state.final||0}%</strong><span>Final</span></article></div><div class="profile-box" style="margin-top:16px"><h3>${s.certificateReady?"Middle-School Readiness Certificate Ready":"Certificate Locked"}</h3><p>${s.certificateReady?"All Grade 05 completion gates are verified.":"Formal certification requires 36 mastered weeks, midterm 80%+, final 80%+, and adult portfolio approval."}</p><div class="actions"><a class="button ${s.certificateReady?"gold":""}" href="records/certificate.html">Open Certificate</a><a class="button" href="teacher-tools/index.html#mastery">Teacher / Family Verification</a></div></div>`;
   }
   function renderWeeks(){
-    $("weekGrid").innerHTML=DATA.weeks.map(w=>`<article class="card week-card"><div class="emblem">${String(w.week).padStart(2,"0")}</div><h3>${esc(w.title)}</h3><p><strong>Question:</strong> ${esc(w.essentialQuestion)}</p><p>${esc(w.theme)}</p><div class="badges"><span class="badge">8 subjects</span><span class="badge">40 blocks</span><span class="badge">A++</span></div><label>Weekly assessment score</label><input type="number" min="0" max="100" value="${state.weekly[w.week]||""}" data-score="${w.week}" placeholder="0–100"><div class="actions"><a class="button" href="weekly-plans/week-${String(w.week).padStart(2,"0")}.html">Open Week</a><a class="button light" href="printables/week-${String(w.week).padStart(2,"0")}-packet.html">Printable</a></div></article>`).join("");
-    document.querySelectorAll("[data-score]").forEach(input=>input.addEventListener("input",()=>{state.weekly[input.dataset.score]=Math.max(0,Math.min(100,Number(input.value||0)));save();renderDashboard();}));
+    const s=summary(),state=s.state||{weekly:{}};
+    $("weekGrid").innerHTML=DATA.weeks.map(w=>{const score=Number(state.weekly?.[w.week]||0);const stateLabel=score>=80?`Mastered · ${score}%`:score?`Review · ${score}%`:"Not yet verified";return `<article class="card week-card"><div class="emblem">${String(w.week).padStart(2,"0")}</div><h3>${esc(w.title)}</h3><p><strong>Question:</strong> ${esc(w.essentialQuestion)}</p><p>${esc(w.theme)}</p><div class="badges"><span class="badge">8 subjects</span><span class="badge">40 blocks</span><span class="badge">${stateLabel}</span></div><div class="actions"><a class="button" href="weekly-plans/week-${String(w.week).padStart(2,"0")}.html">Open Week</a><a class="button light" href="printables/week-${String(w.week).padStart(2,"0")}-packet.html">Printable</a><a class="button light" href="assessments/week-${String(w.week).padStart(2,"0")}-assessment.html">Assessment</a></div></article>`}).join("");
   }
-  function renderSubjects(){
-    $("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("");
-  }
-  function bind(){
-    $("saveProfile").addEventListener("click",()=>{state.student=$("studentName").value.trim()||"Fifth Grade Scholar";state.midterm=Math.max(0,Math.min(100,Number($("midtermScore").value||0)));state.final=Math.max(0,Math.min(100,Number($("finalScore").value||0)));state.portfolio=$("portfolio").checked;save();renderDashboard();renderWeeks();});
-    $("clearRecords").addEventListener("click",()=>{if(!confirm("Clear local fifth-grade records on this device?"))return;localStorage.removeItem(KEY);state=readState();renderDashboard();renderWeeks();});
-  }
-  function exportRecords(){const payload={course:DATA.course.title,exported:new Date().toISOString(),state};const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="khaemenes-fifth-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-  document.addEventListener("DOMContentLoaded",()=>{$("year").textContent=new Date().getFullYear();bind();renderDashboard();renderSubjects();renderWeeks();});
+  function renderSubjects(){if(!$("subjectGrid"))return;$("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("")}
+  function render(){if(!DATA)return;renderDashboard();renderSubjects();renderWeeks();const year=$("year");if(year)year.textContent=new Date().getFullYear();}
+  document.addEventListener("DOMContentLoaded",render);
+  window.addEventListener("khaemenes-family-changed",render);
+  window.addEventListener("khaemenes-elementary-family-ready",render);
+  window.addEventListener("khaemenes-naib-ready",render);
+  window.KhaemenesGrade5Continuity?.subscribe?.(render);
 })();
