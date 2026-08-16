@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Khaemenes Elementary Academy Grades 1–5 gateway with Academy Family learner continuity, Archaemenes mentoring, grade pathways, resources, records, and Middle School transition.">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), bluetooth=()">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://vervenveda.com; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://vervenveda.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), bluetooth=(), accelerometer=(), gyroscope=(), magnetometer=()">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://vervenveda.com; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://vervenveda.com; media-src 'none'; worker-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; manifest-src 'self'; upgrade-insecure-requests">
 <title>Khaemenes Elementary Academy</title>
 <link rel="stylesheet" href="assets/elementary-home.css">
 </head>
@@ -31,7 +31,7 @@
       <h1>Welcome, Young Scholar.</h1>
       <p class="lead">Your Academy learner identity continues here. Archaemenes remains your mentor, NAIB handles mentor routing, and each grade portal keeps its own lessons, assessments, records, and certificates.</p>
       <div class="actions">
-        <a class="btn light" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Open Family Profile</a>
+        <a class="btn light" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/" referrerpolicy="no-referrer">Open Family Profile</a>
         <a class="btn gold" id="startGrade" href="#grades">Choose a Grade</a>
         <a class="btn" href="#mentor">Meet Archaemenes</a>
       </div>
@@ -46,7 +46,7 @@
         <div class="quick-row"><strong>Grade</strong><span id="quickGrade">Not selected</span></div>
         <div class="quick-row"><strong>Mentor</strong><span id="quickMentor">Archaemenes · Young Scholar</span></div>
       </div>
-      <p id="familyStatus" class="status-review">Checking Academy Family Registry…</p>
+      <p id="familyStatus" class="status-review" aria-live="polite">Checking Academy Family Registry…</p>
     </aside>
   </div>
 </section>
@@ -68,7 +68,7 @@
         </div>
       </article>
       <aside class="notice">
-        <strong>Unified authority:</strong> the Academy Family Registry owns learner identity; NAIB owns mentor routing; Archaemenes mentors; grade portals own lessons and records; assessments determine mastery. The Elementary homepage does not create a second child account and does not let a local field redefine the mentor.
+        <strong>Unified authority:</strong> the Academy Family Registry owns learner identity and grade; NAIB owns mentor routing; Archaemenes mentors; grade portals own lessons and records; assessments determine mastery. The Elementary homepage does not create a second child account and does not let a local preference redefine grade, mentor, or mastery.
       </aside>
     </div>
   </div>
@@ -83,7 +83,7 @@
 
 <section class="section" id="preferences">
   <div class="shell">
-    <div class="heading"><p class="kicker">My Learning</p><h2>Keep preferences separate from identity.</h2><p>These optional local settings help Archaemenes and the learner remember broad interests and goals on this device. They do not create an account, assign a mentor, or award mastery.</p></div>
+    <div class="heading"><p class="kicker">My Learning</p><h2>Keep preferences separate from identity.</h2><p>These optional local settings help Archaemenes and the learner remember broad interests and goals on this device. They do not create an account, assign a grade, assign a mentor, or award mastery.</p></div>
     <div class="grid cols-2">
       <article class="pref-card">
         <h3>Learner preferences</h3>
@@ -97,8 +97,8 @@
       </article>
       <article class="pref-card">
         <h3>Where formal progress lives</h3>
-        <p>Each grade portal keeps its own lesson, assessment, record, and certificate state. The root homepage no longer asks families to type a second percentage that could disagree with the real course record.</p>
-        <p>Use the active grade portal for detailed progress, assessment evidence, printables, teacher tools, and certificate readiness.</p>
+        <p>Each grade portal keeps its own lesson, assessment, record, and certificate state. The root homepage never asks families to type a second percentage that could disagree with the real course record.</p>
+        <p>A pinned grade is only a convenient doorway. Formal grade placement comes from the Academy Family Profile.</p>
         <div class="actions"><a class="button" href="#grades">Open Grade Paths</a><button class="button soft" type="button" id="printOverview">Print Overview</button></div>
       </article>
     </div>
@@ -107,9 +107,9 @@
 
 <section class="section alt" id="family">
   <div class="shell">
-    <div class="heading"><p class="kicker">Family & Educator Boundary</p><h2>Family administration stays in the Academy Family Profile.</h2><p>The Elementary homepage no longer duplicates parent names, guardian roles, family notes, or account authority. Those belong in the shared Academy family layer.</p></div>
+    <div class="heading"><p class="kicker">Family & Educator Boundary</p><h2>Family administration stays in the Academy Family Profile.</h2><p>The Elementary homepage does not duplicate parent names, guardian roles, family notes, learner IDs, or account authority. Those belong in the shared Academy family layer.</p></div>
     <div class="grid cols-2">
-      <article class="card"><span class="emblem">👨‍👩‍👧</span><h3>Academy Family Profile</h3><p>Select the active learner, review family-level information, and manage the learner relationship from the shared Academy surface.</p><a class="button gold" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Open Family Profile</a></article>
+      <article class="card"><span class="emblem">👨‍👩‍👧</span><h3>Academy Family Profile</h3><p>Select the active learner, review family-level information, and manage the learner relationship from the shared Academy surface.</p><a class="button gold" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/" referrerpolicy="no-referrer">Open Family Profile</a></article>
       <article class="card"><span class="emblem">📚</span><h3>Teacher & Records Tools</h3><p>Teacher tools and formal records stay within each grade course so the homepage never becomes a competing gradebook.</p><a class="button" href="#grades">Choose a Grade</a></article>
     </div>
   </div>
@@ -117,10 +117,10 @@
 
 <section class="section" id="bridge">
   <div class="shell">
-    <div class="heading"><p class="kicker">Middle School Bridge</p><h2>After Grade 05, continue the same learner journey.</h2><p>The learner should move forward through the Academy without creating a new identity simply because the repository changes.</p></div>
+    <div class="heading"><p class="kicker">Middle School Bridge</p><h2>After Grade 05, continue the same learner journey.</h2><p>The learner moves forward through the Academy without creating a new identity simply because the repository changes. Promotion remains a deliberate family/Academy action rather than an automatic local rewrite.</p></div>
     <div class="grid cols-2">
-      <article class="card"><span class="emblem">MS</span><h3>Middle School Home</h3><p>Grades 06–08 continue in the separate Khaemenes Middle School repository.</p><a class="button gold" href="https://vervenveda.com/Khaemenes_Middle.github.io/">Open Middle School</a></article>
-      <article class="card"><span class="emblem">→</span><h3>Continuity Rule</h3><p>Family identity, mentor continuity, and learner context should carry forward. Course-specific records remain owned by the course that created them.</p></article>
+      <article class="card"><span class="emblem">MS</span><h3>Middle School Home</h3><p>Grades 06–08 continue in the separate Khaemenes Middle School repository.</p><a class="button gold" href="https://vervenveda.com/Khaemenes_Middle.github.io/" referrerpolicy="no-referrer">Open Middle School</a></article>
+      <article class="card"><span class="emblem">→</span><h3>Continuity Rule</h3><p>Family identity, mentor continuity, and learner context carry forward. Course-specific records remain owned by the course that created them.</p></article>
     </div>
   </div>
 </section>
@@ -128,9 +128,9 @@
 
 <footer class="footer"><div class="shell"><strong>Khaemenes Elementary Academy</strong><br>© <span id="year">2026</span> Jennifer Kay Pearl · Verve N Veda · Khaemenes Academy</div></footer>
 
-<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js" referrerpolicy="no-referrer"></script>
 <script src="assets/khaemenes-elementary-continuity.js"></script>
-<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-naib-mentor-router.js"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-naib-mentor-router.js" referrerpolicy="no-referrer"></script>
 <script src="assets/khaemenes-elementary-family-adapter.js"></script>
 <script src="assets/elementary-home.js"></script>
 </body>
