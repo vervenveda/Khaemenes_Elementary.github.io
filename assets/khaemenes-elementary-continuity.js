@@ -1,7 +1,7 @@
 /*
- * Khaemenes Elementary · Continuity Bridge v1.0.0
+ * Khaemenes Elementary · Continuity Bridge v1.1.0
  * ------------------------------------------------
- * Family Registry is authoritative for learner identity.
+ * Family Registry is authoritative for learner identity and grade.
  * NAIB routes mentor authority.
  * Archaemenes is the current Elementary mentor.
  * Grade curriculum remains authoritative for mastery and records.
@@ -36,7 +36,7 @@
   }
 
   function activeLearner(){
-    return global.KhaemenesFamilyRegistry?.getLearner?.()||null;
+    try{return global.KhaemenesFamilyRegistry?.getLearner?.()||null}catch{return null}
   }
 
   function normalizeGrade(value){
@@ -52,26 +52,29 @@
     return Boolean(normalizeGrade(learner.grade||learner.gradeLevel||stage));
   }
 
-  function legacyProfile(){
+  function legacyPreferences(){
     const value=readJSON(LEGACY_KEY,null);
-    return value&&typeof value==="object"?value:null;
+    const student=value?.student&&typeof value.student==="object"?value.student:{};
+    return Object.freeze({
+      favoriteSubject:cleanText(student.favoriteSubject,100)||null,
+      goal:cleanText(student.goal,400)||null
+    });
   }
 
   function profile(){
     const learner=activeLearner();
     if(!isElementaryLearner(learner))return null;
-    const legacy=legacyProfile();
-    const legacyStudent=legacy?.student&&typeof legacy.student==="object"?legacy.student:{};
+    const legacy=legacyPreferences();
     return Object.freeze({
       learnerId:cleanText(learner.learnerId,120),
       familyId:cleanText(learner.familyId,120)||null,
-      nickname:cleanText(learner.nickname||legacyStudent.name||"Scholar",80),
+      nickname:cleanText(learner.nickname||learner.displayName||"Scholar",80),
       stage:"elementary",
-      grade:normalizeGrade(learner.grade||learner.gradeLevel||legacyStudent.grade),
+      grade:normalizeGrade(learner.grade||learner.gradeLevel),
       ageBand:cleanText(learner.ageBand,40)||null,
       interests:Array.isArray(learner.interests)?learner.interests.slice(0,16).map(v=>cleanText(v,80)).filter(Boolean):[],
-      favoriteSubject:cleanText(legacyStudent.favoriteSubject,100)||null,
-      goal:cleanText(legacyStudent.goal,400)||null,
+      favoriteSubject:legacy.favoriteSubject,
+      goal:legacy.goal,
       familyManaged:true
     });
   }
@@ -130,7 +133,7 @@
   }
 
   global.KhaemenesElementaryContinuity=Object.freeze({
-    version:"1.0.0",
+    version:"1.1.0",
     mentorId:"archaemenes",
     presentationMode:PRESENTATION,
     legacyKey:LEGACY_KEY,
