@@ -6,16 +6,18 @@ Khaemenes Elementary Academy is the Grades 1–5 learning division of Khaemenes 
 
 It provides five elementary grade pathways, family-linked learner continuity, local course progress, printable learning evidence, assessments, records, certificates, and a bridge into Khaemenes Middle School.
 
-## Canonical Identity and Mentor Architecture
+## Canonical Identity and Delegation Architecture
 
-Elementary now follows the same Academy identity model as Preschool and Kinder Garden.
+Elementary follows the same Academy identity model as Preschool and Kinder Garden.
 
 ```text
 Academy Family Registry
         ↓
 active Elementary learner
         ↓
-NAIB mentor-routing boundary
+NAIB intake / resource direction / delegation
+        ↓
+Khaemenes Academy
         ↓
 Archaemenes
         ↓
@@ -23,22 +25,25 @@ Young Scholar presentation
         ↓
 current Grade 01–05 course context
         ↓
-mentor-eligible resources and bounded guidance
+approved learning resources + bounded guidance
 ```
 
-**Archaemenes is the current Elementary mentor.**
+**Archaemenes is the current Khaemenes Academy mentor for Elementary learners.**
 
-The root page and grade portals must not create competing mentor identities. Older free-form mentor fields or custom mentor objects are legacy compatibility data only and are not assignment authority.
+NAIB is the front-desk administrator / AI Resources Director. NAIB receives bounded visitor context and delegates the visitor to the appropriate platform, resource, service, or specialist AI. For an Elementary learner, NAIB delegates into Khaemenes Academy; the Academy provides Archaemenes as its institutional mentor.
+
+The root page and grade portals must not create competing mentor identities. Older free-form mentor fields or custom mentor objects are legacy compatibility data only and are not mentor authority.
 
 A future responsible Mentor Adoption / avatar program may be added under separate Academy safety, guardian, privacy, continuity, and identity rules. It is not active in the current Elementary platform.
 
-See `ARCHAEMENES_MENTOR_LOGIC.md` for the preserved governing rule.
+See `ARCHAEMENES_MENTOR_LOGIC.md` for the governing mentor rule.
 
 ## Authority Boundaries
 
-- **Academy Family Registry** owns learner/family identity.
-- **NAIB** routes mentor authority and coordinates learning resources.
-- **Archaemenes** mentors the learner.
+- **Academy Family Registry** owns learner/family identity and formal grade placement.
+- **NAIB** owns intake, resource direction, and delegation across the wider ecosystem.
+- **Khaemenes Academy** owns the Archaemenes institutional mentor relationship.
+- **Archaemenes** mentors the learner inside Academy education.
 - **Grade curriculum** owns lessons, mastery rules, assessments, records, and certificates.
 - **mentor-manifest.json** exposes approved grade destinations and mentor-eligible learning resources.
 - **Parents, guardians, and educators** remain the human authority.
@@ -47,7 +52,7 @@ Archaemenes may explain, encourage, give clues, recommend practice, and help nav
 
 ## Grade Pathways
 
-The elementary grade portals are organized under:
+The Elementary grade portals are organized under:
 
 - `grades/grade-01/`
 - `grades/grade-02/`
@@ -57,11 +62,11 @@ The elementary grade portals are organized under:
 
 ### Grade 01
 
-First Grade is allowed to remain unit-based. Expected major parts include lessons, printables, assessments, teacher tools, records, and local progress.
+First Grade remains unit-based. Major parts include lessons, printables, assessments, teacher tools, records, and learner-scoped progress.
 
 ### Grade 02
 
-Second Grade currently includes a `subjects/` directory as well as assessments, assets, data, printables, records, and teacher tools. Its landing page should link only to resources that actually exist in the repository.
+Second Grade includes a `subjects/` directory as well as assessments, assets, data, printables, records, and teacher tools.
 
 ### Grades 03–05
 
@@ -71,18 +76,32 @@ Grades 03–05 use the larger subject-hall architecture with subject areas, week
 
 `mentor-manifest.json` is the Elementary public resource registry. It includes the Elementary home, all five grade portals, and verified learning games/simulations across literacy, mathematics, science, engineering, civics, arts, social-emotional learning, and inquiry.
 
-The manifest helps NAIB and Archaemenes discover useful tools. It does not decide mentor identity and does not award mastery.
+The manifest helps NAIB, Khaemenes Academy, and Archaemenes discover useful tools. It does not decide mentor identity and does not award mastery.
 
 ## Family and Continuity Files
 
-The hardening architecture introduces:
+The hardening architecture includes:
 
 - `assets/khaemenes-elementary-continuity.js`
 - `assets/khaemenes-elementary-family-adapter.js`
 
-The continuity bridge reads the active Academy learner and resolves Archaemenes through the NAIB public routing contract. The family adapter strips obsolete local mentor authority from compatibility records rather than carrying old mentor identities forward.
+The continuity bridge reads the active Academy learner and prefers the NAIB delegation contract, with compatibility support for the historical mentor-assignment method while downstream integrations transition. The family adapter strips obsolete local mentor authority from compatibility records rather than carrying old mentor identities forward.
 
 Legacy local Elementary profile records may still exist during migration. Non-sensitive learner preferences and local progress can be preserved, but the Academy Family Registry is the authoritative identity source moving forward.
+
+## Grade Records and Certification
+
+Formal grade records are learner-scoped. Student-facing landing pages do not directly award weekly mastery, midterm/final scores, portfolio approval, or certificates.
+
+Teacher / Family Tools provide the adult verification surface. Current certification standard for Grades 01–05 is:
+
+- active learner in the correct grade;
+- 36/36 weekly mastery results at 80% or above;
+- midterm at 80% or above;
+- final at 80% or above;
+- required portfolio/capstone evidence approved.
+
+Grade 05 completion does not automatically promote the learner into Grade 06.
 
 ## Privacy
 
@@ -106,11 +125,11 @@ Grades 06–08 belong in the separate repository:
 
 `Khaemenes_Middle.github.io`
 
-Elementary should bridge to the Middle School home after Grade 05 completion rather than duplicating those grade programs here.
+Elementary bridges to the Middle School home after Grade 05 completion without creating a new learner identity or silently rewriting stage/grade placement.
 
 ## Dependency Policy
 
-Core Elementary navigation should remain lightweight and portable:
+Core Elementary navigation remains lightweight and portable:
 
 - no required CDN frameworks;
 - no external font dependency;
@@ -120,4 +139,4 @@ Core Elementary navigation should remain lightweight and portable:
 
 ## Current Unification Rule
 
-**Archaemenes mentors. NAIB routes. The grade curriculum measures mastery. The resource registry recommends tools. The Academy Family Registry owns learner identity.**
+**NAIB delegates. Khaemenes Academy provides Archaemenes. Archaemenes mentors. The grade curriculum measures mastery. The resource registry recommends tools. The Academy Family Registry owns learner identity.**
