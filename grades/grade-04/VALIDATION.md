@@ -19,12 +19,20 @@
 PASS — Grade 04 follows the unified Elementary authority model on `hardening/archaemenes-elementary`.
 
 ```text
-Academy Family Registry → Elementary continuity → NAIB → Archaemenes → Grade 04
+Academy Family Registry
+→ NAIB intake / delegation
+→ Khaemenes Academy
+→ Archaemenes
+→ Grade 04 course context
+→ assessment evidence
+→ adult verification
+→ learner-scoped certificate
 ```
 
-- Family Registry owns learner identity.
+- Family Registry owns learner identity and formal grade placement.
+- NAIB delegates the visitor to the appropriate Academy/resource destination.
+- Khaemenes Academy provides Archaemenes as its institutional mentor.
 - Grade 04 requires the active learner to resolve to `grade-04` for formal records.
-- Archaemenes is the mentor.
 - Young Scholar is the Elementary presentation mode.
 - Grade 04 does not define alternate local mentor authority.
 
@@ -50,6 +58,8 @@ Teacher / Family Tools now records verified:
 
 Controls remain disabled until an eligible Grade 04 learner is active.
 
+The adult record controller is externalized in `assets/grade4-records.js`; the Teacher / Family Tools page no longer contains the record-management application as inline JavaScript.
+
 ## Certificate
 
 PASS — certificate rendering uses the active learner-scoped Grade 04 record.
@@ -61,6 +71,8 @@ Requirements:
 - midterm 80%+;
 - final 80%+;
 - portfolio approved.
+
+The certificate now has one explicit print control, no duplicate print IDs, and no inline print/year handler.
 
 ## Preserved systems
 
@@ -76,4 +88,4 @@ Requirements:
 
 ## Status
 
-**Grade 04 identity, mentor, record, mastery, and certification authority unified on the hardening branch.**
+**Grade 04 identity, delegation, mentor, record, mastery, runtime, and certification authority are unified on the hardening branch.**
