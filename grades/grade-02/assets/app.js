@@ -1,2 +1,66 @@
+(() => {
+  "use strict";
+  const $=id=>document.getElementById(id);
+  const DATA=window.KHAE_GRADE2_DATA||null;
 
-(()=>{"use strict";const DATA=window.KHAE_GRADE2_DATA,KEY="khaemenes_grade2_subject_36_aplus_v1",$=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));function read(){try{return JSON.parse(localStorage.getItem(KEY))||{student:"Second Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false}}catch{return{student:"Second Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false}}}let state=read();function save(){localStorage.setItem(KEY,JSON.stringify(state))}function avg(){const v=DATA.units.map(u=>Number(state.weekly[u.week]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0}function done(){return DATA.units.filter(u=>Number(state.weekly[u.week]||0)>=80).length}function ready(){return avg()>=80&&Number(state.midterm||0)>=80&&Number(state.final||0)>=80&&!!state.portfolio}function renderDash(){const a=avg(),d=done(),r=ready();$("studentName").value=state.student||"";$("midtermScore").value=state.midterm||"";$("finalScore").value=state.final||"";$("portfolio").checked=!!state.portfolio;$("summary").innerHTML=`<div class="grid cols-4"><article class="card stat"><strong>${d}/36</strong><span>Weeks at 80%+</span></article><article class="card stat"><strong>${a}%</strong><span>Weekly average</span></article><article class="card stat"><strong>${state.midterm||0}%</strong><span>Midterm</span></article><article class="card stat"><strong>${state.final||0}%</strong><span>Final</span></article></div><div class="profile-box" style="margin-top:16px"><h3>${r?"Certificate Ready":"Certificate Locked"}</h3><p>${r?"All 80% completion gates are met.":"Certificate requires weekly average 80%+, midterm 80%+, final 80%+, and portfolio approval."}</p><div class="progress"><span style="width:${Math.min(100,Math.round(d/36*100))}%"></span></div><div class="actions"><a class="button ${r?"gold":""}" href="records/certificate.html">Open Certificate</a><button type="button" class="button" id="exportBtn">Export Records</button></div></div>`;$("exportBtn").addEventListener("click",exportRecords)}function renderWeeks(){if(!$("weekGrid"))return;$("weekGrid").innerHTML=DATA.units.map(u=>`<article class="card week-card"><div class="emblem">${String(u.week).padStart(2,"0")}</div><h3>${esc(u.title)}</h3><p><strong>Question:</strong> ${esc(u.essentialQuestion)}</p><label>Weekly assessment score</label><input type="number" min="0" max="100" value="${state.weekly[u.week]||""}" data-score="${u.week}" placeholder="0–100"><div class="actions"><a class="button" href="printables/week-${String(u.week).padStart(2,"0")}-packet.html">Printable</a><a class="button light" href="assessments/week-${String(u.week).padStart(2,"0")}-assessment.html">Assessment</a></div></article>`).join("");document.querySelectorAll("[data-score]").forEach(inp=>inp.addEventListener("input",()=>{state.weekly[inp.dataset.score]=Math.max(0,Math.min(100,Number(inp.value||0)));save();renderDash()}))}function bind(){if(!$("saveProfile"))return;$("saveProfile").addEventListener("click",()=>{state.student=$("studentName").value.trim()||"Second Grade Scholar";state.midterm=Math.max(0,Math.min(100,Number($("midtermScore").value||0)));state.final=Math.max(0,Math.min(100,Number($("finalScore").value||0)));state.portfolio=$("portfolio").checked;save();renderDash();renderWeeks()});$("clearRecords").addEventListener("click",()=>{if(!confirm("Clear local second-grade records on this device?"))return;localStorage.removeItem(KEY);state=read();renderDash();renderWeeks()})}function exportRecords(){const blob=new Blob([JSON.stringify({course:DATA.course.title,exported:new Date().toISOString(),state},null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="khaemenes-second-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}function renderStandards(){if(!$("standardsGrid"))return;$("standardsGrid").innerHTML=DATA.standardsFamilies.map(s=>`<article class="card"><div class="emblem">${esc(s.code.replace("KHAE-",""))}</div><h3>${esc(s.label)}</h3><p>${esc(s.description)}</p></article>`).join("")}document.addEventListener("DOMContentLoaded",()=>{$("year").textContent=new Date().getFullYear();bind();renderDash();renderWeeks();renderStandards()})})();
+  function summary(){return window.KhaemenesGrade2Continuity?.getSummary?.()||null}
+  function units(){
+    if(Array.isArray(DATA?.units)&&DATA.units.length)return DATA.units.map((u,i)=>({week:Number(u.week||i+1),title:String(u.title||`Week ${i+1}`),essentialQuestion:String(u.essentialQuestion||"")}));
+    return Array.from({length:36},(_,i)=>({week:i+1,title:`Week ${String(i+1).padStart(2,"0")}`,essentialQuestion:"Open the weekly subject plans and assessment evidence."}));
+  }
+  function standards(){return Array.isArray(DATA?.standardsFamilies)?DATA.standardsFamilies:[]}
+  function el(tag,text,className){const n=document.createElement(tag);if(className)n.className=className;if(text!==undefined)n.textContent=text;return n}
+
+  function renderIdentity(s){
+    const learner=s?.learner;const mentor=s?.mentor;
+    if($("learnerName"))$("learnerName").textContent=learner?.nickname||"No active Grade 02 learner";
+    if($("mentorName"))$("mentorName").textContent=mentor?.name||"Archaemenes";
+    if($("mentorMode"))$("mentorMode").textContent="Young Scholar · assigned through NAIB";
+    if($("mentorMessage"))$("mentorMessage").textContent=learner?`Welcome, ${learner.nickname}. We will work subject by subject, one clear step at a time.`:"Select the active Grade 02 learner in the Academy Family Profile to connect formal records.";
+  }
+
+  function renderSummary(s){
+    const host=$("summary");if(!host)return;host.replaceChildren();
+    const grid=el("div",undefined,"grid cols-4");
+    for(const [value,label] of [[`${s?.mastered||0}/36`,"Weeks at 80%+"],[`${s?.average||0}%`,"Weekly average"],[`${s?.state?.midterm||0}%`,"Midterm"],[`${s?.state?.final||0}%`,"Final"]]){
+      const card=el("article",undefined,"card stat");card.append(el("strong",value),el("span",label));grid.append(card);
+    }
+    const box=el("div",undefined,"profile-box");box.style.marginTop="16px";
+    box.append(el("h3",s?.certificateReady?"Certificate Ready":"Certificate Locked"));
+    box.append(el("p",s?.eligible?"Formal scores are recorded through Teacher Tools after assessment evidence is reviewed.":"Formal Grade 02 records require the active Academy Grade 02 learner."));
+    const actions=el("div",undefined,"actions");
+    const cert=el("a","Open Certificate","button");cert.href="records/certificate.html";
+    const teacher=el("a","Teacher / Family Verification","button gold");teacher.href="teacher-tools/index.html";
+    actions.append(cert,teacher);box.append(actions);host.append(grid,box);
+  }
+
+  function renderWeeks(s){
+    const grid=$("weekGrid");if(!grid)return;grid.replaceChildren();
+    for(const u of units()){
+      const score=Number(s?.state?.weekly?.[u.week]||0);
+      const card=el("article",undefined,"card week-card");
+      card.append(el("div",String(u.week).padStart(2,"0"),"emblem"),el("h3",u.title));
+      const q=el("p");q.append(el("strong","Question: "),document.createTextNode(u.essentialQuestion||"Review this week's subject learning and evidence."));card.append(q);
+      const status=el("p",score?`Recorded mastery: ${score}%":"Assessment not yet verified.");card.append(status);
+      const actions=el("div",undefined,"actions");
+      const printable=el("a","Printable","button");printable.href=`printables/week-${String(u.week).padStart(2,"0")}-packet.html`;
+      const assessment=el("a","Assessment","button light");assessment.href=`assessments/week-${String(u.week).padStart(2,"0")}-assessment.html`;
+      actions.append(printable,assessment);card.append(actions);grid.append(card);
+    }
+  }
+
+  function renderStandards(){
+    const grid=$("standardsGrid");if(!grid)return;grid.replaceChildren();
+    for(const s of standards()){
+      const card=el("article",undefined,"card");card.append(el("div",String(s.code||"").replace("KHAE-",""),"emblem"),el("h3",String(s.label||"Coverage")),el("p",String(s.description||"")));grid.append(card);
+    }
+  }
+
+  function render(){const s=summary()||{eligible:false,state:{weekly:{},midterm:0,final:0},mastered:0,average:0};renderIdentity(s);renderSummary(s);renderWeeks(s);renderStandards();if($("year"))$("year").textContent=new Date().getFullYear()}
+
+  document.addEventListener("DOMContentLoaded",render);
+  window.addEventListener("khaemenes-family-changed",render);
+  window.addEventListener("khaemenes-elementary-family-ready",render);
+  window.addEventListener("khaemenes-naib-ready",render);
+  window.addEventListener("storage",e=>{if(String(e.key||"").startsWith("khaemenes_"))render()});
+})();
