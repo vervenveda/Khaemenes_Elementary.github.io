@@ -7,9 +7,11 @@ This file preserves the current mentor authority for the Elementary division so 
 ```text
 Academy Family Registry
         ↓
-active elementary learner
+active Elementary learner
         ↓
-NAIB mentor-routing boundary
+NAIB intake / delegation
+        ↓
+Khaemenes Academy
         ↓
 Archaemenes
         ↓
@@ -22,9 +24,9 @@ mentor-eligible learning resources
 bounded learner experience
 ```
 
-## One Mentor
+## One Academy Mentor
 
-Archaemenes is the current Academy mentor for Elementary learners.
+Archaemenes is the current Khaemenes Academy mentor for Elementary learners.
 
 Grades 01–05 do not create separate mentor identities. Developmental wording, pacing, visual treatment, or grade-specific teaching style may adapt while preserving the same Archaemenes identity.
 
@@ -35,17 +37,30 @@ The default Elementary presentation is `young-scholar`.
 The following responsibilities remain separate:
 
 - **Academy Family Registry** — learner and family identity.
-- **NAIB** — mentor routing and coordination.
-- **Archaemenes** — educational mentoring and learner-facing guidance.
+- **NAIB** — front-desk intake, administration, resource direction, and delegation.
+- **Khaemenes Academy** — institutional educational relationship and Academy specialist context.
+- **Archaemenes** — educational mentoring and learner-facing guidance inside Khaemenes Academy.
 - **Grade curriculum** — lessons, mastery rules, assessments, records, and certificates.
 - **Elementary mentor manifest/resources** — discoverable learning tools and grade destinations.
 - **Parent/guardian/educator** — human oversight and final educational judgment.
 
 Archaemenes may explain progress, recommend practice, give clues, encourage reflection, and help the learner navigate. He does not award mastery, modify grades, bypass assessments, replace guardian authority, or create hidden learner records.
 
+## NAIB Delegation Rule
+
+NAIB determines **where the visitor should go**, not who every platform must use as its specialist.
+
+For an Elementary learner entering Khaemenes Academy, NAIB delegates to the Elementary campus and returns Archaemenes as the Academy specialist. Other destinations may expose their own specialist AIs, games, knowledge systems, communications tools, civic resources, emergency resources, or non-AI services.
+
+Current school clients may still call `assignMentor()` / `requestMentor()` as compatibility methods. NAIB v2 keeps those methods while clients migrate toward `delegate()` / `requestDelegation()`. The compatibility seam must resolve through the same delegation policy and must not make NAIB the mentor.
+
+## Specialist Platform Boundary
+
+A Khaemenes learner may also enter specialized Verve N Veda platforms. Those platforms may present their own specialist AIs inside their domains. NAIB may delegate the learner there without permanently replacing Archaemenes as the Khaemenes Academy mentor.
+
 ## Legacy Mentor Fields
 
-Older local profile fields such as free-form mentor names, embedded mentor personalities, or custom mentor identity fields are compatibility data only. They are not assignment authority and should not be propagated into new records.
+Older local profile fields such as free-form mentor names, embedded mentor personalities, or custom mentor identity fields are compatibility data only. They are not specialist authority and should not be propagated into new records.
 
 When old records are migrated, learner progress and non-sensitive preferences may be preserved while obsolete mentor identity fields are retired.
 
@@ -55,26 +70,26 @@ A future responsible Mentor Adoption program may allow a learner or family to de
 
 That program is not active in the current Elementary architecture. The current platform must not simulate it by allowing pages to invent alternate mentor identities locally.
 
-Until the formal adoption program is introduced, Archaemenes remains the Elementary mentor.
+Until the formal adoption program is introduced, Archaemenes remains the Khaemenes Academy mentor.
 
 ## Resource Matching
 
-Resource discovery is distinct from mentor assignment.
+Resource discovery is distinct from NAIB delegation and distinct from the Academy specialist relationship.
 
-The Elementary `mentor-manifest.json` may expose grade portals and mentor-eligible games or simulations. NAIB may use those resources to help Archaemenes recommend suitable practice, but the resource registry never decides who the mentor is.
+The Elementary `mentor-manifest.json` may expose grade portals and mentor-eligible games or simulations. NAIB may direct the learner to a resource or return the Elementary campus as the destination; Archaemenes may then recommend suitable practice within the Academy context. The resource registry never becomes identity or grading authority.
 
 ## Fallback Rule
 
-If the public NAIB mentor router is temporarily unavailable, the Elementary client may present a local, non-privileged fallback representation of Archaemenes so the child-facing page remains coherent.
+If the public NAIB delegation router is temporarily unavailable, the Elementary client may present a local, non-privileged fallback representation of Archaemenes so the child-facing page remains coherent.
 
 The fallback must:
 
 - identify as Archaemenes;
+- identify him as the Khaemenes Academy mentor;
 - use the `young-scholar` presentation;
-- not create a new mentor identity;
-- not claim privileged routing occurred;
+- not claim that a fresh NAIB delegation occurred;
 - not expose private topology or credentials;
-- not bypass learner-stage checks.
+- not bypass learner-stage or grade checks.
 
 ## Privacy
 
@@ -84,4 +99,4 @@ Do not store credentials, private keys, government identifiers, financial data, 
 
 ## Current Standard
 
-**Archaemenes mentors. NAIB routes. The grade curriculum measures mastery. The resource registry recommends tools. Families and educators remain the human authority.**
+**NAIB delegates. Khaemenes Academy provides Archaemenes. Archaemenes mentors. The grade curriculum measures mastery. Resource systems recommend tools. Families and educators remain the human authority.**
