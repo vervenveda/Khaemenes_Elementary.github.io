@@ -1,9 +1,9 @@
 /*
- * Khaemenes Elementary · Continuity Bridge v1.1.0
+ * Khaemenes Elementary · Continuity Bridge v1.2.0
  * ------------------------------------------------
  * Family Registry is authoritative for learner identity and grade.
- * NAIB routes mentor authority.
- * Archaemenes is the current Elementary mentor.
+ * NAIB delegates the learner to Khaemenes Academy.
+ * Khaemenes Academy provides Archaemenes as its current mentor.
  * Grade curriculum remains authoritative for mastery and records.
  */
 (function attachElementaryContinuity(global){
@@ -19,7 +19,8 @@
     avatar:"🦉",
     colors:["#3f6fb2","#c99a42"],
     presentationMode:PRESENTATION,
-    assignedBy:"fallback",
+    assignedBy:"Khaemenes Academy",
+    delegatedBy:"NAIB",
     intro:"I am Archaemenes. We will look closely, ask good questions, and take one thoughtful step at a time."
   });
 
@@ -79,25 +80,40 @@
     });
   }
 
-  function assignMentor(p=profile()){
+  function academyMentor(p=profile()){
     if(!p)return null;
     const router=global.KhaemenesNAIB||null;
-    const assignment=router?.assignMentor?.({
+    const context={
       stage:"elementary",
       grade:p.grade||undefined,
       ageBand:p.ageBand||undefined,
       interests:p.interests,
       surface:"khaemenes-elementary",
-      intent:"learning-mentor"
-    })||null;
+      intent:"academy learning"
+    };
 
-    if(assignment?.status==="assigned" && assignment.mentorId==="archaemenes" && assignment.mentor){
+    const delegated=router?.delegate?.(context)||null;
+    if(delegated?.status==="delegated"&&delegated?.specialist?.id==="archaemenes"){
       return Object.freeze({
-        ...assignment.mentor,
+        ...delegated.specialist,
         id:"archaemenes",
         name:"Archaemenes",
-        presentationMode:assignment.mentor.presentationMode||PRESENTATION,
-        assignedBy:"NAIB"
+        presentationMode:delegated.specialist.presentationMode||PRESENTATION,
+        assignedBy:"Khaemenes Academy",
+        delegatedBy:"NAIB",
+        delegationId:delegated.delegationId||null
+      });
+    }
+
+    const compatibility=router?.assignMentor?.({...context,intent:"academy mentor"})||null;
+    if(compatibility?.status==="assigned"&&compatibility.mentorId==="archaemenes"&&compatibility.mentor){
+      return Object.freeze({
+        ...compatibility.mentor,
+        id:"archaemenes",
+        name:"Archaemenes",
+        presentationMode:compatibility.mentor.presentationMode||PRESENTATION,
+        assignedBy:"Khaemenes Academy",
+        delegatedBy:"NAIB"
       });
     }
 
@@ -113,7 +129,7 @@
     if(!p){
       return Object.freeze({connected:true,eligible:false,reason:"stage-mismatch",learner:null,mentor:null});
     }
-    return Object.freeze({connected:true,eligible:true,reason:"ok",learner:p,mentor:assignMentor(p)});
+    return Object.freeze({connected:true,eligible:true,reason:"ok",learner:p,mentor:academyMentor(p)});
   }
 
   function subscribe(listener){
@@ -133,12 +149,12 @@
   }
 
   global.KhaemenesElementaryContinuity=Object.freeze({
-    version:"1.1.0",
+    version:"1.2.0",
     mentorId:"archaemenes",
     presentationMode:PRESENTATION,
     legacyKey:LEGACY_KEY,
     getProfile:profile,
-    getMentor:()=>assignMentor(profile()),
+    getMentor:()=>academyMentor(profile()),
     getSummary:summary,
     isElementaryLearner,
     normalizeGrade,
