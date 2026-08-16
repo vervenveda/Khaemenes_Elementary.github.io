@@ -1,11 +1,54 @@
 (() => {
   "use strict";
-  const KEY="khaemenes_grade1_36_aplus_v1";
-  let state={};try{state=JSON.parse(localStorage.getItem(KEY))||{};}catch{}
-  const vals=Object.values(state.weekly||{}).map(Number).filter(Boolean);
-  const avg=vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length):0;
-  const done=Object.values(state.weekly||{}).filter(v=>Number(v)>=80).length;
-  const ok=avg>=80 && Number(state.midterm||0)>=80 && Number(state.final||0)>=80 && !!state.portfolio;
-  const name=String(state.student||"First Grade Scholar").replace(/[<>&]/g,"");
-  document.getElementById("out").innerHTML=ok?`<section class="worksheet" style="text-align:center;border:12px double #c79a42"><p style="letter-spacing:.16em;text-transform:uppercase">Khaemenes Academy</p><h1 style="font-family:Georgia,serif;color:#16375a;text-transform:none">Certificate of First Grade Completion</h1><p>This certifies that</p><h2>${name}</h2><p>has completed the Khaemenes Academy First Grade 36 Unit A+ Curriculum.</p><p><strong>Weekly Average:</strong> ${avg}% · <strong>Units at 80%+:</strong> ${done}/36 · <strong>Midterm:</strong> ${state.midterm}% · <strong>Final:</strong> ${state.final}%</p><p>The learner completed daily lessons, professional printables, workshops, weekly assessments, midyear review, final readiness demonstration, portfolio evidence, and adult mentor review.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:70px"><div class="primary-line">Adult Mentor / Teacher</div><div class="primary-line">Date</div></div><p style="margin-top:50px">Jennifer Kay Pearl · Khaemenes Academy · 2026</p><button class="button no-print" onclick="window.print()">Print Certificate</button></section>`:`<section class="worksheet" style="text-align:center"><h1 style="font-family:Georgia,serif;color:#16375a;text-transform:none">Certificate Locked</h1><p>The certificate opens when weekly average, midterm, final, and portfolio approval all meet the 80% completion rule.</p><p><strong>Weekly Average:</strong> ${avg}% · <strong>Midterm:</strong> ${state.midterm||0}% · <strong>Final:</strong> ${state.final||0}% · <strong>Portfolio:</strong> ${state.portfolio?"Approved":"Pending"}</p><a class="button" href="../index.html">Return to Portal</a></section>`;
+
+  const $=id=>document.getElementById(id);
+
+  function summary(){
+    try{return window.KhaemenesGrade1Continuity?.getSummary?.()||null}catch{return null}
+  }
+
+  function add(parent,tag,text,className){
+    const el=document.createElement(tag);if(className)el.className=className;el.textContent=text;parent.append(el);return el;
+  }
+
+  function render(){
+    const out=$("out");if(!out)return;out.replaceChildren();
+    const s=summary();
+    const state=s?.state||{};
+    const learner=s?.learner||null;
+    const section=document.createElement("section");section.className="worksheet";section.style.textAlign="center";
+
+    if(!learner){
+      add(section,"h1","Certificate Locked");
+      add(section,"p","Select a Grade 01 learner in the Academy Family Profile before checking certificate readiness.");
+      const a=add(section,"a","Open Family Profile","button");a.href="https://vervenveda.com/Khaemenes_Academy.github.io/family/";
+      out.append(section);return;
+    }
+
+    if(!s.certificateReady){
+      add(section,"h1","Certificate Locked");
+      add(section,"p","First Grade certification requires all 36 weekly mastery checks at 80%+, midterm 80%+, final 80%+, and approved portfolio evidence.");
+      add(section,"p",`${s.mastered}/36 weeks at mastery · Weekly average ${s.average}% · Midterm ${state.midterm||0}% · Final ${state.final||0}% · Portfolio ${state.portfolio?"Approved":"Pending"}`);
+      const a=add(section,"a","Return to First Grade","button");a.href="../index.html";
+      out.append(section);return;
+    }
+
+    section.style.border="12px double #c79a42";
+    add(section,"p","Khaemenes Academy");
+    add(section,"h1","Certificate of First Grade Completion");
+    add(section,"p","This certifies that");
+    add(section,"h2",learner.nickname||"First Grade Scholar");
+    add(section,"p","has completed the Khaemenes Academy First Grade 36-Week Curriculum.");
+    add(section,"p",`Weekly Average: ${s.average}% · Weeks at 80%+: ${s.mastered}/36 · Midterm: ${state.midterm}% · Final: ${state.final}%`);
+    add(section,"p","The learner completed daily lessons, printables, workshops, weekly mastery checks, midyear review, final readiness demonstration, portfolio evidence, and adult-reviewed records.");
+    const signatures=document.createElement("div");signatures.style.display="grid";signatures.style.gridTemplateColumns="1fr 1fr";signatures.style.gap="50px";signatures.style.marginTop="70px";
+    add(signatures,"div","Adult Teacher / Evaluator","primary-line");add(signatures,"div","Date","primary-line");section.append(signatures);
+    add(section,"p","Jennifer Kay Pearl · Khaemenes Academy");
+    const print=add(section,"button","Print Certificate","button no-print");print.type="button";print.addEventListener("click",()=>window.print());
+    out.append(section);
+  }
+
+  window.addEventListener("khaemenes-family-changed",render);
+  window.addEventListener("khaemenes-elementary-family-ready",render);
+  document.addEventListener("DOMContentLoaded",()=>{$("year").textContent=new Date().getFullYear();render();});
 })();
