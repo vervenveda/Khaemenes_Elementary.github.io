@@ -1,2 +1,68 @@
+(()=>{"use strict";
+const DATA=window.KHAE_GRADE2_DATA,
+KEY="khaemenes_grade2_subject_36_aplus_v1",
+CONT=window.KhaemenesGrade2Continuity||null,
+$=id=>document.getElementById(id),
+esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 
-(()=>{"use strict";const DATA=window.KHAE_GRADE2_DATA,KEY="khaemenes_grade2_subject_36_aplus_v1",$=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));function read(){try{return JSON.parse(localStorage.getItem(KEY))||{student:"Second Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false}}catch{return{student:"Second Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false}}}let state=read();function save(){localStorage.setItem(KEY,JSON.stringify(state))}function avg(){const v=DATA.units.map(u=>Number(state.weekly[u.week]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0}function done(){return DATA.units.filter(u=>Number(state.weekly[u.week]||0)>=80).length}function ready(){return avg()>=80&&Number(state.midterm||0)>=80&&Number(state.final||0)>=80&&!!state.portfolio}function renderDash(){const a=avg(),d=done(),r=ready();$("studentName").value=state.student||"";$("midtermScore").value=state.midterm||"";$("finalScore").value=state.final||"";$("portfolio").checked=!!state.portfolio;$("summary").innerHTML=`<div class="grid cols-4"><article class="card stat"><strong>${d}/36</strong><span>Weeks at 80%+</span></article><article class="card stat"><strong>${a}%</strong><span>Weekly average</span></article><article class="card stat"><strong>${state.midterm||0}%</strong><span>Midterm</span></article><article class="card stat"><strong>${state.final||0}%</strong><span>Final</span></article></div><div class="profile-box" style="margin-top:16px"><h3>${r?"Certificate Ready":"Certificate Locked"}</h3><p>${r?"All 80% completion gates are met.":"Certificate requires weekly average 80%+, midterm 80%+, final 80%+, and portfolio approval."}</p><div class="progress"><span style="width:${Math.min(100,Math.round(d/36*100))}%"></span></div><div class="actions"><a class="button ${r?"gold":""}" href="records/certificate.html">Open Certificate</a><button type="button" class="button" id="exportBtn">Export Records</button></div></div>`;$("exportBtn").addEventListener("click",exportRecords)}function renderWeeks(){if(!$("weekGrid"))return;$("weekGrid").innerHTML=DATA.units.map(u=>`<article class="card week-card"><div class="emblem">${String(u.week).padStart(2,"0")}</div><h3>${esc(u.title)}</h3><p><strong>Question:</strong> ${esc(u.essentialQuestion)}</p><label>Weekly assessment score</label><input type="number" min="0" max="100" value="${state.weekly[u.week]||""}" data-score="${u.week}" placeholder="0–100"><div class="actions"><a class="button" href="printables/week-${String(u.week).padStart(2,"0")}-packet.html">Printable</a><a class="button light" href="assessments/week-${String(u.week).padStart(2,"0")}-assessment.html">Assessment</a></div></article>`).join("");document.querySelectorAll("[data-score]").forEach(inp=>inp.addEventListener("input",()=>{state.weekly[inp.dataset.score]=Math.max(0,Math.min(100,Number(inp.value||0)));save();renderDash()}))}function bind(){if(!$("saveProfile"))return;$("saveProfile").addEventListener("click",()=>{state.student=$("studentName").value.trim()||"Second Grade Scholar";state.midterm=Math.max(0,Math.min(100,Number($("midtermScore").value||0)));state.final=Math.max(0,Math.min(100,Number($("finalScore").value||0)));state.portfolio=$("portfolio").checked;save();renderDash();renderWeeks()});$("clearRecords").addEventListener("click",()=>{if(!confirm("Clear local second-grade records on this device?"))return;localStorage.removeItem(KEY);state=read();renderDash();renderWeeks()})}function exportRecords(){const blob=new Blob([JSON.stringify({course:DATA.course.title,exported:new Date().toISOString(),state},null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="khaemenes-second-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}function renderStandards(){if(!$("standardsGrid"))return;$("standardsGrid").innerHTML=DATA.standardsFamilies.map(s=>`<article class="card"><div class="emblem">${esc(s.code.replace("KHAE-",""))}</div><h3>${esc(s.label)}</h3><p>${esc(s.description)}</p></article>`).join("")}document.addEventListener("DOMContentLoaded",()=>{$("year").textContent=new Date().getFullYear();bind();renderDash();renderWeeks();renderStandards()})})();
+function blank(){return{student:"Second Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false}}
+function readLegacy(){try{return JSON.parse(localStorage.getItem(KEY))||blank()}catch{return blank()}}
+function read(){const scoped=CONT?.readState?.(null);return scoped&&typeof scoped==="object"?Object.assign(blank(),scoped):readLegacy()}
+let state=read();
+function save(){if(CONT?.writeState)CONT.writeState(state);else localStorage.setItem(KEY,JSON.stringify(state))}
+function avg(){const v=DATA.units.map(u=>Number(state.weekly[u.week]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0}
+function done(){return DATA.units.filter(u=>Number(state.weekly[u.week]||0)>=80).length}
+function ready(){return avg()>=80&&Number(state.midterm||0)>=80&&Number(state.final||0)>=80&&!!state.portfolio}
+function learnerStatus(){return CONT?.status?.()||null}
+function learnerName(){const s=learnerStatus();return s?.status==="ready"&&s.learner?.nickname?s.learner.nickname:(state.student||"Second Grade Scholar")}
+
+function renderDash(){
+  const a=avg(),d=done(),r=ready(),ls=learnerStatus();
+  $("studentName").value=learnerName();
+  $("studentName").readOnly=ls?.status==="ready";
+  $("midtermScore").value=state.midterm||"";
+  $("finalScore").value=state.final||"";
+  $("portfolio").checked=!!state.portfolio;
+  const identityNote=ls?.status==="ready"
+    ? `<p><strong>Academy learner:</strong> ${esc(ls.learner.nickname)} · Grade 02 · learner-scoped records active.</p>`
+    : ls?.status==="placement-mismatch"
+      ? `<p><strong>Placement notice:</strong> the active Academy learner is registered for ${esc(ls.learner.grade||ls.learner.stage||"another placement")}. This Grade 02 page is in preview mode and will not change placement.</p>`
+      : `<p><strong>Local preview:</strong> no active Academy learner is connected. Records remain local to this browser until a Grade 02 learner is active.</p>`;
+  $("summary").innerHTML=`<div class="grid cols-4"><article class="card stat"><strong>${d}/36</strong><span>Weeks at 80%+</span></article><article class="card stat"><strong>${a}%</strong><span>Weekly average</span></article><article class="card stat"><strong>${state.midterm||0}%</strong><span>Midterm</span></article><article class="card stat"><strong>${state.final||0}%</strong><span>Final</span></article></div><div class="profile-box" style="margin-top:16px"><h3>${r?"Certificate Ready":"Certificate Locked"}</h3>${identityNote}<p>${r?"All 80% completion gates are met.":"Certificate requires weekly average 80%+, midterm 80%+, final 80%+, and portfolio approval."}</p><div class="progress"><span style="width:${Math.min(100,Math.round(d/36*100))}%"></span></div><div class="actions"><a class="button ${r?"gold":""}" href="records/certificate.html">Open Certificate</a><button type="button" class="button" id="exportBtn">Export Records</button></div></div>`;
+  $("exportBtn").addEventListener("click",exportRecords)
+}
+
+function renderWeeks(){
+  if(!$("weekGrid"))return;
+  $("weekGrid").innerHTML=DATA.units.map(u=>`<article class="card week-card"><div class="emblem">${String(u.week).padStart(2,"0")}</div><h3>${esc(u.title)}</h3><p><strong>Question:</strong> ${esc(u.essentialQuestion)}</p><label>Weekly assessment score</label><input type="number" min="0" max="100" value="${state.weekly[u.week]||""}" data-score="${u.week}" placeholder="0–100"><div class="actions"><a class="button" href="printables/week-${String(u.week).padStart(2,"0")}-packet.html">Printable</a><a class="button light" href="assessments/week-${String(u.week).padStart(2,"0")}-assessment.html">Assessment</a></div></article>`).join("");
+  document.querySelectorAll("[data-score]").forEach(inp=>inp.addEventListener("input",()=>{state.weekly[inp.dataset.score]=Math.max(0,Math.min(100,Number(inp.value||0)));save();renderDash()}))
+}
+
+function bind(){
+  if(!$("saveProfile"))return;
+  $("saveProfile").addEventListener("click",()=>{
+    const ls=learnerStatus();
+    state.student=ls?.status==="ready"&&ls.learner?.nickname?ls.learner.nickname:($("studentName").value.trim()||"Second Grade Scholar");
+    state.midterm=Math.max(0,Math.min(100,Number($("midtermScore").value||0)));
+    state.final=Math.max(0,Math.min(100,Number($("finalScore").value||0)));
+    state.portfolio=$("portfolio").checked;
+    save();renderDash();renderWeeks()
+  });
+  $("clearRecords").addEventListener("click",()=>{
+    if(!confirm("Clear local second-grade records for this learner on this device?"))return;
+    if(CONT?.clearState)CONT.clearState();else localStorage.removeItem(KEY);
+    state=read();renderDash();renderWeeks()
+  })
+}
+
+function exportRecords(){
+  const ls=learnerStatus();
+  const blob=new Blob([JSON.stringify({course:DATA.course.title,exported:new Date().toISOString(),learner:ls?.learner||null,state},null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download="khaemenes-second-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)
+}
+
+function renderStandards(){if(!$("standardsGrid"))return;$("standardsGrid").innerHTML=DATA.standardsFamilies.map(s=>`<article class="card"><div class="emblem">${esc(s.code.replace("KHAE-",""))}</div><h3>${esc(s.label)}</h3><p>${esc(s.description)}</p></article>`).join("")}
+
+window.addEventListener("khaemenes-family-changed",()=>{state=read();renderDash();renderWeeks()});
+document.addEventListener("DOMContentLoaded",()=>{CONT?.activate?.();$("year").textContent=new Date().getFullYear();bind();renderDash();renderWeeks();renderStandards()})
+})();
