@@ -4,7 +4,7 @@ Branch: `hardening/archaemenes-elementary`
 
 ## Current Checkpoint
 
-Elementary now follows one Academy identity, mentor, and mastery model from the root through Grades 01–05.
+Elementary now follows one Academy identity, delegation, mentor, and mastery model from the root through Grades 01–05.
 
 ## Confirmed Repository Structure
 
@@ -22,9 +22,9 @@ PASS.
 ```text
 Academy Family Registry
         ↓
-Elementary continuity
+NAIB intake / resource direction / delegation
         ↓
-NAIB mentor routing
+Khaemenes Academy
         ↓
 Archaemenes · Young Scholar
         ↓
@@ -38,7 +38,8 @@ Learner-scoped course record / certificate
 Authority boundaries:
 
 - Family Registry owns learner identity and formal grade placement.
-- NAIB owns mentor routing.
+- NAIB is the front-desk administrator / AI Resources Director and owns bounded delegation across the ecosystem.
+- Khaemenes Academy provides Archaemenes as its institutional mentor.
 - Archaemenes is the current Elementary mentor.
 - `Young Scholar` is a presentation mode, not a second mentor identity.
 - Grade portals own course state.
@@ -72,7 +73,7 @@ A pinned grade is explicitly a convenience preference. It cannot become the auth
 
 PASS.
 
-`assets/khaemenes-elementary-family-adapter.js` now treats the old `khaemenes_elementary_profiles_v1` object as compatibility data only.
+`assets/khaemenes-elementary-family-adapter.js` treats the old `khaemenes_elementary_profiles_v1` object as compatibility data only.
 
 Before writing compatibility data it removes legacy authority fields, including:
 
@@ -94,8 +95,9 @@ PASS.
 - learner name comes from Family Registry;
 - grade comes from Family Registry;
 - legacy profile data may only supply non-authoritative preference context;
-- mentor assignment context excludes learnerId and familyId;
-- Archaemenes remains the safe visible fallback if the public router is temporarily unavailable.
+- NAIB delegation context excludes learnerId and familyId;
+- the continuity layer prefers NAIB `delegate()` and retains `assignMentor()` only as a transition compatibility seam;
+- Archaemenes remains the safe visible Academy fallback if the public router is temporarily unavailable.
 
 ## Browser Security Boundary
 
@@ -113,11 +115,11 @@ The root now uses:
 - DOM construction and `textContent` for learner-facing dynamic content;
 - no credentials, access tokens, private keys, or privileged server configuration.
 
-The page still consumes the public Academy Family Registry and public NAIB mentor router as first-party Academy dependencies. GitHub Pages remains a public static surface; browser-side logic is not treated as authentication or authorization.
+The page still consumes the public Academy Family Registry and public NAIB delegation router as first-party Academy dependencies. GitHub Pages remains a public static surface; browser-side logic is not treated as authentication or authorization.
 
 ## Grade-Level Status
 
-PASS — Grades 01–05 have been brought onto the same authority model on this branch.
+PASS — Grades 01–05 are on the same authority model on this branch.
 
 ### Grade 01
 - learner-scoped records;
@@ -145,6 +147,8 @@ PASS — Grades 01–05 have been brought onto the same authority model on this 
 - A++ curriculum and capstone expectations preserved;
 - direct student mastery entry removed;
 - adult verification surface established;
+- adult record controller externalized in `assets/grade4-records.js`;
+- certificate print control is unique and externalized;
 - certificate requires active Grade 04 learner plus completion gates.
 
 ### Grade 05
@@ -154,6 +158,20 @@ PASS — Grades 01–05 have been brought onto the same authority model on this 
 - adult verification surface established;
 - certificate requires active Grade 05 learner plus completion gates;
 - Grade 05 completion does not silently promote the learner to Grade 06.
+
+## Certification Standard
+
+PASS.
+
+Grades 01–05 use the strengthened common completion rule:
+
+- active eligible learner in the correct grade;
+- 36/36 weekly mastery results at 80% or above;
+- midterm at 80% or above;
+- final at 80% or above;
+- required portfolio/capstone evidence approved.
+
+This intentionally replaces older average-only weekly certification behavior.
 
 ## Middle School Boundary
 
@@ -172,17 +190,17 @@ The hardening pass intentionally preserves:
 - mentor/resource manifest;
 - Middle School bridge;
 - local-first course state where appropriate;
-- existing 80% mastery/certification rules.
+- the 80% mastery threshold.
 
-## Remaining Pre-Merge Checks
+## Remaining Deployment Checks
 
-Before merging to `main`, run a final browser validation pass for:
+Architecture hardening is complete on this review branch. Before merging to `main`, the remaining work is browser/deployment validation rather than another structural rewrite:
 
 1. root → Grade 01–05 navigation;
 2. Family Profile selection and grade switching;
-3. NAIB router available / unavailable fallback behavior;
+3. NAIB v2 delegation available / unavailable fallback behavior;
 4. Grade 01–05 teacher-tool record writes;
-5. certificate unlock/lock behavior;
+5. certificate unlock/lock and print behavior;
 6. legacy-record migration with more than one learner;
 7. strict CSP behavior in the deployed GitHub Pages environment;
 8. Middle School bridge routing;
@@ -190,4 +208,4 @@ Before merging to `main`, run a final browser validation pass for:
 
 ## Status
 
-**Elementary root and Grades 01–05 are architecturally unified and hardened on the review branch. `main` remains unchanged pending final validation and merge approval.**
+**Elementary root and Grades 01–05 are architecturally unified and hardened on the review branch. `main` remains unchanged pending deployment validation and merge approval.**
