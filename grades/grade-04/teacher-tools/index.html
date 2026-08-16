@@ -3,23 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Teacher Tools</title>
+  <title>Fourth Grade Teacher / Family Tools</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
   <header class="header no-print">
     <div class="shell nav">
       <a class="brand" href="../index.html"><span class="seal">4</span><span><strong>Khaemenes Fourth Grade</strong><small>Subject-Based A++ Curriculum</small></span></a>
-      <nav class="navlinks">
-        <a href="../index.html">Home</a>
-        <a href="../teacher-tools/index.html">Teacher Tools</a>
-        <a href="../assessments/weekly-assessments.html">Assessments</a>
-        <a href="../records/certificate.html">Certificate</a>
-      </nav>
+      <nav class="navlinks"><a href="../index.html">Home</a><a href="../teacher-tools/index.html">Teacher Tools</a><a href="../assessments/weekly-assessments.html">Assessments</a><a href="../records/certificate.html">Certificate</a></nav>
     </div>
   </header>
-<main class="section"><div class="shell"><div class="heading"><p class="kicker">Teacher Tools</p><h1 style="color:var(--navy)">Fourth Grade A++ Mentor Toolkit</h1><p>High-standard, printable, local, and organized for subject-based instruction and portfolio evidence.</p></div><div class="grid cols-4"><article class='card'><div class='emblem'>01</div><h3>A++ Subject Pacing Map</h3><p>Coordinate eight subject halls across 36 weeks while preserving daily reading, writing, mathematics, inquiry, movement, project work, and reteaching.</p></article><article class='card'><div class='emblem'>02</div><h3>Advanced Reading Guide</h3><p>Support evidence, theme, summary, point of view, text structure, vocabulary, morphology, fluency, discussion, and analytical response.</p></article><article class='card'><div class='emblem'>03</div><h3>Essay and Research Rubric</h3><p>Guide claim, organization, reasons, evidence, transitions, elaboration, conventions, paraphrase, citations, revision, and publication.</p></article><article class='card'><div class='emblem'>04</div><h3>Math Progression Map</h3><p>Teach place value, multiplication, division, factors, fractions, decimals, measurement conversion, data, geometry, and angle reasoning.</p></article><article class='card'><div class='emblem'>05</div><h3>Science CER and Engineering Guide</h3><p>Teach claim, evidence, reasoning, models, fair tests, variables, constraints, prototypes, improvement, and hazard solutions.</p></article><article class='card'><div class='emblem'>06</div><h3>Social Studies Inquiry Guide</h3><p>Use maps, timelines, primary/secondary sources, civics, economics, perspectives, and informed action with respectful evidence language.</p></article><article class='card'><div class='emblem'>07</div><h3>Technology and Data Guide</h3><p>Use files, spreadsheets, charts, source notes, algorithms, debugging, accessibility, and ethical digital creation.</p></article><article class='card'><div class='emblem'>08</div><h3>Portfolio and 80% Certification Guide</h3><p>Track weekly mastery, midterm, final, capstone work, revisions, reflections, and adult portfolio approval as separate gates.</p></article></div><section class="worksheet"><div class="worksheet-header"><div class="worksheet-title"><h1>Weekly Subject Planning Sheet</h1><p>Plan, teach, observe, reteach, enrich, document, and certify.</p></div><div class="name-date"><div class="fill-box">Name:</div><div class="fill-box">Date:</div></div></div><table><tr><th>Subject</th><th>Focus</th><th>Reteach / Enrich</th><th>Evidence</th></tr><tr><td>Language Arts</td><td></td><td></td><td></td></tr><tr><td>Mathematics</td><td></td><td></td><td></td></tr><tr><td>Science</td><td></td><td></td><td></td></tr><tr><td>Social Studies</td><td></td><td></td><td></td></tr><tr><td>Arts &amp; Music</td><td></td><td></td><td></td></tr><tr><td>Health, PE &amp; SEL</td><td></td><td></td><td></td></tr><tr><td>Technology &amp; Tools</td><td></td><td></td><td></td></tr><tr><td>Integrated Projects</td><td></td><td></td><td></td></tr></table></section></div></main>
-  <footer class="footer no-print"><div class="shell">© <span id="year"></span> Jennifer Kay Pearl · Khaemenes Academy · In-house curriculum · No outside dependencies</div></footer>
+  <main class="section">
+    <div class="shell">
+      <div class="heading"><p class="kicker">Teacher / Family Tools</p><h1 style="color:var(--navy)">Fourth Grade A++ Review & Record Center</h1><p>Use this adult-facing surface after reviewing the learner's assessment evidence. Archaemenes guides learning; verified course evidence determines mastery.</p></div>
+
+      <section class="profile-box">
+        <h3 id="learnerTitle">No active Grade 04 learner</h3>
+        <p id="mentorTitle">Archaemenes · Young Scholar</p>
+        <p id="statusText">Select a Grade 04 learner in the Academy Family Registry before recording formal mastery.</p>
+      </section>
+
+      <section class="worksheet" style="margin-top:18px">
+        <div class="worksheet-header"><div class="worksheet-title"><h1>Verified Mastery Entry</h1><p>Record only after assessment evidence has been reviewed.</p></div></div>
+        <label for="weekSelect">Week</label>
+        <select id="weekSelect"></select>
+        <label for="weeklyScore">Verified weekly mastery score</label>
+        <input id="weeklyScore" type="number" min="0" max="100" placeholder="0–100">
+        <label for="midtermScore">Midterm score</label>
+        <input id="midtermScore" type="number" min="0" max="100" placeholder="0–100">
+        <label for="finalScore">Final score</label>
+        <input id="finalScore" type="number" min="0" max="100" placeholder="0–100">
+        <label style="display:flex;gap:10px;justify-content:center;align-items:center;margin-top:14px"><input id="portfolio" type="checkbox" style="width:auto"> Portfolio evidence approved</label>
+        <div class="actions"><button class="button gold" id="saveVerified" type="button">Save Verified Record</button><button class="button" id="exportRecords" type="button">Export Learner Record</button></div>
+      </section>
+
+      <div class="grid cols-4" style="margin-top:18px"><article class="card"><div class="emblem">01</div><h3>A++ Subject Pacing Map</h3><p>Coordinate eight subject halls across 36 weeks while preserving daily reading, writing, mathematics, inquiry, movement, project work, and reteaching.</p></article><article class="card"><div class="emblem">02</div><h3>Advanced Reading Guide</h3><p>Support evidence, theme, summary, point of view, text structure, vocabulary, morphology, fluency, discussion, and analytical response.</p></article><article class="card"><div class="emblem">03</div><h3>Essay and Research Rubric</h3><p>Guide claim, organization, reasons, evidence, transitions, elaboration, conventions, paraphrase, citations, revision, and publication.</p></article><article class="card"><div class="emblem">04</div><h3>Math Progression Map</h3><p>Teach place value, multiplication, division, factors, fractions, decimals, measurement conversion, data, geometry, and angle reasoning.</p></article></div>
+    </div>
+  </main>
+  <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
+  <script src="../../../assets/khaemenes-elementary-continuity.js"></script>
+  <script src="../assets/khaemenes-grade4-continuity.js"></script>
+  <script>
+  (()=>{"use strict";const $=id=>document.getElementById(id);const clamp=v=>Math.max(0,Math.min(100,Number(v||0)));for(let i=1;i<=36;i++){const o=document.createElement("option");o.value=String(i);o.textContent=`Week ${String(i).padStart(2,"0")}`;$("weekSelect").append(o);}function summary(){return window.KhaemenesGrade4Continuity?.getSummary?.()||null}function render(){const s=summary(),st=s?.state||{};$("learnerTitle").textContent=s?.learner?.nickname||"No active Grade 04 learner";$("statusText").textContent=s?.eligible?"Grade 04 learner connected. Record only evidence that has been reviewed.":"Select a Grade 04 learner in the Academy Family Registry before recording formal mastery.";$("saveVerified").disabled=!s?.eligible;$("exportRecords").disabled=!s?.eligible;$("weeklyScore").value=st.weekly?.[$("weekSelect").value]||"";$("midtermScore").value=st.midterm||"";$("finalScore").value=st.final||"";$("portfolio").checked=!!st.portfolio;}$("weekSelect").addEventListener("change",render);$("saveVerified").addEventListener("click",()=>{const s=summary();if(!s?.eligible)return;const st={...s.state,weekly:{...(s.state.weekly||{})}};st.weekly[$("weekSelect").value]=clamp($("weeklyScore").value);st.midterm=clamp($("midtermScore").value);st.final=clamp($("finalScore").value);st.portfolio=$("portfolio").checked;window.KhaemenesGrade4Continuity.saveState(st);render();alert("Verified Grade 04 record saved for the active learner.");});$("exportRecords").addEventListener("click",()=>{const s=summary();if(!s?.eligible)return;const blob=new Blob([JSON.stringify({course:"Khaemenes Fourth Grade",learner:{nickname:s.learner.nickname,grade:"grade-04"},state:s.state,exportedAt:new Date().toISOString()},null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="khaemenes-grade04-record.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});render();})();
+  </script>
+  <footer class="footer no-print"><div class="shell">© <span id="year"></span> Jennifer Kay Pearl · Khaemenes Academy · In-house curriculum</div></footer>
   <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
 </html>
