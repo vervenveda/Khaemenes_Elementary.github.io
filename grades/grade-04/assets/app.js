@@ -2,18 +2,22 @@
   "use strict";
   const DATA = window.KHAE_GRADE4_DATA;
   const KEY = "khaemenes_grade4_subject_36_aplusplus_v1";
+  const CONT = window.KhaemenesGrade4Continuity;
   const $ = id => document.getElementById(id);
   const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  function readState(){try{return JSON.parse(localStorage.getItem(KEY)) || {student:"Fourth Grade Scholar", weekly:{}, midterm:0, final:0, portfolio:false};}catch{return {student:"Fourth Grade Scholar", weekly:{}, midterm:0, final:0, portfolio:false};}}
+  const blank = () => ({student:"Fourth Grade Scholar", weekly:{}, midterm:0, final:0, portfolio:false});
+  function readState(){try{return CONT?.readState?.(blank()) || JSON.parse(localStorage.getItem(KEY)) || blank();}catch{return blank();}}
   let state = readState();
-  const save = () => localStorage.setItem(KEY, JSON.stringify(state));
+  const save = () => CONT?.writeState ? CONT.writeState(state) : localStorage.setItem(KEY, JSON.stringify(state));
   const weeklyAverage = () => {const v=DATA.weeks.map(w=>Number(state.weekly[w.week]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0;};
   const completedWeeks = () => DATA.weeks.filter(w=>Number(state.weekly[w.week]||0)>=DATA.course.passingScore).length;
   const ready = () => weeklyAverage()>=80 && Number(state.midterm||0)>=80 && Number(state.final||0)>=80 && !!state.portfolio;
   function renderDashboard(){
-    const avg=weeklyAverage(), done=completedWeeks(), ok=ready();
-    $("studentName").value=state.student||"";$("midtermScore").value=state.midterm||"";$("finalScore").value=state.final||"";$("portfolio").checked=!!state.portfolio;
-    $("summary").innerHTML=`<div class="grid cols-4"><article class="card stat"><strong>${done}/36</strong><span>Weeks at 80%+</span></article><article class="card stat"><strong>${avg}%</strong><span>Weekly average</span></article><article class="card stat"><strong>${state.midterm||0}%</strong><span>Midterm</span></article><article class="card stat"><strong>${state.final||0}%</strong><span>Final</span></article></div><div class="profile-box" style="margin-top:16px"><h3>${ok?"Certificate Ready":"Certificate Locked"}</h3><p>${ok?"All completion gates are met. The certificate page may be printed.":"Certificate requires weekly average 80%+, midterm 80%+, final 80%+, and adult portfolio approval."}</p><div class="progress"><span style="width:${Math.min(100,Math.round(done/36*100))}%"></span></div><div class="actions"><a class="button ${ok?"gold":""}" href="records/certificate.html">Open Certificate</a><button type="button" class="button" id="exportBtn">Export Records</button></div></div>`;
+    const avg=weeklyAverage(), done=completedWeeks(), ok=ready(), context=CONT?.status?.();
+    $("studentName").value=context?.status==="ready"?context.learner.nickname:(state.student||"");
+    $("studentName").readOnly=context?.status==="ready";
+    $("midtermScore").value=state.midterm||"";$("finalScore").value=state.final||"";$("portfolio").checked=!!state.portfolio;
+    $("summary").innerHTML=`<div class="grid cols-4"><article class="card stat"><strong>${done}/36</strong><span>Weeks at 80%+</span></article><article class="card stat"><strong>${avg}%</strong><span>Weekly average</span></article><article class="card stat"><strong>${state.midterm||0}%</strong><span>Midterm</span></article><article class="card stat"><strong>${state.final||0}%</strong><span>Final</span></article></div><div class="profile-box" style="margin-top:16px"><h3>${ok?"Certificate Ready":"Certificate Locked"}</h3><p>${ok?"All completion gates are met. The certificate page may be printed.":"Certificate requires weekly average 80%+, midterm 80%+, final 80%+, and adult portfolio approval."}</p>${context?.status==="ready"?`<p><strong>Academy learner:</strong> ${esc(context.learner.nickname)} · ${esc(context.learner.learnerId)}</p>`:context?.status==="placement-mismatch"?`<p><strong>Preview mode:</strong> this learner is registered outside Grade 04; course tools do not alter placement.</p>`:""}<div class="progress"><span style="width:${Math.min(100,Math.round(done/36*100))}%"></span></div><div class="actions"><a class="button ${ok?"gold":""}" href="records/certificate.html">Open Certificate</a><button type="button" class="button" id="exportBtn">Export Records</button></div></div>`;
     $("exportBtn").addEventListener("click", exportRecords);
   }
   function renderWeeks(){
@@ -24,9 +28,9 @@
     $("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("");
   }
   function bind(){
-    $("saveProfile").addEventListener("click",()=>{state.student=$("studentName").value.trim()||"Fourth Grade Scholar";state.midterm=Math.max(0,Math.min(100,Number($("midtermScore").value||0)));state.final=Math.max(0,Math.min(100,Number($("finalScore").value||0)));state.portfolio=$("portfolio").checked;save();renderDashboard();renderWeeks();});
-    $("clearRecords").addEventListener("click",()=>{if(!confirm("Clear local fourth-grade records on this device?"))return;localStorage.removeItem(KEY);state=readState();renderDashboard();renderWeeks();});
+    $("saveProfile").addEventListener("click",()=>{const c=CONT?.status?.();state.student=c?.status==="ready"?c.learner.nickname:($("studentName").value.trim()||"Fourth Grade Scholar");state.midterm=Math.max(0,Math.min(100,Number($("midtermScore").value||0)));state.final=Math.max(0,Math.min(100,Number($("finalScore").value||0)));state.portfolio=$("portfolio").checked;save();renderDashboard();renderWeeks();});
+    $("clearRecords").addEventListener("click",()=>{if(!confirm("Clear local fourth-grade records for the active learner on this device?"))return;if(CONT?.clearState)CONT.clearState();else localStorage.removeItem(KEY);state=readState();renderDashboard();renderWeeks();});
   }
-  function exportRecords(){const payload={course:DATA.course.title,exported:new Date().toISOString(),state};const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="khaemenes-fourth-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+  function exportRecords(){const c=CONT?.status?.();const payload={course:DATA.course.title,exported:new Date().toISOString(),learner:c?.status==="ready"?c.learner:null,state};const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="khaemenes-fourth-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
   document.addEventListener("DOMContentLoaded",()=>{$("year").textContent=new Date().getFullYear();bind();renderDashboard();renderSubjects();renderWeeks();});
 })();
