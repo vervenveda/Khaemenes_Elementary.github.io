@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
   <title>Fourth Grade Teacher / Family Tools</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
@@ -19,7 +20,7 @@
 
       <section class="profile-box">
         <h3 id="learnerTitle">No active Grade 04 learner</h3>
-        <p id="mentorTitle">Archaemenes · Young Scholar</p>
+        <p id="mentorTitle">Archaemenes · Khaemenes Academy Mentor</p>
         <p id="statusText">Select a Grade 04 learner in the Academy Family Registry before recording formal mastery.</p>
       </section>
 
@@ -40,13 +41,10 @@
       <div class="grid cols-4" style="margin-top:18px"><article class="card"><div class="emblem">01</div><h3>A++ Subject Pacing Map</h3><p>Coordinate eight subject halls across 36 weeks while preserving daily reading, writing, mathematics, inquiry, movement, project work, and reteaching.</p></article><article class="card"><div class="emblem">02</div><h3>Advanced Reading Guide</h3><p>Support evidence, theme, summary, point of view, text structure, vocabulary, morphology, fluency, discussion, and analytical response.</p></article><article class="card"><div class="emblem">03</div><h3>Essay and Research Rubric</h3><p>Guide claim, organization, reasons, evidence, transitions, elaboration, conventions, paraphrase, citations, revision, and publication.</p></article><article class="card"><div class="emblem">04</div><h3>Math Progression Map</h3><p>Teach place value, multiplication, division, factors, fractions, decimals, measurement conversion, data, geometry, and angle reasoning.</p></article></div>
     </div>
   </main>
-  <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
+  <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js" referrerpolicy="no-referrer"></script>
   <script src="../../../assets/khaemenes-elementary-continuity.js"></script>
   <script src="../assets/khaemenes-grade4-continuity.js"></script>
-  <script>
-  (()=>{"use strict";const $=id=>document.getElementById(id);const clamp=v=>Math.max(0,Math.min(100,Number(v||0)));for(let i=1;i<=36;i++){const o=document.createElement("option");o.value=String(i);o.textContent=`Week ${String(i).padStart(2,"0")}`;$("weekSelect").append(o);}function summary(){return window.KhaemenesGrade4Continuity?.getSummary?.()||null}function render(){const s=summary(),st=s?.state||{};$("learnerTitle").textContent=s?.learner?.nickname||"No active Grade 04 learner";$("statusText").textContent=s?.eligible?"Grade 04 learner connected. Record only evidence that has been reviewed.":"Select a Grade 04 learner in the Academy Family Registry before recording formal mastery.";$("saveVerified").disabled=!s?.eligible;$("exportRecords").disabled=!s?.eligible;$("weeklyScore").value=st.weekly?.[$("weekSelect").value]||"";$("midtermScore").value=st.midterm||"";$("finalScore").value=st.final||"";$("portfolio").checked=!!st.portfolio;}$("weekSelect").addEventListener("change",render);$("saveVerified").addEventListener("click",()=>{const s=summary();if(!s?.eligible)return;const st={...s.state,weekly:{...(s.state.weekly||{})}};st.weekly[$("weekSelect").value]=clamp($("weeklyScore").value);st.midterm=clamp($("midtermScore").value);st.final=clamp($("finalScore").value);st.portfolio=$("portfolio").checked;window.KhaemenesGrade4Continuity.saveState(st);render();alert("Verified Grade 04 record saved for the active learner.");});$("exportRecords").addEventListener("click",()=>{const s=summary();if(!s?.eligible)return;const blob=new Blob([JSON.stringify({course:"Khaemenes Fourth Grade",learner:{nickname:s.learner.nickname,grade:"grade-04"},state:s.state,exportedAt:new Date().toISOString()},null,2)],{type:"application/json"});const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="khaemenes-grade04-record.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});render();})();
-  </script>
-  <footer class="footer no-print"><div class="shell">© <span id="year"></span> Jennifer Kay Pearl · Khaemenes Academy · In-house curriculum</div></footer>
-  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+  <script src="../assets/grade4-records.js"></script>
+  <footer class="footer no-print"><div class="shell">© <span id="year">2026</span> Jennifer Kay Pearl · Khaemenes Academy · In-house curriculum</div></footer>
 </body>
 </html>
