@@ -30,14 +30,32 @@
   </section>
   <main>
     <section class="section"><div class="shell"><div class="heading"><p class="kicker">A++ High Standards</p><h2>Essay writing, research, multi-step mathematics, science models, civic reasoning, technology, and portfolio defense.</h2><p>This course is designed to outperform a minimum checklist by combining subject mastery with evidence, revision, performance, and cross-disciplinary capstones.</p></div><div class="grid cols-4"><article class="card stat"><strong>36</strong><span>Weeks</span></article><article class="card stat"><strong>8</strong><span>Subject Halls</span></article><article class="card stat"><strong>1,440</strong><span>Lesson Blocks</span></article><article class="card stat"><strong>80%</strong><span>Certificate Rule</span></article></div></div></section>
-    <section class="section alt" id="records"><div class="shell"><div class="heading"><p class="kicker">Local Records</p><h2>Family-controlled progress and certification.</h2><p>Records stay in this browser. Families can export a JSON record for safekeeping.</p></div><div class="portal"><div class="profile-box"><h3>Student Record</h3><label>Student name</label><input id="studentName" placeholder="Fourth Grade Scholar"><label>Midterm score</label><input id="midtermScore" type="number" min="0" max="100" placeholder="0–100"><label>Final score</label><input id="finalScore" type="number" min="0" max="100" placeholder="0–100"><label style="display:flex;gap:10px;justify-content:center;align-items:center;margin-top:14px"><input id="portfolio" type="checkbox" style="width:auto"> Portfolio evidence complete</label><div class="actions"><button class="button gold" id="saveProfile">Save Record</button><button class="button" id="clearRecords">Clear</button></div></div><div id="summary"></div></div></div></section>
+
+    <section class="section alt" id="records">
+      <div class="shell">
+        <div class="heading"><p class="kicker">Learner Continuity</p><h2>Your Academy learner record follows you here.</h2><p>Fourth Grade reads the active Academy Family learner, keeps Archaemenes as the Young Scholar mentor, and shows mastery results without allowing the student portal to award them.</p></div>
+        <div class="portal">
+          <div class="profile-box">
+            <h3 id="learnerName">Fourth Grade Scholar</h3>
+            <p id="mentorLine">Archaemenes · Young Scholar</p>
+            <p id="eligibilityLine">Select an active Grade 04 learner from the Academy Family Registry to use formal records.</p>
+            <div class="actions"><a class="button gold" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family Profile</a><a class="button" href="teacher-tools/index.html">Teacher / Family Tools</a></div>
+          </div>
+          <div id="summary"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="subjects"><div class="shell"><div class="heading"><p class="kicker">Subject Halls</p><h2>Eight advanced learning pathways.</h2><p>Each subject hall contains 36 weeks and 180 subject lesson blocks.</p></div><div class="grid cols-4" id="subjectGrid"></div></div></section>
-    <section class="section alt" id="weeks"><div class="shell"><div class="heading"><p class="kicker">36 Weekly Studios</p><h2>Integrated weekly plans with clean printable packets.</h2><p>Each week coordinates all subjects around a strong essential question while preserving subject-specific depth.</p></div><div class="grid cols-3" id="weekGrid"></div></div></section>
+    <section class="section alt" id="weeks"><div class="shell"><div class="heading"><p class="kicker">36 Weekly Studios</p><h2>Integrated weekly plans with clean printable packets.</h2><p>Each week coordinates all subjects around a strong essential question while preserving subject-specific depth. Weekly scores shown here are read-only; verified results are entered in Teacher / Family Tools after assessment evidence is reviewed.</p></div><div class="grid cols-3" id="weekGrid"></div></div></section>
   </main>
+
+  <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
+  <script src="../../assets/khaemenes-elementary-continuity.js"></script>
+  <script src="assets/khaemenes-grade4-continuity.js"></script>
   <script src="data/course-data.js"></script>
   <script src="assets/app.js"></script>
 
   <footer class="footer no-print"><div class="shell">© <span id="year"></span> Jennifer Kay Pearl · Khaemenes Academy · In-house curriculum · No outside dependencies</div></footer>
-  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
 </html>
