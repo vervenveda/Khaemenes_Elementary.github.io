@@ -227,5 +227,6 @@ $("gradeSelect").value=s.grade;$("modeSelect").value=s.mode;$("sizeSelect").valu
 renderRuns();renderPortfolio();renderStats();if(s.maze&&s.maze.grid){startState={r:s.maze.start[0],c:s.maze.start[1],dir:0};player=clone(startState);trail=new Set([key(player.r,player.c)]);renderProgram();renderMaze();challengeText()}else generateMaze();if("speechSynthesis"in window){refresh();speechSynthesis.onvoiceschanged=refresh}
 })();
 </script>
+<script src="/assets/vnv-beta-link.js" defer></script>
 </body>
 </html>

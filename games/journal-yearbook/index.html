@@ -43,4 +43,6 @@ document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{capture();document.q
 ["student","schoolYear","teacher"].forEach(id=>$(id).oninput=()=>save());$("grade").onchange=()=>save();$("saveWeek").onclick=()=>{capture();save("Week "+(current+1)+" saved");renderWeeks()};$("saveReview").onclick=()=>save("Year in Review saved");$("export").onclick=exportData;["printTop","printWeek","printBook","printReview"].forEach(id=>$(id).onclick=()=>window.print());
 s.profile=s.profile||{};$("student").value=s.profile.student||"";$("grade").value=s.profile.grade||"Grade 2";$("schoolYear").value=s.profile.year||"";$("teacher").value=s.profile.teacher||"";for(let i=1;i<=6;i++)$("m"+i).value=(s.review||{})["m"+i]||"";renderPhotos();renderCover();loadWeek();
 })();
-</script></body></html>
+</script>
+<script src="/assets/vnv-beta-link.js" defer></script>
+</body></html>

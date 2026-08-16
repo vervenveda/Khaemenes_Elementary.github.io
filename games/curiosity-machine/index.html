@@ -182,4 +182,5 @@ $("soundBtn").onclick=()=>{s.sound=!s.sound;$("soundBtn").textContent=s.sound?"�
 $("gradeSelect").value=s.grade;$("topicSelect").value=s.topic;$("modeSelect").value=s.mode;$("voiceFriend").value=s.voiceFriend;$("voiceSpeed").value=s.voiceSpeed;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";renderGrade();renderLibrary();renderPortfolio();if(!s.current)s.current=clone(eligible()[0]||PROMPTS[0]);renderPrompt();loadFields();renderStats();if("speechSynthesis"in window){refresh();speechSynthesis.onvoiceschanged=refresh}
 })();
 </script>
+<script src="/assets/vnv-beta-link.js" defer></script>
 </body></html>

@@ -79,4 +79,6 @@ function renderPortfolio(){$("portfolio").innerHTML=state.samples.length?state.s
 $("export").onclick=()=>{const b=new Blob([JSON.stringify({schema:"khaemenes-cvc-v1",profile:state.profile,mastery:state.mastery,samples:state.samples},null,2)],{type:"application/json"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="sound-builder-cvc-growth.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)};$("wipe").onclick=()=>{if(confirm("Clear saved writing samples?")){state.samples=[];save();renderPortfolio()}};
 renderSkills();newBuild();newSeg();newDet();renderFamilies();makeSheet();renderPortfolio();
 })();
-</script></body></html>
+</script>
+<script src="/assets/vnv-beta-link.js" defer></script>
+</body></html>

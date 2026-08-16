@@ -133,5 +133,6 @@ $("saveBtn").onclick=()=>save("Session saved locally");$("exportBtn").onclick=ex
 $("gradeSelect").value=s.grade;$("topicSelect").value=s.topic;$("modeSelect").value=s.mode;$("voiceFriend").value=s.voiceFriend;$("voiceSpeed").value=s.voiceSpeed;$("posterColor").value=s.posterColor;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";restore();renderProblem();renderPoster();renderPortfolio();renderStats();if("speechSynthesis"in window){refresh();speechSynthesis.onvoiceschanged=refresh}
 })();
 </script>
+<script src="/assets/vnv-beta-link.js" defer></script>
 </body>
 </html>

@@ -118,4 +118,6 @@ $("gradeSelect").onchange=gradeChanged;$("modeSelect").onchange=e=>{s.mode=e.tar
 $("soundBtn").onclick=()=>{s.sound=!s.sound;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";if(!s.sound)stop("Voice is off.");save()};$("voiceFriend").onchange=e=>{s.voiceFriend=e.target.value;refresh();speak("",{preview:true});save()};$("voiceSpeed").onchange=e=>{s.voiceSpeed=e.target.value;save()};$("previewVoice").onclick=()=>speak("",{preview:true});$("repeatVoice").onclick=()=>speak(lastSpeech||$("challengeText").textContent);$("stopVoice").onclick=()=>stop();$("resetBtn").onclick=()=>{if(confirm("Reset all Fraction Picnic progress on this device?")){localStorage.removeItem(KEY);location.reload()}};
 $("gradeSelect").value=s.grade;$("modeSelect").value=s.mode;$("foodSelect").value=s.food;$("difficulty").value=s.difficulty;$("voiceFriend").value=s.voiceFriend;$("voiceSpeed").value=s.voiceSpeed;$("explanation").value=s.explanation;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";if("speechSynthesis"in window){refresh();speechSynthesis.onvoiceschanged=refresh}newChallenge();document.addEventListener("visibilitychange",()=>{if(document.hidden)stop("")});
 })();
-</script></body></html>
+</script>
+<script src="/assets/vnv-beta-link.js" defer></script>
+</body></html>

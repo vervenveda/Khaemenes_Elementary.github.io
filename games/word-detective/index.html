@@ -159,5 +159,6 @@ $("soundBtn").onclick=()=>{s.sound=!s.sound;$("soundBtn").textContent=s.sound?"�
 $("gradeSelect").value=s.grade;$("skillSelect").value=s.skill;$("modeSelect").value=s.mode;$("voiceFriend").value=s.voiceFriend;$("voiceSpeed").value=s.voiceSpeed;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";$("notes").value=s.notes;$("explain").value=s.explain;renderPortfolio();renderSort();newStory();renderAll();if("speechSynthesis"in window){refresh();speechSynthesis.onvoiceschanged=refresh}if(!s.current)newCase();else{$("caseWord").textContent=s.current.word;renderTokens();renderClues()}
 })();
 </script>
+<script src="/assets/vnv-beta-link.js" defer></script>
 </body>
 </html>
