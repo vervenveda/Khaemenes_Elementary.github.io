@@ -1,30 +1,83 @@
 (() => {
   "use strict";
-  const DATA = window.KHAE_GRADE1_DATA;
-  const KEY = "khaemenes_grade1_36_aplus_v1";
-  const $ = id => document.getElementById(id);
-  const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  function readState(){try{return JSON.parse(localStorage.getItem(KEY)) || {student:"First Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false};}catch{return {student:"First Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false};}}
-  let state = readState();
-  const save = () => localStorage.setItem(KEY, JSON.stringify(state));
-  function avg(){const v=DATA.units.map(u=>Number(state.weekly[u.unit]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0;}
-  function done(){return DATA.units.filter(u=>Number(state.weekly[u.unit]||0)>=DATA.course.passingScore).length;}
-  function ready(){return avg()>=80 && Number(state.midterm||0)>=80 && Number(state.final||0)>=80 && !!state.portfolio;}
-  function renderDashboard(){
-    $("studentName").value=state.student||"";$("midtermScore").value=state.midterm||"";$("finalScore").value=state.final||"";$("portfolio").checked=!!state.portfolio;
-    const a=avg(), d=done(), ok=ready();
-    $("summary").innerHTML=`<div class="grid cols-4"><article class="card stat"><strong>${d}/36</strong><span>Units at 80%+</span></article><article class="card stat"><strong>${a}%</strong><span>Weekly average</span></article><article class="card stat"><strong>${state.midterm||0}%</strong><span>Midterm</span></article><article class="card stat"><strong>${state.final||0}%</strong><span>Final</span></article></div><div class="profile-box" style="margin-top:16px"><h3>${ok?"Certificate Ready":"Certificate Locked"}</h3><p>${ok?"All 80% completion gates are met. The certificate page may be printed.":"Certificate requires weekly average 80%+, midterm 80%+, final 80%+, and adult portfolio approval."}</p><div class="progress"><span style="width:${Math.min(100,Math.round(d/36*100))}%"></span></div><div class="actions"><a class="button ${ok?"gold":""}" href="records/certificate.html">Open Certificate</a><button type="button" class="button" id="exportBtn">Export Records</button></div></div>`;
-    $("exportBtn").addEventListener("click", exportRecords);
+
+  /*
+   * Grade 01 compatibility helper v4.0
+   * ---------------------------------
+   * This file no longer owns learner identity or mentor identity.
+   * When legacy Grade 01 pages still reference it, records are read/written
+   * through KhaemenesGrade1Continuity whenever available.
+   */
+
+  const DATA=window.KHAE_GRADE1_DATA;
+  const $=id=>document.getElementById(id);
+  const clamp=value=>Math.max(0,Math.min(100,Number(value||0)));
+  const fallbackKey="khaemenes_grade1_36_aplus_v1";
+
+  function readFallback(){
+    try{return JSON.parse(localStorage.getItem(fallbackKey))||{student:"First Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false}}
+    catch{return {student:"First Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false}}
   }
-  function renderUnits(){
-    $("unitGrid").innerHTML=DATA.units.map(u=>`<article class="card week-card"><div class="emblem">${String(u.unit).padStart(2,"0")}</div><h3>${esc(u.title)}</h3><p><strong>Question:</strong> ${esc(u.essentialQuestion)}</p><div class="badges"><span class="badge">5 lessons</span><span class="badge">Printable</span><span class="badge">Assessment</span></div><label>Weekly assessment score</label><input type="number" min="0" max="100" value="${state.weekly[u.unit]||""}" data-score="${u.unit}" placeholder="0–100"><div class="actions"><a class="button" href="lessons/unit-${String(u.unit).padStart(2,"0")}/index.html">Open Unit</a><a class="button light" href="printables/unit-${String(u.unit).padStart(2,"0")}-packet.html">Printable</a></div></article>`).join("");
-    document.querySelectorAll("[data-score]").forEach(i=>i.addEventListener("input",()=>{state.weekly[i.dataset.score]=Math.max(0,Math.min(100,Number(i.value||0)));save();renderDashboard();}));
+
+  function load(){return window.KhaemenesGrade1Continuity?.loadState?.()||readFallback()}
+  function save(state){
+    if(window.KhaemenesGrade1Continuity?.saveState)return window.KhaemenesGrade1Continuity.saveState(state);
+    try{localStorage.setItem(fallbackKey,JSON.stringify(state))}catch{}
+    return state;
   }
-  function renderStandards(){const g=$("standardsGrid");if(!g)return;g.innerHTML=DATA.standardsFamilies.map(s=>`<article class="card"><div class="emblem">${esc(s.code.replace("KHAE-",""))}</div><h3>${esc(s.label)}</h3><p>${esc(s.description)}</p></article>`).join("");}
-  function bind(){
-    $("saveProfile").addEventListener("click",()=>{state.student=$("studentName").value.trim()||"First Grade Scholar";state.midterm=Math.max(0,Math.min(100,Number($("midtermScore").value||0)));state.final=Math.max(0,Math.min(100,Number($("finalScore").value||0)));state.portfolio=$("portfolio").checked;save();renderDashboard();renderUnits();});
-    $("clearRecords").addEventListener("click",()=>{if(!confirm("Clear local first-grade records on this device?"))return;localStorage.removeItem(KEY);state=readState();renderDashboard();renderUnits();});
+
+  function summaryFor(state){
+    const scores=Object.values(state.weekly||{}).map(Number).filter(v=>Number.isFinite(v)&&v>0);
+    const mastered=Object.values(state.weekly||{}).filter(v=>Number(v)>=80).length;
+    const average=scores.length?Math.round(scores.reduce((a,b)=>a+b,0)/scores.length):0;
+    return {mastered,average,ready:mastered>=36&&Number(state.midterm||0)>=80&&Number(state.final||0)>=80&&Boolean(state.portfolio)};
   }
-  function exportRecords(){const payload={course:DATA.course.title,exported:new Date().toISOString(),state};const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="khaemenes-first-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-  document.addEventListener("DOMContentLoaded",()=>{$("year").textContent=new Date().getFullYear();bind();renderDashboard();renderUnits();renderStandards();});
+
+  function renderLegacyDashboard(){
+    const state=load();const s=summaryFor(state);
+    if($("studentName")){$("studentName").value=state.student||"";$("studentName").readOnly=true}
+    if($("midtermScore"))$("midtermScore").value=state.midterm||"";
+    if($("finalScore"))$("finalScore").value=state.final||"";
+    if($("portfolio"))$("portfolio").checked=Boolean(state.portfolio);
+    if($("summary")){
+      $("summary").textContent=`${s.mastered}/36 weeks at mastery · ${s.average}% weekly average · certificate ${s.ready?"ready":"locked"}. Use Teacher Tools to record verified assessment evidence.`;
+    }
+  }
+
+  function bindLegacySave(){
+    const button=$("saveProfile");if(!button)return;
+    button.textContent="Save Reviewed Milestones";
+    button.addEventListener("click",()=>{
+      const state=load();
+      if($("midtermScore"))state.midterm=clamp($("midtermScore").value);
+      if($("finalScore"))state.final=clamp($("finalScore").value);
+      if($("portfolio"))state.portfolio=Boolean($("portfolio").checked);
+      save(state);renderLegacyDashboard();
+    });
+  }
+
+  function renderLegacyUnits(){
+    const grid=$("unitGrid");if(!grid||!DATA?.units)return;
+    const state=load();
+    grid.replaceChildren();
+    for(const unit of DATA.units){
+      const n=Number(unit.unit);const score=Number(state.weekly?.[n]||0);
+      const card=document.createElement("article");card.className="card week-card";
+      const emblem=document.createElement("div");emblem.className="emblem";emblem.textContent=String(n).padStart(2,"0");
+      const h=document.createElement("h3");h.textContent=unit.title;
+      const p=document.createElement("p");p.textContent=unit.essentialQuestion||"Five connected lessons.";
+      const status=document.createElement("p");status.textContent=score?`Recorded assessment: ${score}%`:"No assessment result recorded yet.";
+      const actions=document.createElement("div");actions.className="actions";
+      const open=document.createElement("a");open.className="button";open.href=`lessons/unit-${String(n).padStart(2,"0")}/index.html`;open.textContent="Open Unit";
+      const assessment=document.createElement("a");assessment.className="button gold";assessment.href=`assessments/unit-${String(n).padStart(2,"0")}-assessment.html`;assessment.textContent="Mastery Check";
+      actions.append(open,assessment);card.append(emblem,h,p,status,actions);grid.append(card);
+    }
+  }
+
+  function init(){
+    if($("year"))$("year").textContent=new Date().getFullYear();
+    renderLegacyDashboard();renderLegacyUnits();bindLegacySave();
+  }
+
+  document.addEventListener("DOMContentLoaded",init);
 })();
