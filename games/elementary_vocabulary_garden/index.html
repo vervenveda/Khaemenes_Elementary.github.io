@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Vocabulary Garden Academy — a K–5 drag-and-drop vocabulary game with grade-level word banks, definitions, context clues, synonyms, antonyms, roots, narration, quizzes, and private local progress.">
-<title>Vocabulary Garden Academy™ — K–5 Word Quest</title>
+<meta name="description" content="Vocabulary Garden Academy — a Grades 1–5 drag-and-drop vocabulary game with grade-level word banks, definitions, context clues, synonyms, antonyms, roots, narration, quizzes, and private local progress.">
+<title>Vocabulary Garden Academy™ — Grades 1–5 Word Quest</title>
 <style>
 :root{
   --sky:#dff5ff;
@@ -261,6 +261,13 @@ footer{
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
 }
+
+.eiren-panel{background:linear-gradient(145deg,#fff,#fbf6ff);border:2px solid #e5d9ef}
+.eiren-heading{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;max-width:760px;margin:auto}
+.eiren-heading h2{margin:2px 0;color:var(--navy)}
+.eiren-heading p:not(.portal-eyebrow){margin:3px 0;color:var(--muted);line-height:1.5}
+.eiren-mark{width:58px;height:58px;display:grid;place-items:center;border-radius:50%;font-size:2rem;background:#fff;border:2px solid #e5d9ef;box-shadow:0 7px 16px rgba(60,40,90,.08)}
+@media(max-width:520px){.eiren-heading{grid-template-columns:1fr;text-align:center}.eiren-mark{margin:auto}}
 </style>
 </head>
 <body>
@@ -268,7 +275,7 @@ footer{
   <div class="portal-mark" aria-hidden="true">📚</div>
   <div>
     <p class="portal-eyebrow">Khaemenes Academy · Elementary Portal</p>
-    <div class="portal-title">Vocabulary Garden Academy™ · K–5 Word Quest</div>
+    <div class="portal-title">Vocabulary Garden Academy™ · Grades 1–5 Word Quest</div>
   </div>
   <nav class="portal-links" aria-label="Elementary navigation">
     <a class="portal-link" href="../index.html">🏡 Elementary Home</a>
@@ -278,7 +285,7 @@ footer{
 
 <main class="wrap">
   <section class="hero">
-    <div class="eyebrow">🌱 Kindergarten through Grade 5 · Drag · Match · Read · Learn</div>
+    <div class="eyebrow">🌱 Grades 1–5 · Drag · Match · Read · Learn</div>
     <h1>Vocabulary Garden Academy™</h1>
     <p>Match words with meanings, context clues, synonyms, antonyms, and roots. Every grade has its own vocabulary bank, and every correct match helps the word garden grow.</p>
   </section>
@@ -287,7 +294,6 @@ footer{
     <div class="control">
       <label for="gradeSelect">Grade Level</label>
       <select id="gradeSelect">
-        <option value="K">Kindergarten</option>
         <option value="1">Grade 1</option>
         <option value="2">Grade 2</option>
         <option value="3">Grade 3</option>
@@ -340,7 +346,7 @@ footer{
 
   <section class="layout">
     <aside class="sidebar">
-      <div class="side-head"><h2>Grade-Level Word Path</h2></div>
+      <div class="side-head"><h2>Elementary Word Path</h2></div>
       <div class="side-body">
         <div class="grade-map" id="gradeMap"></div>
         <div class="word-garden">
@@ -388,18 +394,16 @@ footer{
         <article class="lesson-card"><h3>Word Study</h3><p id="studyCard">Prefixes, suffixes, roots, synonyms, and antonyms help unlock new vocabulary.</p></article>
       </section>
 
-      <section class="voice-panel">
-        <h2 style="text-align:center;margin-top:0">Choose a Vocabulary Guide</h2>
-        <div class="voice-guides" id="voiceGuides">
-          <button class="voice-guide" data-voice="flora" type="button">🌿 Flora</button>
-          <button class="voice-guide" data-voice="lex" type="button">📖 Lex</button>
-          <button class="voice-guide" data-voice="owl" type="button">🦉 Word Owl</button>
-          <button class="voice-guide" data-voice="nova" type="button">✨ Nova</button>
+      <section class="voice-panel eiren-panel">
+        <div class="eiren-heading">
+          <div class="eiren-mark">🌸</div>
+          <div><p class="portal-eyebrow">Elementary Vocabulary Mentor</p><h2>Eiren</h2>
+          <p>Eiren reads directions, words, definitions, examples, and gentle hints while students remain in control of the quest.</p></div>
         </div>
         <div class="voice-controls">
-          <select id="voiceSpeed"><option value="slow">Slow and clear</option><option value="normal">Just right</option><option value="lively">A little lively</option></select>
-          <button class="btn" id="meetGuideBtn" type="button">👋 Meet My Guide</button>
-          <button class="btn" id="repeatBtn" type="button">🔁 Repeat Last</button>
+          <select id="voiceSpeed" aria-label="Eiren speaking speed"><option value="slow">Slow and clear</option><option value="normal">Just right</option><option value="lively">A little lively</option></select>
+          <button class="btn" id="meetGuideBtn" type="button">🌸 Meet Eiren</button>
+          <button class="btn" id="repeatBtn" type="button">🔁 Repeat Eiren</button>
           <button class="btn" id="stopVoiceBtn" type="button">⏹ Stop Voice</button>
         </div>
         <p id="voiceStatus" style="text-align:center;color:var(--muted);min-height:1.2em"></p>
@@ -413,7 +417,7 @@ footer{
     <div class="stat"><strong id="roundStat">0</strong>Rounds</div>
     <div class="stat"><strong id="learnedStat">0</strong>Words learned</div>
     <div class="stat"><strong id="accuracyStat">0%</strong>Accuracy</div>
-    <div class="stat"><strong id="levelStat">K</strong>Current grade</div>
+    <div class="stat"><strong id="levelStat">1</strong>Current grade</div>
   </section>
 
   <section class="collection">
@@ -435,16 +439,6 @@ footer{
   const KEY = "vocabulary-garden-k5-v1";
 
   const BANK = {
-    K:[
-      {word:"big",def:"large in size",context:"The elephant is very ___ compared with the mouse.",syn:"large",ant:"small",root:"A basic describing word.",emoji:"🐘"},
-      {word:"tiny",def:"very small",context:"The ant is ___ beside the shoe.",syn:"little",ant:"huge",root:"A basic describing word.",emoji:"🐜"},
-      {word:"happy",def:"feeling joy",context:"Mia felt ___ when her friend arrived.",syn:"glad",ant:"sad",root:"A feeling word.",emoji:"😊"},
-      {word:"quiet",def:"making little or no sound",context:"The library was ___ during story time.",syn:"silent",ant:"loud",root:"A describing word.",emoji:"🤫"},
-      {word:"jump",def:"to push your body up from the ground",context:"The frog can ___ over the log.",syn:"leap",ant:"stay",root:"An action word.",emoji:"🐸"},
-      {word:"kind",def:"helpful and caring",context:"It was ___ to share the crayons.",syn:"caring",ant:"mean",root:"A character word.",emoji:"💛"},
-      {word:"bright",def:"giving a lot of light",context:"The sun looked ___ in the morning sky.",syn:"shiny",ant:"dim",root:"A describing word.",emoji:"☀️"},
-      {word:"begin",def:"to start",context:"We will ___ the game after lunch.",syn:"start",ant:"finish",root:"A basic action word.",emoji:"▶️"}
-    ],
     1:[
       {word:"brave",def:"ready to face something difficult",context:"The ___ firefighter entered the smoky room.",syn:"courageous",ant:"afraid",root:"brave is the base word",emoji:"🦁"},
       {word:"search",def:"to look carefully for something",context:"We will ___ for shells on the beach.",syn:"seek",ant:"ignore",root:"search is the base word",emoji:"🔎"},
@@ -498,7 +492,6 @@ footer{
   };
 
   const GRADE_INFO = {
-    K:{icon:"🌱",name:"Kindergarten",desc:"Basic describing and action words"},
     1:{icon:"🌼",name:"Grade 1",desc:"Everyday academic vocabulary"},
     2:{icon:"🐝",name:"Grade 2",desc:"Meaning, clues, and word relationships"},
     3:{icon:"🌳",name:"Grade 3",desc:"Academic words and word parts"},
@@ -515,9 +508,9 @@ footer{
 
   function fresh(){
     return {
-      grade:"K",mode:"definition",roundSize:4,difficulty:"guided",theme:"day",
-      voice:"flora",voiceSpeed:"slow",score:0,streak:0,bestStreak:0,rounds:0,
-      correct:0,totalAttempts:0,learned:[],mastery:{K:0,1:0,2:0,3:0,4:0,5:0}
+      grade:"1",mode:"definition",roundSize:4,difficulty:"guided",theme:"day",
+      voiceSpeed:"slow",score:0,streak:0,bestStreak:0,rounds:0,
+      correct:0,totalAttempts:0,learned:[],mastery:{1:0,2:0,3:0,4:0,5:0}
     };
   }
   function load(){
@@ -525,10 +518,11 @@ footer{
     catch{return fresh()}
   }
   let state=load(),roundWords=[],matches={},selectedWord=null,voices=[],speechToken=0,lastSpoken="";
+  if(!BANK[state.grade]) state.grade="1";
 
   function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{}}
   function setStatus(text){$("status").textContent=text}
-  function shuffle(a){return a.slice().sort(()=>Math.random()-.5)}
+  function shuffle(a){const x=a.slice();for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]]}return x}
   function applyTheme(name){
     const t=THEMES[name]||THEMES.day;
     document.body.style.background=`linear-gradient(180deg,${t.bg1},${t.bg2})`;
@@ -545,16 +539,12 @@ footer{
     }
   }
 
-  const GUIDES={
-    flora:{name:"Flora",rate:.82,pitch:1.07,match:/samantha|aria|jenny|ava|karen|victoria/i,greeting:"Hello, word gardener. Flora is ready to grow your vocabulary one word at a time."},
-    lex:{name:"Lex",rate:.79,pitch:.99,match:/daniel|david|alex|fred|george/i,greeting:"Welcome, reader. Lex is ready to match words with meanings and clues."},
-    owl:{name:"Word Owl",rate:.74,pitch:1,match:/daniel|samantha|alex|serena|moira/i,greeting:"Welcome, careful thinker. Word Owl is ready to study context, roots, synonyms, and antonyms."},
-    nova:{name:"Nova",rate:.84,pitch:1.1,match:/natural|enhanced|premium|samantha|aria|jenny|ava/i,greeting:"Hello, bright reader. Nova is ready for a sparkling vocabulary quest."}
-  };
+  const EIREN={name:"Eiren",rate:.82,pitch:1.06,match:/samantha|aria|jenny|ava|victoria|karen|serena|moira|natural|enhanced|premium/i,
+    greeting:"Hello, word gardener. I am Eiren. We will read carefully, look for clues, explore word parts, and grow your vocabulary together."};
   const SPEEDS={slow:.88,normal:1,lively:1.1};
   function refreshVoices(){if("speechSynthesis"in window)voices=speechSynthesis.getVoices()||[]}
   function chooseVoice(){
-    refreshVoices();const g=GUIDES[state.voice]||GUIDES.flora;
+    refreshVoices();const g=EIREN;
     const en=voices.filter(v=>/^en([-_]|$)/i.test(v.lang||"")),pool=en.length?en:voices;
     return pool.find(v=>g.match.test(v.name))||pool.find(v=>/natural|enhanced|premium/i.test(v.name))||pool[0]||null
   }
@@ -562,9 +552,9 @@ footer{
     speechToken++;if("speechSynthesis"in window)speechSynthesis.cancel();$("voiceStatus").textContent=msg
   }
   function speak(text,preview=false){
-    const phrase=preview?(GUIDES[state.voice]||GUIDES.flora).greeting:String(text||"").trim();
+    const phrase=preview?EIREN.greeting:String(text||"").trim();
     if(!phrase||!("speechSynthesis"in window))return;
-    stopVoice("");lastSpoken=phrase;const token=++speechToken,g=GUIDES[state.voice]||GUIDES.flora,u=new SpeechSynthesisUtterance(phrase),v=chooseVoice();
+    stopVoice("");lastSpoken=phrase;const token=++speechToken,g=EIREN,u=new SpeechSynthesisUtterance(phrase),v=chooseVoice();
     if(v)u.voice=v;u.lang=v?.lang||"en-US";u.rate=Math.max(.55,Math.min(1.15,g.rate*(SPEEDS[state.voiceSpeed]||1)));u.pitch=g.pitch;
     u.onstart=()=>$("voiceStatus").textContent=`${g.name} is reading.`;
     u.onend=()=>{if(token===speechToken)$("voiceStatus").textContent="Ready for another word quest!"};
@@ -611,7 +601,7 @@ footer{
   function renderGarden(){
     $("gardenRow").innerHTML=Object.keys(GRADE_INFO).map((g,i)=>{
       const grown=(state.mastery[g]||0)>=5;
-      return `<div class="plant ${grown?"grown":""}"><span>${grown?["🌻","🌷","🌳","🍎","📘","🏆"][i]:"🌱"}</span><small>${g==="K"?"K":`G${g}`}</small></div>`
+      return `<div class="plant ${grown?"grown":""}"><span>${grown?["🌻","🌷","🌳","📘","🏆"][i]:"🌱"}</span><small>${`G${g}`}</small></div>`
     }).join("")
   }
   function renderCollection(){
@@ -672,12 +662,18 @@ footer{
     roundWords=shuffle(BANK[state.grade]).slice(0,size);
     $("lessonTitle").textContent=modeTitle();
     $("prompt").textContent=`${modeDirections()} Drag a word to a clue, or tap a word and then tap its match.`;
+    const support = Number(state.grade)<=2
+      ? "Say the word aloud with Eiren, then use the meaning and sentence clues."
+      : Number(state.grade)<=4
+        ? "Use context, word relationships, and meaningful word parts before choosing."
+        : "Compare context, morphology, nuance, and academic meaning before choosing.";
+    $("strategyCard").textContent=support;
     $("feedback").textContent="";
     $("wordList").innerHTML="";
     $("dropList").innerHTML="";
     roundWords.forEach(item=>$("wordList").appendChild(createWordCard(item)));
     shuffle(roundWords).forEach((item,i)=>$("dropList").appendChild(createDropZone(item,i)));
-    setStatus(`${GRADE_INFO[state.grade].name} ${modeTitle()} quest ready.`);
+    setStatus(`${GRADE_INFO[state.grade].name} ${modeTitle()} quest ready. Eiren is available to read any word or clue.`);
     updateStats();
     if(state.difficulty==="guided")setTimeout(()=>speak(modeDirections()),220)
   }
@@ -749,10 +745,6 @@ footer{
     setTimeout(()=>{wordCard?.classList.remove("selected");zone?.classList.remove("dragover")},1700)
   }
 
-  function updateVoiceButtons(){
-    document.querySelectorAll("[data-voice]").forEach(b=>b.classList.toggle("active",b.dataset.voice===state.voice));
-    $("voiceSpeed").value=state.voiceSpeed
-  }
 
   $("gradeSelect").onchange=e=>{state.grade=e.target.value;save();newRound()};
   $("modeSelect").onchange=e=>{state.mode=e.target.value;save();newRound()};
@@ -765,7 +757,6 @@ footer{
   $("checkRoundBtn").onclick=checkRound;
   $("hintBtn").onclick=giveHint;
   $("hearBtn").onclick=()=>speak(modeDirections());
-  $("voiceGuides").onclick=e=>{const b=e.target.closest("[data-voice]");if(!b)return;state.voice=b.dataset.voice;save();updateVoiceButtons();$("voiceStatus").textContent=`${GUIDES[state.voice].name} selected.`};
   $("voiceSpeed").onchange=e=>{state.voiceSpeed=e.target.value;save()};
   $("meetGuideBtn").onclick=()=>speak("",true);
   $("repeatBtn").onclick=()=>lastSpoken?speak(lastSpoken):speak(modeDirections());
@@ -783,7 +774,7 @@ footer{
   $("difficultySelect").value=state.difficulty;
   $("themeSelect").value=state.theme;
   applyTheme(state.theme);
-  updateVoiceButtons();renderGradeMap();renderGarden();renderCollection();refreshVoices();
+  renderGradeMap();renderGarden();renderCollection();refreshVoices();
   if("speechSynthesis"in window){speechSynthesis.addEventListener?.("voiceschanged",refreshVoices);speechSynthesis.onvoiceschanged=refreshVoices}
   newRound();
   window.addEventListener("beforeunload",()=>stopVoice(""));
