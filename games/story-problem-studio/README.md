@@ -2,7 +2,7 @@
 
 **Khaemenes Elementary · Second Grade · Mathematics + Language Arts**
 
-Story Problem Studio is a dependency-free learning app designed to help second-grade learners **read, visualize, solve, explain, create, save, draw, and print mathematical story problems**.
+Story Problem Studio is a dependency-free learning app designed to help 1st-5th grade learners **read, visualize, solve, explain, create, save, draw, and print mathematical story problems**.
 
 Its central learning cycle is:
 
