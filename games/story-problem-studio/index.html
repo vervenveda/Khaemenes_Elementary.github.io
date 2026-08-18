@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Story Problem Studio — a sovereign, dependency-free second-grade math and language-arts game for solving, creating, saving, drawing, and printing illustrated word problems.">
+<meta name="description" content="Story Problem Studio — a sovereign, dependency-free Grades 1–5 math and language-arts studio for solving, creating, saving, drawing, and printing illustrated word problems.">
 <meta name="theme-color" content="#5d4ba6">
-<title>Story Problem Studio 📖➕ · Khaemenes Second Grade</title>
+<title>Story Problem Studio 📖➕ · Khaemenes Elementary Grades 1–5</title>
 <style>
 :root{
   --ink:#25334a;--muted:#68758a;--paper:#fffdf8;--cream:#fff7dd;
@@ -70,7 +70,7 @@ h1{margin:10px auto 4px;max-width:960px;font-size:clamp(2.9rem,7vw,5.3rem);line-
 .card{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
 .main{padding:16px}
 .side{padding:15px;position:sticky;top:90px}
-.toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.toolbar{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
 .control{padding:10px;border:1px solid var(--line);border-radius:14px;background:#fbfdff}
 .control label{display:block;margin-bottom:4px;color:var(--muted);font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
 .control select{width:100%;padding:8px 9px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
@@ -178,7 +178,7 @@ canvas{width:100%;height:330px;display:block;border:2px solid #d9d2eb;border-rad
   <div class="shell nav">
     <div class="brand">
       <div class="brand-mark">📖</div>
-      <div><strong>Khaemenes Second Grade · Story Problem Studio</strong><small>Math Reasoning · Reading · Writing · Representation</small></div>
+      <div><strong>Khaemenes Elementary · Story Problem Studio</strong><small>Math Reasoning · Reading · Writing · Representation</small></div>
     </div>
     <div></div>
     <div class="header-actions">
@@ -192,12 +192,12 @@ canvas{width:100%;height:330px;display:block;border:2px solid #d9d2eb;border-rad
 <section class="hero">
   <div class="shell">
     <div class="hero-card">
-      <div class="eyebrow">Second Grade Math + Language Arts · Read It · Picture It · Solve It · Create It</div>
+      <div class="eyebrow">Grades 1–5 Math + Language Arts · Read It · Picture It · Solve It · Create It</div>
       <h1>Story Problem Studio 📖➕</h1>
       <p>Solve illustrated word problems, change the characters and objects, explore where the unknown can appear, draw your thinking, and write your own mathematical stories.</p>
       <div class="hero-badges">
         <span>Sovereign Local App</span><span>No Outside Dependencies</span><span>Monte Carlo Adaptation</span>
-        <span>Math + Language Arts</span><span>Save Everything Locally</span><span>Print / Export</span>
+        <span>Grades 1–5</span><span>Math + Language Arts</span><span>Save Everything Locally</span><span>Print / Export</span>
       </div>
     </div>
   </div>
@@ -206,14 +206,16 @@ canvas{width:100%;height:330px;display:block;border:2px solid #d9d2eb;border-rad
 <main class="shell layout">
   <section class="card main">
     <div class="toolbar">
+      <div class="control"><label for="gradeSelect">Grade</label><select id="gradeSelect"><option value="1">Grade 1</option><option value="2">Grade 2</option><option value="3">Grade 3</option><option value="4">Grade 4</option><option value="5">Grade 5</option></select></div>
+      <div class="control"><label for="challengeSelect">Challenge</label><select id="challengeSelect"><option value="foundation">Foundation</option><option value="on">On Level</option><option value="stretch">Stretch</option></select></div>
       <div class="control"><label for="modeSelect">Studio Mode</label><select id="modeSelect"><option value="solve">Solve Stories</option><option value="create">Create a Story</option><option value="mixed">Mixed Studio</option></select></div>
-      <div class="control"><label for="operationSelect">Operation</label><select id="operationSelect"><option value="adaptive">Adaptive</option><option value="add">Addition</option><option value="subtract">Subtraction</option></select></div>
+      <div class="control"><label for="operationSelect">Operation</label><select id="operationSelect"><option value="adaptive">Adaptive</option><option value="add">Addition</option><option value="subtract">Subtraction</option><option value="multiply">Multiplication</option><option value="divide">Division</option></select></div>
       <div class="control"><label for="unknownSelect">Unknown Position</label><select id="unknownSelect"><option value="adaptive">Adaptive</option><option value="result">Result Unknown</option><option value="change">Change Unknown</option><option value="start">Start Unknown</option></select></div>
       <div class="control"><label>Current Focus</label><div class="control-value" id="currentFocus">Addition · Result Unknown</div></div>
     </div>
 
     <section class="story-card" id="solveArea">
-      <div class="story-top"><div class="story-label">Illustrated Story Problem</div><div class="goal-row"><span class="goal-chip" id="levelChip">Level 1</span><span class="goal-chip" id="unknownChip">Result Unknown</span></div></div>
+      <div class="story-top"><div class="story-label">Illustrated Story Problem</div><div class="goal-row"><span class="goal-chip" id="levelChip">Grade 2 · On Level</span><span class="goal-chip" id="unknownChip">Result Unknown</span></div></div>
       <div class="story-text" id="storyText"></div>
       <div class="scene" id="scene"></div>
       <div class="problem-equation" id="equation"></div>
@@ -262,7 +264,7 @@ canvas{width:100%;height:330px;display:block;border:2px solid #d9d2eb;border-rad
         <div class="creator-grid">
           <div class="creator-field"><label for="creatorCharacter">Character</label><select id="creatorCharacter"></select></div>
           <div class="creator-field"><label for="creatorObject">Object</label><select id="creatorObject"></select></div>
-          <div class="creator-field"><label for="creatorOperation">Operation</label><select id="creatorOperation"><option value="add">Addition</option><option value="subtract">Subtraction</option></select></div>
+          <div class="creator-field"><label for="creatorOperation">Operation</label><select id="creatorOperation"><option value="add">Addition</option><option value="subtract">Subtraction</option><option value="multiply">Multiplication</option><option value="divide">Division</option></select></div>
           <div class="creator-field"><label for="creatorUnknown">Unknown</label><select id="creatorUnknown"><option value="result">Result</option><option value="change">Change</option><option value="start">Start</option></select></div>
           <div class="creator-field"><label for="creatorA">First Number</label><input id="creatorA" type="number" min="0" max="999" value="12"></div>
           <div class="creator-field"><label for="creatorB">Second Number</label><input id="creatorB" type="number" min="0" max="999" value="7"></div>
@@ -294,7 +296,7 @@ canvas{width:100%;height:330px;display:block;border:2px solid #d9d2eb;border-rad
       <div class="stat"><strong id="correctStat">0</strong>Correct</div>
       <div class="stat"><strong id="createdStat">0</strong>Created</div>
       <div class="stat"><strong id="streakStat">0</strong>Streak</div>
-      <div class="stat"><strong id="levelStat">1</strong>Level</div>
+      <div class="stat"><strong id="levelStat">2</strong>Grade</div>
     </div>
     <div class="mastery"><strong>Story Problem Mastery</strong><div class="mastery-bar"><span id="masteryFill"></span></div><div style="margin-top:6px;color:var(--muted);font-size:.78rem" id="masteryText"></div></div>
     <div class="skill-list">
@@ -306,45 +308,25 @@ canvas{width:100%;height:330px;display:block;border:2px solid #d9d2eb;border-rad
     <div class="mentor"><strong>Story Guide</strong><p id="mentorText">Read the story once for meaning. Then ask: what do I know, and what am I trying to find?</p><div class="mentor-actions"><button class="btn" id="firstStepBtn">🪜 First Step</button><button class="btn" id="explainBtn">💬 Explain the Structure</button></div></div>
 
     <div class="voice-studio">
-      <strong>🎙 Friendly Reading Guide</strong>
-      <div class="voice-controls">
-        <div class="voice-control">
-          <label for="voiceFriend">Guide</label>
-          <select id="voiceFriend">
-            <option value="sunny">☀️ Sunny</option>
-            <option value="sage">🦉 Story Sage</option>
-            <option value="bloom">🌼 Bloom</option>
-            <option value="rainbow">🌈 Rainbow Friend</option>
-          </select>
-        </div>
-        <div class="voice-control">
-          <label for="voiceSpeed">Reading Speed</label>
-          <select id="voiceSpeed">
-            <option value="slow">Slow & Clear</option>
-            <option value="normal">Gentle</option>
-            <option value="lively">A Little Lively</option>
-          </select>
-        </div>
-      </div>
-      <div class="voice-buttons">
-        <button class="btn" id="previewVoiceBtn">▶ Hear Guide</button>
-        <button class="btn" id="repeatVoiceBtn">↻ Repeat</button>
-        <button class="btn" id="stopVoiceBtn">■ Stop</button>
-      </div>
-      <div class="voice-status" id="voiceStatus">Loading a friendly voice…</div>
+      <strong>🌸 Eiren · Story &amp; Reasoning Mentor</strong>
+      <p id="eirenGuideText" style="margin:6px 0;color:var(--muted);font-size:.8rem">I adapt my reading, hints, and reasoning language to your grade.</p>
+      <div class="voice-controls" style="grid-template-columns:1fr"><div class="voice-control"><label for="voiceSpeed">Eiren's Reading Speed</label><select id="voiceSpeed"><option value="slow">Slow &amp; Clear</option><option value="normal">Gentle</option><option value="lively">A Little Lively</option></select></div></div>
+      <div class="voice-buttons"><button class="btn" id="previewVoiceBtn">🌸 Hear Eiren</button><button class="btn" id="repeatVoiceBtn">↻ Repeat</button><button class="btn" id="stopVoiceBtn">■ Stop</button></div>
+      <div class="voice-status" id="voiceStatus">Eiren is ready.</div>
     </div>
     <div class="monte"><strong>Monte Carlo Adaptation</strong><div class="monte-grid"><span>Estimated success</span><span id="mcSuccess">—</span><span>Candidate simulations</span><span id="mcSims">—</span><span>Selected level</span><span id="mcLevel">—</span><span>Target structure</span><span id="mcTarget">—</span></div></div>
     <div class="history" id="history"></div>
   </aside>
 </main>
 
-<div class="shell footer-note">Khaemenes Elementary · Second Grade · Math + Language Arts · Sovereign vanilla HTML/CSS/JavaScript · No external libraries, APIs, trackers, fonts, or services</div>
+<div class="shell footer-note">Khaemenes Elementary · Grades 1–5 · Math + Language Arts · Sovereign vanilla HTML/CSS/JavaScript · No external libraries, APIs, trackers, fonts, or services</div>
 
 <script>
 (() => {
 "use strict";
 const $=id=>document.getElementById(id);
-const STORAGE_KEY="khaemenes_story_problem_studio_v2";
+const STORAGE_KEY="khaemenes_story_problem_studio_grades1_5_v3";
+const LEGACY_STORAGE_KEY="khaemenes_story_problem_studio_v2";
 const CANVAS_KEY="khaemenes_story_problem_studio_canvas_v1";
 
 const CHARACTERS=[
@@ -359,8 +341,8 @@ const OBJECTS=[
 ];
 
 const baseState={
-  current:null,createdProblem:null,correct:0,created:0,streak:0,best:0,mastery:42,level:1,
-  sound:true,voiceFriend:"sunny",voiceSpeed:"normal",mode:"solve",operation:"adaptive",unknown:"adaptive",history:[],recent:[],
+  current:null,createdProblem:null,correct:0,created:0,streak:0,best:0,mastery:42,level:2,grade:2,challenge:"on",
+  sound:true,voiceSpeed:"normal",mode:"solve",operation:"adaptive",unknown:"adaptive",history:[],recent:[],
   creator:{character:"Maya",object:"apples",operation:"add",unknown:"result",a:12,b:7},
   skills:{
     add:{a:0,c:0,confidence:.52},sub:{a:0,c:0,confidence:.49},
@@ -374,7 +356,7 @@ function clone(o){return JSON.parse(JSON.stringify(o))}
 function load(){
   const s=clone(baseState);
   try{
-    const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null");
+    const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||localStorage.getItem(LEGACY_STORAGE_KEY)||"null");
     if(!saved)return s;
     Object.assign(s,saved);
     s.skills=Object.assign(clone(baseState.skills),saved.skills||{});
@@ -384,6 +366,11 @@ function load(){
     return s;
   }catch{return s}
 }
+const state=load();
+if(![1,2,3,4,5].includes(Number(state.grade))) state.grade=2;
+state.grade=Number(state.grade);
+if(!["foundation","on","stretch"].includes(state.challenge)) state.challenge="on";
+
 function saveState(note="Auto-saved locally"){
   state.lastSaved=new Date().toISOString();
   try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}catch{}
@@ -395,40 +382,46 @@ function rand(min,max){return Math.floor(Math.random()*(max-min+1))+min}
 function pick(arr){return arr[rand(0,arr.length-1)]}
 function labelUnknown(u){return u==="result"?"Result Unknown":u==="change"?"Change Unknown":"Start Unknown"}
 
-function estimatedSuccess(op,unknown,level){
-  const skill=op==="add"?state.skills.add:state.skills.sub;
-  let p=skill.confidence;
-  p+=(state.skills.language.confidence-.5)*.18;
-  if(unknown!=="result")p-=(1-state.skills.unknown.confidence)*.18;
-  p-={1:0,2:.12,3:.23}[level]||.12;
-  p+=(state.mastery-50)/280;
-  p+=Math.min(state.streak,4)*.01;
+const GRADE_CONFIG={
+  1:{ops:["add","subtract"],max:{foundation:10,on:20,stretch:30},mentor:"Use pictures and simple equations. Tell what happened first, next, and last."},
+  2:{ops:["add","subtract"],max:{foundation:50,on:100,stretch:200},mentor:"Find the start, change, and result. Draw the story and identify the unknown."},
+  3:{ops:["add","subtract","multiply","divide"],max:{foundation:100,on:1000,stretch:2000},mentor:"Choose the operation from the story. Use equal groups, arrays, and clear reasoning."},
+  4:{ops:["add","subtract","multiply","divide"],max:{foundation:1000,on:10000,stretch:100000},mentor:"Represent multi-step and multiplicative situations. Estimate before checking the exact answer."},
+  5:{ops:["add","subtract","multiply","divide"],max:{foundation:10000,on:100000,stretch:1000000},mentor:"Analyze quantities, relationships, units, and operation order. Explain why your model fits."}
+};
+function allowedOps(){return GRADE_CONFIG[state.grade].ops}
+function challengeLabel(){return state.challenge==="foundation"?"Foundation":state.challenge==="stretch"?"Stretch":"On Level"}
+function gradeMentor(){return GRADE_CONFIG[state.grade].mentor}
+function operationLabel(op){return ({add:"Addition",subtract:"Subtraction",multiply:"Multiplication",divide:"Division"})[op]||op}
+function estimatedSuccess(op,unknown){
+  const key=op==="add"?"add":op==="subtract"?"sub":"unknown", skill=state.skills[key]||state.skills.unknown;
+  let p=skill.confidence+(state.skills.language.confidence-.5)*.18;
+  if(unknown!=="result")p-=(1-state.skills.unknown.confidence)*.12;
+  p-={foundation:0,on:.08,stretch:.17}[state.challenge]||.08;
+  p+=(state.mastery-50)/300+Math.min(state.streak,4)*.01;
   return clamp(p,.12,.94);
 }
 function selectAdaptive(){
-  const ops=state.operation==="adaptive"?["add","subtract"]:[state.operation];
-  const unknowns=state.unknown==="adaptive"?["result","change","start"]:[state.unknown];
-  const levels=[1,2,3],sims=180,target=.72;
-  let best=null;
-  for(const op of ops)for(const unknown of unknowns)for(const level of levels){
-    const p=estimatedSuccess(op,unknown,level);
-    let wins=0;
-    for(let i=0;i<sims;i++)if(Math.random()<p)wins++;
-    const rate=wins/sims;
-    const score=Math.abs(rate-target)+(unknown==="result"?0.02:0);
-    if(!best||score<best.score)best={op,unknown,level,rate,score};
+  let ops=state.operation==="adaptive"?allowedOps():[state.operation];
+  ops=ops.filter(op=>allowedOps().includes(op)); if(!ops.length)ops=allowedOps();
+  const unknowns=state.unknown==="adaptive"?["result","change","start"]:[state.unknown],sims=180;
+  const target=state.challenge==="foundation"?.80:state.challenge==="stretch"?.64:.72; let best=null;
+  for(const op of ops)for(const unknown of unknowns){
+    if((op==="multiply"||op==="divide")&&unknown==="start"&&state.grade<4)continue;
+    const p=estimatedSuccess(op,unknown);let wins=0;for(let i=0;i<sims;i++)if(Math.random()<p)wins++;
+    const rate=wins/sims,score=Math.abs(rate-target)+(unknown==="result"?.015:0);
+    if(!best||score<best.score)best={op,unknown,rate,score};
   }
-  state.level=best.level;
-  state.mc={success:best.rate,sims:sims*ops.length*unknowns.length*levels.length,level:best.level,target:`${best.op} · ${labelUnknown(best.unknown)}`};
-  return best;
+  state.level=state.grade;state.mc={success:best.rate,sims:sims*ops.length*unknowns.length,level:challengeLabel(),target:`${operationLabel(best.op)} · ${labelUnknown(best.unknown)}`};return best;
 }
-function makeNumbers(op,level){
-  let a,b;
-  if(level===1){a=rand(5,35);b=rand(2,18)}
-  else if(level===2){a=rand(20,90);b=rand(10,55)}
-  else{a=rand(45,180);b=rand(20,120)}
-  if(op==="subtract"&&b>a)[a,b]=[b,a];
-  return {a,b};
+function makeNumbers(op){
+  const g=state.grade,c=state.challenge;
+  if(op==="multiply"||op==="divide"){
+    const cap=g===3?(c==="foundation"?5:c==="stretch"?12:10):g===4?(c==="foundation"?9:c==="stretch"?25:12):(c==="foundation"?12:c==="stretch"?50:20);
+    let x=rand(2,cap),y=rand(2,cap);return op==="divide"?{a:x*y,b:y}:{a:x,b:y};
+  }
+  const max=GRADE_CONFIG[g].max[c],min=g===1?1:Math.max(2,Math.floor(max*.08));let a=rand(min,max),b=rand(1,Math.max(2,Math.floor(max*.55)));
+  if(op==="subtract"&&b>a)[a,b]=[b,a];return {a,b};
 }
 function storyFrom(op,unknown,a,b,character,object){
   let answer,start,change,result,text,equation,action;
@@ -437,6 +430,16 @@ function storyFrom(op,unknown,a,b,character,object){
     if(unknown==="result"){answer=result;text=`${character.name} had ${start} ${object.name}. ${character.name} got ${change} more. How many ${object.name} does ${character.name} have now?`;equation=`${start} + ${change} = ?`;action="more were added";}
     else if(unknown==="change"){answer=change;text=`${character.name} had ${start} ${object.name}. Then ${character.name} had ${result} ${object.name}. How many more ${object.name} did ${character.name} get?`;equation=`${start} + ? = ${result}`;action="the amount increased";}
     else{answer=start;text=`${character.name} had some ${object.name}. ${character.name} got ${change} more and then had ${result}. How many ${object.name} did ${character.name} have at the start?`;equation=`? + ${change} = ${result}`;action="the starting amount is unknown";}
+  }else if(op==="multiply"){
+    start=a;change=b;result=a*b;
+    if(unknown==="result"){answer=result;text=`${character.name} arranged ${start} equal groups with ${change} ${object.name} in each group. How many ${object.name} are there altogether?`;equation=`${start} × ${change} = ?`;action="equal groups were combined";}
+    else if(unknown==="change"){answer=change;text=`${character.name} arranged ${result} ${object.name} equally into ${start} groups. How many ${object.name} are in each group?`;equation=`${start} × ? = ${result}`;action="the size of each group is unknown";}
+    else{answer=start;text=`${character.name} has ${result} ${object.name} with ${change} in each equal group. How many groups are there?`;equation=`? × ${change} = ${result}`;action="the number of groups is unknown";}
+  }else if(op==="divide"){
+    start=a;change=b;result=a/b;
+    if(unknown==="result"){answer=result;text=`${character.name} shared ${start} ${object.name} equally among ${change} groups. How many ${object.name} are in each group?`;equation=`${start} ÷ ${change} = ?`;action="a total was shared equally";}
+    else if(unknown==="change"){answer=change;text=`${character.name} shared ${start} ${object.name} so each group received ${result}. How many groups were made?`;equation=`${start} ÷ ? = ${result}`;action="the number of groups is unknown";}
+    else{answer=start;text=`${character.name} made ${change} equal groups with ${result} ${object.name} in each. How many were there to start?`;equation=`? ÷ ${change} = ${result}`;action="the starting total is unknown";}
   }else{
     start=a;change=b;result=a-b;
     if(unknown==="result"){answer=result;text=`${character.name} had ${start} ${object.name}. ${character.name} gave away ${change}. How many ${object.name} are left?`;equation=`${start} − ${change} = ?`;action="some were taken away";}
@@ -447,25 +450,25 @@ function storyFrom(op,unknown,a,b,character,object){
 }
 function newProblem(){
   const selected=selectAdaptive();
-  const {a,b}=makeNumbers(selected.op,selected.level);
-  state.current=Object.assign(storyFrom(selected.op,selected.unknown,a,b,pick(CHARACTERS),pick(OBJECTS)),{level:selected.level});
+  const {a,b}=makeNumbers(selected.op);
+  state.current=Object.assign(storyFrom(selected.op,selected.unknown,a,b,pick(CHARACTERS),pick(OBJECTS)),{level:state.grade,challenge:state.challenge});
   $("answerInput").value="";feedback("");renderProblem();renderMonte();renderLanguage();renderStats();
-  $("mentorText").textContent="Read the whole story first. Then decide what quantity is unknown.";
+  $("mentorText").textContent=gradeMentor();$("eirenGuideText").textContent=gradeMentor();
   if(state.sound)speak(state.current.text);
   saveState();
 }
 function renderProblem(){
   const p=state.current;if(!p)return;
   $("storyText").textContent=p.text;$("equation").textContent=p.equation;
-  $("levelChip").textContent=`Level ${p.level||state.level}`;$("unknownChip").textContent=labelUnknown(p.unknown);
-  $("currentFocus").textContent=`${p.op==="add"?"Addition":"Subtraction"} · ${labelUnknown(p.unknown)}`;
+  $("levelChip").textContent=`Grade ${state.grade} · ${challengeLabel()}`;$("unknownChip").textContent=labelUnknown(p.unknown);
+  $("currentFocus").textContent=`${operationLabel(p.op)} · ${labelUnknown(p.unknown)}`;
   renderScene(p);
 }
 function objectLine(emoji,count){const visible=Math.min(count,12);return emoji.repeat(visible)+(count>12?` × ${count}`:"")}
 function renderScene(p){
   const scene=$("scene");scene.innerHTML="";
   const first=document.createElement("div");first.className="scene-group";first.innerHTML=`<div class="scene-character">${p.character.emoji}</div><div class="scene-objects">${objectLine(p.object.emoji,p.start)}</div><div class="scene-caption">${p.unknown==="start"?"Starting amount is unknown":p.start+" "+p.object.name}</div>`;
-  const arrow=document.createElement("div");arrow.className="scene-arrow";arrow.textContent=p.op==="add"?"➕":"➖";
+  const arrow=document.createElement("div");arrow.className="scene-arrow";arrow.textContent=({add:"➕",subtract:"➖",multiply:"✖️",divide:"➗"})[p.op]||"➡️";
   const second=document.createElement("div");second.className="scene-group";second.innerHTML=`<div class="scene-objects">${objectLine(p.object.emoji,p.change)}</div><div class="scene-caption">${p.unknown==="change"?"Change is unknown":p.change+" "+p.object.name}</div>`;
   const arrow2=document.createElement("div");arrow2.className="scene-arrow";arrow2.textContent="➡️";
   const third=document.createElement("div");third.className="scene-group";third.innerHTML=`<div class="scene-objects">${objectLine(p.object.emoji,p.result)}</div><div class="scene-caption">${p.unknown==="result"?"Result is unknown":p.result+" "+p.object.name}</div>`;
@@ -482,7 +485,7 @@ function checkAnswer(){
   const raw=$("answerInput").value.trim(),n=Number(raw);
   if(!raw||!Number.isFinite(n))return feedback("Enter your answer first.","try");
   const correct=n===p.answer;
-  updateSkill(p.op==="add"?"add":"sub",correct);updateSkill("language",correct);if(p.unknown!=="result")updateSkill("unknown",correct);
+  updateSkill(p.op==="add"?"add":p.op==="subtract"?"sub":"unknown",correct);updateSkill("language",correct);if(p.unknown!=="result")updateSkill("unknown",correct);
   state.recent.push(correct?1:0);state.recent=state.recent.slice(-10);
   if(correct){
     state.correct++;state.streak++;state.best=Math.max(state.best,state.streak);state.mastery=clamp(state.mastery+5,0,100);
@@ -534,116 +537,21 @@ function renderMonte(){
   $("mcLevel").textContent=state.mc.level;$("mcTarget").textContent=state.mc.target;
 }
 function renderStats(){
-  $("correctStat").textContent=state.correct;$("createdStat").textContent=state.created;$("streakStat").textContent=state.streak;$("levelStat").textContent=state.level;
+  $("correctStat").textContent=state.correct;$("createdStat").textContent=state.created;$("streakStat").textContent=state.streak;$("levelStat").textContent=state.grade;
   $("masteryFill").style.width=`${state.mastery}%`;
   $("masteryText").textContent=state.mastery>=85?"Strong mastery — flexible story reasoning.":state.mastery>=65?"Growing strong — mixed structures and unknowns.":state.mastery>=45?"Building confidence — keep drawing and explaining.":"Foundation practice — read, picture, and solve slowly.";
   const icon=k=>state.skills[k].confidence>=.82?"🌳":state.skills[k].confidence>=.68?"🌼":state.skills[k].confidence>=.54?"🌿":"🌱";
   $("skillAdd").textContent=icon("add");$("skillSub").textContent=icon("sub");$("skillUnknown").textContent=icon("unknown");$("skillLanguage").textContent=icon("language");
   $("history").innerHTML=state.history.length?state.history.map(x=>`<div class="history-item">${x}</div>`).join(""):`<div class="history-item">Solved and created story work will appear here.</div>`;
 }
-/* Friendly voice architecture adapted from the proven Artist Studio pattern. */
-let voices=[];
-let speechToken=0;
-let lastSpokenText="";
-
-const VOICE_FRIENDS={
-  sunny:{
-    name:"Sunny",emoji:"☀️",rate:.88,pitch:1.05,
-    preferred:/samantha|aria|jenny|zira|ava|victoria|karen|serena|moira|allison|susan/i,
-    greeting:"Hi! Sunny is ready to read this story with you."
-  },
-  sage:{
-    name:"Story Sage",emoji:"🦉",rate:.82,pitch:1.0,
-    preferred:/samantha|serena|moira|ava|aria|allison|daniel|alex/i,
-    greeting:"Hello, reader. Story Sage is ready to help you think through the story."
-  },
-  bloom:{
-    name:"Bloom",emoji:"🌼",rate:.84,pitch:1.08,
-    preferred:/aria|jenny|ava|samantha|victoria|karen|serena|zira/i,
-    greeting:"Hello! Bloom is ready to read gently with you."
-  },
-  rainbow:{
-    name:"Rainbow Friend",emoji:"🌈",rate:.88,pitch:1.06,
-    preferred:/samantha|aria|jenny|ava|karen|moira|serena|victoria|zira/i,
-    greeting:"Hi, math storyteller! Rainbow Friend is ready."
-  }
-};
-const VOICE_SPEEDS={slow:.88,normal:1,lively:1.08};
-
-function refreshVoices(){
-  if(!("speechSynthesis" in window)){
-    $("voiceStatus").textContent="Read-aloud is not available in this browser.";
-    return;
-  }
-  voices=speechSynthesis.getVoices()||[];
-  const friend=VOICE_FRIENDS[state.voiceFriend]||VOICE_FRIENDS.sunny;
-  $("voiceStatus").textContent=voices.length
-    ?`${friend.emoji} ${friend.name} is ready.`
-    :"Loading a friendly voice…";
-}
-
-function chooseFriendlyVoice(friendKey){
-  if(!voices.length)refreshVoices();
-  const friend=VOICE_FRIENDS[friendKey]||VOICE_FRIENDS.sunny;
-  const english=voices.filter(v=>/^en([-_]|$)/i.test(v.lang||""));
-  const pool=english.length?english:voices;
-
-  /* Explicitly reject common novelty/effect names. */
-  const safePool=pool.filter(v=>!/whisper|bells|boing|bubbles|cellos|organ|trinoids|zarvox|wobble|jester|novelty|robot/i.test(v.name||""));
-  const usable=safePool.length?safePool:pool;
-
-  return usable.find(v=>friend.preferred.test(v.name||""))
-    ||usable.find(v=>/natural|enhanced|premium/i.test(v.name||""))
-    ||usable[0]
-    ||null;
-}
-
-function stopVoice(message){
-  speechToken++;
-  if("speechSynthesis" in window)speechSynthesis.cancel();
-  if($("voiceStatus"))$("voiceStatus").textContent=message||"Voice stopped.";
-}
-
-function speak(text,options){
-  options=options||{};
-  if(!state.sound||!("speechSynthesis" in window))return;
-  text=String(text||"").trim();
-  if(!text)return;
-
-  stopVoice("");
-  lastSpokenText=text;
-  const token=++speechToken;
-  const friend=VOICE_FRIENDS[state.voiceFriend]||VOICE_FRIENDS.sunny;
-  const message=options.preview ? friend.greeting : text;
-
-  const utterance=new SpeechSynthesisUtterance(message);
-  const voice=chooseFriendlyVoice(state.voiceFriend);
-  if(voice)utterance.voice=voice;
-  utterance.lang=(voice&&voice.lang)||"en-US";
-  utterance.rate=Math.max(.65,Math.min(1.08,friend.rate*(VOICE_SPEEDS[state.voiceSpeed]||1)));
-  utterance.pitch=friend.pitch;
-  utterance.volume=1;
-
-  utterance.onstart=function(){
-    if($("voiceStatus"))$("voiceStatus").textContent=`${friend.emoji} ${friend.name} is reading.`;
-  };
-  utterance.onend=function(){
-    if(token!==speechToken)return;
-    if($("voiceStatus"))$("voiceStatus").textContent=`${friend.emoji} ${friend.name} is ready.`;
-  };
-  utterance.onerror=function(){
-    if(token!==speechToken)return;
-    if($("voiceStatus"))$("voiceStatus").textContent="The voice paused. You can try again.";
-  };
-
-  speechSynthesis.speak(utterance);
-}
-
-function repeatVoice(){
-  if(lastSpokenText)speak(lastSpokenText);
-  else if(state.current)speak(state.current.text);
-}
-
+/* Eiren — sole Story & Reasoning Mentor voice. */
+let voices=[],speechToken=0,lastSpokenText="";
+const VOICE_SPEEDS={slow:.88,normal:1,lively:1.07};
+function refreshVoices(){if(!("speechSynthesis" in window)){ $("voiceStatus").textContent="Read-aloud is unavailable.";return}voices=speechSynthesis.getVoices()||[];$("voiceStatus").textContent=voices.length?"🌸 Eiren is ready.":"Loading Eiren's voice…";}
+function chooseEirenVoice(){if(!voices.length)refreshVoices();const en=voices.filter(v=>/^en([-_]|$)/i.test(v.lang||""));const pool=(en.length?en:voices).filter(v=>!/whisper|bells|boing|bubbles|cellos|organ|zarvox|wobble|jester|novelty|robot/i.test(v.name||""));return pool.find(v=>/samantha|aria|jenny|ava|victoria|karen|serena|moira|allison|susan|natural|enhanced|premium/i.test(v.name||""))||pool[0]||null}
+function stopVoice(message){speechToken++;if("speechSynthesis" in window)speechSynthesis.cancel();if($("voiceStatus"))$("voiceStatus").textContent=message||"🌸 Eiren is ready."}
+function speak(text,options={}){if(!state.sound||!("speechSynthesis" in window))return;text=String(text||"").trim();const message=options.preview?`Hello. I'm Eiren. ${gradeMentor()}`:text;if(!message)return;stopVoice("");lastSpokenText=message;const token=++speechToken,u=new SpeechSynthesisUtterance(message),voice=chooseEirenVoice();if(voice)u.voice=voice;u.lang=(voice&&voice.lang)||"en-US";u.rate=Math.max(.68,Math.min(1.06,.84*(VOICE_SPEEDS[state.voiceSpeed]||1)));u.pitch=1.04;u.onstart=()=>{$("voiceStatus").textContent="🌸 Eiren is reading."};u.onend=()=>{if(token===speechToken)$("voiceStatus").textContent="🌸 Eiren is ready."};speechSynthesis.speak(u)}
+function repeatVoice(){if(lastSpokenText)speak(lastSpokenText);else if(state.current)speak(state.current.text)}
 /* Creator */
 function populateCreator(){
   $("creatorCharacter").innerHTML=CHARACTERS.map(c=>`<option value="${c.name}">${c.emoji} ${c.name}</option>`).join("");
@@ -742,6 +650,14 @@ $("sentenceFrameBtn").onclick=()=>{
 $("vocabBtn").onclick=()=>{$("languageFeedback").textContent="Math words: start · change · result · total · difference · more · fewer · left · altogether · unknown."};
 
 /* UI handlers */
+function syncGradeUI(){
+  $("gradeSelect").value=String(state.grade);$("challengeSelect").value=state.challenge;
+  [...$("operationSelect").options].forEach(o=>{if(["multiply","divide"].includes(o.value))o.disabled=state.grade<3});
+  if(state.grade<3&&["multiply","divide"].includes(state.operation))state.operation="adaptive";
+  $("operationSelect").value=state.operation;$("mentorText").textContent=gradeMentor();$("eirenGuideText").textContent=gradeMentor();
+}
+$("gradeSelect").onchange=e=>{state.grade=+e.target.value;state.level=state.grade;syncGradeUI();saveState("Grade saved");newProblem()};
+$("challengeSelect").onchange=e=>{state.challenge=e.target.value;saveState("Challenge saved");newProblem()};
 $("modeSelect").onchange=e=>{state.mode=e.target.value;saveState();if(state.mode!=="create")newProblem()};
 $("operationSelect").onchange=e=>{state.operation=e.target.value;newProblem()};
 $("unknownSelect").onchange=e=>{state.unknown=e.target.value;newProblem()};
@@ -762,12 +678,6 @@ $("soundBtn").onclick=function(){
   if(!state.sound)stopVoice("Read-aloud is off.");
   saveState();
 };
-$("voiceFriend").onchange=function(e){
-  state.voiceFriend=e.target.value;
-  refreshVoices();
-  saveState("Friendly guide saved");
-  if(state.sound)speak("",{preview:true});
-};
 $("voiceSpeed").onchange=function(e){
   state.voiceSpeed=e.target.value;
   saveState("Reading speed saved");
@@ -784,15 +694,14 @@ $("repeatVoiceBtn").onclick=repeatVoice;
 $("stopVoiceBtn").onclick=function(){stopVoice("Voice stopped.");};
 $("resetBtn").onclick=()=>{
   if(confirm("Reset all Story Problem Studio progress and the saved drawing on this device?")){
-    localStorage.removeItem(STORAGE_KEY);localStorage.removeItem(CANVAS_KEY);location.reload();
+    localStorage.removeItem(STORAGE_KEY);localStorage.removeItem(LEGACY_STORAGE_KEY);localStorage.removeItem(CANVAS_KEY);location.reload();
   }
 };
 
 /* Startup */
-populateCreator();
+populateCreator();syncGradeUI();
 $("modeSelect").value=state.mode;$("operationSelect").value=state.operation;$("unknownSelect").value=state.unknown;
 $("soundBtn").textContent=state.sound?"🔊 Read Aloud On":"🔇 Read Aloud Off";
-$("voiceFriend").value=VOICE_FRIENDS[state.voiceFriend]?state.voiceFriend:"sunny";
 $("voiceSpeed").value=VOICE_SPEEDS[state.voiceSpeed]?state.voiceSpeed:"normal";
 if("speechSynthesis" in window){
   refreshVoices();
