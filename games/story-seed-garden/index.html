@@ -45,6 +45,12 @@ canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
 .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.sample{border:1px solid var(--line);border-radius:12px;background:#fff;padding:10px}.sample img{width:100%;border-radius:8px}.badge{display:inline-block;padding:4px 8px;border-radius:99px;background:var(--leaf);font-size:.73rem;margin:2px}
 @media(max-width:1000px){.grid{grid-template-columns:1fr}.plantScene{grid-template-columns:1fr}.seqGrid{grid-template-columns:repeat(2,1fr)}.writingGrid{grid-template-columns:1fr}}@media(max-width:620px){.seqGrid,.storybook,.portfolio{grid-template-columns:1fr}.progress{grid-template-columns:repeat(3,1fr)}}
 @media print{body{background:#fff}.hero,.tabs,.no-print,.card:first-child{display:none!important}.panel{display:none!important}#bookPanel{display:block!important}.grid{display:block}.card{box-shadow:none;border:0}.storybook{display:block}.pageCard{break-inside:avoid;margin:12px 0}}
+
+.eirenBand{margin:14px 0;background:linear-gradient(145deg,#fff,#fbfff9);border:2px solid #dcebdc;border-radius:18px;padding:13px 16px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;box-shadow:var(--shadow)}
+.eirenOrb{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid #d9e9dd;font-size:1.8rem}
+.eirenBand strong{font-family:Georgia,serif;color:var(--deep)}.eirenBand p{margin:4px 0;color:var(--muted);font-size:.84rem}.eirenTools{display:flex;gap:7px;flex-wrap:wrap}.eirenTools button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px}
+.storyBox{padding:12px;border:1px solid var(--line);border-radius:12px;background:#fbfefd;line-height:1.55}.feedback{margin-top:10px;font-weight:700;color:var(--deep)}
+@media(max-width:720px){.eirenBand{grid-template-columns:auto 1fr}.eirenTools{grid-column:1/-1;justify-content:center}}
 </style>
 </head>
 <body><div class="app">
@@ -56,7 +62,9 @@ canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
 <select id="grade"><option>Kindergarten</option><option>Grade 1</option><option selected>Grade 2</option><option>Grade 3</option><option>Grade 4</option><option>Grade 5</option></select>
 <input id="name" placeholder="Learner name">
 <button id="saveProfile">Save Learner</button>
-<button id="guide">🔊 Friendly Guide</button>
+<button id="guide">🌸 Meet Eiren</button>
+<button id="eirenRead">🔊 Eiren, Guide Me</button>
+<button id="eirenStop">■ Stop</button>
 </div>
 <div class="tabs">
 <button class="active" data-tab="lab">🌱 Plant Lab</button>
@@ -68,6 +76,12 @@ canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
 <button data-tab="portfolio">📁 Portfolio</button>
 </div>
 </header>
+<section class="eirenBand no-print">
+  <div class="eirenOrb">🌸</div>
+  <div><strong>Eiren · Science, Observation &amp; Story Mentor</strong>
+  <p id="eirenStatus">Plant a question. Grow evidence. Tell the story of what you discover.</p></div>
+  <div class="eirenTools"><button id="eirenPrompt">🌱 What should I notice?</button><button id="eirenExplain">🔬 Help me explain</button></div>
+</section>
 
 <section class="panel active" id="labPanel">
 <div class="grid">
@@ -133,7 +147,7 @@ canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
 
 <script>
 (()=>{"use strict";
-const $=id=>document.getElementById(id),KEY="khaemenes_story_seed_garden_k5_v1";
+const $=id=>document.getElementById(id),KEY="khaemenes_story_seed_garden_k5_v2";
 const gradeInfo={
 "Kindergarten":{focus:"Seed, root, stem, leaf; plant needs; picture sequencing and first/next/last oral retelling.",seq:"Put the plant pictures in order. Tell what happened first, next, and last.",obs:"Tell or draw what you notice. What changed?",write:["I planted a seed.","A root grew.","The stem grew up.","Leaves opened."]},
 "Grade 1":{focus:"Plant parts/functions, water/light, observable change, beginning/middle/end, and simple sentence retelling.",seq:"Arrange beginning, middle, and end. Then retell the plant story in complete sentences.",obs:"What happened to the plant? Use before and after words.",write:["First, I planted...","Next, the root...","Then, the stem...","Finally, the leaves..."]},
@@ -150,21 +164,60 @@ const events=[
 {id:"flower",emoji:"🌻",k:"Mature Plant",text:"The plant became larger and more developed."}
 ];
 let state={profile:{name:"",grade:"Grade 2"},sim:{day:0,water:65,light:70,type:"Bean",records:[]},observation:{prediction:"",observation:"",evidence:"",changed:""},writing:[],portfolio:[]};
-try{Object.assign(state,JSON.parse(localStorage.getItem(KEY)||"{}"))}catch{}
+try{Object.assign(state,JSON.parse(localStorage.getItem(KEY)||localStorage.getItem("khaemenes_story_seed_garden_k5_v1")||"{}"))}catch{}
 $("name").value=state.profile.name||"";$("grade").value=state.profile.grade||"Grade 2";
 function save(){localStorage.setItem(KEY,JSON.stringify(state))}
 function esc(x){return String(x||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function speak(t){if(!("speechSynthesis"in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);const vs=speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang||"")&&!/robot|novelty|whisper/i.test(v.name||""));u.voice=vs.find(v=>/samantha|aria|jenny|ava|victoria|karen/i.test(v.name||""))||vs[0]||null;u.rate=.86;u.pitch=1.03;speechSynthesis.speak(u)}
-$("guide").onclick=()=>speak("Welcome to Story Seed Garden. Plant a seed, care for it, observe what changes, put the story in order, and explain what you learned.");
+const EIREN_PUBLIC_ADAPTER="https://artist1970.github.io/Eiren.github.io/eiren-adapter.js";
+const EIREN_VOICE_PROFILE={pitch:1.06,rate:.84,preferred:/samantha|aria|jenny|zira|ava|victoria|karen|moira|serena|female|natural|enhanced|premium/i};
+let eirenBoundaryReady=false,eirenSpeechToken=0,lastEirenText="";
+async function connectEirenBoundary(){
+  try{
+    const mod=await import(EIREN_PUBLIC_ADAPTER);
+    if(mod?.EirenAdapter?.prepare){
+      const p=mod.EirenAdapter.prepare({mode:"education",message:"K–5 plant science, observation, evidence, sequencing, writing, and scientific storytelling."});
+      eirenBoundaryReady=p?.specialist==="eiren";
+    }
+  }catch(_err){eirenBoundaryReady=false}
+  $("eirenStatus").textContent=eirenBoundaryReady?"🌸 Eiren’s public learning boundary is connected.":"🌸 Eiren is ready with gentle on-device narration.";
+}
+function chooseEirenVoice(){const all=speechSynthesis.getVoices()||[],en=all.filter(v=>/^en/i.test(v.lang||"")),pool=en.length?en:all;return pool.find(v=>EIREN_VOICE_PROFILE.preferred.test(v.name))||pool[0]||null}
+function speak(t){
+ if(!t||!("speechSynthesis"in window))return;eirenSpeechToken++;speechSynthesis.cancel();lastEirenText=t;
+ const token=eirenSpeechToken,u=new SpeechSynthesisUtterance(t),v=chooseEirenVoice();if(v)u.voice=v;u.lang=(v&&v.lang)||"en-US";u.rate=EIREN_VOICE_PROFILE.rate;u.pitch=EIREN_VOICE_PROFILE.pitch;
+ u.onstart=()=>$("eirenStatus").textContent="🌸 Eiren is speaking…";u.onend=()=>{if(token===eirenSpeechToken)$("eirenStatus").textContent="What did you notice? 🌱"};speechSynthesis.speak(u)
+}
+function stopEiren(){eirenSpeechToken++;if("speechSynthesis"in window)speechSynthesis.cancel();$("eirenStatus").textContent="Eiren paused."}
+function gradeEiren(){
+ const map={
+ "Kindergarten":"Look closely. What do you see? We can name the seed, root, stem, and leaves, then tell what happened first, next, and last.",
+ "Grade 1":"Notice the plant parts and what changes. Use before, next, then, and finally to tell the plant story.",
+ "Grade 2":"Make a prediction, then compare it with what actually happened. Point to one observation or measurement as evidence.",
+ "Grade 3":"Look across several days. Describe a pattern in height, leaves, water, or light, then explain what the pattern may mean.",
+ "Grade 4":"Identify the variable you changed and the conditions you kept the same. Use repeated observations to support a careful conclusion.",
+ "Grade 5":"Make a claim, support it with data, consider another explanation, and identify a limitation of this simplified model."
+ };return map[$("grade").value]||map["Grade 2"]
+}
+$("guide").onclick=()=>speak(`Hello. I'm Eiren, your science and story mentor. ${gradeEiren()}`);
+$("eirenRead").onclick=()=>speak(gradeEiren());
+$("eirenStop").onclick=stopEiren;
+$("eirenPrompt").onclick=()=>speak(gradeEiren());
+$("eirenExplain").onclick=()=>{const rec=state.sim.records,last=rec[rec.length-1];const evidence=last?`Your latest record is Day ${last.day}, ${last.height} centimeters, and ${last.leaves} leaves.`:"You need several recorded days before making a strong evidence statement.";speak(`${gradeEiren()} ${evidence}`)};
+
 $("saveProfile").onclick=()=>{state.profile={name:$("name").value.trim(),grade:$("grade").value};save();renderGrade();renderBook()};$("grade").onchange=()=>{state.profile.grade=$("grade").value;save();renderGrade();renderBook()};
 document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-tab]").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");$(b.dataset.tab+"Panel").classList.add("active");if(b.dataset.tab==="write")setTimeout(()=>pad.resize(),20)});
 
-function renderGrade(){const g=gradeInfo[$("grade").value];$("gradeTitle").textContent=$("grade").value;$("gradeFocus").textContent=g.focus;$("sequenceInstruction").textContent=g.seq;$("observeInstruction").textContent=g.obs;$("writeInstruction").textContent=g.focus;$("dataInstruction").textContent=+$("grade").value.replace(/\D/g,"")>=4?"Use the data to compare conditions and support a claim.":"Look for how the plant changes across days.";$("writePrompt").innerHTML=g.write.map(x=>`<option>${esc(x)}</option>`).join("");$("writingQuestion").textContent=g.write[0];renderWritingPage()}
+function renderGrade(){const g=gradeInfo[$("grade").value];if($("eirenStatus"))$("eirenStatus").textContent=gradeEiren();$("gradeTitle").textContent=$("grade").value;$("gradeFocus").textContent=g.focus;$("sequenceInstruction").textContent=g.seq;$("observeInstruction").textContent=g.obs;$("writeInstruction").textContent=g.focus;$("dataInstruction").textContent=+$("grade").value.replace(/\D/g,"")>=4?"Use the data to compare conditions and support a claim.":"Look for how the plant changes across days.";$("writePrompt").innerHTML=g.write.map(x=>`<option>${esc(x)}</option>`).join("");$("writingQuestion").textContent=g.write[0];renderWritingPage()}
 
-function quality(){const w=+$("water").value,l=+$("light").value;const waterFit=1-Math.abs(w-65)/100,lightFit=1-Math.abs(l-70)/100;return Math.max(.05,(waterFit+lightFit)/2)}
-function simValues(day){const q=quality(),g=Math.max(0,day-2),height=+(Math.min(24,g*2.1*q)).toFixed(1),leaves=day<5?0:Math.min(8,Math.floor((day-4)*q*1.1));return{height,leaves,q}}
+const PLANT_MODELS={
+ Bean:{water:65,light:70,rate:2.1,max:24,leafStart:5},
+ Sunflower:{water:62,light:82,rate:2.5,max:30,leafStart:5},
+ Radish:{water:70,light:68,rate:1.55,max:18,leafStart:4}
+};
+function quality(){const m=PLANT_MODELS[$("plantType").value]||PLANT_MODELS.Bean,w=+$("water").value,l=+$("light").value;const waterFit=Math.max(0,1-Math.abs(w-m.water)/75),lightFit=Math.max(0,1-Math.abs(l-m.light)/75);return Math.max(.05,(waterFit+lightFit)/2)}
+function simValues(day){const m=PLANT_MODELS[$("plantType").value]||PLANT_MODELS.Bean,q=quality(),g=Math.max(0,day-2),height=+(Math.min(m.max,g*m.rate*q)).toFixed(1),leaves=day<m.leafStart?0:Math.min(8,Math.floor((day-(m.leafStart-1))*q*1.1));return{height,leaves,q}}
 function renderPlant(){const day=+$("days").value,{height,leaves,q}=simValues(day);$("daysVal").textContent=`Day ${day}`;$("waterVal").textContent=$("water").value+"%";$("lightVal").textContent=$("light").value+"%";$("root").style.height=(day>=2?Math.min(120,40+day*6):0)+"px";$("stem").style.height=(day>=4?Math.min(165,25+height*5):0)+"px";$("leafL").style.opacity=leaves>=1?1:0;$("leafR").style.opacity=leaves>=2?1:0;$("flower").style.opacity=day>=11&&q>.55?1:0;$("seed").style.opacity=day>=5?.35:1;let text=day<2?"The seed is resting in the soil.":day<4?"A root is growing downward.":day<6?"A stem is growing upward.":day<11?"The stem is taller and leaves are opening.":"The plant is more mature.";if(q<.35)text+=" Growth is limited because the simulated conditions are far from the model's preferred range.";$("stageText").textContent=text;renderData();renderChart();renderBook()}
-["water","light","days"].forEach(id=>$(id).oninput=()=>{state.sim[id]=+$(id).value;save();renderPlant()});$("plantType").onchange=()=>{state.sim.type=$("plantType").value;save()};
+["water","light","days"].forEach(id=>$(id).oninput=()=>{state.sim[id]=+$(id).value;save();renderPlant()});$("plantType").onchange=()=>{state.sim.type=$("plantType").value;save();renderPlant()};
 $("advanceDay").onclick=()=>{const d=Math.min(14,+$("days").value+1);$("days").value=d;state.sim.day=d;const v=simValues(d);state.sim.records=state.sim.records.filter(x=>x.day!==d);state.sim.records.push({day:d,water:+$("water").value,light:+$("light").value,height:v.height,leaves:v.leaves});state.sim.records.sort((a,b)=>a.day-b.day);save();renderPlant()};$("resetPlant").onclick=()=>{$("days").value=0;state.sim.records=[];save();renderPlant()};
 function renderData(){$("dataBody").innerHTML=state.sim.records.length?state.sim.records.map(r=>`<tr><td>${r.day}</td><td>${r.water}%</td><td>${r.light}%</td><td>${r.height} cm</td><td>${r.leaves}</td></tr>`).join(""):`<tr><td colspan="5">Advance the plant to record observations.</td></tr>`}
 function renderChart(){const rec=state.sim.records;$("chart").innerHTML=rec.length?rec.map(r=>`<div class="bar" style="height:${Math.max(4,r.height/24*100)}%"><span>${r.height}</span><label>D${r.day}</label></div>`).join(""):`<div class="note">No growth data yet.</div>`;$("dataExplanation").textContent=rec.length>2?`Across ${rec.length} recorded days, the latest modeled height is ${rec[rec.length-1].height} cm. Look for changes in the pattern rather than judging one day alone.`:"Record several days to look for a pattern."}
@@ -196,10 +249,10 @@ function renderBook(){const g=$("grade").value,name=$("name").value||"Learner";$
 $("printBook").onclick=()=>window.print();$("saveBook").onclick=()=>{state.portfolio.unshift({id:Date.now(),type:"storybook",date:new Date().toLocaleDateString(),grade:$("grade").value,title:"My Plant Storybook",text:"Saved storybook snapshot"});state.portfolio=state.portfolio.slice(0,50);save();renderPortfolio()};
 
 function renderPortfolio(){$("portfolio").innerHTML=state.portfolio.length?state.portfolio.map(x=>`<div class="sample">${x.image?`<img src="${x.image}" alt="">`:`<div style="font-size:54px;text-align:center">${x.type==="storybook"?"📖":"🔎"}</div>`}<strong>${esc(x.title)}</strong><p class="note">${esc(x.text||"")}</p><div><span class="badge">${esc(x.grade)}</span><span class="badge">${esc(x.date)}</span></div></div>`).join(""):`<p class="note">No saved portfolio evidence yet.</p>`}
-$("exportPortfolio").onclick=()=>{const b=new Blob([JSON.stringify({schema:"khaemenes-story-seed-garden-v1",profile:state.profile,simulation:state.sim,observation:state.observation,writing:state.writing,portfolio:state.portfolio},null,2)],{type:"application/json"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="story-seed-garden-portfolio.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)};$("wipePortfolio").onclick=()=>{if(confirm("Clear saved Story Seed portfolio items?")){state.portfolio=[];save();renderPortfolio()}};
+$("exportPortfolio").onclick=()=>{const b=new Blob([JSON.stringify({schema:"khaemenes-story-seed-garden-v2",profile:state.profile,simulation:state.sim,observation:state.observation,writing:state.writing,portfolio:state.portfolio},null,2)],{type:"application/json"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="story-seed-garden-portfolio.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),500)};$("wipePortfolio").onclick=()=>{if(confirm("Clear saved Story Seed portfolio items?")){state.portfolio=[];save();renderPortfolio()}};
 
 $("water").value=state.sim.water??65;$("light").value=state.sim.light??70;$("days").value=state.sim.day??0;$("plantType").value=state.sim.type||"Bean";
-renderGrade();renderPlant();newSequence();renderWritingPage();renderBook();renderPortfolio();
+renderGrade();renderPlant();newSequence();renderWritingPage();renderBook();renderPortfolio();connectEirenBoundary();
 })();
 </script>
 <script src="/assets/vnv-beta-link.js" defer></script>
