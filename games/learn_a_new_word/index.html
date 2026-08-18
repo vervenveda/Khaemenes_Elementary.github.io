@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Learn a New Word — Enchanted Word Garden</title>
+<title>Enchanted Word Garden — Grades 1–5 with Eiren</title>
 <style>
   :root{
     --bg:#fdf5e6;
@@ -505,10 +505,15 @@
     }
   }
 
+
+.elementaryBar{margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.elementaryBar strong{display:block;color:#5b3e82}.elementaryBar span{display:block;color:var(--muted);font-size:.8rem}.elementaryBar select{padding:8px;border-radius:10px;border:1px solid #d9cfea}.gradeProgress{padding:7px 11px;border-radius:999px;background:#f1eaff;color:#60458a;font-weight:800;font-size:.8rem}
+.eirenCard{margin:0 0 14px;padding:14px 16px;border:2px solid #e5d9ef;border-radius:22px;background:linear-gradient(145deg,#fff,#fbf7ff);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;box-shadow:0 12px 30px rgba(59,39,79,.08)}.eirenOrb{width:55px;height:55px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid #e5d9ef;font-size:1.9rem}.eirenCard strong{font-family:Georgia,serif;color:#5b3e82}.eirenCard p{margin:3px 0;color:var(--muted);font-size:.88rem}.eirenActions{display:flex;gap:6px;flex-wrap:wrap}
+.writerBox{margin-top:14px;padding:14px;border:2px solid #dcebdd;border-radius:18px;background:#f7fff8}.writerBox h3{margin:0 0 5px;color:#477658}.writerBox textarea{width:100%;min-height:85px;resize:vertical;padding:10px;border:1px solid #cdded0;border-radius:12px;box-sizing:border-box}.writerRow{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:7px}
+@media(max-width:700px){.eirenCard{grid-template-columns:auto 1fr}.eirenActions{grid-column:1/-1;justify-content:center}}
 </style>
 </head>
 <body>
-<div class="app" role="application" aria-label="Learn a New Word Enchanted Word Garden">
+<div class="app" role="application" aria-label="Enchanted Word Garden for Grades 1 through 5 with Eiren">
   <header>
     <div class="logo">
       <div class="logo-inner" aria-hidden="true">
@@ -517,12 +522,22 @@
       </div>
     </div>
     <div>
-      <h1>Learn a New Word <br> Enchanted Word Garden</h1>
-      <p class="lead">Discover one beautiful, curious, and imaginative word at a time.</p>
+      <h1>Enchanted Word Garden</h1>
+      <p class="lead">Grades 1–5 · Discover, collect, use, and grow powerful new words with Eiren.</p>
     </div>
   </header>
 
-  <main class="grid">
+  <section class="elementaryBar card">
+  <div><strong>Elementary Word Path</strong><span>Vocabulary grows with the reader.</span></div>
+  <label>Grade <select id="gradePicker"><option value="1">Grade 1</option><option value="2">Grade 2</option><option value="3">Grade 3</option><option value="4">Grade 4</option><option value="5">Grade 5</option></select></label>
+  <div class="gradeProgress" id="gradeProgress">Grade 1 word path</div>
+</section>
+<section class="eirenCard">
+  <div class="eirenOrb">🌸</div><div><strong>Eiren · Word Mentor</strong>
+  <p id="eirenStatus">A new word is a new tool for thinking, imagining, and writing.</p></div>
+  <div class="eirenActions"><button class="btn" id="eirenExplain">🌸 Eiren Explains</button><button class="btn" id="eirenChallenge">✏️ Writer Challenge</button></div>
+</section>
+<main class="grid">
     <!-- MAIN -->
     <section class="card" id="mainCard" aria-live="polite">
       <div class="word-top">
@@ -553,7 +568,13 @@
         <button class="btn" id="nextBtn">🎲 Surprise me</button>
       </div>
 
-      <hr style="margin:12px 0;border:none;border-top:1px solid rgba(148,163,184,0.4);" />
+      <div class="writerBox">
+  <h3>✏️ Use the Word</h3>
+  <p class="smallmuted" id="writerPrompt">Eiren will give you a grade-appropriate writing challenge.</p>
+  <textarea id="writerEntry" placeholder="Write your own sentence or idea here…"></textarea>
+  <div class="writerRow"><button class="btn small" id="readMine">🔊 Read My Sentence</button><button class="btn small" id="saveMine">🌱 Save My Sentence</button><span class="smallmuted" id="writerStatus"></span></div>
+</div>
+<hr style="margin:12px 0;border:none;border-top:1px solid rgba(148,163,184,0.4);" />
 
       <div>
         <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;">
@@ -591,21 +612,18 @@
       </div>
 
       <div class="side-section">
-        <h3>Voice</h3>
-        <div class="smallmuted">Choose a voice (if your browser has any):</div>
-        <select id="voicePicker" style="margin-top:4px;width:100%;padding:6px 8px;border-radius:10px;border:1px solid rgba(148,163,184,0.7);font-size:0.86rem;">
-          <option value="">(Use browser default)</option>
+        <h3>🌸 Eiren's Voice</h3>
+        <p class="smallmuted">Eiren is the reading and vocabulary mentor throughout the garden.</p>
+        <select id="voiceSpeed" style="width:100%;padding:8px;border-radius:10px;border:1px solid #d9cfea">
+          <option value=".78">Slow & clear</option><option value=".88" selected>Just right</option><option value=".98">Lively</option>
         </select>
-        <p class="smallmuted" style="margin-top:6px;">
-          Tap “Hear it” and read along with the child.
-        </p>
+        <button class="btn small" id="stopVoice" style="margin-top:7px">🔇 Stop</button>
       </div>
-
       <div class="side-section">
         <h3>Teacher note</h3>
         <p class="smallmuted">
-          This Kids Edition only uses gentle, imaginative words. To add or change
-          words, edit the <code>KIDS_MAGIC_WORDS</code> list inside this file.
+          This Grades 1–5 edition uses imaginative, literary, academic, and high-utility words. To add or change
+          words, edit the <code>ELEMENTARY_WORDS</code> list inside this file.
         </p>
       </div>
     </aside>
@@ -619,7 +637,7 @@
 
 <script>
 /* ==============================
-   LeArnA nEw WoRd — Kids Edition
+   LeArnA nEw WoRd — Elementary Grades 1–5 Edition
    For Khaemenes Academy
    - Single, hard-wired word bank
    - LocalStorage progress
@@ -628,11 +646,12 @@
 
 const STORAGE_KEY = 'learna_kids_progress_v1';
 
-/* 🌈 Kid-safe, imaginative word bank */
-const KIDS_MAGIC_WORDS = [
+/* 🌈 Elementary imaginative word bank */
+const ELEMENTARY_WORDS = [
   {
     id:"kids-001-petrichor",
     word:"petrichor",
+    grade:4,
     pronunciation:"PET-rih-kor",
     partOfSpeech:"noun",
     definition:"The gentle, earthy smell that rises from the ground after rain.",
@@ -645,6 +664,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-002-psithurism",
     word:"psithurism",
+    grade:5,
     pronunciation:"SITH-yuh-riz-um",
     partOfSpeech:"noun",
     definition:"The soft sound of wind whispering through trees and leaves.",
@@ -657,6 +677,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-003-susurrus",
     word:"susurrus",
+    grade:4,
     pronunciation:"soo-SUR-us",
     partOfSpeech:"noun",
     definition:"A soft, gentle whispering or rustling sound.",
@@ -669,6 +690,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-004-alpenglow",
     word:"alpenglow",
+    grade:3,
     pronunciation:"AL-pen-gloh",
     partOfSpeech:"noun",
     definition:"The pink or golden light that shines on mountains at sunrise or sunset.",
@@ -681,6 +703,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-005-lambent",
     word:"lambent",
+    grade:5,
     pronunciation:"LAM-bent",
     partOfSpeech:"adjective",
     definition:"Softly glowing or flickering, like a small friendly flame.",
@@ -693,6 +716,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-006-serendipity",
     word:"serendipity",
+    grade:3,
     pronunciation:"seh-ren-DIP-ih-tee",
     partOfSpeech:"noun",
     definition:"A happy surprise or good thing that you find without looking for it.",
@@ -705,6 +729,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-007-mellifluous",
     word:"mellifluous",
+    grade:5,
     pronunciation:"meh-LIFF-loo-us",
     partOfSpeech:"adjective",
     definition:"Having a smooth, sweet, and musical sound.",
@@ -717,6 +742,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-008-gossamer",
     word:"gossamer",
+    grade:3,
     pronunciation:"GOSS-uh-mer",
     partOfSpeech:"adjective",
     definition:"Very light, thin, and delicate, like a spiderweb or fairy wings.",
@@ -729,6 +755,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-009-diaphanous",
     word:"diaphanous",
+    grade:5,
     pronunciation:"dye-AF-uh-nus",
     partOfSpeech:"adjective",
     definition:"So light and thin that you can almost see through it.",
@@ -741,6 +768,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-010-euphony",
     word:"euphony",
+    grade:4,
     pronunciation:"YOO-fuh-nee",
     partOfSpeech:"noun",
     definition:"A pleasing, beautiful combination of sounds.",
@@ -753,6 +781,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-011-auroral",
     word:"auroral",
+    grade:4,
     pronunciation:"uh-ROHR-uhl",
     partOfSpeech:"adjective",
     definition:"Glowing like sunrise or like the northern lights in the sky.",
@@ -765,6 +794,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-012-sylvan",
     word:"sylvan",
+    grade:2,
     pronunciation:"SIL-vuhn",
     partOfSpeech:"adjective",
     definition:"Having to do with forests, trees, and woodland places.",
@@ -777,6 +807,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-013-opalescent",
     word:"opalescent",
+    grade:4,
     pronunciation:"oh-puh-LES-unt",
     partOfSpeech:"adjective",
     definition:"Showing soft, shifting colors like an opal stone.",
@@ -789,6 +820,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-014-lucent",
     word:"lucent",
+    grade:3,
     pronunciation:"LOO-sent",
     partOfSpeech:"adjective",
     definition:"Glowing softly with light.",
@@ -801,6 +833,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-015-stelliferous",
     word:"stelliferous",
+    grade:5,
     pronunciation:"stel-LIF-er-us",
     partOfSpeech:"adjective",
     definition:"Full of stars.",
@@ -813,6 +846,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-016-niveous",
     word:"niveous",
+    grade:3,
     pronunciation:"NIV-ee-us",
     partOfSpeech:"adjective",
     definition:"Snowy or white like snow.",
@@ -825,6 +859,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-017-whimsy",
     word:"whimsy",
+    grade:1,
     pronunciation:"WIM-zee",
     partOfSpeech:"noun",
     definition:"Playful, imaginative behavior or ideas.",
@@ -837,6 +872,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-018-zephyr",
     word:"zephyr",
+    grade:2,
     pronunciation:"ZEFF-er",
     partOfSpeech:"noun",
     definition:"A gentle, light breeze.",
@@ -849,6 +885,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-019-daydream",
     word:"daydream",
+    grade:1,
     pronunciation:"DAY-dreem",
     partOfSpeech:"verb / noun",
     definition:"To imagine pleasant things while you are awake; the dream itself.",
@@ -861,6 +898,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-020-luminous",
     word:"luminous",
+    grade:2,
     pronunciation:"LOO-muh-nus",
     partOfSpeech:"adjective",
     definition:"Giving off light; softly shining.",
@@ -873,6 +911,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-021-twinkle",
     word:"twinkle",
+    grade:1,
     pronunciation:"TWIN-kul",
     partOfSpeech:"verb / noun",
     definition:"To shine with small, quick flashes of light; the sparkle itself.",
@@ -885,6 +924,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-022-cosmic",
     word:"cosmic",
+    grade:2,
     pronunciation:"KOZ-mik",
     partOfSpeech:"adjective",
     definition:"Relating to the universe, outer space, or very big ideas.",
@@ -897,6 +937,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-023-buoyant",
     word:"buoyant",
+    grade:2,
     pronunciation:"BOY-unt",
     partOfSpeech:"adjective",
     definition:"Able to float; also cheerful and full of energy.",
@@ -909,6 +950,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-024-hush",
     word:"hush",
+    grade:1,
     pronunciation:"HUSH",
     partOfSpeech:"verb / noun",
     definition:"To become quiet; a gentle quietness.",
@@ -921,6 +963,7 @@ const KIDS_MAGIC_WORDS = [
   {
     id:"kids-025-glimmer",
     word:"glimmer",
+    grade:1,
     pronunciation:"GLIM-er",
     partOfSpeech:"noun / verb",
     definition:"A small, gentle light or a faint sign of something.",
@@ -974,10 +1017,10 @@ function emojiForWord(item){
 
 /* ============== State ============== */
 let state = {
-  bank: KIDS_MAGIC_WORDS.slice(),
+  bank: ELEMENTARY_WORDS.slice(),
   learned: [],
   favorites: [],
-  settings: { voiceName: "" }
+  settings: { grade:1, speed:.88 }, writing:{}
 };
 let currentIndex = 0;
 let voicesList = [];
@@ -1004,7 +1047,7 @@ const bankCount = document.getElementById('bankCount');
 const learnedCount = document.getElementById('learnedCount');
 const favCount = document.getElementById('favCount');
 
-const voicePicker = document.getElementById('voicePicker');
+const gradePicker=document.getElementById('gradePicker');
 
 const startQuizBtn = document.getElementById('startQuizBtn');
 const nextQuestionBtn = document.getElementById('nextQuestionBtn');
@@ -1024,9 +1067,8 @@ function loadProgress(){
     const parsed = JSON.parse(raw);
     if(Array.isArray(parsed.learned)) state.learned = parsed.learned;
     if(Array.isArray(parsed.favorites)) state.favorites = parsed.favorites;
-    if(parsed.settings && typeof parsed.settings === 'object'){
-      state.settings = { ...state.settings, ...parsed.settings };
-    }
+    if(parsed.settings && typeof parsed.settings === 'object') state.settings={...state.settings,...parsed.settings};
+    if(parsed.writing && typeof parsed.writing==="object") state.writing=parsed.writing;
   }catch(e){
     console.warn('Could not load progress', e);
   }
@@ -1035,7 +1077,8 @@ function saveProgress(){
   localStorage.setItem(STORAGE_KEY, JSON.stringify({
     learned: state.learned,
     favorites: state.favorites,
-    settings: state.settings
+    settings: state.settings,
+    writing: state.writing
   }));
 }
 
@@ -1063,43 +1106,19 @@ function indexForToday(){
   return day % state.bank.length;
 }
 
-/* ============== Voices ============== */
-function setupVoices(){
-  if(!('speechSynthesis' in window)) {
-    voicePicker.innerHTML = '<option value="">(Speech not supported)</option>';
-    hearBtn.disabled = true;
-    return;
-  }
-  voicesList = speechSynthesis.getVoices() || [];
-  voicePicker.innerHTML = '<option value="">(Use browser default)</option>';
-  voicesList.forEach((v,i)=>{
-    const opt = document.createElement('option');
-    opt.value = String(i);
-    opt.textContent = v.name + (v.lang ? " ("+v.lang+")" : "");
-    voicePicker.appendChild(opt);
-  });
-  if(state.settings.voiceName){
-    const idx = voicesList.findIndex(v=>v.name===state.settings.voiceName);
-    if(idx>=0) voicePicker.value = String(idx);
-  }
-}
-if('speechSynthesis' in window){
-  speechSynthesis.onvoiceschanged = setupVoices;
-}
+/* ============== Eiren Voice ============== */
+function eirenVoice(){const vs=speechSynthesis.getVoices()||[];return vs.find(v=>/Samantha|Aria|Jenny|Ava|Victoria|Karen|Serena|Moira|Natural|Enhanced|Premium/i.test(v.name))||vs.find(v=>/^en/i.test(v.lang))||vs[0]}
 function speakText(text){
-  if(!text || !('speechSynthesis' in window)) return;
-  const u = new SpeechSynthesisUtterance(text);
-  const idx = voicePicker.value;
-  if(idx !== "" && voicesList[Number(idx)]){
-    u.voice = voicesList[Number(idx)];
-  }
-  u.lang = 'en-US';
-  u.rate = 0.95;
-  u.pitch = 1.02;
-  speechSynthesis.cancel();
-  speechSynthesis.speak(u);
+  if(!text||!("speechSynthesis" in window))return;
+  speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang="en-US";
+  u.rate=Number(document.getElementById("voiceSpeed")?.value||.88);u.pitch=1.05;const v=eirenVoice();if(v)u.voice=v;speechSynthesis.speak(u)
 }
-
+function gradeBank(){return ELEMENTARY_WORDS.filter(w=>w.grade===Number(state.settings.grade||1))}
+function applyGrade(g){
+ state.settings.grade=Number(g);state.bank=gradeBank();currentIndex=0;saveProgress();
+ gradePicker.value=String(state.settings.grade);document.getElementById("gradeProgress").textContent=`Grade ${state.settings.grade} word path · ${state.bank.length} featured words`;
+ refreshCounts();renderWord(indexForToday());renderSearchResults(searchBox.value);updateWriterPrompt()
+}
 /* ============== UI render ============== */
 function refreshCounts(){
   bankCount.textContent = state.bank.length;
@@ -1161,6 +1180,7 @@ function renderWord(idx){
   // date
   const today = new Date();
   dateLabel.textContent = today.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
+  updateWriterPrompt();
 }
 
 /* ============== Search ============== */
@@ -1275,6 +1295,23 @@ function startQuiz(){
   });
 }
 
+
+function updateWriterPrompt(){
+ if(!state.bank.length)return;const w=state.bank[currentIndex],g=Number(state.settings.grade);
+ const p=g===1?`Use "${w.word}" in a sentence about something you can picture.`
+ :g===2?`Write a complete sentence that shows what "${w.word}" means without copying the definition.`
+ :g===3?`Use "${w.word}" in an original sentence. Add one strong detail that helps a reader infer its meaning.`
+ :g===4?`Use "${w.word}" precisely in two connected sentences. Let context reveal its meaning.`
+ :`Use "${w.word}" in a vivid sentence or short passage. Consider tone, nuance, imagery, and why this word is stronger than a simpler synonym.`;
+ document.getElementById("writerPrompt").textContent=p;
+ document.getElementById("writerEntry").value=state.writing[w.word]||"";
+}
+function eirenExplainCurrent(){
+ const w=state.bank[currentIndex];const g=Number(state.settings.grade);
+ const extra=g<=2?`Listen for how the word fits the picture in your mind.`:g<=4?`Notice its part of speech, word friends, and the clues in the example.`:`Notice its nuance, origin, sound, and how an author might choose it for precision or imagery.`;
+ const t=`${w.word}. ${w.simpleDefinition||w.definition} ${extra}`;document.getElementById("eirenStatus").textContent=extra;speakText(t)
+}
+
 /* ============== Events ============== */
 dailyButton.addEventListener('click', ()=>renderWord(indexForToday()));
 nextBtn.addEventListener('click', ()=>{
@@ -1313,15 +1350,15 @@ favBtn.addEventListener('click', ()=>{
   renderWord();
 });
 
-voicePicker.addEventListener('change', ()=>{
-  const idx = voicePicker.value;
-  if(idx !== "" && voicesList[Number(idx)]){
-    state.settings.voiceName = voicesList[Number(idx)].name;
-  }else{
-    state.settings.voiceName = "";
-  }
-  saveProgress();
-});
+
+
+gradePicker.addEventListener("change",()=>applyGrade(gradePicker.value));
+document.getElementById("voiceSpeed").addEventListener("change",e=>{state.settings.speed=Number(e.target.value);saveProgress()});
+document.getElementById("stopVoice").onclick=()=>speechSynthesis?.cancel();
+document.getElementById("eirenExplain").onclick=eirenExplainCurrent;
+document.getElementById("eirenChallenge").onclick=()=>{updateWriterPrompt();document.getElementById("writerEntry").focus();speakText(document.getElementById("writerPrompt").textContent)};
+document.getElementById("readMine").onclick=()=>{const t=document.getElementById("writerEntry").value.trim();speakText(t||"Write your sentence first, and I will read your words back to you.")};
+document.getElementById("saveMine").onclick=()=>{const w=state.bank[currentIndex];state.writing[w.word]=document.getElementById("writerEntry").value;saveProgress();document.getElementById("writerStatus").textContent="Saved on this device ✓"};
 
 searchBox.addEventListener('input', ()=>renderSearchResults(searchBox.value));
 searchBox.addEventListener('keydown', (e)=>{
@@ -1339,18 +1376,18 @@ nextQuestionBtn.addEventListener('click', startQuiz);
 function init(){
   loadProgress();
   refreshCounts();
-  setupVoices();
+  state.settings.grade=Number(state.settings.grade)||1;state.bank=gradeBank();gradePicker.value=String(state.settings.grade);document.getElementById('voiceSpeed').value=String(state.settings.speed||.88);
   const now = new Date();
   dateLabel.textContent = now.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
   if(state.bank.length){
     renderWord(indexForToday());
     startQuiz();
   }else{
-    definition.textContent = "No words have been loaded. Please add some to KIDS_MAGIC_WORDS.";
+    definition.textContent = "No words have been loaded. Please add some to ELEMENTARY_WORDS.";
   }
 }
 init();
-setTimeout(setupVoices, 600);
+
 window.addEventListener("resize", ()=>requestAnimationFrame(fitWordOnOneLine));
 </script>
 <script src="/assets/vnv-beta-link.js" defer></script>
