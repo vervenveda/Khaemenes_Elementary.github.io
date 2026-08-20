@@ -1,12 +1,23 @@
 (function attachKhaemenesGrade1SurfaceContext(global){
   "use strict";
-  const VERSION="1.0.0";
+  const VERSION="1.1.0";
   const COURSE_ID="elementary-grade-01";
+  const BETA_SRC="https://vervenveda.com/assets/vnv-beta-link.js";
 
   function registry(){return global.KhaemenesFamilyRegistry||null}
   function continuity(){return global.KhaemenesGrade1Continuity||null}
   function learner(){return registry()?.getLearner?.()||null}
   function clean(v,max=120){return String(v??"").trim().slice(0,max)}
+
+  function ensureBetaDoorway(){
+    if(typeof document==="undefined")return;
+    if(document.querySelector('script[src="'+BETA_SRC+'"]'))return;
+    const script=document.createElement("script");
+    script.src=BETA_SRC;
+    script.defer=true;
+    script.dataset.khaemenesBeta="grade-01-surface";
+    (document.head||document.documentElement).appendChild(script);
+  }
 
   function status(){
     const base=continuity()?.status?.()||{status:"unavailable",placementMatch:false,learner:null};
@@ -45,6 +56,7 @@
   }
 
   function activate(surface="general",targetId="khaemenesGrade1Context"){
+    ensureBetaDoorway();
     continuity()?.activate?.();
     const s=render(targetId);
     global.dispatchEvent(new CustomEvent("khaemenes-grade1-surface-ready",{detail:{...s,surface:clean(surface,60),storageKey:scopedKey(surface)}}));
@@ -52,5 +64,6 @@
     return s;
   }
 
-  global.KhaemenesGrade1SurfaceContext=Object.freeze({version:VERSION,courseId:COURSE_ID,status,scopedKey,render,activate});
+  ensureBetaDoorway();
+  global.KhaemenesGrade1SurfaceContext=Object.freeze({version:VERSION,courseId:COURSE_ID,status,scopedKey,render,activate,ensureBetaDoorway});
 })(window);
