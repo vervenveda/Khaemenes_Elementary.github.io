@@ -164,6 +164,8 @@ $("soundBtn").onclick=()=>{s.sound=!s.sound;$("soundBtn").textContent=s.sound?"�
 $("gradeSelect").value=s.grade;$("skillSelect").value=s.skill;$("modeSelect").value=s.mode;$("voiceSpeed").value=s.voiceSpeed;$("soundBtn").textContent=s.sound?"🔊 Voice On":"🔇 Voice Off";$("notes").value=s.notes;$("explain").value=s.explain;renderPortfolio();renderSort();newStory();renderAll();if("speechSynthesis"in window){refresh();speechSynthesis.onvoiceschanged=refresh}connectEirenBoundary();if(!s.current)newCase();else{$("caseWord").textContent=s.current.word;renderTokens();renderClues();renderGrammarChoices()}
 })();
 </script>
-<script src="/assets/vnv-beta-link.js" defer></script>
+<!-- VNV_BETA_PROGRAM_V2 -->
+<a id="vnvBetaProgramFallback" href="https://vervenveda.com/beta/?source=Khaemenes_Elementary.github.io%2Fgames%2Fword-detective%2Findex.html&surface=interactive-index" aria-label="Open the Verve N Veda Beta Program for this page">β Beta Program</a>
+<script src="https://vervenveda.com/assets/vnv-beta-link.js" defer data-vnv-beta-program="2"></script>
 </body>
 </html>

@@ -180,6 +180,8 @@ function endGame(){localStorage.setItem('noetic-sessions',String(Number(localSto
 $('nextBtn').onclick=next;$('againBtn').onclick=()=>startGame(false);$('reviewBtn').onclick=()=>startGame(true);$('resetBtn').onclick=()=>{if(confirm('Reset locally saved Noetic progress?')){['noetic-best','noetic-sessions','noetic-missed'].forEach(k=>localStorage.removeItem(k));alert('Local progress has been reset.')}};$('soundBtn').onclick=()=>{state.sound=!state.sound;$('soundBtn').textContent=state.sound?'🔊 Sound On':'🔇 Sound Off';$('soundBtn').setAttribute('aria-pressed',String(state.sound));saveProgress()};$('hearQuestion').onclick=()=>speak($('question').textContent);$('hearAnswers').onclick=()=>speak([...$('answers').querySelectorAll('button')].map((b,i)=>`Answer ${i+1}. ${b.textContent.replace(/^\d/,'').trim()}`).join('. '));$('breathBtn').onclick=()=>{const c=$('breathCircle');c.classList.remove('active');void c.offsetWidth;c.classList.add('active');speak('Breathe in slowly. Hold gently. Breathe out slowly. Repeat two more times.')};document.addEventListener('keydown',e=>{if(['1','2','3'].includes(e.key)){const b=$('answers').querySelectorAll('button')[Number(e.key)-1];if(b&&!b.disabled)b.click()}else if(e.key==='Enter'&&!$('nextBtn').disabled&&!$('endPanel').classList.contains('hidden')){}else if(e.key==='Enter'&&!$('nextBtn').disabled){next()}});
 renderCategories();$('soundBtn').textContent=state.sound?'🔊 Sound On':'🔇 Sound Off';startGame(false);
 </script>
-<script src="/assets/vnv-beta-link.js" defer></script>
+<!-- VNV_BETA_PROGRAM_V2 -->
+<a id="vnvBetaProgramFallback" href="https://vervenveda.com/beta/?source=Khaemenes_Elementary.github.io%2Fgames%2Femotional_garden%2Findex.html&surface=interactive-index" aria-label="Open the Verve N Veda Beta Program for this page">β Beta Program</a>
+<script src="https://vervenveda.com/assets/vnv-beta-link.js" defer data-vnv-beta-program="2"></script>
 </body>
 </html>
