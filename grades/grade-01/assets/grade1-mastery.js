@@ -293,7 +293,34 @@
     }).join('');
   }
 
-  function renderLessonPage(weekNum){
+  
+  function injectLessonQualityStyles(){
+    if(document.getElementById('grade01LessonQualityStyles')) return;
+    const style = document.createElement('style');
+    style.id = 'grade01LessonQualityStyles';
+    style.textContent = `
+      .sovereign-lesson{overflow:hidden}
+      .lesson-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:10px}
+      .lesson-day{margin:0 0 4px;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;font-weight:800;opacity:.72}
+      .lesson-head h4{margin:0}
+      .lesson-time{white-space:nowrap;border:1px solid rgba(21,54,60,.18);border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:800}
+      .lesson-standard{margin:8px 0 16px;font-size:.9rem;opacity:.82}
+      .lesson-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+      .lesson-block{border:1px solid rgba(21,54,60,.12);border-radius:14px;padding:13px;background:rgba(248,251,250,.75)}
+      .lesson-block h5{margin:0 0 6px;font-size:.94rem}
+      .lesson-block p{margin:0;line-height:1.58}
+      .lesson-block.mission{grid-column:1/-1}
+      .lesson-block.challenge,.lesson-block.product,.lesson-block.check,.lesson-block.evidence,.lesson-block.reflection{background:rgba(255,255,255,.95)}
+      .lesson-vocab{margin:14px 0 0;display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+      .lesson-vocab .badge{margin:0}
+      .day-complete{display:block;margin-top:14px;font-weight:800}
+      @media(max-width:760px){.lesson-grid{grid-template-columns:1fr}.lesson-block.mission{grid-column:auto}.lesson-head{flex-direction:column}}
+      @media print{.lesson-grid{grid-template-columns:1fr}.lesson-block{break-inside:avoid;background:#fff}.lesson-time{display:none}}
+    `;
+    document.head.appendChild(style);
+  }
+
+function renderLessonPage(weekNum){
     const w=C.weeks.find(x=>x.week===weekNum); if(!w) return;
     const s=load(), open=isWeekUnlocked(weekNum);
     setText('lessonTitle', `Week ${String(weekNum).padStart(2,'0')} — ${w.title}`);
@@ -311,18 +338,39 @@
           const dayNum = idx+1;
           const key=`${weekNum}-${dayNum}`, done=!!s.daily[key], workKey=dayWorkKey(weekNum, dayNum);
           const savedText = s.dailyResponses && s.dailyResponses[workKey] ? s.dailyResponses[workKey] : '';
-          return `<article class="lesson">
-            <h4>${escapeHtml(d.day)}: ${escapeHtml(d.focus)}</h4>
-            <p><strong>Objective:</strong> ${escapeHtml(d.objective)}</p>
-            <p><strong>Warm-up:</strong> ${escapeHtml(d.warmup)}</p>
-            <p><strong>Direct instruction:</strong> ${escapeHtml(d.directInstruction)}</p>
-            <p><strong>Teacher/adult script:</strong> ${escapeHtml(d.teacherScript)}</p>
-            <p><strong>Student practice:</strong> ${escapeHtml(d.studentTask)}</p>
-            <p><strong>Evidence:</strong> ${escapeHtml(d.evidence)}</p>
-            <p><strong>Support:</strong> ${escapeHtml(d.support)}</p>
-            <p><strong>Extension:</strong> ${escapeHtml(d.extension)}</p>
+          const hasNewLayer = !!d.miniLesson;
+          return `<article class="lesson sovereign-lesson">
+            <div class="lesson-head">
+              <div>
+                <p class="lesson-day">${escapeHtml(d.day)} · ${escapeHtml(d.focus)}</p>
+                <h4>${escapeHtml(d.skill || 'Daily Learning Mission')}</h4>
+              </div>
+              ${d.estimatedMinutes ? `<span class="lesson-time">${escapeHtml(d.estimatedMinutes)} min</span>` : ''}
+            </div>
+            ${d.standard ? `<p class="lesson-standard"><strong>Alignment:</strong> ${escapeHtml(d.standard)}</p>` : ''}
+            <div class="lesson-grid">
+              <section class="lesson-block mission"><h5>Today's Mission</h5><p>${escapeHtml(d.objective)}</p></section>
+              <section class="lesson-block"><h5>Warm-Up</h5><p>${escapeHtml(d.warmup)}</p></section>
+              ${hasNewLayer ? `<section class="lesson-block"><h5>Teach</h5><p>${escapeHtml(d.miniLesson)}</p></section>
+              <section class="lesson-block"><h5>Worked Example</h5><p>${escapeHtml(d.workedExample)}</p></section>
+              <section class="lesson-block"><h5>Guided Practice</h5><p>${escapeHtml(d.guidedPractice)}</p></section>
+              <section class="lesson-block"><h5>Independent Practice</h5><p>${escapeHtml(d.independentPractice)}</p></section>
+              <section class="lesson-block challenge"><h5>Challenge</h5><p>${escapeHtml(d.challenge)}</p></section>
+              <section class="lesson-block product"><h5>Student Creation</h5><p>${escapeHtml(d.studentProduct)}</p></section>
+              <section class="lesson-block check"><h5>Check for Understanding</h5><p>${escapeHtml(d.checkForUnderstanding)}</p></section>
+              <section class="lesson-block evidence"><h5>Mastery Evidence</h5><p>${escapeHtml(d.evidence)}</p></section>
+              <section class="lesson-block"><h5>Support</h5><p>${escapeHtml(d.support)}</p></section>
+              <section class="lesson-block"><h5>Extension</h5><p>${escapeHtml(d.extension)}</p></section>
+              <section class="lesson-block reflection"><h5>Student Reflection</h5><p>${escapeHtml(d.reflection)}</p></section>`
+              : `<section class="lesson-block"><h5>Direct Instruction</h5><p>${escapeHtml(d.directInstruction || '')}</p></section>
+              <section class="lesson-block"><h5>Student Practice</h5><p>${escapeHtml(d.studentTask || '')}</p></section>
+              <section class="lesson-block evidence"><h5>Mastery Evidence</h5><p>${escapeHtml(d.evidence || '')}</p></section>
+              <section class="lesson-block"><h5>Support</h5><p>${escapeHtml(d.support || '')}</p></section>
+              <section class="lesson-block"><h5>Extension</h5><p>${escapeHtml(d.extension || '')}</p></section>`}
+            </div>
+            ${d.vocabulary?.length ? `<div class="lesson-vocab"><strong>Words to use:</strong> ${d.vocabulary.map(v=>`<span class="badge">${escapeHtml(v)}</span>`).join(' ')}</div>` : ''}
             ${renderStudentWorkPanel(workKey, savedText)}
-            <label style="display:block;margin-top:14px"><input type="checkbox" data-day="${key}" ${done?'checked':''}> Mark this day complete locally</label>
+            <label class="day-complete"><input type="checkbox" data-day="${key}" ${done?'checked':''}> Mark this day complete locally</label>
           </article>`;
         }).join('');
         days.querySelectorAll('input[data-day]').forEach(cb=>cb.addEventListener('change',e=>{ const st=load(); st.daily||={}; st.daily[e.target.dataset.day]=e.target.checked; save(st); }));
