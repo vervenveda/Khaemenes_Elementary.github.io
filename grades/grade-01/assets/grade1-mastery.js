@@ -30,19 +30,126 @@
     return s;
   }
 
+  const ROOT_URL = 'https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-01/';
+  const CONTINUATION_URL = 'https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-learning-continuation.js';
+  const REGISTRY_KEY = 'khaemenes_family_registry_v1';
+  const ACTIVE_LEARNER_KEY = 'khaemenes_active_learner_v1';
+
+  function readJSON(key,fallback=null){
+    try{ const raw=localStorage.getItem(key); return raw?JSON.parse(raw):fallback; }
+    catch{ return fallback; }
+  }
+  function academyContext(){
+    const learnerId=readJSON(ACTIVE_LEARNER_KEY,null),registry=readJSON(REGISTRY_KEY,null);
+    const learner=learnerId&&registry?.learners?.[learnerId] ? registry.learners[learnerId] : null;
+    const grade=String(learner?.grade||'').replace(/[^0-9]/g,'').padStart(2,'0');
+    const stage=String(learner?.stage||'').trim().toLowerCase();
+    return {learner,match:Boolean(learner&&grade==='01'&&stage==='elementary')};
+  }
+  function scopedKey(){
+    const ctx=academyContext();
+    return ctx.match ? `khaemenes.course:${ctx.learner.learnerId}:elementary-grade-01` : null;
+  }
+  function scopedExists(){ const k=scopedKey(); return Boolean(k&&localStorage.getItem(k)!==null); }
+  function legacyExists(){ return localStorage.getItem(KEY)!==null; }
+
   function load(){
     try{
-      const raw = localStorage.getItem(KEY);
-      if(!raw) return blankState();
-      return normalizeState(JSON.parse(raw));
+      const ctx=academyContext(),k=scopedKey();
+      if(ctx.learner){
+        if(!ctx.match||!k) return blankState();
+        const raw=localStorage.getItem(k);
+        return raw ? normalizeState(JSON.parse(raw)) : blankState();
+      }
+      const raw=localStorage.getItem(KEY);
+      return raw ? normalizeState(JSON.parse(raw)) : blankState();
     }catch(e){
       return blankState();
     }
   }
 
   function save(s){
-    localStorage.setItem(KEY, JSON.stringify(normalizeState(s)));
+    const normalized=normalizeState(s),ctx=academyContext(),k=scopedKey();
+    try{
+      if(ctx.learner){
+        if(!ctx.match||!k) return false;
+        localStorage.setItem(k,JSON.stringify(normalized));
+      }else{
+        localStorage.setItem(KEY,JSON.stringify(normalized));
+      }
+      scheduleContinuationPublish();
+      return true;
+    }catch{return false}
   }
+
+  function claimLegacy(){
+    const ctx=academyContext(),k=scopedKey();
+    if(!ctx.match||!k||!legacyExists()) return false;
+    try{
+      const legacy=normalizeState(JSON.parse(localStorage.getItem(KEY)));
+      if(localStorage.getItem(k)!==null) return false;
+      localStorage.setItem(k,JSON.stringify(legacy));
+      scheduleContinuationPublish();
+      return true;
+    }catch{return false}
+  }
+  function exportLegacy(){
+    try{
+      const raw=localStorage.getItem(KEY);if(!raw)return;
+      const blob=new Blob([raw],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+      a.href=url;a.download='khaemenes-grade01-preserved-work.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+    }catch{}
+  }
+  function mountLegacyRecovery(){
+    const ctx=academyContext();
+    if(!ctx.match||!legacyExists()||scopedExists()||document.getElementById('learnerRecordNoticeButton')) return;
+    const toolbar=document.getElementById('khaemenesLearnerUtilityToolbar');
+    const button=document.createElement('button');
+    button.id='learnerRecordNoticeButton';button.type='button';button.textContent='Preserved Work';
+    button.style.cssText='position:fixed;right:14px;bottom:122px;z-index:2147483000;padding:8px 11px;border:1px solid #967342;border-radius:7px;background:#fff8e8;color:#20241f;font:inherit;font-size:12px;cursor:pointer';
+    const panel=document.createElement('section');
+    panel.id='learnerRecordNoticePanel';panel.hidden=true;panel.setAttribute('role','dialog');panel.setAttribute('aria-label','Preserved First Grade work');
+    panel.style.cssText='position:fixed;right:14px;bottom:170px;z-index:2147483001;width:min(410px,calc(100vw - 28px));max-height:65vh;overflow:auto;padding:14px;border:1px solid #967342;border-radius:7px;background:#fff8e8;color:#20241f;box-shadow:0 14px 40px rgba(34,31,27,.24);font:inherit';
+    panel.innerHTML=`<h2 style="margin:0 0 8px;font:400 24px/1.2 Georgia,serif">Preserved First Grade Work</h2><p>Older First Grade work exists on this device without a confirmed learner owner. You may export it, or deliberately copy it to <strong>${String(ctx.learner.nickname||'the active learner').replace(/[&<>"]/g,'')}</strong>. The original preserved record will remain.</p><div style="display:flex;gap:7px;flex-wrap:wrap"><button type="button" id="grade1ExportPreserved">Export preserved work</button><button type="button" id="grade1ClaimPreserved">Copy to active learner</button><button type="button" id="grade1ClosePreserved">Close</button></div>`;
+    (toolbar||document.body).append(button);document.body.append(panel);
+    const place=()=>{const t=document.getElementById('khaemenesLearnerUtilityToolbar');if(t&&button.parentElement!==t){button.style.position='static';button.style.order='10';t.prepend(button)}if(t){const h=Math.ceil(t.getBoundingClientRect().height||54);panel.style.bottom=`calc(max(12px, env(safe-area-inset-bottom)) + ${h+10}px)`}};
+    button.onclick=()=>{panel.hidden=!panel.hidden;place()};
+    panel.querySelector('#grade1ClosePreserved').onclick=()=>{panel.hidden=true;button.focus()};
+    panel.querySelector('#grade1ExportPreserved').onclick=exportLegacy;
+    panel.querySelector('#grade1ClaimPreserved').onclick=()=>{if(!confirm(`Copy the preserved First Grade record to ${ctx.learner.nickname||'the active learner'}? The original preserved record will remain.`))return;if(claimLegacy())location.reload()};
+    place();setTimeout(place,500);setTimeout(place,1600);
+  }
+
+  let continuationTimer=0;
+  function ensureContinuation(){
+    if(window.KhaemenesLearningContinuation) return Promise.resolve(window.KhaemenesLearningContinuation);
+    const found=[...document.scripts].find(s=>s.src===CONTINUATION_URL);
+    if(found) return new Promise(resolve=>{found.addEventListener('load',()=>resolve(window.KhaemenesLearningContinuation),{once:true});setTimeout(()=>resolve(window.KhaemenesLearningContinuation),1200)});
+    return new Promise(resolve=>{const s=document.createElement('script');s.src=CONTINUATION_URL;s.async=false;s.onload=()=>resolve(window.KhaemenesLearningContinuation);s.onerror=()=>resolve(null);document.head.append(s)});
+  }
+  function publishContinuation(){
+    const ctx=academyContext(),API=window.KhaemenesLearningContinuation;if(!ctx.match||!API?.publish)return false;
+    const s=load(),weeks=C?.weeks||[],completed=weeks.filter(w=>Number(s.weeks?.[w.week]?.bestScore||0)>=THRESHOLD).length;
+    const midBest=Number(s.midterm?.bestScore||0),finalBest=Number(s.final?.bestScore||0);
+    const midAfter=Number(C?.midterm?.unlockAfterWeek||18);
+    let status='continue',nextLabel='Continue Learning',nextTitle='',nextHref='',summary='',best=null,family={needsAction:false,label:'',summary:'',href:''};
+    const first=weeks.find(w=>Number(s.weeks?.[w.week]?.bestScore||0)<THRESHOLD);
+    if(first&&Number(first.week)>midAfter&&completed>=midAfter&&midBest<THRESHOLD){
+      best=midBest||null;status=best?'corrections':'assessment';nextLabel=best?'Review Midterm':'Open Midterm';nextTitle='First Grade Midterm';nextHref=ROOT_URL+'assessments/midterm.html';summary='Complete the midterm at 80% or higher before continuing the second half of the course.';
+    }else if(first){
+      best=Number(s.weeks?.[first.week]?.bestScore||0)||null;status=best?'corrections':'continue';nextLabel=best?'Review & Retry':'Continue Learning';nextTitle=`Week ${String(first.week).padStart(2,'0')}`;nextHref=best?ROOT_URL+`assessments/unit-${String(first.week).padStart(2,'0')}-assessment.html`:ROOT_URL+`lessons/unit-${String(first.week).padStart(2,'0')}/index.html`;summary=best?`Week ${String(first.week).padStart(2,'0')} best score is ${best}%. Review and retry to reach ${THRESHOLD}%.`:'Open the next First Grade lesson week.';
+    }else if(midBest<THRESHOLD){
+      best=midBest||null;status=best?'corrections':'assessment';nextLabel=best?'Review Midterm':'Open Midterm';nextTitle='First Grade Midterm';nextHref=ROOT_URL+'assessments/midterm.html';summary='Complete the midterm at 80% or higher.';
+    }else if(finalBest<THRESHOLD){
+      best=finalBest||null;status=best?'corrections':'assessment';nextLabel=best?'Review Final':'Open Final';nextTitle='First Grade Final';nextHref=ROOT_URL+'assessments/final-exam.html';summary='Complete the final assessment at 80% or higher.';
+    }else if(!s.portfolio){
+      status='mastery';nextLabel='Portfolio Review';nextTitle='First Grade Portfolio Evidence';nextHref=ROOT_URL+'records/certificate.html';summary='Academic mastery gates are complete. Portfolio evidence remains before certification.';family={needsAction:true,label:'Portfolio review',summary:'Review the First Grade portfolio evidence and confirm completion when the required work is present.',href:ROOT_URL+'records/certificate.html'};
+    }else{
+      status='complete';nextLabel='Open Certificate';nextTitle='First Grade Complete';nextHref=ROOT_URL+'records/certificate.html';summary='All First Grade completion gates are satisfied.';best=100;
+    }
+    try{API.publish({learnerId:ctx.learner.learnerId,courseId:'elementary-grade-01',school:'Khaemenes Elementary School',stage:'elementary',grade:'First Grade',subject:'Integrated Elementary Program',courseTitle:'Khaemenes First Grade',status,nextLabel,nextTitle,nextHref,summary,progress:{completed,total:weeks.length||36,percent:Math.round(completed/Math.max(1,weeks.length||36)*100)},mastery:{best,threshold:THRESHOLD,mastered:status==='complete'},family,source:'grade01-mastery-v1'});return true}catch{return false}
+  }
+  function scheduleContinuationPublish(){clearTimeout(continuationTimer);continuationTimer=setTimeout(()=>ensureContinuation().then(publishContinuation),80)}
 
   function pct(n,d){ return d ? Math.round((n/d)*100) : 0; }
   function masteredWeek(n){ const s=load(); return !!(s.weeks && s.weeks[n] && s.weeks[n].bestScore >= THRESHOLD); }
@@ -437,5 +544,8 @@ function renderLessonPage(weekNum){
     const cb=$('portfolioComplete'); if(cb){ cb.checked=portfolio; cb.addEventListener('change',e=>{ const st=load(); st.portfolio=e.target.checked; save(st); location.reload(); }); }
   }
 
-  window.Grade1Mastery={renderDashboard,renderLessonPage,renderAssessment,renderWeeklyAssessmentIndex,renderCertificate,updateSummary,load,save};
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{mountLegacyRecovery();scheduleContinuationPublish()},{once:true});
+  else {mountLegacyRecovery();scheduleContinuationPublish()}
+  window.addEventListener('khaemenes-learning-continuation-ready',publishContinuation);
+  window.Grade1Mastery={renderDashboard,renderLessonPage,renderAssessment,renderWeeklyAssessmentIndex,renderCertificate,updateSummary,load,save,claimLegacy,publishContinuation};
 })();
