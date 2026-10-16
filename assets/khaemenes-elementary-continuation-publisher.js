@@ -2,10 +2,10 @@
 "use strict";
 const VERSION="1.0.0",PASS=80;
 const CFG={
- "02":{api:"KhaemenesGrade2Continuity",data:"KHAE_GRADE2_DATA",courseId:"elementary-grade-02",title:"Second Grade",weekBase:"",assessmentBase:"assessments/week-",midterm:"assessments/midterm.html",final:"assessments/final.html"},
- "03":{api:"KhaemenesGrade3Continuity",data:"KHAE_GRADE3_DATA",courseId:"elementary-grade-03",title:"Third Grade",weekBase:"weekly-plans/week-",assessmentBase:"assessments/week-",midterm:"assessments/midterm.html",final:"assessments/final.html"},
- "04":{api:"KhaemenesGrade4Continuity",data:"KHAE_GRADE4_DATA",courseId:"elementary-grade-04",title:"Fourth Grade",weekBase:"weekly-plans/week-",assessmentBase:"assessments/week-",midterm:"assessments/midterm.html",final:"assessments/final.html"},
- "05":{api:"KhaemenesGrade5Continuity",data:"KHAE_GRADE5_DATA",courseId:"elementary-grade-05",title:"Fifth Grade",weekBase:"weekly-plans/week-",assessmentBase:"assessments/week-",midterm:"assessments/midterm.html",final:"assessments/final.html"}
+ "02":{api:"KhaemenesGrade2Continuity",data:"KHAE_GRADE2_DATA",courseId:"elementary-grade-02",title:"Second Grade",weekBase:"",assessmentBase:"assessments/week-",midterm:"assessments/midterm.html",final:"assessments/final-exam.html"},
+ "03":{api:"KhaemenesGrade3Continuity",data:"KHAE_GRADE3_DATA",courseId:"elementary-grade-03",title:"Third Grade",weekBase:"weekly-plans/week-",assessmentBase:"assessments/week-",midterm:"assessments/midterm.html",final:"assessments/final-exam.html"},
+ "04":{api:"KhaemenesGrade4Continuity",data:"KHAE_GRADE4_DATA",courseId:"elementary-grade-04",title:"Fourth Grade",weekBase:"weekly-plans/week-",assessmentBase:"assessments/week-",midterm:"assessments/midterm.html",final:"assessments/final-exam.html"},
+ "05":{api:"KhaemenesGrade5Continuity",data:"KHAE_GRADE5_DATA",courseId:"elementary-grade-05",title:"Fifth Grade",weekBase:"weekly-plans/week-",assessmentBase:"assessments/week-",midterm:"assessments/midterm.html",final:"assessments/final-exam.html"}
 };
 const pad=n=>String(n).padStart(2,"0");
 function grade(){
