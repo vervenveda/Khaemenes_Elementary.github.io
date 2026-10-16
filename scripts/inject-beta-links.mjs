@@ -19,7 +19,7 @@ async function walk(dir, out = []) {
     if (entry.isDirectory() && EXCLUDE_DIRS.has(entry.name.toLowerCase())) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) await walk(full, out);
-    else if (entry.isFile() && isVisibleIndexName(entry.name)) out.push(full);
+    else if (entry.isFile() && shouldCoverFile(full)) out.push(full);
   }
   return out;
 }
@@ -27,6 +27,19 @@ async function walk(dir, out = []) {
 function isVisibleIndexName(name) {
   const lower = name.toLowerCase();
   return lower === 'index.html' || lower === 'inndex.html' || lower.endsWith('_index.html') || lower.endsWith('-index.html');
+}
+
+function shouldCoverFile(file) {
+  const name = path.basename(file);
+  if (isVisibleIndexName(name)) return true;
+  if (!name.toLowerCase().endsWith('.html')) return false;
+
+  const rel = path.relative(ROOT, file).split(path.sep).join('/');
+  if (!/^grades\/grade-0[1-5]\//i.test(rel)) return false;
+
+  // Student learning surfaces that do not use index-style filenames.
+  // Keep the automatic writer away from repository/admin/support areas.
+  return /\/(?:subjects|weekly-plans|lessons|assessments|evidence)\//i.test(rel);
 }
 
 function relPath(file) {
@@ -54,7 +67,8 @@ function scriptsForbidden(html) {
 }
 
 function fallbackLink(file) {
-  return `<a id="vnvBetaProgramFallback" href="${BETA_URL}?source=${safeSource(file)}&surface=interactive-index" aria-label="Open the Verve N Veda Beta Program for this page">β Beta Program</a>`;
+  const surface = isVisibleIndexName(path.basename(file)) ? 'interactive-index' : 'learning-page';
+  return `<a id="vnvBetaProgramFallback" href="${BETA_URL}?source=${safeSource(file)}&surface=${surface}" aria-label="Open the Verve N Veda Beta Program for this page">β Beta Program</a>`;
 }
 
 function widgetBlock(file, noScript = false) {
