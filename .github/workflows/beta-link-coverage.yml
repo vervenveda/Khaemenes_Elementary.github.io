@@ -8,6 +8,7 @@ on:
       - '**/inndex.html'
       - '**/*_index.html'
       - '**/*-index.html'
+      - 'grades/grade-*/**/*.html'
       - 'scripts/inject-beta-links.mjs'
       - '.github/workflows/beta-link-coverage.yml'
   workflow_dispatch:
