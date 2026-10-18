@@ -30,16 +30,11 @@ function isVisibleIndexName(name) {
 }
 
 function shouldCoverFile(file) {
-  const name = path.basename(file);
-  if (isVisibleIndexName(name)) return true;
-  if (!name.toLowerCase().endsWith('.html')) return false;
-
-  const rel = path.relative(ROOT, file).split(path.sep).join('/');
-  if (!/^grades\/grade-0[1-5]\//i.test(rel)) return false;
-
-  // Student learning surfaces that do not use index-style filenames.
-  // Keep the automatic writer away from repository/admin/support areas.
-  return /\/(?:subjects|weekly-plans|lessons|assessments|evidence)\//i.test(rel);
+  // Every public HTML document in the deployable repository receives the
+  // same canonical Beta doorway. EXCLUDE_DIRS is enforced by walk(), so
+  // archives, backups, vendor code, private areas, and repository internals
+  // stay outside the public coverage pass.
+  return path.basename(file).toLowerCase().endsWith('.html');
 }
 
 function relPath(file) {
@@ -146,6 +141,7 @@ const report = {
   skippedFiles: skipped
 };
 
+report.scope = "all-public-html";
 console.log(JSON.stringify(report, null, 2));
 
 if (CHECK_ONLY && (changed.length || skipped.length)) {
