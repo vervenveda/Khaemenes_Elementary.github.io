@@ -1,12 +1,10 @@
-name: Beta index coverage verification
+name: Beta all-page coverage verification
 
 on:
   pull_request:
     paths:
-      - '**/index.html'
-      - '**/inndex.html'
-      - '**/*_index.html'
-      - '**/*-index.html'
+      - '*.html'
+      - '**/*.html'
       - 'scripts/inject-beta-links.mjs'
       - '.github/workflows/beta-index-coverage.yml'
   workflow_dispatch:
@@ -15,7 +13,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: beta-index-verify-${{ github.ref }}
+  group: beta-all-page-verify-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -30,5 +28,5 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Verify canonical Beta Program coverage
+      - name: Verify canonical Beta Program coverage on all public HTML
         run: node scripts/inject-beta-links.mjs --check
