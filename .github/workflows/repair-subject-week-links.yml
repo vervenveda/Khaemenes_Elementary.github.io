@@ -1,0 +1,82 @@
+name: Repair Subject Week Links
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/repair-subject-week-links.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-elementary-subject-week-links
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Repair week routes to canonical unit resources
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          files=replacements=0
+          for p in Path("subjects").rglob("week-*.html"):
+              s=p.read_text(encoding="utf-8")
+              n=s
+
+              def printable(m):
+                  return "../../printables/printables/unit-" + m.group(1) + "-packet.html"
+              def assessment(m):
+                  return "../../assessments/unit-" + m.group(1) + "-assessment.html"
+
+              n,c1=re.subn(r"\.\./\.\./printables/week-(\d{2})-packet\.html", printable, n)
+              n,c2=re.subn(r"\.\./\.\./assessments/week-(\d{2})-assessment\.html", assessment, n)
+              if n!=s:
+                  p.write_text(n,encoding="utf-8")
+                  files+=1
+                  replacements+=c1+c2
+
+          print(f"Repaired {replacements} subject-week route(s) across {files} file(s).")
+          PY
+
+      - name: Verify
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          bad=[]
+          for p in Path("subjects").rglob("week-*.html"):
+              s=p.read_text(encoding="utf-8")
+              if re.search(r"\.\./\.\./printables/week-\d{2}-packet\.html",s):
+                  bad.append(str(p))
+              if re.search(r"\.\./\.\./assessments/week-\d{2}-assessment\.html",s):
+                  bad.append(str(p))
+          assert not bad, bad[:20]
+          print("Subject-week route regression PASS.")
+          PY
+
+      - name: Commit repairs
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- subjects)" ]; then
+            echo "No subject-week repairs needed."
+            exit 0
+          fi
+          git config user.name "Khaemenes Elementary Repair"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add subjects
+          git commit -m "Repair subject week resource routes"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then exit 0; fi
+          done
+          exit 1
