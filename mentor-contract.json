@@ -1,8 +1,16 @@
 {
-  "version": 1,
+  "version": 2,
   "school": "Khaemenes Elementary",
   "stage": "elementary",
-  "audience": ["grade-01", "grade-02", "grade-03", "grade-04", "grade-05", "parent", "educator"],
+  "audience": [
+    "grade-01",
+    "grade-02",
+    "grade-03",
+    "grade-04",
+    "grade-05",
+    "parent",
+    "educator"
+  ],
   "mentorAuthority": "academy-archaemenes",
   "mentorId": "archaemenes",
   "mentorName": "Archaemenes",
@@ -44,7 +52,44 @@
       "name": "Archaemenes",
       "role": "Educational Mentor",
       "expression": "Academy Mentor",
-      "scope": ["lesson support", "study strategy", "reasoning", "mastery reflection", "learning navigation", "support handoff"]
+      "scope": [
+        "lesson support",
+        "study strategy",
+        "reasoning",
+        "mastery reflection",
+        "learning navigation",
+        "support handoff"
+      ]
     }
-  ]
+  ],
+  "experience": {
+    "sharedResourceRegistry": "assets/khaemenes-elementary-resources.js",
+    "sharedExperienceLayer": "assets/khaemenes-elementary-experience.js",
+    "contextKey": "khaemenes_elementary_mentor_context_v1",
+    "dailyFlow": [
+      "formal-step",
+      "matched-practice",
+      "explore-or-create",
+      "reset"
+    ],
+    "familyObservationLabels": [
+      "learning-with-support",
+      "working-independently",
+      "explaining-and-applying"
+    ],
+    "observationAuthority": {
+      "awardsMastery": false,
+      "changesScore": false,
+      "unlocksCurriculum": false,
+      "changesPlacement": false,
+      "diagnostic": false
+    }
+  },
+  "gradeExpression": {
+    "01": "Academy Mentor · gentle learning guide",
+    "02": "Academy Mentor · curious learning coach",
+    "03": "Academy Mentor · independent-learning coach",
+    "04": "Academy Mentor · study-strategy coach",
+    "05": "Academy Mentor · scholarship and readiness coach"
+  }
 }
