@@ -11,7 +11,7 @@
   const save = () => CONT?.writeState ? CONT.writeState(state) : localStorage.setItem(KEY, JSON.stringify(state));
   const weeklyAverage = () => {const v=DATA.weeks.map(w=>Number(state.weekly[w.week]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0;};
   const completedWeeks = () => DATA.weeks.filter(w=>Number(state.weekly[w.week]||0)>=DATA.course.passingScore).length;
-  const ready = () => weeklyAverage()>=80 && Number(state.midterm||0)>=80 && Number(state.final||0)>=80 && !!state.portfolio;
+  const ready = () => completedWeeks()===36 && Number(state.midterm||0)>=80 && Number(state.final||0)>=80 && !!state.portfolio;
   function renderDashboard(){
     const avg=weeklyAverage(), done=completedWeeks(), ok=ready(), context=CONT?.status?.();
     $("studentName").value=context?.status==="ready"?context.learner.nickname:(state.student||"");
@@ -21,8 +21,8 @@
     $("exportBtn").addEventListener("click", exportRecords);
   }
   function renderWeeks(){
-    $("weekGrid").innerHTML=DATA.weeks.map(w=>`<article class="card week-card"><div class="emblem">${String(w.week).padStart(2,"0")}</div><h3>${esc(w.title)}</h3><p><strong>Question:</strong> ${esc(w.essentialQuestion)}</p><p>${esc(w.theme)}</p><div class="badges"><span class="badge">8 subjects</span><span class="badge">40 blocks</span><span class="badge">A++</span></div><label>Weekly assessment score</label><input type="number" min="0" max="100" value="${state.weekly[w.week]||""}" data-score="${w.week}" placeholder="0–100"><div class="actions"><a class="button" href="weekly-plans/week-${String(w.week).padStart(2,"0")}.html">Open Week</a><a class="button light" href="printables/week-${String(w.week).padStart(2,"0")}-packet.html">Printable</a></div></article>`).join("");
-    document.querySelectorAll("[data-score]").forEach(input=>input.addEventListener("input",()=>{state.weekly[input.dataset.score]=Math.max(0,Math.min(100,Number(input.value||0)));save();renderDashboard();}));
+    $("weekGrid").innerHTML=DATA.weeks.map(w=>`<article class="card week-card"><div class="emblem">${String(w.week).padStart(2,"0")}</div><h3>${esc(w.title)}</h3><p><strong>Question:</strong> ${esc(w.essentialQuestion)}</p><p>${esc(w.theme)}</p><div class="badges"><span class="badge">8 subjects</span><span class="badge">40 blocks</span><span class="badge">A++</span></div><label>Verified weekly assessment score</label><input type="number" min="0" max="100" value="${state.weekly[w.week]||""}" data-score="${w.week}" placeholder="Not attempted" readonly title="Scores are written by the assessment engine"><div class="actions"><a class="button" href="weekly-plans/week-${String(w.week).padStart(2,"0")}.html">Open Week</a><a class="button light" href="printables/week-${String(w.week).padStart(2,"0")}-packet.html">Printable</a></div></article>`).join("");
+    document.querySelectorAll("[data-score]").forEach(input=>{input.readOnly=true;input.title="Scores are written by the assessment engine";});
   }
   function renderSubjects(){
     $("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("");
