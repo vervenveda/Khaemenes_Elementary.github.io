@@ -80,6 +80,23 @@ for(let grade=1;grade<=5;grade++){
 }
 expect(sampled>=1000,`Question-factory sample was unexpectedly small: ${sampled}`);
 
+// Verify the large Monte Carlo pools advertised by the formal assessment engine.
+let largePoolQuestions=0;
+for(let grade=1;grade<=5;grade++){
+  const weeklyCount=grade<=2?12:grade===3?15:18;
+  const midtermCount=grade<=2?24:grade===3?28:32;
+  const finalCount=grade<=2?30:grade===3?34:40;
+  for(const [scope,displayCount] of [["weekly",weeklyCount],["midterm",midtermCount],["final",finalCount]]){
+    const expectedPool=Math.max(displayCount*2,scope==="weekly"?32:64);
+    const pool=factory.makeBalanced({grade,focus:"Grade "+grade+" cumulative reading mathematics science civics evidence reasoning",seed:"qa-"+grade+"-"+scope,count:expectedPool,scope,week:scope==="weekly"?12:null});
+    expect(pool.length===expectedPool,`Grade ${grade} ${scope} pool has ${pool.length} questions; expected ${expectedPool}.`);
+    expect(new Set(pool.map(q=>q.prompt)).size===pool.length,`Grade ${grade} ${scope} pool contains duplicate prompts.`);
+    expect(new Set(pool.map(q=>q.answer)).size>=2,`Grade ${grade} ${scope} answer positions are not meaningfully randomized.`);
+    for(const q of pool)expect(factory.validateQuestion(q),`Invalid question in Grade ${grade} ${scope} large pool.`);
+    largePoolQuestions+=pool.length;
+  }
+}
+
 // Lesson ledger must never write mastery.
 const ledger=read("assets/khaemenes-elementary-learning-ledger.js");
 expect(ledger.includes('masteryAuthority:false'),"Lesson ledger lost the explicit non-mastery boundary.");
@@ -133,6 +150,7 @@ console.log("Elementary learning engine regression: PASS");
 console.log(`  lesson surfaces covered: ${coverage.lesson}`);
 console.log(`  formal assessment surfaces covered: ${coverage.assessment}`);
 console.log(`  generated questions sampled: ${sampled}`);
+console.log(`  large-pool questions validated: ${largePoolQuestions}`);
 console.log("  mastery threshold: 80%");
 console.log("  certificates: 36/36 weeks + midterm + final + portfolio");
 console.log("  practice ledger: learner-scoped and non-mastery");
