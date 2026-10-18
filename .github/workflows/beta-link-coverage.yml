@@ -4,11 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - '**/index.html'
-      - '**/inndex.html'
-      - '**/*_index.html'
-      - '**/*-index.html'
-      - 'grades/grade-*/**/*.html'
+      - '*.html'
+      - '**/*.html'
       - 'scripts/inject-beta-links.mjs'
       - '.github/workflows/beta-link-coverage.yml'
   workflow_dispatch:
@@ -45,12 +42,12 @@ jobs:
         shell: bash
         run: |
           if git diff --quiet; then
-            echo "All visible index pages already have canonical Beta Program coverage."
+            echo "All public HTML pages already have canonical Beta Program coverage."
             exit 0
           fi
           git config user.name "Verve N Veda Beta Coverage"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html'
-          git commit -m "chore(beta): enforce canonical visible index coverage [skip beta-rollout]"
+          git commit -m "chore(beta): enforce canonical all-page coverage [skip beta-rollout]"
           git pull --rebase origin main
           git push origin HEAD:main
