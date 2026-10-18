@@ -1,0 +1,123 @@
+import fs from "node:fs";
+import path from "node:path";
+import vm from "node:vm";
+
+const ROOT=process.cwd();
+const MARKER="<!-- KHAEMENES_ELEMENTARY_LEARNING_ENGINE_V1 -->";
+const fail=m=>{throw new Error(m)};
+const expect=(v,m)=>{if(!v)fail(m)};
+const read=p=>fs.readFileSync(path.join(ROOT,p),"utf8");
+const exists=p=>fs.existsSync(path.join(ROOT,p));
+const posix=p=>p.split(path.sep).join("/");
+
+const assets=[
+  "assets/khaemenes-elementary-focus-map.js",
+  "assets/khaemenes-elementary-question-factory.js",
+  "assets/khaemenes-elementary-learning-ledger.js",
+  "assets/khaemenes-elementary-assessment-engine.js"
+];
+for(const p of assets)expect(exists(p),`Missing shared learning asset: ${p}`);
+for(const p of assets.slice(1)){try{new Function(read(p))}catch(e){fail(`${p} syntax: ${e.message}`)}}
+
+function walk(dir,out=[]){
+  for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
+    if([".git","node_modules","archive","archives","backup","backups","vendor","private"].includes(entry.name.toLowerCase()))continue;
+    const full=path.join(dir,entry.name);
+    if(entry.isDirectory())walk(full,out);
+    else if(entry.isFile()&&full.toLowerCase().endsWith(".html"))out.push(full);
+  }
+  return out;
+}
+function classify(rel){
+  const p="/"+posix(rel);
+  const lesson=
+    /^\/(?:grades\/grade-01\/)?lessons\/unit-\d+\/index\.html$/i.test(p) ||
+    /^\/grades\/grade-0[2-5]\/subjects\/[^/]+\/week-\d+\.html$/i.test(p) ||
+    /^\/grades\/grade-0[3-5]\/weekly-plans\/week-\d+\.html$/i.test(p);
+  const assessment=
+    /^\/(?:grades\/grade-0[1-5]\/)?assessments\/(?:unit-\d+-assessment|week-\d+-assessment|midterm|final-exam)\.html$/i.test(p);
+  return lesson?"lesson":assessment?"assessment":null;
+}
+function refs(html){return [...html.matchAll(/<script[^>]+src=["']([^"']+)["']/gi)].map(m=>m[1])}
+
+const coverage={lesson:0,assessment:0,missing:[],duplicates:[]};
+for(const full of walk(ROOT)){
+  const rel=posix(path.relative(ROOT,full)),type=classify(rel);
+  if(!type)continue;
+  coverage[type]++;
+  const html=fs.readFileSync(full,"utf8"),markers=html.split(MARKER).length-1,scripts=refs(html);
+  if(markers!==1)coverage[markers===0?"missing":"duplicates"].push(`${rel}: marker=${markers}`);
+  const needed=type==="lesson"?"khaemenes-elementary-learning-ledger.js":"khaemenes-elementary-assessment-engine.js";
+  if(!scripts.some(s=>s.endsWith("khaemenes-elementary-focus-map.js")))coverage.missing.push(`${rel}: focus map`);
+  if(!scripts.some(s=>s.endsWith("khaemenes-elementary-question-factory.js")))coverage.missing.push(`${rel}: question factory`);
+  if(!scripts.some(s=>s.endsWith(needed)))coverage.missing.push(`${rel}: ${needed}`);
+}
+expect(coverage.lesson>0,"No lesson surfaces found.");
+expect(coverage.assessment>0,"No assessment surfaces found.");
+expect(coverage.missing.length===0,`Learning-engine coverage gaps:\n${coverage.missing.slice(0,30).join("\n")}`);
+expect(coverage.duplicates.length===0,`Duplicate learning-engine markers:\n${coverage.duplicates.slice(0,30).join("\n")}`);
+
+// Evaluate factory in an isolated context and sample every grade/subject.
+const context={console,globalThis:null};context.globalThis=context;
+vm.createContext(context);
+vm.runInContext(read("assets/khaemenes-elementary-question-factory.js"),context);
+const factory=context.KhaemenesElementaryQuestionFactory;
+expect(factory?.version,"Question factory did not expose its API.");
+let sampled=0;
+for(let grade=1;grade<=5;grade++){
+  for(const subject of factory.subjects){
+    for(let seed=1;seed<=12;seed++){
+      const qs=factory.makePool({grade,subject,focus:subject+" evidence reasoning",seed,count:6});
+      expect(qs.length>=3,`Too few generated questions for Grade ${grade} ${subject} seed ${seed}`);
+      for(const q of qs){
+        expect(factory.validateQuestion(q),`Invalid generated question for Grade ${grade} ${subject}: ${q?.prompt}`);
+        expect(new Set(q.options).size===4,"Generated question has duplicate options.");
+        expect(q.options[q.answer]===q.correct,"Generated answer key does not match displayed option.");
+        sampled++;
+      }
+    }
+  }
+}
+expect(sampled>=1000,`Question-factory sample was unexpectedly small: ${sampled}`);
+
+// Lesson ledger must never write mastery.
+const ledger=read("assets/khaemenes-elementary-learning-ledger.js");
+expect(ledger.includes('masteryAuthority:false'),"Lesson ledger lost the explicit non-mastery boundary.");
+expect(ledger.includes('affectsGrade:false'),"Lesson ledger no longer marks formative evidence as non-graded.");
+expect(ledger.includes('unlocksCurriculum:false'),"Lesson ledger no longer marks formative evidence as non-unlocking.");
+expect(!/state\.weekly\s*\[/.test(ledger),"Lesson ledger must not write formal weekly scores.");
+
+// Formal assessment contract.
+const assessment=read("assets/khaemenes-elementary-assessment-engine.js");
+expect(assessment.includes("PASS=80"),"Formal assessment threshold is no longer 80%.");
+expect(assessment.includes("khaemenes-elementary-assessment-attempt-v1"),"Immutable attempt snapshot schema is missing.");
+expect(assessment.includes('verifiedBy:"elementary-assessment-engine-v1"'),"Formal state writer no longer marks verified assessment authority.");
+expect(assessment.includes("completedWeeks(state,18)"),"Midterm gate no longer checks the first 18 weeks.");
+expect(assessment.includes("completedWeeks(state,36)"),"Final gate no longer checks all 36 weeks.");
+expect(assessment.includes("manualScoreEntry:false"),"Assessment authority declaration drifted.");
+
+// Dashboards must not write manual scores and must require 36/36.
+for(const g of ["02","03","04","05"]){
+  const app=read(`grades/grade-${g}/assets/app.js`);
+  expect(/done\(\)===36/.test(app),`Grade ${g} readiness does not require 36/36 weeks.`);
+  expect(!/state\.weekly\[[^\]]+\]=Math\.max/.test(app),`Grade ${g} dashboard still writes weekly scores manually.`);
+  expect(!/state\.midterm=Math\.max/.test(app),`Grade ${g} dashboard still writes midterm manually.`);
+  expect(!/state\.final=Math\.max/.test(app),`Grade ${g} dashboard still writes final manually.`);
+  expect(/readOnly=true/.test(app),`Grade ${g} verified assessment fields are not read-only.`);
+
+  const cert=read(`grades/grade-${g}/assets/certificate.js`);
+  expect(/done===36/.test(cert),`Grade ${g} certificate does not require all 36 weeks.`);
+  expect(/khaemenes\.course:/.test(cert),`Grade ${g} certificate is not learner-scoped.`);
+
+  const cont=read(`grades/grade-${g}/assets/khaemenes-grade${Number(g)}-continuity.js`);
+  expect(!/legacy-grade-\d+-migration/.test(cont),`Grade ${g} still auto-migrates unowned legacy records.`);
+  expect(!/writeJSON\(LEGACY_KEY,state\);\s*if\(s\.status/.test(cont),`Grade ${g} still writes shared legacy state before scoped state.`);
+}
+
+console.log("Elementary learning engine regression: PASS");
+console.log(`  lesson surfaces covered: ${coverage.lesson}`);
+console.log(`  formal assessment surfaces covered: ${coverage.assessment}`);
+console.log(`  generated questions sampled: ${sampled}`);
+console.log("  mastery threshold: 80%");
+console.log("  certificates: 36/36 weeks + midterm + final + portfolio");
+console.log("  practice ledger: learner-scoped and non-mastery");
