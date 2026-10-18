@@ -1,0 +1,62 @@
+name: Elementary Experience Regression
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'index.html'
+      - 'grades/grade-01/index.html'
+      - 'grades/grade-02/index.html'
+      - 'grades/grade-03/index.html'
+      - 'grades/grade-04/index.html'
+      - 'grades/grade-05/index.html'
+      - 'assets/khaemenes-elementary-resources.js'
+      - 'assets/khaemenes-elementary-focus-map.js'
+      - 'assets/khaemenes-elementary-experience.js'
+      - 'assets/khaemenes-elementary-continuation-publisher.js'
+      - 'games/**'
+      - 'mentor-manifest.json'
+      - 'mentor-contract.json'
+      - 'tools/validate-elementary-experience.mjs'
+      - '.github/workflows/elementary-experience-regression.yml'
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'grades/grade-01/index.html'
+      - 'grades/grade-02/index.html'
+      - 'grades/grade-03/index.html'
+      - 'grades/grade-04/index.html'
+      - 'grades/grade-05/index.html'
+      - 'assets/khaemenes-elementary-resources.js'
+      - 'assets/khaemenes-elementary-focus-map.js'
+      - 'assets/khaemenes-elementary-experience.js'
+      - 'assets/khaemenes-elementary-continuation-publisher.js'
+      - 'games/**'
+      - 'mentor-manifest.json'
+      - 'mentor-contract.json'
+      - 'tools/validate-elementary-experience.mjs'
+      - '.github/workflows/elementary-experience-regression.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: elementary-experience-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Validate Elementary Mentor and family experience
+        run: node tools/validate-elementary-experience.mjs
