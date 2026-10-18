@@ -1,0 +1,80 @@
+name: Repair Printable Packet Navigation
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/repair-printable-navigation.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-elementary-printable-navigation
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Repair packet-relative navigation
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          root=Path("printables/printables")
+          pairs=[
+              ('../assets/','../../assets/'),
+              ('../index.html','../../index.html'),
+              ('../teacher-tools/','../../teacher-tools/'),
+              ('../assessments/','../../assessments/'),
+              ('../records/','../../records/'),
+              ('../lessons/','../../lessons/'),
+          ]
+          files=changes=0
+          for p in sorted(root.glob("*.html")):
+              s=p.read_text(encoding="utf-8")
+              n=s
+              local=0
+              for a,b in pairs:
+                  local += n.count(a)
+                  n=n.replace(a,b)
+              if n!=s:
+                  p.write_text(n,encoding="utf-8")
+                  files+=1
+                  changes+=local
+          print(f"Repaired {changes} packet navigation reference(s) across {files} file(s).")
+          PY
+
+      - name: Verify packet navigation
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          bad=[]
+          tokens=('../assets/','../teacher-tools/','../assessments/','../records/','../lessons/')
+          for p in Path("printables/printables").glob("*.html"):
+              s=p.read_text(encoding="utf-8")
+              for token in tokens:
+                  if token in s.replace('../../'+token[3:],''):
+                      bad.append((str(p),token))
+          assert not bad, bad[:20]
+          print("Printable navigation regression PASS.")
+          PY
+
+      - name: Commit repairs
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- printables/printables)" ]; then
+            echo "No printable navigation repairs needed."
+            exit 0
+          fi
+          git config user.name "Khaemenes Elementary Repair"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add printables/printables
+          git commit -m "Repair printable packet navigation"
+          git pull --rebase origin main
+          git push
