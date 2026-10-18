@@ -99,7 +99,7 @@ expect(assessment.includes("manualScoreEntry:false"),"Assessment authority decla
 // Dashboards must not write manual scores and must require 36/36.
 for(const g of ["02","03","04","05"]){
   const app=read(`grades/grade-${g}/assets/app.js`);
-  expect(/done\(\)===36/.test(app),`Grade ${g} readiness does not require 36/36 weeks.`);
+  expect(/(?:done|completedWeeks)\(\)===36/.test(app),`Grade ${g} readiness does not require 36/36 weeks.`);
   expect(!/state\.weekly\[[^\]]+\]=Math\.max/.test(app),`Grade ${g} dashboard still writes weekly scores manually.`);
   expect(!/state\.midterm=Math\.max/.test(app),`Grade ${g} dashboard still writes midterm manually.`);
   expect(!/state\.final=Math\.max/.test(app),`Grade ${g} dashboard still writes final manually.`);
@@ -113,6 +113,21 @@ for(const g of ["02","03","04","05"]){
   expect(!/legacy-grade-\d+-migration/.test(cont),`Grade ${g} still auto-migrates unowned legacy records.`);
   expect(!/writeJSON\(LEGACY_KEY,state\);\s*if\(s\.status/.test(cont),`Grade ${g} still writes shared legacy state before scoped state.`);
 }
+
+// Portfolio evidence bridge.
+const portfolio=read("grades/portfolio/index.html");
+expect(portfolio.includes('LEDGER_KEY="khaemenes_elementary_learning_ledger_v1"'),"Portfolio lost the Elementary learning-ledger bridge.");
+expect(portfolio.includes('ASSESSMENT_PREFIX="khaemenes.elementary.assessment.attempts"'),"Portfolio lost the verified assessment bridge.");
+expect(portfolio.includes("function scanElementaryLearningEvidence()"),"Portfolio no longer scans learner-scoped lesson/assessment evidence.");
+expect(portfolio.includes('source:"Elementary Learning Ledger"'),"Portfolio does not identify lesson-ledger evidence.");
+expect(portfolio.includes('source:"Verified Elementary Assessment"'),"Portfolio does not identify verified assessment evidence.");
+const formativeBlock=portfolio.match(/source:"Elementary Learning Ledger"[\s\S]{0,1800}?tags:\[[^\]]+\]/);
+expect(formativeBlock,"Could not isolate Portfolio formative-evidence mapping.");
+expect(formativeBlock[0].includes("mastery:null"),"Formative lesson evidence must never be imported as mastery.");
+const verifiedBlock=portfolio.match(/source:"Verified Elementary Assessment"[\s\S]{0,1900}?tags:\[[^\]]+\]/);
+expect(verifiedBlock,"Could not isolate Portfolio verified-assessment mapping.");
+expect(verifiedBlock[0].includes("mastery:Number(attempt.score)||0"),"Verified assessment score is not preserved as mastery evidence.");
+expect(!verifiedBlock[0].includes("responses:"),"Portfolio must not import assessment answer-level payloads.");
 
 console.log("Elementary learning engine regression: PASS");
 console.log(`  lesson surfaces covered: ${coverage.lesson}`);
