@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "sourceId": "khaemenes.elementary",
   "name": "Khaemenes Elementary",
   "classification": "educational",
@@ -605,13 +605,44 @@
       "affectsPlacement": false,
       "diagnostic": false
     },
-    "mentorContextPolicy": "active-family-registry-learner-id-must-match"
+    "mentorContextPolicy": "active-family-registry-learner-id-must-match",
+    "lessonLedgerKey": "khaemenes_elementary_learning_ledger_v1",
+    "assessmentAttemptPrefix": "khaemenes.elementary.assessment.attempts"
   },
   "authorityMap": {
     "familyRegistry": "learner identity and formal grade placement",
-    "courseEngine": "scores, assessments, mastery, progression, portfolio gates, and certification",
+    "courseEngine": "verified assessment attempts, scores, mastery, progression, portfolio gates, and certification",
     "naib": "routing, matching, and academic navigation",
     "archaemenes": "educational mentorship, clues, strategy, reflection, and support handoff",
     "familyEducator": "human observation, judgment, and learner support"
+  },
+  "learningEngine": {
+    "rolloutMarker": "KHAEMENES_ELEMENTARY_LEARNING_ENGINE_V1",
+    "questionFactory": "assets/khaemenes-elementary-question-factory.js",
+    "lessonLedger": "assets/khaemenes-elementary-learning-ledger.js",
+    "formalAssessmentEngine": "assets/khaemenes-elementary-assessment-engine.js",
+    "compactFocusMap": "assets/khaemenes-elementary-focus-map.js",
+    "lessonLedgerKey": "khaemenes_elementary_learning_ledger_v1",
+    "assessmentAttemptPrefix": "khaemenes.elementary.assessment.attempts",
+    "masteryThreshold": 80,
+    "weeklyQuizPolicy": "open-book-randomized",
+    "midtermPolicy": "closed-book-randomized",
+    "finalPolicy": "closed-book-randomized",
+    "attemptPolicy": "immutable-snapshot-best-verified-score",
+    "progressionPolicy": "prior-week-mastery-required",
+    "certificationPolicy": "36-of-36-weekly-mastery-plus-midterm-final-and-adult-reviewed-portfolio",
+    "formativePolicy": {
+      "awardsMastery": false,
+      "changesScore": false,
+      "unlocksCurriculum": false,
+      "changesPlacement": false
+    },
+    "mentorEvidencePolicy": {
+      "lessonSummaryOnly": true,
+      "assessmentScoreAndReviewSkillsOnly": true,
+      "exposesQuestions": false,
+      "exposesOptions": false,
+      "exposesAnswerKeys": false
+    }
   }
 }
