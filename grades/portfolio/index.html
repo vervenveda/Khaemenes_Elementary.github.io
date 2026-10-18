@@ -216,6 +216,7 @@ h1,h2,h3,h4{font-family:var(--serif)}h1{margin:10px 0 4px;font-size:clamp(2.9rem
 <script>
 (()=>{"use strict";
 const $=id=>document.getElementById(id),KEY="khaemenes_elementary_portfolio_builder_v2";
+const LEDGER_KEY="khaemenes_elementary_learning_ledger_v1",ASSESSMENT_PREFIX="khaemenes.elementary.assessment.attempts",REGISTRY_KEY="khaemenes_family_registry_v1",ACTIVE_LEARNER_KEY="khaemenes_active_learner_v1";
 const VAULT_DB="KhaemenesElementaryPortfolioVault",VAULT_VER=1,VAULT_META="meta",VAULT_DATA="data";
 let vaultDB=null;
 const SUBJECTS=["Language Arts","Mathematics","Science","Social Studies","Art","Music","Physical Education","Technology","Life Skills","Interdisciplinary"];
@@ -291,8 +292,72 @@ function addEvidence(ev){
  if(!s.evidence.some(x=>fingerprint(x)===fingerprint(item)))s.evidence.unshift(item)
 }
 function safeParse(raw){try{return JSON.parse(raw)}catch{return null}}
+function activeAcademyLearner(){
+ const id=safeParse(localStorage.getItem(ACTIVE_LEARNER_KEY)||"null"),registry=safeParse(localStorage.getItem(REGISTRY_KEY)||"null");
+ return id&&registry?.learners?.[id]?registry.learners[id]:null
+}
+function elementarySubjectLabel(value){
+ const v=String(value||"").toLowerCase();
+ if(/language|literacy|reading|writing/.test(v))return"Language Arts";
+ if(/math/.test(v))return"Mathematics";
+ if(/science|inquiry/.test(v))return"Science";
+ if(/social|civic|history|geograph|economic/.test(v))return"Social Studies";
+ if(/art/.test(v))return"Art";
+ if(/music/.test(v))return"Music";
+ if(/health|movement|physical|pe|sel/.test(v))return"Physical Education";
+ if(/tech|digital|computer|tool/.test(v))return"Technology";
+ return"Interdisciplinary"
+}
+function scanElementaryLearningEvidence(){
+ const learner=activeAcademyLearner();if(!learner?.learnerId)return 0;
+ const grade=String(learner.grade||"").replace(/[^0-9]/g,"").padStart(2,"0");
+ if(String(learner.stage||"").toLowerCase()!=="elementary"||!["01","02","03","04","05"].includes(grade))return 0;
+ let found=0;
+ const ledger=safeParse(localStorage.getItem(LEDGER_KEY)||"{}")||{};
+ const lessonRecords=Array.isArray(ledger[learner.learnerId])?ledger[learner.learnerId]:[];
+ lessonRecords.forEach(record=>{
+   if(record.preview||record.learnerId!==learner.learnerId)return;
+   const before=s.evidence.length,subject=elementarySubjectLabel(record.subject);
+   addEvidence({
+     source:"Elementary Learning Ledger",
+     sourceKey:LEDGER_KEY,
+     externalId:String(record.id||""),
+     subject,
+     type:"reflection",
+     title:`Grade ${Number(record.grade||grade)} · Week ${String(record.week||"—").padStart(2,"0")} · ${record.day||"Lesson Check"}`,
+     description:`Formative lesson checkpoint · ${Number(record.correct||0)}/${Number(record.questionCount||0)} correct · ${Number(record.score||0)}%. Practice evidence only; this record does not award mastery.`,
+     reflection:String(record.reflection||""),
+     date:record.completedAt||new Date().toISOString(),
+     mastery:null,
+     tags:["lesson-checkpoint","formative","learner-scoped",String(record.focus||"").slice(0,80)].filter(Boolean)
+   });
+   found+=s.evidence.length-before
+ });
+ const attemptKey=`${ASSESSMENT_PREFIX}:${learner.learnerId}:grade-${grade}`,attempts=safeParse(localStorage.getItem(attemptKey)||"[]");
+ (Array.isArray(attempts)?attempts:[]).forEach(attempt=>{
+   if(attempt.preview||attempt.learnerId!==learner.learnerId)return;
+   const before=s.evidence.length,kind=attempt.kind==="weekly"?`Week ${String(attempt.week||"—").padStart(2,"0")} Mastery Quiz`:attempt.kind==="midterm"?"Midyear Mastery Assessment":"Final Mastery Assessment";
+   const review=[...new Set((attempt.responses||[]).filter(r=>r.correct===false).map(r=>r.skill||r.subject).filter(Boolean))].slice(0,6);
+   addEvidence({
+     source:"Verified Elementary Assessment",
+     sourceKey:attemptKey,
+     externalId:String(attempt.id||""),
+     subject:"Interdisciplinary",
+     type:"mastery",
+     title:`Grade ${Number(attempt.grade||grade)} · ${kind}`,
+     description:`Verified randomized formal assessment · ${Number(attempt.correct||0)}/${Number(attempt.questionCount||0)} correct · ${Number(attempt.score||0)}%. ${review.length?"Review skills: "+review.join(", ")+".":""}`,
+     reflection:"",
+     date:attempt.completedAt||new Date().toISOString(),
+     mastery:Number(attempt.score)||0,
+     tags:["verified-assessment",attempt.kind||"assessment",attempt.mastered?"mastered":"review"].filter(Boolean)
+   });
+   found+=s.evidence.length-before
+ });
+ return found
+}
 function scanLocalApps(){
  let found=0;KNOWN_SOURCES.forEach(src=>{const raw=localStorage.getItem(src.key);if(!raw)return;const data=safeParse(raw);if(!data)return;const before=s.evidence.length;adaptSource(src,data);found+=s.evidence.length-before});
+ found+=scanElementaryLearningEvidence();
  s.history.unshift(`${new Date().toLocaleString()} · Local scan added ${found} new evidence item${found===1?"":"s"}.`);s.history=s.history.slice(0,20);renderAll();save(`Local scan complete · ${found} new item${found===1?"":"s"}`)
 }
 function baseEv(src,title,description,date,extra={}){return Object.assign({source:src.name,sourceKey:src.key,subject:src.subject,title,description:description||"",date:date||new Date().toISOString(),tags:[src.adapter]},extra)}
@@ -346,7 +411,10 @@ function addManual(){
  const title=$("manualTitle").value.trim();if(!title)return;addEvidence({source:"Manual Evidence",subject:$("manualSubject").value,title,type:"reflection",description:$("manualReflection").value.trim()});$("manualTitle").value="";$("manualReflection").value="";renderAll();save("Manual evidence added")
 }
 function renderSources(){
- $("sourceGrid").innerHTML=KNOWN_SOURCES.map(src=>{const present=!!localStorage.getItem(src.key);return `<article class="source"><strong>${src.icon} ${esc(src.name)}</strong><p>${esc(src.subject)} · ${present?"Saved data detected on this origin":"No same-origin save detected"}</p><span class="chip ${present?"approved":"pending"}">${present?"available":"import if external"}</span></article>`}).join("")
+ const learner=activeAcademyLearner(),grade=String(learner?.grade||"").replace(/[^0-9]/g,"").padStart(2,"0"),ledger=safeParse(localStorage.getItem(LEDGER_KEY)||"{}")||{},lessonCount=learner?.learnerId&&Array.isArray(ledger[learner.learnerId])?ledger[learner.learnerId].length:0,attemptKey=learner?.learnerId?`${ASSESSMENT_PREFIX}:${learner.learnerId}:grade-${grade}`:"",attempts=attemptKey?safeParse(localStorage.getItem(attemptKey)||"[]"):[],assessmentCount=Array.isArray(attempts)?attempts.length:0;
+ const core=KNOWN_SOURCES.map(src=>{const present=!!localStorage.getItem(src.key);return `<article class="source"><strong>${src.icon} ${esc(src.name)}</strong><p>${esc(src.subject)} · ${present?"Saved data detected on this origin":"No same-origin save detected"}</p><span class="chip ${present?"approved":"pending"}">${present?"available":"import if external"}</span></article>`}).join("");
+ const learning=`<article class="source"><strong>📘 Elementary Learning Ledger</strong><p>Learner-scoped formative lesson checkpoints · ${lessonCount} saved</p><span class="chip ${lessonCount?"approved":"pending"}">${lessonCount?"available":"no learner evidence yet"}</span></article><article class="source"><strong>🏆 Verified Assessments</strong><p>Randomized formal attempt snapshots · ${assessmentCount} saved</p><span class="chip ${assessmentCount?"approved":"pending"}">${assessmentCount?"available":"no verified attempts yet"}</span></article>`;
+ $("sourceGrid").innerHTML=learning+core
 }
 function subjectsInEvidence(){return [...new Set(s.evidence.map(e=>e.subject).filter(Boolean))].sort()}
 function renderFilters(){const cur=$("subjectFilter").value||"all";$("subjectFilter").innerHTML=`<option value="all">All subjects</option>`+SUBJECTS.map(x=>`<option>${x}</option>`).join("");$("subjectFilter").value=cur}
@@ -525,6 +593,12 @@ $("saveReviewBtn").onclick=()=>{s.history.unshift(`${new Date().toLocaleString()
 
 $("studentName").value=s.profile.student||"";$("grade").value=s.profile.grade||"Grade 2";$("schoolYear").value=s.profile.year||"";$("reviewerName").value=s.profile.reviewer||"";$("studentReflection").value=s.studentReflection||"";$("checkBreadth").checked=!!s.review.breadth;$("checkReflection").checked=!!s.review.reflection;$("checkMastery").checked=!!s.review.mastery;$("checkAuthentic").checked=!!s.review.authentic;$("reviewerNote").value=s.review.note||"";
 $("manualSubject").innerHTML=SUBJECTS.map(x=>`<option>${x}</option>`).join("");
+const automaticLearningEvidence=scanElementaryLearningEvidence();
+if(automaticLearningEvidence){
+ s.history.unshift(`${new Date().toLocaleString()} · Added ${automaticLearningEvidence} new learner-scoped lesson/assessment evidence item${automaticLearningEvidence===1?"":"s"} for human review.`);
+ s.history=s.history.slice(0,20);
+ try{localStorage.setItem(KEY,JSON.stringify(s))}catch{}
+}
 renderAll();renderAppFilters();renderApps();naibRenderSuggestions();updateVaultCount();
 })();
 </script>
