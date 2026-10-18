@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "sourceId": "khaemenes.elementary",
   "name": "Khaemenes Elementary",
   "classification": "educational",
@@ -566,5 +566,52 @@
       "energy": "curious"
     }
   ],
-  "mentorNotes": "Version 2 aligns Mentor routing to the current grade and games folder architecture. Only repository targets verified during the 2026-08-09 audit are included. Legacy Little Kitchen Helper and Lunar Phase Explorer entries were not carried forward because a current Elementary successor path was not verified."
+  "mentorNotes": "Version 2 aligns Mentor routing to the current grade and games folder architecture. Only repository targets verified during the 2026-08-09 audit are included. Legacy Little Kitchen Helper and Lunar Phase Explorer entries were not carried forward because a current Elementary successor path was not verified.",
+  "mentorAuthority": "academy-archaemenes",
+  "mentorId": "archaemenes",
+  "mentorName": "Archaemenes",
+  "mentorExpression": "Academy Mentor",
+  "mentorUrl": "https://vervenveda.com/Khaemenes_Academy.github.io/mentor/",
+  "mentorIdentitySource": "academy-family-registry-active-learner",
+  "identityPolicy": {
+    "familyAuthority": "academy-family-registry",
+    "schoolSpecificMentorProgram": false,
+    "learnerIdInUrl": false,
+    "familyIdInUrl": false
+  },
+  "mentorExperience": {
+    "sharedExperienceLayer": "assets/khaemenes-elementary-experience.js",
+    "sharedResourceRegistry": "assets/khaemenes-elementary-resources.js",
+    "contextKey": "khaemenes_elementary_mentor_context_v1",
+    "observationKey": "khaemenes_elementary_observations_v1",
+    "activityLogKey": "khaemenes_elementary_learning_log_v1",
+    "developmentalModes": {
+      "01": "Gentle learning guide",
+      "02": "Curious learning coach",
+      "03": "Independent-learning coach",
+      "04": "Study-strategy coach",
+      "05": "Scholarship & readiness coach"
+    },
+    "formalStepFirst": true,
+    "observations": {
+      "labels": [
+        "support",
+        "independent",
+        "transfer"
+      ],
+      "affectsMastery": false,
+      "affectsAssessment": false,
+      "affectsProgression": false,
+      "affectsPlacement": false,
+      "diagnostic": false
+    },
+    "mentorContextPolicy": "active-family-registry-learner-id-must-match"
+  },
+  "authorityMap": {
+    "familyRegistry": "learner identity and formal grade placement",
+    "courseEngine": "scores, assessments, mastery, progression, portfolio gates, and certification",
+    "naib": "routing, matching, and academic navigation",
+    "archaemenes": "educational mentorship, clues, strategy, reflection, and support handoff",
+    "familyEducator": "human observation, judgment, and learner support"
+  }
 }
