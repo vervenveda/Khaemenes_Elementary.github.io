@@ -1,0 +1,70 @@
+name: Repair Subject Index Links
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/repair-subject-index-links.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-elementary-subject-index-links
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Repair subject-index printable destinations
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          files=replacements=0
+          for p in Path("subjects").glob("*/index.html"):
+              s=p.read_text(encoding="utf-8")
+              n,c=re.subn(
+                  r"\.\./\.\./printables/week-(\d{2})-packet\.html",
+                  lambda m: "../../printables/printables/unit-"+m.group(1)+"-packet.html",
+                  s
+              )
+              if n!=s:
+                  p.write_text(n,encoding="utf-8")
+                  files+=1
+                  replacements+=c
+          print(f"Repaired {replacements} subject-index printable route(s) across {files} file(s).")
+          PY
+
+      - name: Verify
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          bad=[]
+          for p in Path("subjects").glob("*/index.html"):
+              if re.search(r"\.\./\.\./printables/week-\d{2}-packet\.html",p.read_text(encoding="utf-8")):
+                  bad.append(str(p))
+          assert not bad,bad
+          print("Subject-index printable regression PASS.")
+          PY
+
+      - name: Commit repairs
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- subjects)" ]; then exit 0; fi
+          git config user.name "Khaemenes Elementary Repair"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add subjects
+          git commit -m "Repair subject index printable routes"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then exit 0; fi
+          done
+          exit 1
