@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "school": "Khaemenes Elementary",
   "stage": "elementary",
   "audience": [
@@ -35,7 +35,9 @@
     "NAIB routes and delegates without becoming a second educational Mentor.",
     "Course and assessment engines remain authoritative for mastery, grades, progression, certificates, and protected assessment state.",
     "Mentor support must remain age-appropriate, dignity-preserving, clue-first, and non-dependent.",
-    "Established Master Directory names and routes are not renamed to express authority changes."
+    "Established Master Directory names and routes are not renamed to express authority changes.",
+    "Formal Elementary scores come from verified assessment attempts rather than direct dashboard score entry.",
+    "Lesson checkpoints are formative evidence only and cannot satisfy a mastery gate."
   ],
   "authority": {
     "awardsMastery": false,
@@ -91,5 +93,37 @@
     "03": "Academy Mentor · independent-learning coach",
     "04": "Academy Mentor · study-strategy coach",
     "05": "Academy Mentor · scholarship and readiness coach"
+  },
+  "learningEngine": {
+    "questionFactory": "assets/khaemenes-elementary-question-factory.js",
+    "lessonLedger": "assets/khaemenes-elementary-learning-ledger.js",
+    "formalAssessmentEngine": "assets/khaemenes-elementary-assessment-engine.js",
+    "formalScoreAuthority": "verified-randomized-assessment-attempt",
+    "weeklyQuiz": "open-book",
+    "midterm": "closed-book",
+    "final": "closed-book",
+    "attemptSnapshot": "immutable",
+    "bestScorePreserved": true,
+    "retakesDrawNewAttempt": true,
+    "masteryThreshold": 80,
+    "weeklyMasteryRequired": "36/36",
+    "certificateRequires": [
+      "36 weekly mastery gates",
+      "midterm >= 80",
+      "final >= 80",
+      "adult-reviewed portfolio"
+    ],
+    "formativeEvidence": {
+      "awardsMastery": false,
+      "changesScore": false,
+      "unlocksCurriculum": false
+    },
+    "mentorRemediation": {
+      "receivesScoreSummary": true,
+      "receivesReviewSkills": true,
+      "receivesQuestionText": false,
+      "receivesAnswerOptions": false,
+      "receivesAnswerKey": false
+    }
   }
 }
