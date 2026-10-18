@@ -1,0 +1,62 @@
+name: Elementary Learning Engine Regression
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'assets/khaemenes-elementary-focus-map.js'
+      - 'assets/khaemenes-elementary-question-factory.js'
+      - 'assets/khaemenes-elementary-learning-ledger.js'
+      - 'assets/khaemenes-elementary-assessment-engine.js'
+      - 'grades/grade-*/assets/app.js'
+      - 'grades/grade-*/assets/certificate.js'
+      - 'grades/grade-*/assets/khaemenes-grade*-continuity.js'
+      - 'grades/grade-*/lessons/**'
+      - 'grades/grade-*/subjects/**'
+      - 'grades/grade-*/weekly-plans/**'
+      - 'grades/grade-*/assessments/**'
+      - 'lessons/**'
+      - 'assessments/**'
+      - 'scripts/inject-elementary-learning-engine.mjs'
+      - 'tools/validate-elementary-learning-engine.mjs'
+      - '.github/workflows/elementary-learning-engine-regression.yml'
+  pull_request:
+    paths:
+      - 'assets/khaemenes-elementary-focus-map.js'
+      - 'assets/khaemenes-elementary-question-factory.js'
+      - 'assets/khaemenes-elementary-learning-ledger.js'
+      - 'assets/khaemenes-elementary-assessment-engine.js'
+      - 'grades/grade-*/assets/app.js'
+      - 'grades/grade-*/assets/certificate.js'
+      - 'grades/grade-*/assets/khaemenes-grade*-continuity.js'
+      - 'grades/grade-*/lessons/**'
+      - 'grades/grade-*/subjects/**'
+      - 'grades/grade-*/weekly-plans/**'
+      - 'grades/grade-*/assessments/**'
+      - 'lessons/**'
+      - 'assessments/**'
+      - 'scripts/inject-elementary-learning-engine.mjs'
+      - 'tools/validate-elementary-learning-engine.mjs'
+      - '.github/workflows/elementary-learning-engine-regression.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: elementary-learning-regression-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Validate every Elementary lesson, quiz, and test
+        run: node tools/validate-elementary-learning-engine.mjs
