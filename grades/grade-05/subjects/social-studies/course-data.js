@@ -16,7 +16,7 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
     "midtermMode": "closed-book teacher-supervised",
     "finalMode": "closed-book teacher-supervised",
     "storageKey": "khaemenes_grade5_social_studies_v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "updated": "2026-10-19",
     "authors": "Jennifer Kay Pearl",
     "stateLocalizable": true,
@@ -40,7 +40,12 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
     "note": "The grade-wide A++ weekly assessment remains integrated portfolio evidence. Formal Social Studies mastery is recorded by this subject course.",
     "assessmentModel": "Monte Carlo randomized forms with answer shuffling, recent-form anti-repeat weighting, saved attempt snapshots, and unit-stratified cumulative exams.",
     "antiRepeatDepth": 2,
-    "cumulativeBlueprint": "unit-stratified"
+    "cumulativeBlueprint": "unit-stratified",
+    "assessmentSpecificity": "Four formerly generic meta-reasoning items per week (144 total) are topic-specific historical/civic questions; generic disciplinary reasoning remains as a minority spiral.",
+    "statePacks": {
+      "florida": "STATE_PACK_FLORIDA.md"
+    },
+    "cumulativeWrittenEvidence": true
   },
   "strands": [
     "Historical Inquiry & Evidence",
@@ -228,15 +233,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W01-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Historical Inquiry, Timelines, and Argument\"?",
+          "prompt": "Which action best demonstrates corroboration in historical inquiry?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Compare evidence from several independent sources before deciding what is supported.",
+            "Use the first source found and stop.",
+            "Ignore sources that disagree.",
+            "Replace evidence with a personal opinion."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
@@ -254,41 +259,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W01-G1",
-          "prompt": "How should geography be used when analyzing \"Historical Inquiry, Timelines, and Argument\"?",
+          "prompt": "Why is chronology important when explaining a historical event?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It helps establish sequence and whether proposed causes occurred before their effects.",
+            "It proves that the earliest event caused everything later.",
+            "It makes source creators irrelevant.",
+            "It replaces the need for evidence."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G5SS-W01-A1",
-          "prompt": "What makes an argument about \"Historical Inquiry, Timelines, and Argument\" defensible?",
+          "prompt": "What should a historian do when a strong source contradicts an initial claim?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Revise or qualify the claim and explain how the new evidence changes the interpretation.",
+            "Delete the contradictory source.",
+            "Keep the original wording unchanged.",
+            "Assume the source is wrong because it disagrees."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G5SS-W01-T1",
-          "prompt": "Which approach best transfers Week 1 learning to an unfamiliar case?",
+          "prompt": "Which statement best distinguishes evidence from a claim?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Evidence is information from sources; a claim is a conclusion the historian supports with that evidence.",
+            "Evidence and claims are the same thing.",
+            "A claim must be a quotation.",
+            "Evidence is always an opinion."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
@@ -412,15 +417,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W01-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Historical Inquiry, Timelines, and Argument\"?",
+          "prompt": "Which action best demonstrates corroboration in historical inquiry?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Compare evidence from several independent sources before deciding what is supported.",
+            "Use the first source found and stop.",
+            "Ignore sources that disagree.",
+            "Replace evidence with a personal opinion."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
@@ -438,41 +443,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W01-G1",
-          "prompt": "How should geography be used when analyzing \"Historical Inquiry, Timelines, and Argument\"?",
+          "prompt": "Why is chronology important when explaining a historical event?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It helps establish sequence and whether proposed causes occurred before their effects.",
+            "It proves that the earliest event caused everything later.",
+            "It makes source creators irrelevant.",
+            "It replaces the need for evidence."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G5SS-W01-A1",
-          "prompt": "What makes an argument about \"Historical Inquiry, Timelines, and Argument\" defensible?",
+          "prompt": "What should a historian do when a strong source contradicts an initial claim?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Revise or qualify the claim and explain how the new evidence changes the interpretation.",
+            "Delete the contradictory source.",
+            "Keep the original wording unchanged.",
+            "Assume the source is wrong because it disagrees."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G5SS-W01-T1",
-          "prompt": "Which approach best transfers Week 1 learning to an unfamiliar case?",
+          "prompt": "Which statement best distinguishes evidence from a claim?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Evidence is information from sources; a claim is a conclusion the historian supports with that evidence.",
+            "Evidence and claims are the same thing.",
+            "A claim must be a quotation.",
+            "Evidence is always an opinion."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
@@ -659,15 +664,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W02-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"North America: Physical Geography, Regions, and Spatial Evidence\"?",
+          "prompt": "What do latitude and longitude provide that a relative-location description does not?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "A coordinate system for locating a place precisely on Earth.",
+            "A list of state laws.",
+            "A timeline of settlement.",
+            "A measure of economic productivity."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
@@ -685,41 +690,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W02-G1",
-          "prompt": "How should geography be used when analyzing \"North America: Physical Geography, Regions, and Spatial Evidence\"?",
+          "prompt": "Which map task best demonstrates knowledge of U.S. political geography?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Locate states, state capitals, and U.S. territories on a current political map.",
+            "Label only mountain ranges.",
+            "Draw one historical route without place names.",
+            "List climates without mapping them."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G5SS-W02-A1",
-          "prompt": "What makes an argument about \"North America: Physical Geography, Regions, and Spatial Evidence\" defensible?",
+          "prompt": "Why should historians compare a historical map with a current map?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Boundaries, names, settlements, and political control can change over time.",
+            "Current maps make historical maps useless.",
+            "Historical maps always show modern borders.",
+            "Map dates do not affect interpretation."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G5SS-W02-T1",
-          "prompt": "Which approach best transfers Week 2 learning to an unfamiliar case?",
+          "prompt": "How can a past natural event matter to historical interpretation?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "It can alter settlement, transportation, economies, migration, or physical environments and should be analyzed with evidence.",
+            "Natural events never affect human history.",
+            "A natural event automatically explains every later decision.",
+            "Only political events belong in history."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
@@ -843,15 +848,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W02-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"North America: Physical Geography, Regions, and Spatial Evidence\"?",
+          "prompt": "What do latitude and longitude provide that a relative-location description does not?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "A coordinate system for locating a place precisely on Earth.",
+            "A list of state laws.",
+            "A timeline of settlement.",
+            "A measure of economic productivity."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
@@ -869,41 +874,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W02-G1",
-          "prompt": "How should geography be used when analyzing \"North America: Physical Geography, Regions, and Spatial Evidence\"?",
+          "prompt": "Which map task best demonstrates knowledge of U.S. political geography?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Locate states, state capitals, and U.S. territories on a current political map.",
+            "Label only mountain ranges.",
+            "Draw one historical route without place names.",
+            "List climates without mapping them."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G5SS-W02-A1",
-          "prompt": "What makes an argument about \"North America: Physical Geography, Regions, and Spatial Evidence\" defensible?",
+          "prompt": "Why should historians compare a historical map with a current map?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Boundaries, names, settlements, and political control can change over time.",
+            "Current maps make historical maps useless.",
+            "Historical maps always show modern borders.",
+            "Map dates do not affect interpretation."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G5SS-W02-T1",
-          "prompt": "Which approach best transfers Week 2 learning to an unfamiliar case?",
+          "prompt": "How can a past natural event matter to historical interpretation?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "It can alter settlement, transportation, economies, migration, or physical environments and should be analyzed with evidence.",
+            "Natural events never affect human history.",
+            "A natural event automatically explains every later decision.",
+            "Only political events belong in history."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
@@ -1116,15 +1121,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W03-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Indigenous North America: Nations, Governments, Economies, and Homelands\"?",
+          "prompt": "What does Indigenous sovereignty mean in the study of North American history?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Indigenous nations possess political authority and governance that did not begin with the United States.",
+            "All Indigenous communities were governed by colonial governments before contact.",
+            "Sovereignty means only cultural tradition.",
+            "Sovereignty ended everywhere after European arrival."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
@@ -1142,41 +1147,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W03-G1",
-          "prompt": "How should geography be used when analyzing \"Indigenous North America: Nations, Governments, Economies, and Homelands\"?",
+          "prompt": "Why should Grade 5 students study specific Indigenous nations rather than a single generic 'Native American culture'?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Nations differed in governments, economies, languages, homelands, technologies, and histories.",
+            "All nations had identical institutions.",
+            "Regional differences were unimportant.",
+            "Specific names make comparison less accurate."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G5SS-W03-A1",
-          "prompt": "What makes an argument about \"Indigenous North America: Nations, Governments, Economies, and Homelands\" defensible?",
+          "prompt": "Which evidence best supports a study of an Indigenous nation's present-day government?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "A current official tribal-nation source considered alongside historical evidence.",
+            "A costume illustration with no source.",
+            "A nineteenth-century outsider account by itself.",
+            "An unsourced social-media claim."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G5SS-W03-T1",
-          "prompt": "Which approach best transfers Week 3 learning to an unfamiliar case?",
+          "prompt": "How should geography be used when comparing Indigenous nations?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "As one influence on resources and choices, not as a force that determines an entire culture.",
+            "As proof that climate completely determines government.",
+            "As a reason to ignore trade networks.",
+            "As a substitute for nation-created sources."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
@@ -1300,15 +1305,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W03-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Indigenous North America: Nations, Governments, Economies, and Homelands\"?",
+          "prompt": "What does Indigenous sovereignty mean in the study of North American history?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Indigenous nations possess political authority and governance that did not begin with the United States.",
+            "All Indigenous communities were governed by colonial governments before contact.",
+            "Sovereignty means only cultural tradition.",
+            "Sovereignty ended everywhere after European arrival."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
@@ -1326,41 +1331,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W03-G1",
-          "prompt": "How should geography be used when analyzing \"Indigenous North America: Nations, Governments, Economies, and Homelands\"?",
+          "prompt": "Why should Grade 5 students study specific Indigenous nations rather than a single generic 'Native American culture'?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Nations differed in governments, economies, languages, homelands, technologies, and histories.",
+            "All nations had identical institutions.",
+            "Regional differences were unimportant.",
+            "Specific names make comparison less accurate."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G5SS-W03-A1",
-          "prompt": "What makes an argument about \"Indigenous North America: Nations, Governments, Economies, and Homelands\" defensible?",
+          "prompt": "Which evidence best supports a study of an Indigenous nation's present-day government?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "A current official tribal-nation source considered alongside historical evidence.",
+            "A costume illustration with no source.",
+            "A nineteenth-century outsider account by itself.",
+            "An unsourced social-media claim."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G5SS-W03-T1",
-          "prompt": "Which approach best transfers Week 3 learning to an unfamiliar case?",
+          "prompt": "How should geography be used when comparing Indigenous nations?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "As one influence on resources and choices, not as a force that determines an entire culture.",
+            "As proof that climate completely determines government.",
+            "As a reason to ignore trade networks.",
+            "As a substitute for nation-created sources."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
@@ -1599,15 +1604,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W04-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Complex Societies before 1492: Mesoamerica, Mississippian Worlds, Pueblo Peoples, and Arctic Communities\"?",
+          "prompt": "Why is Cahokia important when studying pre-1492 North America?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "It demonstrates that large, complex Mississippian urban and political centers existed before European colonization.",
+            "It was the first English colony.",
+            "It was founded after the American Revolution.",
+            "It proves all Indigenous societies were urban."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
@@ -1625,41 +1630,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W04-G1",
-          "prompt": "How should geography be used when analyzing \"Complex Societies before 1492: Mesoamerica, Mississippian Worlds, Pueblo Peoples, and Arctic Communities\"?",
+          "prompt": "Which comparison is most historically responsible?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Compare Maya, Mexica/Aztec, Mississippian, Pueblo, and Arctic communities using specific evidence about government, economy, environment, and culture.",
+            "Treat every society in the Americas as one civilization.",
+            "Rank societies only by similarity to Europe.",
+            "Use one artifact to describe an entire continent."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G5SS-W04-A1",
-          "prompt": "What makes an argument about \"Complex Societies before 1492: Mesoamerica, Mississippian Worlds, Pueblo Peoples, and Arctic Communities\" defensible?",
+          "prompt": "What does Pueblo agriculture illustrate?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Communities developed technologies and practices suited to local environments while maintaining complex social and political life.",
+            "Desert environments made agriculture impossible.",
+            "All Pueblo peoples used identical practices in every place and period.",
+            "Geography fully determined belief systems."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G5SS-W04-T1",
-          "prompt": "Which approach best transfers Week 4 learning to an unfamiliar case?",
+          "prompt": "Why should Arctic Indigenous communities be studied as complex societies rather than as examples of 'survival only'?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "They developed sophisticated technologies, social systems, knowledge, trade, and cultural traditions adapted to specific regions.",
+            "Cold climates prevented political organization.",
+            "Trade did not occur in Arctic regions.",
+            "Technology means only metal tools."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
@@ -1783,15 +1788,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W04-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Complex Societies before 1492: Mesoamerica, Mississippian Worlds, Pueblo Peoples, and Arctic Communities\"?",
+          "prompt": "Why is Cahokia important when studying pre-1492 North America?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "It demonstrates that large, complex Mississippian urban and political centers existed before European colonization.",
+            "It was the first English colony.",
+            "It was founded after the American Revolution.",
+            "It proves all Indigenous societies were urban."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
@@ -1809,41 +1814,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W04-G1",
-          "prompt": "How should geography be used when analyzing \"Complex Societies before 1492: Mesoamerica, Mississippian Worlds, Pueblo Peoples, and Arctic Communities\"?",
+          "prompt": "Which comparison is most historically responsible?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Compare Maya, Mexica/Aztec, Mississippian, Pueblo, and Arctic communities using specific evidence about government, economy, environment, and culture.",
+            "Treat every society in the Americas as one civilization.",
+            "Rank societies only by similarity to Europe.",
+            "Use one artifact to describe an entire continent."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G5SS-W04-A1",
-          "prompt": "What makes an argument about \"Complex Societies before 1492: Mesoamerica, Mississippian Worlds, Pueblo Peoples, and Arctic Communities\" defensible?",
+          "prompt": "What does Pueblo agriculture illustrate?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Communities developed technologies and practices suited to local environments while maintaining complex social and political life.",
+            "Desert environments made agriculture impossible.",
+            "All Pueblo peoples used identical practices in every place and period.",
+            "Geography fully determined belief systems."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G5SS-W04-T1",
-          "prompt": "Which approach best transfers Week 4 learning to an unfamiliar case?",
+          "prompt": "Why should Arctic Indigenous communities be studied as complex societies rather than as examples of 'survival only'?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "They developed sophisticated technologies, social systems, knowledge, trade, and cultural traditions adapted to specific regions.",
+            "Cold climates prevented political organization.",
+            "Trade did not occur in Arctic regions.",
+            "Technology means only metal tools."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
@@ -2082,15 +2087,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W05-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"State/Local Indigenous and Early-History Localization Lab\"?",
+          "prompt": "For a state/local Indigenous history investigation, which source should receive special priority when available?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "A current official tribal-nation or Indigenous cultural source connected to the specific community being studied.",
+            "A generic worksheet that does not name a nation.",
+            "A fictional legend presented as history.",
+            "A tourism advertisement with no sourcing."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
@@ -2108,41 +2113,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W05-G1",
-          "prompt": "How should geography be used when analyzing \"State/Local Indigenous and Early-History Localization Lab\"?",
+          "prompt": "What makes a state/local Indigenous history project historically complete?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It connects historical homelands and events with present-day nation/community continuity and sovereignty.",
+            "It ends the story at first European contact.",
+            "It treats all nations in the state as one group.",
+            "It requires students to disclose private family ancestry."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G5SS-W05-A1",
-          "prompt": "What makes an argument about \"State/Local Indigenous and Early-History Localization Lab\" defensible?",
+          "prompt": "Which source set is strongest for a local early-history inquiry?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "A tribal source, archive or museum record, historical map, and another corroborating public source.",
+            "One unsourced website.",
+            "One modern photograph only.",
+            "A private family record students are required to share."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G5SS-W05-T1",
-          "prompt": "Which approach best transfers Week 5 learning to an unfamiliar case?",
+          "prompt": "Why should local history avoid requiring private family or immigration information?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Historical inquiry can use public evidence while protecting student privacy and inclusion.",
+            "Private disclosure is the only way to study local history.",
+            "Public records are never useful.",
+            "Privacy rules do not apply in school."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
@@ -2266,15 +2271,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W05-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"State/Local Indigenous and Early-History Localization Lab\"?",
+          "prompt": "For a state/local Indigenous history investigation, which source should receive special priority when available?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "A current official tribal-nation or Indigenous cultural source connected to the specific community being studied.",
+            "A generic worksheet that does not name a nation.",
+            "A fictional legend presented as history.",
+            "A tourism advertisement with no sourcing."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
@@ -2292,41 +2297,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W05-G1",
-          "prompt": "How should geography be used when analyzing \"State/Local Indigenous and Early-History Localization Lab\"?",
+          "prompt": "What makes a state/local Indigenous history project historically complete?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It connects historical homelands and events with present-day nation/community continuity and sovereignty.",
+            "It ends the story at first European contact.",
+            "It treats all nations in the state as one group.",
+            "It requires students to disclose private family ancestry."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G5SS-W05-A1",
-          "prompt": "What makes an argument about \"State/Local Indigenous and Early-History Localization Lab\" defensible?",
+          "prompt": "Which source set is strongest for a local early-history inquiry?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "A tribal source, archive or museum record, historical map, and another corroborating public source.",
+            "One unsourced website.",
+            "One modern photograph only.",
+            "A private family record students are required to share."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G5SS-W05-T1",
-          "prompt": "Which approach best transfers Week 5 learning to an unfamiliar case?",
+          "prompt": "Why should local history avoid requiring private family or immigration information?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Historical inquiry can use public evidence while protecting student privacy and inclusion.",
+            "Private disclosure is the only way to study local history.",
+            "Public records are never useful.",
+            "Privacy rules do not apply in school."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
@@ -2565,15 +2570,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W06-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Exploration Technologies, Motives, and Atlantic Routes\"?",
+          "prompt": "Which technology most directly helped mariners determine direction during ocean voyages?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "The magnetic compass.",
+            "The printing press alone.",
+            "A steam locomotive.",
+            "The telegraph."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
@@ -2591,41 +2596,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W06-G1",
-          "prompt": "How should geography be used when analyzing \"Exploration Technologies, Motives, and Atlantic Routes\"?",
+          "prompt": "Why did European monarchies and merchants sponsor Atlantic exploration?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Motives included trade, wealth, strategic competition, religion, routes, knowledge, and political power.",
+            "There was only one motive shared by every expedition.",
+            "Exploration had no economic goals.",
+            "Sponsors were not interested in political competition."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G5SS-W06-A1",
-          "prompt": "What makes an argument about \"Exploration Technologies, Motives, and Atlantic Routes\" defensible?",
+          "prompt": "What evidence is most useful for reconstructing an explorer's route?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Maps, ship logs, dates, geographic observations, and corroborating records.",
+            "A modern fictional story alone.",
+            "Only the explorer's portrait.",
+            "A list of unrelated inventions."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G5SS-W06-T1",
-          "prompt": "Which approach best transfers Week 6 learning to an unfamiliar case?",
+          "prompt": "Why should explorers be studied with Indigenous perspectives on encounter?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Exploration routes entered already inhabited and governed lands, and different peoples experienced the encounters differently.",
+            "The Americas were politically empty before Europeans arrived.",
+            "Only sponsors had historical agency.",
+            "Indigenous evidence is unrelated to exploration history."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
@@ -2749,15 +2754,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W06-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Exploration Technologies, Motives, and Atlantic Routes\"?",
+          "prompt": "Which technology most directly helped mariners determine direction during ocean voyages?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "The magnetic compass.",
+            "The printing press alone.",
+            "A steam locomotive.",
+            "The telegraph."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
@@ -2775,41 +2780,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W06-G1",
-          "prompt": "How should geography be used when analyzing \"Exploration Technologies, Motives, and Atlantic Routes\"?",
+          "prompt": "Why did European monarchies and merchants sponsor Atlantic exploration?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Motives included trade, wealth, strategic competition, religion, routes, knowledge, and political power.",
+            "There was only one motive shared by every expedition.",
+            "Exploration had no economic goals.",
+            "Sponsors were not interested in political competition."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G5SS-W06-A1",
-          "prompt": "What makes an argument about \"Exploration Technologies, Motives, and Atlantic Routes\" defensible?",
+          "prompt": "What evidence is most useful for reconstructing an explorer's route?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Maps, ship logs, dates, geographic observations, and corroborating records.",
+            "A modern fictional story alone.",
+            "Only the explorer's portrait.",
+            "A list of unrelated inventions."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G5SS-W06-T1",
-          "prompt": "Which approach best transfers Week 6 learning to an unfamiliar case?",
+          "prompt": "Why should explorers be studied with Indigenous perspectives on encounter?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Exploration routes entered already inhabited and governed lands, and different peoples experienced the encounters differently.",
+            "The Americas were politically empty before Europeans arrived.",
+            "Only sponsors had historical agency.",
+            "Indigenous evidence is unrelated to exploration history."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
@@ -3048,15 +3053,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W07-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Columbian Exchange, Disease, Ecology, and Atlantic Connections\"?",
+          "prompt": "Which is an example of the Columbian Exchange moving from the Americas to Afro-Eurasia?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Maize and potatoes spreading eastward across the Atlantic.",
+            "Horses first arriving in the Americas from Europe.",
+            "European diseases spreading into the Americas.",
+            "Spanish ships crossing the Atlantic."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
@@ -3074,41 +3079,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W07-G1",
-          "prompt": "How should geography be used when analyzing \"Columbian Exchange, Disease, Ecology, and Atlantic Connections\"?",
+          "prompt": "Why were epidemic diseases so consequential after sustained Atlantic contact?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Many Indigenous communities had little prior exposure to certain diseases, contributing to catastrophic population loss and political disruption.",
+            "Disease affected only Europeans.",
+            "Disease had no relationship to colonization.",
+            "Every community experienced identical mortality."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G5SS-W07-A1",
-          "prompt": "What makes an argument about \"Columbian Exchange, Disease, Ecology, and Atlantic Connections\" defensible?",
+          "prompt": "Why is 'exchange' an incomplete word for all Atlantic interactions?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Some movements involved coercion, conquest, forced migration, and unequal power rather than voluntary exchange.",
+            "Every movement was voluntary trade.",
+            "Exchange refers only to plants.",
+            "Power differences do not matter to history."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G5SS-W07-T1",
-          "prompt": "Which approach best transfers Week 7 learning to an unfamiliar case?",
+          "prompt": "How did the Columbian Exchange affect environments?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Plants, animals, pathogens, land use, and food systems moved and changed ecosystems on both sides of the Atlantic.",
+            "Only political borders changed.",
+            "No species moved across oceans.",
+            "Environmental effects ended immediately."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
@@ -3232,15 +3237,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W07-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Columbian Exchange, Disease, Ecology, and Atlantic Connections\"?",
+          "prompt": "Which is an example of the Columbian Exchange moving from the Americas to Afro-Eurasia?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Maize and potatoes spreading eastward across the Atlantic.",
+            "Horses first arriving in the Americas from Europe.",
+            "European diseases spreading into the Americas.",
+            "Spanish ships crossing the Atlantic."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
@@ -3258,41 +3263,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W07-G1",
-          "prompt": "How should geography be used when analyzing \"Columbian Exchange, Disease, Ecology, and Atlantic Connections\"?",
+          "prompt": "Why were epidemic diseases so consequential after sustained Atlantic contact?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Many Indigenous communities had little prior exposure to certain diseases, contributing to catastrophic population loss and political disruption.",
+            "Disease affected only Europeans.",
+            "Disease had no relationship to colonization.",
+            "Every community experienced identical mortality."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G5SS-W07-A1",
-          "prompt": "What makes an argument about \"Columbian Exchange, Disease, Ecology, and Atlantic Connections\" defensible?",
+          "prompt": "Why is 'exchange' an incomplete word for all Atlantic interactions?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Some movements involved coercion, conquest, forced migration, and unequal power rather than voluntary exchange.",
+            "Every movement was voluntary trade.",
+            "Exchange refers only to plants.",
+            "Power differences do not matter to history."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G5SS-W07-T1",
-          "prompt": "Which approach best transfers Week 7 learning to an unfamiliar case?",
+          "prompt": "How did the Columbian Exchange affect environments?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Plants, animals, pathogens, land use, and food systems moved and changed ecosystems on both sides of the Atlantic.",
+            "Only political borders changed.",
+            "No species moved across oceans.",
+            "Environmental effects ended immediately."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
@@ -3531,15 +3536,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W08-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Encounter, Conquest, Empire, and Indigenous Resistance\"?",
+          "prompt": "Why did Indigenous alliances matter during European conquests in the Americas?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "European forces often depended on Indigenous allies whose own political goals shaped events.",
+            "Europeans acted entirely alone.",
+            "Indigenous nations had no political conflicts before conquest.",
+            "All Indigenous communities supported the same side."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
@@ -3557,41 +3562,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W08-G1",
-          "prompt": "How should geography be used when analyzing \"Encounter, Conquest, Empire, and Indigenous Resistance\"?",
+          "prompt": "What is conquest?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "The seizure or establishment of political control through force or coercion.",
+            "Any peaceful trade agreement.",
+            "A voluntary migration.",
+            "A map projection."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G5SS-W08-A1",
-          "prompt": "What makes an argument about \"Encounter, Conquest, Empire, and Indigenous Resistance\" defensible?",
+          "prompt": "Which factor often weakened Indigenous resistance to expanding empires?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Epidemic disease combined with warfare, political conflict, and resource disruption.",
+            "A complete absence of Indigenous strategy.",
+            "Universal support for colonization.",
+            "The end of all trade."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G5SS-W08-T1",
-          "prompt": "Which approach best transfers Week 8 learning to an unfamiliar case?",
+          "prompt": "How should resistance be represented in a conquest narrative?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "As varied political, military, diplomatic, cultural, and community actions rather than as a single response.",
+            "As proof that conquest had no effect.",
+            "As one identical strategy used everywhere.",
+            "As a topic separate from Indigenous agency."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
@@ -3715,15 +3720,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W08-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Encounter, Conquest, Empire, and Indigenous Resistance\"?",
+          "prompt": "Why did Indigenous alliances matter during European conquests in the Americas?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "European forces often depended on Indigenous allies whose own political goals shaped events.",
+            "Europeans acted entirely alone.",
+            "Indigenous nations had no political conflicts before conquest.",
+            "All Indigenous communities supported the same side."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
@@ -3741,41 +3746,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W08-G1",
-          "prompt": "How should geography be used when analyzing \"Encounter, Conquest, Empire, and Indigenous Resistance\"?",
+          "prompt": "What is conquest?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "The seizure or establishment of political control through force or coercion.",
+            "Any peaceful trade agreement.",
+            "A voluntary migration.",
+            "A map projection."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G5SS-W08-A1",
-          "prompt": "What makes an argument about \"Encounter, Conquest, Empire, and Indigenous Resistance\" defensible?",
+          "prompt": "Which factor often weakened Indigenous resistance to expanding empires?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Epidemic disease combined with warfare, political conflict, and resource disruption.",
+            "A complete absence of Indigenous strategy.",
+            "Universal support for colonization.",
+            "The end of all trade."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G5SS-W08-T1",
-          "prompt": "Which approach best transfers Week 8 learning to an unfamiliar case?",
+          "prompt": "How should resistance be represented in a conquest narrative?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "As varied political, military, diplomatic, cultural, and community actions rather than as a single response.",
+            "As proof that conquest had no effect.",
+            "As one identical strategy used everywhere.",
+            "As a topic separate from Indigenous agency."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
@@ -4014,15 +4019,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W09-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Colonial Regions: New England, Middle, Southern, and Borderlands\"?",
+          "prompt": "Which description best fits many New England colonies?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Smaller farms, Atlantic commerce, towns, and economies shaped partly by rocky soils and shorter growing seasons.",
+            "Plantation agriculture was the only economic activity.",
+            "There were no ports or trade.",
+            "Every settlement had the same religious policy."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
@@ -4040,41 +4045,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W09-G1",
-          "prompt": "How should geography be used when analyzing \"Colonial Regions: New England, Middle, Southern, and Borderlands\"?",
+          "prompt": "Why were the Middle Colonies often described as economically and culturally diverse?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "They included important grain production, ports, trade, and populations with varied ethnic and religious backgrounds.",
+            "They had no agriculture.",
+            "They banned international trade.",
+            "Only one cultural group lived there."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G5SS-W09-A1",
-          "prompt": "What makes an argument about \"Colonial Regions: New England, Middle, Southern, and Borderlands\" defensible?",
+          "prompt": "What made plantation slavery especially important to parts of the Southern colonial economy?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Labor-intensive cash-crop production became deeply tied to racial slavery and Atlantic markets.",
+            "Southern colonies had no small farms or towns.",
+            "Enslavement was voluntary wage labor.",
+            "Cash crops were unrelated to export markets."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G5SS-W09-T1",
-          "prompt": "Which approach best transfers Week 9 learning to an unfamiliar case?",
+          "prompt": "Why should colonial 'borderlands' be included in regional comparison?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Spanish, French, British, Indigenous, African, and other communities interacted beyond the thirteen English colonies.",
+            "Only the thirteen colonies mattered in North American history.",
+            "Borderlands had no governments.",
+            "Imperial claims always equaled complete control."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
@@ -4198,15 +4203,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W09-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Colonial Regions: New England, Middle, Southern, and Borderlands\"?",
+          "prompt": "Which description best fits many New England colonies?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Smaller farms, Atlantic commerce, towns, and economies shaped partly by rocky soils and shorter growing seasons.",
+            "Plantation agriculture was the only economic activity.",
+            "There were no ports or trade.",
+            "Every settlement had the same religious policy."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
@@ -4224,41 +4229,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W09-G1",
-          "prompt": "How should geography be used when analyzing \"Colonial Regions: New England, Middle, Southern, and Borderlands\"?",
+          "prompt": "Why were the Middle Colonies often described as economically and culturally diverse?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "They included important grain production, ports, trade, and populations with varied ethnic and religious backgrounds.",
+            "They had no agriculture.",
+            "They banned international trade.",
+            "Only one cultural group lived there."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G5SS-W09-A1",
-          "prompt": "What makes an argument about \"Colonial Regions: New England, Middle, Southern, and Borderlands\" defensible?",
+          "prompt": "What made plantation slavery especially important to parts of the Southern colonial economy?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Labor-intensive cash-crop production became deeply tied to racial slavery and Atlantic markets.",
+            "Southern colonies had no small farms or towns.",
+            "Enslavement was voluntary wage labor.",
+            "Cash crops were unrelated to export markets."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G5SS-W09-T1",
-          "prompt": "Which approach best transfers Week 9 learning to an unfamiliar case?",
+          "prompt": "Why should colonial 'borderlands' be included in regional comparison?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Spanish, French, British, Indigenous, African, and other communities interacted beyond the thirteen English colonies.",
+            "Only the thirteen colonies mattered in North American history.",
+            "Borderlands had no governments.",
+            "Imperial claims always equaled complete control."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
@@ -4497,15 +4502,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W10-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Colonial Government, Religion, Pluralism, and Self-Government\"?",
+          "prompt": "What was one significance of elected colonial assemblies such as the Virginia House of Burgesses?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "They provided experience with representative institutions within the British colonial system, although participation was limited.",
+            "They created universal voting rights.",
+            "They made colonies fully independent.",
+            "They abolished royal authority everywhere."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
@@ -4523,41 +4528,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W10-G1",
-          "prompt": "How should geography be used when analyzing \"Colonial Government, Religion, Pluralism, and Self-Government\"?",
+          "prompt": "Why is the Mayflower Compact often discussed in studies of self-government?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It reflected an agreement among signers to form a political community and make rules for their settlement.",
+            "It was the U.S. Constitution.",
+            "It granted voting rights to everyone in North America.",
+            "It ended British rule."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G5SS-W10-A1",
-          "prompt": "What makes an argument about \"Colonial Government, Religion, Pluralism, and Self-Government\" defensible?",
+          "prompt": "What does religious pluralism mean in colonial history?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Multiple religious communities and beliefs existed, though toleration and legal rights varied greatly by colony and period.",
+            "Every colony guaranteed full religious equality.",
+            "Religion had no influence on settlement.",
+            "All colonists shared one denomination."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G5SS-W10-T1",
-          "prompt": "Which approach best transfers Week 10 learning to an unfamiliar case?",
+          "prompt": "Why should colonial self-government be described with limits?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Political participation was restricted by race, sex, property, religion, status, and colony-specific rules.",
+            "Every adult had equal political power.",
+            "Colonial governments were modern democracies.",
+            "Representation eliminated imperial authority."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
@@ -4681,15 +4686,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W10-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Colonial Government, Religion, Pluralism, and Self-Government\"?",
+          "prompt": "What was one significance of elected colonial assemblies such as the Virginia House of Burgesses?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "They provided experience with representative institutions within the British colonial system, although participation was limited.",
+            "They created universal voting rights.",
+            "They made colonies fully independent.",
+            "They abolished royal authority everywhere."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
@@ -4707,41 +4712,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W10-G1",
-          "prompt": "How should geography be used when analyzing \"Colonial Government, Religion, Pluralism, and Self-Government\"?",
+          "prompt": "Why is the Mayflower Compact often discussed in studies of self-government?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It reflected an agreement among signers to form a political community and make rules for their settlement.",
+            "It was the U.S. Constitution.",
+            "It granted voting rights to everyone in North America.",
+            "It ended British rule."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G5SS-W10-A1",
-          "prompt": "What makes an argument about \"Colonial Government, Religion, Pluralism, and Self-Government\" defensible?",
+          "prompt": "What does religious pluralism mean in colonial history?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Multiple religious communities and beliefs existed, though toleration and legal rights varied greatly by colony and period.",
+            "Every colony guaranteed full religious equality.",
+            "Religion had no influence on settlement.",
+            "All colonists shared one denomination."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G5SS-W10-T1",
-          "prompt": "Which approach best transfers Week 10 learning to an unfamiliar case?",
+          "prompt": "Why should colonial self-government be described with limits?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Political participation was restricted by race, sex, property, religion, status, and colony-specific rules.",
+            "Every adult had equal political power.",
+            "Colonial governments were modern democracies.",
+            "Representation eliminated imperial authority."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
@@ -4980,15 +4985,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W11-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Atlantic Trade, Enslavement, Forced Migration, and Resistance\"?",
+          "prompt": "What was the Middle Passage?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "The forced Atlantic voyage that carried enslaved Africans to the Americas under brutal conditions.",
+            "A voluntary migration route from Europe to Asia.",
+            "A road connecting the colonies.",
+            "A treaty ending the Revolution."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
@@ -5006,41 +5011,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W11-G1",
-          "prompt": "How should geography be used when analyzing \"Atlantic Trade, Enslavement, Forced Migration, and Resistance\"?",
+          "prompt": "Why is the traditional 'Triangular Trade' diagram only a simplified model?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Atlantic commerce used many overlapping routes, and the model can obscure the coercion and human suffering of slavery.",
+            "Every ship followed exactly the same triangle.",
+            "It describes only Indigenous trade.",
+            "It proves all exchange was voluntary."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G5SS-W11-A1",
-          "prompt": "What makes an argument about \"Atlantic Trade, Enslavement, Forced Migration, and Resistance\" defensible?",
+          "prompt": "How did enslaved people resist slavery?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Resistance included preserving family and culture, work slowdowns, escape, revolt, petition, and other acts that varied by place and circumstance.",
+            "Enslaved people had no agency.",
+            "Resistance always took the same form.",
+            "Resistance ended Atlantic slavery immediately."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G5SS-W11-T1",
-          "prompt": "Which approach best transfers Week 11 learning to an unfamiliar case?",
+          "prompt": "Why must forced migration be distinguished from voluntary migration?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Enslaved Africans were transported through coercion and denied the freedom to choose movement or labor.",
+            "All migration is voluntary by definition.",
+            "Forced migration means only moving during bad weather.",
+            "The distinction has no historical importance."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
@@ -5164,15 +5169,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W11-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Atlantic Trade, Enslavement, Forced Migration, and Resistance\"?",
+          "prompt": "What was the Middle Passage?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "The forced Atlantic voyage that carried enslaved Africans to the Americas under brutal conditions.",
+            "A voluntary migration route from Europe to Asia.",
+            "A road connecting the colonies.",
+            "A treaty ending the Revolution."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
@@ -5190,41 +5195,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W11-G1",
-          "prompt": "How should geography be used when analyzing \"Atlantic Trade, Enslavement, Forced Migration, and Resistance\"?",
+          "prompt": "Why is the traditional 'Triangular Trade' diagram only a simplified model?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Atlantic commerce used many overlapping routes, and the model can obscure the coercion and human suffering of slavery.",
+            "Every ship followed exactly the same triangle.",
+            "It describes only Indigenous trade.",
+            "It proves all exchange was voluntary."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G5SS-W11-A1",
-          "prompt": "What makes an argument about \"Atlantic Trade, Enslavement, Forced Migration, and Resistance\" defensible?",
+          "prompt": "How did enslaved people resist slavery?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Resistance included preserving family and culture, work slowdowns, escape, revolt, petition, and other acts that varied by place and circumstance.",
+            "Enslaved people had no agency.",
+            "Resistance always took the same form.",
+            "Resistance ended Atlantic slavery immediately."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G5SS-W11-T1",
-          "prompt": "Which approach best transfers Week 11 learning to an unfamiliar case?",
+          "prompt": "Why must forced migration be distinguished from voluntary migration?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Enslaved Africans were transported through coercion and denied the freedom to choose movement or labor.",
+            "All migration is voluntary by definition.",
+            "Forced migration means only moving during bad weather.",
+            "The distinction has no historical importance."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
@@ -5463,15 +5468,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W12-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Colonial Economies, Markets, Labor, and Daily Life\"?",
+          "prompt": "What is a market economy?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "An economy in which many production and exchange decisions are made through interactions among buyers, sellers, workers, and property owners, within laws and institutions.",
+            "An economy with no rules or government.",
+            "A system in which no one trades.",
+            "An economy based only on barter."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
@@ -5489,41 +5494,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W12-G1",
-          "prompt": "How should geography be used when analyzing \"Colonial Economies, Markets, Labor, and Daily Life\"?",
+          "prompt": "How did colonial regions participate in Atlantic markets?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "They exported and imported goods, used ports and shipping, and relied on varied labor systems including slavery.",
+            "Colonies were economically isolated.",
+            "Only manufactured goods moved across the Atlantic.",
+            "Trade had no effect on regional development."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G5SS-W12-A1",
-          "prompt": "What makes an argument about \"Colonial Economies, Markets, Labor, and Daily Life\" defensible?",
+          "prompt": "What is an artisan?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "A skilled craft worker who produces goods or provides specialized work.",
+            "A royal governor.",
+            "An enslaved person by definition.",
+            "A military alliance."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G5SS-W12-T1",
-          "prompt": "Which approach best transfers Week 12 learning to an unfamiliar case?",
+          "prompt": "Why should colonial economic history include labor systems?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Production depended on the work of free, indentured, enslaved, Indigenous, and other laborers whose legal conditions differed.",
+            "Labor does not affect economic history.",
+            "All workers had the same rights.",
+            "Markets function without human work."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
@@ -5647,15 +5652,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W12-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Colonial Economies, Markets, Labor, and Daily Life\"?",
+          "prompt": "What is a market economy?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "An economy in which many production and exchange decisions are made through interactions among buyers, sellers, workers, and property owners, within laws and institutions.",
+            "An economy with no rules or government.",
+            "A system in which no one trades.",
+            "An economy based only on barter."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
@@ -5673,41 +5678,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W12-G1",
-          "prompt": "How should geography be used when analyzing \"Colonial Economies, Markets, Labor, and Daily Life\"?",
+          "prompt": "How did colonial regions participate in Atlantic markets?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "They exported and imported goods, used ports and shipping, and relied on varied labor systems including slavery.",
+            "Colonies were economically isolated.",
+            "Only manufactured goods moved across the Atlantic.",
+            "Trade had no effect on regional development."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G5SS-W12-A1",
-          "prompt": "What makes an argument about \"Colonial Economies, Markets, Labor, and Daily Life\" defensible?",
+          "prompt": "What is an artisan?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "A skilled craft worker who produces goods or provides specialized work.",
+            "A royal governor.",
+            "An enslaved person by definition.",
+            "A military alliance."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G5SS-W12-T1",
-          "prompt": "Which approach best transfers Week 12 learning to an unfamiliar case?",
+          "prompt": "Why should colonial economic history include labor systems?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Production depended on the work of free, indentured, enslaved, Indigenous, and other laborers whose legal conditions differed.",
+            "Labor does not affect economic history.",
+            "All workers had the same rights.",
+            "Markets function without human work."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
@@ -5946,15 +5951,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W13-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"The Seven Years' War and the Road to Imperial Crisis\"?",
+          "prompt": "How did the Seven Years' War contribute to the later imperial crisis?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "War debt and new British efforts to tax, regulate, and control the colonies intensified disputes over authority and representation.",
+            "It immediately created the U.S. Constitution.",
+            "It ended British involvement in North America.",
+            "It had no effect on imperial policy."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
@@ -5972,41 +5977,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W13-G1",
-          "prompt": "How should geography be used when analyzing \"The Seven Years' War and the Road to Imperial Crisis\"?",
+          "prompt": "What was one purpose of the Proclamation of 1763?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Britain attempted to limit colonial settlement west of the Appalachian Mountains after the war.",
+            "It declared American independence.",
+            "It abolished colonial taxes.",
+            "It created the Electoral College."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G5SS-W13-A1",
-          "prompt": "What makes an argument about \"The Seven Years' War and the Road to Imperial Crisis\" defensible?",
+          "prompt": "Why did many colonists object to new parliamentary taxation?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "They argued about consent, representation, constitutional rights, and the scope of Parliament's authority.",
+            "Colonists opposed every form of government.",
+            "Taxes had never existed before.",
+            "Britain asked colonies to become independent."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G5SS-W13-T1",
-          "prompt": "Which approach best transfers Week 13 learning to an unfamiliar case?",
+          "prompt": "Why were Indigenous nations central to the postwar crisis?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Imperial boundary policy and settler expansion directly affected Indigenous lands, diplomacy, and sovereignty.",
+            "Indigenous nations disappeared after 1763.",
+            "The conflict involved only Britain and France.",
+            "Western settlement had no political consequences."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
@@ -6130,15 +6135,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W13-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"The Seven Years' War and the Road to Imperial Crisis\"?",
+          "prompt": "How did the Seven Years' War contribute to the later imperial crisis?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "War debt and new British efforts to tax, regulate, and control the colonies intensified disputes over authority and representation.",
+            "It immediately created the U.S. Constitution.",
+            "It ended British involvement in North America.",
+            "It had no effect on imperial policy."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
@@ -6156,41 +6161,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W13-G1",
-          "prompt": "How should geography be used when analyzing \"The Seven Years' War and the Road to Imperial Crisis\"?",
+          "prompt": "What was one purpose of the Proclamation of 1763?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Britain attempted to limit colonial settlement west of the Appalachian Mountains after the war.",
+            "It declared American independence.",
+            "It abolished colonial taxes.",
+            "It created the Electoral College."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G5SS-W13-A1",
-          "prompt": "What makes an argument about \"The Seven Years' War and the Road to Imperial Crisis\" defensible?",
+          "prompt": "Why did many colonists object to new parliamentary taxation?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "They argued about consent, representation, constitutional rights, and the scope of Parliament's authority.",
+            "Colonists opposed every form of government.",
+            "Taxes had never existed before.",
+            "Britain asked colonies to become independent."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G5SS-W13-T1",
-          "prompt": "Which approach best transfers Week 13 learning to an unfamiliar case?",
+          "prompt": "Why were Indigenous nations central to the postwar crisis?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Imperial boundary policy and settler expansion directly affected Indigenous lands, diplomacy, and sovereignty.",
+            "Indigenous nations disappeared after 1763.",
+            "The conflict involved only Britain and France.",
+            "Western settlement had no political consequences."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
@@ -6429,15 +6434,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W14-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"The Declaration of Independence, Natural Rights, and Grievances\"?",
+          "prompt": "What are 'unalienable rights' in the Declaration of Independence?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Rights described as inherent and not legitimately taken away by government.",
+            "Privileges granted only by a king.",
+            "Rights limited to property ownership only.",
+            "Rules for military strategy."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
@@ -6455,41 +6460,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W14-G1",
-          "prompt": "How should geography be used when analyzing \"The Declaration of Independence, Natural Rights, and Grievances\"?",
+          "prompt": "What is a grievance in the Declaration of Independence?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A complaint alleging specific abuses or violations by the British government.",
+            "A battle plan.",
+            "A tax collected by a state government.",
+            "A constitutional amendment."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G5SS-W14-A1",
-          "prompt": "What makes an argument about \"The Declaration of Independence, Natural Rights, and Grievances\" defensible?",
+          "prompt": "What political principle is expressed by 'consent of the governed'?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Legitimate government derives authority from the people it governs.",
+            "Government authority comes only from hereditary monarchy.",
+            "Courts may ignore laws.",
+            "Voting is unnecessary."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G5SS-W14-T1",
-          "prompt": "Which approach best transfers Week 14 learning to an unfamiliar case?",
+          "prompt": "Why should students examine contradictions between the Declaration's ideals and historical practice?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Claims about natural rights existed alongside slavery, unequal political participation, and other exclusions.",
+            "The ideals were instantly applied equally to everyone.",
+            "Contradictions are irrelevant to civic history.",
+            "Historical documents should never be questioned."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
@@ -6613,15 +6618,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W14-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"The Declaration of Independence, Natural Rights, and Grievances\"?",
+          "prompt": "What are 'unalienable rights' in the Declaration of Independence?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Rights described as inherent and not legitimately taken away by government.",
+            "Privileges granted only by a king.",
+            "Rights limited to property ownership only.",
+            "Rules for military strategy."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
@@ -6639,41 +6644,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W14-G1",
-          "prompt": "How should geography be used when analyzing \"The Declaration of Independence, Natural Rights, and Grievances\"?",
+          "prompt": "What is a grievance in the Declaration of Independence?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A complaint alleging specific abuses or violations by the British government.",
+            "A battle plan.",
+            "A tax collected by a state government.",
+            "A constitutional amendment."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G5SS-W14-A1",
-          "prompt": "What makes an argument about \"The Declaration of Independence, Natural Rights, and Grievances\" defensible?",
+          "prompt": "What political principle is expressed by 'consent of the governed'?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Legitimate government derives authority from the people it governs.",
+            "Government authority comes only from hereditary monarchy.",
+            "Courts may ignore laws.",
+            "Voting is unnecessary."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G5SS-W14-T1",
-          "prompt": "Which approach best transfers Week 14 learning to an unfamiliar case?",
+          "prompt": "Why should students examine contradictions between the Declaration's ideals and historical practice?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Claims about natural rights existed alongside slavery, unequal political participation, and other exclusions.",
+            "The ideals were instantly applied equally to everyone.",
+            "Contradictions are irrelevant to civic history.",
+            "Historical documents should never be questioned."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
@@ -6912,15 +6917,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W15-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"The Revolutionary War: Strategy, Geography, Campaigns, and Diplomacy\"?",
+          "prompt": "Why was the American victory at Saratoga strategically important?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "It helped persuade France to enter the war as an American ally.",
+            "It ended the war immediately in 1777.",
+            "It caused Britain to surrender Canada.",
+            "It created the Constitution."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
@@ -6938,41 +6943,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W15-G1",
-          "prompt": "How should geography be used when analyzing \"The Revolutionary War: Strategy, Geography, Campaigns, and Diplomacy\"?",
+          "prompt": "Why was French assistance important to the American war effort?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "French military, naval, financial, and diplomatic support strengthened the American position.",
+            "France fought on Britain's side.",
+            "Foreign aid had no effect on the war.",
+            "France wrote the Declaration of Independence."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G5SS-W15-A1",
-          "prompt": "What makes an argument about \"The Revolutionary War: Strategy, Geography, Campaigns, and Diplomacy\" defensible?",
+          "prompt": "Why did geography matter in the Revolutionary War?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Distances, ports, rivers, roads, terrain, and regional loyalties affected movement, supply, strategy, and communication.",
+            "Geography had no effect on campaigns.",
+            "Battles occurred only near one city.",
+            "Armies did not depend on supply routes."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G5SS-W15-T1",
-          "prompt": "Which approach best transfers Week 15 learning to an unfamiliar case?",
+          "prompt": "What made Yorktown important in 1781?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "The British surrender there helped bring major fighting to an end and strengthened movement toward peace negotiations.",
+            "It was the first battle of the war.",
+            "It created the Bill of Rights.",
+            "It was fought during the War of 1812."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
@@ -7096,15 +7101,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W15-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"The Revolutionary War: Strategy, Geography, Campaigns, and Diplomacy\"?",
+          "prompt": "Why was the American victory at Saratoga strategically important?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "It helped persuade France to enter the war as an American ally.",
+            "It ended the war immediately in 1777.",
+            "It caused Britain to surrender Canada.",
+            "It created the Constitution."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
@@ -7122,41 +7127,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W15-G1",
-          "prompt": "How should geography be used when analyzing \"The Revolutionary War: Strategy, Geography, Campaigns, and Diplomacy\"?",
+          "prompt": "Why was French assistance important to the American war effort?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "French military, naval, financial, and diplomatic support strengthened the American position.",
+            "France fought on Britain's side.",
+            "Foreign aid had no effect on the war.",
+            "France wrote the Declaration of Independence."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G5SS-W15-A1",
-          "prompt": "What makes an argument about \"The Revolutionary War: Strategy, Geography, Campaigns, and Diplomacy\" defensible?",
+          "prompt": "Why did geography matter in the Revolutionary War?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Distances, ports, rivers, roads, terrain, and regional loyalties affected movement, supply, strategy, and communication.",
+            "Geography had no effect on campaigns.",
+            "Battles occurred only near one city.",
+            "Armies did not depend on supply routes."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G5SS-W15-T1",
-          "prompt": "Which approach best transfers Week 15 learning to an unfamiliar case?",
+          "prompt": "What made Yorktown important in 1781?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "The British surrender there helped bring major fighting to an end and strengthened movement toward peace negotiations.",
+            "It was the first battle of the war.",
+            "It created the Bill of Rights.",
+            "It was fought during the War of 1812."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
@@ -7395,15 +7400,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W16-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Revolutionary Experiences: Patriots, Loyalists, Women, Black Americans, Indigenous Nations, and Civilians\"?",
+          "prompt": "Why might a colonist have remained Loyalist during the Revolution?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Reasons could include political belief, economic ties, fear of disorder, family/community connections, or loyalty to Britain.",
+            "Every Loyalist had the same motive.",
+            "Loyalists opposed all government.",
+            "Loyalists lived only in Britain."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
@@ -7421,41 +7426,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W16-G1",
-          "prompt": "How should geography be used when analyzing \"Revolutionary Experiences: Patriots, Loyalists, Women, Black Americans, Indigenous Nations, and Civilians\"?",
+          "prompt": "Why did some colonists try to remain neutral?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "They could have mixed loyalties, safety concerns, religious convictions, local circumstances, or uncertainty about the conflict.",
+            "Neutrality was impossible anywhere.",
+            "Neutral people were automatically Patriots.",
+            "There were no risks to choosing sides."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G5SS-W16-A1",
-          "prompt": "What makes an argument about \"Revolutionary Experiences: Patriots, Loyalists, Women, Black Americans, Indigenous Nations, and Civilians\" defensible?",
+          "prompt": "How did Black Americans experience the Revolution?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Enslaved and free Black people pursued different strategies and served on different sides, often seeking freedom, security, or opportunity.",
+            "All Black Americans supported the same side.",
+            "The Revolution had no connection to slavery.",
+            "Black military service did not occur."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G5SS-W16-T1",
-          "prompt": "Which approach best transfers Week 16 learning to an unfamiliar case?",
+          "prompt": "Why did Indigenous nations make different alliance choices during the Revolution?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Nations pursued their own sovereignty, territorial, diplomatic, and security interests in changing regional conditions.",
+            "All Indigenous nations supported Britain for the same reason.",
+            "Indigenous nations were not political actors.",
+            "The war did not affect Indigenous homelands."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
@@ -7579,15 +7584,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W16-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Revolutionary Experiences: Patriots, Loyalists, Women, Black Americans, Indigenous Nations, and Civilians\"?",
+          "prompt": "Why might a colonist have remained Loyalist during the Revolution?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Reasons could include political belief, economic ties, fear of disorder, family/community connections, or loyalty to Britain.",
+            "Every Loyalist had the same motive.",
+            "Loyalists opposed all government.",
+            "Loyalists lived only in Britain."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
@@ -7605,41 +7610,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W16-G1",
-          "prompt": "How should geography be used when analyzing \"Revolutionary Experiences: Patriots, Loyalists, Women, Black Americans, Indigenous Nations, and Civilians\"?",
+          "prompt": "Why did some colonists try to remain neutral?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "They could have mixed loyalties, safety concerns, religious convictions, local circumstances, or uncertainty about the conflict.",
+            "Neutrality was impossible anywhere.",
+            "Neutral people were automatically Patriots.",
+            "There were no risks to choosing sides."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G5SS-W16-A1",
-          "prompt": "What makes an argument about \"Revolutionary Experiences: Patriots, Loyalists, Women, Black Americans, Indigenous Nations, and Civilians\" defensible?",
+          "prompt": "How did Black Americans experience the Revolution?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Enslaved and free Black people pursued different strategies and served on different sides, often seeking freedom, security, or opportunity.",
+            "All Black Americans supported the same side.",
+            "The Revolution had no connection to slavery.",
+            "Black military service did not occur."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G5SS-W16-T1",
-          "prompt": "Which approach best transfers Week 16 learning to an unfamiliar case?",
+          "prompt": "Why did Indigenous nations make different alliance choices during the Revolution?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Nations pursued their own sovereignty, territorial, diplomatic, and security interests in changing regional conditions.",
+            "All Indigenous nations supported Britain for the same reason.",
+            "Indigenous nations were not political actors.",
+            "The war did not affect Indigenous homelands."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
@@ -7878,15 +7883,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W17-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Confederation, Northwest Ordinance, and the Problem of Governing a New Nation\"?",
+          "prompt": "What was a major weakness of the Articles of Confederation?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "The national government had limited power to raise revenue and regulate interstate or foreign commerce.",
+            "The national government had an all-powerful executive.",
+            "States had no governments.",
+            "Congress could easily enforce every law."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
@@ -7904,41 +7909,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W17-G1",
-          "prompt": "How should geography be used when analyzing \"Confederation, Northwest Ordinance, and the Problem of Governing a New Nation\"?",
+          "prompt": "What did the Northwest Ordinance of 1787 establish?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A process for governing territories and admitting new states in the Northwest Territory.",
+            "A system for electing the president.",
+            "The first federal income tax.",
+            "The Louisiana Purchase."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G5SS-W17-A1",
-          "prompt": "What makes an argument about \"Confederation, Northwest Ordinance, and the Problem of Governing a New Nation\" defensible?",
+          "prompt": "How did the Northwest Ordinance address slavery in the Northwest Territory?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "It prohibited slavery in the territory while including a fugitive-slave provision, revealing both restriction and continuing protection of slavery.",
+            "It abolished slavery throughout the United States.",
+            "It required slavery in every territory.",
+            "It never mentioned slavery."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G5SS-W17-T1",
-          "prompt": "Which approach best transfers Week 17 learning to an unfamiliar case?",
+          "prompt": "Why did governing western lands matter under the Confederation?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Land policy affected settlement, Indigenous nations, public finance, territorial government, and future statehood.",
+            "Western land had no residents or political claims.",
+            "Territories could not become states.",
+            "Land policy was unrelated to national power."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
@@ -8062,15 +8067,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W17-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Confederation, Northwest Ordinance, and the Problem of Governing a New Nation\"?",
+          "prompt": "What was a major weakness of the Articles of Confederation?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "The national government had limited power to raise revenue and regulate interstate or foreign commerce.",
+            "The national government had an all-powerful executive.",
+            "States had no governments.",
+            "Congress could easily enforce every law."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
@@ -8088,41 +8093,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W17-G1",
-          "prompt": "How should geography be used when analyzing \"Confederation, Northwest Ordinance, and the Problem of Governing a New Nation\"?",
+          "prompt": "What did the Northwest Ordinance of 1787 establish?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A process for governing territories and admitting new states in the Northwest Territory.",
+            "A system for electing the president.",
+            "The first federal income tax.",
+            "The Louisiana Purchase."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G5SS-W17-A1",
-          "prompt": "What makes an argument about \"Confederation, Northwest Ordinance, and the Problem of Governing a New Nation\" defensible?",
+          "prompt": "How did the Northwest Ordinance address slavery in the Northwest Territory?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "It prohibited slavery in the territory while including a fugitive-slave provision, revealing both restriction and continuing protection of slavery.",
+            "It abolished slavery throughout the United States.",
+            "It required slavery in every territory.",
+            "It never mentioned slavery."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G5SS-W17-T1",
-          "prompt": "Which approach best transfers Week 17 learning to an unfamiliar case?",
+          "prompt": "Why did governing western lands matter under the Confederation?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Land policy affected settlement, Indigenous nations, public finance, territorial government, and future statehood.",
+            "Western land had no residents or political claims.",
+            "Territories could not become states.",
+            "Land policy was unrelated to national power."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
@@ -8361,15 +8366,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W18-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Midyear Synthesis and Closed-Book Midterm\"?",
+          "prompt": "Which sequence is chronologically correct?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Pre-1492 Indigenous societies → European exploration → colonial development → imperial crisis → Revolution → Confederation.",
+            "Revolution → pre-1492 societies → Confederation → exploration → colonies.",
+            "Constitution → exploration → Revolution → Indigenous societies.",
+            "Colonies → pre-1492 societies → Revolution → exploration."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
@@ -8387,41 +8392,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W18-G1",
-          "prompt": "How should geography be used when analyzing \"Midyear Synthesis and Closed-Book Midterm\"?",
+          "prompt": "Which first-semester theme best connects geography to historical change?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Location, resources, routes, environments, and borders shaped choices without determining every outcome.",
+            "Geography explains every event by itself.",
+            "Physical maps replace primary sources.",
+            "Political ideas never interact with place."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G5SS-W18-A1",
-          "prompt": "What makes an argument about \"Midyear Synthesis and Closed-Book Midterm\" defensible?",
+          "prompt": "Which evidence set is strongest for a midyear historical argument?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "A map, primary source, secondary interpretation, and timeline that are relevant to the same question.",
+            "Four unrelated quotations.",
+            "One unsourced summary.",
+            "Only a vocabulary list."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G5SS-W18-T1",
-          "prompt": "Which approach best transfers Week 18 learning to an unfamiliar case?",
+          "prompt": "What should a student do after scoring below 80% on the midterm?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Review weak strands, complete corrections, and take a fresh randomized form.",
+            "Memorize the exact old answer order.",
+            "Skip first-semester content.",
+            "Change the recorded score manually."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
@@ -8545,15 +8550,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W18-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Midyear Synthesis and Closed-Book Midterm\"?",
+          "prompt": "Which sequence is chronologically correct?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Pre-1492 Indigenous societies → European exploration → colonial development → imperial crisis → Revolution → Confederation.",
+            "Revolution → pre-1492 societies → Confederation → exploration → colonies.",
+            "Constitution → exploration → Revolution → Indigenous societies.",
+            "Colonies → pre-1492 societies → Revolution → exploration."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
@@ -8571,41 +8576,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W18-G1",
-          "prompt": "How should geography be used when analyzing \"Midyear Synthesis and Closed-Book Midterm\"?",
+          "prompt": "Which first-semester theme best connects geography to historical change?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Location, resources, routes, environments, and borders shaped choices without determining every outcome.",
+            "Geography explains every event by itself.",
+            "Physical maps replace primary sources.",
+            "Political ideas never interact with place."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G5SS-W18-A1",
-          "prompt": "What makes an argument about \"Midyear Synthesis and Closed-Book Midterm\" defensible?",
+          "prompt": "Which evidence set is strongest for a midyear historical argument?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "A map, primary source, secondary interpretation, and timeline that are relevant to the same question.",
+            "Four unrelated quotations.",
+            "One unsourced summary.",
+            "Only a vocabulary list."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G5SS-W18-T1",
-          "prompt": "Which approach best transfers Week 18 learning to an unfamiliar case?",
+          "prompt": "What should a student do after scoring below 80% on the midterm?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Review weak strands, complete corrections, and take a fresh randomized form.",
+            "Memorize the exact old answer order.",
+            "Skip first-semester content.",
+            "Change the recorded score manually."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
@@ -8844,15 +8849,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W19-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Constitutional Convention: Representation, Federal Power, and Compromise\"?",
+          "prompt": "What problem did the Great Compromise address?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "How states would be represented in Congress, creating a House based on population and a Senate with equal state representation.",
+            "Whether to purchase Louisiana.",
+            "Whether to abolish all state governments.",
+            "How to organize the Supreme Court alone."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
@@ -8870,41 +8875,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W19-G1",
-          "prompt": "How should geography be used when analyzing \"Constitutional Convention: Representation, Federal Power, and Compromise\"?",
+          "prompt": "What was the Three-Fifths Compromise?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "An apportionment formula tied to slavery and political representation; it was not a statement of human worth.",
+            "A declaration that enslaved people were biologically three-fifths human.",
+            "A plan to abolish slavery immediately.",
+            "A rule for dividing western territories."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G5SS-W19-A1",
-          "prompt": "What makes an argument about \"Constitutional Convention: Representation, Federal Power, and Compromise\" defensible?",
+          "prompt": "Why was the Electoral College created?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "It was part of the constitutional design for selecting the president through state-appointed electors rather than direct national popular vote alone.",
+            "It selects members of Congress.",
+            "It writes Supreme Court decisions.",
+            "It replaced state elections."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G5SS-W19-T1",
-          "prompt": "Which approach best transfers Week 19 learning to an unfamiliar case?",
+          "prompt": "Why should Constitutional Convention compromises be evaluated critically?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "They resolved political disputes but could also protect unequal power, including slavery, and had lasting consequences.",
+            "Every compromise was morally neutral.",
+            "Compromise always produces justice.",
+            "Delegates agreed on every major issue."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
@@ -9028,15 +9033,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W19-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Constitutional Convention: Representation, Federal Power, and Compromise\"?",
+          "prompt": "What problem did the Great Compromise address?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "How states would be represented in Congress, creating a House based on population and a Senate with equal state representation.",
+            "Whether to purchase Louisiana.",
+            "Whether to abolish all state governments.",
+            "How to organize the Supreme Court alone."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
@@ -9054,41 +9059,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W19-G1",
-          "prompt": "How should geography be used when analyzing \"Constitutional Convention: Representation, Federal Power, and Compromise\"?",
+          "prompt": "What was the Three-Fifths Compromise?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "An apportionment formula tied to slavery and political representation; it was not a statement of human worth.",
+            "A declaration that enslaved people were biologically three-fifths human.",
+            "A plan to abolish slavery immediately.",
+            "A rule for dividing western territories."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G5SS-W19-A1",
-          "prompt": "What makes an argument about \"Constitutional Convention: Representation, Federal Power, and Compromise\" defensible?",
+          "prompt": "Why was the Electoral College created?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "It was part of the constitutional design for selecting the president through state-appointed electors rather than direct national popular vote alone.",
+            "It selects members of Congress.",
+            "It writes Supreme Court decisions.",
+            "It replaced state elections."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G5SS-W19-T1",
-          "prompt": "Which approach best transfers Week 19 learning to an unfamiliar case?",
+          "prompt": "Why should Constitutional Convention compromises be evaluated critically?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "They resolved political disputes but could also protect unequal power, including slavery, and had lasting consequences.",
+            "Every compromise was morally neutral.",
+            "Compromise always produces justice.",
+            "Delegates agreed on every major issue."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
@@ -9327,15 +9332,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W20-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Ratification, Federalists, Anti-Federalists, and the Bill of Rights\"?",
+          "prompt": "What did Federalists generally argue during ratification?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "The Constitution created a stronger but limited national government necessary for effective union.",
+            "The Articles of Confederation were already too powerful.",
+            "The Bill of Rights should replace the Constitution entirely.",
+            "States should become independent countries."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
@@ -9353,41 +9358,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W20-G1",
-          "prompt": "How should geography be used when analyzing \"Ratification, Federalists, Anti-Federalists, and the Bill of Rights\"?",
+          "prompt": "What concern did many Anti-Federalists raise?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "The proposed national government might threaten liberty unless powers were limited and rights more explicitly protected.",
+            "Congress was too weak because it had no members.",
+            "The president should be hereditary.",
+            "States should have no authority."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G5SS-W20-A1",
-          "prompt": "What makes an argument about \"Ratification, Federalists, Anti-Federalists, and the Bill of Rights\" defensible?",
+          "prompt": "Why was the Bill of Rights added?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Concerns about individual liberties and limits on federal power helped drive adoption of the first ten amendments.",
+            "It created the original thirteen colonies.",
+            "It declared independence from Britain.",
+            "It established the Louisiana Purchase."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G5SS-W20-T1",
-          "prompt": "Which approach best transfers Week 20 learning to an unfamiliar case?",
+          "prompt": "What does ratification mean?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Formal approval of a proposed constitution or agreement through the required process.",
+            "A Supreme Court ruling.",
+            "A military alliance.",
+            "A tax protest."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
@@ -9511,15 +9516,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W20-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Ratification, Federalists, Anti-Federalists, and the Bill of Rights\"?",
+          "prompt": "What did Federalists generally argue during ratification?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "The Constitution created a stronger but limited national government necessary for effective union.",
+            "The Articles of Confederation were already too powerful.",
+            "The Bill of Rights should replace the Constitution entirely.",
+            "States should become independent countries."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
@@ -9537,41 +9542,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W20-G1",
-          "prompt": "How should geography be used when analyzing \"Ratification, Federalists, Anti-Federalists, and the Bill of Rights\"?",
+          "prompt": "What concern did many Anti-Federalists raise?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "The proposed national government might threaten liberty unless powers were limited and rights more explicitly protected.",
+            "Congress was too weak because it had no members.",
+            "The president should be hereditary.",
+            "States should have no authority."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G5SS-W20-A1",
-          "prompt": "What makes an argument about \"Ratification, Federalists, Anti-Federalists, and the Bill of Rights\" defensible?",
+          "prompt": "Why was the Bill of Rights added?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Concerns about individual liberties and limits on federal power helped drive adoption of the first ten amendments.",
+            "It created the original thirteen colonies.",
+            "It declared independence from Britain.",
+            "It established the Louisiana Purchase."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G5SS-W20-T1",
-          "prompt": "Which approach best transfers Week 20 learning to an unfamiliar case?",
+          "prompt": "What does ratification mean?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Formal approval of a proposed constitution or agreement through the required process.",
+            "A Supreme Court ruling.",
+            "A military alliance.",
+            "A tax protest."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
@@ -9810,15 +9815,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W21-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Branches, Checks and Balances, Federalism, and Constitutional Interpretation\"?",
+          "prompt": "Which constitutional article establishes the legislative branch?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Article I.",
+            "Article II.",
+            "Article III.",
+            "Article V only."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
@@ -9836,41 +9841,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W21-G1",
-          "prompt": "How should geography be used when analyzing \"Branches, Checks and Balances, Federalism, and Constitutional Interpretation\"?",
+          "prompt": "Which constitutional article establishes the executive branch?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Article II.",
+            "Article I.",
+            "Article III.",
+            "The Bill of Rights only."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G5SS-W21-A1",
-          "prompt": "What makes an argument about \"Branches, Checks and Balances, Federalism, and Constitutional Interpretation\" defensible?",
+          "prompt": "What is one role of the U.S. Supreme Court within the federal court system?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "It is the highest federal court and resolves constitutional and legal questions within its jurisdiction.",
+            "It writes all federal laws.",
+            "It elects the president.",
+            "It manages state budgets."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G5SS-W21-T1",
-          "prompt": "Which approach best transfers Week 21 learning to an unfamiliar case?",
+          "prompt": "Why does the Constitution include an amendment process?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "It allows formal constitutional change through a demanding legal process rather than ordinary lawmaking alone.",
+            "It lets any one official rewrite the Constitution.",
+            "It prevents any future change.",
+            "It applies only to state constitutions."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
@@ -9994,15 +9999,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W21-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Branches, Checks and Balances, Federalism, and Constitutional Interpretation\"?",
+          "prompt": "Which constitutional article establishes the legislative branch?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Article I.",
+            "Article II.",
+            "Article III.",
+            "Article V only."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
@@ -10020,41 +10025,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W21-G1",
-          "prompt": "How should geography be used when analyzing \"Branches, Checks and Balances, Federalism, and Constitutional Interpretation\"?",
+          "prompt": "Which constitutional article establishes the executive branch?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Article II.",
+            "Article I.",
+            "Article III.",
+            "The Bill of Rights only."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G5SS-W21-A1",
-          "prompt": "What makes an argument about \"Branches, Checks and Balances, Federalism, and Constitutional Interpretation\" defensible?",
+          "prompt": "What is one role of the U.S. Supreme Court within the federal court system?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "It is the highest federal court and resolves constitutional and legal questions within its jurisdiction.",
+            "It writes all federal laws.",
+            "It elects the president.",
+            "It manages state budgets."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G5SS-W21-T1",
-          "prompt": "Which approach best transfers Week 21 learning to an unfamiliar case?",
+          "prompt": "Why does the Constitution include an amendment process?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "It allows formal constitutional change through a demanding legal process rather than ordinary lawmaking alone.",
+            "It lets any one official rewrite the Constitution.",
+            "It prevents any future change.",
+            "It applies only to state constitutions."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
@@ -10293,15 +10298,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W22-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Citizenship, Rights, Responsibilities, and State/Local Government\"?",
+          "prompt": "Which is generally a civic duty of U.S. citizens when legally required?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Serving on a jury.",
+            "Supporting a particular political party.",
+            "Voting for a particular candidate.",
+            "Agreeing with elected officials."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
@@ -10319,41 +10324,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W22-G1",
-          "prompt": "How should geography be used when analyzing \"Citizenship, Rights, Responsibilities, and State/Local Government\"?",
+          "prompt": "Which is a civic responsibility rather than a legally required duty in most situations?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Staying informed about public issues and voting when eligible.",
+            "Obeying court orders.",
+            "Paying legally owed taxes.",
+            "Responding to a lawful jury summons."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G5SS-W22-A1",
-          "prompt": "What makes an argument about \"Citizenship, Rights, Responsibilities, and State/Local Government\" defensible?",
+          "prompt": "Why do states have their own constitutions?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "State constitutions organize and limit state government within the U.S. federal system and protect rights under state law.",
+            "A state constitution replaces the U.S. Constitution.",
+            "States are independent countries.",
+            "State constitutions govern federal agencies."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G5SS-W22-T1",
-          "prompt": "Which approach best transfers Week 22 learning to an unfamiliar case?",
+          "prompt": "What is an appropriate way to identify current federal representatives for a state?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Use current official Senate and House sources and verify the correct district rather than relying on an old textbook.",
+            "Memorize names from an undated worksheet.",
+            "Assume every state has one senator.",
+            "Use a campaign advertisement as the only source."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
@@ -10477,15 +10482,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W22-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Citizenship, Rights, Responsibilities, and State/Local Government\"?",
+          "prompt": "Which is generally a civic duty of U.S. citizens when legally required?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Serving on a jury.",
+            "Supporting a particular political party.",
+            "Voting for a particular candidate.",
+            "Agreeing with elected officials."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
@@ -10503,41 +10508,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W22-G1",
-          "prompt": "How should geography be used when analyzing \"Citizenship, Rights, Responsibilities, and State/Local Government\"?",
+          "prompt": "Which is a civic responsibility rather than a legally required duty in most situations?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Staying informed about public issues and voting when eligible.",
+            "Obeying court orders.",
+            "Paying legally owed taxes.",
+            "Responding to a lawful jury summons."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G5SS-W22-A1",
-          "prompt": "What makes an argument about \"Citizenship, Rights, Responsibilities, and State/Local Government\" defensible?",
+          "prompt": "Why do states have their own constitutions?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "State constitutions organize and limit state government within the U.S. federal system and protect rights under state law.",
+            "A state constitution replaces the U.S. Constitution.",
+            "States are independent countries.",
+            "State constitutions govern federal agencies."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G5SS-W22-T1",
-          "prompt": "Which approach best transfers Week 22 learning to an unfamiliar case?",
+          "prompt": "What is an appropriate way to identify current federal representatives for a state?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Use current official Senate and House sources and verify the correct district rather than relying on an old textbook.",
+            "Memorize names from an undated worksheet.",
+            "Assume every state has one senator.",
+            "Use a campaign advertisement as the only source."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
@@ -10776,15 +10781,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W23-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"The Early Republic: Washington, Cabinet Government, Parties, and Precedent\"?",
+          "prompt": "What precedent did George Washington establish by creating a Cabinet?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Presidents could rely on department heads and advisers to help administer the executive branch.",
+            "The Cabinet became a fourth branch of government.",
+            "Cabinet officers became elected judges.",
+            "The president gained power to make laws alone."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
@@ -10802,41 +10807,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W23-G1",
-          "prompt": "How should geography be used when analyzing \"The Early Republic: Washington, Cabinet Government, Parties, and Precedent\"?",
+          "prompt": "Why did political parties begin to develop in the 1790s?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Leaders disagreed over federal power, economic policy, foreign affairs, and interpretations of the Constitution.",
+            "Everyone agreed on national policy.",
+            "The Constitution required two parties.",
+            "Parties formed only over geography."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G5SS-W23-A1",
-          "prompt": "What makes an argument about \"The Early Republic: Washington, Cabinet Government, Parties, and Precedent\" defensible?",
+          "prompt": "What did Washington's Neutrality Proclamation address?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "The U.S. response to war between European powers while the young republic sought to avoid direct involvement.",
+            "The Louisiana Purchase.",
+            "The War of 1812 peace treaty.",
+            "The Missouri Compromise."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G5SS-W23-T1",
-          "prompt": "Which approach best transfers Week 23 learning to an unfamiliar case?",
+          "prompt": "Why are presidential precedents historically important?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Early practices can shape expectations for later officeholders even when not written directly into the Constitution.",
+            "Precedents automatically become constitutional amendments.",
+            "They matter only during one administration.",
+            "They replace laws."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
@@ -10960,15 +10965,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W23-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"The Early Republic: Washington, Cabinet Government, Parties, and Precedent\"?",
+          "prompt": "What precedent did George Washington establish by creating a Cabinet?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Presidents could rely on department heads and advisers to help administer the executive branch.",
+            "The Cabinet became a fourth branch of government.",
+            "Cabinet officers became elected judges.",
+            "The president gained power to make laws alone."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
@@ -10986,41 +10991,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W23-G1",
-          "prompt": "How should geography be used when analyzing \"The Early Republic: Washington, Cabinet Government, Parties, and Precedent\"?",
+          "prompt": "Why did political parties begin to develop in the 1790s?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Leaders disagreed over federal power, economic policy, foreign affairs, and interpretations of the Constitution.",
+            "Everyone agreed on national policy.",
+            "The Constitution required two parties.",
+            "Parties formed only over geography."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G5SS-W23-A1",
-          "prompt": "What makes an argument about \"The Early Republic: Washington, Cabinet Government, Parties, and Precedent\" defensible?",
+          "prompt": "What did Washington's Neutrality Proclamation address?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "The U.S. response to war between European powers while the young republic sought to avoid direct involvement.",
+            "The Louisiana Purchase.",
+            "The War of 1812 peace treaty.",
+            "The Missouri Compromise."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G5SS-W23-T1",
-          "prompt": "Which approach best transfers Week 23 learning to an unfamiliar case?",
+          "prompt": "Why are presidential precedents historically important?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Early practices can shape expectations for later officeholders even when not written directly into the Constitution.",
+            "Precedents automatically become constitutional amendments.",
+            "They matter only during one administration.",
+            "They replace laws."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
@@ -11259,15 +11264,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W24-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Louisiana Purchase, Lewis and Clark, Indigenous Nations, and Continental Claims\"?",
+          "prompt": "When did the United States acquire the Louisiana Purchase from France?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "1803.",
+            "1776.",
+            "1812.",
+            "1820."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
@@ -11285,41 +11290,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W24-G1",
-          "prompt": "How should geography be used when analyzing \"Louisiana Purchase, Lewis and Clark, Indigenous Nations, and Continental Claims\"?",
+          "prompt": "Why was the Louisiana Purchase significant?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It greatly expanded U.S. territorial claims and intensified questions about constitutional power, Indigenous sovereignty, exploration, and expansion.",
+            "It ended the American Revolution.",
+            "It created Canada.",
+            "It abolished slavery."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G5SS-W24-A1",
-          "prompt": "What makes an argument about \"Louisiana Purchase, Lewis and Clark, Indigenous Nations, and Continental Claims\" defensible?",
+          "prompt": "What was one purpose of the Lewis and Clark expedition?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "To gather geographic, scientific, diplomatic, and commercial information about western lands and routes.",
+            "To write the Bill of Rights.",
+            "To fight the War of 1812.",
+            "To establish the Supreme Court."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G5SS-W24-T1",
-          "prompt": "Which approach best transfers Week 24 learning to an unfamiliar case?",
+          "prompt": "Why must Louisiana Purchase maps be read critically?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "U.S. claims overlapped Indigenous homelands and sovereignty, and mapped acquisition did not mean the land was empty or uncontested.",
+            "The territory had no inhabitants.",
+            "France controlled every community equally.",
+            "Maps show only physical geography."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
@@ -11443,15 +11448,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W24-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Louisiana Purchase, Lewis and Clark, Indigenous Nations, and Continental Claims\"?",
+          "prompt": "When did the United States acquire the Louisiana Purchase from France?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "1803.",
+            "1776.",
+            "1812.",
+            "1820."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
@@ -11469,41 +11474,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W24-G1",
-          "prompt": "How should geography be used when analyzing \"Louisiana Purchase, Lewis and Clark, Indigenous Nations, and Continental Claims\"?",
+          "prompt": "Why was the Louisiana Purchase significant?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It greatly expanded U.S. territorial claims and intensified questions about constitutional power, Indigenous sovereignty, exploration, and expansion.",
+            "It ended the American Revolution.",
+            "It created Canada.",
+            "It abolished slavery."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G5SS-W24-A1",
-          "prompt": "What makes an argument about \"Louisiana Purchase, Lewis and Clark, Indigenous Nations, and Continental Claims\" defensible?",
+          "prompt": "What was one purpose of the Lewis and Clark expedition?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "To gather geographic, scientific, diplomatic, and commercial information about western lands and routes.",
+            "To write the Bill of Rights.",
+            "To fight the War of 1812.",
+            "To establish the Supreme Court."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G5SS-W24-T1",
-          "prompt": "Which approach best transfers Week 24 learning to an unfamiliar case?",
+          "prompt": "Why must Louisiana Purchase maps be read critically?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "U.S. claims overlapped Indigenous homelands and sovereignty, and mapped acquisition did not mean the land was empty or uncontested.",
+            "The territory had no inhabitants.",
+            "France controlled every community equally.",
+            "Maps show only physical geography."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
@@ -11742,15 +11747,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W25-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"The War of 1812, Sovereignty, Trade, and Competing Borderlands\"?",
+          "prompt": "Which issue contributed to the War of 1812?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "British interference with U.S. maritime trade and impressment of sailors, along with frontier and sovereignty conflicts.",
+            "The Great Compromise.",
+            "The Gold Rush.",
+            "Ratification of the Fourteenth Amendment."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
@@ -11768,41 +11773,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W25-G1",
-          "prompt": "How should geography be used when analyzing \"The War of 1812, Sovereignty, Trade, and Competing Borderlands\"?",
+          "prompt": "What was impressment?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "The forced taking of sailors into naval service, especially associated with British actions against seamen claimed as British subjects.",
+            "A voluntary immigration program.",
+            "A colonial tax.",
+            "A land survey method."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G5SS-W25-A1",
-          "prompt": "What makes an argument about \"The War of 1812, Sovereignty, Trade, and Competing Borderlands\" defensible?",
+          "prompt": "What did the Treaty of Ghent do?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "It ended the War of 1812 and largely restored prewar territorial conditions between the United States and Britain.",
+            "It transferred Canada to the United States.",
+            "It created the Missouri Compromise.",
+            "It purchased Louisiana."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G5SS-W25-T1",
-          "prompt": "Which approach best transfers Week 25 learning to an unfamiliar case?",
+          "prompt": "Why should Indigenous perspectives be included in the War of 1812?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Indigenous nations faced major struggles over land, sovereignty, alliances, and U.S. expansion in the borderlands.",
+            "The war had no effect on Indigenous nations.",
+            "All Indigenous nations supported the same side.",
+            "Indigenous politics ended before 1812."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
@@ -11926,15 +11931,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W25-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"The War of 1812, Sovereignty, Trade, and Competing Borderlands\"?",
+          "prompt": "Which issue contributed to the War of 1812?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "British interference with U.S. maritime trade and impressment of sailors, along with frontier and sovereignty conflicts.",
+            "The Great Compromise.",
+            "The Gold Rush.",
+            "Ratification of the Fourteenth Amendment."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
@@ -11952,41 +11957,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W25-G1",
-          "prompt": "How should geography be used when analyzing \"The War of 1812, Sovereignty, Trade, and Competing Borderlands\"?",
+          "prompt": "What was impressment?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "The forced taking of sailors into naval service, especially associated with British actions against seamen claimed as British subjects.",
+            "A voluntary immigration program.",
+            "A colonial tax.",
+            "A land survey method."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G5SS-W25-A1",
-          "prompt": "What makes an argument about \"The War of 1812, Sovereignty, Trade, and Competing Borderlands\" defensible?",
+          "prompt": "What did the Treaty of Ghent do?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "It ended the War of 1812 and largely restored prewar territorial conditions between the United States and Britain.",
+            "It transferred Canada to the United States.",
+            "It created the Missouri Compromise.",
+            "It purchased Louisiana."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G5SS-W25-T1",
-          "prompt": "Which approach best transfers Week 25 learning to an unfamiliar case?",
+          "prompt": "Why should Indigenous perspectives be included in the War of 1812?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Indigenous nations faced major struggles over land, sovereignty, alliances, and U.S. expansion in the borderlands.",
+            "The war had no effect on Indigenous nations.",
+            "All Indigenous nations supported the same side.",
+            "Indigenous politics ended before 1812."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
@@ -12225,15 +12230,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W26-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Transportation Revolution, Market Growth, Invention, and Regional Interdependence\"?",
+          "prompt": "How could canals and improved roads affect markets in the early nineteenth century?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "They could reduce travel time and shipping costs and connect producers with more distant markets.",
+            "They made transportation more expensive by definition.",
+            "They ended regional trade.",
+            "They prevented cities from growing."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
@@ -12251,41 +12256,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W26-G1",
-          "prompt": "How should geography be used when analyzing \"Transportation Revolution, Market Growth, Invention, and Regional Interdependence\"?",
+          "prompt": "Why was the Erie Canal economically significant?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It linked the Great Lakes region with the Hudson River and Atlantic markets, accelerating trade and settlement connections.",
+            "It connected California directly to Europe.",
+            "It was built before the Revolution.",
+            "It ended river transportation."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G5SS-W26-A1",
-          "prompt": "What makes an argument about \"Transportation Revolution, Market Growth, Invention, and Regional Interdependence\" defensible?",
+          "prompt": "How did steamboats change transportation?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "They made upstream river travel and scheduled commercial movement more practical on many waterways.",
+            "They eliminated all roads.",
+            "They were used only in the Atlantic Ocean.",
+            "They replaced railroads before railroads existed."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G5SS-W26-T1",
-          "prompt": "Which approach best transfers Week 26 learning to an unfamiliar case?",
+          "prompt": "What does productivity mean in economic history?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "The amount of output produced relative to inputs such as labor, time, or capital.",
+            "The number of political parties.",
+            "A measure of land area.",
+            "A court's authority."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
@@ -12409,15 +12414,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W26-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Transportation Revolution, Market Growth, Invention, and Regional Interdependence\"?",
+          "prompt": "How could canals and improved roads affect markets in the early nineteenth century?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "They could reduce travel time and shipping costs and connect producers with more distant markets.",
+            "They made transportation more expensive by definition.",
+            "They ended regional trade.",
+            "They prevented cities from growing."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
@@ -12435,41 +12440,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W26-G1",
-          "prompt": "How should geography be used when analyzing \"Transportation Revolution, Market Growth, Invention, and Regional Interdependence\"?",
+          "prompt": "Why was the Erie Canal economically significant?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It linked the Great Lakes region with the Hudson River and Atlantic markets, accelerating trade and settlement connections.",
+            "It connected California directly to Europe.",
+            "It was built before the Revolution.",
+            "It ended river transportation."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G5SS-W26-A1",
-          "prompt": "What makes an argument about \"Transportation Revolution, Market Growth, Invention, and Regional Interdependence\" defensible?",
+          "prompt": "How did steamboats change transportation?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "They made upstream river travel and scheduled commercial movement more practical on many waterways.",
+            "They eliminated all roads.",
+            "They were used only in the Atlantic Ocean.",
+            "They replaced railroads before railroads existed."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G5SS-W26-T1",
-          "prompt": "Which approach best transfers Week 26 learning to an unfamiliar case?",
+          "prompt": "What does productivity mean in economic history?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "The amount of output produced relative to inputs such as labor, time, or capital.",
+            "The number of political parties.",
+            "A measure of land area.",
+            "A court's authority."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
@@ -12708,15 +12713,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W27-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Westward Expansion, Manifest Destiny, and Indigenous Dispossession\"?",
+          "prompt": "What did the phrase 'Manifest Destiny' express in the nineteenth century?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "A belief used to justify U.S. continental expansion, often while minimizing Indigenous and Mexican sovereignty and rights.",
+            "A treaty ending the Revolution.",
+            "A constitutional amendment.",
+            "A Canadian independence movement."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
@@ -12734,41 +12739,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W27-G1",
-          "prompt": "How should geography be used when analyzing \"Westward Expansion, Manifest Destiny, and Indigenous Dispossession\"?",
+          "prompt": "What was the Trail of Tears?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "The forced removal of Cherokee people to Indian Territory, causing severe suffering and death.",
+            "A voluntary tourist route.",
+            "A railroad to California.",
+            "A Revolutionary War campaign."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G5SS-W27-A1",
-          "prompt": "What makes an argument about \"Westward Expansion, Manifest Destiny, and Indigenous Dispossession\" defensible?",
+          "prompt": "Why should westward expansion be studied from multiple perspectives?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Settler opportunity existed alongside Indigenous dispossession, treaty violations, forced removal, Mexican territorial loss, and environmental change.",
+            "Western lands were empty.",
+            "Expansion benefited every group equally.",
+            "Only federal officials experienced consequences."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G5SS-W27-T1",
-          "prompt": "Which approach best transfers Week 27 learning to an unfamiliar case?",
+          "prompt": "Which hardship was common on overland trails?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Disease, weather, injury, supply shortages, river crossings, difficult terrain, and long distances.",
+            "Guaranteed medical care.",
+            "No risk from weather.",
+            "Unlimited food supplies."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
@@ -12892,15 +12897,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W27-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Westward Expansion, Manifest Destiny, and Indigenous Dispossession\"?",
+          "prompt": "What did the phrase 'Manifest Destiny' express in the nineteenth century?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "A belief used to justify U.S. continental expansion, often while minimizing Indigenous and Mexican sovereignty and rights.",
+            "A treaty ending the Revolution.",
+            "A constitutional amendment.",
+            "A Canadian independence movement."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
@@ -12918,41 +12923,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W27-G1",
-          "prompt": "How should geography be used when analyzing \"Westward Expansion, Manifest Destiny, and Indigenous Dispossession\"?",
+          "prompt": "What was the Trail of Tears?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "The forced removal of Cherokee people to Indian Territory, causing severe suffering and death.",
+            "A voluntary tourist route.",
+            "A railroad to California.",
+            "A Revolutionary War campaign."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G5SS-W27-A1",
-          "prompt": "What makes an argument about \"Westward Expansion, Manifest Destiny, and Indigenous Dispossession\" defensible?",
+          "prompt": "Why should westward expansion be studied from multiple perspectives?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Settler opportunity existed alongside Indigenous dispossession, treaty violations, forced removal, Mexican territorial loss, and environmental change.",
+            "Western lands were empty.",
+            "Expansion benefited every group equally.",
+            "Only federal officials experienced consequences."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G5SS-W27-T1",
-          "prompt": "Which approach best transfers Week 27 learning to an unfamiliar case?",
+          "prompt": "Which hardship was common on overland trails?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Disease, weather, injury, supply shortages, river crossings, difficult terrain, and long distances.",
+            "Guaranteed medical care.",
+            "No risk from weather.",
+            "Unlimited food supplies."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
@@ -13191,15 +13196,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W28-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Missouri Compromise, Slavery's Expansion, and Sectional Tensions to 1850\"?",
+          "prompt": "What did the Missouri Compromise of 1820 do?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Admitted Missouri as a slave state and Maine as a free state while restricting slavery north of 36°30′ in much of the Louisiana Purchase territory.",
+            "Abolished slavery nationwide.",
+            "Admitted California as a state.",
+            "Ended the War of 1812."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
@@ -13217,41 +13222,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W28-G1",
-          "prompt": "How should geography be used when analyzing \"Missouri Compromise, Slavery's Expansion, and Sectional Tensions to 1850\"?",
+          "prompt": "Why did the Missouri Compromise matter politically?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It temporarily managed sectional conflict over the expansion of slavery and the balance of power in Congress.",
+            "It ended sectional disagreement permanently.",
+            "It dealt only with foreign trade.",
+            "It created the Bill of Rights."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G5SS-W28-A1",
-          "prompt": "What makes an argument about \"Missouri Compromise, Slavery's Expansion, and Sectional Tensions to 1850\" defensible?",
+          "prompt": "What does sectionalism mean in this context?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Strong regional interests and identities that could shape political conflict over issues such as slavery and economic policy.",
+            "The division of government into three branches.",
+            "A map projection.",
+            "A religious denomination."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G5SS-W28-T1",
-          "prompt": "Which approach best transfers Week 28 learning to an unfamiliar case?",
+          "prompt": "Why is slavery central to understanding sectional tension before 1850?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Debates over whether slavery would expand into territories affected political power, law, economy, and human freedom.",
+            "Slavery was unrelated to western expansion.",
+            "Sectionalism was caused only by climate.",
+            "Congress never debated slavery."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
@@ -13375,15 +13380,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W28-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Missouri Compromise, Slavery's Expansion, and Sectional Tensions to 1850\"?",
+          "prompt": "What did the Missouri Compromise of 1820 do?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Admitted Missouri as a slave state and Maine as a free state while restricting slavery north of 36°30′ in much of the Louisiana Purchase territory.",
+            "Abolished slavery nationwide.",
+            "Admitted California as a state.",
+            "Ended the War of 1812."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
@@ -13401,41 +13406,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W28-G1",
-          "prompt": "How should geography be used when analyzing \"Missouri Compromise, Slavery's Expansion, and Sectional Tensions to 1850\"?",
+          "prompt": "Why did the Missouri Compromise matter politically?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It temporarily managed sectional conflict over the expansion of slavery and the balance of power in Congress.",
+            "It ended sectional disagreement permanently.",
+            "It dealt only with foreign trade.",
+            "It created the Bill of Rights."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G5SS-W28-A1",
-          "prompt": "What makes an argument about \"Missouri Compromise, Slavery's Expansion, and Sectional Tensions to 1850\" defensible?",
+          "prompt": "What does sectionalism mean in this context?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Strong regional interests and identities that could shape political conflict over issues such as slavery and economic policy.",
+            "The division of government into three branches.",
+            "A map projection.",
+            "A religious denomination."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G5SS-W28-T1",
-          "prompt": "Which approach best transfers Week 28 learning to an unfamiliar case?",
+          "prompt": "Why is slavery central to understanding sectional tension before 1850?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Debates over whether slavery would expand into territories affected political power, law, economy, and human freedom.",
+            "Slavery was unrelated to western expansion.",
+            "Sectionalism was caused only by climate.",
+            "Congress never debated slavery."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
@@ -13674,15 +13679,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W29-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Canada: Indigenous Nations, Colonization, Government, Geography, and U.S. Connections\"?",
+          "prompt": "Which peoples are central to an accurate study of Canada's Indigenous history and present?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "First Nations, Inuit, and Métis peoples, while recognizing many distinct nations and communities within those broad categories.",
+            "One single Canadian Indigenous culture.",
+            "Only European settlers.",
+            "Only communities south of the U.S. border."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
@@ -13700,41 +13705,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W29-G1",
-          "prompt": "How should geography be used when analyzing \"Canada: Indigenous Nations, Colonization, Government, Geography, and U.S. Connections\"?",
+          "prompt": "How is Canada's national government commonly described today?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A federal parliamentary democracy and constitutional monarchy.",
+            "An absolute monarchy.",
+            "A presidential republic identical to the United States.",
+            "A city-state."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G5SS-W29-A1",
-          "prompt": "What makes an argument about \"Canada: Indigenous Nations, Colonization, Government, Geography, and U.S. Connections\" defensible?",
+          "prompt": "Why should Canada be compared regionally rather than treated as one uniform place?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Its provinces, territories, languages, Indigenous nations, economies, climates, and settlement patterns vary substantially.",
+            "Every province has the same economy and culture.",
+            "Only Toronto represents Canada.",
+            "Regional evidence is unnecessary."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G5SS-W29-T1",
-          "prompt": "Which approach best transfers Week 29 learning to an unfamiliar case?",
+          "prompt": "What is one major connection between Canada and the United States?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "They share a long border and extensive trade, migration, environmental, security, and cultural connections.",
+            "They share one federal government.",
+            "They use the same constitution.",
+            "There is no cross-border trade."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
@@ -13858,15 +13863,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W29-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Canada: Indigenous Nations, Colonization, Government, Geography, and U.S. Connections\"?",
+          "prompt": "Which peoples are central to an accurate study of Canada's Indigenous history and present?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "First Nations, Inuit, and Métis peoples, while recognizing many distinct nations and communities within those broad categories.",
+            "One single Canadian Indigenous culture.",
+            "Only European settlers.",
+            "Only communities south of the U.S. border."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
@@ -13884,41 +13889,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W29-G1",
-          "prompt": "How should geography be used when analyzing \"Canada: Indigenous Nations, Colonization, Government, Geography, and U.S. Connections\"?",
+          "prompt": "How is Canada's national government commonly described today?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A federal parliamentary democracy and constitutional monarchy.",
+            "An absolute monarchy.",
+            "A presidential republic identical to the United States.",
+            "A city-state."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G5SS-W29-A1",
-          "prompt": "What makes an argument about \"Canada: Indigenous Nations, Colonization, Government, Geography, and U.S. Connections\" defensible?",
+          "prompt": "Why should Canada be compared regionally rather than treated as one uniform place?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Its provinces, territories, languages, Indigenous nations, economies, climates, and settlement patterns vary substantially.",
+            "Every province has the same economy and culture.",
+            "Only Toronto represents Canada.",
+            "Regional evidence is unnecessary."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G5SS-W29-T1",
-          "prompt": "Which approach best transfers Week 29 learning to an unfamiliar case?",
+          "prompt": "What is one major connection between Canada and the United States?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "They share a long border and extensive trade, migration, environmental, security, and cultural connections.",
+            "They share one federal government.",
+            "They use the same constitution.",
+            "There is no cross-border trade."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
@@ -14157,15 +14162,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W30-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Mexico and Latin America: Independence, Diversity, Geography, and North American Connections\"?",
+          "prompt": "When did Mexico achieve independence from Spain?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "1821.",
+            "1776.",
+            "1865.",
+            "1914."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
@@ -14183,41 +14188,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W30-G1",
-          "prompt": "How should geography be used when analyzing \"Mexico and Latin America: Independence, Diversity, Geography, and North American Connections\"?",
+          "prompt": "What kind of national political structure does Mexico have today?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A federal republic with national and state governments.",
+            "An absolute monarchy.",
+            "A single city government.",
+            "A colony of Spain."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G5SS-W30-A1",
-          "prompt": "What makes an argument about \"Mexico and Latin America: Independence, Diversity, Geography, and North American Connections\" defensible?",
+          "prompt": "Why is 'Latin America' not one culture?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "The region contains many countries, Indigenous peoples, languages, racial and ethnic communities, histories, and political systems.",
+            "Every country has the same history.",
+            "Spanish is the only language spoken.",
+            "All governments are identical."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G5SS-W30-T1",
-          "prompt": "Which approach best transfers Week 30 learning to an unfamiliar case?",
+          "prompt": "Why does Mexico matter in North American history?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Its Indigenous civilizations, colonial history, independence, territory, migration, trade, culture, and border relations are deeply connected to continental history.",
+            "Mexico is not part of North America.",
+            "Its history begins with U.S. expansion.",
+            "It has no Indigenous history."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
@@ -14341,15 +14346,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W30-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Mexico and Latin America: Independence, Diversity, Geography, and North American Connections\"?",
+          "prompt": "When did Mexico achieve independence from Spain?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "1821.",
+            "1776.",
+            "1865.",
+            "1914."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
@@ -14367,41 +14372,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W30-G1",
-          "prompt": "How should geography be used when analyzing \"Mexico and Latin America: Independence, Diversity, Geography, and North American Connections\"?",
+          "prompt": "What kind of national political structure does Mexico have today?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A federal republic with national and state governments.",
+            "An absolute monarchy.",
+            "A single city government.",
+            "A colony of Spain."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G5SS-W30-A1",
-          "prompt": "What makes an argument about \"Mexico and Latin America: Independence, Diversity, Geography, and North American Connections\" defensible?",
+          "prompt": "Why is 'Latin America' not one culture?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "The region contains many countries, Indigenous peoples, languages, racial and ethnic communities, histories, and political systems.",
+            "Every country has the same history.",
+            "Spanish is the only language spoken.",
+            "All governments are identical."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G5SS-W30-T1",
-          "prompt": "Which approach best transfers Week 30 learning to an unfamiliar case?",
+          "prompt": "Why does Mexico matter in North American history?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Its Indigenous civilizations, colonial history, independence, territory, migration, trade, culture, and border relations are deeply connected to continental history.",
+            "Mexico is not part of North America.",
+            "Its history begins with U.S. expansion.",
+            "It has no Indigenous history."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
@@ -14640,15 +14645,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W31-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Migration, Cultural Diversity, Indigenous Sovereignty, and Hemispheric Interdependence\"?",
+          "prompt": "What is a push factor in migration?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "A condition such as conflict, persecution, job loss, or disaster that can encourage people to leave a place.",
+            "A condition that attracts people to a destination.",
+            "A border drawn on a map.",
+            "A trade agreement."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
@@ -14666,41 +14671,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W31-G1",
-          "prompt": "How should geography be used when analyzing \"Migration, Cultural Diversity, Indigenous Sovereignty, and Hemispheric Interdependence\"?",
+          "prompt": "What is a pull factor in migration?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A condition such as safety, family connection, employment, or opportunity that can attract people to a destination.",
+            "A reason people are forced to remain.",
+            "A constitutional amendment.",
+            "A natural resource by definition."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G5SS-W31-A1",
-          "prompt": "What makes an argument about \"Migration, Cultural Diversity, Indigenous Sovereignty, and Hemispheric Interdependence\" defensible?",
+          "prompt": "Why can Indigenous sovereignty cross modern national-border discussions?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Some Indigenous homelands, nations, and kinship networks existed before and extend across later U.S., Canadian, or Mexican borders.",
+            "Modern borders created all Indigenous nations.",
+            "Sovereignty means only cultural identity.",
+            "Indigenous nations cannot have cross-border histories."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G5SS-W31-T1",
-          "prompt": "Which approach best transfers Week 31 learning to an unfamiliar case?",
+          "prompt": "What does hemispheric interdependence mean?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "People, economies, environments, migration, trade, and political events across the Americas can affect one another.",
+            "Every country is economically identical.",
+            "National borders eliminate all connections.",
+            "Only governments interact across borders."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
@@ -14824,15 +14829,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W31-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Migration, Cultural Diversity, Indigenous Sovereignty, and Hemispheric Interdependence\"?",
+          "prompt": "What is a push factor in migration?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "A condition such as conflict, persecution, job loss, or disaster that can encourage people to leave a place.",
+            "A condition that attracts people to a destination.",
+            "A border drawn on a map.",
+            "A trade agreement."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
@@ -14850,41 +14855,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W31-G1",
-          "prompt": "How should geography be used when analyzing \"Migration, Cultural Diversity, Indigenous Sovereignty, and Hemispheric Interdependence\"?",
+          "prompt": "What is a pull factor in migration?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A condition such as safety, family connection, employment, or opportunity that can attract people to a destination.",
+            "A reason people are forced to remain.",
+            "A constitutional amendment.",
+            "A natural resource by definition."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G5SS-W31-A1",
-          "prompt": "What makes an argument about \"Migration, Cultural Diversity, Indigenous Sovereignty, and Hemispheric Interdependence\" defensible?",
+          "prompt": "Why can Indigenous sovereignty cross modern national-border discussions?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Some Indigenous homelands, nations, and kinship networks existed before and extend across later U.S., Canadian, or Mexican borders.",
+            "Modern borders created all Indigenous nations.",
+            "Sovereignty means only cultural identity.",
+            "Indigenous nations cannot have cross-border histories."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G5SS-W31-T1",
-          "prompt": "Which approach best transfers Week 31 learning to an unfamiliar case?",
+          "prompt": "What does hemispheric interdependence mean?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "People, economies, environments, migration, trade, and political events across the Americas can affect one another.",
+            "Every country is economically identical.",
+            "National borders eliminate all connections.",
+            "Only governments interact across borders."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
@@ -15123,15 +15128,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W32-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Trade, Markets, Technology, Productivity, and Economic Choice\"?",
+          "prompt": "What is voluntary trade?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "An exchange in which participating parties choose to trade because they expect benefits, although effects can still vary.",
+            "Any coerced labor system.",
+            "A government tax.",
+            "A forced migration."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
@@ -15149,41 +15154,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W32-G1",
-          "prompt": "How should geography be used when analyzing \"Trade, Markets, Technology, Productivity, and Economic Choice\"?",
+          "prompt": "How can technology increase productivity?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Tools, machines, communications, or processes can allow more output with the same or fewer inputs.",
+            "Technology always reduces output.",
+            "Productivity measures only wages.",
+            "Inventions do not affect business."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G5SS-W32-A1",
-          "prompt": "What makes an argument about \"Trade, Markets, Technology, Productivity, and Economic Choice\" defensible?",
+          "prompt": "In early U.S. and North American history, which description best fits a market economy?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "A system in which many economic decisions are shaped by interactions among buyers, sellers, workers, firms, prices, and institutions.",
+            "A system with no laws.",
+            "An economy without private exchange.",
+            "A government branch."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G5SS-W32-T1",
-          "prompt": "Which approach best transfers Week 32 learning to an unfamiliar case?",
+          "prompt": "Why can specialization create interdependence?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "People and regions that focus on particular goods or services rely on others for things they do not produce themselves.",
+            "Specialization eliminates trade.",
+            "It guarantees no shortages.",
+            "It makes transportation unnecessary."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
@@ -15307,15 +15312,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W32-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Trade, Markets, Technology, Productivity, and Economic Choice\"?",
+          "prompt": "What is voluntary trade?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "An exchange in which participating parties choose to trade because they expect benefits, although effects can still vary.",
+            "Any coerced labor system.",
+            "A government tax.",
+            "A forced migration."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
@@ -15333,41 +15338,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W32-G1",
-          "prompt": "How should geography be used when analyzing \"Trade, Markets, Technology, Productivity, and Economic Choice\"?",
+          "prompt": "How can technology increase productivity?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Tools, machines, communications, or processes can allow more output with the same or fewer inputs.",
+            "Technology always reduces output.",
+            "Productivity measures only wages.",
+            "Inventions do not affect business."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G5SS-W32-A1",
-          "prompt": "What makes an argument about \"Trade, Markets, Technology, Productivity, and Economic Choice\" defensible?",
+          "prompt": "In early U.S. and North American history, which description best fits a market economy?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "A system in which many economic decisions are shaped by interactions among buyers, sellers, workers, firms, prices, and institutions.",
+            "A system with no laws.",
+            "An economy without private exchange.",
+            "A government branch."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G5SS-W32-T1",
-          "prompt": "Which approach best transfers Week 32 learning to an unfamiliar case?",
+          "prompt": "Why can specialization create interdependence?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "People and regions that focus on particular goods or services rely on others for things they do not produce themselves.",
+            "Specialization eliminates trade.",
+            "It guarantees no shortages.",
+            "It makes transportation unnecessary."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
@@ -15606,15 +15611,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W33-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Media Literacy, Current Events, Geography, and Civic Verification\"?",
+          "prompt": "What is the best first step when a current-events claim appears in a search snippet or social post?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Open the underlying source, identify the claim, creator, date, evidence, and context before sharing it.",
+            "Treat the headline as complete evidence.",
+            "Share it first and verify later.",
+            "Count reactions to decide whether it is true."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
@@ -15632,41 +15637,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W33-G1",
-          "prompt": "How should geography be used when analyzing \"Media Literacy, Current Events, Geography, and Civic Verification\"?",
+          "prompt": "Why is a current map important in current-events analysis?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Borders, place names, routes, populations, and jurisdiction can change, so geographic context should match the event's date.",
+            "Historical maps are always more accurate.",
+            "Current events do not need location context.",
+            "A map cannot contain dated information."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G5SS-W33-A1",
-          "prompt": "What makes an argument about \"Media Literacy, Current Events, Geography, and Civic Verification\" defensible?",
+          "prompt": "What is the difference between reporting and commentary?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Reporting primarily presents verified information about events, while commentary emphasizes interpretation or opinion, though both should be evaluated critically.",
+            "Commentary is always false.",
+            "Reporting never contains choices or framing.",
+            "They are identical genres."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G5SS-W33-T1",
-          "prompt": "Which approach best transfers Week 33 learning to an unfamiliar case?",
+          "prompt": "Why corroborate a major public claim with independent sources?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Independent evidence can confirm, complicate, or challenge the original claim and reduce reliance on one source's errors or framing.",
+            "Repeating the same source makes a claim independent.",
+            "Corroboration means choosing sources that agree.",
+            "One source is always enough."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
@@ -15790,15 +15795,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W33-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Media Literacy, Current Events, Geography, and Civic Verification\"?",
+          "prompt": "What is the best first step when a current-events claim appears in a search snippet or social post?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Open the underlying source, identify the claim, creator, date, evidence, and context before sharing it.",
+            "Treat the headline as complete evidence.",
+            "Share it first and verify later.",
+            "Count reactions to decide whether it is true."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
@@ -15816,41 +15821,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W33-G1",
-          "prompt": "How should geography be used when analyzing \"Media Literacy, Current Events, Geography, and Civic Verification\"?",
+          "prompt": "Why is a current map important in current-events analysis?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Borders, place names, routes, populations, and jurisdiction can change, so geographic context should match the event's date.",
+            "Historical maps are always more accurate.",
+            "Current events do not need location context.",
+            "A map cannot contain dated information."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G5SS-W33-A1",
-          "prompt": "What makes an argument about \"Media Literacy, Current Events, Geography, and Civic Verification\" defensible?",
+          "prompt": "What is the difference between reporting and commentary?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Reporting primarily presents verified information about events, while commentary emphasizes interpretation or opinion, though both should be evaluated critically.",
+            "Commentary is always false.",
+            "Reporting never contains choices or framing.",
+            "They are identical genres."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G5SS-W33-T1",
-          "prompt": "Which approach best transfers Week 33 learning to an unfamiliar case?",
+          "prompt": "Why corroborate a major public claim with independent sources?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Independent evidence can confirm, complicate, or challenge the original claim and reduce reliance on one source's errors or framing.",
+            "Repeating the same source makes a claim independent.",
+            "Corroboration means choosing sources that agree.",
+            "One source is always enough."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
@@ -15970,7 +15975,7 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
           "day": "Tuesday",
           "title": "Disciplinary Analysis",
           "objective": "Apply historical, geographic, civic, economic, or comparative tools to evidence.",
-          "activity": "Analyze reform arguments that later invoked founding principles.",
+          "activity": "Analyze reform arguments that later invoked founding principles. Trace expansion of federal voting-rights protections through the Fifteenth, Nineteenth, Twenty-Fourth, and Twenty-Sixth Amendments and the Voting Rights Act of 1965; distinguish constitutional text, legislation, and historical implementation.",
           "evidence": "Annotated map, timeline, data display, comparison matrix, civic/economic model, or cause network."
         },
         {
@@ -16089,15 +16094,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W34-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Constitutional Ideals, Rights, Historical Contradictions, and Civic Deliberation\"?",
+          "prompt": "What did the Fifteenth Amendment prohibit governments from denying on account of race, color, or previous condition of servitude?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "The right to vote, though enforcement and access remained contested.",
+            "The right to own any land anywhere.",
+            "The right to hold every public office.",
+            "The right to avoid taxes."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
@@ -16115,41 +16120,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W34-G1",
-          "prompt": "How should geography be used when analyzing \"Constitutional Ideals, Rights, Historical Contradictions, and Civic Deliberation\"?",
+          "prompt": "What did the Nineteenth Amendment establish nationally?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It prohibited denying the right to vote on account of sex.",
+            "It abolished slavery.",
+            "It lowered the voting age to 18.",
+            "It ended poll taxes in federal elections."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G5SS-W34-A1",
-          "prompt": "What makes an argument about \"Constitutional Ideals, Rights, Historical Contradictions, and Civic Deliberation\" defensible?",
+          "prompt": "How did the Twenty-Fourth and Twenty-Sixth Amendments expand civic participation?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "The Twenty-Fourth barred poll taxes in federal elections, and the Twenty-Sixth lowered the voting age to 18.",
+            "They created the Electoral College.",
+            "They established the Supreme Court.",
+            "They ended all voting restrictions immediately."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G5SS-W34-T1",
-          "prompt": "Which approach best transfers Week 34 learning to an unfamiliar case?",
+          "prompt": "Why is the Voting Rights Act of 1965 important to constitutional ideals and civic participation?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "It used federal law to combat racial discrimination in voting and enforce voting-rights protections.",
+            "It replaced the Constitution.",
+            "It created state governments.",
+            "It applied only to colonial elections."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
@@ -16273,15 +16278,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W34-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Constitutional Ideals, Rights, Historical Contradictions, and Civic Deliberation\"?",
+          "prompt": "What did the Fifteenth Amendment prohibit governments from denying on account of race, color, or previous condition of servitude?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "The right to vote, though enforcement and access remained contested.",
+            "The right to own any land anywhere.",
+            "The right to hold every public office.",
+            "The right to avoid taxes."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
@@ -16299,41 +16304,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W34-G1",
-          "prompt": "How should geography be used when analyzing \"Constitutional Ideals, Rights, Historical Contradictions, and Civic Deliberation\"?",
+          "prompt": "What did the Nineteenth Amendment establish nationally?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "It prohibited denying the right to vote on account of sex.",
+            "It abolished slavery.",
+            "It lowered the voting age to 18.",
+            "It ended poll taxes in federal elections."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G5SS-W34-A1",
-          "prompt": "What makes an argument about \"Constitutional Ideals, Rights, Historical Contradictions, and Civic Deliberation\" defensible?",
+          "prompt": "How did the Twenty-Fourth and Twenty-Sixth Amendments expand civic participation?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "The Twenty-Fourth barred poll taxes in federal elections, and the Twenty-Sixth lowered the voting age to 18.",
+            "They created the Electoral College.",
+            "They established the Supreme Court.",
+            "They ended all voting restrictions immediately."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G5SS-W34-T1",
-          "prompt": "Which approach best transfers Week 34 learning to an unfamiliar case?",
+          "prompt": "Why is the Voting Rights Act of 1965 important to constitutional ideals and civic participation?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "It used federal law to combat racial discrimination in voting and enforce voting-rights protections.",
+            "It replaced the Constitution.",
+            "It created state governments.",
+            "It applied only to colonial elections."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
@@ -16572,15 +16577,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W35-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Grade 5 U.S./Western Hemisphere Research Capstone\"?",
+          "prompt": "What makes a Grade 5 research question strong?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "It is focused, historically meaningful, answerable with available evidence, and open to analysis rather than a one-word response.",
+            "It already contains the desired conclusion.",
+            "It requires private personal information.",
+            "It is so broad that no source plan is possible."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
@@ -16598,41 +16603,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W35-G1",
-          "prompt": "How should geography be used when analyzing \"Grade 5 U.S./Western Hemisphere Research Capstone\"?",
+          "prompt": "What is a thesis in a historical research project?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A central claim that answers the research question and is supported by evidence.",
+            "A list of source titles only.",
+            "A map legend.",
+            "A vocabulary definition."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G5SS-W35-A1",
-          "prompt": "What makes an argument about \"Grade 5 U.S./Western Hemisphere Research Capstone\" defensible?",
+          "prompt": "Why should a capstone include counterevidence or limitations?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Strong research shows where evidence complicates the thesis or where uncertainty remains.",
+            "Counterevidence should be hidden.",
+            "Limitations prove the project failed.",
+            "Only one perspective is allowed."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G5SS-W35-T1",
-          "prompt": "Which approach best transfers Week 35 learning to an unfamiliar case?",
+          "prompt": "What belongs in a bibliography?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Enough source information for readers to identify the works and records used in the research.",
+            "Only sources the student agreed with.",
+            "Unlabeled copied text.",
+            "The final score only."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
@@ -16756,15 +16761,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W35-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Grade 5 U.S./Western Hemisphere Research Capstone\"?",
+          "prompt": "What makes a Grade 5 research question strong?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "It is focused, historically meaningful, answerable with available evidence, and open to analysis rather than a one-word response.",
+            "It already contains the desired conclusion.",
+            "It requires private personal information.",
+            "It is so broad that no source plan is possible."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
@@ -16782,41 +16787,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W35-G1",
-          "prompt": "How should geography be used when analyzing \"Grade 5 U.S./Western Hemisphere Research Capstone\"?",
+          "prompt": "What is a thesis in a historical research project?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "A central claim that answers the research question and is supported by evidence.",
+            "A list of source titles only.",
+            "A map legend.",
+            "A vocabulary definition."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G5SS-W35-A1",
-          "prompt": "What makes an argument about \"Grade 5 U.S./Western Hemisphere Research Capstone\" defensible?",
+          "prompt": "Why should a capstone include counterevidence or limitations?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Strong research shows where evidence complicates the thesis or where uncertainty remains.",
+            "Counterevidence should be hidden.",
+            "Limitations prove the project failed.",
+            "Only one perspective is allowed."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G5SS-W35-T1",
-          "prompt": "Which approach best transfers Week 35 learning to an unfamiliar case?",
+          "prompt": "What belongs in a bibliography?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "Enough source information for readers to identify the works and records used in the research.",
+            "Only sources the student agreed with.",
+            "Unlabeled copied text.",
+            "The final score only."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
@@ -17055,15 +17060,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W36-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Final Synthesis, Closed-Book Final, and Middle-School Bridge\"?",
+          "prompt": "Which sequence best represents the Grade 5 historical spine?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Indigenous North America → exploration/encounter → colonial societies → Revolution → Confederation/Constitution → early republic/expansion → hemispheric comparison.",
+            "Constitution → Indigenous North America → Revolution → exploration.",
+            "War of 1812 → colonies → pre-1492 societies → Declaration.",
+            "Mexico today → Constitution → colonial settlement → exploration."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
@@ -17081,41 +17086,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W36-G1",
-          "prompt": "How should geography be used when analyzing \"Final Synthesis, Closed-Book Final, and Middle-School Bridge\"?",
+          "prompt": "What is the strongest way to answer a cumulative historical question?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Use accurate chronology, relevant evidence, geographic/civic/economic context, and reasoning that addresses counterevidence or limits.",
+            "List vocabulary without connecting ideas.",
+            "Use one memorized fact for every topic.",
+            "Ignore sources that complicate the answer."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G5SS-W36-A1",
-          "prompt": "What makes an argument about \"Final Synthesis, Closed-Book Final, and Middle-School Bridge\" defensible?",
+          "prompt": "Why does Grade 5 end with a middle-school bridge?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Students should carry forward inquiry, sourcing, geography, civics, economics, chronology, and argument skills into deeper world and U.S. history.",
+            "Middle school requires forgetting elementary history.",
+            "Only dates transfer to later courses.",
+            "Grade 6 has no connection to Grade 5."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G5SS-W36-T1",
-          "prompt": "Which approach best transfers Week 36 learning to an unfamiliar case?",
+          "prompt": "What should happen if new evidence changes a student's final interpretation?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "The student should revise the interpretation and explain why the evidence changed the conclusion.",
+            "Keep the original claim regardless of evidence.",
+            "Delete the new source.",
+            "Treat revision as a failure."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
@@ -17239,15 +17244,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W36-SRC1",
-          "prompt": "Which source habit would most strengthen an investigation of \"Final Synthesis, Closed-Book Final, and Middle-School Bridge\"?",
+          "prompt": "Which sequence best represents the Grade 5 historical spine?",
           "choices": [
-            "Identify creator, date, purpose, audience, evidence, context, and limitations, then corroborate.",
-            "Use the first source found.",
-            "Choose only sources that support the first guess.",
-            "Ignore source origin if the wording sounds confident."
+            "Indigenous North America → exploration/encounter → colonial societies → Revolution → Confederation/Constitution → early republic/expansion → hemispheric comparison.",
+            "Constitution → Indigenous North America → Revolution → exploration.",
+            "War of 1812 → colonies → pre-1492 societies → Declaration.",
+            "Mexico today → Constitution → colonial settlement → exploration."
           ],
           "answer": 0,
-          "kind": "source",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
@@ -17265,41 +17270,41 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W36-G1",
-          "prompt": "How should geography be used when analyzing \"Final Synthesis, Closed-Book Final, and Middle-School Bridge\"?",
+          "prompt": "What is the strongest way to answer a cumulative historical question?",
           "choices": [
-            "Use spatial evidence as one factor interacting with politics, economy, culture, technology, and human choices.",
-            "Treat geography as determining every outcome.",
-            "Ignore scale and map date.",
-            "Use a modern map as if boundaries never changed."
+            "Use accurate chronology, relevant evidence, geographic/civic/economic context, and reasoning that addresses counterevidence or limits.",
+            "List vocabulary without connecting ideas.",
+            "Use one memorized fact for every topic.",
+            "Ignore sources that complicate the answer."
           ],
           "answer": 0,
-          "kind": "geography",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G5SS-W36-A1",
-          "prompt": "What makes an argument about \"Final Synthesis, Closed-Book Final, and Middle-School Bridge\" defensible?",
+          "prompt": "Why does Grade 5 end with a middle-school bridge?",
           "choices": [
-            "A clear claim, relevant evidence, reasoning, context, and attention to counterevidence or limits.",
-            "Strong wording without citations.",
-            "Only evidence that agrees.",
-            "A conclusion chosen before research."
+            "Students should carry forward inquiry, sourcing, geography, civics, economics, chronology, and argument skills into deeper world and U.S. history.",
+            "Middle school requires forgetting elementary history.",
+            "Only dates transfer to later courses.",
+            "Grade 6 has no connection to Grade 5."
           ],
           "answer": 0,
-          "kind": "argument",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G5SS-W36-T1",
-          "prompt": "Which approach best transfers Week 36 learning to an unfamiliar case?",
+          "prompt": "What should happen if new evidence changes a student's final interpretation?",
           "choices": [
-            "Clarify the question, apply the relevant disciplinary tools, examine evidence, compare perspectives when needed, and revise.",
-            "Memorize the prior example and force it onto the new case.",
-            "Avoid unfamiliar evidence.",
-            "Assume the same causes operate everywhere."
+            "The student should revise the interpretation and explain why the evidence changed the conclusion.",
+            "Keep the original claim regardless of evidence.",
+            "Delete the new source.",
+            "Treat revision as a failure."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
@@ -17382,5 +17387,29 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         }
       ]
     }
-  ]
+  ],
+  "cumulativeTasks": {
+    "midterm": {
+      "title": "Midyear Source-Based Historical Argument",
+      "prompt": "Using at least two pieces of evidence from teacher-provided unfamiliar sources, explain one major way geography, power, exchange, or political ideas shaped North American history from Indigenous North America through the Confederation era. Include a defensible claim, source-based evidence, reasoning, and one limitation or competing perspective.",
+      "requirements": [
+        "defensible claim",
+        "at least two source-based evidence details",
+        "historical/geographic context",
+        "reasoning",
+        "one limitation or competing perspective"
+      ]
+    },
+    "final": {
+      "title": "Cumulative Source-Based Historical Argument",
+      "prompt": "Using at least three pieces of evidence from teacher-provided unfamiliar sources, defend an interpretation about how the meaning and practice of liberty, representation, sovereignty, or economic opportunity changed from the colonial era through 1850 and into later constitutional civic participation. Include chronology, at least one geographic or economic connection, and a counterpoint or limitation.",
+      "requirements": [
+        "defensible interpretation",
+        "at least three source-based evidence details",
+        "chronology",
+        "geographic or economic connection",
+        "counterpoint or limitation"
+      ]
+    }
+  }
 };
