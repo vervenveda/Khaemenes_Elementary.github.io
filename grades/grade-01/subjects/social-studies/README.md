@@ -37,3 +37,11 @@ See `STATE_LOCALIZATION_GUIDE.md`.
 
 ### Localization source of truth
 `STATE_LOCALIZATION_GUIDE.md` is the one canonical Grade 1 state/local overlay guide. The national core and 80% mastery gates remain invariant.
+
+
+## Assessment and continuity hardening
+- 8 current questions per week, plus existing spiral-review items where present.
+- 6-question randomized weekly form with shuffled answer order and immediate-prior-attempt anti-repeat preference.
+- 20-question closed-book midterm from a 144-item current pool; 24-question cumulative final from a 288-item current pool.
+- Correction notes are retained with weekly evidence.
+- Existing local subject records migrate automatically into the Academy learner-scoped key when a registered Grade 01 learner is active.
