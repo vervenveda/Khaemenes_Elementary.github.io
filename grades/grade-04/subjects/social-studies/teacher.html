@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Khaemenes Academy · Grade 4 Social Studies Teacher Tools</title><link rel="stylesheet" href="styles.css"></head><body><main class="shell" style="padding:28px 0"><div class="actions"><a class="button" href="index.html">← Student Course</a><a class="button" href="../../index.html">Grade 4 Home</a></div><h1 style="font-size:42px">Khaemenes Academy</h1><h2>Grade 4 Social Studies · Teacher Tools</h2><section class="card"><p><strong>Static-site boundary:</strong> this convenience code is not secure authentication. It inspects and exports local or learner-scoped subject evidence.</p><label>Convenience code <input id="code" type="password"> <button id="open">Open</button></label></section><div id="tools"></div></main><script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script><script src="../../assets/khaemenes-grade4-subject-context.js"></script><script src="course-data.js"></script><script>
+(()=>{
+ const C=window.KHAEMENES_GRADE4_SOCIAL_STUDIES,M=C.metadata,SUB=window.KhaemenesGrade4SubjectContext||null,$=s=>document.querySelector(s);
+ function key(){return SUB?.scopedKey?.()||M.storageKey}
+ function load(){try{return JSON.parse(localStorage.getItem(key()))||{students:[]}}catch{return{students:[]}}}
+ function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+ function render(){
+   const db=load();
+   const cards=(db.students||[]).map(s=>{
+     s.weeks||={};s.exams||={midterm:{},final:{}};
+     const mastered=C.weeks.filter(w=>(s.weeks[w.week]?.best||0)>=80).length;
+     const rows=C.weeks.map(w=>{const r=s.weeks[w.week]||{};return `<tr><td>${w.week}</td><td>${esc(w.title)}</td><td>${r.best?r.best+"%":"—"}</td><td>${r.attempts?.length||0}</td><td>${esc((r.constructedResponse||"").slice(0,100))}</td><td>${esc((r.correction||"").slice(0,75))}</td><td>${esc((r.artifact||"").slice(0,75))}</td></tr>`}).join("");
+     return `<section class="card"><h2>${esc(s.name)} · ${mastered}/36 mastered · Midterm ${s.exams.midterm?.best||"—"} · Final ${s.exams.final?.best||"—"}</h2><table><tr><th>Week</th><th>Topic</th><th>Best</th><th>Attempts</th><th>Constructed Response</th><th>Correction</th><th>Artifact</th></tr>${rows}</table></section>`;
+   }).join("");
+   $("#tools").innerHTML=`<section class="card"><div class="actions"><button id="export">Export JSON</button><label class="button">Import JSON <input id="import" style="display:none" type="file" accept=".json,application/json"></label><button id="printBtn">Print</button></div><p class="small">Formal Social Studies gate: every weekly best score ≥80%, midterm ≥80%, final ≥80%. Constructed responses and portfolio artifacts provide qualitative evidence. The grade-wide 20-point A++ check remains integrated portfolio evidence only.</p></section>${cards||'<section class="card">No subject learners stored in this browser/context.</section>'}`;
+   $("#export").onclick=()=>{const b=new Blob([JSON.stringify(load(),null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="grade4-social-studies-backup.json";a.click();URL.revokeObjectURL(a.href)};
+   $("#import").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{localStorage.setItem(key(),JSON.stringify(JSON.parse(r.result)));render();alert("Imported.")}catch{alert("Invalid JSON.")}};r.readAsText(f)};
+   $("#printBtn").onclick=()=>window.print();
+ }
+ $("#open").onclick=()=>{if($("#code").value!=="KHAE4SS")return alert("Incorrect convenience code.");render()};
+})();
+</script></body></html>
