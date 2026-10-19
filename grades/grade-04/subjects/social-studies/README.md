@@ -3,6 +3,8 @@
 
 Canonical route: `grades/grade-04/subjects/social-studies/index.html`
 
+- **state-localizable by requirement** using `STATE_LOCALIZATION_GUIDE.md`
+- localization is required but cannot weaken the national disciplinary spine or **80% mastery gates**
 - 36 discipline-specific weeks / 180 lessons
 - 12 new reviewed objective items per week = 432 unique current-week items
 - up to 4 spiral-review records added to weekly banks

@@ -22,7 +22,28 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
     "note": "The grade-wide 20-point A++ weekly assessment remains integrated portfolio evidence. Formal Social Studies mastery is recorded in this subject course.",
     "stateLocalizable": true,
     "localizationMode": "national-core-state-local-overlay",
-    "localizationGuide": "STATE_LOCALIZATION_GUIDE.md"
+    "localizationGuide": "STATE_LOCALIZATION_GUIDE.md",
+    "localizationRequired": true,
+    "localizationCheckpoints": [
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      35
+    ],
+    "localizationPolicy": "Keep the national Grade 4 Social Studies disciplinary spine and 80% mastery gates invariant. Localize required state/local history, geography, Indigenous nations, government, economy, public figures, source sets, and capstone evidence through the state localization guide."
   },
   "strands": [
     "Historical Inquiry & Evidence",

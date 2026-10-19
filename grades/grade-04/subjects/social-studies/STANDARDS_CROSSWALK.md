@@ -22,3 +22,7 @@ https://www2.cde.ca.gov/cacs/history?c0=13%2C5
 
 ## Mastery integrity
 Formal Social Studies mastery is independent of whole-grade performance. Every weekly objective gate, the midterm, and the final require 80%. Constructed responses and portfolio/capstone evidence document historical reasoning that objective questions alone cannot measure.
+
+
+## State/localization requirement
+Grade 4 state/localization is required, not optional. State and local history, geography, Indigenous nations, government, economy, public figures, and source sets should be adapted to the learner's jurisdiction using `STATE_LOCALIZATION_GUIDE.md`. The national sequence and 80% mastery requirements remain invariant.
