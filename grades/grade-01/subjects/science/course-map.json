@@ -1,0 +1,532 @@
+{
+  "schemaVersion": "1.0.0",
+  "course": {
+    "courseId": "KH-ELEM-SCI-G01",
+    "subjectId": "science",
+    "stage": "elementary",
+    "grade": 1,
+    "title": "Grade 1 Science",
+    "durationWeeks": 36,
+    "pace": "Five instructional days per week, adaptable for classroom and homeschool use",
+    "access": "Free-to-learn; lessons support print and offline alternatives",
+    "status": "initial-release"
+  },
+  "instructionalModel": [
+    "phenomenon or question",
+    "explicit vocabulary and simple model",
+    "guided observation or supplied-data investigation",
+    "design, explanation, or application",
+    "evidence notebook and reflection"
+  ],
+  "mastery": {
+    "targetPercent": 80,
+    "policy": "Essential outcomes use reviewed checks and correction/reassessment. Finishing a page or ticking a reflection box is not verified mastery.",
+    "assessmentNote": "This initial release provides weekly formative evidence prompts. Formal summative assessments and course-level score integration require a separate validation stage."
+  },
+  "differentiation": {
+    "foundation": "Picture support, modeled example, oral responses, drawing, and adult scribing.",
+    "core": "Learner records observations and explains the relationship between a claim and evidence.",
+    "extended": "Compare another example, identify a limitation, propose a follow-up test, or refine a design."
+  },
+  "safety": {
+    "rules": [
+      "Never taste unknown materials or mix household products.",
+      "Use adult supervision for cutting, heat, electricity, chemicals, and fieldwork.",
+      "Use images, safe models, or supplied data whenever materials or supervision are unavailable."
+    ],
+    "reviewRequired": true
+  },
+  "standards": {
+    "framework": "NGSS three-dimensional learning is used as a planning reference.",
+    "alignmentStatus": "Planning alignment only; exact grade-level performance expectations must be verified before formal compliance claims.",
+    "practiceFocus": [
+      "asking questions",
+      "developing models",
+      "planning investigations",
+      "analyzing data",
+      "constructing explanations",
+      "designing solutions",
+      "communicating information"
+    ]
+  },
+  "evidence": {
+    "portfolioFields": [
+      "questionOrPrediction",
+      "observationOrData",
+      "learnerExplanation",
+      "revisionOrNextQuestion"
+    ],
+    "storage": "Each weekly page may provide browser-local notebook fields; learner should export before switching devices.",
+    "authority": "Notebook entries are formative evidence and do not independently award mastery."
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Science eyes: observing and asking questions",
+      "objective": "Ask answerable questions and distinguish an observation from a guess.",
+      "path": "week-01.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Living and nonliving things",
+      "objective": "Classify familiar examples using more than one life-related clue.",
+      "path": "week-02.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Plant parts and plant needs",
+      "objective": "Identify basic plant structures and connect them to water, light, and growth.",
+      "path": "week-03.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Animals, habitats, and survival",
+      "objective": "Explain how habitat features meet basic animal needs.",
+      "path": "week-04.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 5,
+      "title": "Seasonal patterns and living things",
+      "objective": "Identify seasonal patterns while recognizing daily weather can vary.",
+      "path": "week-05.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 6,
+      "title": "Weather observations and patterns",
+      "objective": "Record weather observations and identify a pattern in supplied data.",
+      "path": "week-06.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 7,
+      "title": "Sunlight, shade, and warming",
+      "objective": "Compare safe supplied observations of warming under similar conditions.",
+      "path": "week-07.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 8,
+      "title": "Water: places, states, and change",
+      "objective": "Describe familiar water forms and model melting or freezing.",
+      "path": "week-08.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 9,
+      "title": "Land, rocks, and soil",
+      "objective": "Compare earth materials using visible properties.",
+      "path": "week-09.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 10,
+      "title": "Daylight, shadows, and the Sun",
+      "objective": "Model how an object blocks light to create a shadow.",
+      "path": "week-10.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 11,
+      "title": "Moon observations and sky patterns",
+      "objective": "Arrange observations and identify visible patterns in the Moon.",
+      "path": "week-11.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 12,
+      "title": "Materials: describing and sorting",
+      "objective": "Sort materials by observable properties and justify a material choice.",
+      "path": "week-12.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 13,
+      "title": "Properties of solids and liquids",
+      "objective": "Compare how solids and liquids behave in familiar contexts.",
+      "path": "week-13.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 14,
+      "title": "Heating, cooling, and material change",
+      "objective": "Describe safe observed changes caused by warming or cooling.",
+      "path": "week-14.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 15,
+      "title": "Pushes, pulls, and motion",
+      "objective": "Explain how a push or pull can start or change motion.",
+      "path": "week-15.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 16,
+      "title": "Speed, direction, and stopping safely",
+      "objective": "Compare the movement and stopping of light objects in safe tests.",
+      "path": "week-16.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 17,
+      "title": "Light, shadows, and seeing",
+      "objective": "Model a path of light that helps an object be seen.",
+      "path": "week-17.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 18,
+      "title": "Sound, vibration, and listening",
+      "objective": "Connect sound to a vibrating source using safe observations.",
+      "path": "week-18.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 19,
+      "title": "Designing a tool to solve a problem",
+      "objective": "Prototype and revise a simple tool for a stated need.",
+      "path": "week-19.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 20,
+      "title": "Patterns in nature and repeated observations",
+      "objective": "Use repeated observations to describe a pattern.",
+      "path": "week-20.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 21,
+      "title": "Comparing habitats and needs",
+      "objective": "Connect habitat features to organism needs.",
+      "path": "week-21.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 22,
+      "title": "Food, resources, and living systems",
+      "objective": "Model simple relationships in how organisms obtain resources.",
+      "path": "week-22.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 23,
+      "title": "Reduce, reuse, repair, and materials",
+      "objective": "Evaluate material-use choices using stated criteria.",
+      "path": "week-23.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 24,
+      "title": "Water stewardship and local environments",
+      "objective": "Model how litter and runoff can affect local waterways.",
+      "path": "week-24.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 25,
+      "title": "Simple machines in everyday life",
+      "objective": "Identify how simple machines help with everyday tasks.",
+      "path": "week-25.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 26,
+      "title": "Building stable structures",
+      "objective": "Compare structural features that support stability.",
+      "path": "week-26.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 27,
+      "title": "Testing and improving designs",
+      "objective": "Use repeatable criteria and evidence to improve a prototype.",
+      "path": "week-27.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 28,
+      "title": "Counting, measuring, and comparing data",
+      "objective": "Collect or interpret simple counts and measurements consistently.",
+      "path": "week-28.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 29,
+      "title": "Picture graphs and evidence",
+      "objective": "Represent data in a labeled picture graph and cite a value.",
+      "path": "week-29.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 30,
+      "title": "Cause, pattern, and careful claims",
+      "objective": "Make claims that do not go beyond the available evidence.",
+      "path": "week-30.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 31,
+      "title": "Planning a safe investigation",
+      "objective": "Plan a safe investigation with steps, materials, observations, and precautions.",
+      "path": "week-31.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 32,
+      "title": "Weather, safety, and community decisions",
+      "objective": "Use weather information to justify a basic safety decision.",
+      "path": "week-32.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 33,
+      "title": "Earth materials and changing surfaces",
+      "objective": "Identify evidence of surface change caused by water or wind.",
+      "path": "week-33.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 34,
+      "title": "Integrated science design challenge",
+      "objective": "Apply science observations and criteria to a safe design challenge.",
+      "path": "week-34.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 35,
+      "title": "Science showcase",
+      "objective": "Explain learning using a claim and supporting evidence.",
+      "path": "week-35.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    },
+    {
+      "week": 36,
+      "title": "Year-end reflection and next questions",
+      "objective": "Reflect on progress, evidence, limitations, and a new testable question.",
+      "path": "week-36.html",
+      "lessonDays": [
+        "Wonder and predict",
+        "Learn and model",
+        "Investigate and record evidence",
+        "Design or revise",
+        "Explain and reflect"
+      ]
+    }
+  ]
+}
