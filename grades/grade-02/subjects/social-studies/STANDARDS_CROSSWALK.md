@@ -25,3 +25,9 @@ No learner must disclose immigration/citizenship status, street address, family 
 State localization is required across the Khaemenes Social Studies sequence. Each grade keeps a broad national disciplinary core while adapting appropriate examples, sources, maps, institutions, Indigenous histories, biographies, civic cases, and community evidence to the learner's state/locality. Localization does not lower the 80% mastery threshold or delete national competencies.
 
 See `STATE_LOCALIZATION_GUIDE.md`.
+
+
+## State/localization requirement
+Grade 2 requires a state/local overlay for community history, geography, Indigenous nations, migration/colonization/immigration examples, government and citizenship, public-service biographies, and the research/action capstone. State/local examples should deepen—not replace—the North American and national course spine. The 80% subject gates remain unchanged.
+
+See `LOCALIZATION_GUIDE.md`.

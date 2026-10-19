@@ -3,6 +3,8 @@
 
 Canonical route: `grades/grade-02/subjects/social-studies/index.html`
 
+- **state-localizable by design and requirement**; see `LOCALIZATION_GUIDE.md`
+- localization preserves the national core and the Academy's **80% mastery** requirements
 - 36 discipline-specific weeks / 180 lessons
 - 80% weekly subject mastery unlock policy
 - 8 new reviewed questions per week plus up to 4 spiral-review records; 6 drawn per open-book attempt
