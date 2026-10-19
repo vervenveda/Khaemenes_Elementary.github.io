@@ -22,7 +22,7 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
     "note": "The grade-wide eight-subject weekly check remains integrated portfolio evidence. Formal Social Studies mastery is recorded here.",
     "stateLocalizable": true,
     "localizationMode": "national-core-state-local-overlay",
-    "localizationGuide": "LOCALIZATION_GUIDE.md",
+    "localizationGuide": "STATE_LOCALIZATION_GUIDE.md",
     "localizationRequired": true,
     "localizationCheckpoints": [
       4,
