@@ -17,7 +17,7 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
     "finalMode": "closed-book teacher-supervised",
     "stateLocalizable": true,
     "localizationMode": "national-core-state-local-overlay",
-    "localizationGuide": "LOCALIZATION_GUIDE.md",
+    "localizationGuide": "STATE_LOCALIZATION_GUIDE.md",
     "localizationRequired": true,
     "localizationCheckpoints": [
       3,

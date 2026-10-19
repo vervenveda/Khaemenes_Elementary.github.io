@@ -4,7 +4,7 @@
 Canonical route: `grades/grade-01/subjects/social-studies/index.html`
 
 ### Course record
-- **state-localizable by design and requirement**; see `LOCALIZATION_GUIDE.md`
+- **state-localizable by design and requirement**; see `STATE_LOCALIZATION_GUIDE.md`
 - localization may adapt examples and evidence but **never lowers the 80% mastery gate or removes national core competencies**
 - 36 discipline-specific weeks
 - 180 Monday–Friday lessons
@@ -33,3 +33,7 @@ Designed from the NCSS C3 Inquiry Arc and broad Grade 1 patterns in New York, Ca
 This course follows the Academy-wide **national-core / state-local-overlay** rule. State and local maps, sources, institutions, biographies, Indigenous histories, public services, economic examples, environmental cases, and community evidence should be integrated where appropriate without removing national competencies or changing the 80% mastery standard.
 
 See `STATE_LOCALIZATION_GUIDE.md`.
+
+
+### Localization source of truth
+`STATE_LOCALIZATION_GUIDE.md` is the one canonical Grade 1 state/local overlay guide. The national core and 80% mastery gates remain invariant.
