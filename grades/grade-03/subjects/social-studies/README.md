@@ -3,7 +3,7 @@
 
 Canonical route: `grades/grade-03/subjects/social-studies/index.html`
 
-- **state-localizable by requirement**; `LOCALIZATION_GUIDE.md` defines the state/local overlay
+- **state-localizable by requirement**; `STATE_LOCALIZATION_GUIDE.md` defines the state/local overlay
 - state/local adaptation may change examples and source sets but not the national disciplinary core or **80% mastery gates**
 - 36 discipline-specific weeks / 180 lessons
 - 10 new reviewed objective items per week = 360 unique current-week items
@@ -28,3 +28,7 @@ Scope: inquiry/evidence/local history → U.S. geography/regions → Indigenous 
 This course follows the Academy-wide **national-core / state-local-overlay** rule. State and local maps, sources, institutions, biographies, Indigenous histories, public services, economic examples, environmental cases, and community evidence should be integrated where appropriate without removing national competencies or changing the 80% mastery standard.
 
 See `STATE_LOCALIZATION_GUIDE.md`.
+
+
+### Localization source of truth
+`STATE_LOCALIZATION_GUIDE.md` is the one canonical Grade 3 state/local overlay guide. The national core, comparative world-community strand, and 80% mastery gates remain invariant.
