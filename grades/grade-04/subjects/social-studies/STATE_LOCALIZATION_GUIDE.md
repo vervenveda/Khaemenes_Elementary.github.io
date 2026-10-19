@@ -29,3 +29,7 @@ Localize to Haudenosaunee and other Indigenous histories, Dutch/British colonial
 
 ## Safeguards
 Do not require home addresses, immigration/citizenship status, family finances, religion, political affiliation, or private family history. Use specific Indigenous nation names and current nation/tribal sources where available. Do not portray land as empty before settlement. Separate commemoration from historical analysis and keep civic work nonpartisan.
+
+
+## Non-negotiable mastery invariant
+State/local localization may enrich or substitute appropriate examples, maps, source sets, biographies, public institutions, and historical/civic cases, but it may **not** remove the national disciplinary spine or lower the Academy's **80% mastery threshold**. Weekly subject gates, the cumulative midterm, and the cumulative final remain governed by the same mastery policy in every state.
