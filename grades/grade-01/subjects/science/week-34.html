@@ -2,4 +2,21 @@
 <!-- VNV_BETA_PROGRAM_V2 -->
 <a id="vnvBetaProgramFallback" href="https://vervenveda.com/beta/?source=Khaemenes_Elementary.github.io%2Fgrades%2Fgrade-01%2Fsubjects%2Fscience%2Fweek-34.html&surface=learning-page" aria-label="Open the Verve N Veda Beta Program for this page">β Beta Program</a>
 <script src="https://vervenveda.com/assets/vnv-beta-link.js" defer data-vnv-beta-program="2"></script>
-</body></html>
+<script id="grade1NotebookStore">
+(()=> {
+ const week=34, key="khaemenes.grade1.science.week."+String(week).padStart(2,"0")+".v1";
+ const fields=Array.from(document.querySelectorAll("textarea"));
+ const status=document.createElement("p"); status.setAttribute("aria-live","polite"); status.className="muted"; status.textContent="Notebook is stored only in this browser on this device.";
+ const controls=document.createElement("div"); controls.className="no-print";
+ const exportBtn=document.createElement("button"); exportBtn.className="btn"; exportBtn.type="button"; exportBtn.textContent="Download notebook JSON";
+ const clearBtn=document.createElement("button"); clearBtn.className="btn"; clearBtn.type="button"; clearBtn.textContent="Clear notebook";
+ controls.append(exportBtn,document.createTextNode(" "),clearBtn);
+ if(fields.length){fields[fields.length-1].parentElement.append(controls,status);}
+ const read=()=>fields.map((el,index)=>({index,label:el.previousElementSibling?.textContent||("Response "+(index+1)),value:el.value}));
+ const write=rows=>rows.forEach(row=>{if(fields[row.index])fields[row.index].value=String(row.value||"");});
+ try{const raw=localStorage.getItem(key);if(raw)write(JSON.parse(raw));}catch(e){status.textContent="Local storage is unavailable. Download a JSON copy to preserve work.";}
+ fields.forEach(el=>el.addEventListener("input",()=>{try{localStorage.setItem(key,JSON.stringify(read()));status.textContent="Notebook saved on this device.";}catch(e){status.textContent="Could not save locally. Download a JSON copy.";}}));
+ exportBtn.addEventListener("click",()=>{const data={courseId:"KH-ELEM-SCI-G01",week,title:document.title,evidence:read(),exportedAt:new Date().toISOString()};const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:"application/json"}));const a=document.createElement("a");a.href=url;a.download="khaemenes-grade1-science-week-"+String(week).padStart(2,"0")+".json";a.click();setTimeout(()=>URL.revokeObjectURL(url),250);status.textContent="Notebook export prepared.";});
+ clearBtn.addEventListener("click",()=>{if(!confirm("Clear this week's notebook saved on this device?"))return;try{localStorage.removeItem(key);}catch(e){}fields.forEach(el=>el.value="");status.textContent="Notebook cleared on this device.";});
+})();
+</script></body></html>
