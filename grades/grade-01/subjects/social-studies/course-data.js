@@ -3501,7 +3501,7 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
         },
         {
           "id": "G1SS-W24-Q4",
-          "prompt": "Which is a careful statement?",
+          "prompt": "Which statement uses careful evidence-based language?",
           "choices": [
             "This source shows one community using boats for transportation.",
             "Everyone in that country travels by boat.",
@@ -4229,7 +4229,7 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
         },
         {
           "id": "G1SS-W29-Q3",
-          "prompt": "A representative is...",
+          "prompt": "In an election, what is a representative?",
           "choices": [
             "A person chosen or authorized to act or speak for others in a defined role",
             "Anyone who declares power",
