@@ -10533,7 +10533,7 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W33-Q2",
-          "prompt": "To corroborate means...",
+          "prompt": "In information literacy, what does it mean to corroborate a claim?",
           "choices": [
             "check a claim against another independent source",
             "repeat the same source",
@@ -10639,7 +10639,7 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W33-Q2",
-          "prompt": "To corroborate means...",
+          "prompt": "In information literacy, what does it mean to corroborate a claim?",
           "choices": [
             "check a claim against another independent source",
             "repeat the same source",
