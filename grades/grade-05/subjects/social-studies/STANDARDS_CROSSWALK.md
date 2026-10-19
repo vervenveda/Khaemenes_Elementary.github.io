@@ -20,3 +20,17 @@ https://www.nysed.gov/sites/default/files/sscore1.pdf
 
 ## State/localization requirement
 State/local examples are required at designated checkpoints. They may add or substitute case studies, maps, source sets, institutions, state-history connections, Indigenous nation evidence, and capstone topics—but may not delete the national core or reduce the Academy's 80% mastery threshold.
+
+
+## 2026 forensic precision pass
+
+A fresh benchmark audit made several formerly implicit expectations explicit in the canonical lessons and question bank:
+
+- U.S. states, state capitals, and U.S. territories;
+- effects of historical natural events on people and physical environments through 1850;
+- the traditional "Triangular Trade" model, taught explicitly as a simplification of a more complex Atlantic system and clearly distinguished from coerced enslavement/forced migration;
+- the Great Compromise, Three-Fifths Compromise, and Electoral College in Constitutional Convention study;
+- representative government;
+- overland-trail hardships.
+
+These additions strengthen portability without replacing the national inquiry/evidence spine or the required state/local overlay.

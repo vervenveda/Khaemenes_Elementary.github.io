@@ -9,6 +9,8 @@ Canonical route: `grades/grade-05/subjects/social-studies/index.html`
 - 14 new reviewed objective items per week = **504 unique current-week items**
 - up to 4 spiral-review records added to weekly banks
 - 10 randomized questions per open-book weekly attempt
+- recent-form **anti-repeat weighting** preferentially serves unseen items on reassessment
+- midterm/final use a **unit-stratified Monte Carlo blueprint** so random forms preserve broad course coverage
 - weekly constructed historical argument: claim + 3 pieces of evidence + reasoning + counterpoint/limitation
 - 80% objective mastery unlock policy
 - closed-book teacher-supervised **40-question midterm** after Week 18 from a 252-item pool

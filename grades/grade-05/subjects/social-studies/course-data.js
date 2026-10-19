@@ -16,7 +16,7 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
     "midtermMode": "closed-book teacher-supervised",
     "finalMode": "closed-book teacher-supervised",
     "storageKey": "khaemenes_grade5_social_studies_v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "updated": "2026-10-19",
     "authors": "Jennifer Kay Pearl",
     "stateLocalizable": true,
@@ -37,7 +37,10 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
       35
     ],
     "localizationPolicy": "Keep the national Grade 5 disciplinary core and 80% mastery gates invariant. Localize appropriate state/community history, Indigenous nations, Revolutionary connections, state/local government, infrastructure, expansion/migration cases, public sources, civic evidence, and capstone research.",
-    "note": "The grade-wide A++ weekly assessment remains integrated portfolio evidence. Formal Social Studies mastery is recorded by this subject course."
+    "note": "The grade-wide A++ weekly assessment remains integrated portfolio evidence. Formal Social Studies mastery is recorded by this subject course.",
+    "assessmentModel": "Monte Carlo randomized forms with answer shuffling, recent-form anti-repeat weighting, saved attempt snapshots, and unit-stratified cumulative exams.",
+    "antiRepeatDepth": 2,
+    "cumulativeBlueprint": "unit-stratified"
   },
   "strands": [
     "Historical Inquiry & Evidence",
@@ -530,7 +533,7 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
           "day": "Monday",
           "title": "Inquiry, Chronology & Context",
           "objective": "Frame a focused historical/social-science inquiry and establish accurate context for north america: physical geography, regions, and spatial evidence.",
-          "activity": "Locate major U.S./North American physical features with latitude and longitude.",
+          "activity": "Locate major North American and U.S. physical features with latitude and longitude; then locate all U.S. states, state capitals, and U.S. territories using reliable current maps.",
           "evidence": "Focused question, timeline/context organizer, geographic orientation, and vocabulary notes."
         },
         {
@@ -544,7 +547,7 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
           "day": "Wednesday",
           "title": "Primary & Secondary Source Laboratory",
           "objective": "Source, contextualize, corroborate, and evaluate evidence and perspective.",
-          "activity": "Use map scale, graphs, and spatial patterns to explain a settlement or transport corridor.",
+          "activity": "Use map scale, graphs, spatial patterns, and one pre-1850 natural-event case to explain effects on human settlement and physical environments.",
           "evidence": "Source-analysis record with creator/date/purpose/audience, evidence, inference, corroboration, limitations, and citation."
         },
         {
@@ -669,15 +672,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W02-C1",
-          "prompt": "When explaining causes related to \"North America: Physical Geography, Regions, and Spatial Evidence\", the strongest approach is to...",
+          "prompt": "Which Grade 5 geography task directly demonstrates political-location knowledge?",
           "choices": [
-            "identify multiple contributing factors, their relationships, and relevant evidence.",
-            "name one cause and stop.",
-            "list events without explaining connections.",
-            "assume later events caused earlier ones."
+            "Locate U.S. states, state capitals, and U.S. territories on a current political map.",
+            "Memorize only continent names.",
+            "Use a weather chart without locations.",
+            "Ignore political boundaries."
           ],
           "answer": 0,
-          "kind": "causation",
+          "kind": "geography-benchmark",
           "sourceWeek": 2
         },
         {
@@ -734,15 +737,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W02-P1",
-          "prompt": "When perspectives differ in \"North America: Physical Geography, Regions, and Spatial Evidence\", the best historical move is to...",
+          "prompt": "When studying a major natural event in U.S. history before 1850, the strongest geographic question is...",
           "choices": [
-            "ask how position, experience, purpose, and context shape each perspective while checking factual claims.",
-            "declare every perspective equally accurate.",
-            "choose the most dramatic account.",
-            "ignore perspective differences."
+            "How did the event affect both people and the physical environment in that place?",
+            "Which modern political party discussed it?",
+            "Can the map date be ignored?",
+            "Did every region experience the same effects?"
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "geography-benchmark",
           "sourceWeek": 2
         }
       ],
@@ -853,15 +856,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W02-C1",
-          "prompt": "When explaining causes related to \"North America: Physical Geography, Regions, and Spatial Evidence\", the strongest approach is to...",
+          "prompt": "Which Grade 5 geography task directly demonstrates political-location knowledge?",
           "choices": [
-            "identify multiple contributing factors, their relationships, and relevant evidence.",
-            "name one cause and stop.",
-            "list events without explaining connections.",
-            "assume later events caused earlier ones."
+            "Locate U.S. states, state capitals, and U.S. territories on a current political map.",
+            "Memorize only continent names.",
+            "Use a weather chart without locations.",
+            "Ignore political boundaries."
           ],
           "answer": 0,
-          "kind": "causation",
+          "kind": "geography-benchmark",
           "sourceWeek": 2
         },
         {
@@ -918,15 +921,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W02-P1",
-          "prompt": "When perspectives differ in \"North America: Physical Geography, Regions, and Spatial Evidence\", the best historical move is to...",
+          "prompt": "When studying a major natural event in U.S. history before 1850, the strongest geographic question is...",
           "choices": [
-            "ask how position, experience, purpose, and context shape each perspective while checking factual claims.",
-            "declare every perspective equally accurate.",
-            "choose the most dramatic account.",
-            "ignore perspective differences."
+            "How did the event affect both people and the physical environment in that place?",
+            "Which modern political party discussed it?",
+            "Can the map date be ignored?",
+            "Did every region experience the same effects?"
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "geography-benchmark",
           "sourceWeek": 2
         },
         {
@@ -4851,7 +4854,7 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
           "day": "Monday",
           "title": "Inquiry, Chronology & Context",
           "objective": "Frame a focused historical/social-science inquiry and establish accurate context for atlantic trade, enslavement, forced migration, and resistance.",
-          "activity": "Map Atlantic trade and forced-migration routes without reducing people to commodities.",
+          "activity": "Map Atlantic trade and forced-migration routes. Introduce the traditional 'Triangular Trade' model as a simplified teaching diagram, then compare it with evidence showing that real Atlantic commerce used many overlapping routes and that enslaved people must never be reduced to commodities.",
           "evidence": "Focused question, timeline/context organizer, geographic orientation, and vocabulary notes."
         },
         {
@@ -4990,15 +4993,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W11-C1",
-          "prompt": "When explaining causes related to \"Atlantic Trade, Enslavement, Forced Migration, and Resistance\", the strongest approach is to...",
+          "prompt": "Why should 'Triangular Trade' be taught as a simplified model rather than a complete map of Atlantic commerce?",
           "choices": [
-            "identify multiple contributing factors, their relationships, and relevant evidence.",
-            "name one cause and stop.",
-            "list events without explaining connections.",
-            "assume later events caused earlier ones."
+            "Atlantic trade used many overlapping routes, and the model must distinguish voluntary exchange from the coercion and forced migration of slavery.",
+            "Every Atlantic voyage followed one identical triangle.",
+            "The model proves slavery was voluntary trade.",
+            "Maps make human experience irrelevant."
           ],
           "answer": 0,
-          "kind": "causation",
+          "kind": "economics-history-benchmark",
           "sourceWeek": 11
         },
         {
@@ -5174,15 +5177,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W11-C1",
-          "prompt": "When explaining causes related to \"Atlantic Trade, Enslavement, Forced Migration, and Resistance\", the strongest approach is to...",
+          "prompt": "Why should 'Triangular Trade' be taught as a simplified model rather than a complete map of Atlantic commerce?",
           "choices": [
-            "identify multiple contributing factors, their relationships, and relevant evidence.",
-            "name one cause and stop.",
-            "list events without explaining connections.",
-            "assume later events caused earlier ones."
+            "Atlantic trade used many overlapping routes, and the model must distinguish voluntary exchange from the coercion and forced migration of slavery.",
+            "Every Atlantic voyage followed one identical triangle.",
+            "The model proves slavery was voluntary trade.",
+            "Maps make human experience irrelevant."
           ],
           "answer": 0,
-          "kind": "causation",
+          "kind": "economics-history-benchmark",
           "sourceWeek": 11
         },
         {
@@ -8722,14 +8725,14 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
           "day": "Tuesday",
           "title": "Disciplinary Analysis",
           "objective": "Apply historical, geographic, civic, economic, or comparative tools to evidence.",
-          "activity": "Compare Virginia/New Jersey Plan ideas and the Great Compromise.",
+          "activity": "Compare the Great Compromise, Three-Fifths Compromise, and Electoral College as Convention-era compromises or institutional choices; explain whose interests were represented, what problems delegates claimed to address, and the moral/political consequences.",
           "evidence": "Annotated map, timeline, data display, comparison matrix, civic/economic model, or cause network."
         },
         {
           "day": "Wednesday",
           "title": "Primary & Secondary Source Laboratory",
           "objective": "Source, contextualize, corroborate, and evaluate evidence and perspective.",
-          "activity": "Study slavery-related compromises accurately while centering enslaved people's humanity rather than treating people as fractions.",
+          "activity": "Analyze evidence about representation and slavery. Make explicit that the Three-Fifths Compromise was an apportionment formula tied to slavery and political power—not a statement that enslaved people were literally three-fifths human.",
           "evidence": "Source-analysis record with creator/date/purpose/audience, evidence, inference, corroboration, limitations, and citation."
         },
         {
@@ -8854,15 +8857,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W19-C1",
-          "prompt": "When explaining causes related to \"Constitutional Convention: Representation, Federal Power, and Compromise\", the strongest approach is to...",
+          "prompt": "Which set names major Constitutional Convention compromises or institutional arrangements Grade 5 students should be able to explain?",
           "choices": [
-            "identify multiple contributing factors, their relationships, and relevant evidence.",
-            "name one cause and stop.",
-            "list events without explaining connections.",
-            "assume later events caused earlier ones."
+            "The Great Compromise, the Three-Fifths Compromise, and the Electoral College",
+            "The Louisiana Purchase, Erie Canal, and Monroe Doctrine",
+            "The Stamp Act, Tea Act, and Intolerable Acts",
+            "The Missouri Compromise, Compromise of 1850, and Kansas-Nebraska Act"
           ],
           "answer": 0,
-          "kind": "causation",
+          "kind": "civics-benchmark",
           "sourceWeek": 19
         },
         {
@@ -8919,15 +8922,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W19-P1",
-          "prompt": "When perspectives differ in \"Constitutional Convention: Representation, Federal Power, and Compromise\", the best historical move is to...",
+          "prompt": "What is the most accurate way to explain the Three-Fifths Compromise?",
           "choices": [
-            "ask how position, experience, purpose, and context shape each perspective while checking factual claims.",
-            "declare every perspective equally accurate.",
-            "choose the most dramatic account.",
-            "ignore perspective differences."
+            "It was an apportionment formula tied to slavery and political representation; it did not mean an enslaved person had only three-fifths human worth.",
+            "It declared that some people were biologically three-fifths human.",
+            "It ended slavery at the Constitutional Convention.",
+            "It gave enslaved people three-fifths of a vote."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "civics-benchmark",
           "sourceWeek": 19
         }
       ],
@@ -9038,15 +9041,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W19-C1",
-          "prompt": "When explaining causes related to \"Constitutional Convention: Representation, Federal Power, and Compromise\", the strongest approach is to...",
+          "prompt": "Which set names major Constitutional Convention compromises or institutional arrangements Grade 5 students should be able to explain?",
           "choices": [
-            "identify multiple contributing factors, their relationships, and relevant evidence.",
-            "name one cause and stop.",
-            "list events without explaining connections.",
-            "assume later events caused earlier ones."
+            "The Great Compromise, the Three-Fifths Compromise, and the Electoral College",
+            "The Louisiana Purchase, Erie Canal, and Monroe Doctrine",
+            "The Stamp Act, Tea Act, and Intolerable Acts",
+            "The Missouri Compromise, Compromise of 1850, and Kansas-Nebraska Act"
           ],
           "answer": 0,
-          "kind": "causation",
+          "kind": "civics-benchmark",
           "sourceWeek": 19
         },
         {
@@ -9103,15 +9106,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W19-P1",
-          "prompt": "When perspectives differ in \"Constitutional Convention: Representation, Federal Power, and Compromise\", the best historical move is to...",
+          "prompt": "What is the most accurate way to explain the Three-Fifths Compromise?",
           "choices": [
-            "ask how position, experience, purpose, and context shape each perspective while checking factual claims.",
-            "declare every perspective equally accurate.",
-            "choose the most dramatic account.",
-            "ignore perspective differences."
+            "It was an apportionment formula tied to slavery and political representation; it did not mean an enslaved person had only three-fifths human worth.",
+            "It declared that some people were biologically three-fifths human.",
+            "It ended slavery at the Constitutional Convention.",
+            "It gave enslaved people three-fifths of a vote."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "civics-benchmark",
           "sourceWeek": 19
         },
         {
@@ -9702,7 +9705,7 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
           "day": "Thursday",
           "title": "Argument, Comparison, Deliberation, or Historical Interpretation",
           "objective": "Develop and communicate a defensible interpretation or recommendation using evidence.",
-          "activity": "Write why dividing power can protect liberty while slowing or complicating decisions.",
+          "activity": "Use a representative-government case to trace how eligible voters choose representatives, how representatives exercise delegated public authority, and how constitutional checks, elections, courts, and federalism limit or review power.",
           "evidence": "Historical argument, comparison, DBQ-style response, map story, structured deliberation, exhibit, or presentation."
         },
         {
@@ -9885,15 +9888,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W21-P1",
-          "prompt": "When perspectives differ in \"Branches, Checks and Balances, Federalism, and Constitutional Interpretation\", the best historical move is to...",
+          "prompt": "In a representative government, citizens primarily exercise political authority by...",
           "choices": [
-            "ask how position, experience, purpose, and context shape each perspective while checking factual claims.",
-            "declare every perspective equally accurate.",
-            "choose the most dramatic account.",
-            "ignore perspective differences."
+            "choosing representatives through elections and using other lawful civic processes while representatives make public decisions within constitutional limits.",
+            "giving one leader permanent unchecked power.",
+            "allowing courts to hold every elected office.",
+            "replacing laws with opinion polls."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "civics-benchmark",
           "sourceWeek": 21
         }
       ],
@@ -10069,15 +10072,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W21-P1",
-          "prompt": "When perspectives differ in \"Branches, Checks and Balances, Federalism, and Constitutional Interpretation\", the best historical move is to...",
+          "prompt": "In a representative government, citizens primarily exercise political authority by...",
           "choices": [
-            "ask how position, experience, purpose, and context shape each perspective while checking factual claims.",
-            "declare every perspective equally accurate.",
-            "choose the most dramatic account.",
-            "ignore perspective differences."
+            "choosing representatives through elections and using other lawful civic processes while representatives make public decisions within constitutional limits.",
+            "giving one leader permanent unchecked power.",
+            "allowing courts to hold every elected office.",
+            "replacing laws with opinion polls."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "civics-benchmark",
           "sourceWeek": 21
         },
         {
@@ -12593,7 +12596,7 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
           "day": "Wednesday",
           "title": "Primary & Secondary Source Laboratory",
           "objective": "Source, contextualize, corroborate, and evaluate evidence and perspective.",
-          "activity": "Compare settler opportunity narratives with evidence of dispossession and policy.",
+          "activity": "Compare settler opportunity narratives with evidence of Indigenous dispossession, federal/state policy, and the practical hardships faced on overland trails, including distance, weather, disease, injury, supply shortages, river crossings, and terrain.",
           "evidence": "Source-analysis record with creator/date/purpose/audience, evidence, inference, corroboration, limitations, and citation."
         },
         {
@@ -12718,15 +12721,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W27-C1",
-          "prompt": "When explaining causes related to \"Westward Expansion, Manifest Destiny, and Indigenous Dispossession\", the strongest approach is to...",
+          "prompt": "Which set best describes hardships many overland-trail migrants could face?",
           "choices": [
-            "identify multiple contributing factors, their relationships, and relevant evidence.",
-            "name one cause and stop.",
-            "list events without explaining connections.",
-            "assume later events caused earlier ones."
+            "Long distances, weather, disease, injury, supply shortages, river crossings, and difficult terrain",
+            "Only disagreements about map colors",
+            "Guaranteed access to food and medical care",
+            "No environmental or transportation challenges"
           ],
           "answer": 0,
-          "kind": "causation",
+          "kind": "history-benchmark",
           "sourceWeek": 27
         },
         {
@@ -12902,15 +12905,15 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         },
         {
           "id": "G5SS-W27-C1",
-          "prompt": "When explaining causes related to \"Westward Expansion, Manifest Destiny, and Indigenous Dispossession\", the strongest approach is to...",
+          "prompt": "Which set best describes hardships many overland-trail migrants could face?",
           "choices": [
-            "identify multiple contributing factors, their relationships, and relevant evidence.",
-            "name one cause and stop.",
-            "list events without explaining connections.",
-            "assume later events caused earlier ones."
+            "Long distances, weather, disease, injury, supply shortages, river crossings, and difficult terrain",
+            "Only disagreements about map colors",
+            "Guaranteed access to food and medical care",
+            "No environmental or transportation challenges"
           ],
           "answer": 0,
-          "kind": "causation",
+          "kind": "history-benchmark",
           "sourceWeek": 27
         },
         {
