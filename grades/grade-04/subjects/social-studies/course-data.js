@@ -19,7 +19,10 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
     "version": "1.0.0",
     "updated": "2026-10-19",
     "authors": "Jennifer Kay Pearl",
-    "note": "The grade-wide 20-point A++ weekly assessment remains integrated portfolio evidence. Formal Social Studies mastery is recorded in this subject course."
+    "note": "The grade-wide 20-point A++ weekly assessment remains integrated portfolio evidence. Formal Social Studies mastery is recorded in this subject course.",
+    "stateLocalizable": true,
+    "localizationMode": "national-core-state-local-overlay",
+    "localizationGuide": "STATE_LOCALIZATION_GUIDE.md"
   },
   "strands": [
     "Historical Inquiry & Evidence",
@@ -15489,5 +15492,11 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         }
       ]
     }
-  ]
+  ],
+  "localization": {
+    "required": true,
+    "mode": "national-core-state-local-overlay",
+    "rule": "State/local examples, sources, maps, biographies, institutions, and case studies may be substituted or added where appropriate, but the national disciplinary core and 80% mastery requirements remain intact.",
+    "guide": "STATE_LOCALIZATION_GUIDE.md"
+  }
 };

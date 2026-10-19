@@ -25,3 +25,9 @@ Identity/family/community → civics/rules/democracy → geography/place → his
 
 ### Standards basis
 Designed from the NCSS C3 Inquiry Arc and broad Grade 1 patterns in New York, California, Florida, and other state frameworks. National portability does not itself confer accreditation or automatic acceptance by every jurisdiction.
+
+## State/local localization
+
+This course follows the Academy-wide **national-core / state-local-overlay** rule. State and local maps, sources, institutions, biographies, Indigenous histories, public services, economic examples, environmental cases, and community evidence should be integrated where appropriate without removing national competencies or changing the 80% mastery standard.
+
+See `STATE_LOCALIZATION_GUIDE.md`.

@@ -19,3 +19,9 @@ Formal Social Studies progression requires 80% on every weekly subject gate, the
 
 ## Inclusion and privacy
 No learner must disclose immigration/citizenship status, street address, family finances, political affiliation, religion, or other sensitive personal information. Fictional/public examples are valid.
+
+## State/local localization
+
+State localization is required across the Khaemenes Social Studies sequence. Each grade keeps a broad national disciplinary core while adapting appropriate examples, sources, maps, institutions, Indigenous histories, biographies, civic cases, and community evidence to the learner's state/locality. Localization does not lower the 80% mastery threshold or delete national competencies.
+
+See `STATE_LOCALIZATION_GUIDE.md`.

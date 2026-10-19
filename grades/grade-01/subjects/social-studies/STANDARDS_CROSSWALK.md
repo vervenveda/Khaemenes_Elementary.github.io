@@ -24,3 +24,9 @@ Reference: https://www.fldoe.org/academics/standards/subject-areas/social-studie
 
 ## Evidence and assessment
 Weekly checks are open-book and require 80% mastery. The midterm and final are closed-book, randomized, teacher-supervised assessments. Reading accommodations may be provided when they do not disclose answers; Social Studies knowledge should not be confused with reading disability or developing fluency.
+
+## State/local localization
+
+State localization is required across the Khaemenes Social Studies sequence. Each grade keeps a broad national disciplinary core while adapting appropriate examples, sources, maps, institutions, Indigenous histories, biographies, civic cases, and community evidence to the learner's state/locality. Localization does not lower the 80% mastery threshold or delete national competencies.
+
+See `STATE_LOCALIZATION_GUIDE.md`.

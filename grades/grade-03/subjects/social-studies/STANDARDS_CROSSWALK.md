@@ -17,3 +17,9 @@ Covers physical/human geography; maps/tables/graphs/photos/charts; local history
 https://www2.cde.ca.gov/cacs/history?c0=4
 
 Formal Social Studies progression requires 80% on every weekly subject gate, the closed-book midterm, and the cumulative final. Constructed responses and portfolio artifacts provide qualitative evidence without letting unrelated subjects mask weak Social Studies mastery.
+
+## State/local localization
+
+State localization is required across the Khaemenes Social Studies sequence. Each grade keeps a broad national disciplinary core while adapting appropriate examples, sources, maps, institutions, Indigenous histories, biographies, civic cases, and community evidence to the learner's state/locality. Localization does not lower the 80% mastery threshold or delete national competencies.
+
+See `STATE_LOCALIZATION_GUIDE.md`.

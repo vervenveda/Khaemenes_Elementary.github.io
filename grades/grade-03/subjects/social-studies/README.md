@@ -20,3 +20,9 @@ The legacy 15-point whole-grade assessment remains integrated portfolio evidence
 Teacher convenience code: `KHAE3SS` (not secure authentication).
 
 Scope: inquiry/evidence/local history → U.S. geography/regions → Indigenous nations/local-state history → comparative world communities (Japan, Ghana, Mexico, India) → midterm → Constitution/federalism/elections/civic memory → economics/currencies/trade → historical impact and contributions → culture/human rights/global citizenship/media literacy → research capstone/final/Grade 4 bridge.
+
+## State/local localization
+
+This course follows the Academy-wide **national-core / state-local-overlay** rule. State and local maps, sources, institutions, biographies, Indigenous histories, public services, economic examples, environmental cases, and community evidence should be integrated where appropriate without removing national competencies or changing the 80% mastery standard.
+
+See `STATE_LOCALIZATION_GUIDE.md`.

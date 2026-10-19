@@ -21,3 +21,9 @@ Teacher convenience code: `KHAE2SS` (not secure authentication).
 Scope: inquiry/community → North American geography → Indigenous nations and historical sources → migration/colonization/immigration → midyear review/government/citizenship → economics/trade → people who make a difference → culture/communication/information literacy → research/civic capstone/final/Grade 3 bridge.
 
 Legacy week URLs now forward to the corresponding canonical interactive week.
+
+## State/local localization
+
+This course follows the Academy-wide **national-core / state-local-overlay** rule. State and local maps, sources, institutions, biographies, Indigenous histories, public services, economic examples, environmental cases, and community evidence should be integrated where appropriate without removing national competencies or changing the 80% mastery standard.
+
+See `STATE_LOCALIZATION_GUIDE.md`.

@@ -14,7 +14,10 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
     "storageKey": "khaemenes_grade1_social_studies_v1",
     "weeklyMode": "open-book",
     "midtermMode": "closed-book teacher-supervised",
-    "finalMode": "closed-book teacher-supervised"
+    "finalMode": "closed-book teacher-supervised",
+    "stateLocalizable": true,
+    "localizationMode": "national-core-state-local-overlay",
+    "localizationGuide": "STATE_LOCALIZATION_GUIDE.md"
   },
   "frameworks": [
     {
@@ -5337,5 +5340,11 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
         }
       ]
     }
-  ]
+  ],
+  "localization": {
+    "required": true,
+    "mode": "national-core-state-local-overlay",
+    "rule": "State/local examples, sources, maps, biographies, institutions, and case studies may be substituted or added where appropriate, but the national disciplinary core and 80% mastery requirements remain intact.",
+    "guide": "STATE_LOCALIZATION_GUIDE.md"
+  }
 };
