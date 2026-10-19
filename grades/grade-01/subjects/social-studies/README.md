@@ -4,6 +4,8 @@
 Canonical route: `grades/grade-01/subjects/social-studies/index.html`
 
 ### Course record
+- **state-localizable by design and requirement**; see `LOCALIZATION_GUIDE.md`
+- localization may adapt examples and evidence but **never lowers the 80% mastery gate or removes national core competencies**
 - 36 discipline-specific weeks
 - 180 Monday–Friday lessons
 - 9 four-week units

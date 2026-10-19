@@ -30,3 +30,9 @@ Weekly checks are open-book and require 80% mastery. The midterm and final are c
 State localization is required across the Khaemenes Social Studies sequence. Each grade keeps a broad national disciplinary core while adapting appropriate examples, sources, maps, institutions, Indigenous histories, biographies, civic cases, and community evidence to the learner's state/locality. Localization does not lower the 80% mastery threshold or delete national competencies.
 
 See `STATE_LOCALIZATION_GUIDE.md`.
+
+
+## State/localization requirement
+Grade 1 requires a state/local overlay. Educators should localize age-appropriate community helpers, state identity/geography, local/state symbols and landmarks, historical sources, government examples, elections, environmental choices, and civic/service examples. The national disciplinary sequence remains fixed, and localized material must meet the same 80% mastery expectations.
+
+See `LOCALIZATION_GUIDE.md`.

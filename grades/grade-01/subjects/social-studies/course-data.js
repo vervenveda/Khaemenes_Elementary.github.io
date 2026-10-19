@@ -17,7 +17,25 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
     "finalMode": "closed-book teacher-supervised",
     "stateLocalizable": true,
     "localizationMode": "national-core-state-local-overlay",
-    "localizationGuide": "STATE_LOCALIZATION_GUIDE.md"
+    "localizationGuide": "LOCALIZATION_GUIDE.md",
+    "localizationRequired": true,
+    "localizationCheckpoints": [
+      3,
+      4,
+      11,
+      12,
+      15,
+      16,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      34,
+      35
+    ],
+    "localizationPolicy": "Keep the national Grade 1 Social Studies core and 80% mastery gates invariant. Localize appropriate community examples, state identity/geography, historical sources, public institutions, civic symbols, elections, environmental cases, and service/action evidence."
   },
   "frameworks": [
     {
