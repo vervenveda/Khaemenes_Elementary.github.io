@@ -5,13 +5,14 @@ Canonical route: `grades/grade-05/subjects/social-studies/index.html`
 
 ### Course record
 - 36 discipline-specific weeks / 180 Social Studies lessons
-- **state-localizable by requirement** using `STATE_LOCALIZATION_GUIDE.md`
-- 14 new reviewed objective items per week = **504 unique current-week items**
+- **state-localizable by requirement** using `STATE_LOCALIZATION_GUIDE.md`; the current Florida overlay is in `STATE_PACK_FLORIDA.md`
+- 14 reviewed objective items per week = **504 unique current-week items**; a 2026 specificity pass replaced **144 repeated meta-template items** with topic-specific history/civics questions
 - up to 4 spiral-review records added to weekly banks
 - 10 randomized questions per open-book weekly attempt
 - recent-form **anti-repeat weighting** preferentially serves unseen items on reassessment
 - midterm/final use a **unit-stratified Monte Carlo blueprint** so random forms preserve broad course coverage
 - weekly constructed historical argument: claim + 3 pieces of evidence + reasoning + counterpoint/limitation
+- midterm and final also preserve a **teacher-supervised source-based cumulative written argument** as portfolio evidence
 - 80% objective mastery unlock policy
 - closed-book teacher-supervised **40-question midterm** after Week 18 from a 252-item pool
 - closed-book teacher-supervised **55-question cumulative final** after Week 36 from a 504-item pool

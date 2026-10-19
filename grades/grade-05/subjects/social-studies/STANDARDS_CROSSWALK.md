@@ -7,8 +7,10 @@ Questions/inquiry, disciplinary tools, sourcing/evidence, claims/counterclaims, 
 https://www.socialstudies.org/standards/c3
 
 ## Florida Grade 5
-The course covers Florida's Grade 5 expectations in historical inquiry; pre-Columbian American societies and Indigenous regional diversity; exploration technology/motives/routes; interactions among Indigenous, African, English, French, Dutch, and Spanish peoples; colonial regional comparison; slavery and Atlantic trade; Revolution and founding documents; Confederation/Northwest Ordinance; Constitution; Louisiana Purchase, War of 1812, transportation/communication, westward expansion and Indigenous impacts; geography/latitude-longitude/states and territories; market economy, trade and technology; and civics/representative government/Bill of Rights.
+The **national core plus the required `STATE_PACK_FLORIDA.md` overlay** is designed to cover Florida's Grade 5 expectations in historical inquiry; pre-Columbian American societies and Indigenous regional diversity; exploration technology/motives/routes; interactions among Indigenous, African, English, French, Dutch, and Spanish peoples; colonial regional comparison; slavery and Atlantic trade; Revolution and founding documents; Confederation/Northwest Ordinance; Constitution; Louisiana Purchase, War of 1812, transportation/communication, westward expansion and Indigenous impacts; geography/latitude-longitude/states and territories; market economy, trade and technology; and civics/representative government/Bill of Rights.
 https://www.fldoe.org/core/fileparse.php/20602/urlt/10-3.pdf
+
+Florida-specific 2023 additions that do not belong in every state's national core are assigned through `STATE_PACK_FLORIDA.md`, including modern voting-rights expansion, current Florida federal representatives, U.S. symbols/documents, Florida/U.S. constitutional and court relationships, the constitutional amendment process, and Grade 5 Holocaust/antisemitism instruction.
 
 ## California Grade 5
 California Grade 5 is “United States History and Geography: Making a New Nation,” emphasizing pre-Columbian societies, exploration, colonial settlement, the Revolution, Constitution, westward movement, slavery, Indigenous conflict/dispossession, geography, and development of the republic through roughly 1850. The Khaemenes spine directly supports that arc while adding source-literacy and comparative depth.
@@ -34,3 +36,10 @@ A fresh benchmark audit made several formerly implicit expectations explicit in 
 - overland-trail hardships.
 
 These additions strengthen portability without replacing the national inquiry/evidence spine or the required state/local overlay.
+
+
+## 2026 assessment specificity pass
+
+A fresh forensic audit found that too much of the technically unique 504-item bank reused generic disciplinary stems. Four recurring meta-items per week — **144 questions total** — were replaced with topic-specific historical/civic content questions while retaining sourcing, causation, perspective, synthesis, and revision as a smaller disciplinary spiral.
+
+The midterm and final now also retain a source-based cumulative written response alongside the randomized objective form.

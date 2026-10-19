@@ -27,3 +27,12 @@ Students should increasingly distinguish:
 - voluntary exchange from coerced labor or forced migration.
 
 Do not copy full copyrighted texts or images unless public domain/licensed. Prefer links, brief excerpts, and teacher-created summaries.
+
+
+## Florida-overlay source additions
+
+For the Florida Grade 5 pack:
+- use official U.S. Senate and U.S. House sources for **current** federal representatives rather than hard-coding names;
+- use the Florida Constitution / Florida government and court sources for state-national constitutional comparisons;
+- use the **United States Holocaust Memorial Museum** or comparably authoritative historical sources for the Grade 5 Holocaust/antisemitism benchmark;
+- verify current officeholders, district boundaries, laws, and election information at the time of instruction.

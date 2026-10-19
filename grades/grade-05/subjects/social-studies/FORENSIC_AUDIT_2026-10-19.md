@@ -1,34 +1,33 @@
-# Grade 5 Social Studies · Forensic Hardening Note
+# Grade 5 Social Studies · Fresh Forensic Audit & Hardening
 ## 2026-10-19
 
-Fresh live-main audit status before repair:
-- 36/36 weeks present
-- 180/180 lessons present
-- 504/504 unique current-week question IDs
-- 504/504 unique current-week prompt wordings
-- 642 current + spiral assessment records
-- no cross-subject contamination detected
-- student app, teacher tools, printable engine, and learner context compiled successfully
-- 80% week progression and Week 19 midterm gate present
-- required state/localization metadata and guide present
+### Live-main audit before this pass
+- 36/36 weeks and 180/180 Social Studies lessons present
+- 504/504 unique current-week IDs and prompt strings
+- 642 current + spiral bank records
+- app, teacher tools, printable, and learner context compiled
+- 80% weekly progression and Week 19 midterm gate present
+- anti-repeat weekly retakes and unit-stratified cumulative forms present
+- state/localization metadata present
 
-### Bubbles repaired
+### Bubbles found and pushed out
 
-1. **Explicit benchmark precision**
-   Added direct lesson/question treatment of U.S. states/capitals/territories, pre-1850 natural-event impacts, Triangular Trade as a limited model, named Constitutional Convention compromises, representative government, and overland-trail hardships.
+1. **Assessment specificity**
+   Technically unique prompts were still over-templated: 281/504 current items used nine recurring meta-reasoning stems. This pass replaced four recurring generic items per week — **144 total** — with topic-specific historical/civic questions. Generic sourcing, causation, perspective, synthesis, and revision items remain as a minority disciplinary spiral.
 
-2. **Retake freshness**
-   Weekly randomized forms now use recent-attempt anti-repeat weighting. When enough unseen items exist, the next form preferentially draws them; if the bank is smaller than the avoidance window, the engine falls back safely to previously seen items.
+2. **Florida overlay precision**
+   The prior Florida crosswalk overclaimed direct coverage. Current Florida Grade 5 expectations also include modern voting-rights expansion, current Florida federal representatives, national symbols/documents, U.S./Florida court and constitutional relationships, amendment process, and Grade 5 Holocaust/antisemitism instruction. These now live in `STATE_PACK_FLORIDA.md`; the national core remains portable.
 
-3. **Cumulative assessment blueprint**
-   Midterm and final forms now draw across course units rather than from one flat pool alone. Unit-stratified selection is combined with recent-form anti-repeat weighting and answer-order randomization.
+3. **Cumulative written evidence**
+   Weekly learning required constructed historical arguments, but midterm/final were objective-only. Midterm and final now preserve teacher-supervised source-based cumulative written responses in the learner record and surface them in teacher tools. Automatic mastery remains the randomized objective score at 80%; the written response is additional cumulative portfolio evidence.
 
 ### Invariants preserved
 - 36 weeks / 180 lessons
 - 80% mastery threshold
 - open-book weekly checks
 - closed-book teacher-supervised midterm/final
-- saved attempt snapshots
-- state/localizable national core
-- whole-grade A++ assessment remains portfolio evidence, not Social Studies mastery
+- anti-repeat randomized forms and attempt snapshots
+- unit-stratified cumulative objective exams
+- required state/local overlay
+- grade-wide A++ assessment remains portfolio evidence only
 - first-party/static-site architecture

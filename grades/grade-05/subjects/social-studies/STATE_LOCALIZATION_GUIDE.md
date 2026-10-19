@@ -30,3 +30,10 @@ Useful connections include Haudenosaunee history and sovereignty, Dutch/British 
 ## Safeguards
 
 Do not require home addresses, immigration/citizenship status, religion, political affiliation, family finances, or private family history. Do not present land as empty before settler arrival. Use specific Indigenous nation names and current nation/tribal sources where possible. Keep civic activities nonpartisan.
+
+
+## State pack registry
+
+- **Florida:** `STATE_PACK_FLORIDA.md` — current Florida Grade 5 add-ons and localization tasks.
+
+A state pack may add required state-specific benchmarks but may not lower the Academy's 80% mastery threshold or delete the national core.
