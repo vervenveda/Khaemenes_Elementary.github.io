@@ -3,7 +3,7 @@
 
 Canonical route: `grades/grade-02/subjects/social-studies/index.html`
 
-- **state-localizable by design and requirement**; see `LOCALIZATION_GUIDE.md`
+- **state-localizable by design and requirement**; see `STATE_LOCALIZATION_GUIDE.md`
 - localization preserves the national core and the Academy's **80% mastery** requirements
 - 36 discipline-specific weeks / 180 lessons
 - 80% weekly subject mastery unlock policy
@@ -29,3 +29,7 @@ Legacy week URLs now forward to the corresponding canonical interactive week.
 This course follows the Academy-wide **national-core / state-local-overlay** rule. State and local maps, sources, institutions, biographies, Indigenous histories, public services, economic examples, environmental cases, and community evidence should be integrated where appropriate without removing national competencies or changing the 80% mastery standard.
 
 See `STATE_LOCALIZATION_GUIDE.md`.
+
+
+### Localization source of truth
+`STATE_LOCALIZATION_GUIDE.md` is the one canonical Grade 2 state/local overlay guide. The national core and 80% mastery gates remain invariant.
