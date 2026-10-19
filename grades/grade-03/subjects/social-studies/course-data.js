@@ -22,7 +22,29 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
     "note": "The grade-wide 15-point interdisciplinary weekly assessment remains portfolio evidence. Formal Social Studies mastery is recorded here.",
     "stateLocalizable": true,
     "localizationMode": "national-core-state-local-overlay",
-    "localizationGuide": "STATE_LOCALIZATION_GUIDE.md"
+    "localizationGuide": "LOCALIZATION_GUIDE.md",
+    "localizationRequired": true,
+    "localizationCheckpoints": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      20,
+      21,
+      22,
+      27,
+      28,
+      29,
+      30,
+      33,
+      35
+    ],
+    "localizationPolicy": "Keep the national Grade 3 Social Studies core, comparative world-community strand, and 80% mastery gates invariant. Localize appropriate community/state history, geography, Indigenous nations, government, public figures, data, civic cases, and capstone evidence."
   },
   "strands": [
     "Inquiry & Evidence",

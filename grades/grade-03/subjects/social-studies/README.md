@@ -3,6 +3,8 @@
 
 Canonical route: `grades/grade-03/subjects/social-studies/index.html`
 
+- **state-localizable by requirement**; `LOCALIZATION_GUIDE.md` defines the state/local overlay
+- state/local adaptation may change examples and source sets but not the national disciplinary core or **80% mastery gates**
 - 36 discipline-specific weeks / 180 lessons
 - 10 new reviewed objective items per week = 360 unique current-week items
 - up to 4 spiral-review items added to weekly banks; 7 randomized questions drawn per open-book attempt

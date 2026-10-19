@@ -23,3 +23,9 @@ Formal Social Studies progression requires 80% on every weekly subject gate, the
 State localization is required across the Khaemenes Social Studies sequence. Each grade keeps a broad national disciplinary core while adapting appropriate examples, sources, maps, institutions, Indigenous histories, biographies, civic cases, and community evidence to the learner's state/locality. Localization does not lower the 80% mastery threshold or delete national competencies.
 
 See `STATE_LOCALIZATION_GUIDE.md`.
+
+
+## State/localization requirement
+Grade 3 requires a state/local overlay in local history, U.S. geography/regions, Indigenous nations, local/state government, public figures/institutions, civic action, and the research capstone. The comparative world-community cases remain part of the national core; localization should add state relevance without deleting global comparison or lowering mastery expectations.
+
+See `LOCALIZATION_GUIDE.md`.
