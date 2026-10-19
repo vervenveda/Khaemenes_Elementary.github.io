@@ -3,16 +3,38 @@
  const C=window.KHAEMENES_GRADE5_SOCIAL_STUDIES,M=C.metadata,SUB=window.KhaemenesGrade5SubjectContext||null,$=s=>document.querySelector(s);
  function key(){return SUB?.scopedKey?.()||M.storageKey}
  function load(){try{return JSON.parse(localStorage.getItem(key()))||{students:[]}}catch{return{students:[]}}}
+ function save(db){localStorage.setItem(key(),JSON.stringify(db))}
  function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+ function ensure(s){s.weeks||={};s.exams||={};s.localization||={statePack:"generic",stateLabel:"",updatedAt:null};for(const k of ["midterm","final"]){s.exams[k]||={best:0,attempts:[]};s.exams[k].reviewStatus??="pending";s.exams[k].constructedResponse??=""}for(let w=1;w<=36;w++){s.weeks[w]||={};s.weeks[w].reviewStatus??="pending";s.weeks[w].localizationEvidence??=""}}
+ function reviewSelect(value,attrs){return `<select ${attrs}><option value="pending" ${value==="pending"?"selected":""}>Pending</option><option value="meets" ${value==="meets"?"selected":""}>Meets evidence standard</option><option value="revise" ${value==="revise"?"selected":""}>Revise</option></select>`}
  function render(){
-   const db=load();
+   const db=load();(db.students||[]).forEach(ensure);
    const cards=(db.students||[]).map(s=>{
-     s.weeks||={};s.exams||={midterm:{},final:{}};
      const mastered=C.weeks.filter(w=>(s.weeks[w.week]?.best||0)>=80).length;
-     const rows=C.weeks.map(w=>{const r=s.weeks[w.week]||{};return `<tr><td>${w.week}</td><td>${esc(w.title)}</td><td>${r.best?r.best+"%":"—"}</td><td>${r.attempts?.length||0}</td><td>${esc((r.constructedResponse||"").slice(0,110))}</td><td>${esc((r.correction||"").slice(0,80))}</td><td>${esc((r.artifact||"").slice(0,80))}</td></tr>`}).join("");
-     return `<section class="card"><h2>${esc(s.name)} · ${mastered}/36 mastered · Midterm ${s.exams.midterm?.best||"—"} · Final ${s.exams.final?.best||"—"}</h2><div class="assessmentBanner"><strong>Midterm source-based response</strong><p>${esc((s.exams.midterm?.constructedResponse||"Not yet saved").slice(0,650))}</p><strong>Final source-based response</strong><p>${esc((s.exams.final?.constructedResponse||"Not yet saved").slice(0,650))}</p></div><table><tr><th>Week</th><th>Topic</th><th>Best</th><th>Attempts</th><th>Constructed Argument</th><th>Correction</th><th>Artifact</th></tr>${rows}</table></section>`;
+     const reviewed=C.weeks.filter(w=>s.weeks[w.week]?.reviewStatus==="meets").length;
+     const rows=C.weeks.map(w=>{const r=s.weeks[w.week]||{};const loc=M.localizationCheckpoints.includes(w.week)?esc((r.localizationEvidence||"").slice(0,85)):"—";return `<tr><td>${w.week}</td><td>${esc(w.title)}</td><td>${r.best?r.best+"%":"—"}</td><td>${r.attempts?.length||0}</td><td>${esc((r.constructedResponse||"").slice(0,95))}</td><td>${reviewSelect(r.reviewStatus,`data-week-review="${w.week}" data-student="${s.id}"`)}</td><td>${loc}</td><td>${esc((r.correction||"").slice(0,70))}</td></tr>`}).join("");
+     return `<section class="card">
+       <h2>${esc(s.name)} · ${mastered}/36 objective gates mastered · ${reviewed}/36 written responses meeting evidence standard</h2>
+       <div class="assessmentBanner">
+         <h3>State/local context</h3>
+         <label>Pack <select data-pack="${s.id}"><option value="generic" ${s.localization.statePack==="generic"?"selected":""}>Generic state/local</option><option value="florida" ${s.localization.statePack==="florida"?"selected":""}>Florida pack</option></select></label>
+         <label>State/local label <input data-state-label="${s.id}" value="${esc(s.localization.stateLabel||"")}" placeholder="e.g., Florida · Pasco County"></label>
+         <button data-save-localization="${s.id}">Save localization</button>
+         <p class="small">Localization is required at Weeks ${M.localizationCheckpoints.join(", ")} and never changes the 80% national-core mastery gate.</p>
+       </div>
+       <div class="assessmentBanner">
+         <strong>Midterm source-based response · review ${reviewSelect(s.exams.midterm.reviewStatus,`data-exam-review="midterm" data-student="${s.id}"`)}</strong>
+         <p>${esc((s.exams.midterm.constructedResponse||"Not yet saved").slice(0,650))}</p>
+         <strong>Final source-based response · review ${reviewSelect(s.exams.final.reviewStatus,`data-exam-review="final" data-student="${s.id}"`)}</strong>
+         <p>${esc((s.exams.final.constructedResponse||"Not yet saved").slice(0,650))}</p>
+       </div>
+       <table><tr><th>Week</th><th>Topic</th><th>Best</th><th>Attempts</th><th>Constructed Argument</th><th>Teacher Review</th><th>Localization Evidence</th><th>Correction</th></tr>${rows}</table>
+     </section>`;
    }).join("");
-   $("#tools").innerHTML=`<section class="card"><div class="actions"><button id="export">Export JSON</button><label class="button">Import JSON <input id="import" style="display:none" type="file" accept=".json,application/json"></label><button id="printBtn">Print</button></div><p class="small">Formal Social Studies gate: every weekly best score ≥80%, midterm ≥80%, final ≥80%. State/local localization is required at designated checkpoints but does not change mastery requirements. Grade-wide A++ checks remain portfolio evidence only.</p></section>${cards||'<section class="card">No subject learners stored in this browser/context.</section>'}`;
+   $("#tools").innerHTML=`<section class="card"><div class="actions"><button id="export">Export JSON</button><label class="button">Import JSON <input id="import" style="display:none" type="file" accept=".json,application/json"></label><button id="printBtn">Print</button></div><p class="small">Objective progression remains 80% on every weekly gate, midterm, and final. Written-response review and state/local evidence are qualitative portfolio records and do not silently change objective scores.</p></section>${cards||'<section class="card">No subject learners stored in this browser/context.</section>'}`;
+   document.querySelectorAll("[data-week-review]").forEach(el=>el.onchange=()=>{const s=db.students.find(x=>x.id===el.dataset.student);ensure(s);s.weeks[el.dataset.week].reviewStatus=el.value;save(db)});
+   document.querySelectorAll("[data-exam-review]").forEach(el=>el.onchange=()=>{const s=db.students.find(x=>x.id===el.dataset.student);ensure(s);s.exams[el.dataset.examReview].reviewStatus=el.value;save(db)});
+   document.querySelectorAll("[data-save-localization]").forEach(btn=>btn.onclick=()=>{const id=btn.dataset.saveLocalization,s=db.students.find(x=>x.id===id);ensure(s);s.localization.statePack=document.querySelector(`[data-pack="${id}"]`).value;s.localization.stateLabel=document.querySelector(`[data-state-label="${id}"]`).value.trim();s.localization.updatedAt=new Date().toISOString();save(db);alert("State/local context saved.");render()});
    $("#export").onclick=()=>{const b=new Blob([JSON.stringify(load(),null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="grade5-social-studies-backup.json";a.click();URL.revokeObjectURL(a.href)};
    $("#import").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{localStorage.setItem(key(),JSON.stringify(JSON.parse(r.result)));render();alert("Imported.")}catch{alert("Invalid JSON.")}};r.readAsText(f)};
    $("#printBtn").onclick=()=>window.print();

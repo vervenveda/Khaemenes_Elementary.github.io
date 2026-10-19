@@ -16,7 +16,7 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
     "midtermMode": "closed-book teacher-supervised",
     "finalMode": "closed-book teacher-supervised",
     "storageKey": "khaemenes_grade5_social_studies_v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "updated": "2026-10-19",
     "authors": "Jennifer Kay Pearl",
     "stateLocalizable": true,
@@ -45,7 +45,9 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
     "statePacks": {
       "florida": "STATE_PACK_FLORIDA.md"
     },
-    "cumulativeWrittenEvidence": true
+    "cumulativeWrittenEvidence": true,
+    "localizationWorkflow": "Teacher-selected generic or state-pack context with checkpoint-specific evidence saved in the learner record.",
+    "constructedEvidenceReview": "Teacher review status is recorded separately from the 80% objective mastery gate."
   },
   "strands": [
     "Historical Inquiry & Evidence",
@@ -17410,6 +17412,56 @@ window.KHAEMENES_GRADE5_SOCIAL_STUDIES={
         "geographic or economic connection",
         "counterpoint or limitation"
       ]
+    }
+  },
+  "localizationTasks": {
+    "5": {
+      "generic": "Identify specific Indigenous nation(s), homelands, and present-day communities connected to the learner's state/region. Use nation-created or authoritative sources and save one evidence note connecting local history to the broader North American story.",
+      "florida": "Use specific Florida evidence, including present-day Seminole Tribe of Florida and/or Miccosukee Tribe of Indians of Florida sources where appropriate, plus carefully contextualized evidence for earlier peoples. Save one source/evidence note showing continuity and sovereignty."
+    },
+    "9": {
+      "generic": "Add a state/regional colonial or borderland case. Identify which empires, Indigenous nations, settlements, trade routes, or contested claims affected the region.",
+      "florida": "Connect Florida's Spanish, French, British, African, and Indigenous colonial histories where relevant. Use St. Augustine, borderland rivalry, or another well-sourced Florida case."
+    },
+    "10": {
+      "generic": "Compare one state/local colonial political, religious, or self-government example with the wider colonial patterns in the national core.",
+      "florida": "Use a Florida colonial institution, imperial transition, settlement, or community example to compare authority, religion, pluralism, and governance."
+    },
+    "11": {
+      "generic": "Add one state/regional Atlantic trade, slavery, forced-labor, free-Black, resistance, or migration case using age-appropriate evidence.",
+      "florida": "Use Fort Mose or another appropriate Florida Atlantic-world case to examine slavery, freedom, Black history, imperial rivalry, and resistance."
+    },
+    "12": {
+      "generic": "Profile one state/regional colonial economy or community using evidence about labor, markets, family/community life, law, geography, and status.",
+      "florida": "Use a Florida colonial/borderland community, port, settlement, ranching/agricultural, maritime, or trade example with multiple perspectives."
+    },
+    "16": {
+      "generic": "Add a state/local Revolutionary-era experience where evidence exists: Patriot, Loyalist, Indigenous, Black American, women's, civilian, military, or public-memory evidence.",
+      "florida": "Examine British-period Florida during the Revolution and compare Patriot, Loyalist, neutral, Black, Indigenous, military, civilian, or migration experiences as evidence permits."
+    },
+    "22": {
+      "generic": "Compare the learner's state constitution/government and local institutions with federal constitutional structures. Identify current representatives only from official current sources; do not hard-code officeholders.",
+      "florida": "Compare the Florida Constitution and U.S. Constitution, explain federalism with Florida examples, distinguish Florida and U.S. court systems, and use current official Senate/House sources to identify Florida's two senators and the learner's U.S. representative."
+    },
+    "24": {
+      "generic": "Connect territorial change, exploration, mapping, treaties, Indigenous diplomacy, or later statehood history to the learner's state/region when historically relevant.",
+      "florida": "Use Florida's territorial transition and Adams–Onís context as a comparison to continental territorial change; distinguish this from the Louisiana Purchase while tracing changing claims and Indigenous sovereignty."
+    },
+    "26": {
+      "generic": "Investigate one state/local road, canal, river, port, railroad, market, industry, or communications development and explain its effects on movement, trade, settlement, and labor.",
+      "florida": "Use a Florida port, river route, road, railroad, maritime network, agricultural market, communications link, or later transport connection as the localized comparison."
+    },
+    "27": {
+      "generic": "Add a state/regional case of expansion, treaty change, Indigenous dispossession/removal/resistance, settlement, migration, or territorial/statehood development.",
+      "florida": "Connect expansion to Florida territorial change, Seminole resistance, forced removal, treaty conflict, migration, or statehood evidence while avoiding an 'empty land' narrative."
+    },
+    "28": {
+      "generic": "Connect the learner's state/region to slavery/free-state politics, territorial/statehood debates, migration, Indigenous policy, or sectional tensions where historically relevant.",
+      "florida": "Examine Florida's path to statehood and slavery-era political/economic context as an additional case alongside the national Missouri Compromise and sectionalism inquiry."
+    },
+    "35": {
+      "generic": "Use a state/local historical inquiry for the capstone when strong public evidence exists. Include multiple source types, geography/chronology, a defensible thesis, citations, limits/counterevidence, and an oral defense.",
+      "florida": "A Florida capstone may investigate Indigenous sovereignty, colonial borderlands, Fort Mose, territorial transition, Seminole history, statehood, ports/trade, migration, government, or another evidence-rich topic connected to the national Grade 5 spine."
     }
   }
 };

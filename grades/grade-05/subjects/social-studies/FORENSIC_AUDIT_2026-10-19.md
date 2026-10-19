@@ -31,3 +31,15 @@
 - required state/local overlay
 - grade-wide A++ assessment remains portfolio evidence only
 - first-party/static-site architecture
+
+
+## Second bubble pass · integration hardening
+
+4. **Localization became actionable**
+   Required checkpoint weeks now expose a concrete state/local task in the student course. Teacher Tools stores a Generic or Florida pack selection, a state/local label, and checkpoint evidence in the learner's subject record.
+
+5. **Academy learner duplication reduced**
+   When the Family Registry has an active Grade 05 learner, the Social Studies course now auto-creates/selects that learner's subject record rather than requiring a second manual learner identity.
+
+6. **Evidence review and dashboard visibility**
+   Teacher Tools now records written-evidence review status for weekly, midterm, and final constructed responses. The Grade 5 home page shows a read-only Social Studies mastery summary on the subject card without altering the separate whole-grade A++ certificate record.

@@ -24,8 +24,17 @@
     $("weekGrid").innerHTML=DATA.weeks.map(w=>`<article class="card week-card"><div class="emblem">${String(w.week).padStart(2,"0")}</div><h3>${esc(w.title)}</h3><p><strong>Question:</strong> ${esc(w.essentialQuestion)}</p><p>${esc(w.theme)}</p><div class="badges"><span class="badge">8 subjects</span><span class="badge">40 blocks</span><span class="badge">A++</span></div><label>Verified weekly assessment score</label><input type="number" min="0" max="100" value="${state.weekly[w.week]||""}" data-score="${w.week}" placeholder="Not attempted" readonly title="Scores are written by the assessment engine"><div class="actions"><a class="button" href="weekly-plans/week-${String(w.week).padStart(2,"0")}.html">Open Week</a><a class="button light" href="printables/week-${String(w.week).padStart(2,"0")}-packet.html">Printable</a></div></article>`).join("");
     document.querySelectorAll("[data-score]").forEach(input=>{input.readOnly=true;input.title="Scores are written by the assessment engine";});
   }
+  function subjectSummary(id){
+    if(id!=="social-studies")return "";
+    try{
+      const c=CONT?.status?.(),k=c?.status==="ready"?`khaemenes.course:${c.learner.learnerId}:elementary-grade-05-social-studies`:"khaemenes_grade5_social_studies_v1";
+      const db=JSON.parse(localStorage.getItem(k)||"null");if(!db?.students?.length)return '<p class="small"><strong>Social Studies:</strong> ready to begin · separate 80% subject mastery path.</p>';
+      const x=db.students.find(v=>v.id===db.activeId)||db.students[0],weeks=x?.weeks||{},mastered=Array.from({length:36},(_,i)=>i+1).filter(n=>Number(weeks[n]?.best||0)>=80).length,mid=Number(x?.exams?.midterm?.best||0),fin=Number(x?.exams?.final?.best||0);
+      return `<p class="small"><strong>Social Studies mastery:</strong> ${mastered}/36 weeks · Midterm ${mid||"—"} · Final ${fin||"—"}. This status is read-only here and does not replace the whole-grade A++ record.</p>`;
+    }catch{return ""}
+  }
   function renderSubjects(){
-    $("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("");
+    $("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p>${subjectSummary(s.id)}<a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("");
   }
   function bind(){
     $("saveProfile").addEventListener("click",()=>{const c=CONT?.status?.();state.student=c?.status==="ready"?c.learner.nickname:($("studentName").value.trim()||"Fifth Grade Scholar");state.portfolio=$("portfolio").checked;save();renderDashboard();renderWeeks();});
