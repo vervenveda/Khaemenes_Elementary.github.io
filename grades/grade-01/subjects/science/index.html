@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4f0e7">
+<title>Khaemenes Academy | Grade 1 Science</title>
+<style>
+:root{--paper:#f4f0e7;--white:#fffdf8;--ink:#17211d;--muted:#59675f;--line:#dcded5;--forest:#294b3b;--navy:#173b55;--gold:#a77b35;--r:7px}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fffdf8,var(--paper));color:var(--ink);font:400 16px/1.6 "Avenir Next",Avenir,Arial,sans-serif}
+.wrap{width:min(1100px,calc(100% - 28px));margin:auto}.top{padding:18px 0;border-bottom:1px solid var(--line);background:#fffdf8}.brand{font:400 13px/1.3 Georgia,serif;letter-spacing:.12em;text-transform:uppercase;color:var(--forest)}h1{font:400 clamp(36px,6vw,58px)/1.05 Georgia,serif;margin:10px 0 4px}h2{font:400 27px/1.2 Georgia,serif;margin:0 0 8px;color:var(--forest)}h3{font:400 19px/1.25 Georgia,serif;margin:0 0 6px}p{margin:8px 0}.muted{color:var(--muted)}.hero{padding:30px 0 26px}.eyebrow{font:400 11px Georgia,serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}.panel{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.unit{border:1px solid var(--line);background:#fff;border-radius:var(--r);padding:14px;text-align:left}.unit a,.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid #bdc9c0;border-radius:var(--r);padding:9px 12px;color:var(--forest);background:#fff;font-size:13px;min-height:40px}.unit a{margin-top:9px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.notice{border-left:3px solid var(--gold);padding:10px 13px;background:#f8f1df}.week-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.week-list a{display:block;padding:9px;border:1px solid var(--line);border-radius:var(--r);background:#fff;text-decoration:none;color:var(--navy);font-size:13px}.week-list a:hover,.unit a:hover,.btn:hover{background:#f3f6f2}.small{font-size:13px}footer{padding:24px 0;margin-top:28px;background:#173126;color:#fff;font-size:12px}
+@media(max-width:720px){.grid{grid-template-columns:1fr 1fr}.week-list{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:460px){.grid{grid-template-columns:1fr}.week-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="brand">Khaemenes Academy · Elementary Science</div><h1>Grade 1 Science</h1><div class="muted">Curiosity, careful observation, safe investigation, and evidence.</div><div class="toolbar"><a class="btn" href="../../index.html">Elementary Home</a><a class="btn" href="../grade-02/subjects/science/index.html">Continue to Grade 2 Science</a></div></div></header>
+<main class="wrap">
+<section class="hero"><p class="eyebrow">36-week learning path</p><h2>A year of discovering how the world works</h2><p>This course begins with noticing, asking questions, and describing evidence. Learners investigate living things, materials, motion, sound, light, weather, land, water, and simple design challenges through age-appropriate activities.</p><div class="notice"><strong>Mastery approach:</strong> practice, feedback, correction, and another attempt are part of learning. The Academy's 80% mastery target applies to essential checks; a finished activity alone does not certify mastery.</div></section>
+<section class="panel"><h2>How each week works</h2><div class="grid">
+<article class="unit"><h3>1 · Wonder</h3><p class="small muted">Notice a phenomenon, ask a focused question, and make a prediction before investigating.</p></article>
+<article class="unit"><h3>2 · Learn</h3><p class="small muted">Build vocabulary and a simple model with teacher or caregiver support.</p></article>
+<article class="unit"><h3>3 · Investigate</h3><p class="small muted">Observe, compare, sort, measure when appropriate, or work with supplied data.</p></article>
+<article class="unit"><h3>4 · Explain</h3><p class="small muted">Use drawings, words, objects, numbers, or an oral explanation to show evidence.</p></article>
+<article class="unit"><h3>5 · Reflect</h3><p class="small muted">Check understanding, revise an idea, and save or print a learning sample.</p></article>
+<article class="unit"><h3>Safe science</h3><p class="small muted">No tasting unknown materials or mixing household products. Use adult help for tools, heat, electricity, and fieldwork.</p></article>
+</div></section>
+<section class="panel"><h2>Weekly learning map</h2><p class="muted small">Choose a week to open its lesson plan. Printable and offline-friendly learning are supported; experiments can be replaced with observation or supplied data when needed.</p><div class="week-list" id="weeks"></div></section>
+<section class="panel"><h2>Evidence portfolio</h2><p>Keep a small science portfolio with a question, prediction, drawing or data, what was observed, and what the evidence suggests. Include what changed in your thinking. A grown-up may scribe the learner's own words.</p><p class="small muted">The weekly pages are instructional plans. This landing page does not claim that a learner has completed or mastered any week.</p></section>
+</main>
+<footer><div class="wrap">Khaemenes Academy · Grade 1 Science · Free-to-learn curriculum · Jennifer Kay Pearl</div></footer>
+<script>
+const titles = ["Science eyes: observing and asking questions","Living and nonliving things","Plant parts and plant needs","Animals, habitats, and survival","Seasonal patterns and living things","Weather observations and patterns","Sunlight, shade, and warming","Water: places, states, and change","Land, rocks, and soil","Daylight, shadows, and the Sun","Moon observations and sky patterns","Materials: describing and sorting","Properties of solids and liquids","Heating, cooling, and material change","Pushes, pulls, and motion","Speed, direction, and stopping safely","Light, shadows, and seeing","Sound, vibration, and listening","Designing a tool to solve a problem","Patterns in nature and repeated observations","Comparing habitats and needs","Food, resources, and living systems","Reduce, reuse, repair, and materials","Water stewardship and local environments","Simple machines in everyday life","Building stable structures","Testing and improving designs","Counting, measuring, and comparing data","Picture graphs and evidence","Cause, pattern, and careful claims","Science tools and fair comparisons","Planning a safe investigation","Weather, safety, and community decisions","Earth materials and changing surfaces","Integrated science design challenge","Science showcase and year reflection"].map((t,i)=>'<a href="week-'+String(i+1).padStart(2,'0')+'.html">Week '+String(i+1).padStart(2,'0')+' · '+t+'</a>').join('');
+document.getElementById('weeks').innerHTML=titles;
+</script>
+</body></html>
