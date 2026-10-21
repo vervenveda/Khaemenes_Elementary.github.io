@@ -184,6 +184,11 @@ h1,h2,h3,h4{font-family:var(--serif)}h1{margin:10px 0 4px;font-size:clamp(2.9rem
 </section>
 
 <div class="save-status" id="saveStatus">Portfolio saves locally on this device.</div>
+<div class="no-print" style="max-width:850px;margin:8px auto 18px;padding:12px;border:1px solid var(--line);border-radius:7px">
+<p><strong>Legacy portfolio recovery:</strong> Older shared work is preserved separately. Review its student name and grade before copying it into an empty, registered learner portfolio. The legacy copy is never deleted.</p>
+<button type="button" class="btn" id="legacyRecoveryBtn">Review legacy portfolio</button>
+<p id="legacyRecoveryStatus" role="status" aria-live="polite"></p>
+</div>
 </section>
 
 <aside class="card side">
@@ -296,6 +301,37 @@ window.addEventListener("storage",e=>{if(e.key===ACTIVE_LEARNER_KEY||e.key===REG
 const blank={profile:{student:"",grade:"Grade 2",year:"",reviewer:""},parentProfile:{name:"",notes:""},favorites:[],evidence:[],studentReflection:"",review:{breadth:false,reflection:false,mastery:false,authentic:false,note:""},history:[]};
 function clone(o){return JSON.parse(JSON.stringify(o))}
 function load(){try{const x=JSON.parse(localStorage.getItem(portfolioSessionKey)||"null");return Object.assign(clone(blank),x||{},{profile:Object.assign({},blank.profile,(x||{}).profile||{}),review:Object.assign({},blank.review,(x||{}).review||{})})}catch{return clone(blank)}}let s=load();
+function recoverLegacyPortfolio(){
+ const status=$("legacyRecoveryStatus");
+ if(!portfolioSessionCurrent()){status.textContent="Learner changed. Reload first.";return}
+ if(portfolioSessionKey.endsWith(":unassigned")){status.textContent="Choose a registered Elementary learner before recovery.";return}
+ if(localStorage.getItem(portfolioSessionKey)!==null || s.evidence.length || s.profile.student){
+  status.textContent="Current portfolio is not empty. Recovery refused to prevent overwrite.";return
+ }
+ let old;
+ try{old=JSON.parse(localStorage.getItem(KEY)||"null")}catch{status.textContent="Legacy JSON is damaged. Nothing changed.";return}
+ if(!old||typeof old!=="object"||Array.isArray(old)||!old.profile||typeof old.profile.student!=="string"||!Array.isArray(old.evidence)||old.evidence.length>500){
+  status.textContent="No valid legacy portfolio available. Nothing changed.";return
+ }
+ if(old.evidence.some(e=>!e||typeof e!=="object"||Array.isArray(e)||typeof e.title!=="string")){
+  status.textContent="Legacy evidence is malformed. Nothing changed.";return
+ }
+ const current=activeAcademyLearner();
+ const prior=old.profile.student.trim(), grade=old.profile.grade;
+ if(!current?.learnerId || !prior || !grade){status.textContent="Legacy identity is incomplete. Nothing changed.";return}
+ const currentName=String(current.name||current.fullName||current.displayName||"").trim();
+ const currentGrade="Grade "+Number(current.grade);
+ if(!currentName || prior.toLowerCase()!==currentName.toLowerCase() || grade!==currentGrade){
+  status.textContent="Legacy student name or grade does not match active learner. No copy was made.";return
+ }
+ const typed=prompt("Legacy portfolio: "+prior+" / "+grade+". Type the student's exact name to copy into this EMPTY portfolio. The legacy original remains untouched.");
+ if(typed!==prior){status.textContent="Recovery cancelled; no records changed.";return}
+ const recovered=Object.assign(clone(blank),old,{profile:Object.assign({},blank.profile,old.profile)});
+ try{localStorage.setItem(portfolioSessionKey,JSON.stringify(recovered))}
+ catch{status.textContent="Unable to save recovered portfolio; original unchanged.";return}
+ status.textContent="Legacy portfolio copied. Reloading learner portfolio.";
+ location.reload();
+}
 function id(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
 function esc(x){return String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function profileCapture(){s.profile={student:$("studentName").value,grade:$("grade").value,year:$("schoolYear").value,reviewer:$("reviewerName").value};s.studentReflection=$("studentReflection").value;s.review={breadth:$("checkBreadth").checked,reflection:$("checkReflection").checked,mastery:$("checkMastery").checked,authentic:$("checkAuthentic").checked,note:$("reviewerNote").value}}
@@ -601,7 +637,7 @@ $("launcherClose").onclick=closeApp;$("launcherExternal").onclick=launchExternal
 $("naibReviewBtn").onclick=naibPortfolioReview;$("naibGapsBtn").onclick=naibGapList;$("naibReflectionBtn").onclick=naibReflectionPrompts;$("naibSendBtn").onclick=naibAsk;$("naibInput").addEventListener("keydown",e=>{if(e.key==="Enter")naibAsk()});
 $("vaultMirrorBtn").onclick=vaultMirrorApproved;$("vaultPersistenceBtn").onclick=requestVaultPersistence;$("vaultExportBtn").onclick=exportVaultManifest;
 
-$("scanBtn").onclick=scanLocalApps;$("jsonInput").onchange=e=>{importJsonFiles([...e.target.files]);e.target.value=""};$("fileInput").onchange=e=>{importManualFiles([...e.target.files]);e.target.value=""};$("addManualBtn").onclick=addManual;
+$("legacyRecoveryBtn").onclick=recoverLegacyPortfolio;$("scanBtn").onclick=scanLocalApps;$("jsonInput").onchange=e=>{importJsonFiles([...e.target.files]);e.target.value=""};$("fileInput").onchange=e=>{importManualFiles([...e.target.files]);e.target.value=""};$("addManualBtn").onclick=addManual;
 $("searchEvidence").oninput=renderEvidence;$("subjectFilter").onchange=renderEvidence;$("statusFilter").onchange=renderEvidence;$("approveVisibleBtn").onclick=()=>{filteredEvidence().forEach(e=>{if(e.status==="pending")e.status="approved"});renderAll();save("Visible pending evidence approved")};
 $("saveReviewBtn").onclick=()=>{s.history.unshift(`${new Date().toLocaleString()} · Certification review saved by ${$("reviewerName").value||"reviewer"}.`);s.history=s.history.slice(0,20);save("Certification review saved")};$("printReportBtn").onclick=()=>window.print();$("printTop").onclick=()=>{document.querySelector('[data-tab="report"]').click();setTimeout(()=>window.print(),100)};$("exportPortfolioBtn").onclick=exportPortfolio;
 
