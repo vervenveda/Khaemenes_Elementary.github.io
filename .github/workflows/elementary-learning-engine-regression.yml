@@ -24,6 +24,7 @@ on:
       - 'assessments/**'
       - 'scripts/inject-elementary-learning-engine.mjs'
       - 'tools/validate-elementary-learning-engine.mjs'
+      - 'tools/validate-elementary-week06-evidence.mjs'
       - '.github/workflows/elementary-learning-engine-regression.yml'
   pull_request:
     paths:
@@ -46,6 +47,7 @@ on:
       - 'assessments/**'
       - 'scripts/inject-elementary-learning-engine.mjs'
       - 'tools/validate-elementary-learning-engine.mjs'
+      - 'tools/validate-elementary-week06-evidence.mjs'
       - '.github/workflows/elementary-learning-engine-regression.yml'
   workflow_dispatch:
 
@@ -68,3 +70,5 @@ jobs:
           node-version: '24'
       - name: Validate every Elementary lesson, quiz, and test
         run: node tools/validate-elementary-learning-engine.mjs
+      - name: Validate Week 6 instructional evidence across Grades 2–5
+        run: node tools/validate-elementary-week06-evidence.mjs
