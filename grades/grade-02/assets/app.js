@@ -57,7 +57,18 @@ function bind(){
 
 function exportRecords(){
   const ls=learnerStatus();
-  const blob=new Blob([JSON.stringify({course:DATA.course.title,exported:new Date().toISOString(),learner:ls?.learner||null,state},null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+  // Export only the selected Grade 02 learner's matching attempt history.
+  // Preview and mismatched placements must never read another learner's log.
+  let assessmentAttempts=[];
+  if(ls?.status==="ready"&&ls.learner?.learnerId){
+    const key="khaemenes.elementary.assessment.attempts:"+ls.learner.learnerId+":grade-02";
+    try{
+      const saved=JSON.parse(localStorage.getItem(key)||"[]");
+      if(Array.isArray(saved))assessmentAttempts=saved;
+    }catch{}
+  }
+  const payload={format:"khaemenes-grade2-backup-v2",course:DATA.course.title,exported:new Date().toISOString(),learner:ls?.status==="ready"?ls.learner:null,state,assessmentAttempts,attemptHistoryIncluded:ls?.status==="ready",importSupported:false};
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");
   a.href=url;a.download="khaemenes-second-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)
 }
 
