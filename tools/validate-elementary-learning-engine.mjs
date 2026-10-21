@@ -45,7 +45,7 @@ for(const full of walk(ROOT)){
   const rel=posix(path.relative(ROOT,full)),type=classify(rel);
   if(!type)continue;
   const html=fs.readFileSync(full,"utf8");
-  const redirect=rel.match(/^grades\/grade-02\/subjects\/social-studies\/week-(\\d{2})\.html$/i);
+  const redirect=rel.match(/^grades\/grade-02\/subjects\/social-studies\/week-(\d{2})\.html$/i);
   if(redirect){
     const week=Number(redirect[1]);
     expect(week>=1&&week<=36,"Invalid Social Studies redirect week: "+rel);
