@@ -156,4 +156,9 @@ for(const [g,subject,focus] of [["03","language-arts","technical instructions, d
  assert((html.match(new RegExp("Focus:</strong> "+focus,"g"))||[]).length===5,file+" has drifting daily focus");
  assert((html.match(/Week 07 (?:Academic|Practical) Depth Lab · Day [1-5]/g)||[]).length===5,file+" lost instructional depth labs");
 }
+// Further Week 7 practical-course instructional alignment.
+for(const [g,subject,focus] of [["03","arts-music","sound scores, rhythm and expressive motion"],["03","health-pe-sel","safe motion, accessible fitness and thoughtful choices"],["03","integrated-projects","controlled ramp experiments and evidence-based design"],["04","arts-music","eight-beat rhythmic structure and notation"],["04","technology-tools","data tables, division algorithms and checking remainders"],["05","health-pe-sel","inclusive schedules, duration fractions and wellness"],["05","technology-tools","fraction models, equivalent units and calculation checks"]]){
+ const file=`grades/grade-${g}/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
+ assert((html.match(new RegExp("Focus:</strong> "+focus,"g"))||[]).length===5,file+" must have five aligned daily focuses");
+}
 console.log("Week 6–7 evidence audit PASS: "+count+" subject halls per week, Week 7 local routes, original daily lessons, and 21 focus corrections checked.");
