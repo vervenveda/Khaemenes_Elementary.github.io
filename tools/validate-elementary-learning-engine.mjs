@@ -44,8 +44,18 @@ const coverage={lesson:0,assessment:0,missing:[],duplicates:[]};
 for(const full of walk(ROOT)){
   const rel=posix(path.relative(ROOT,full)),type=classify(rel);
   if(!type)continue;
+  const html=fs.readFileSync(full,"utf8");
+  const redirect=rel.match(/^grades\/grade-02\/subjects\/social-studies\/week-(\\d{2})\.html$/i);
+  if(redirect){
+    const week=Number(redirect[1]);
+    expect(week>=1&&week<=36,"Invalid Social Studies redirect week: "+rel);
+    expect(html.includes('href="index.html?week='+week+'"'),"Broken canonical Social Studies week link: "+rel);
+    expect(html.includes('location.replace("index.html?week='+week+'")'),"Broken canonical Social Studies redirect: "+rel);
+    expect(exists("grades/grade-02/subjects/social-studies/index.html"),"Canonical Grade 2 Social Studies course missing");
+    continue;
+  }
   coverage[type]++;
-  const html=fs.readFileSync(full,"utf8"),markers=html.split(MARKER).length-1,scripts=refs(html);
+  const markers=html.split(MARKER).length-1,scripts=refs(html);
   if(markers!==1)coverage[markers===0?"missing":"duplicates"].push(`${rel}: marker=${markers}`);
   const needed=type==="lesson"?"khaemenes-elementary-learning-ledger.js":"khaemenes-elementary-assessment-engine.js";
   if(!scripts.some(s=>s.endsWith("khaemenes-elementary-focus-map.js")))coverage.missing.push(`${rel}: focus map`);
