@@ -167,4 +167,12 @@ for(const g of ["03","04","05"]){
  for(let day=1;day<=5;day++)assert(html.includes("Week 07 Project Worked Studio · Day "+day),file+" missing worked studio "+day);
  for(const marker of ["Worked model","Guided procedure","Independent design","Error analysis","Presentation criteria"])assert(html.includes(marker),file+" missing "+marker);
 }
+// Week 7 applied worked studios across three practical courses in Grades 2–5.
+for(const g of ["02","03","04","05"]){
+ for(const sub of ["arts-music","health-pe-sel",g==="02"?"technology":"technology-tools"]){
+  const file=`grades/grade-${g}/subjects/${sub}/week-07.html`,html=fs.readFileSync(file,"utf8");
+  for(let day=1;day<=5;day++)assert(html.includes("Week 07 Applied Worked Studio · Day "+day),file+" missing applied model day "+day);
+  assert((html.match(/Evidence criteria:/g)||[]).length===5,file+" missing five evidence criteria");
+ }
+}
 console.log("Week 6–7 evidence audit PASS: "+count+" subject halls per week, Week 7 local routes, original daily lessons, and 21 focus corrections checked.");
