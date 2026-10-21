@@ -114,6 +114,14 @@ expect(ledger.includes('affectsGrade:false'),"Lesson ledger no longer marks form
 expect(ledger.includes('unlocksCurriculum:false'),"Lesson ledger no longer marks formative evidence as non-unlocking.");
 expect(!/state\.weekly\s*\[/.test(ledger),"Lesson ledger must not write formal weekly scores.");
 
+// Learner isolation and recovery invariants. Structural checks do not replace browser tests.
+expect(ledger.includes('stage==="elementary"&&grade===routeGrade()'),"Learning ledger must reject another grade or stage.");
+expect(ledger.includes('function ownerId(){return activeLearner()?.learnerId||"preview"}'),"Learning ledger no longer isolates active learner and preview records.");
+expect(ledger.includes('learnerId:learner?.learnerId||null'),"Formative evidence lost learner identity field.");
+expect(ledger.includes('preview:!learner'),"Unassigned preview evidence must remain explicitly marked.");
+expect(ledger.includes('all[id]=list.slice(-MAX_RECORDS)'),"Learning ledger record retention cap changed.");
+expect(ledger.includes('if(!write(LEDGER_KEY,all))return false'),"Learning ledger must report storage failures.");
+
 // Formal assessment contract.
 const assessment=read("assets/khaemenes-elementary-assessment-engine.js");
 expect(assessment.includes("PASS=80"),"Formal assessment threshold is no longer 80%.");
@@ -146,6 +154,10 @@ const portfolio=read("grades/portfolio/index.html");
 expect(portfolio.includes('LEDGER_KEY="khaemenes_elementary_learning_ledger_v1"'),"Portfolio lost the Elementary learning-ledger bridge.");
 expect(portfolio.includes('ASSESSMENT_PREFIX="khaemenes.elementary.assessment.attempts"'),"Portfolio lost the verified assessment bridge.");
 expect(portfolio.includes("function scanElementaryLearningEvidence()"),"Portfolio no longer scans learner-scoped lesson/assessment evidence.");
+expect(portfolio.includes('record.preview||record.learnerId!==learner.learnerId'),"Portfolio no longer excludes previews or foreign-learner lesson evidence.");
+expect(portfolio.includes('attempt.preview||attempt.learnerId!==learner.learnerId'),"Portfolio no longer excludes previews or foreign-learner assessments.");
+expect(portfolio.includes('Array.isArray(ledger[learner.learnerId])'),"Portfolio lesson bridge is not learner-keyed.");
+
 expect(portfolio.includes('source:"Elementary Learning Ledger"'),"Portfolio does not identify lesson-ledger evidence.");
 expect(portfolio.includes('source:"Verified Elementary Assessment"'),"Portfolio does not identify verified assessment evidence.");
 const formativeBlock=portfolio.match(/source:"Elementary Learning Ledger"[\s\S]{0,1800}?tags:\[[^\]]+\]/);
