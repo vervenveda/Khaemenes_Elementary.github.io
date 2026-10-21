@@ -175,4 +175,14 @@ for(const g of ["02","03","04","05"]){
   assert((html.match(/Evidence criteria:/g)||[]).length===5,file+" missing five evidence criteria");
  }
 }
+// Grade 2 Week 7 assessment and civic bridge must remain aligned.
+{
+ const assessment=fs.readFileSync("grades/grade-02/assessments/week-07-assessment.html","utf8");
+ assert((assessment.match(/aria-label="Week 07 supplemental evidence guide"/g)||[]).length===1,"Grade 2 Week 7 evidence guide missing or duplicated");
+ for(const subject of ["Language Arts","Mathematics","Science","Social Studies","Arts &amp; Music","Health/PE/SEL","Technology","Integrated Projects"])
+  assert(assessment.includes("<strong>"+subject+":</strong>"),"Grade 2 Week 7 evidence guide missing "+subject);
+ const civic=fs.readFileSync("grades/grade-02/subjects/social-studies/index.html","utf8");
+ assert(civic.includes('data-assessment-bridge="food-farms-communities"'),"Grade 2 civic assessment bridge missing");
+ assert(civic.includes("Trace farm, transport, market and household roles"),"Grade 2 civic inquiry misses farms and food");
+}
 console.log("Week 6–7 evidence audit PASS: "+count+" subject halls per week, Week 7 local routes, original daily lessons, and 21 focus corrections checked.");
