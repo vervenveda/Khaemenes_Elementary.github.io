@@ -56,4 +56,26 @@ for(const g of ["02","03","04","05"])for(const subject of ["arts-music","health-
  assert((h.match(/Reasoning check:/g)||[]).length===5,file+" missing five reasoning checks");
  assert((h.match(/<article class=['"]lesson['"]/g)||[]).length===5,file+" altered original daily lesson count");
 }
+// Release hardening: verify local learner-facing navigation and script dependencies.
+import path from "node:path";
+for(const g of ["02","03","04","05"]){
+ const subjects=names(g);
+ for(const subject of subjects){
+  const isCivic=subject==="social-studies";
+  const file=isCivic?`grades/grade-${g}/subjects/social-studies/index.html`:`grades/grade-${g}/subjects/${subject}/week-06.html`;
+  const html=fs.readFileSync(file,"utf8");
+  for(const match of html.matchAll(/<(?:a|script|link)\\b[^>]*?\\b(?:href|src)=["']([^"']+)["']/gi)){
+   const ref=match[1].trim();
+   if(!ref||ref.startsWith("#")||/^(?:https?:|mailto:|tel:|data:|javascript:|\/)/i.test(ref))continue;
+   const target=decodeURIComponent(ref.split(/[?#]/)[0]);
+   if(!target)continue;
+   const resolved=path.resolve(path.dirname(file),target);
+   assert(fs.existsSync(resolved),file+" broken local navigation/resource: "+ref);
+  }
+  if(!isCivic){
+   for(const asset of ["khaemenes-elementary-focus-map.js","khaemenes-elementary-question-factory.js","khaemenes-elementary-learning-ledger.js"])
+    assert(html.includes(asset),file+" missing learning-engine asset "+asset);
+  }
+ }
+}
 console.log("Week 6 evidence audit PASS: "+count+" existing subject studios and original daily lessons preserved; 21 focus corrections verified.");
