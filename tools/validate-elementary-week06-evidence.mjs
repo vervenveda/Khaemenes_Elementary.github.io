@@ -36,4 +36,9 @@ for(const [g,subject] of [["02","technology"],["03","technology-tools"],["04","i
  for(let day=1;day<=5;day++)assert(html.includes("Depth Lab · Day "+day),file+" missing daily instructional lab "+day);
  assert((html.match(/Reasoning check:/g)||[]).length===5,file+" lacks five daily reasoning checks");
 }
+for(const g of ["02","03","04","05"])for(const subject of ["mathematics","language-arts","science"]){
+ const file=`grades/grade-${g}/subjects/${subject}/week-06.html`,html=fs.readFileSync(file,"utf8");
+ for(let day=1;day<=5;day++)assert(html.includes("Academic Depth Lab · Day "+day),file+" missing academic daily depth "+day);
+ assert((html.match(/Explain and revise:/g)||[]).length===5,file+" missing academic reasoning checks");
+}
 console.log("Week 6 evidence audit PASS: "+count+" existing subject studios and original daily lessons preserved; 21 focus corrections verified.");
