@@ -84,4 +84,10 @@ for(const g of ["02","03","04","05"]){
  for(let day=1;day<=5;day++)assert(html.includes("Week 07 Mathematics Depth Lab · Day "+day),file+" missing instructional day "+day);
  assert((html.match(/Proof and revision:/g)||[]).length===5,file+" missing five reasoning checks");
 }
+for(const g of ["02","03","04","05"])for(const subject of ["language-arts","science"]){
+ const file=`grades/grade-${g}/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
+ assert((html.match(/<article class=['"]lesson['"]/g)||[]).length===5,file+" must keep five daily lessons");
+ for(let day=1;day<=5;day++)assert(html.includes("Week 07 Academic Depth Lab · Day "+day),file+" missing day "+day);
+ assert((html.match(/Evidence and revision:/g)||[]).length===5,file+" missing daily evidence checks");
+}
 console.log("Week 6 evidence audit PASS: "+count+" existing subject studios and original daily lessons preserved; 21 focus corrections verified.");
