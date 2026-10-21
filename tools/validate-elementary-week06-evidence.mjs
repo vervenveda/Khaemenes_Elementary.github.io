@@ -90,4 +90,17 @@ for(const g of ["02","03","04","05"])for(const subject of ["language-arts","scie
  for(let day=1;day<=5;day++)assert(html.includes("Week 07 Academic Depth Lab · Day "+day),file+" missing day "+day);
  assert((html.match(/Evidence and revision:/g)||[]).length===5,file+" missing daily evidence checks");
 }
+// Week 7: all practical and creative daily labs plus canonical civic studios.
+for(const g of ["02","03","04","05"]){
+ for(const subject of ["arts-music","health-pe-sel","integrated-projects",g==="02"?"technology":"technology-tools"]){
+  const file=`grades/grade-${g}/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
+  assert((html.match(/<article class=['"]lesson['"]/g)||[]).length===5,file+" changed the original lesson structure");
+  for(let day=1;day<=5;day++)assert(html.includes("Week 07 Practical Depth Lab · Day "+day),file+" missing practical depth day "+day);
+  assert((html.match(/Evidence and revision check:/g)||[]).length===5,file+" missing evidence and revision checks");
+ }
+ const file=`grades/grade-${g}/subjects/social-studies/index.html`,html=fs.readFileSync(file,"utf8");
+ assert((html.match(/aria-label="Week 07 civic reasoning"/g)||[]).length===1,file+" missing unique Week 7 civic studio");
+ for(const label of ["Monday · Read and question","Tuesday · Compare evidence","Wednesday · Research and model","Thursday · Challenge and revise","Friday · Defend with evidence"])
+  assert(html.includes(label),file+" missing civic activity "+label);
+}
 console.log("Week 6 evidence audit PASS: "+count+" existing subject studios and original daily lessons preserved; 21 focus corrections verified.");
