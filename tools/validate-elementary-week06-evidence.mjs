@@ -121,4 +121,16 @@ for(const g of ["02","03","04","05"]){
    assert(html.includes(asset),file+" missing instructional engine script "+asset);
  }
 }
+// Week 7 forensic five-bubble first-batch alignment certification.
+for(const [g,subject,topic] of [["05","mathematics","equivalent fractions and unlike denominators"],["04","science","fair testing, variables and evidence"]]){
+ const file=`grades/grade-${g}/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
+ assert(!html.includes("Focus:</strong> geometry classification") || subject!=="mathematics",file+" still declares unrelated geometry focus");
+ assert(!html.includes("Focus:</strong> fossil evidence") || subject!=="science",file+" still declares unrelated fossil focus");
+ assert((html.match(new RegExp(topic,"g"))||[]).length>=5,file+" instructional focus missing");
+ assert((html.match(/Teacher worked example · [1-5]:/g)||[]).length===5,file+" missing worked models");
+}
+for(const subject of ["health-pe-sel","technology","arts-music"]){
+ const file=`grades/grade-02/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
+ for(let day=1;day<=5;day++)assert(html.includes("Assessment-aligned guided teaching · Day "+day),file+" missing assessed focus on day "+day);
+}
 console.log("Week 6–7 evidence audit PASS: "+count+" subject halls per week, Week 7 local routes, original daily lessons, and 21 focus corrections checked.");
