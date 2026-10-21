@@ -65,9 +65,14 @@
   }
 
   function clearState(){
-    try{global.localStorage.removeItem(LEGACY_KEY)}catch{}
+    // Clear only the active learner's record. The shared legacy/preview record
+    // must not be deleted while a scoped Academy learner is selected.
     const key=scopedKey();
-    if(status().status==="ready"&&key){try{global.localStorage.removeItem(key)}catch{}}
+    if(status().status==="ready"&&key){
+      try{global.localStorage.removeItem(key)}catch{}
+      return;
+    }
+    try{global.localStorage.removeItem(LEGACY_KEY)}catch{}
   }
 
   function publish(){
