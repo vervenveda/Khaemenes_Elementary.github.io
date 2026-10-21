@@ -103,4 +103,22 @@ for(const g of ["02","03","04","05"]){
  for(const label of ["Monday · Read and question","Tuesday · Compare evidence","Wednesday · Research and model","Thursday · Challenge and revise","Friday · Defend with evidence"])
   assert(html.includes(label),file+" missing civic activity "+label);
 }
-console.log("Week 6 evidence audit PASS: "+count+" existing subject studios and original daily lessons preserved; 21 focus corrections verified.");
+// Week 7 release audit: check local lesson navigation, resources and assessment routes.
+for(const g of ["02","03","04","05"]){
+ const assessment=`grades/grade-${g}/assessments/week-07-assessment.html`;
+ assert(fs.existsSync(assessment),assessment+" is missing");
+ for(const subject of names(g)){
+  const file=`grades/grade-${g}/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
+  for(const match of html.matchAll(/<(?:a|link|script)\\b[^>]*?\\b(?:href|src)=["']([^"']+)["']/gi)){
+   const ref=match[1].trim();
+   if(!ref||/^(?:#|https?:|mailto:|tel:|data:|javascript:|\/)/i.test(ref))continue;
+   const relative=decodeURIComponent(ref.split(/[?#]/)[0]);
+   if(!relative)continue;
+   const resolved=path.resolve(path.dirname(file),relative);
+   assert(fs.existsSync(resolved),file+" broken Week 7 local reference: "+ref);
+  }
+  for(const asset of ["khaemenes-elementary-focus-map.js","khaemenes-elementary-question-factory.js","khaemenes-elementary-learning-ledger.js"])
+   assert(html.includes(asset),file+" missing instructional engine script "+asset);
+ }
+}
+console.log("Week 6–7 evidence audit PASS: "+count+" subject halls per week, Week 7 local routes, original daily lessons, and 21 focus corrections checked.");
