@@ -153,6 +153,11 @@ for(const g of ["02","03","04","05"]){
 const portfolio=read("grades/portfolio/index.html");
 expect(portfolio.includes('LEDGER_KEY="khaemenes_elementary_learning_ledger_v1"'),"Portfolio lost the Elementary learning-ledger bridge.");
 expect(portfolio.includes('ASSESSMENT_PREFIX="khaemenes.elementary.assessment.attempts"'),"Portfolio lost the verified assessment bridge.");
+expect(portfolio.includes('return KEY+":learner:"+encodeURIComponent(id)'),"Portfolio state must use a learner-specific storage key.");
+expect(portfolio.includes('return KEY+":unassigned"'),"Unassigned portfolio data must remain separate from learner accounts.");
+expect(portfolio.includes("if(!portfolioSessionCurrent())"),"Portfolio must reject saves after learner switching.");
+expect(portfolio.includes("localStorage.setItem(portfolioSessionKey,JSON.stringify(s))"),"Portfolio saves must use the pinned learner key.");
+expect(!portfolio.includes("localStorage.setItem(KEY,JSON.stringify(s))"),"Portfolio may not write shared legacy state.");
 expect(portfolio.includes("function scanElementaryLearningEvidence()"),"Portfolio no longer scans learner-scoped lesson/assessment evidence.");
 expect(portfolio.includes('record.preview||record.learnerId!==learner.learnerId'),"Portfolio no longer excludes previews or foreign-learner lesson evidence.");
 expect(portfolio.includes('attempt.preview||attempt.learnerId!==learner.learnerId'),"Portfolio no longer excludes previews or foreign-learner assessments.");
