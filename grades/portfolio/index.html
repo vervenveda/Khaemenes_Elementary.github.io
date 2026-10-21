@@ -279,13 +279,27 @@ const APP_CATALOG=[
  {id:"ba-music-theory",name:"Music Theory 201",repo:"bazaar",subject:"Music",grade:"4–5",url:"https://vervenveda.github.io/bazaarart.github.io/apps/Class_music_theory_201_index.html",desc:"Upper-elementary music theory enrichment."}
 ];
 
+function portfolioStorageKey(){
+ try{
+  const id=JSON.parse(localStorage.getItem(ACTIVE_LEARNER_KEY)||"null");
+  const registry=JSON.parse(localStorage.getItem(REGISTRY_KEY)||"null");
+  const learner=id&&registry?.learners?.[id];
+  if(learner&&String(learner.stage||"").toLowerCase()==="elementary"&&learner.learnerId===id)
+   return KEY+":learner:"+encodeURIComponent(id);
+ }catch{}
+ return KEY+":unassigned";
+}
+const portfolioSessionKey=portfolioStorageKey();
+function portfolioSessionCurrent(){return portfolioStorageKey()===portfolioSessionKey}
+window.addEventListener("focus",()=>{if(!portfolioSessionCurrent())location.reload()});
+window.addEventListener("storage",e=>{if(e.key===ACTIVE_LEARNER_KEY||e.key===REGISTRY_KEY){if(!portfolioSessionCurrent())location.reload()}});
 const blank={profile:{student:"",grade:"Grade 2",year:"",reviewer:""},parentProfile:{name:"",notes:""},favorites:[],evidence:[],studentReflection:"",review:{breadth:false,reflection:false,mastery:false,authentic:false,note:""},history:[]};
 function clone(o){return JSON.parse(JSON.stringify(o))}
-function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||"null");return Object.assign(clone(blank),x||{},{profile:Object.assign({},blank.profile,(x||{}).profile||{}),review:Object.assign({},blank.review,(x||{}).review||{})})}catch{return clone(blank)}}let s=load();
+function load(){try{const x=JSON.parse(localStorage.getItem(portfolioSessionKey)||"null");return Object.assign(clone(blank),x||{},{profile:Object.assign({},blank.profile,(x||{}).profile||{}),review:Object.assign({},blank.review,(x||{}).review||{})})}catch{return clone(blank)}}let s=load();
 function id(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
 function esc(x){return String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function profileCapture(){s.profile={student:$("studentName").value,grade:$("grade").value,year:$("schoolYear").value,reviewer:$("reviewerName").value};s.studentReflection=$("studentReflection").value;s.review={breadth:$("checkBreadth").checked,reflection:$("checkReflection").checked,mastery:$("checkMastery").checked,authentic:$("checkAuthentic").checked,note:$("reviewerNote").value}}
-function save(msg="Portfolio saved locally"){profileCapture();try{localStorage.setItem(KEY,JSON.stringify(s));$("saveStatus").textContent=msg+" · "+new Date().toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}catch{$("saveStatus").textContent="Browser storage is full. Export the portfolio JSON and remove large image evidence if needed."}renderStats();renderReport()}
+function save(msg="Portfolio saved locally"){if(!portfolioSessionCurrent()){$("saveStatus").textContent="Active learner changed. Reload this page before saving.";return}profileCapture();try{localStorage.setItem(portfolioSessionKey,JSON.stringify(s));$("saveStatus").textContent=msg+" · "+new Date().toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}catch{$("saveStatus").textContent="Browser storage is full. Export the portfolio JSON and remove large image evidence if needed."}renderStats();renderReport()}
 function fingerprint(ev){return [ev.source,ev.externalId||"",ev.title,ev.date||""].join("|")}
 function addEvidence(ev){
  const item=Object.assign({id:id(),source:"Manual",sourceKey:"",externalId:"",subject:"Interdisciplinary",type:"artifact",title:"Untitled Evidence",description:"",reflection:"",date:new Date().toISOString(),status:"pending",mastery:null,preview:"",payload:null,tags:[]},ev||{});
@@ -597,7 +611,7 @@ const automaticLearningEvidence=scanElementaryLearningEvidence();
 if(automaticLearningEvidence){
  s.history.unshift(`${new Date().toLocaleString()} · Added ${automaticLearningEvidence} new learner-scoped lesson/assessment evidence item${automaticLearningEvidence===1?"":"s"} for human review.`);
  s.history=s.history.slice(0,20);
- try{localStorage.setItem(KEY,JSON.stringify(s))}catch{}
+ try{if(portfolioSessionCurrent())localStorage.setItem(portfolioSessionKey,JSON.stringify(s))}catch{}
 }
 renderAll();renderAppFilters();renderApps();naibRenderSuggestions();updateVaultCount();
 })();
