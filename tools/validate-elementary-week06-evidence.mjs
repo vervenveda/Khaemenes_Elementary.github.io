@@ -133,4 +133,12 @@ for(const subject of ["health-pe-sel","technology","arts-music"]){
  const file=`grades/grade-02/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
  for(let day=1;day<=5;day++)assert(html.includes("Assessment-aligned guided teaching · Day "+day),file+" missing assessed focus on day "+day);
 }
+// Week 7 assessment companion guidance must not replace the official scored rubric.
+for(const [g,examples] of [["03",["30, 45 and 40 cm","friction"]],["04",["95 = 8 × 11 + 7","controlled variables"]],["05",["1/2 + 1/3 = 5/6","5/6 L"]]]){
+ const file=`grades/grade-${g}/assessments/week-07-assessment.html`,html=fs.readFileSync(file,"utf8");
+ assert((html.match(/aria-label="Week 07 supplemental evidence guide"/g)||[]).length===1,file+" missing single companion guide");
+ for(const phrase of examples)assert(html.includes(phrase),file+" missing Week 7 evidence example "+phrase);
+ assert(html.includes("80%"),file+" missing official mastery reference");
+ assert(html.includes("<table"),file+" missing scored assessment rubric");
+}
 console.log("Week 6–7 evidence audit PASS: "+count+" subject halls per week, Week 7 local routes, original daily lessons, and 21 focus corrections checked.");
