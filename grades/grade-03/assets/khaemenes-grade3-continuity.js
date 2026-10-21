@@ -12,7 +12,7 @@
   function unwrap(v){return v&&typeof v==="object"&&v.format==="khaemenes-course-state-v1"&&v.state? v.state:v}
   function readState(fallback=null){const s=status(),key=scopedKey();if(s.status==="ready"&&key)return unwrap(readJSON(key,null))||fallback;return readJSON(LEGACY_KEY,fallback)}
   function writeState(state,source="grade-03-runtime"){const s=status(),key=scopedKey();if(s.status!=="ready"||!key)return writeJSON(LEGACY_KEY,state);const ok=writeJSON(key,{format:"khaemenes-course-state-v1",learnerId:s.learner.learnerId,courseId:COURSE_ID,source,updatedAt:new Date().toISOString(),state});if(ok)global.dispatchEvent(new CustomEvent("khaemenes-grade3-continuity-synced",{detail:{learnerId:s.learner.learnerId,courseKey:key}}));return ok}
-  function clearState(){try{global.localStorage.removeItem(LEGACY_KEY)}catch{}const key=scopedKey();if(status().status==="ready"&&key){try{global.localStorage.removeItem(key)}catch{}}}
+  function clearState(){const key=scopedKey();if(status().status==="ready"&&key){try{global.localStorage.removeItem(key)}catch{}return}try{global.localStorage.removeItem(LEGACY_KEY)}catch{}}
   function activate(){const s=status();global.dispatchEvent(new CustomEvent("khaemenes-grade3-continuity-ready",{detail:s}));return s}
   global.KhaemenesGrade3Continuity=Object.freeze({version:VERSION,expectedGrade:EXPECTED_GRADE,expectedStage:EXPECTED_STAGE,courseId:COURSE_ID,status,scopedKey,readState,writeState,clearState,activate});
 })(window);
