@@ -26,4 +26,9 @@ for(const [g,subject] of [["02","integrated-projects"],["03","integrated-project
  for(const marker of ["Essential question:","Worked model:","Guided","Independent","Challenge:","Evidence"])
   assert(h.includes(marker),file+" missing instructional depth: "+marker);
 }
-console.log("Week 6 evidence audit PASS: "+count+" existing subject studios and original daily lessons preserved; 12 focus corrections verified.");
+for(const [g,subject] of [["02","health-pe-sel"],["02","technology"],["03","arts-music"],["03","technology-tools"],["04","arts-music"],["04","health-pe-sel"],["04","integrated-projects"],["05","arts-music"],["05","health-pe-sel"]]) {
+ const file=`grades/grade-${g}/subjects/${subject}/week-06.html`, h=fs.readFileSync(file,"utf8");
+ for(const marker of ["Worked model:","Independent practice:","Challenge and revision:","Evidence and reflection:"])
+  assert(h.includes(marker),file+" missing depth marker "+marker);
+}
+console.log("Week 6 evidence audit PASS: "+count+" existing subject studios and original daily lessons preserved; 21 focus corrections verified.");
