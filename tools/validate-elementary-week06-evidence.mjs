@@ -150,4 +150,10 @@ for(const [g,subject,phrases] of [["03","mathematics",["30, 45, 40 cm","15 cm ra
  const file=`grades/grade-${g}/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
  for(const phrase of phrases)assert(html.includes(phrase),file+" lost verified worked example "+phrase);
 }
+// Week 7 cross-disciplinary objectives must match the actual instructional labs.
+for(const [g,subject,focus] of [["03","language-arts","technical instructions, diagrams and precise procedures"],["03","technology-tools","measurement tables, units and data debugging"],["04","language-arts","evidence-based procedural and persuasive writing"],["05","arts-music","rhythmic notation, fractional duration and composition"],["05","integrated-projects","fraction-based recipe design and peer critique"]]){
+ const file=`grades/grade-${g}/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
+ assert((html.match(new RegExp("Focus:</strong> "+focus,"g"))||[]).length===5,file+" has drifting daily focus");
+ assert((html.match(/Week 07 (?:Academic|Practical) Depth Lab · Day [1-5]/g)||[]).length===5,file+" lost instructional depth labs");
+}
 console.log("Week 6–7 evidence audit PASS: "+count+" subject halls per week, Week 7 local routes, original daily lessons, and 21 focus corrections checked.");
