@@ -124,6 +124,11 @@ for(const key of ["awardsMastery","changesScore","unlocksCurriculum","changesPla
   expect(contract.experience?.observationAuthority?.[key]===false,`Mentor contract observation boundary ${key} must remain false.`);
 }
 
+const bridge="grades/grade-01/learning/discovery-to-independence.html";
+expect(exists(bridge),"Missing Grade 1 instructional bridge");
+expect(read("grades/grade-01/index.html").includes('href="learning/discovery-to-independence.html"'),"Grade 1 bridge link missing");
+for(const link of [...read(bridge).matchAll(/href="\.\.\/([^"]+)"/g)])expect(exists("grades/grade-01/"+link[1]),"Grade 1 bridge link missing: "+link[1]);
+expect(!read(bridge).includes("grade1-mastery.js"),"Practice bridge must not duplicate assessment engine");
 console.log("Elementary experience regression: PASS");
 console.log("  active surfaces: 6");
 console.log("  registered first-party resources: 28 / 28");
