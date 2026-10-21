@@ -141,4 +141,13 @@ for(const [g,examples] of [["03",["30, 45 and 40 cm","friction"]],["04",["95 = 8
  assert(html.includes("80%"),file+" missing official mastery reference");
  assert(html.includes("<table"),file+" missing scored assessment rubric");
 }
+// Week 7 subject coherence and exact mathematical model checks.
+for(const [g,subject,focus] of [["03","mathematics","ramp-distance data, graph scales and range"],["03","science","forces, friction and controlled motion tests"],["04","mathematics","long division, estimates and remainder decisions"],["05","science","liquid-volume measurement and evidence"]]){
+ const file=`grades/grade-${g}/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
+ assert((html.match(new RegExp("Focus:</strong> "+focus,"g"))||[]).length===5,file+" has inconsistent daily focus");
+}
+for(const [g,subject,phrases] of [["03","mathematics",["30, 45, 40 cm","15 cm range"]],["04","mathematics",["95 ÷ 8 = 11 remainder 7","12 × 12 + 2 = 146"]],["05","mathematics",["1/2 + 1/3 = 5/6","3/4 − 1/6 = 9/12 − 2/12 = 7/12"]]]){
+ const file=`grades/grade-${g}/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
+ for(const phrase of phrases)assert(html.includes(phrase),file+" lost verified worked example "+phrase);
+}
 console.log("Week 6–7 evidence audit PASS: "+count+" subject halls per week, Week 7 local routes, original daily lessons, and 21 focus corrections checked.");
