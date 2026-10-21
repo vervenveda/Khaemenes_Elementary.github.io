@@ -138,7 +138,7 @@ for(const grade of ["02","03","04","05"]){
   expect(exists(file),"Missing Week 05 lesson: "+file);
   const html=read(file);
   expect(html.includes("Evidence Studio")||html.includes("Worked Example"),"Missing specific Week 05 practice: "+file);
-  expect(/Formal assessments remain separate|existing graded assessment|Existing exams remain separate|Practice is separate from the existing graded assessment/i.test(html),"Week 05 evidence/assessment separation unclear: "+file);
+  expect(/Formal assessments remain separate|existing graded assessment|Existing exams remain separate|Practice is separate from the existing graded assessment|does not modify the formal mastery record/i.test(html),"Week 05 evidence/assessment separation unclear: "+file);
   expect((html.match(/<article class=['"]lesson['"]/g)||[]).length>=5,"Week 05 daily lesson sequence was disrupted: "+file);
  }
 }
