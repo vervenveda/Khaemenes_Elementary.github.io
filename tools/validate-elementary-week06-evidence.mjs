@@ -50,4 +50,10 @@ for(const g of ["02","03","04","05"]){
  const redirect=fs.readFileSync(`grades/grade-${g}/subjects/social-studies/week-06.html`,"utf8");
  assert(redirect.includes("index.html?week=6"),file+" missing canonical Week 6 redirect");
 }
+for(const g of ["02","03","04","05"])for(const subject of ["arts-music","health-pe-sel","integrated-projects",g==="02"?"technology":"technology-tools"]){
+ const file=`grades/grade-${g}/subjects/${subject}/week-06.html`,h=fs.readFileSync(file,"utf8");
+ for(let day=1;day<=5;day++)assert(h.includes("Depth Lab · Day "+day),file+" missing daily practical depth lab "+day);
+ assert((h.match(/Reasoning check:/g)||[]).length===5,file+" missing five reasoning checks");
+ assert((h.match(/<article class=['"]lesson['"]/g)||[]).length===5,file+" altered original daily lesson count");
+}
 console.log("Week 6 evidence audit PASS: "+count+" existing subject studios and original daily lessons preserved; 21 focus corrections verified.");
