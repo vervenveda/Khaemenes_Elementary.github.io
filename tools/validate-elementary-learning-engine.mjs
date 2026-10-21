@@ -158,6 +158,12 @@ expect(portfolio.includes('return KEY+":unassigned"'),"Unassigned portfolio data
 expect(portfolio.includes("if(!portfolioSessionCurrent())"),"Portfolio must reject saves after learner switching.");
 expect(portfolio.includes("localStorage.setItem(portfolioSessionKey,JSON.stringify(s))"),"Portfolio saves must use the pinned learner key.");
 expect(!portfolio.includes("localStorage.setItem(KEY,JSON.stringify(s))"),"Portfolio may not write shared legacy state.");
+expect(portfolio.includes("function recoverLegacyPortfolio()"),"Legacy recovery review control missing.");
+expect(portfolio.includes('localStorage.getItem(portfolioSessionKey)!==null'),"Legacy recovery could overwrite an existing learner portfolio.");
+expect(portfolio.includes('prior.toLowerCase()!==currentName.toLowerCase() || grade!==currentGrade'),"Legacy recovery must verify both student name and grade.");
+expect(portfolio.includes('typed!==prior'),"Legacy recovery requires typed confirmation.");
+expect(portfolio.includes('localStorage.setItem(portfolioSessionKey,JSON.stringify(recovered))'),"Legacy recovery must write only learner-scoped data.");
+expect(!portfolio.includes("localStorage.removeItem(KEY)"),"Legacy shared source must remain available after recovery.");
 expect(portfolio.includes("function scanElementaryLearningEvidence()"),"Portfolio no longer scans learner-scoped lesson/assessment evidence.");
 expect(portfolio.includes('record.preview||record.learnerId!==learner.learnerId'),"Portfolio no longer excludes previews or foreign-learner lesson evidence.");
 expect(portfolio.includes('attempt.preview||attempt.learnerId!==learner.learnerId'),"Portfolio no longer excludes previews or foreign-learner assessments.");
