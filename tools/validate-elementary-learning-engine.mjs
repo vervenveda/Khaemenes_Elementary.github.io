@@ -45,13 +45,13 @@ for(const full of walk(ROOT)){
   const rel=posix(path.relative(ROOT,full)),type=classify(rel);
   if(!type)continue;
   const html=fs.readFileSync(full,"utf8");
-  const redirect=rel.match(/^grades\/grade-02\/subjects\/social-studies\/week-(\d{2})\.html$/i);
+  const redirect=rel.match(/^grades\/grade-(0[2-5])\/subjects\/social-studies\/week-(\d{2})\.html$/i);
   if(redirect){
-    const week=Number(redirect[1]);
+    const week=Number(redirect[2]);
     expect(week>=1&&week<=36,"Invalid Social Studies redirect week: "+rel);
     expect(html.includes('href="index.html?week='+week+'"'),"Broken canonical Social Studies week link: "+rel);
     expect(html.includes('location.replace("index.html?week='+week+'")'),"Broken canonical Social Studies redirect: "+rel);
-    expect(exists("grades/grade-02/subjects/social-studies/index.html"),"Canonical Grade 2 Social Studies course missing");
+    expect(exists("grades/grade-"+redirect[1]+"/subjects/social-studies/index.html"),"Canonical Social Studies course missing: "+rel);
     continue;
   }
   coverage[type]++;
