@@ -41,5 +41,6 @@
     $("clearRecords").addEventListener("click",()=>{if(!confirm("Clear local fifth-grade records for the active learner on this device?"))return;if(CONT?.clearState)CONT.clearState();else localStorage.removeItem(KEY);state=readState();renderDashboard();renderWeeks();});
   }
   function exportRecords(){const c=CONT?.status?.();const payload={course:DATA.course.title,exported:new Date().toISOString(),learner:c?.status==="ready"?c.learner:null,state};const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="khaemenes-fifth-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+  window.addEventListener("khaemenes-family-changed",()=>{state=readState();renderDashboard();renderWeeks();});
   document.addEventListener("DOMContentLoaded",()=>{$("year").textContent=new Date().getFullYear();bind();renderDashboard();renderSubjects();renderWeeks();});
 })();
