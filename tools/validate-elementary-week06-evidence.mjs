@@ -41,4 +41,13 @@ for(const g of ["02","03","04","05"])for(const subject of ["mathematics","langua
  for(let day=1;day<=5;day++)assert(html.includes("Academic Depth Lab · Day "+day),file+" missing academic daily depth "+day);
  assert((html.match(/Explain and revise:/g)||[]).length===5,file+" missing academic reasoning checks");
 }
+for(const g of ["02","03","04","05"]){
+ const file=`grades/grade-${g}/subjects/social-studies/index.html`,html=fs.readFileSync(file,"utf8");
+ assert((html.match(/aria-label="Week 06 civic reasoning"/g)||[]).length===1,file+" must retain one canonical civic studio");
+ assert((html.match(/Week 06 · Five-day inquiry and evidence lab/g)||[]).length===1,file+" missing Week 6 inquiry sequence");
+ for(const marker of ["Monday · Source reading","Tuesday · Guided comparison","Wednesday · Evidence investigation","Thursday · Challenge and critique","Friday · Civic defense and revision","Official weekly mastery"])
+  assert(html.includes(marker),file+" missing civic reasoning component "+marker);
+ const redirect=fs.readFileSync(`grades/grade-${g}/subjects/social-studies/week-06.html`,"utf8");
+ assert(redirect.includes("index.html?week=6"),file+" missing canonical Week 6 redirect");
+}
 console.log("Week 6 evidence audit PASS: "+count+" existing subject studios and original daily lessons preserved; 21 focus corrections verified.");
