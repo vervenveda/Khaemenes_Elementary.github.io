@@ -161,4 +161,10 @@ for(const [g,subject,focus] of [["03","arts-music","sound scores, rhythm and exp
  const file=`grades/grade-${g}/subjects/${subject}/week-07.html`,html=fs.readFileSync(file,"utf8");
  assert((html.match(new RegExp("Focus:</strong> "+focus,"g"))||[]).length===5,file+" must have five aligned daily focuses");
 }
+// Week 7 project studios require worked examples, error analysis, and evidence criteria.
+for(const g of ["03","04","05"]){
+ const file=`grades/grade-${g}/subjects/integrated-projects/week-07.html`,html=fs.readFileSync(file,"utf8");
+ for(let day=1;day<=5;day++)assert(html.includes("Week 07 Project Worked Studio · Day "+day),file+" missing worked studio "+day);
+ for(const marker of ["Worked model","Guided procedure","Independent design","Error analysis","Presentation criteria"])assert(html.includes(marker),file+" missing "+marker);
+}
 console.log("Week 6–7 evidence audit PASS: "+count+" subject halls per week, Week 7 local routes, original daily lessons, and 21 focus corrections checked.");
