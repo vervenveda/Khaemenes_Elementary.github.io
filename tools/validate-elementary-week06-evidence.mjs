@@ -18,4 +18,12 @@ check("02","arts-music",["Scientific illustrators draw","clap | rest | clap | ta
 check("03","health-pe-sel",["Four learners plan","seated marching","water/rest break"]);
 check("04","technology-tools",["84 ÷ 6 = 14","horizontal axis","7 × 12 = 84"]);
 check("05","integrated-projects",["53 ÷ 8 = 6 remainder 5","7 trays","6 × 8 + 5 = 53"]);
-console.log("Week 6 evidence audit PASS: "+count+" existing subject studios and original daily lessons preserved; 9 focus corrections verified.");
+check("02","integrated-projects",["9 − 6 = 3 cm","observation from inference","Challenge:"]);
+check("03","integrated-projects",["24 ÷ 6 = 4","26 = 6 × 4 + 2","multiplication check"]);
+check("05","technology-tools",["137 ÷ 12 = 11 remainder 5","95 = 8 × 11 + 7","capacity-12 boxes"]);
+for(const [g,subject] of [["02","integrated-projects"],["03","integrated-projects"],["05","technology-tools"]]){
+ const file=`grades/grade-${g}/subjects/${subject}/week-06.html`, h=fs.readFileSync(file,"utf8");
+ for(const marker of ["Essential question:","Worked model:","Guided","Independent","Challenge:","Evidence"])
+  assert(h.includes(marker),file+" missing instructional depth: "+marker);
+}
+console.log("Week 6 evidence audit PASS: "+count+" existing subject studios and original daily lessons preserved; 12 focus corrections verified.");
