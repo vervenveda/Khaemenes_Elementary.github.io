@@ -44,8 +44,8 @@
       learnerId:l?.learnerId||null,
       familyId:l?.familyId||f?.familyId||null,
       stage:l?.stage||null,
-      placementReady:Boolean(l&&l.grade&&ELEMENTARY_GRADES.has(l.grade)&&l.stage==="elementary"),
-      mismatch:Boolean(l&&(!ELEMENTARY_GRADES.has(l.grade)||l.stage!=="elementary"))
+      placementReady:Boolean(l&&l.grade&&ELEMENTARY_GRADES.has(gradeId(l.grade)?.slice(-2))&&String(l.stage||"").toLowerCase()==="elementary"),
+      mismatch:Boolean(l&&(!gradeId(l.grade)||String(l.stage||"").toLowerCase()!=="elementary"))
     });
   }
 
@@ -80,6 +80,8 @@
     const canonical=canonicalState(),legacy=legacyProfile();
     if(!canonical.hasCanonicalLearner||!legacy)return Object.freeze({imported:false,reason:canonical.hasCanonicalLearner?"no-legacy-profile":"no-canonical-learner"});
     const student=legacy.student||{},parent=legacy.parent||{},progress=legacy.progress||{};
+    const legacyId=String(student.learnerId||student.studentId||legacy.learnerId||"").trim();
+    if(!legacyId||legacyId!==String(canonical.learnerId))return Object.freeze({imported:false,reason:"legacy-learner-identity-unverified"});
     const prefs={
       mentor:student.mentor||"",
       favoriteSubject:student.favoriteSubject||"",
@@ -93,16 +95,17 @@
       importedAt:new Date().toISOString()
     };
     const existing=readLearnerState("preferences",{});
-    writeLearnerState("preferences",{...prefs,...existing});
+    const preferencesSaved=writeLearnerState("preferences",{...prefs,...existing});
     const existingProgress=readLearnerState("progress",{});
-    writeLearnerState("progress",{...progress,...existingProgress});
+    const progressSaved=writeLearnerState("progress",{...progress,...existingProgress});
+    if(!preferencesSaved||!progressSaved)return Object.freeze({imported:false,reason:"storage-write-failed",preferencesSaved,progressSaved});
     return Object.freeze({imported:true,learnerId:canonical.learnerId,preferencesKey:learnerStorageKey("preferences"),progressKey:learnerStorageKey("progress")});
   }
 
   function recommendedGradePath(){
     const c=canonicalState();
     if(!c.placementReady)return null;
-    return `grades/grade-${c.grade}/index.html`;
+    return `grades/${c.gradeId}/index.html`;
   }
 
   function routeNotice(){
