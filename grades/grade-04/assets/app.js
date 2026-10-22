@@ -8,7 +8,7 @@
   const blank = () => ({student:"Fourth Grade Scholar", weekly:{}, midterm:0, final:0, portfolio:false});
   function readState(){try{return CONT?.readState?.(blank()) || JSON.parse(localStorage.getItem(KEY)) || blank();}catch{return blank();}}
   let state = readState();
-  const save = () => CONT?.writeState ? CONT.writeState(state) : localStorage.setItem(KEY, JSON.stringify(state));
+  const save = () => {try{if(CONT?.writeState)return CONT.writeState(state)===true;localStorage.setItem(KEY,JSON.stringify(state));return true}catch{return false}};
   const weeklyAverage = () => {const v=DATA.weeks.map(w=>Number(state.weekly[w.week]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0;};
   const completedWeeks = () => DATA.weeks.filter(w=>Number(state.weekly[w.week]||0)>=DATA.course.passingScore).length;
   const ready = () => completedWeeks()===36 && Number(state.midterm||0)>=80 && Number(state.final||0)>=80 && !!state.portfolio;
@@ -28,7 +28,7 @@
     $("subjectGrid").innerHTML=DATA.subjects.map(s=>`<article class="card" style="border-top:5px solid ${s.color}"><div class="emblem">${esc(s.icon)}</div><h3>${esc(s.title)}</h3><p>${esc(s.description)}</p><a class="button" href="subjects/${s.id}/index.html">Open Subject Hall</a></article>`).join("");
   }
   function bind(){
-    $("saveProfile").addEventListener("click",()=>{const c=CONT?.status?.();state.student=c?.status==="ready"?c.learner.nickname:($("studentName").value.trim()||"Fourth Grade Scholar");state.portfolio=$("portfolio").checked;save();renderDashboard();renderWeeks();});
+    $("saveProfile").addEventListener("click",()=>{const c=CONT?.status?.();state.student=c?.status==="ready"?c.learner.nickname:($("studentName").value.trim()||"Fourth Grade Scholar");state.portfolio=$("portfolio").checked;if(!save()){alert("Progress was not saved. Select the learner registered for Grade 04 and check browser storage.");state=readState();}renderDashboard();renderWeeks();});
     $("clearRecords").addEventListener("click",()=>{if(!confirm("Clear local fourth-grade records for the active learner on this device?"))return;if(CONT?.clearState)CONT.clearState();else localStorage.removeItem(KEY);state=readState();renderDashboard();renderWeeks();});
   }
   function exportRecords(){const c=CONT?.status?.();const payload={course:DATA.course.title,exported:new Date().toISOString(),learner:c?.status==="ready"?c.learner:null,state};const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="khaemenes-fourth-grade-records.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
