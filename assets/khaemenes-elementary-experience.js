@@ -16,7 +16,7 @@ function rawLearner(){const api=global.KhaemenesFamilyRegistry;if(api?.getLearne
 function normGrade(v){return String(v||"").replace(/[^0-9]/g,"").padStart(2,"0")}
 function learner(){const l=rawLearner();if(!l)return null;const grade=normGrade(l.grade),stage=String(l.stage||"").toLowerCase();return stage==="elementary"&&["01","02","03","04","05"].includes(grade)?Object.assign({},l,{grade}):null}
 function routeGrade(){const m=location.pathname.match(/\/grades\/grade-(0[1-5])\//i);return m?m[1]:null}
-function activeGrade(){return routeGrade()||learner()?.grade||null}
+function activeGrade(){const routed=routeGrade(),registered=learner()?.grade||null;return routed&&registered&&routed!==registered?null:(routed||registered)}
 function stateFor(g=activeGrade()){const l=learner();if(!l||!g)return{};const raw=read("khaemenes.course:"+l.learnerId+":elementary-grade-"+g,null);if(raw&&typeof raw==="object"&&raw.format==="khaemenes-course-state-v1"&&raw.state)return raw.state||{};return raw&&typeof raw==="object"?raw:{}}
 function weekScore(state,n){const v=state?.weekly?.[n]??state?.weekly?.[String(n)]??state?.weeks?.[n]??state?.weeks?.[String(n)];if(v&&typeof v==="object")return Math.max(0,Math.min(100,Number(v.bestScore??v.bestPercent??v.score)||0));return Math.max(0,Math.min(100,Number(v)||0))}
 function milestone(state,kind){const v=state?.[kind];if(v&&typeof v==="object")return Math.max(0,Math.min(100,Number(v.bestScore??v.bestPercent??v.score)||0));return Math.max(0,Math.min(100,Number(v)||0))}
