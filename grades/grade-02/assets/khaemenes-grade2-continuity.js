@@ -58,7 +58,7 @@
 
   function writeState(state,source="grade-02-runtime"){
     const s=status(),key=scopedKey();
-    if(s.status!=="ready"||!key)return writeJSON(LEGACY_KEY,state);
+    if(s.status!=="ready"||!key)return false;
     const ok=writeJSON(key,{format:"khaemenes-course-state-v1",learnerId:s.learner.learnerId,courseId:COURSE_ID,source,updatedAt:new Date().toISOString(),state});
     if(ok)global.dispatchEvent(new CustomEvent("khaemenes-grade2-continuity-synced",{detail:{learnerId:s.learner.learnerId,courseKey:key}}));
     return ok;
