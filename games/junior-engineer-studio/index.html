@@ -26,8 +26,29 @@ header{position:sticky;top:0;z-index:60;background:rgba(255,254,250,.95);border-
 @media(max-width:1050px){.cad-shell{grid-template-columns:64px minmax(0,1fr)}.cad-side{grid-column:1/-1}}@media(max-width:950px){.layout{grid-template-columns:1fr}.side{position:static}}@media(max-width:760px){.toolbar{grid-template-columns:repeat(2,1fr)}.workflow{grid-template-columns:repeat(3,1fr)}.grid,.compare-grid{grid-template-columns:1fr}.canvas-card{grid-column:auto}.compare-arrow{transform:rotate(90deg)}.portfolio{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}}@media(max-width:490px){.toolbar,.voice-grid{grid-template-columns:1fr}.nav{grid-template-columns:1fr auto}.brand small{display:none}.cad-shell{display:block}.cad-tools{display:flex;gap:6px;overflow:auto;margin-bottom:7px}.cad-tool{min-width:64px}.cad-stage canvas{height:400px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}@media print{header,.head-actions,.side,.actions,.tabs,.cad-tools,.cad-side{display:none!important}body{background:#fff}.hero{padding:6px}.hero-card{background:#fff!important;color:#111;border:1px solid #999;box-shadow:none}.hero p{color:#111}.layout{display:block}.card,.panel,.challenge{box-shadow:none}.workspace{display:block!important}.cad-shell{display:block}.cad-stage{border:1px solid #777}}
 </style>
+<link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.css">
+<link rel="stylesheet" href="https://vervenveda.com/assets/vnv-ecosystem-menu.css">
 </head>
 <body>
+<header data-khae-header class="khae-global-campus-header">
+  <div data-khae-header-inner>
+    <a data-khae-brand href="https://vervenveda.com/Khaemenes_Academy.github.io/" aria-label="Khaemenes Academy home">
+      <span data-khae-brand-mark>1–5</span>
+      <span><strong data-khae-brand-name>Khaemenes Elementary Academy</strong><small data-khae-brand-sub>Junior Engineer Studio</small></span>
+    </a>
+    <nav data-khae-nav aria-label="Academy global navigation">
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/">Academy</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/">Teacher</a>
+    </nav>
+    <div data-khae-actions>
+      <a data-khae-secondary href="https://vervenveda.com/Khaemenes_Elementary.github.io/">Elementary</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student Profile</a>
+    </div>
+    <div data-vnv-ecosystem-slot aria-label="Ecosystem menu"></div>
+  </div>
+</header>
 <header><div class="shell nav"><div class="brand"><div class="mark">🛠️</div><div><strong>Khaemenes Elementary · Junior Engineer Studio</strong><small>Grades 1–5 · Ask · Imagine · Draw · Build · Test · Improve</small></div></div><div></div><div class="head-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></header>
 
 <section class="hero"><div class="shell"><div class="hero-card"><span class="eyebrow">Science · Technology · Engineering · Projects · Weeks 10, 14, 23, 29, 34–35</span><h1>Junior Engineer Studio 🛠️</h1><p>A child-friendly engineering workspace inspired by the real OHMIC CAD Studio: precision drawing, snapping, layers/objects, undo/redo, dimensions, project history, testing, comparison, and portfolio evidence.</p><div class="badges"><span>Grades 1–5</span><span>CAD-Inspired Workspace</span><span>Engineering Design Cycle</span><span>Undo / Redo</span><span>Snap Grid</span><span>Measurements</span><span>Portfolio</span><span>Local Save</span></div></div></div></section>
@@ -190,5 +211,7 @@ restore();renderGrade();renderWorkflow();renderTrials();renderPortfolio();render
 <!-- VNV_BETA_PROGRAM_V2 -->
 <a id="vnvBetaProgramFallback" href="https://vervenveda.com/beta/?source=Khaemenes_Elementary.github.io%2Fgames%2Fjunior-engineer-studio%2Findex.html&surface=interactive-index" aria-label="Open the Verve N Veda Beta Program for this page">β Beta Program</a>
 <script src="https://vervenveda.com/assets/vnv-beta-link.js" defer data-vnv-beta-program="2"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.js" defer></script>
+<script src="https://vervenveda.com/assets/vnv-ecosystem-menu.js" defer></script>
 </body>
 </html>
