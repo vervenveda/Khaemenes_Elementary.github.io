@@ -9,7 +9,7 @@ function blank(){return{student:"Second Grade Scholar",weekly:{},midterm:0,final
 function readLegacy(){try{return JSON.parse(localStorage.getItem(KEY))||blank()}catch{return blank()}}
 function read(){const scoped=CONT?.readState?.(null);return scoped&&typeof scoped==="object"?Object.assign(blank(),scoped):readLegacy()}
 let state=read();
-function save(){if(CONT?.writeState)CONT.writeState(state);else localStorage.setItem(KEY,JSON.stringify(state))}
+function save(){try{if(CONT?.writeState)return CONT.writeState(state)===true;localStorage.setItem(KEY,JSON.stringify(state));return true}catch{return false}}
 function avg(){const v=DATA.units.map(u=>Number(state.weekly[u.week]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0}
 function done(){return DATA.units.filter(u=>Number(state.weekly[u.week]||0)>=80).length}
 function ready(){return done()===36&&Number(state.midterm||0)>=80&&Number(state.final||0)>=80&&!!state.portfolio}
@@ -46,7 +46,7 @@ function bind(){
     
     
     state.portfolio=$("portfolio").checked;
-    save();renderDash();renderWeeks()
+    if(!save()){alert("Progress was not saved. Select the learner registered for Grade 02 and check browser storage.");state=read();}renderDash();renderWeeks()
   });
   $("clearRecords").addEventListener("click",()=>{
     if(!confirm("Clear local second-grade records for this learner on this device?"))return;
