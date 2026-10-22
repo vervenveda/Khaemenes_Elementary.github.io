@@ -1,0 +1,21 @@
+name: Elementary Learner Isolation
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'grades/grade-02/assets/khaemenes-grade2-continuity.js'
+      - 'grades/grade-04/assets/khaemenes-grade4-continuity.js'
+      - 'grades/grade-05/assets/khaemenes-grade5-continuity.js'
+      - 'tests/elementary-learner-isolation.test.cjs'
+      - '.github/workflows/elementary-learner-isolation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  learner-isolation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run two-learner continuity regression
+        run: node tests/elementary-learner-isolation.test.cjs
