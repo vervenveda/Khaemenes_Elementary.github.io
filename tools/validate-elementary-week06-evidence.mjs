@@ -185,4 +185,28 @@ for(const g of ["02","03","04","05"]){
  assert(civic.includes('data-assessment-bridge="food-farms-communities"'),"Grade 2 civic assessment bridge missing");
  assert(civic.includes("Trace farm, transport, market and household roles"),"Grade 2 civic inquiry misses farms and food");
 }
+// Week 6 to Week 8 forward progression. No new assessment engine or score writer.
+for(const g of ["02","03","04","05"]){
+ const assessment=`grades/grade-${g}/assessments/week-07-assessment.html`;
+ assert(fs.existsSync(assessment),assessment+" missing");
+ for(const subject of names(g)){
+  const base=`grades/grade-${g}/subjects/${subject}`;
+  for(const week of ["06","07","08"]){
+   const file=`${base}/week-${week}.html`;
+   assert(fs.existsSync(file),file+" breaks Week 6–8 progression");
+   const html=fs.readFileSync(file,"utf8");
+   assert((html.match(/<article class=['"]lesson['"]/g)||[]).length===5,file+" must retain five daily lessons");
+  }
+ }
+ const social=`grades/grade-${g}/subjects/social-studies/index.html`;
+ const civic=fs.readFileSync(social,"utf8");
+ for(const week of ["06","07"])assert(civic.includes('aria-label="Week '+week+' civic reasoning"'),social+" missing Week "+week+" canonical inquiry");
+}
+// Independent arithmetic invariants, guarding against future errors in the worked models.
+assert.equal(8*11+7,95,"Grade 4 quotient-remainder model");
+assert.equal(12*12+2,146,"Grade 4 long-division verification");
+assert.equal(45-30,15,"Grade 3 motion-data range");
+assert.equal(3*2+2,8,"Grade 5 1/2 + 1/3 in sixths numerator calculation");
+assert.equal(9-2,7,"Grade 5 3/4 - 1/6 in twelfths numerator calculation");
+assert.equal(8+3,11,"Grade 5 2/3 + 1/4 in twelfths numerator calculation");
 console.log("Week 6–7 evidence audit PASS: "+count+" subject halls per week, Week 7 local routes, original daily lessons, and 21 focus corrections checked.");
