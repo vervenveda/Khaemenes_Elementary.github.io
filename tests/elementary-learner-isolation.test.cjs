@@ -39,6 +39,15 @@ for(const config of configs){
   assert.equal(api.writeState({student:"preview"}),false,"preview must not write");
   assert.equal(JSON.parse(store.get(config.legacy)).student,"legacy","legacy work must remain intact");
   assert.equal(store.has(key(preview.learnerId)),false,"preview must not create scoped progress");
+  // Storage failure must not be mistaken for a successful save.
+  active=a;
+  const previousSet=storage.setItem;
+  storage.setItem=()=>{throw new Error("storage unavailable")};
+  assert.equal(api.writeState({student:"failed-write"}),false,"storage failure must return false");
+  storage.setItem=previousSet;
+  assert.equal(api.readState().student,"A","failed write must preserve prior record");
+  active=preview;
+  assert.equal(api.readState({student:"empty-preview"}).student,"empty-preview","preview uses supplied fallback only");
   active=null;
   assert.equal(api.readState().student,"legacy","legacy preview remains readable without active learner");
   assert.equal(api.writeState({student:"anonymous"}),false,"anonymous session must not overwrite legacy");
