@@ -53,8 +53,29 @@ h1,h2,h3,h4{font-family:var(--serif)}h1{margin:10px 0 4px;font-size:clamp(2.9rem
 @media(max-width:1000px){.layout{grid-template-columns:1fr}.side{position:static}}@media(max-width:800px){.toolbar,.lab-grid{grid-template-columns:1fr 1fr}.phase-strip{grid-template-columns:repeat(3,1fr)}.portfolio{grid-template-columns:1fr}.compare{grid-template-columns:1fr}.arrow{transform:rotate(90deg);text-align:center}}@media(max-width:520px){.toolbar,.lab-grid,.voice-grid,.evidence-grid{grid-template-columns:1fr}.nav{grid-template-columns:1fr auto}.brand small{display:none}.phase-strip{grid-template-columns:repeat(2,1fr)}.test-row{grid-template-columns:1fr}}
 @media print{header,.head-actions,.side,.actions,.tabs,.toolbar,.tools{display:none!important}body{background:#fff}.hero{padding:6px}.hero-card{background:#fff!important;color:#111;border:1px solid #999;box-shadow:none}.hero p{color:#111}.layout{display:block}.card,.panel,.prompt{box-shadow:none}.workspace{display:block!important}}
 </style>
+<link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.css">
+<link rel="stylesheet" href="https://vervenveda.com/assets/vnv-ecosystem-menu.css">
 </head>
 <body>
+<header data-khae-header class="khae-global-campus-header">
+  <div data-khae-header-inner>
+    <a data-khae-brand href="https://vervenveda.com/Khaemenes_Academy.github.io/" aria-label="Khaemenes Academy home">
+      <span data-khae-brand-mark>1–5</span>
+      <span><strong data-khae-brand-name>Khaemenes Elementary Academy</strong><small data-khae-brand-sub>Curiosity Machine</small></span>
+    </a>
+    <nav data-khae-nav aria-label="Academy global navigation">
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/">Academy</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/">Teacher</a>
+    </nav>
+    <div data-khae-actions>
+      <a data-khae-secondary href="https://vervenveda.com/Khaemenes_Elementary.github.io/">Elementary</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student Profile</a>
+    </div>
+    <div data-vnv-ecosystem-slot aria-label="Ecosystem menu"></div>
+  </div>
+</header>
 <header><div class="shell nav"><div class="brand"><div class="mark">💭</div><div><strong>Khaemenes Elementary · Curiosity Machine</strong><small>Grades 1–5 · Science · Writing · Reasoning</small></div></div><div></div><div class="head-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></header>
 
 <section class="hero"><div class="shell"><div class="hero-card"><span class="eyebrow">Predict → Explain → Draw → Test → Observe → Revise</span><h1>Curiosity Machine 💭</h1><p>One big question at a time. Make a prediction, explain your thinking, sketch what you expect, design a safe test or thought experiment, record evidence, then revise your idea.</p><div class="badges"><span>Grades 1–5</span><span>Developmentally Appropriate Prompts</span><span>Science + Writing</span><span>Drawing Canvas</span><span>Testing Planner</span><span>Evidence</span><span>Reflection</span><span>Local Portfolio</span></div></div></div></section>
@@ -185,4 +206,6 @@ $("gradeSelect").value=s.grade;$("topicSelect").value=s.topic;$("modeSelect").va
 <!-- VNV_BETA_PROGRAM_V2 -->
 <a id="vnvBetaProgramFallback" href="https://vervenveda.com/beta/?source=Khaemenes_Elementary.github.io%2Fgames%2Fcuriosity-machine%2Findex.html&surface=interactive-index" aria-label="Open the Verve N Veda Beta Program for this page">β Beta Program</a>
 <script src="https://vervenveda.com/assets/vnv-beta-link.js" defer data-vnv-beta-program="2"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.js" defer></script>
+<script src="https://vervenveda.com/assets/vnv-ecosystem-menu.js" defer></script>
 </body></html>
