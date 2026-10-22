@@ -53,7 +53,7 @@
   function readState(fallback=null){
     const s=status(),key=scopedKey();
     if(s.status==="ready"&&key)return unwrapScoped(readJSON(key,null))||fallback;
-    return readJSON(LEGACY_KEY,fallback);
+    return s.status==="no-active-learner"?readJSON(LEGACY_KEY,fallback):fallback;
   }
 
   function writeState(state,source="grade-02-runtime"){
