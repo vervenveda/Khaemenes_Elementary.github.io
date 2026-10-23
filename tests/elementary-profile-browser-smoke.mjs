@@ -21,6 +21,8 @@ await page.route("https://vervenveda.com/**",async route=>{
 const url="https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/";
 try{
  await page.goto(url,{waitUntil:"domcontentloaded"});
+ await page.waitForTimeout(160);
+ console.log("BOOT",JSON.stringify({errors,notice:await page.locator("#accountNote").innerText(),registry:await page.evaluate(()=>Boolean(window.KhaemenesFamilyRegistry))}));
  assert.equal(await page.locator("#profileStudio").isVisible(),false);
  assert.match(await page.locator("#accountNote").innerText(),/No eligible Elementary learner/);
  console.log("PASS guest cannot create or impersonate an Elementary learner");
