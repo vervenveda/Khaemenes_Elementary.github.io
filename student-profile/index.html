@@ -44,7 +44,7 @@ body[data-theme="night"] .notice{background:#413e34;color:#ffeed0}.skip{position
 <div class="grid">
 <section class="card span7"><h2>Today · Next · Review</h2><div id="nextSteps" aria-live="polite"><p>Choose your existing learner to see today's learning.</p></div>
 <div class="actions"><a id="gradeHomeLink" class="button secondary" href="../#grades">Open my grade</a></div></section>
-<section class="card span5"><h2>📌 My pinned subject halls</h2><div id="pinned" aria-live="polite"><p class="muted">Favorite subject halls appear here.</p></div>
+<section class="card span5"><h2>📌 My pinned subject halls</h2><div id="pinned" aria-live="polite"><p class="muted">Favorite subject halls appear here.</p></div><div class="actions appearance"><button type="button" class="secondary" id="pinClass">📌 Pin my registered grade</button><button type="button" class="secondary" id="unpinClass">Remove class pin</button></div>
 <div class="appearance"><label for="subjectSelect">Choose a grade-level subject</label><select id="subjectSelect"><option value="">Choose a subject</option></select><div class="actions"><button class="secondary" id="pinSubject" type="button">Pin subject</button><button class="secondary" id="unpinSubject" type="button">Unpin subject</button></div></div>
 </section>
 <section class="card span6 appearance"><h2>Picture &amp; avatar</h2><p class="muted">A family member can add an optional photo or choose an illustrated avatar. Pictures are resized locally and are not uploaded by this page.</p>
@@ -55,7 +55,13 @@ body[data-theme="night"] .notice{background:#413e34;color:#ffeed0}.skip{position
 <div class="choice" id="themes"></div><div class="actions"><button type="button" class="secondary" id="reset">Reset colors</button><button type="button" class="secondary" id="printProfile">Print profile</button><button type="button" class="secondary" id="exportVisual">Export picture &amp; colors</button></div>
 <label for="importVisual">Restore picture &amp; colors from a local backup</label><input id="importVisual" type="file" accept=".json,application/json"><p class="status" id="status" aria-live="polite"></p></section>
 </div>
-<section class="card" id="academyStudio"><p class="eyebrow">One learner · all the Academy features</p><h2>My Learning Compass &amp; Evidence Passport</h2><p class="muted">Goals, Today/Review/Next, learning strengths, language, accessibility, evidence, and profile-bundle backup live here. These features never change grades, mastery, or official records.</p>
+<section class="card" id="gradePreview" aria-labelledby="nextGradeHeading"><p class="eyebrow">My next milestone</p>
+<h2 id="nextGradeHeading">A new learning horizon</h2><p class="muted">Preview the next learning level while keeping all course requirements, assessment results, and family placement decisions in their original systems.</p>
+<div class="actions"><button type="button" class="secondary" id="showGradePreview" aria-expanded="false" aria-controls="gradePreviewDetails">Explore my next grade</button></div>
+<div id="gradePreviewDetails" hidden><h3 id="gradePreviewName">Next up</h3><p id="gradePreviewInfo" class="muted"></p><a id="gradePreviewLink" class="button secondary" href="../#grades">Explore the next grade</a>
+<a class="button secondary" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family placement controls</a>
+<p class="notice">A preview cannot certify mastery, issue a credential, or move the learner into a different grade.</p></div>
+</section><section class="card" id="academyStudio"><p class="eyebrow">One learner · all the Academy features</p><h2>My Learning Compass &amp; Evidence Passport</h2><p class="muted">Goals, Today/Review/Next, learning strengths, language, accessibility, evidence, and profile-bundle backup live here. These features never change grades, mastery, or official records.</p>
 <div id="profileStudio"></div><p id="studioFallback" class="notice" hidden>Unable to load the shared Academy profile studio. Existing records remain intact. <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/profile.html">Open the Academy profile directly</a>.</p></section>
 <p class="notice">Family continuity: Kindergarten appearance can be copied only for the same learner ID, with adult confirmation. Placement and academic progression remain controlled by the Academy Family Portal and grade-specific course engines.</p>
 </main>
@@ -68,15 +74,15 @@ body[data-theme="night"] .notice{background:#413e34;color:#ffeed0}.skip{position
 "use strict";
 const $=id=>document.getElementById(id),R=window.KhaemenesFamilyRegistry,C=window.KhaemenesLearningContinuation;
 const BASE="https://vervenveda.com/Khaemenes_Elementary.github.io/";
-const KEY="khaemenes_elementary_visual_profile_v1:",PINS="khaemenes_elementary_profile_pins_v1:",KINDER="khaemenes_kindergarten_visual_profile_v1:";
+const KEY="khaemenes_elementary_visual_profile_v1:",PINS="khaemenes_elementary_profile_pins_v1:",KINDER="khaemenes_kindergarten_visual_profile_v1:",COURSES="khaemenes_course_pins_v1";
 const SCHEMA="khaemenes.elementary-visual.v1",THEMES=["parchment","forest","ocean","sunset","night"],AVATARS=["🌟","🦉","🦋","🚀","🌿","🎨","📚","🦊"];
 const COMMON={"Language Arts":"subjects/language-arts/","Mathematics":"subjects/mathematics/","Science":"subjects/science/","Social Studies":"subjects/social-studies/","Arts & Music":"subjects/arts-music/","Health & Wellness":"subjects/health-pe-sel/","Projects":"subjects/integrated-projects/"};
 const GRADE_SUBJECTS={
-"01":{"My Grade 1 Journey":"","Math Practice":"subjects/math/"},
-"02":COMMON,
-"03":COMMON,
-"04":COMMON,
-"05":COMMON
+"01":{"Math Practice":"subjects/math/","Science":"subjects/science/","Social Studies":"subjects/social-studies/"},
+"02":{...COMMON,"Technology":"subjects/technology/"},
+"03":{...COMMON,"Technology":"subjects/technology-tools/"},
+"04":{...COMMON,"Technology":"subjects/technology-tools/"},
+"05":{...COMMON,"Technology":"subjects/technology-tools/"}
 };
 let activeId="",grade="",appearance={theme:"parchment",avatar:"🌟",photo:""};
 const read=(k,f)=>{try{const v=localStorage.getItem(k);return v===null?f:JSON.parse(v)}catch{return f}};
@@ -108,6 +114,24 @@ function renderVisual(){
 function saveVisual(){if(!needsAdult())return false;if(!store(visualKey(),{schema:SCHEMA,learnerId:activeId,updatedAt:new Date().toISOString(),...appearance})){say("Cannot save. Please export a backup or use a smaller photo.",true);return false}renderVisual();say("Saved for this learner on this browser.");return true}
 function subjectMap(){const x=GRADE_SUBJECTS[grade]||{};return {...x,["Grade "+Number(grade)+" Home"]:""}}
 function classHref(path){return BASE+"grades/grade-"+grade+"/"+path}
+function classId(){return "khaemenes-grade-"+grade}
+function classPinned(){
+ const record=read(COURSES,null),items=record?.learners?.[activeId];
+ return Array.isArray(items)&&items.some(x=>x?.id===classId()||x?.courseId===classId());
+}
+function updateClassPin(add){
+ if(!needsAdult())return;
+ const record=read(COURSES,{version:1,learners:{},updatedAt:null});
+ if(record?.version!==1||!record.learners||typeof record.learners!=="object"||Array.isArray(record.learners)){say("Academy class pin format is unfamiliar. No changes made.",true);return}
+ const old=record.learners[activeId];
+ if(old!==undefined&&!Array.isArray(old)){say("Existing learner's class pins need review. No changes made.",true);return}
+ const rest=(old||[]).filter(x=>x?.id!==classId()&&x?.courseId!==classId());
+ if(add)rest.push({id:classId(),courseId:classId(),title:"Khaemenes Academy Grade "+Number(grade),subtitle:"Elementary · Grade "+Number(grade),href:classHref(""),source:"elementary-student-profile",pinnedAt:new Date().toISOString()});
+ record.learners[activeId]=rest.slice(-24);
+ record.updatedAt=new Date().toISOString();
+ if(!store(COURSES,record))return say("Unable to save class pin.",true);
+ renderPins();say(add?"Registered grade entrance pinned. Academic placement is unchanged.":"Registered grade pin removed. Academic placement is unchanged.");
+}
 function pinIds(){const v=read(pinKey(),[]);return Array.isArray(v)?v.filter(x=>typeof x==="string").slice(0,14):[]}
 function link(container,label,href,detail){
  const a=document.createElement("a");a.className="activity";a.href=href;const name=document.createElement("span");name.textContent=label;a.append(name);
@@ -116,8 +140,9 @@ function link(container,label,href,detail){
 }
 function renderPins(){
  const map=subjectMap(),ids=pinIds();$("pinned").replaceChildren();
+ if(classPinned())link($("pinned"),"🏛️ My Grade "+Number(grade)+" Class",classHref(""),"Registered grade shortcut");
  ids.filter(x=>Object.hasOwn(map,x)).forEach(x=>link($("pinned"),x,classHref(map[x]),"Pinned subject"));
- $("pinPill").textContent=ids.filter(x=>Object.hasOwn(map,x)).length+" pinned subjects";
+ $("pinPill").textContent=(ids.filter(x=>Object.hasOwn(map,x)).length+(classPinned()?1:0))+" pinned classes & subjects";
  if(!$("pinned").children.length){const p=document.createElement("p");p.textContent="No favorite subjects yet. Choose one below.";p.className="muted";$("pinned").append(p)}
  const select=$("subjectSelect"),prior=select.value;select.replaceChildren();const none=document.createElement("option");none.value="";none.textContent="Choose a subject";select.append(none);
  for(const name of Object.keys(map)){const opt=document.createElement("option");opt.value=name;opt.textContent=name;select.append(opt)}
@@ -143,6 +168,7 @@ function selectLearners(){
  area.hidden=candidates.length===0||(candidates.length===1&&Boolean(active));
 }
 function refresh(){
+ $("gradePreviewDetails").hidden=true;$("showGradePreview").setAttribute("aria-expanded","false");
  selectLearners();
  const l=learner();activeId=l?.learnerId||"";grade=l?.grade||"";
  if(!l){
@@ -160,6 +186,17 @@ function refresh(){
 for(const avatar of AVATARS){const b=document.createElement("button");b.type="button";b.className="secondary";b.dataset.value=avatar;b.textContent=avatar;b.setAttribute("aria-label","Use "+avatar+" avatar");b.addEventListener("click",()=>{if(!needsAdult())return;appearance.avatar=avatar;appearance.photo="";saveVisual()});$("avatars").append(b)}
 for(const theme of THEMES){const b=document.createElement("button");b.type="button";b.className="secondary";b.dataset.value=theme;b.textContent=theme.charAt(0).toUpperCase()+theme.slice(1);b.addEventListener("click",()=>{if(!needsAdult())return;appearance.theme=theme;saveVisual()});$("themes").append(b)}
 $("learnerSelect").addEventListener("change",e=>{const family=R?.getFamily?.(),l=family?.learners?.find(x=>x.learnerId===e.target.value&&x.stage==="elementary"&&validGrade(x.grade));if(l?.familyId===family?.familyId)R.setActive?.({familyId:family.familyId,learnerId:l.learnerId})});
+$("pinClass").addEventListener("click",()=>updateClassPin(true));
+$("unpinClass").addEventListener("click",()=>updateClassPin(false));
+$("showGradePreview").addEventListener("click",()=>{
+ const child=learner();if(!child)return say("Select an existing Elementary learner first.",true);
+ const box=$("gradePreviewDetails"),show=box.hidden;box.hidden=!show;$("showGradePreview").setAttribute("aria-expanded",String(show));if(!show)return;
+ const next=Number(grade)+1,older=next>5;
+ $("gradePreviewName").textContent=(child.nickname||"Our scholar")+"'s next chapter · "+(older?"Middle School":"Grade "+next);
+ $("gradePreviewInfo").textContent="Current placement: Grade "+Number(grade)+". "+pinIds().length+" favorite subject halls. "+(classPinned()?"Current class pinned. ":"")+"A family member can carry forward the same Academy learner identity, interests, workspace preferences, and Evidence Passport when enrollment is updated through official controls.";
+ const a=$("gradePreviewLink");a.href=older?"https://vervenveda.com/Khaemenes_Middle.github.io/":"https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-"+String(next).padStart(2,"0")+"/";
+ a.textContent="Explore "+(older?"Middle School":"Grade "+next);
+});
 $("pinSubject").addEventListener("click",()=>{if(!isReady())return say("Select a learner first.",true);const id=$("subjectSelect").value;if(!Object.hasOwn(subjectMap(),id))return say("Choose a Grade "+Number(grade)+" subject.",true);const old=pinIds(),next=[...new Set([...old,id])].slice(0,14);if(!store(pinKey(),next))return say("Could not save pinned subject.",true);renderPins();say("Subject pinned to this learner.");});
 $("unpinSubject").addEventListener("click",()=>{if(!isReady())return say("Select a learner first.",true);const id=$("subjectSelect").value;if(!Object.hasOwn(subjectMap(),id))return say("Choose a subject.",true);if(!store(pinKey(),pinIds().filter(x=>x!==id)))return say("Could not remove pin.",true);renderPins();say("Subject removed from this learner's pins.");});
 $("photoFile").addEventListener("change",async e=>{
@@ -190,7 +227,7 @@ $("importVisual").addEventListener("change",async e=>{const file=e.target.files?
 window.addEventListener("khaemenes-family-changed",refresh);
 window.addEventListener("khaemenes-learner-placement-changed",refresh);
 window.addEventListener("khaemenes-learning-continuation-changed",()=>{if(activeId)renderNext()});
-window.addEventListener("storage",e=>{if(["khaemenes_active_learner_v1","khaemenes_family_registry_v1"].includes(e.key))refresh();else if(e.key===pinKey()&&activeId)renderPins()});
+window.addEventListener("storage",e=>{if(["khaemenes_active_learner_v1","khaemenes_family_registry_v1"].includes(e.key))refresh();else if([pinKey(),COURSES].includes(e.key)&&activeId)renderPins()});
 refresh();
 })();
 </script>
