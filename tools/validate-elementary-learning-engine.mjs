@@ -249,7 +249,7 @@ for(const [g,subjects] of Object.entries(subjectSets)){
       const ledgerPos=html.indexOf("khaemenes-elementary-learning-ledger.js");
       expect(focusMapPos>=0&&ledgerPos>focusMapPos,`${file} must load the focus map before the topic-aware depth ledger.`);
       if(g==="02"){
-        const lessonHeadings=[...html.matchAll(/<article class=['"]lesson['"][^>]*>[\\s\\S]*?<h4>([\\s\\S]*?)<\\/h4>/gi)]
+        const lessonHeadings=[...html.matchAll(/<article class=['"]lesson['"][^>]*>[\s\S]*?<h4>([\s\S]*?)<\/h4>/gi)]
           .map(m=>m[1].replace(/<[^>]+>/g,"").trim());
         expect(lessonHeadings.length===5,`${file} must retain five Grade 02 content-bearing lesson headings.`);
         expect(lessonHeadings.every(h=>h.includes(":")),`${file} Grade 02 lesson headings must expose concise focus text after the day label.`);
