@@ -21,11 +21,11 @@
      const expected=a.learner.learnerId;
      if(p.scope?.academyLearnerId&&p.scope.academyLearnerId!==expected)throw new Error("This backup belongs to a different Academy learner.");
      const matches=incoming.students.filter(s=>s.academyLearnerId===expected||s.id==="academy_"+expected);
-     if(matches.length===1){const s=structuredClone(matches[0]);s.academyLearnerId=expected;s.id="academy_"+expected;s.name=a.learner.nickname;ensure(s);return{students:[s],activeId:s.id}}
+     if(matches.length===1){const s=JSON.parse(JSON.stringify(matches[0]));s.academyLearnerId=expected;s.id="academy_"+expected;s.name=a.learner.nickname;ensure(s);return{students:[s],activeId:s.id}}
      if(matches.length>1)throw new Error("Backup contains duplicate records for the active Academy learner.");
      if(incoming.students.length===1&&!incoming.students[0].academyLearnerId){
        if(!confirm("Legacy backup has no Academy learner identity. Bind its single learner record to the active Academy profile?"))throw new Error("Import cancelled.");
-       const s=structuredClone(incoming.students[0]);s.academyLearnerId=expected;s.id="academy_"+expected;s.name=a.learner.nickname;ensure(s);return{students:[s],activeId:s.id}
+       const s=JSON.parse(JSON.stringify(incoming.students[0]));s.academyLearnerId=expected;s.id="academy_"+expected;s.name=a.learner.nickname;ensure(s);return{students:[s],activeId:s.id}
      }
      throw new Error("Import blocked: no uniquely matching record for the active Academy learner.");
    }
