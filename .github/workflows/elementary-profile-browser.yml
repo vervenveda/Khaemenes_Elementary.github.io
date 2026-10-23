@@ -1,0 +1,33 @@
+name: Elementary Student Profile Browser Regression
+on:
+  push:
+    branches: [main]
+    paths:
+      - "student-profile/**"
+      - "grades/grade-*/index.html"
+      - "tests/elementary-profile-browser-smoke.mjs"
+      - ".github/workflows/elementary-profile-browser.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  profile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: vervenveda/Khaemenes_Academy.github.io
+          ref: main
+          path: shared-academy
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install --no-save --no-package-lock playwright
+      - run: npx playwright install chromium
+      - name: Validate Elementary profile grade, appearance and sibling isolation
+        run: node tests/elementary-profile-browser-smoke.mjs
