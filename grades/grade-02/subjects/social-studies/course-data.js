@@ -16,8 +16,8 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
     "midtermMode": "closed-book teacher-supervised",
     "finalMode": "closed-book teacher-supervised",
     "storageKey": "khaemenes_grade2_social_studies_v2",
-    "version": "2.0.0",
-    "updated": "2026-10-19",
+    "version": "2.1.0",
+    "updated": "2026-10-23",
     "authors": "Jennifer Kay Pearl",
     "note": "The grade-wide eight-subject weekly check remains integrated portfolio evidence. Formal Social Studies mastery is recorded here.",
     "stateLocalizable": true,
@@ -48,7 +48,8 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
       30,
       35
     ],
-    "localizationPolicy": "Keep the national Grade 2 Social Studies core and 80% mastery gates invariant. Localize appropriate community history, geography, Indigenous nations, migration/colonization/immigration cases, public institutions, civic examples, biographies, and capstone evidence."
+    "localizationPolicy": "Keep the national Grade 2 Social Studies core and 80% mastery gates invariant. Localize appropriate community history, geography, Indigenous nations, migration/colonization/immigration cases, public institutions, civic examples, biographies, and capstone evidence.",
+    "assessmentSpecificity": "2026 specificity hardening replaced 36 recurring meta-template current-bank items with week-specific historical, geographic, civic, economic, source, or evidence questions while preserving item IDs for audit continuity."
   },
   "strands": [
     "Inquiry & Evidence",
@@ -234,15 +235,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W01-S1",
-          "prompt": "Which conclusion best matches Week 1, \"Community Questions and Evidence\"?",
+          "prompt": "How can questions and evidence help us understand a community?",
           "choices": [
             "Social Studies begins with focused questions, relevant sources, careful observation, and claims supported by evidence.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Community Questions and Evidence\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Community Questions and Evidence\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Community Questions and Evidence\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 1
         }
       ],
@@ -340,15 +341,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W01-S1",
-          "prompt": "Which conclusion best matches Week 1, \"Community Questions and Evidence\"?",
+          "prompt": "How can questions and evidence help us understand a community?",
           "choices": [
             "Social Studies begins with focused questions, relevant sources, careful observation, and claims supported by evidence.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Community Questions and Evidence\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Community Questions and Evidence\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Community Questions and Evidence\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 1
         }
       ]
@@ -508,15 +509,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W02-S1",
-          "prompt": "Which conclusion best matches Week 2, \"Families, Culture, and Traditions\"?",
+          "prompt": "How can family and cultural sources help us understand different ways of living?",
           "choices": [
             "Families and cultures are diverse; careful study respects privacy, uses sources, and avoids stereotypes.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Families, Culture, and Traditions\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Families, Culture, and Traditions\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Families, Culture, and Traditions\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 2
         }
       ],
@@ -614,15 +615,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W02-S1",
-          "prompt": "Which conclusion best matches Week 2, \"Families, Culture, and Traditions\"?",
+          "prompt": "How can family and cultural sources help us understand different ways of living?",
           "choices": [
             "Families and cultures are diverse; careful study respects privacy, uses sources, and avoids stereotypes.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Families, Culture, and Traditions\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Families, Culture, and Traditions\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Families, Culture, and Traditions\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
@@ -808,15 +809,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W03-S1",
-          "prompt": "Which conclusion best matches Week 3, \"Past, Present, Timelines, and Change\"?",
+          "prompt": "How do chronology and timelines help explain change?",
           "choices": [
             "Historians organize events in time order and compare past and present to identify change, continuity, cause, and sequence.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Past, Present, Timelines, and Change\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Past, Present, Timelines, and Change\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Past, Present, Timelines, and Change\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 3
         }
       ],
@@ -914,15 +915,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W03-S1",
-          "prompt": "Which conclusion best matches Week 3, \"Past, Present, Timelines, and Change\"?",
+          "prompt": "How do chronology and timelines help explain change?",
           "choices": [
             "Historians organize events in time order and compare past and present to identify change, continuity, cause, and sequence.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Past, Present, Timelines, and Change\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Past, Present, Timelines, and Change\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Past, Present, Timelines, and Change\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
@@ -1134,15 +1135,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W04-S1",
-          "prompt": "Which conclusion best matches Week 4, \"Unit Inquiry · How Communities Change\"?",
+          "prompt": "Why do communities change, and how can evidence help explain why?",
           "choices": [
             "Communities change for many reasons; historical explanations distinguish observation, inference, causes, effects, and uncertainty.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Unit Inquiry · How Communities Change\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Unit Inquiry · How Communities Change\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Unit Inquiry · How Communities Change\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 4
         }
       ],
@@ -1240,15 +1241,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W04-S1",
-          "prompt": "Which conclusion best matches Week 4, \"Unit Inquiry · How Communities Change\"?",
+          "prompt": "Why do communities change, and how can evidence help explain why?",
           "choices": [
             "Communities change for many reasons; historical explanations distinguish observation, inference, causes, effects, and uncertainty.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Unit Inquiry · How Communities Change\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Unit Inquiry · How Communities Change\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Unit Inquiry · How Communities Change\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
@@ -1460,15 +1461,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W05-S1",
-          "prompt": "Which conclusion best matches Week 5, \"Map Elements and Grid Locations\"?",
+          "prompt": "How do map elements and grids help us locate places precisely?",
           "choices": [
             "Maps use titles, legends, direction indicators, scale, dates, and grids to organize geographic information.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Map Elements and Grid Locations\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Map Elements and Grid Locations\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Map Elements and Grid Locations\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 5
         }
       ],
@@ -1566,15 +1567,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W05-S1",
-          "prompt": "Which conclusion best matches Week 5, \"Map Elements and Grid Locations\"?",
+          "prompt": "How do map elements and grids help us locate places precisely?",
           "choices": [
             "Maps use titles, legends, direction indicators, scale, dates, and grids to organize geographic information.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Map Elements and Grid Locations\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Map Elements and Grid Locations\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Map Elements and Grid Locations\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
@@ -1786,15 +1787,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W06-S1",
-          "prompt": "Which conclusion best matches Week 6, \"Physical, Political, and Thematic Maps\"?",
+          "prompt": "Why do geographers use different kinds of maps?",
           "choices": [
             "Different maps emphasize different information: natural features, political boundaries, or selected patterns and themes.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Physical, Political, and Thematic Maps\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Physical, Political, and Thematic Maps\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Physical, Political, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 6
         }
       ],
@@ -1892,15 +1893,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W06-S1",
-          "prompt": "Which conclusion best matches Week 6, \"Physical, Political, and Thematic Maps\"?",
+          "prompt": "Why do geographers use different kinds of maps?",
           "choices": [
             "Different maps emphasize different information: natural features, political boundaries, or selected patterns and themes.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Physical, Political, and Thematic Maps\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Physical, Political, and Thematic Maps\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Physical, Political, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
@@ -2112,15 +2113,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W07-S1",
-          "prompt": "Which conclusion best matches Week 7, \"North America · Countries, Oceans, and Major Features\"?",
+          "prompt": "How can we describe the location and major geography of North America?",
           "choices": [
             "North America contains many countries and diverse physical regions; Grade 2 learners should locate Canada, the United States, Mexico, surrounding oceans, and selected major features.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"North America · Countries, Oceans, and Major Features\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"North America · Countries, Oceans, and Major Features\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"North America · Countries, Oceans, and Major Features\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 7
         }
       ],
@@ -2218,15 +2219,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W07-S1",
-          "prompt": "Which conclusion best matches Week 7, \"North America · Countries, Oceans, and Major Features\"?",
+          "prompt": "How can we describe the location and major geography of North America?",
           "choices": [
             "North America contains many countries and diverse physical regions; Grade 2 learners should locate Canada, the United States, Mexico, surrounding oceans, and selected major features.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"North America · Countries, Oceans, and Major Features\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"North America · Countries, Oceans, and Major Features\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"North America · Countries, Oceans, and Major Features\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
@@ -2438,15 +2439,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W08-S1",
-          "prompt": "Which conclusion best matches Week 8, \"Human-Environment Interaction and Land Use\"?",
+          "prompt": "How do environments influence communities, and how do people change environments?",
           "choices": [
             "People depend on environments and resources, adapt to conditions, and change land through settlement, farming, transportation, industry, conservation, and planning.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Human-Environment Interaction and Land Use\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Human-Environment Interaction and Land Use\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Human-Environment Interaction and Land Use\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 8
         }
       ],
@@ -2544,15 +2545,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W08-S1",
-          "prompt": "Which conclusion best matches Week 8, \"Human-Environment Interaction and Land Use\"?",
+          "prompt": "How do environments influence communities, and how do people change environments?",
           "choices": [
             "People depend on environments and resources, adapt to conditions, and change land through settlement, farming, transportation, industry, conservation, and planning.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Human-Environment Interaction and Land Use\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Human-Environment Interaction and Land Use\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Human-Environment Interaction and Land Use\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
@@ -2764,15 +2765,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W09-S1",
-          "prompt": "Which conclusion best matches Week 9, \"Indigenous Nations · First Peoples of North America\"?",
+          "prompt": "How can we study Indigenous histories accurately and respectfully?",
           "choices": [
             "Indigenous peoples were the first inhabitants of North America and continue as diverse living nations and communities; study should use specific names, sources, and present-day continuity.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Indigenous Nations · First Peoples of North America\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Nations · First Peoples of North America\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Nations · First Peoples of North America\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 9
         }
       ],
@@ -2870,15 +2871,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W09-S1",
-          "prompt": "Which conclusion best matches Week 9, \"Indigenous Nations · First Peoples of North America\"?",
+          "prompt": "How can we study Indigenous histories accurately and respectfully?",
           "choices": [
             "Indigenous peoples were the first inhabitants of North America and continue as diverse living nations and communities; study should use specific names, sources, and present-day continuity.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Indigenous Nations · First Peoples of North America\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Nations · First Peoples of North America\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Nations · First Peoples of North America\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
@@ -3090,15 +3091,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W10-S1",
-          "prompt": "Which conclusion best matches Week 10, \"Regional Diversity among Indigenous Nations\"?",
+          "prompt": "How did geography, resources, and history contribute to diverse Indigenous ways of life?",
           "choices": [
             "Different Indigenous nations developed and continue distinct languages, governments, economies, technologies, arts, and environmental relationships; geography influenced but did not determine culture.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Regional Diversity among Indigenous Nations\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Regional Diversity among Indigenous Nations\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Regional Diversity among Indigenous Nations\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 10
         }
       ],
@@ -3196,15 +3197,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W10-S1",
-          "prompt": "Which conclusion best matches Week 10, \"Regional Diversity among Indigenous Nations\"?",
+          "prompt": "How did geography, resources, and history contribute to diverse Indigenous ways of life?",
           "choices": [
             "Different Indigenous nations developed and continue distinct languages, governments, economies, technologies, arts, and environmental relationships; geography influenced but did not determine culture.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Regional Diversity among Indigenous Nations\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Regional Diversity among Indigenous Nations\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Regional Diversity among Indigenous Nations\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
@@ -3416,15 +3417,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W11-S1",
-          "prompt": "Which conclusion best matches Week 11, \"Artifacts, Archaeology, Oral Traditions, and Sources\"?",
+          "prompt": "What kinds of sources can help us learn about the past?",
           "choices": [
             "Historical knowledge can come from artifacts, archaeology, oral traditions, documents, photographs, maps, and secondary interpretations; each source has strengths and limits.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Artifacts, Archaeology, Oral Traditions, and Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Artifacts, Archaeology, Oral Traditions, and Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Artifacts, Archaeology, Oral Traditions, and Sources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 11
         }
       ],
@@ -3522,15 +3523,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W11-S1",
-          "prompt": "Which conclusion best matches Week 11, \"Artifacts, Archaeology, Oral Traditions, and Sources\"?",
+          "prompt": "What kinds of sources can help us learn about the past?",
           "choices": [
             "Historical knowledge can come from artifacts, archaeology, oral traditions, documents, photographs, maps, and secondary interpretations; each source has strengths and limits.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Artifacts, Archaeology, Oral Traditions, and Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Artifacts, Archaeology, Oral Traditions, and Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Artifacts, Archaeology, Oral Traditions, and Sources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
@@ -3742,15 +3743,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W12-S1",
-          "prompt": "Which conclusion best matches Week 12, \"Indigenous Continuity, Change, and Respectful Inquiry\"?",
+          "prompt": "How can we explain both continuity and change in Indigenous histories?",
           "choices": [
             "Indigenous communities have experienced persistence, change, adaptation, dispossession, resistance, and cultural continuity; respectful inquiry avoids a vanished-peoples narrative.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Indigenous Continuity, Change, and Respectful Inquiry\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Continuity, Change, and Respectful Inquiry\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Continuity, Change, and Respectful Inquiry\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 12
         }
       ],
@@ -3848,15 +3849,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W12-S1",
-          "prompt": "Which conclusion best matches Week 12, \"Indigenous Continuity, Change, and Respectful Inquiry\"?",
+          "prompt": "How can we explain both continuity and change in Indigenous histories?",
           "choices": [
             "Indigenous communities have experienced persistence, change, adaptation, dispossession, resistance, and cultural continuity; respectful inquiry avoids a vanished-peoples narrative.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Indigenous Continuity, Change, and Respectful Inquiry\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Continuity, Change, and Respectful Inquiry\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Continuity, Change, and Respectful Inquiry\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
@@ -4068,15 +4069,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W13-S1",
-          "prompt": "Which conclusion best matches Week 13, \"Why People Move · Migration Pushes and Pulls\"?",
+          "prompt": "Why do people move from one place to another?",
           "choices": [
             "People migrate for many reasons, including safety, family, work, resources, opportunity, environment, conflict, or coercion; no single reason explains every migration.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Why People Move · Migration Pushes and Pulls\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Why People Move · Migration Pushes and Pulls\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Why People Move · Migration Pushes and Pulls\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 13
         }
       ],
@@ -4174,15 +4175,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W13-S1",
-          "prompt": "Which conclusion best matches Week 13, \"Why People Move · Migration Pushes and Pulls\"?",
+          "prompt": "Why do people move from one place to another?",
           "choices": [
             "People migrate for many reasons, including safety, family, work, resources, opportunity, environment, conflict, or coercion; no single reason explains every migration.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Why People Move · Migration Pushes and Pulls\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Why People Move · Migration Pushes and Pulls\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Why People Move · Migration Pushes and Pulls\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
@@ -4394,15 +4395,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W14-S1",
-          "prompt": "Which conclusion best matches Week 14, \"Colonial America · Settlement, Labor, and Perspectives\"?",
+          "prompt": "Why did people come to or get brought to colonial North America, and how did settlement affect others?",
           "choices": [
             "Colonial North America involved Indigenous nations, European colonists, free and indentured migrants, and enslaved Africans; settlement created exchange and communities while also causing conflict, land loss, coercion, and inequality.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Colonial America · Settlement, Labor, and Perspectives\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonial America · Settlement, Labor, and Perspectives\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonial America · Settlement, Labor, and Perspectives\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 14
         }
       ],
@@ -4500,15 +4501,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W14-S1",
-          "prompt": "Which conclusion best matches Week 14, \"Colonial America · Settlement, Labor, and Perspectives\"?",
+          "prompt": "Why did people come to or get brought to colonial North America, and how did settlement affect others?",
           "choices": [
             "Colonial North America involved Indigenous nations, European colonists, free and indentured migrants, and enslaved Africans; settlement created exchange and communities while also causing conflict, land loss, coercion, and inequality.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Colonial America · Settlement, Labor, and Perspectives\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonial America · Settlement, Labor, and Perspectives\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonial America · Settlement, Labor, and Perspectives\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
@@ -4720,15 +4721,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W15-S1",
-          "prompt": "Which conclusion best matches Week 15, \"Immigration Then and Now\"?",
+          "prompt": "How have immigration experiences changed and stayed similar over time?",
           "choices": [
             "Immigrants have arrived in different periods under different laws and conditions; experiences may include opportunity, family connection, discrimination, community-building, and contribution.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Immigration Then and Now\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Immigration Then and Now\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Immigration Then and Now\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 15
         }
       ],
@@ -4826,15 +4827,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W15-S1",
-          "prompt": "Which conclusion best matches Week 15, \"Immigration Then and Now\"?",
+          "prompt": "How have immigration experiences changed and stayed similar over time?",
           "choices": [
             "Immigrants have arrived in different periods under different laws and conditions; experiences may include opportunity, family connection, discrimination, community-building, and contribution.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Immigration Then and Now\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Immigration Then and Now\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Immigration Then and Now\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
@@ -5046,15 +5047,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W16-S1",
-          "prompt": "Which conclusion best matches Week 16, \"Cultural Exchange and Contributions of Immigrants\"?",
+          "prompt": "How have immigrants influenced communities and the United States?",
           "choices": [
             "Immigrants have contributed labor, businesses, ideas, languages, arts, foods, science, public service, institutions, and social movements while adapting and changing traditions.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Cultural Exchange and Contributions of Immigrants\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Cultural Exchange and Contributions of Immigrants\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Cultural Exchange and Contributions of Immigrants\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 16
         }
       ],
@@ -5152,15 +5153,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W16-S1",
-          "prompt": "Which conclusion best matches Week 16, \"Cultural Exchange and Contributions of Immigrants\"?",
+          "prompt": "How have immigrants influenced communities and the United States?",
           "choices": [
             "Immigrants have contributed labor, businesses, ideas, languages, arts, foods, science, public service, institutions, and social movements while adapting and changing traditions.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Cultural Exchange and Contributions of Immigrants\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Cultural Exchange and Contributions of Immigrants\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Cultural Exchange and Contributions of Immigrants\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
@@ -5372,15 +5373,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W17-S1",
-          "prompt": "Which conclusion best matches Week 17, \"Midyear Inquiry Review\"?",
+          "prompt": "How can we connect geography, history, sources, Indigenous histories, and migration?",
           "choices": [
             "Strong midyear understanding transfers map reading, chronology, source evaluation, comparison, cause/effect, and evidence-based explanation across topics.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Midyear Inquiry Review\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Midyear Inquiry Review\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Midyear Inquiry Review\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 17
         }
       ],
@@ -5478,15 +5479,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W17-S1",
-          "prompt": "Which conclusion best matches Week 17, \"Midyear Inquiry Review\"?",
+          "prompt": "How can we connect geography, history, sources, Indigenous histories, and migration?",
           "choices": [
             "Strong midyear understanding transfers map reading, chronology, source evaluation, comparison, cause/effect, and evidence-based explanation across topics.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Midyear Inquiry Review\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Midyear Inquiry Review\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Midyear Inquiry Review\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
@@ -5698,15 +5699,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W18-S1",
-          "prompt": "Which conclusion best matches Week 18, \"Midyear Evidence Lab and Closed-Book Midterm\"?",
+          "prompt": "What can I demonstrate independently about the first half of Grade 2 Social Studies?",
           "choices": [
             "The midyear gate measures durable understanding of inquiry, geography, history, Indigenous histories, migration, and source reasoning; below 80% triggers targeted correction and fresh reassessment.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Midyear Evidence Lab and Closed-Book Midterm\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Midyear Evidence Lab and Closed-Book Midterm\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Midyear Evidence Lab and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 18
         }
       ],
@@ -5804,15 +5805,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W18-S1",
-          "prompt": "Which conclusion best matches Week 18, \"Midyear Evidence Lab and Closed-Book Midterm\"?",
+          "prompt": "What can I demonstrate independently about the first half of Grade 2 Social Studies?",
           "choices": [
             "The midyear gate measures durable understanding of inquiry, geography, history, Indigenous histories, migration, and source reasoning; below 80% triggers targeted correction and fresh reassessment.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Midyear Evidence Lab and Closed-Book Midterm\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Midyear Evidence Lab and Closed-Book Midterm\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Midyear Evidence Lab and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
@@ -6024,15 +6025,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W19-S1",
-          "prompt": "Which conclusion best matches Week 19, \"Why People Form Governments\"?",
+          "prompt": "Why do communities create governments and public institutions?",
           "choices": [
             "Governments are organized systems for public authority, decisions, laws, services, and protections; authority should be studied with rules and limits.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Why People Form Governments\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Why People Form Governments\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Why People Form Governments\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 19
         }
       ],
@@ -6130,15 +6131,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W19-S1",
-          "prompt": "Which conclusion best matches Week 19, \"Why People Form Governments\"?",
+          "prompt": "Why do communities create governments and public institutions?",
           "choices": [
             "Governments are organized systems for public authority, decisions, laws, services, and protections; authority should be studied with rules and limits.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Why People Form Governments\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Why People Form Governments\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Why People Form Governments\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
@@ -6350,15 +6351,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W20-S1",
-          "prompt": "Which conclusion best matches Week 20, \"The Constitution, Rights, and Law of the Land\"?",
+          "prompt": "What role does the U.S. Constitution play in government and rights?",
           "choices": [
             "The Constitution is the foundational law organizing the federal government; amendments protect rights, and constitutional ideals have been debated and expanded over time.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"The Constitution, Rights, and Law of the Land\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"The Constitution, Rights, and Law of the Land\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"The Constitution, Rights, and Law of the Land\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 20
         }
       ],
@@ -6456,15 +6457,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W20-S1",
-          "prompt": "Which conclusion best matches Week 20, \"The Constitution, Rights, and Law of the Land\"?",
+          "prompt": "What role does the U.S. Constitution play in government and rights?",
           "choices": [
             "The Constitution is the foundational law organizing the federal government; amendments protect rights, and constitutional ideals have been debated and expanded over time.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"The Constitution, Rights, and Law of the Land\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"The Constitution, Rights, and Law of the Land\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"The Constitution, Rights, and Law of the Land\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
@@ -6676,15 +6677,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W21-S1",
-          "prompt": "Which conclusion best matches Week 21, \"How Laws Are Made, Carried Out, and Reviewed\"?",
+          "prompt": "How do different government institutions make, carry out, and interpret laws?",
           "choices": [
             "Legislatures make laws, executive institutions carry them out, and courts interpret laws and decide cases; exact powers vary by level of government.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"How Laws Are Made, Carried Out, and Reviewed\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"How Laws Are Made, Carried Out, and Reviewed\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"How Laws Are Made, Carried Out, and Reviewed\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 21
         }
       ],
@@ -6782,15 +6783,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W21-S1",
-          "prompt": "Which conclusion best matches Week 21, \"How Laws Are Made, Carried Out, and Reviewed\"?",
+          "prompt": "How do different government institutions make, carry out, and interpret laws?",
           "choices": [
             "Legislatures make laws, executive institutions carry them out, and courts interpret laws and decide cases; exact powers vary by level of government.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"How Laws Are Made, Carried Out, and Reviewed\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"How Laws Are Made, Carried Out, and Reviewed\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"How Laws Are Made, Carried Out, and Reviewed\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
@@ -7002,15 +7003,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W22-S1",
-          "prompt": "Which conclusion best matches Week 22, \"Responsible Citizenship, Service, and Civic Symbols\"?",
+          "prompt": "What does responsible citizenship look like in a constitutional community?",
           "choices": [
             "Citizenship includes rights, responsibilities, participation, service, informed decision-making, and care for shared institutions; civic symbols and documents should be studied in context.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Responsible Citizenship, Service, and Civic Symbols\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Responsible Citizenship, Service, and Civic Symbols\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Responsible Citizenship, Service, and Civic Symbols\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 22
         }
       ],
@@ -7108,15 +7109,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W22-S1",
-          "prompt": "Which conclusion best matches Week 22, \"Responsible Citizenship, Service, and Civic Symbols\"?",
+          "prompt": "What does responsible citizenship look like in a constitutional community?",
           "choices": [
             "Citizenship includes rights, responsibilities, participation, service, informed decision-making, and care for shared institutions; civic symbols and documents should be studied in context.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Responsible Citizenship, Service, and Civic Symbols\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Responsible Citizenship, Service, and Civic Symbols\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Responsible Citizenship, Service, and Civic Symbols\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
@@ -7328,15 +7329,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W23-S1",
-          "prompt": "Which conclusion best matches Week 23, \"Needs, Wants, Producers, and Consumers\"?",
+          "prompt": "How do producers and consumers make choices about goods and services?",
           "choices": [
             "Economies connect resources, work, production, goods, services, consumers, and choices; people face limits and tradeoffs.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Needs, Wants, Producers, and Consumers\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Needs, Wants, Producers, and Consumers\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Needs, Wants, Producers, and Consumers\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 23
         }
       ],
@@ -7434,15 +7435,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W23-S1",
-          "prompt": "Which conclusion best matches Week 23, \"Needs, Wants, Producers, and Consumers\"?",
+          "prompt": "How do producers and consumers make choices about goods and services?",
           "choices": [
             "Economies connect resources, work, production, goods, services, consumers, and choices; people face limits and tradeoffs.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Needs, Wants, Producers, and Consumers\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Needs, Wants, Producers, and Consumers\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Needs, Wants, Producers, and Consumers\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
@@ -7654,15 +7655,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W24-S1",
-          "prompt": "Which conclusion best matches Week 24, \"Supply, Demand, and Prices\"?",
+          "prompt": "How can supply and demand influence prices and choices?",
           "choices": [
             "Supply is how much is available and demand is how much consumers want and can buy; changes can influence prices and production decisions.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Supply, Demand, and Prices\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Supply, Demand, and Prices\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Supply, Demand, and Prices\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 24
         }
       ],
@@ -7760,15 +7761,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W24-S1",
-          "prompt": "Which conclusion best matches Week 24, \"Supply, Demand, and Prices\"?",
+          "prompt": "How can supply and demand influence prices and choices?",
           "choices": [
             "Supply is how much is available and demand is how much consumers want and can buy; changes can influence prices and production decisions.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Supply, Demand, and Prices\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Supply, Demand, and Prices\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Supply, Demand, and Prices\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
@@ -7980,15 +7981,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W25-S1",
-          "prompt": "Which conclusion best matches Week 25, \"Saving, Spending, and Opportunity Cost\"?",
+          "prompt": "How can people make thoughtful choices about saving and spending?",
           "choices": [
             "Money and time are limited resources; spending and saving involve goals, tradeoffs, benefits, costs, and opportunity costs.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Saving, Spending, and Opportunity Cost\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Saving, Spending, and Opportunity Cost\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Saving, Spending, and Opportunity Cost\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 25
         }
       ],
@@ -8086,15 +8087,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W25-S1",
-          "prompt": "Which conclusion best matches Week 25, \"Saving, Spending, and Opportunity Cost\"?",
+          "prompt": "How can people make thoughtful choices about saving and spending?",
           "choices": [
             "Money and time are limited resources; spending and saving involve goals, tradeoffs, benefits, costs, and opportunity costs.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Saving, Spending, and Opportunity Cost\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Saving, Spending, and Opportunity Cost\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Saving, Spending, and Opportunity Cost\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
@@ -8306,15 +8307,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W26-S1",
-          "prompt": "Which conclusion best matches Week 26, \"Trade, Transportation, and Global Connections\"?",
+          "prompt": "Why do communities and countries trade with one another?",
           "choices": [
             "People and countries trade because places have different resources, skills, products, and costs; transportation and communication connect producers and consumers.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Trade, Transportation, and Global Connections\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Trade, Transportation, and Global Connections\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Trade, Transportation, and Global Connections\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 26
         }
       ],
@@ -8412,15 +8413,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W26-S1",
-          "prompt": "Which conclusion best matches Week 26, \"Trade, Transportation, and Global Connections\"?",
+          "prompt": "Why do communities and countries trade with one another?",
           "choices": [
             "People and countries trade because places have different resources, skills, products, and costs; transportation and communication connect producers and consumers.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Trade, Transportation, and Global Connections\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Trade, Transportation, and Global Connections\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Trade, Transportation, and Global Connections\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
@@ -8632,15 +8633,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W27-S1",
-          "prompt": "Which conclusion best matches Week 27, \"Public Servants and Community Leadership\"?",
+          "prompt": "How do people in public service make a difference?",
           "choices": [
             "Public servants and community leaders work in many roles; impact should be evaluated through evidence, responsibilities, and outcomes rather than fame alone.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Public Servants and Community Leadership\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Public Servants and Community Leadership\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Public Servants and Community Leadership\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 27
         }
       ],
@@ -8738,15 +8739,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W27-S1",
-          "prompt": "Which conclusion best matches Week 27, \"Public Servants and Community Leadership\"?",
+          "prompt": "How do people in public service make a difference?",
           "choices": [
             "Public servants and community leaders work in many roles; impact should be evaluated through evidence, responsibilities, and outcomes rather than fame alone.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Public Servants and Community Leadership\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Public Servants and Community Leadership\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Public Servants and Community Leadership\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
@@ -8958,15 +8959,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W28-S1",
-          "prompt": "Which conclusion best matches Week 28, \"African American Contributions and Oral Traditions\"?",
+          "prompt": "How have African Americans shaped civic life, culture, science, work, and public service?",
           "choices": [
             "African American history includes diverse contributions, institutions, oral traditions, leadership, creativity, resistance, science, business, arts, and community-building.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"African American Contributions and Oral Traditions\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"African American Contributions and Oral Traditions\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"African American Contributions and Oral Traditions\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 28
         }
       ],
@@ -9064,15 +9065,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W28-S1",
-          "prompt": "Which conclusion best matches Week 28, \"African American Contributions and Oral Traditions\"?",
+          "prompt": "How have African Americans shaped civic life, culture, science, work, and public service?",
           "choices": [
             "African American history includes diverse contributions, institutions, oral traditions, leadership, creativity, resistance, science, business, arts, and community-building.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"African American Contributions and Oral Traditions\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"African American Contributions and Oral Traditions\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"African American Contributions and Oral Traditions\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
@@ -9284,15 +9285,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W29-S1",
-          "prompt": "Which conclusion best matches Week 29, \"Biographies, Multiple Perspectives, and Historical Impact\"?",
+          "prompt": "How can we decide whether and how a person made a difference?",
           "choices": [
             "Historical impact should be studied through context, actions, evidence, consequences, multiple perspectives, and intended and unintended effects.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Biographies, Multiple Perspectives, and Historical Impact\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Biographies, Multiple Perspectives, and Historical Impact\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Biographies, Multiple Perspectives, and Historical Impact\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 29
         }
       ],
@@ -9390,15 +9391,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W29-S1",
-          "prompt": "Which conclusion best matches Week 29, \"Biographies, Multiple Perspectives, and Historical Impact\"?",
+          "prompt": "How can we decide whether and how a person made a difference?",
           "choices": [
             "Historical impact should be studied through context, actions, evidence, consequences, multiple perspectives, and intended and unintended effects.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Biographies, Multiple Perspectives, and Historical Impact\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Biographies, Multiple Perspectives, and Historical Impact\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Biographies, Multiple Perspectives, and Historical Impact\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
@@ -9610,15 +9611,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W30-S1",
-          "prompt": "Which conclusion best matches Week 30, \"Community Problem Solving and Service\"?",
+          "prompt": "How can people use evidence and service to improve a community?",
           "choices": [
             "Community problem solving involves defining a problem, gathering evidence, identifying stakeholders, comparing options, taking safe action, and evaluating results.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Community Problem Solving and Service\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Community Problem Solving and Service\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Community Problem Solving and Service\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 30
         }
       ],
@@ -9716,15 +9717,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W30-S1",
-          "prompt": "Which conclusion best matches Week 30, \"Community Problem Solving and Service\"?",
+          "prompt": "How can people use evidence and service to improve a community?",
           "choices": [
             "Community problem solving involves defining a problem, gathering evidence, identifying stakeholders, comparing options, taking safe action, and evaluating results.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Community Problem Solving and Service\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Community Problem Solving and Service\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Community Problem Solving and Service\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
@@ -9936,15 +9937,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W31-S1",
-          "prompt": "Which conclusion best matches Week 31, \"Oral Traditions, Folktales, and Cultural Sources\"?",
+          "prompt": "How can stories and oral traditions be used as cultural and historical sources?",
           "choices": [
             "Folktales, oral traditions, songs, and stories can reveal values, memory, identity, and imagination, but they should not automatically be treated as literal factual records.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Oral Traditions, Folktales, and Cultural Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Oral Traditions, Folktales, and Cultural Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Oral Traditions, Folktales, and Cultural Sources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 31
         }
       ],
@@ -10042,15 +10043,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W31-S1",
-          "prompt": "Which conclusion best matches Week 31, \"Oral Traditions, Folktales, and Cultural Sources\"?",
+          "prompt": "How can stories and oral traditions be used as cultural and historical sources?",
           "choices": [
             "Folktales, oral traditions, songs, and stories can reveal values, memory, identity, and imagination, but they should not automatically be treated as literal factual records.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Oral Traditions, Folktales, and Cultural Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Oral Traditions, Folktales, and Cultural Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Oral Traditions, Folktales, and Cultural Sources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
@@ -10262,15 +10263,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W32-S1",
-          "prompt": "Which conclusion best matches Week 32, \"Communication Across Time\"?",
+          "prompt": "How have communication technologies changed communities?",
           "choices": [
             "Communication has changed from oral messengers and letters to print, telephone, broadcast, digital networks, and mobile communication; changes affect speed, reach, access, privacy, and public life.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Communication Across Time\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Communication Across Time\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Communication Across Time\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 32
         }
       ],
@@ -10368,15 +10369,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W32-S1",
-          "prompt": "Which conclusion best matches Week 32, \"Communication Across Time\"?",
+          "prompt": "How have communication technologies changed communities?",
           "choices": [
             "Communication has changed from oral messengers and letters to print, telephone, broadcast, digital networks, and mobile communication; changes affect speed, reach, access, privacy, and public life.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Communication Across Time\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Communication Across Time\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Communication Across Time\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
@@ -10588,15 +10589,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W33-S1",
-          "prompt": "Which conclusion best matches Week 33, \"Facts, Opinions, Advertising, and Source Trust\"?",
+          "prompt": "How can second graders evaluate information before believing or sharing it?",
           "choices": [
             "Information literacy begins with distinguishing fact, opinion, and persuasion; identifying creator and purpose; checking evidence; and corroborating important claims.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Facts, Opinions, Advertising, and Source Trust\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Facts, Opinions, Advertising, and Source Trust\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Facts, Opinions, Advertising, and Source Trust\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 33
         }
       ],
@@ -10694,15 +10695,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W33-S1",
-          "prompt": "Which conclusion best matches Week 33, \"Facts, Opinions, Advertising, and Source Trust\"?",
+          "prompt": "How can second graders evaluate information before believing or sharing it?",
           "choices": [
             "Information literacy begins with distinguishing fact, opinion, and persuasion; identifying creator and purpose; checking evidence; and corroborating important claims.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Facts, Opinions, Advertising, and Source Trust\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Facts, Opinions, Advertising, and Source Trust\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Facts, Opinions, Advertising, and Source Trust\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
@@ -10914,15 +10915,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W34-S1",
-          "prompt": "Which conclusion best matches Week 34, \"Cultural Comparison without Stereotypes\"?",
+          "prompt": "How can we compare communities carefully and respectfully?",
           "choices": [
             "Responsible comparison uses multiple sources, similarities and differences, precise language, and awareness that communities contain internal diversity and change.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Cultural Comparison without Stereotypes\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Cultural Comparison without Stereotypes\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Cultural Comparison without Stereotypes\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 34
         }
       ],
@@ -11020,15 +11021,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W34-S1",
-          "prompt": "Which conclusion best matches Week 34, \"Cultural Comparison without Stereotypes\"?",
+          "prompt": "How can we compare communities carefully and respectfully?",
           "choices": [
             "Responsible comparison uses multiple sources, similarities and differences, precise language, and awareness that communities contain internal diversity and change.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Cultural Comparison without Stereotypes\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Cultural Comparison without Stereotypes\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Cultural Comparison without Stereotypes\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
@@ -11240,15 +11241,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W35-S1",
-          "prompt": "Which conclusion best matches Week 35, \"Research and Community Action Capstone\"?",
+          "prompt": "How can I investigate a Social Studies question and use evidence to recommend responsible action?",
           "choices": [
             "A strong capstone moves from a focused question to multiple sources, notes, corroboration, claim, options, evidence-based recommendation, public product, oral defense, and reflection.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Research and Community Action Capstone\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Research and Community Action Capstone\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Research and Community Action Capstone\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 35
         }
       ],
@@ -11346,15 +11347,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W35-S1",
-          "prompt": "Which conclusion best matches Week 35, \"Research and Community Action Capstone\"?",
+          "prompt": "How can I investigate a Social Studies question and use evidence to recommend responsible action?",
           "choices": [
             "A strong capstone moves from a focused question to multiple sources, notes, corroboration, claim, options, evidence-based recommendation, public product, oral defense, and reflection.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Research and Community Action Capstone\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Research and Community Action Capstone\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Research and Community Action Capstone\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
@@ -11566,15 +11567,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W36-S1",
-          "prompt": "Which conclusion best matches Week 36, \"Final Synthesis, Closed-Book Final, and Grade 3 Bridge\"?",
+          "prompt": "What durable Grade 2 Social Studies knowledge and skills am I ready to carry into Grade 3?",
           "choices": [
             "Course completion requires 80% on all weekly gates, the midterm, and cumulative final, plus portfolio/capstone evidence showing inquiry, source use, and disciplinary reasoning.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Final Synthesis, Closed-Book Final, and Grade 3 Bridge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Final Synthesis, Closed-Book Final, and Grade 3 Bridge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Final Synthesis, Closed-Book Final, and Grade 3 Bridge\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 36
         }
       ],
@@ -11672,15 +11673,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
         },
         {
           "id": "G2SS-W36-S1",
-          "prompt": "Which conclusion best matches Week 36, \"Final Synthesis, Closed-Book Final, and Grade 3 Bridge\"?",
+          "prompt": "What durable Grade 2 Social Studies knowledge and skills am I ready to carry into Grade 3?",
           "choices": [
             "Course completion requires 80% on all weekly gates, the midterm, and cumulative final, plus portfolio/capstone evidence showing inquiry, source use, and disciplinary reasoning.",
-            "The topic can be understood without evidence.",
-            "Every person or community has the same experience.",
-            "Only memorizing vocabulary matters."
+            "The topic \"Final Synthesis, Closed-Book Final, and Grade 3 Bridge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Final Synthesis, Closed-Book Final, and Grade 3 Bridge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Final Synthesis, Closed-Book Final, and Grade 3 Bridge\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
