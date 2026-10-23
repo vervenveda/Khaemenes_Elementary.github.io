@@ -9,8 +9,8 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
     "weeklyDraw": 6,
     "midtermDraw": 20,
     "finalDraw": 24,
-    "version": "1.1.0",
-    "updated": "2026-10-19",
+    "version": "1.2.0",
+    "updated": "2026-10-23",
     "storageKey": "khaemenes_grade1_social_studies_v1",
     "weeklyMode": "open-book",
     "midtermMode": "closed-book teacher-supervised",
@@ -38,7 +38,15 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
     "localizationPolicy": "Keep the national Grade 1 Social Studies core and 80% mastery gates invariant. Localize appropriate community examples, state identity/geography, historical sources, public institutions, civic symbols, elections, environmental cases, and service/action evidence.",
     "weeklyCurrentItems": 8,
     "weeklyBankMin": 8,
-    "weeklyBankMax": 10
+    "weeklyBankMax": 10,
+    "antiRepeatDepth": 2,
+    "cumulativeBlueprint": "unit-stratified",
+    "assessmentModel": "Randomized forms with answer shuffling, two-form anti-repeat weighting, saved attempt snapshots, and unit-stratified cumulative exams.",
+    "statePacks": {
+      "florida": "STATE_PACK_FLORIDA.md"
+    },
+    "localizationWorkflow": "Teacher-selected generic or Florida context with checkpoint evidence saved in the learner record.",
+    "constructedEvidenceReview": "observed / revise / accepted is recorded separately from the 80% objective mastery gate."
   },
   "frameworks": [
     {
@@ -9903,5 +9911,63 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
     "mode": "national-core-state-local-overlay",
     "rule": "State/local examples, sources, maps, biographies, institutions, and case studies may be substituted or added where appropriate, but the national disciplinary core and 80% mastery requirements remain intact.",
     "guide": "STATE_LOCALIZATION_GUIDE.md"
+  },
+  "localizationTasks": {
+    "3": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 3, \"Roles, Work, and Responsibility at Home and School\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 3, \"Roles, Work, and Responsibility at Home and School\". Record the evidence and connection."
+    },
+    "4": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 4, \"Unit Inquiry · Communities Need Cooperation\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 4, \"Unit Inquiry · Communities Need Cooperation\". Record the evidence and connection."
+    },
+    "11": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 11, \"My Community, State, Nation, and World\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 11, \"My Community, State, Nation, and World\". Record the evidence and connection."
+    },
+    "12": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 12, \"Physical and Human Characteristics of Place\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 12, \"Physical and Human Characteristics of Place\". Record the evidence and connection."
+    },
+    "15": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 15, \"Family and Community History Through Sources\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 15, \"Family and Community History Through Sources\". Record the evidence and connection."
+    },
+    "16": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 16, \"Change and Continuity in Daily Life\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 16, \"Change and Continuity in Daily Life\". Record the evidence and connection."
+    },
+    "26": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 26, \"American Symbols, Landmarks, and Shared Public Memory\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 26, \"American Symbols, Landmarks, and Shared Public Memory\". Record the evidence and connection."
+    },
+    "27": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 27, \"Founding Ideals and Important Civic Documents\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 27, \"Founding Ideals and Important Civic Documents\". Record the evidence and connection."
+    },
+    "28": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 28, \"Local, State, and National Government\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 28, \"Local, State, and National Government\". Record the evidence and connection."
+    },
+    "29": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 29, \"Voting, Elections, and Representation\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 29, \"Voting, Elections, and Representation\". Record the evidence and connection."
+    },
+    "30": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 30, \"People and Environments\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 30, \"People and Environments\". Record the evidence and connection."
+    },
+    "31": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 31, \"How Communities Change and Plan\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 31, \"How Communities Change and Plan\". Record the evidence and connection."
+    },
+    "34": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 34, \"Service and Informed Civic Action\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 34, \"Service and Informed Civic Action\". Record the evidence and connection."
+    },
+    "35": {
+      "generic": "Use a state/local picture, map, helper, public place, historical source, civic symbol, government example, or community case connected to Week 35, \"Unit Inquiry · Evidence to Action\". Record what the learner observed, drew, explained, or used.",
+      "florida": "Use a Florida-specific picture, map, public place, helper/service, state/local symbol, museum/library source, Indigenous community source, or community example connected to Week 35, \"Unit Inquiry · Evidence to Action\". Record the evidence and connection."
+    }
   }
 };
