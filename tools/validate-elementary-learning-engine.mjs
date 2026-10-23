@@ -228,6 +228,9 @@ expect(ledger.includes("function depthBandPlan("),"Weeks 08–12 topic-aware dep
 expect(ledger.includes('data-depth-band",plan.band'),"Weeks 08–12 rendered depth marker is missing.");
 expect(ledger.includes('weeks:Object.freeze([8,9,10,11,12])'),"Weeks 08–12 depth-band export drifted.");
 expect(ledger.includes("formativeOnly:true"),"Depth band lost its explicit formative-only boundary.");
+expect(ledger.includes('const heading=(article.querySelector("h4")?.textContent||"").trim();'),"Depth planner lost Grade 02 heading-based focus extraction.");
+expect(ledger.includes('const content=heading.split(":").slice(1).join(":").trim();'),"Depth planner no longer derives concise Grade 02 content focus from lesson headings.");
+expect(ledger.indexOf('const heading=(article.querySelector("h4")?.textContent||"").trim();')<ledger.indexOf('const objective=paragraphs.find'),"Grade 02 focus extraction must run before the verbose objective fallback.");
 
 const focusContext={console};focusContext.globalThis=focusContext;focusContext.window=focusContext;
 vm.createContext(focusContext);
@@ -242,6 +245,15 @@ for(const [g,subjects] of Object.entries(subjectSets)){
       const file=`grades/grade-${g}/subjects/${subject}/week-${ww}.html`;
       const html=read(file);
       expect(html.includes("khaemenes-elementary-learning-ledger.js"),`${file} cannot receive the Weeks 08–12 depth band.`);
+      const focusMapPos=html.indexOf("khaemenes-elementary-focus-map.js");
+      const ledgerPos=html.indexOf("khaemenes-elementary-learning-ledger.js");
+      expect(focusMapPos>=0&&ledgerPos>focusMapPos,`${file} must load the focus map before the topic-aware depth ledger.`);
+      if(g==="02"){
+        const lessonHeadings=[...html.matchAll(/<article class=['"]lesson['"][^>]*>[\\s\\S]*?<h4>([\\s\\S]*?)<\\/h4>/gi)]
+          .map(m=>m[1].replace(/<[^>]+>/g,"").trim());
+        expect(lessonHeadings.length===5,`${file} must retain five Grade 02 content-bearing lesson headings.`);
+        expect(lessonHeadings.every(h=>h.includes(":")),`${file} Grade 02 lesson headings must expose concise focus text after the day label.`);
+      }
       depthBandPages++;
     }
   }
