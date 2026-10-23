@@ -25,6 +25,7 @@ on:
       - 'scripts/inject-elementary-learning-engine.mjs'
       - 'tools/validate-elementary-learning-engine.mjs'
       - 'tools/validate-elementary-week06-evidence.mjs'
+      - 'tests/elementary-learner-isolation.test.cjs'
       - '.github/workflows/elementary-learning-engine-regression.yml'
   pull_request:
     paths:
@@ -48,6 +49,7 @@ on:
       - 'scripts/inject-elementary-learning-engine.mjs'
       - 'tools/validate-elementary-learning-engine.mjs'
       - 'tools/validate-elementary-week06-evidence.mjs'
+      - 'tests/elementary-learner-isolation.test.cjs'
       - '.github/workflows/elementary-learning-engine-regression.yml'
   workflow_dispatch:
 
@@ -72,3 +74,5 @@ jobs:
         run: node tools/validate-elementary-learning-engine.mjs
       - name: Validate Week 6 instructional evidence across Grades 2–5
         run: node tools/validate-elementary-week06-evidence.mjs
+      - name: Validate learner isolation across Grades 01–05
+        run: node tests/elementary-learner-isolation.test.cjs
