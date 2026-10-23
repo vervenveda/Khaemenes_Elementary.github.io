@@ -9,7 +9,7 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
     "weeklyDraw": 6,
     "midtermDraw": 20,
     "finalDraw": 24,
-    "version": "1.2.0",
+    "version": "1.4.0",
     "updated": "2026-10-23",
     "storageKey": "khaemenes_grade1_social_studies_v1",
     "weeklyMode": "open-book",
@@ -38,15 +38,30 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
     "localizationPolicy": "Keep the national Grade 1 Social Studies core and 80% mastery gates invariant. Localize appropriate community examples, state identity/geography, historical sources, public institutions, civic symbols, elections, environmental cases, and service/action evidence.",
     "weeklyCurrentItems": 8,
     "weeklyBankMin": 8,
-    "weeklyBankMax": 10,
+    "weeklyBankMax": 12,
     "antiRepeatDepth": 2,
     "cumulativeBlueprint": "unit-stratified",
     "assessmentModel": "Randomized forms with answer shuffling, two-form anti-repeat weighting, saved attempt snapshots, and unit-stratified cumulative exams.",
     "statePacks": {
-      "florida": "STATE_PACK_FLORIDA.md"
+      "florida": "STATE_PACK_FLORIDA.md",
+      "california": "STATE_PACK_CALIFORNIA.md",
+      "newYork": "STATE_PACK_NEW_YORK.md",
+      "template": "STATE_PACK_TEMPLATE.md"
     },
     "localizationWorkflow": "Teacher-selected generic or Florida context with checkpoint evidence saved in the learner record.",
-    "constructedEvidenceReview": "observed / revise / accepted is recorded separately from the 80% objective mastery gate."
+    "constructedEvidenceReview": "observed / revise / accepted is recorded separately from the 80% objective mastery gate.",
+    "sourceStudios": true,
+    "sourceStudioSourcesPerWeek": 3,
+    "sourceLinkedWeeklyItems": 2,
+    "evidenceLadder": "Grade 1: oral/dictated claim + one evidence clue.",
+    "statePackSchema": "../../../../SOCIAL_STUDIES_STATE_PACK_SCHEMA.json",
+    "statePackTemplate": "STATE_PACK_TEMPLATE.md",
+    "statePackStatus": {
+      "florida": "complete",
+      "california": "validation",
+      "newYork": "validation",
+      "template": "template"
+    }
   },
   "frameworks": [
     {
@@ -224,6 +239,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "answer": 0,
           "sourceWeek": 1,
           "kind": "inquiry"
+        },
+        {
+          "id": "G1SS-W01-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 1?",
+          "choices": [
+            "People have identities, roles, strengths, responsibilities, and communities; we can describe ourselves without assuming everyone is the same.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 1
+        },
+        {
+          "id": "G1SS-W01-ST2",
+          "prompt": "Which finding appears in Source C for Week 1?",
+          "choices": [
+            "The qualities, experiences, and connections that help describe who someone is",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 1
         }
       ],
       "currentQuestions": [
@@ -325,7 +366,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 1,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 1",
+        "inquiry": "Who am I as a learner and community member?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 1 · Belonging, Identity, and Community",
+            "content": "People have identities, roles, strengths, responsibilities, and communities; we can describe ourselves without assuming everyone is the same.",
+            "accessibleDescription": "A concise evidence brief for Belonging, Identity, and Community.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 1 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Belonging, Identity, and Community",
+            "rows": [
+              [
+                "identity",
+                "identity"
+              ],
+              [
+                "community",
+                "community"
+              ],
+              [
+                "role",
+                "role"
+              ],
+              [
+                "responsibility",
+                "responsibility"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 1 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to Who am I as a learner and community member?",
+            "findings": [
+              {
+                "question": "Identity means...",
+                "finding": "The qualities, experiences, and connections that help describe who someone is"
+              },
+              {
+                "question": "A community member can contribute by...",
+                "finding": "Taking care of shared responsibilities"
+              },
+              {
+                "question": "A role is...",
+                "finding": "A part or responsibility someone has in a group"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 1 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"Who am I as a learner and community member?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 2,
@@ -486,6 +609,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 1
+        },
+        {
+          "id": "G1SS-W02-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 2?",
+          "choices": [
+            "Families and households take many forms and may share care, responsibilities, stories, traditions, and resources in different ways.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 2
+        },
+        {
+          "id": "G1SS-W02-ST2",
+          "prompt": "Which finding appears in Source C for Week 2?",
+          "choices": [
+            "Look different and still provide care and belonging",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 2
         }
       ],
       "currentQuestions": [
@@ -587,7 +736,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 2,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 2",
+        "inquiry": "How can families and households be alike and different?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 2 · Families and Households",
+            "content": "Families and households take many forms and may share care, responsibilities, stories, traditions, and resources in different ways.",
+            "accessibleDescription": "A concise evidence brief for Families and Households.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 2 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Families and Households",
+            "rows": [
+              [
+                "family",
+                "family"
+              ],
+              [
+                "household",
+                "household"
+              ],
+              [
+                "care",
+                "care"
+              ],
+              [
+                "compare",
+                "compare"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 2 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can families and households be alike and different?",
+            "findings": [
+              {
+                "question": "Families can...",
+                "finding": "Look different and still provide care and belonging"
+              },
+              {
+                "question": "A household is...",
+                "finding": "People who live together and share a home or living arrangement"
+              },
+              {
+                "question": "To compare means...",
+                "finding": "Look for similarities and differences"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 2 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can families and households be alike and different?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 3,
@@ -760,6 +991,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 1
+        },
+        {
+          "id": "G1SS-W03-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 3?",
+          "choices": [
+            "Groups function through shared work, care, cooperation, and different roles; responsibilities can change with age, ability, and situation.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 3
+        },
+        {
+          "id": "G1SS-W03-ST2",
+          "prompt": "Which finding appears in Source C for Week 3?",
+          "choices": [
+            "Work together toward a shared goal",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 3
         }
       ],
       "currentQuestions": [
@@ -861,7 +1118,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 3,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 3",
+        "inquiry": "How do shared responsibilities help groups work?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 3 · Roles, Work, and Responsibility at Home and School",
+            "content": "Groups function through shared work, care, cooperation, and different roles; responsibilities can change with age, ability, and situation.",
+            "accessibleDescription": "A concise evidence brief for Roles, Work, and Responsibility at Home and School.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 3 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Roles, Work, and Responsibility at Home and School",
+            "rows": [
+              [
+                "cooperate",
+                "cooperate"
+              ],
+              [
+                "responsibility",
+                "responsibility"
+              ],
+              [
+                "task",
+                "task"
+              ],
+              [
+                "contribute",
+                "contribute"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 3 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do shared responsibilities help groups work?",
+            "findings": [
+              {
+                "question": "To cooperate means...",
+                "finding": "Work together toward a shared goal"
+              },
+              {
+                "question": "A shared responsibility is...",
+                "finding": "A task more than one person helps care for"
+              },
+              {
+                "question": "Responsibilities may change because...",
+                "finding": "People have different ages, abilities, roles, and circumstances"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 3 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do shared responsibilities help groups work?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 4,
@@ -1034,6 +1373,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 2
+        },
+        {
+          "id": "G1SS-W04-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 4?",
+          "choices": [
+            "Strong community explanations use examples and evidence about roles, cooperation, care, fairness, and responsibility.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 4
+        },
+        {
+          "id": "G1SS-W04-ST2",
+          "prompt": "Which finding appears in Source C for Week 4?",
+          "choices": [
+            "A statement we can support with evidence",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 4
         }
       ],
       "currentQuestions": [
@@ -1135,7 +1500,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 4,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 4",
+        "inquiry": "How can we use evidence to explain what makes a community work?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 4 · Unit Inquiry · Communities Need Cooperation",
+            "content": "Strong community explanations use examples and evidence about roles, cooperation, care, fairness, and responsibility.",
+            "accessibleDescription": "A concise evidence brief for Unit Inquiry · Communities Need Cooperation.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 4 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Unit Inquiry · Communities Need Cooperation",
+            "rows": [
+              [
+                "claim",
+                "claim"
+              ],
+              [
+                "evidence",
+                "evidence"
+              ],
+              [
+                "example",
+                "example"
+              ],
+              [
+                "explain",
+                "explain"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 4 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can we use evidence to explain what makes a community work?",
+            "findings": [
+              {
+                "question": "A claim is...",
+                "finding": "A statement we can support with evidence"
+              },
+              {
+                "question": "Evidence is...",
+                "finding": "Information or examples that help support an idea"
+              },
+              {
+                "question": "Which supports the claim 'Cooperation helps communities'?",
+                "finding": "Two learners share tasks to clean a common space"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 4 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can we use evidence to explain what makes a community work?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 5,
@@ -1308,6 +1755,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 3
+        },
+        {
+          "id": "G1SS-W05-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 5?",
+          "choices": [
+            "Rules can organize shared life; rights protect important freedoms or claims; responsibilities describe duties that help people live together.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 5
+        },
+        {
+          "id": "G1SS-W05-ST2",
+          "prompt": "Which finding appears in Source C for Week 5?",
+          "choices": [
+            "An agreed or established direction for behavior",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 5
         }
       ],
       "currentQuestions": [
@@ -1409,7 +1882,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 5,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 5",
+        "inquiry": "Why do communities have rules, rights, and responsibilities?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 5 · Rules, Rights, and Responsibilities",
+            "content": "Rules can organize shared life; rights protect important freedoms or claims; responsibilities describe duties that help people live together.",
+            "accessibleDescription": "A concise evidence brief for Rules, Rights, and Responsibilities.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 5 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Rules, Rights, and Responsibilities",
+            "rows": [
+              [
+                "rule",
+                "rule"
+              ],
+              [
+                "right",
+                "right"
+              ],
+              [
+                "responsibility",
+                "responsibility"
+              ],
+              [
+                "purpose",
+                "purpose"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 5 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to Why do communities have rules, rights, and responsibilities?",
+            "findings": [
+              {
+                "question": "A rule is...",
+                "finding": "An agreed or established direction for behavior"
+              },
+              {
+                "question": "A right is...",
+                "finding": "A protected freedom or claim people may have under rules or laws"
+              },
+              {
+                "question": "A responsibility is...",
+                "finding": "A duty or action we are expected to carry out"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 5 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"Why do communities have rules, rights, and responsibilities?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 6,
@@ -1582,6 +2137,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 4
+        },
+        {
+          "id": "G1SS-W06-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 6?",
+          "choices": [
+            "Fair problem solving uses listening, evidence, agreed procedures, perspective, and repair rather than power alone.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 6
+        },
+        {
+          "id": "G1SS-W06-ST2",
+          "prompt": "Which finding appears in Source C for Week 6?",
+          "choices": [
+            "A disagreement or struggle between people or groups",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 6
         }
       ],
       "currentQuestions": [
@@ -1683,7 +2264,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 6,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 6",
+        "inquiry": "How can people solve disagreements fairly?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 6 · Fairness, Conflict, and Repair",
+            "content": "Fair problem solving uses listening, evidence, agreed procedures, perspective, and repair rather than power alone.",
+            "accessibleDescription": "A concise evidence brief for Fairness, Conflict, and Repair.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 6 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Fairness, Conflict, and Repair",
+            "rows": [
+              [
+                "fairness",
+                "fairness"
+              ],
+              [
+                "conflict",
+                "conflict"
+              ],
+              [
+                "perspective",
+                "perspective"
+              ],
+              [
+                "repair",
+                "repair"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 6 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can people solve disagreements fairly?",
+            "findings": [
+              {
+                "question": "Conflict means...",
+                "finding": "A disagreement or struggle between people or groups"
+              },
+              {
+                "question": "Perspective means...",
+                "finding": "A point of view shaped by what a person knows or experiences"
+              },
+              {
+                "question": "A fair conflict process includes...",
+                "finding": "Listening to more than one side"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 6 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can people solve disagreements fairly?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 7,
@@ -1856,6 +2519,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 5
+        },
+        {
+          "id": "G1SS-W07-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 7?",
+          "choices": [
+            "Authority comes from recognized roles and rules; responsible leaders explain decisions, follow appropriate limits, listen, and protect shared purposes.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 7
+        },
+        {
+          "id": "G1SS-W07-ST2",
+          "prompt": "Which finding appears in Source C for Week 7?",
+          "choices": [
+            "Recognized power or responsibility within a role or system",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 7
         }
       ],
       "currentQuestions": [
@@ -1957,7 +2646,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 7,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 7",
+        "inquiry": "What makes authority legitimate and leadership responsible at a child's level?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 7 · Authority and Responsible Leadership",
+            "content": "Authority comes from recognized roles and rules; responsible leaders explain decisions, follow appropriate limits, listen, and protect shared purposes.",
+            "accessibleDescription": "A concise evidence brief for Authority and Responsible Leadership.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 7 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Authority and Responsible Leadership",
+            "rows": [
+              [
+                "authority",
+                "authority"
+              ],
+              [
+                "leader",
+                "leader"
+              ],
+              [
+                "limit",
+                "limit"
+              ],
+              [
+                "accountability",
+                "accountability"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 7 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to What makes authority legitimate and leadership responsible at a child's level?",
+            "findings": [
+              {
+                "question": "Authority is...",
+                "finding": "Recognized power or responsibility within a role or system"
+              },
+              {
+                "question": "Responsible leaders should...",
+                "finding": "Follow rules, listen, explain decisions, and consider who is affected"
+              },
+              {
+                "question": "A limit on authority means...",
+                "finding": "A leader cannot properly do everything just because they hold a role"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 7 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"What makes authority legitimate and leadership responsible at a child's level?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 8,
@@ -2130,6 +2901,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 6
+        },
+        {
+          "id": "G1SS-W08-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 8?",
+          "choices": [
+            "Some group decisions are made by everyone participating directly; others are made by chosen representatives within defined rules.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 8
+        },
+        {
+          "id": "G1SS-W08-ST2",
+          "prompt": "Which finding appears in Source C for Week 8?",
+          "choices": [
+            "Eligible participants make a decision directly, such as by voting themselves",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 8
         }
       ],
       "currentQuestions": [
@@ -2231,7 +3028,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 8,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 8",
+        "inquiry": "How can groups make decisions directly or through representatives?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 8 · Direct and Representative Decisions",
+            "content": "Some group decisions are made by everyone participating directly; others are made by chosen representatives within defined rules.",
+            "accessibleDescription": "A concise evidence brief for Direct and Representative Decisions.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 8 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Direct and Representative Decisions",
+            "rows": [
+              [
+                "direct democracy",
+                "direct democracy"
+              ],
+              [
+                "representative",
+                "representative"
+              ],
+              [
+                "vote",
+                "vote"
+              ],
+              [
+                "majority",
+                "majority"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 8 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can groups make decisions directly or through representatives?",
+            "findings": [
+              {
+                "question": "Direct democracy means...",
+                "finding": "Eligible participants make a decision directly, such as by voting themselves"
+              },
+              {
+                "question": "A representative is...",
+                "finding": "Someone chosen or authorized to speak or decide for others in a defined role"
+              },
+              {
+                "question": "A majority is...",
+                "finding": "More than half or the larger number in a vote/group"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 8 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can groups make decisions directly or through representatives?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 9,
@@ -2404,6 +3283,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 7
+        },
+        {
+          "id": "G1SS-W09-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 9?",
+          "choices": [
+            "Geographic representations are models that emphasize different information; comparing them helps us understand location and scale.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 9
+        },
+        {
+          "id": "G1SS-W09-ST2",
+          "prompt": "Which finding appears in Source C for Week 9?",
+          "choices": [
+            "A round model of Earth",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 9
         }
       ],
       "currentQuestions": [
@@ -2505,7 +3410,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 9,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 9",
+        "inquiry": "How do maps, globes, pictures, and models show places differently?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 9 · Maps, Globes, and Models",
+            "content": "Geographic representations are models that emphasize different information; comparing them helps us understand location and scale.",
+            "accessibleDescription": "A concise evidence brief for Maps, Globes, and Models.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 9 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Maps, Globes, and Models",
+            "rows": [
+              [
+                "map",
+                "map"
+              ],
+              [
+                "globe",
+                "globe"
+              ],
+              [
+                "model",
+                "model"
+              ],
+              [
+                "scale",
+                "scale"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 9 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do maps, globes, pictures, and models show places differently?",
+            "findings": [
+              {
+                "question": "A globe is...",
+                "finding": "A round model of Earth"
+              },
+              {
+                "question": "A map is...",
+                "finding": "A representation of a place or area, often shown from above"
+              },
+              {
+                "question": "Why compare a model and a picture?",
+                "finding": "Each may show different information about the same place"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 9 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do maps, globes, pictures, and models show places differently?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 10,
@@ -2678,6 +3665,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 8
+        },
+        {
+          "id": "G1SS-W10-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 10?",
+          "choices": [
+            "Shared direction words and symbols make maps easier to read, create, and use.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 10
+        },
+        {
+          "id": "G1SS-W10-ST2",
+          "prompt": "Which finding appears in Source C for Week 10?",
+          "choices": [
+            "North, south, east, and west",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 10
         }
       ],
       "currentQuestions": [
@@ -2779,7 +3792,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 10,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 10",
+        "inquiry": "How can cardinal directions and symbols help us navigate?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 10 · Cardinal Directions and Map Symbols",
+            "content": "Shared direction words and symbols make maps easier to read, create, and use.",
+            "accessibleDescription": "A concise evidence brief for Cardinal Directions and Map Symbols.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 10 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Cardinal Directions and Map Symbols",
+            "rows": [
+              [
+                "north",
+                "north"
+              ],
+              [
+                "south",
+                "south"
+              ],
+              [
+                "east",
+                "east"
+              ],
+              [
+                "west",
+                "west"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 10 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can cardinal directions and symbols help us navigate?",
+            "findings": [
+              {
+                "question": "The four cardinal directions are...",
+                "finding": "North, south, east, and west"
+              },
+              {
+                "question": "A compass rose shows...",
+                "finding": "Directions"
+              },
+              {
+                "question": "A map legend explains...",
+                "finding": "Symbols and colors used on a map"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 10 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can cardinal directions and symbols help us navigate?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 11,
@@ -2952,6 +4047,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 9
+        },
+        {
+          "id": "G1SS-W11-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 11?",
+          "choices": [
+            "People live in local communities that are part of larger political and geographic areas, and maps can show those relationships.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 11
+        },
+        {
+          "id": "G1SS-W11-ST2",
+          "prompt": "Which finding appears in Source C for Week 11?",
+          "choices": [
+            "A political territory with a government and defined relationships to other countries",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 11
         }
       ],
       "currentQuestions": [
@@ -3053,7 +4174,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 11,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 11",
+        "inquiry": "How are places nested from local to global?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 11 · My Community, State, Nation, and World",
+            "content": "People live in local communities that are part of larger political and geographic areas, and maps can show those relationships.",
+            "accessibleDescription": "A concise evidence brief for My Community, State, Nation, and World.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 11 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for My Community, State, Nation, and World",
+            "rows": [
+              [
+                "community",
+                "community"
+              ],
+              [
+                "state",
+                "state"
+              ],
+              [
+                "nation",
+                "nation"
+              ],
+              [
+                "continent",
+                "continent"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 11 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How are places nested from local to global?",
+            "findings": [
+              {
+                "question": "A nation or country is...",
+                "finding": "A political territory with a government and defined relationships to other countries"
+              },
+              {
+                "question": "A continent is...",
+                "finding": "A very large land region of Earth"
+              },
+              {
+                "question": "A local community is...",
+                "finding": "An area near where people live, work, learn, and share services"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 11 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How are places nested from local to global?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 12,
@@ -3226,6 +4429,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 10
+        },
+        {
+          "id": "G1SS-W12-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 12?",
+          "choices": [
+            "Places have physical and human characteristics; environments influence choices about shelter, transport, work, food, recreation, and settlement.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 12
+        },
+        {
+          "id": "G1SS-W12-ST2",
+          "prompt": "Which finding appears in Source C for Week 12?",
+          "choices": [
+            "A natural feature such as a river, mountain, plain, or coast",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 12
         }
       ],
       "currentQuestions": [
@@ -3327,7 +4556,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 12,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 12",
+        "inquiry": "How do land, water, weather, and human choices shape ways of living?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 12 · Physical and Human Characteristics of Place",
+            "content": "Places have physical and human characteristics; environments influence choices about shelter, transport, work, food, recreation, and settlement.",
+            "accessibleDescription": "A concise evidence brief for Physical and Human Characteristics of Place.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 12 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Physical and Human Characteristics of Place",
+            "rows": [
+              [
+                "physical feature",
+                "physical feature"
+              ],
+              [
+                "human feature",
+                "human feature"
+              ],
+              [
+                "environment",
+                "environment"
+              ],
+              [
+                "adapt",
+                "adapt"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 12 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do land, water, weather, and human choices shape ways of living?",
+            "findings": [
+              {
+                "question": "A physical feature is...",
+                "finding": "A natural feature such as a river, mountain, plain, or coast"
+              },
+              {
+                "question": "A human feature is...",
+                "finding": "Something people built or organized, such as a road or town"
+              },
+              {
+                "question": "Environment means...",
+                "finding": "The natural and human surroundings and conditions of a place"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 12 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do land, water, weather, and human choices shape ways of living?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 13,
@@ -3500,6 +4811,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 11
+        },
+        {
+          "id": "G1SS-W13-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 13?",
+          "choices": [
+            "People organize events using past, present, and future and connect them through sequence and cause.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 13
+        },
+        {
+          "id": "G1SS-W13-ST2",
+          "prompt": "Which finding appears in Source C for Week 13?",
+          "choices": [
+            "Time before now",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 13
         }
       ],
       "currentQuestions": [
@@ -3601,7 +4938,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 13,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 13",
+        "inquiry": "How do time words help us understand change?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 13 · Past, Present, and Future",
+            "content": "People organize events using past, present, and future and connect them through sequence and cause.",
+            "accessibleDescription": "A concise evidence brief for Past, Present, and Future.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 13 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Past, Present, and Future",
+            "rows": [
+              [
+                "past",
+                "past"
+              ],
+              [
+                "present",
+                "present"
+              ],
+              [
+                "future",
+                "future"
+              ],
+              [
+                "sequence",
+                "sequence"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 13 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do time words help us understand change?",
+            "findings": [
+              {
+                "question": "Past means...",
+                "finding": "Time before now"
+              },
+              {
+                "question": "Present means...",
+                "finding": "Time happening now"
+              },
+              {
+                "question": "Future means...",
+                "finding": "Time after now"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 13 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do time words help us understand change?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 14,
@@ -3774,6 +5193,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 12
+        },
+        {
+          "id": "G1SS-W14-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 14?",
+          "choices": [
+            "Timelines show chronological order and can help us compare events, duration, and change.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 14
+        },
+        {
+          "id": "G1SS-W14-ST2",
+          "prompt": "Which finding appears in Source C for Week 14?",
+          "choices": [
+            "Events arranged in time order",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 14
         }
       ],
       "currentQuestions": [
@@ -3875,7 +5320,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 14,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 14",
+        "inquiry": "How can timelines help us explain time?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 14 · Timelines and Chronology",
+            "content": "Timelines show chronological order and can help us compare events, duration, and change.",
+            "accessibleDescription": "A concise evidence brief for Timelines and Chronology.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 14 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Timelines and Chronology",
+            "rows": [
+              [
+                "timeline",
+                "timeline"
+              ],
+              [
+                "chronology",
+                "chronology"
+              ],
+              [
+                "event",
+                "event"
+              ],
+              [
+                "duration",
+                "duration"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 14 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can timelines help us explain time?",
+            "findings": [
+              {
+                "question": "Chronology means...",
+                "finding": "Events arranged in time order"
+              },
+              {
+                "question": "A timeline is useful because it...",
+                "finding": "Shows when events happened relative to one another"
+              },
+              {
+                "question": "Duration means...",
+                "finding": "How long something lasts"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 14 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can timelines help us explain time?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 15,
@@ -4048,6 +5575,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 13
+        },
+        {
+          "id": "G1SS-W15-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 15?",
+          "choices": [
+            "Photos, objects, letters, maps, buildings, newspapers, and oral histories can offer evidence about the past, but sources have limits.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 15
+        },
+        {
+          "id": "G1SS-W15-ST2",
+          "prompt": "Which finding appears in Source C for Week 15?",
+          "choices": [
+            "Evidence created during the time being studied or by a participant/witness",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 15
         }
       ],
       "currentQuestions": [
@@ -4149,7 +5702,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 15,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 15",
+        "inquiry": "How can sources help us learn about families and communities in the past?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 15 · Family and Community History Through Sources",
+            "content": "Photos, objects, letters, maps, buildings, newspapers, and oral histories can offer evidence about the past, but sources have limits.",
+            "accessibleDescription": "A concise evidence brief for Family and Community History Through Sources.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 15 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Family and Community History Through Sources",
+            "rows": [
+              [
+                "primary source",
+                "primary source"
+              ],
+              [
+                "artifact",
+                "artifact"
+              ],
+              [
+                "oral history",
+                "oral history"
+              ],
+              [
+                "context",
+                "context"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 15 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can sources help us learn about families and communities in the past?",
+            "findings": [
+              {
+                "question": "A primary source is...",
+                "finding": "Evidence created during the time being studied or by a participant/witness"
+              },
+              {
+                "question": "An artifact is...",
+                "finding": "An object made or used by people that can give historical clues"
+              },
+              {
+                "question": "An oral history is...",
+                "finding": "Recorded spoken memories or testimony about lived experience"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 15 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can sources help us learn about families and communities in the past?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 16,
@@ -4322,6 +5957,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 14
+        },
+        {
+          "id": "G1SS-W16-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 16?",
+          "choices": [
+            "Historical thinking includes noticing both change and continuity and explaining them with evidence rather than assuming everything is different.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 16
+        },
+        {
+          "id": "G1SS-W16-ST2",
+          "prompt": "Which finding appears in Source C for Week 16?",
+          "choices": [
+            "Something stays similar over time",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 16
         }
       ],
       "currentQuestions": [
@@ -4423,7 +6084,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 16,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 16",
+        "inquiry": "What has changed and what has stayed similar over time?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 16 · Change and Continuity in Daily Life",
+            "content": "Historical thinking includes noticing both change and continuity and explaining them with evidence rather than assuming everything is different.",
+            "accessibleDescription": "A concise evidence brief for Change and Continuity in Daily Life.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 16 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Change and Continuity in Daily Life",
+            "rows": [
+              [
+                "change",
+                "change"
+              ],
+              [
+                "continuity",
+                "continuity"
+              ],
+              [
+                "compare",
+                "compare"
+              ],
+              [
+                "cause",
+                "cause"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 16 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to What has changed and what has stayed similar over time?",
+            "findings": [
+              {
+                "question": "Continuity means...",
+                "finding": "Something stays similar over time"
+              },
+              {
+                "question": "Change means...",
+                "finding": "Something becomes different over time"
+              },
+              {
+                "question": "To explain change, historians may ask...",
+                "finding": "What caused or influenced the difference?"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 16 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"What has changed and what has stayed similar over time?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 17,
@@ -4596,6 +6339,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 15
+        },
+        {
+          "id": "G1SS-W17-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 17?",
+          "choices": [
+            "Economics begins with choices about needs, wants, goods, services, and limited resources.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 17
+        },
+        {
+          "id": "G1SS-W17-ST2",
+          "prompt": "Which finding appears in Source C for Week 17?",
+          "choices": [
+            "Something important for basic living, health, or safety",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 17
         }
       ],
       "currentQuestions": [
@@ -4697,7 +6466,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 17,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 17",
+        "inquiry": "How do people use goods and services to meet needs and wants?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 17 · Needs, Wants, Goods, and Services",
+            "content": "Economics begins with choices about needs, wants, goods, services, and limited resources.",
+            "accessibleDescription": "A concise evidence brief for Needs, Wants, Goods, and Services.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 17 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Needs, Wants, Goods, and Services",
+            "rows": [
+              [
+                "need",
+                "need"
+              ],
+              [
+                "want",
+                "want"
+              ],
+              [
+                "good",
+                "good"
+              ],
+              [
+                "service",
+                "service"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 17 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do people use goods and services to meet needs and wants?",
+            "findings": [
+              {
+                "question": "A need is...",
+                "finding": "Something important for basic living, health, or safety"
+              },
+              {
+                "question": "A want is...",
+                "finding": "Something desired but not always necessary for basic living"
+              },
+              {
+                "question": "A good is...",
+                "finding": "A physical item produced for use or exchange"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 17 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do people use goods and services to meet needs and wants?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 18,
@@ -4870,6 +6721,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 16
+        },
+        {
+          "id": "G1SS-W18-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 18?",
+          "choices": [
+            "People work to produce goods and services; consumers use or buy them; economic roles are connected through choices and exchange.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 18
+        },
+        {
+          "id": "G1SS-W18-ST2",
+          "prompt": "Which finding appears in Source C for Week 18?",
+          "choices": [
+            "A person or group that makes goods or provides services",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 18
         }
       ],
       "currentQuestions": [
@@ -4971,7 +6848,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 18,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 18",
+        "inquiry": "How are work, production, and consumption connected?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 18 · Jobs, Producers, Consumers, and the Midyear Inquiry",
+            "content": "People work to produce goods and services; consumers use or buy them; economic roles are connected through choices and exchange.",
+            "accessibleDescription": "A concise evidence brief for Jobs, Producers, Consumers, and the Midyear Inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 18 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Jobs, Producers, Consumers, and the Midyear Inquiry",
+            "rows": [
+              [
+                "job",
+                "job"
+              ],
+              [
+                "producer",
+                "producer"
+              ],
+              [
+                "consumer",
+                "consumer"
+              ],
+              [
+                "income",
+                "income"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 18 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How are work, production, and consumption connected?",
+            "findings": [
+              {
+                "question": "A producer is...",
+                "finding": "A person or group that makes goods or provides services"
+              },
+              {
+                "question": "A consumer is...",
+                "finding": "A person or group that uses or buys goods and services"
+              },
+              {
+                "question": "Income is...",
+                "finding": "Money received, often from work or other sources"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 18 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How are work, production, and consumption connected?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 19,
@@ -5144,6 +7103,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 17
+        },
+        {
+          "id": "G1SS-W19-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 19?",
+          "choices": [
+            "Money is a tool for exchange; people make choices to spend, save, share, or plan based on needs, goals, prices, and limits.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 19
+        },
+        {
+          "id": "G1SS-W19-ST2",
+          "prompt": "Which finding appears in Source C for Week 19?",
+          "choices": [
+            "Exchange for goods and services",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 19
         }
       ],
       "currentQuestions": [
@@ -5245,7 +7230,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 19,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 19",
+        "inquiry": "How can people plan how to use money?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 19 · Money, Spending, Saving, and Planning",
+            "content": "Money is a tool for exchange; people make choices to spend, save, share, or plan based on needs, goals, prices, and limits.",
+            "accessibleDescription": "A concise evidence brief for Money, Spending, Saving, and Planning.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 19 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Money, Spending, Saving, and Planning",
+            "rows": [
+              [
+                "money",
+                "money"
+              ],
+              [
+                "spend",
+                "spend"
+              ],
+              [
+                "save",
+                "save"
+              ],
+              [
+                "budget",
+                "budget"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 19 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can people plan how to use money?",
+            "findings": [
+              {
+                "question": "Money is commonly used to...",
+                "finding": "Exchange for goods and services"
+              },
+              {
+                "question": "To spend means...",
+                "finding": "Use money to obtain a good or service"
+              },
+              {
+                "question": "To save means...",
+                "finding": "Keep money/resources for later"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 19 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can people plan how to use money?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 20,
@@ -5418,6 +7485,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 18
+        },
+        {
+          "id": "G1SS-W20-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 20?",
+          "choices": [
+            "Scarcity means resources are limited relative to wants; every choice can involve an opportunity cost—the next-best option not chosen.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 20
+        },
+        {
+          "id": "G1SS-W20-ST2",
+          "prompt": "Which finding appears in Source C for Week 20?",
+          "choices": [
+            "Resources are limited compared with all possible wants",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 20
         }
       ],
       "currentQuestions": [
@@ -5519,7 +7612,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 20,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 20",
+        "inquiry": "What do we give up when we choose one option instead of another?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 20 · Scarcity, Choice, and Opportunity Cost",
+            "content": "Scarcity means resources are limited relative to wants; every choice can involve an opportunity cost—the next-best option not chosen.",
+            "accessibleDescription": "A concise evidence brief for Scarcity, Choice, and Opportunity Cost.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 20 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Scarcity, Choice, and Opportunity Cost",
+            "rows": [
+              [
+                "scarcity",
+                "scarcity"
+              ],
+              [
+                "choice",
+                "choice"
+              ],
+              [
+                "opportunity cost",
+                "opportunity cost"
+              ],
+              [
+                "resource",
+                "resource"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 20 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to What do we give up when we choose one option instead of another?",
+            "findings": [
+              {
+                "question": "Scarcity means...",
+                "finding": "Resources are limited compared with all possible wants"
+              },
+              {
+                "question": "Opportunity cost is...",
+                "finding": "The next-best option given up when a choice is made"
+              },
+              {
+                "question": "If you spend limited time on one activity, you...",
+                "finding": "Cannot use that same time for another activity"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 20 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"What do we give up when we choose one option instead of another?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 21,
@@ -5692,6 +7867,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 19
+        },
+        {
+          "id": "G1SS-W21-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 21?",
+          "choices": [
+            "Economic reasoning can use information about needs, resources, prices, options, and consequences to explain decisions.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 21
+        },
+        {
+          "id": "G1SS-W21-ST2",
+          "prompt": "Which finding appears in Source C for Week 21?",
+          "choices": [
+            "A benefit or option given up or exchanged when making a choice",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 21
         }
       ],
       "currentQuestions": [
@@ -5793,7 +7994,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 21,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 21",
+        "inquiry": "How can evidence help explain an economic choice?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 21 · Unit Inquiry · How Families and Communities Make Economic Choices",
+            "content": "Economic reasoning can use information about needs, resources, prices, options, and consequences to explain decisions.",
+            "accessibleDescription": "A concise evidence brief for Unit Inquiry · How Families and Communities Make Economic Choices.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 21 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Unit Inquiry · How Families and Communities Make Economic Choices",
+            "rows": [
+              [
+                "economic choice",
+                "economic choice"
+              ],
+              [
+                "tradeoff",
+                "tradeoff"
+              ],
+              [
+                "evidence",
+                "evidence"
+              ],
+              [
+                "consequence",
+                "consequence"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 21 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can evidence help explain an economic choice?",
+            "findings": [
+              {
+                "question": "A tradeoff is...",
+                "finding": "A benefit or option given up or exchanged when making a choice"
+              },
+              {
+                "question": "Economic evidence may include...",
+                "finding": "Prices, resource limits, needs, work, and available options"
+              },
+              {
+                "question": "A strong recommendation should...",
+                "finding": "Name an option and explain it using evidence"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 21 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can evidence help explain an economic choice?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 22,
@@ -5966,6 +8249,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 20
+        },
+        {
+          "id": "G1SS-W22-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 22?",
+          "choices": [
+            "Culture includes learned and shared practices, languages, arts, beliefs, stories, foods, celebrations, and social patterns, while individuals within cultures remain diverse.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 22
+        },
+        {
+          "id": "G1SS-W22-ST2",
+          "prompt": "Which finding appears in Source C for Week 22?",
+          "choices": [
+            "Language, art, food, stories, customs, beliefs, and ways of life",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 22
         }
       ],
       "currentQuestions": [
@@ -6067,7 +8376,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 22,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 22",
+        "inquiry": "How do culture and traditions shape family and community life?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 22 · Culture, Traditions, and Identity",
+            "content": "Culture includes learned and shared practices, languages, arts, beliefs, stories, foods, celebrations, and social patterns, while individuals within cultures remain diverse.",
+            "accessibleDescription": "A concise evidence brief for Culture, Traditions, and Identity.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 22 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Culture, Traditions, and Identity",
+            "rows": [
+              [
+                "culture",
+                "culture"
+              ],
+              [
+                "tradition",
+                "tradition"
+              ],
+              [
+                "custom",
+                "custom"
+              ],
+              [
+                "identity",
+                "identity"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 22 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do culture and traditions shape family and community life?",
+            "findings": [
+              {
+                "question": "Culture may include...",
+                "finding": "Language, art, food, stories, customs, beliefs, and ways of life"
+              },
+              {
+                "question": "A tradition is...",
+                "finding": "A practice or custom people may repeat and value"
+              },
+              {
+                "question": "A stereotype is...",
+                "finding": "An oversimplified assumption that treats people in a group as all the same"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 22 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do culture and traditions shape family and community life?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 23,
@@ -6240,6 +8631,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 21
+        },
+        {
+          "id": "G1SS-W23-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 23?",
+          "choices": [
+            "Language, stories, art, music, and foodways can carry memory and meaning, but each source must be interpreted in context.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 23
+        },
+        {
+          "id": "G1SS-W23-ST2",
+          "prompt": "Which finding appears in Source C for Week 23?",
+          "choices": [
+            "Communicate meaning, relationships, and identity",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 23
         }
       ],
       "currentQuestions": [
@@ -6341,7 +8758,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 23,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 23",
+        "inquiry": "What can cultural expressions teach us about people and places?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 23 · Languages, Stories, Art, and Foodways",
+            "content": "Language, stories, art, music, and foodways can carry memory and meaning, but each source must be interpreted in context.",
+            "accessibleDescription": "A concise evidence brief for Languages, Stories, Art, and Foodways.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 23 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Languages, Stories, Art, and Foodways",
+            "rows": [
+              [
+                "language",
+                "language"
+              ],
+              [
+                "story",
+                "story"
+              ],
+              [
+                "art",
+                "art"
+              ],
+              [
+                "foodway",
+                "foodway"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 23 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to What can cultural expressions teach us about people and places?",
+            "findings": [
+              {
+                "question": "Language helps people...",
+                "finding": "Communicate meaning, relationships, and identity"
+              },
+              {
+                "question": "A folktale can help us learn about...",
+                "finding": "Ideas, values, imagination, and storytelling traditions"
+              },
+              {
+                "question": "Foodways means...",
+                "finding": "Cultural patterns around growing, preparing, sharing, and eating food"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 23 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"What can cultural expressions teach us about people and places?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 24,
@@ -6514,6 +9013,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 22
+        },
+        {
+          "id": "G1SS-W24-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 24?",
+          "choices": [
+            "People around the world live in diverse communities; environment, history, culture, institutions, and resources shape daily life without determining everyone identically.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 24
+        },
+        {
+          "id": "G1SS-W24-ST2",
+          "prompt": "Which finding appears in Source C for Week 24?",
+          "choices": [
+            "Related to the whole world or many parts of it",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 24
         }
       ],
       "currentQuestions": [
@@ -6615,7 +9140,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 24,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 24",
+        "inquiry": "How do geography and culture shape daily life in different places?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 24 · Families and Communities Around the World",
+            "content": "People around the world live in diverse communities; environment, history, culture, institutions, and resources shape daily life without determining everyone identically.",
+            "accessibleDescription": "A concise evidence brief for Families and Communities Around the World.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 24 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Families and Communities Around the World",
+            "rows": [
+              [
+                "global",
+                "global"
+              ],
+              [
+                "community",
+                "community"
+              ],
+              [
+                "environment",
+                "environment"
+              ],
+              [
+                "daily life",
+                "daily life"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 24 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do geography and culture shape daily life in different places?",
+            "findings": [
+              {
+                "question": "Global means...",
+                "finding": "Related to the whole world or many parts of it"
+              },
+              {
+                "question": "When comparing communities, we should...",
+                "finding": "Use evidence and avoid stereotypes"
+              },
+              {
+                "question": "Environment can influence...",
+                "finding": "Transportation, shelter, work, food, and recreation"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 24 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do geography and culture shape daily life in different places?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 25,
@@ -6788,6 +9395,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 23
+        },
+        {
+          "id": "G1SS-W25-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 25?",
+          "choices": [
+            "Good comparison uses multiple sources, precise language, perspective, similarities, differences, and awareness that communities contain internal diversity.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 25
+        },
+        {
+          "id": "G1SS-W25-ST2",
+          "prompt": "Which finding appears in Source C for Week 25?",
+          "choices": [
+            "A point of view shaped by a person's position and experience",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 25
         }
       ],
       "currentQuestions": [
@@ -6889,7 +9522,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 25,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 25",
+        "inquiry": "How can we compare cultures without stereotyping?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 25 · Unit Inquiry · Respectful Cultural Comparison",
+            "content": "Good comparison uses multiple sources, precise language, perspective, similarities, differences, and awareness that communities contain internal diversity.",
+            "accessibleDescription": "A concise evidence brief for Unit Inquiry · Respectful Cultural Comparison.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 25 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Unit Inquiry · Respectful Cultural Comparison",
+            "rows": [
+              [
+                "perspective",
+                "perspective"
+              ],
+              [
+                "similarity",
+                "similarity"
+              ],
+              [
+                "difference",
+                "difference"
+              ],
+              [
+                "source",
+                "source"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 25 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can we compare cultures without stereotyping?",
+            "findings": [
+              {
+                "question": "Perspective is...",
+                "finding": "A point of view shaped by a person's position and experience"
+              },
+              {
+                "question": "A careful comparison should use...",
+                "finding": "Multiple sources and precise language"
+              },
+              {
+                "question": "Why use multiple sources?",
+                "finding": "Different sources may show different experiences or parts of a community"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 25 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can we compare cultures without stereotyping?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 26,
@@ -7062,6 +9777,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 24
+        },
+        {
+          "id": "G1SS-W26-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 26?",
+          "choices": [
+            "Civic symbols and landmarks carry historical meanings that should be studied through context rather than memorized as decoration.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 26
+        },
+        {
+          "id": "G1SS-W26-ST2",
+          "prompt": "Which finding appears in Source C for Week 26?",
+          "choices": [
+            "An object or image used to represent public ideas, institutions, history, or identity",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 26
         }
       ],
       "currentQuestions": [
@@ -7163,7 +9904,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 26,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 26",
+        "inquiry": "Why do societies use symbols and landmarks to remember ideas and events?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 26 · American Symbols, Landmarks, and Shared Public Memory",
+            "content": "Civic symbols and landmarks carry historical meanings that should be studied through context rather than memorized as decoration.",
+            "accessibleDescription": "A concise evidence brief for American Symbols, Landmarks, and Shared Public Memory.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 26 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for American Symbols, Landmarks, and Shared Public Memory",
+            "rows": [
+              [
+                "symbol",
+                "symbol"
+              ],
+              [
+                "landmark",
+                "landmark"
+              ],
+              [
+                "memorial",
+                "memorial"
+              ],
+              [
+                "meaning",
+                "meaning"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 26 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to Why do societies use symbols and landmarks to remember ideas and events?",
+            "findings": [
+              {
+                "question": "A civic symbol is...",
+                "finding": "An object or image used to represent public ideas, institutions, history, or identity"
+              },
+              {
+                "question": "A landmark is...",
+                "finding": "A recognizable place or structure with geographic, civic, or historical significance"
+              },
+              {
+                "question": "A memorial is created to...",
+                "finding": "Remember or honor a person, group, event, or idea"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 26 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"Why do societies use symbols and landmarks to remember ideas and events?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 27,
@@ -7336,6 +10159,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 25
+        },
+        {
+          "id": "G1SS-W27-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 27?",
+          "choices": [
+            "At an introductory level, learners can recognize that the Declaration of Independence, Constitution, and Bill of Rights express or organize ideas about government, liberty, rights, law, and public authority.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 27
+        },
+        {
+          "id": "G1SS-W27-ST2",
+          "prompt": "Which finding appears in Source C for Week 27?",
+          "choices": [
+            "A foundational set of rules and structures for government",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 27
         }
       ],
       "currentQuestions": [
@@ -7437,7 +10286,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 27,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 27",
+        "inquiry": "What ideas do important U.S. civic documents express?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 27 · Founding Ideals and Important Civic Documents",
+            "content": "At an introductory level, learners can recognize that the Declaration of Independence, Constitution, and Bill of Rights express or organize ideas about government, liberty, rights, law, and public authority.",
+            "accessibleDescription": "A concise evidence brief for Founding Ideals and Important Civic Documents.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 27 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Founding Ideals and Important Civic Documents",
+            "rows": [
+              [
+                "liberty",
+                "liberty"
+              ],
+              [
+                "equality",
+                "equality"
+              ],
+              [
+                "constitution",
+                "constitution"
+              ],
+              [
+                "rights",
+                "rights"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 27 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to What ideas do important U.S. civic documents express?",
+            "findings": [
+              {
+                "question": "A constitution is...",
+                "finding": "A foundational set of rules and structures for government"
+              },
+              {
+                "question": "The U.S. Constitution mainly helps define...",
+                "finding": "The structure and powers of the federal government and its relationship to law"
+              },
+              {
+                "question": "The Bill of Rights is...",
+                "finding": "The first ten amendments to the U.S. Constitution protecting important rights and liberties"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 27 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"What ideas do important U.S. civic documents express?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 28,
@@ -7610,6 +10541,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 26
+        },
+        {
+          "id": "G1SS-W28-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 28?",
+          "choices": [
+            "Government responsibilities are divided across levels; local, state, and national institutions have different roles and can sometimes share responsibilities.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 28
+        },
+        {
+          "id": "G1SS-W28-ST2",
+          "prompt": "Which finding appears in Source C for Week 28?",
+          "choices": [
+            "Community-level services and decisions",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 28
         }
       ],
       "currentQuestions": [
@@ -7711,7 +10668,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 28,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 28",
+        "inquiry": "How do different levels of government serve communities?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 28 · Local, State, and National Government",
+            "content": "Government responsibilities are divided across levels; local, state, and national institutions have different roles and can sometimes share responsibilities.",
+            "accessibleDescription": "A concise evidence brief for Local, State, and National Government.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 28 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Local, State, and National Government",
+            "rows": [
+              [
+                "local",
+                "local"
+              ],
+              [
+                "state",
+                "state"
+              ],
+              [
+                "national",
+                "national"
+              ],
+              [
+                "government",
+                "government"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 28 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do different levels of government serve communities?",
+            "findings": [
+              {
+                "question": "Local government usually focuses most directly on...",
+                "finding": "Community-level services and decisions"
+              },
+              {
+                "question": "State government serves...",
+                "finding": "The people and territory of a state within the federal system"
+              },
+              {
+                "question": "National government handles responsibilities such as...",
+                "finding": "National defense, federal laws, currency, and relations with other countries"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 28 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do different levels of government serve communities?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 29,
@@ -7884,6 +10923,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 27
+        },
+        {
+          "id": "G1SS-W29-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 29?",
+          "choices": [
+            "Elections are one process by which eligible citizens choose public representatives; fair elections require clear rules, accurate counting, and respect for lawful outcomes.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 29
+        },
+        {
+          "id": "G1SS-W29-ST2",
+          "prompt": "Which finding appears in Source C for Week 29?",
+          "choices": [
+            "A process for choosing among candidates or options according to rules",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 29
         }
       ],
       "currentQuestions": [
@@ -7985,7 +11050,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 29,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 29",
+        "inquiry": "How do elections help people choose representatives?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 29 · Voting, Elections, and Representation",
+            "content": "Elections are one process by which eligible citizens choose public representatives; fair elections require clear rules, accurate counting, and respect for lawful outcomes.",
+            "accessibleDescription": "A concise evidence brief for Voting, Elections, and Representation.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 29 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Voting, Elections, and Representation",
+            "rows": [
+              [
+                "election",
+                "election"
+              ],
+              [
+                "ballot",
+                "ballot"
+              ],
+              [
+                "representative",
+                "representative"
+              ],
+              [
+                "vote",
+                "vote"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 29 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do elections help people choose representatives?",
+            "findings": [
+              {
+                "question": "An election is...",
+                "finding": "A process for choosing among candidates or options according to rules"
+              },
+              {
+                "question": "A ballot is...",
+                "finding": "A method or form used to record a vote"
+              },
+              {
+                "question": "In an election, what is a representative?",
+                "finding": "A person chosen or authorized to act or speak for others in a defined role"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 29 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do elections help people choose representatives?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 30,
@@ -8158,6 +11305,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 28
+        },
+        {
+          "id": "G1SS-W30-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 30?",
+          "choices": [
+            "People use resources and environments for shelter, food, transport, recreation, and work, while their choices can change places positively or negatively.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 30
+        },
+        {
+          "id": "G1SS-W30-ST2",
+          "prompt": "Which finding appears in Source C for Week 30?",
+          "choices": [
+            "Something from nature people use, such as water, soil, wood, or minerals",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 30
         }
       ],
       "currentQuestions": [
@@ -8259,7 +11432,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 30,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 30",
+        "inquiry": "How do people depend on and change environments?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 30 · People and Environments",
+            "content": "People use resources and environments for shelter, food, transport, recreation, and work, while their choices can change places positively or negatively.",
+            "accessibleDescription": "A concise evidence brief for People and Environments.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 30 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for People and Environments",
+            "rows": [
+              [
+                "resource",
+                "resource"
+              ],
+              [
+                "environment",
+                "environment"
+              ],
+              [
+                "impact",
+                "impact"
+              ],
+              [
+                "stewardship",
+                "stewardship"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 30 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do people depend on and change environments?",
+            "findings": [
+              {
+                "question": "A natural resource is...",
+                "finding": "Something from nature people use, such as water, soil, wood, or minerals"
+              },
+              {
+                "question": "Impact means...",
+                "finding": "An effect or result of an action"
+              },
+              {
+                "question": "Stewardship means...",
+                "finding": "Responsible care for shared or entrusted resources and places"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 30 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do people depend on and change environments?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 31,
@@ -8432,6 +11687,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 29
+        },
+        {
+          "id": "G1SS-W31-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 31?",
+          "choices": [
+            "Communities change because of population, technology, environment, economy, migration, public decisions, and other forces; planning tries to respond to needs and consequences.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 31
+        },
+        {
+          "id": "G1SS-W31-ST2",
+          "prompt": "Which finding appears in Source C for Week 31?",
+          "choices": [
+            "Shared systems and facilities such as roads, water, schools, or transit",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 31
         }
       ],
       "currentQuestions": [
@@ -8533,7 +11814,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 31,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 31",
+        "inquiry": "Why do communities change, and how can people plan for change?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 31 · How Communities Change and Plan",
+            "content": "Communities change because of population, technology, environment, economy, migration, public decisions, and other forces; planning tries to respond to needs and consequences.",
+            "accessibleDescription": "A concise evidence brief for How Communities Change and Plan.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 31 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for How Communities Change and Plan",
+            "rows": [
+              [
+                "change",
+                "change"
+              ],
+              [
+                "planning",
+                "planning"
+              ],
+              [
+                "migration",
+                "migration"
+              ],
+              [
+                "infrastructure",
+                "infrastructure"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 31 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to Why do communities change, and how can people plan for change?",
+            "findings": [
+              {
+                "question": "Infrastructure includes...",
+                "finding": "Shared systems and facilities such as roads, water, schools, or transit"
+              },
+              {
+                "question": "Migration means...",
+                "finding": "Movement of people from one place to another to live"
+              },
+              {
+                "question": "Communities may change because...",
+                "finding": "People, technology, environment, economy, and decisions change"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 31 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"Why do communities change, and how can people plan for change?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 32,
@@ -8706,6 +12069,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 30
+        },
+        {
+          "id": "G1SS-W32-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 32?",
+          "choices": [
+            "Social Studies inquiry begins with questions, uses relevant and trustworthy sources, and separates observation, inference, claim, and evidence.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 32
+        },
+        {
+          "id": "G1SS-W32-ST2",
+          "prompt": "Which finding appears in Source C for Week 32?",
+          "choices": [
+            "A process of investigating questions using evidence",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 32
         }
       ],
       "currentQuestions": [
@@ -8807,7 +12196,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 32,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 32",
+        "inquiry": "How do researchers turn questions into evidence-based answers?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 32 · Questions, Sources, and Evidence",
+            "content": "Social Studies inquiry begins with questions, uses relevant and trustworthy sources, and separates observation, inference, claim, and evidence.",
+            "accessibleDescription": "A concise evidence brief for Questions, Sources, and Evidence.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 32 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Questions, Sources, and Evidence",
+            "rows": [
+              [
+                "inquiry",
+                "inquiry"
+              ],
+              [
+                "source",
+                "source"
+              ],
+              [
+                "evidence",
+                "evidence"
+              ],
+              [
+                "inference",
+                "inference"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 32 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do researchers turn questions into evidence-based answers?",
+            "findings": [
+              {
+                "question": "Inquiry is...",
+                "finding": "A process of investigating questions using evidence"
+              },
+              {
+                "question": "A source is relevant when...",
+                "finding": "It provides information connected to the question"
+              },
+              {
+                "question": "An inference is...",
+                "finding": "A reasoned idea based on clues and evidence"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 32 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do researchers turn questions into evidence-based answers?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 33,
@@ -8980,6 +12451,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 31
+        },
+        {
+          "id": "G1SS-W33-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 33?",
+          "choices": [
+            "Young learners can begin checking who made a claim, what evidence is offered, whether another source agrees, and whether a statement is fact, opinion, or advertising.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 33
+        },
+        {
+          "id": "G1SS-W33-ST2",
+          "prompt": "Which finding appears in Source C for Week 33?",
+          "choices": [
+            "A statement that can be checked against evidence",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 33
         }
       ],
       "currentQuestions": [
@@ -9081,7 +12578,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 33,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 33",
+        "inquiry": "How can we decide whether information deserves our trust?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 33 · Information, Claims, and Simple Media Literacy",
+            "content": "Young learners can begin checking who made a claim, what evidence is offered, whether another source agrees, and whether a statement is fact, opinion, or advertising.",
+            "accessibleDescription": "A concise evidence brief for Information, Claims, and Simple Media Literacy.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 33 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Information, Claims, and Simple Media Literacy",
+            "rows": [
+              [
+                "claim",
+                "claim"
+              ],
+              [
+                "fact",
+                "fact"
+              ],
+              [
+                "opinion",
+                "opinion"
+              ],
+              [
+                "source",
+                "source"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 33 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can we decide whether information deserves our trust?",
+            "findings": [
+              {
+                "question": "A fact is...",
+                "finding": "A statement that can be checked against evidence"
+              },
+              {
+                "question": "An opinion is...",
+                "finding": "A belief, judgment, or preference that may not be provable as fact"
+              },
+              {
+                "question": "Before trusting a claim, ask...",
+                "finding": "Who made it and what evidence supports it?"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 33 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can we decide whether information deserves our trust?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 34,
@@ -9254,6 +12833,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 32
+        },
+        {
+          "id": "G1SS-W34-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 34?",
+          "choices": [
+            "Informed action connects a real question or need to evidence, a safe plan, responsible participation, and reflection.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 34
+        },
+        {
+          "id": "G1SS-W34-ST2",
+          "prompt": "Which finding appears in Source C for Week 34?",
+          "choices": [
+            "Using learning and evidence to guide responsible action",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 34
         }
       ],
       "currentQuestions": [
@@ -9355,7 +12960,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 34,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 34",
+        "inquiry": "How can first graders take safe, informed action in a community?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 34 · Service and Informed Civic Action",
+            "content": "Informed action connects a real question or need to evidence, a safe plan, responsible participation, and reflection.",
+            "accessibleDescription": "A concise evidence brief for Service and Informed Civic Action.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 34 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Service and Informed Civic Action",
+            "rows": [
+              [
+                "service",
+                "service"
+              ],
+              [
+                "informed action",
+                "informed action"
+              ],
+              [
+                "plan",
+                "plan"
+              ],
+              [
+                "reflection",
+                "reflection"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 34 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can first graders take safe, informed action in a community?",
+            "findings": [
+              {
+                "question": "Informed action means...",
+                "finding": "Using learning and evidence to guide responsible action"
+              },
+              {
+                "question": "Service is strongest when it...",
+                "finding": "Responds respectfully to a real need"
+              },
+              {
+                "question": "A plan should include...",
+                "finding": "Goal, steps, support, and how to check results"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 34 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can first graders take safe, informed action in a community?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 35,
@@ -9528,6 +13215,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 33
+        },
+        {
+          "id": "G1SS-W35-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 35?",
+          "choices": [
+            "Civic inquiry can move from question to evidence to options, recommendation, action, and evaluation.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 35
+        },
+        {
+          "id": "G1SS-W35-ST2",
+          "prompt": "Which finding appears in Source C for Week 35?",
+          "choices": [
+            "Clearly describe what needs attention",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 35
         }
       ],
       "currentQuestions": [
@@ -9629,7 +13342,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 35,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 35",
+        "inquiry": "How can we use evidence to recommend an improvement?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 35 · Unit Inquiry · Evidence to Action",
+            "content": "Civic inquiry can move from question to evidence to options, recommendation, action, and evaluation.",
+            "accessibleDescription": "A concise evidence brief for Unit Inquiry · Evidence to Action.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 35 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Unit Inquiry · Evidence to Action",
+            "rows": [
+              [
+                "problem",
+                "problem"
+              ],
+              [
+                "option",
+                "option"
+              ],
+              [
+                "recommendation",
+                "recommendation"
+              ],
+              [
+                "evaluate",
+                "evaluate"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 35 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can we use evidence to recommend an improvement?",
+            "findings": [
+              {
+                "question": "A problem statement should...",
+                "finding": "Clearly describe what needs attention"
+              },
+              {
+                "question": "An option is...",
+                "finding": "A possible action or solution"
+              },
+              {
+                "question": "A recommendation is...",
+                "finding": "A supported suggestion about what should be done"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 35 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How can we use evidence to recommend an improvement?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     },
     {
       "week": 36,
@@ -9802,6 +13597,32 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           ],
           "answer": 0,
           "sourceWeek": 34
+        },
+        {
+          "id": "G1SS-W36-ST1",
+          "prompt": "Which statement is directly supported by Source A for Week 36?",
+          "choices": [
+            "Civics, geography, and history provide different but connected tools for understanding people and public life.",
+            "The week can be understood without evidence.",
+            "Every person and place in the topic is identical.",
+            "Only memorizing a definition matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 36
+        },
+        {
+          "id": "G1SS-W36-ST2",
+          "prompt": "Which finding appears in Source C for Week 36?",
+          "choices": [
+            "Government, rules, participation, rights, responsibilities, and public life",
+            "The source proves every case is identical.",
+            "No source has a creator or context.",
+            "The essential question cannot be investigated."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 36
         }
       ],
       "currentQuestions": [
@@ -9903,7 +13724,89 @@ window.KHAEMENES_GRADE1_SOCIAL_STUDIES={
           "sourceWeek": 36,
           "kind": "inquiry"
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 36",
+        "inquiry": "How do rules, places, and time help us understand communities?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, dictation, enlarged print, and oral response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 1 · Week 36 · Cumulative Review · Civics, Geography, and History",
+            "content": "Civics, geography, and history provide different but connected tools for understanding people and public life.",
+            "accessibleDescription": "A concise evidence brief for Cumulative Review · Civics, Geography, and History.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 36 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key vocabulary and relationships for Cumulative Review · Civics, Geography, and History",
+            "rows": [
+              [
+                "civics",
+                "civics"
+              ],
+              [
+                "geography",
+                "geography"
+              ],
+              [
+                "history",
+                "history"
+              ],
+              [
+                "connection",
+                "connection"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key terms and relationships for the inquiry.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 36 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do rules, places, and time help us understand communities?",
+            "findings": [
+              {
+                "question": "Civics focuses on...",
+                "finding": "Government, rules, participation, rights, responsibilities, and public life"
+              },
+              {
+                "question": "Geography focuses on...",
+                "finding": "Places, environments, maps, and spatial relationships"
+              },
+              {
+                "question": "History focuses on...",
+                "finding": "Past people/events and change over time using evidence"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 1 Social Studies, Week 36 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail in Source B or C supports the essential question?",
+          "What information is missing or still uncertain?"
+        ]
+      },
+      "evidenceResponse": {
+        "level": "Grade 1",
+        "mode": "oral",
+        "prompt": "Make a claim that answers: \"How do rules, places, and time help us understand communities?\" Then name one clue from the Source Studio that supports your claim.",
+        "requirement": "One simple claim + one specific evidence clue. Oral response or adult transcription is accepted.",
+        "teacherReview": "observed / revise / meets"
+      }
     }
   ],
   "localization": {
