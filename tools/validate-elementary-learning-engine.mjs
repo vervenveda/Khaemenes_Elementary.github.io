@@ -193,27 +193,27 @@ let fullYearSubjectPages=0;
 for(const [g,subjects] of Object.entries(subjectSets)){
   for(let week=1;week<=36;week++){
     const ww=String(week).padStart(2,"0");
-    expect(exists(`grades/grade-\${g}/assessments/week-\${ww}-assessment.html`),`Grade \${g} Week \${ww} assessment missing.`);
+    expect(exists(`grades/grade-${g}/assessments/week-${ww}-assessment.html`),`Grade ${g} Week ${ww} assessment missing.`);
     for(const subject of subjects){
-      const file=`grades/grade-\${g}/subjects/\${subject}/week-\${ww}.html`;
-      expect(exists(file),`Missing subject lesson: \${file}`);
+      const file=`grades/grade-${g}/subjects/${subject}/week-${ww}.html`;
+      expect(exists(file),`Missing subject lesson: ${file}`);
       const html=read(file);
-      expect((html.match(/<article class=['"]lesson['"]/g)||[]).length===5,`\${file} must retain exactly five daily lesson articles.`);
+      expect((html.match(/<article class=['"]lesson['"]/g)||[]).length===5,`${file} must retain exactly five daily lesson articles.`);
       for(const asset of ["khaemenes-elementary-focus-map.js","khaemenes-elementary-question-factory.js","khaemenes-elementary-learning-ledger.js"])
-        expect(html.includes(asset),`\${file} missing shared learning asset \${asset}`);
+        expect(html.includes(asset),`${file} missing shared learning asset ${asset}`);
       for(const match of html.matchAll(/<(?:a|script|link)\b[^>]*?\b(?:href|src)=["']([^"']+)["']/gi)){
         const ref=match[1].trim();
         if(!ref||/^(?:#|https?:|mailto:|tel:|data:|javascript:|\/)/i.test(ref))continue;
         const target=decodeURIComponent(ref.split(/[?#]/)[0]);
         if(!target)continue;
         const resolved=path.resolve(path.dirname(path.join(ROOT,file)),target);
-        expect(fs.existsSync(resolved),`\${file} broken local reference: \${ref}`);
+        expect(fs.existsSync(resolved),`${file} broken local reference: ${ref}`);
       }
       fullYearSubjectPages++;
     }
   }
 }
-expect(fullYearSubjectPages===1008,`Expected 1008 Grades 2–5 non-civic subject-week pages, audited \${fullYearSubjectPages}.`);
+expect(fullYearSubjectPages===1008,`Expected 1008 Grades 2–5 non-civic subject-week pages, audited ${fullYearSubjectPages}.`);
 
 // Shared depth layer must remain formative/non-mastery.
 expect(ledger.includes("function depthPlan("),"Shared Instructional Depth Studio is missing.");
@@ -222,10 +222,10 @@ expect(ledger.includes("masteryAuthority:false"),"Depth/formative layer must rem
 
 // Grade 1 evidence printables require Academy identification and homeschool evidence fields.
 for(let week=1;week<=36;week++){
-  const ww=String(week).padStart(2,"0"),file=`grades/grade-01/printables/unit-\${ww}-packet.html`,html=read(file);
-  expect(html.includes('data-khae-evidence-header="v1"'),`\${file} missing standardized evidence header.`);
+  const ww=String(week).padStart(2,"0"),file=`grades/grade-01/printables/unit-${ww}-packet.html`,html=read(file);
+  expect(html.includes('data-khae-evidence-header="v1"'),`${file} missing standardized evidence header.`);
   for(const marker of ["Khaemenes Academy","Student Name:","Date:","Grade:","Unit/Week:","Lesson/Day:"])
-    expect(html.includes(marker),`\${file} missing printable evidence field: \${marker}`);
+    expect(html.includes(marker),`${file} missing printable evidence field: ${marker}`);
 }
 
 // Latent Grade 1 dashboard helper may not reintroduce average-only certification.
