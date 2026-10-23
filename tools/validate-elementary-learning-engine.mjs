@@ -220,6 +220,34 @@ expect(ledger.includes("function depthPlan("),"Shared Instructional Depth Studio
 expect(ledger.includes('aria-label","Instructional depth studio"'),"Instructional Depth Studio accessibility label missing.");
 expect(ledger.includes("masteryAuthority:false"),"Depth/formative layer must remain outside formal mastery.");
 
+
+// Weeks 08–12 instructional depth band: 4 grades × 5 weeks × 7 non-civic subjects = 140 surfaces.
+// The content is rendered by the shared learner-scoped formative ledger so the formal mastery engine remains untouched.
+expect(ledger.includes("const DEPTH_BAND_08_12="),"Weeks 08–12 depth-band definitions are missing.");
+expect(ledger.includes("function depthBandPlan("),"Weeks 08–12 topic-aware depth planner is missing.");
+expect(ledger.includes('data-depth-band",plan.band'),"Weeks 08–12 rendered depth marker is missing.");
+expect(ledger.includes('weeks:Object.freeze([8,9,10,11,12])'),"Weeks 08–12 depth-band export drifted.");
+expect(ledger.includes("formativeOnly:true"),"Depth band lost its explicit formative-only boundary.");
+
+const focusContext={console};focusContext.globalThis=focusContext;focusContext.window=focusContext;
+vm.createContext(focusContext);
+vm.runInContext(read("assets/khaemenes-elementary-focus-map.js"),focusContext);
+const focusMap=focusContext.KhaemenesElementaryFocusMap;
+let depthBandPages=0;
+for(const [g,subjects] of Object.entries(subjectSets)){
+  for(let week=8;week<=12;week++){
+    expect(typeof focusMap?.[g]?.[week]==="string"&&focusMap[g][week].trim(),`Grade ${g} Week ${week} missing focus-map theme for depth band.`);
+    const ww=String(week).padStart(2,"0");
+    for(const subject of subjects){
+      const file=`grades/grade-${g}/subjects/${subject}/week-${ww}.html`;
+      const html=read(file);
+      expect(html.includes("khaemenes-elementary-learning-ledger.js"),`${file} cannot receive the Weeks 08–12 depth band.`);
+      depthBandPages++;
+    }
+  }
+}
+expect(depthBandPages===140,`Expected 140 Weeks 08–12 subject surfaces; audited ${depthBandPages}.`);
+
 // Grade 1 evidence printables require Academy identification and homeschool evidence fields.
 for(let week=1;week<=36;week++){
   const ww=String(week).padStart(2,"0"),file=`grades/grade-01/printables/unit-${ww}-packet.html`,html=read(file);
@@ -239,6 +267,7 @@ console.log(`  formal assessment surfaces covered: ${coverage.assessment}`);
 console.log(`  generated questions sampled: ${sampled}`);
 console.log(`  large-pool questions validated: ${largePoolQuestions}`);
 console.log(`  full-year non-civic subject pages audited: ${fullYearSubjectPages}`);
+console.log(`  Weeks 08–12 topic-aware depth surfaces: ${depthBandPages}`);
 console.log("  mastery threshold: 80%");
 console.log("  certificates: 36/36 weeks + midterm + final + portfolio");
 console.log("  practice ledger: learner-scoped and non-mastery");

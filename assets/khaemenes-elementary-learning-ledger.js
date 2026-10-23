@@ -169,7 +169,8 @@ function startCheckpoint(container,context){
   renderQuestions(container,questions,context);
 }
 
-function depthPlan(subject,dayIndex,focus,grade){
+
+function baseDepthPlan(subject,dayIndex,focus,grade){
   const f=String(focus||"the lesson focus").trim(),g=Number(grade)||2;
   const plans={
     "language-arts":[
@@ -233,6 +234,99 @@ function depthPlan(subject,dayIndex,focus,grade){
   const row=set[Math.max(0,Math.min(4,dayIndex))];
   return {teacher:row[0]+" Focus: "+f+".",student:row[1],evidence:row[2]};
 }
+
+const DEPTH_BAND_08_12=Object.freeze({
+  8:Object.freeze({label:"Compare, classify, and transfer patterns",proof:"Use two contrasted examples and explain the pattern, rule, message, or relationship that transfers."}),
+  9:Object.freeze({label:"Measure, represent, and reason from evidence",proof:"Use a table, graph, labeled model, observation set, or other organized evidence before making a claim."}),
+  10:Object.freeze({label:"Solve or build through multiple connected steps",proof:"Show the sequence of decisions, calculations, revisions, or causes rather than only the final answer."}),
+  11:Object.freeze({label:"Use precise vocabulary, structure, and verification",proof:"Name the exact feature, term, coordinate, word part, procedure, or criterion and verify it with an example or check."}),
+  12:Object.freeze({label:"Classify systems and synthesize relationships",proof:"Organize examples by defensible properties, then explain how categories, places, parts, or ideas connect."})
+});
+
+function weekThemeTitle(){
+  const grade=routeGrade(),week=routeWeek();
+  const raw=global.KhaemenesElementaryFocusMap?.[grade]?.[week]||document.querySelector("h1")?.textContent||"the weekly theme";
+  return String(raw).split("·")[0].trim();
+}
+
+function depthBandPlan(subject,dayIndex,focus,grade,week){
+  const f=String(focus||"the lesson focus").trim(),g=Number(grade)||2,w=Number(week)||8;
+  const normalized=subject==="technology"?"technology-tools":subject;
+  const theme=weekThemeTitle(),band=DEPTH_BAND_08_12[w]||DEPTH_BAND_08_12[8];
+  const textSpan=g<=2?"60–100":g===3?"90–140":"120–180";
+  const routines={
+    "language-arts":[
+      ["Model the exact literacy move on a "+textSpan+" word theme-aligned passage or teacher-created excerpt; mark the sentence, word part, structure, or detail that proves the move.","Annotate the model, then state what the marked evidence shows and why it matters.","Annotated passage plus one evidence-to-meaning sentence."],
+      ["Contrast a strong example with a near-miss tied to the weekly theme; make the difference visible rather than merely naming it.","Complete two guided examples and correct the near-miss using precise vocabulary.","Two attempts plus an explicit correction and reason."],
+      ["Transfer the skill to a fresh passage, prompt, caption, dialogue, or short source connected to the theme.","Work independently without copying the model; quote, paraphrase, or point to the exact evidence used.","Independent response with traceable textual or language evidence."],
+      ["Conference on one weakness in accuracy, organization, evidence, sentence craft, or word choice; require a visible revision.","Revise one sentence or paragraph and explain exactly what changed and why the revision is stronger.","Before/after revision with a reason linked to a criterion."],
+      ["Require a short defense of the week's strongest literacy artifact using the focus vocabulary.","Select one portfolio sample, explain the strategy used, and identify one next-step target.","Portfolio artifact plus defense and next-step reflection."]
+    ],
+    "mathematics":[
+      ["Build one worked example tied to the weekly theme with quantities, labels, and at least two representations.","Explain what each number, symbol, unit, or geometric feature represents before computing.","Labeled model/equation plus a complete worked solution."],
+      ["Use a parallel problem to compare two strategies or representations and discuss efficiency, precision, or reasonableness.","Solve the same mathematical idea a second way and compare the methods.","Two valid methods or representations with a comparison statement."],
+      ["Present a deliberate misconception or incomplete solution connected to the focus and locate the exact failure point.","Correct the error, solve a fresh example, and verify the result with a second check.","Error analysis + corrected solution + verification."],
+      ["Move to a multi-step application appropriate to Grade "+g+" and the weekly theme; require students to choose relevant information.","Solve, label units, show intermediate reasoning, and test whether the answer is reasonable.","Complete multi-step solution with units/model and reasonableness check."],
+      ["Ask for a generalization: what rule, property, pattern, or relationship will still work in a new case?","State the generalization, test it on a fresh example, and defend it with numbers, models, or properties.","Generalization + fresh example + independent verification."]
+    ],
+    "science":[
+      ["Turn the theme into an observable or testable question and model the difference between observation, measurement, and inference.","Identify what can be observed/measured and write one cautious prediction without presenting it as a result.","Question + prediction + observation/inference distinction."],
+      ["Design a fair comparison, model, or evidence routine with named variables/conditions, units, materials, and safety boundaries.","Create a procedure or model and identify what data would support or challenge the idea.","Procedure/model with variables or conditions, units, and safety note."],
+      ["Use a table, diagram, graph, or labeled model to organize evidence before explaining.","Record or interpret evidence, identify a pattern, and mark any data that do not fit the pattern.","Organized evidence record with pattern and anomaly note."],
+      ["Construct a claim-evidence-reasoning explanation and actively test its weakness.","Use specific evidence, explain the link, and name a limitation, alternate explanation, or measurement weakness.","CER response with at least one limitation or competing explanation."],
+      ["Revise the scientific model or explanation after comparing it with the week's evidence.","Correct one assumption, label, measurement, variable, or reasoning link and explain the improvement.","Revised model/explanation plus evidence-based reflection."]
+    ],
+    "arts-music":[
+      ["Analyze a theme-aligned visual, musical, movement, or design model using discipline vocabulary; identify at least two intentional choices.","Mark or describe two choices in line, shape, color, rhythm, melody, texture, form, space, dynamics, or performance and connect them to purpose.","Annotated observation using correct arts/music vocabulary."],
+      ["Demonstrate one technique, then make two controlled trials that vary a single artistic choice.","Practice twice, compare the effect, and select the stronger approach for the intended purpose.","Technique trials plus selection rationale."],
+      ["Create an original response to the weekly theme using the chosen technique intentionally.","Produce a draft/performance without copying the model and keep a brief process note.","Original artifact/performance draft plus process evidence."],
+      ["Critique against one explicit criterion and revise one element rather than simply decorating or restarting.","Use peer/self feedback to make one visible improvement and explain the change.","Revision evidence plus criterion-based critique statement."],
+      ["Present or perform the final work and connect one artistic choice to audience, culture, function, or weekly theme.","Explain one intentional choice and respond respectfully to another interpretation.","Final artifact/performance plus artist statement or reflection."]
+    ],
+    "health-pe-sel":[
+      ["Define the safety/wellness goal and demonstrate accessible success criteria before practice begins.","Identify the safe form, boundary, signal, decision step, or self-management strategy and choose an adaptation if needed.","Safety/wellness criterion plus accessibility adaptation."],
+      ["Break the focus into observable steps and model one common error or unsafe choice.","Practice slowly with feedback and name one body, health, teamwork, or SEL cue that improves performance.","Skill/decision sequence plus cue and correction."],
+      ["Change one condition—space, pace, partner, stressor, repetition, scenario, or available resource—and collect simple evidence.","Practice or role-play under the changed condition and record repetitions, duration, feelings, choices, or teamwork evidence.","Simple performance/wellness data or scenario record."],
+      ["Require transfer to an inclusive real-life scenario and make adaptation part of the task.","Modify the skill/decision for a different ability, environment, partner need, or stress level and explain why.","Adaptation plan with safety/inclusion reasoning."],
+      ["Close with responsible independent use rather than a score alone.","Identify what improved, what still needs practice, and one safe next action supported by evidence.","Reflection tied to safe/healthy decision-making evidence."]
+    ],
+    "technology-tools":[
+      ["Define the information or creation goal, inputs, outputs, and privacy/safety/ethics boundary before using the tool.","Trace the process or algorithm on paper first and identify one place an error or privacy risk could occur.","Labeled workflow/algorithm plus safety or privacy note."],
+      ["Model the procedure with verification after each meaningful step rather than click-following.","Create a small file, table, sequence, algorithm, chart, or unplugged product and check each step.","Working practice artifact with ordered procedure and verification marks."],
+      ["Debug a deliberate weak workflow, inaccurate output, or unsafe data-handling example.","Identify the failure point, change one step, retest, and explain why the change worked.","Before/after debug record with explanation."],
+      ["Use the tool to solve a new theme-aligned information or creation problem and document source/data handling.","Choose an appropriate tool/format, produce the result, and record how information or data were obtained and protected.","Independent product plus source/data-handling note."],
+      ["Run an accuracy, privacy, attribution, accessibility, and usability review before calling the product finished.","Complete the verification checklist and defend one responsible-use decision.","Verified product plus digital-citizenship/ethics reflection."]
+    ],
+    "integrated-projects":[
+      ["Translate the weekly theme into a specific user/problem brief with criteria, constraints, and an evidence plan.","Define who/what the project serves, what success means, and what limits must be respected.","Project brief with users, criteria, constraints, and evidence plan."],
+      ["Plan before building: require a sketch, sequence, estimate, resource list, and at least one cross-subject connection.","Create the plan and identify what must be measured, read, calculated, tested, or researched.","Labeled plan/model with resources and cross-subject evidence needs."],
+      ["Build, research, calculate, or investigate while preserving a process log, including mistakes and changes.","Produce a prototype/research artifact and record at least one decision change caused by evidence.","Prototype/research artifact plus process log and evidence-triggered change."],
+      ["Test the product against explicit criteria, gather feedback/data, and revise one weak point.","Compare actual results to the goal and make one evidence-based improvement.","Test result + feedback/data + visible revision."],
+      ["Present and defend the project using at least two disciplines and one limitation or next step.","Explain how the evidence demonstrates success, what remains uncertain, and what should improve next.","Final product + cross-disciplinary defense + limitation/next step."]
+    ]
+  };
+  const rows=routines[normalized];
+  if(!rows){
+    const base=baseDepthPlan(subject,dayIndex,f,g);
+    return {...base,theme,lens:band.label,proof:band.proof,band:"08-12-v1"};
+  }
+  const row=rows[Math.max(0,Math.min(4,dayIndex))];
+  return {
+    teacher:"Week "+String(w).padStart(2,"0")+" theme: "+theme+". Rigor lens: "+band.label+". "+row[0]+" Focus: "+f+".",
+    student:row[1],
+    evidence:row[2]+" "+band.proof,
+    theme,
+    lens:band.label,
+    proof:band.proof,
+    band:"08-12-v1"
+  };
+}
+
+function depthPlan(subject,dayIndex,focus,grade){
+  const week=routeWeek();
+  if(week>=8&&week<=12)return depthBandPlan(subject,dayIndex,focus,grade,week);
+  return baseDepthPlan(subject,dayIndex,focus,grade);
+}
 function addDepthStudio(article,index,focus,day){
   if(article.querySelector(".elementary-depth-studio"))return;
   if(/Depth Lab|Worked Studio|Applied Worked Studio|Academic Depth Lab|Practical Depth Lab/i.test(article.textContent||""))return;
@@ -240,7 +334,8 @@ function addDepthStudio(article,index,focus,day){
   const section=document.createElement("section");
   section.className="elementary-depth-studio";
   section.setAttribute("aria-label","Instructional depth studio");
-  section.innerHTML='<h5>Instructional Depth Studio · '+esc(day)+'</h5><dl><dt>Teacher move</dt><dd>'+esc(plan.teacher)+'</dd><dt>Student task</dt><dd>'+esc(plan.student)+'</dd><dt>Evidence criterion</dt><dd>'+esc(plan.evidence)+'</dd></dl>';
+  if(plan.band)section.setAttribute("data-depth-band",plan.band);
+  section.innerHTML='<h5>Instructional Depth Studio · '+esc(day)+'</h5><dl>'+(plan.theme?'<dt>Week theme</dt><dd>'+esc(plan.theme)+'</dd>':'')+(plan.lens?'<dt>Rigor lens</dt><dd>'+esc(plan.lens)+'</dd>':'')+'<dt>Teacher move</dt><dd>'+esc(plan.teacher)+'</dd><dt>Student task</dt><dd>'+esc(plan.student)+'</dd><dt>Evidence criterion</dt><dd>'+esc(plan.evidence)+'</dd></dl>';
   article.appendChild(section);
 }
 
@@ -295,6 +390,7 @@ global.KhaemenesElementaryLearningLedger=Object.freeze({
   recent,
   saveRecord,
   refresh:schedule,
+  depthBand:Object.freeze({weeks:Object.freeze([8,9,10,11,12]),version:"08-12-v1",formativeOnly:true}),
   authority:Object.freeze({awardsMastery:false,changesScore:false,unlocksCurriculum:false,changesPlacement:false})
 });
 })(window);
