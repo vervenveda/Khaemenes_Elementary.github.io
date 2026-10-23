@@ -9,7 +9,7 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
     "weeklyDraw": 8,
     "weeklyCurrentItems": 12,
     "weeklyBankMin": 12,
-    "weeklyBankMax": 16,
+    "weeklyBankMax": 18,
     "midtermDraw": 36,
     "finalDraw": 48,
     "weeklyMode": "open-book",
@@ -44,15 +44,32 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
       35
     ],
     "localizationPolicy": "Keep the national Grade 4 Social Studies disciplinary spine and 80% mastery gates invariant. Localize required state/local history, geography, Indigenous nations, government, economy, public figures, source sets, and capstone evidence through the state localization guide.",
-    "assessmentSpecificity": "2026 specificity hardening replaced 216 recurring meta-template current-bank items with week-specific historical, geographic, civic, economic, source, or evidence questions while preserving item IDs for audit continuity.",
+    "assessmentSpecificity": "2026 specificity hardening replaced 216 recurring meta-template current-bank items with week-specific historical, geographic, civic, economic, source, or evidence questions while preserving item IDs for audit continuity. Two source-linked weekly items now draw directly on the visible Khaemenes Source Studio.",
     "antiRepeatDepth": 2,
     "cumulativeBlueprint": "unit-stratified",
     "assessmentModel": "Monte Carlo randomized forms with answer shuffling, two-form anti-repeat weighting, saved attempt snapshots, and unit-stratified cumulative exams.",
     "statePacks": {
-      "florida": "STATE_PACK_FLORIDA.md"
+      "florida": "STATE_PACK_FLORIDA.md",
+      "california": "STATE_PACK_CALIFORNIA.md",
+      "newYork": "STATE_PACK_NEW_YORK.md",
+      "template": "STATE_PACK_TEMPLATE.md"
     },
     "localizationWorkflow": "Teacher-selected generic or Florida context with checkpoint evidence saved in the learner record.",
-    "constructedEvidenceReview": "pending / revise / approved is recorded separately from the 80% objective mastery gate."
+    "constructedEvidenceReview": "pending / revise / approved is recorded separately from the 80% objective mastery gate.",
+    "sourceStudios": true,
+    "sourceStudioSourcesPerWeek": 3,
+    "sourceLinkedWeeklyItems": 2,
+    "statePackSchema": "../../../../SOCIAL_STUDIES_STATE_PACK_SCHEMA.json",
+    "statePackTemplate": "STATE_PACK_TEMPLATE.md",
+    "statePackStatus": {
+      "florida": "complete",
+      "california": "validation",
+      "newYork": "validation",
+      "template": "template"
+    },
+    "cumulativeWrittenEvidence": true,
+    "cumulativeWrittenEvidenceRequired": true,
+    "cumulativeWrittenEvidencePolicy": "Midterm and final each include an unfamiliar source set and a separately teacher-reviewed written response. Objective mastery remains the automatic 80% gate; writing cannot compensate for an objective score below 80%."
   },
   "strands": [
     "Historical Inquiry & Evidence",
@@ -460,8 +477,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "content-specific",
           "sourceWeek": 1
+        },
+        {
+          "id": "G4SS-W01-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 1?",
+          "choices": [
+            "Historians develop focused questions, gather relevant evidence, build claims, consider context and perspective, and revise explanations when evidence changes.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 1
+        },
+        {
+          "id": "G4SS-W01-ST2",
+          "prompt": "Which finding is included in Source C for Week 1?",
+          "choices": [
+            "be supported by relevant evidence and context",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 1
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 1",
+        "inquiry": "How do historians build explanations about the past?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 1 · Historical Questions, Claims, and Evidence",
+            "content": "Historians develop focused questions, gather relevant evidence, build claims, consider context and perspective, and revise explanations when evidence changes.",
+            "accessibleDescription": "A concise evidence brief for Historical Questions, Claims, and Evidence.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 1 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Historical Questions, Claims, and Evidence",
+            "rows": [
+              [
+                "historical inquiry",
+                "systematic investigation of a question about the past"
+              ],
+              [
+                "claim",
+                "a conclusion supported by evidence"
+              ],
+              [
+                "context",
+                "conditions surrounding a person, event, source, or period"
+              ],
+              [
+                "corroboration",
+                "checking information against other sources"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 1 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do historians build explanations about the past?",
+            "findings": [
+              {
+                "question": "A strong historical claim should...",
+                "finding": "be supported by relevant evidence and context"
+              },
+              {
+                "question": "Corroboration means...",
+                "finding": "checking information against other sources"
+              },
+              {
+                "question": "How do historians build explanations about the past?",
+                "finding": "Historians develop focused questions, gather relevant evidence, build claims, consider context and perspective, and revise explanations when evidence changes."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 1 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 2,
@@ -865,8 +983,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 1
+        },
+        {
+          "id": "G4SS-W02-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 2?",
+          "choices": [
+            "Primary and secondary sources can both be valuable; reliability depends on the question, creator, purpose, context, evidence, and corroboration rather than source type alone.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 2
+        },
+        {
+          "id": "G4SS-W02-ST2",
+          "prompt": "Which finding is included in Source C for Week 2?",
+          "choices": [
+            "usefulness depends on context, purpose, perspective, and the question",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 2
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 2",
+        "inquiry": "How do source type, creator, purpose, and audience affect historical evidence?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 2 · Primary, Secondary, and Archival Sources",
+            "content": "Primary and secondary sources can both be valuable; reliability depends on the question, creator, purpose, context, evidence, and corroboration rather than source type alone.",
+            "accessibleDescription": "A concise evidence brief for Primary, Secondary, and Archival Sources.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 2 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Primary, Secondary, and Archival Sources",
+            "rows": [
+              [
+                "primary source",
+                "evidence created during a period or by a participant/witness"
+              ],
+              [
+                "secondary source",
+                "an interpretation created later using evidence"
+              ],
+              [
+                "archive",
+                "a collection or institution preserving records"
+              ],
+              [
+                "audience",
+                "the people a source was intended to reach"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 2 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do source type, creator, purpose, and audience affect historical evidence?",
+            "findings": [
+              {
+                "question": "A primary source is not automatically more reliable because...",
+                "finding": "usefulness depends on context, purpose, perspective, and the question"
+              },
+              {
+                "question": "Why identify audience?",
+                "finding": "intended audience can influence language, emphasis, and purpose"
+              },
+              {
+                "question": "How do source type, creator, purpose, and audience affect historical evidence?",
+                "finding": "Primary and secondary sources can both be valuable; reliability depends on the question, creator, purpose, context, evidence, and corroboration rather than source type alone."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 2 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 3,
@@ -1296,8 +1515,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 1
+        },
+        {
+          "id": "G4SS-W03-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 3?",
+          "choices": [
+            "Historical events unfold in sequence and usually have multiple causes, consequences, and perspectives; one source or one cause rarely explains a complex change completely.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 3
+        },
+        {
+          "id": "G4SS-W03-ST2",
+          "prompt": "Which finding is included in Source C for Week 3?",
+          "choices": [
+            "multiple causes and consequences",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 3
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 3",
+        "inquiry": "How can chronology and perspective improve explanations of historical change?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 3 · Chronology, Cause, Effect, and Multiple Perspectives",
+            "content": "Historical events unfold in sequence and usually have multiple causes, consequences, and perspectives; one source or one cause rarely explains a complex change completely.",
+            "accessibleDescription": "A concise evidence brief for Chronology, Cause, Effect, and Multiple Perspectives.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 3 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Chronology, Cause, Effect, and Multiple Perspectives",
+            "rows": [
+              [
+                "chronology",
+                "the order events occurred in time"
+              ],
+              [
+                "cause",
+                "a factor contributing to an event or change"
+              ],
+              [
+                "consequence",
+                "a result or effect"
+              ],
+              [
+                "perspective",
+                "a point of view shaped by position and experience"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 3 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can chronology and perspective improve explanations of historical change?",
+            "findings": [
+              {
+                "question": "A complex historical event often has...",
+                "finding": "multiple causes and consequences"
+              },
+              {
+                "question": "Perspective means...",
+                "finding": "a point of view shaped by position and experience"
+              },
+              {
+                "question": "How can chronology and perspective improve explanations of historical change?",
+                "finding": "Historical events unfold in sequence and usually have multiple causes, consequences, and perspectives; one source or one cause rarely explains a complex change completely."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 3 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 4,
@@ -1727,8 +2047,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 2
+        },
+        {
+          "id": "G4SS-W04-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 4?",
+          "choices": [
+            "Local and state history can be investigated with archives, tribal sources, maps, newspapers, photographs, public records, oral histories, historic sites, and demographic/economic data while protecting learner privacy.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 4
+        },
+        {
+          "id": "G4SS-W04-ST2",
+          "prompt": "Which finding is included in Source C for Week 4?",
+          "choices": [
+            "use public or appropriately shared sources and protect privacy",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 4
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 4",
+        "inquiry": "How can public sources help us reconstruct the history of a state and local community?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 4 · Local and State History Research Lab",
+            "content": "Local and state history can be investigated with archives, tribal sources, maps, newspapers, photographs, public records, oral histories, historic sites, and demographic/economic data while protecting learner privacy.",
+            "accessibleDescription": "A concise evidence brief for Local and State History Research Lab.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 4 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Local and State History Research Lab",
+            "rows": [
+              [
+                "local history",
+                "study of the past of a particular community"
+              ],
+              [
+                "state history",
+                "study of change over time within a state and its peoples"
+              ],
+              [
+                "public record",
+                "a government-created record available under applicable access rules"
+              ],
+              [
+                "historical site",
+                "a place preserved or interpreted because of historical significance"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 4 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can public sources help us reconstruct the history of a state and local community?",
+            "findings": [
+              {
+                "question": "A local-history project should...",
+                "finding": "use public or appropriately shared sources and protect privacy"
+              },
+              {
+                "question": "Why use several source types?",
+                "finding": "different sources reveal different evidence and perspectives"
+              },
+              {
+                "question": "How can public sources help us reconstruct the history of a state and local community?",
+                "finding": "Local and state history can be investigated with archives, tribal sources, maps, newspapers, photographs, public records, oral histories, historic sites, and demographic/economic data while protecting learner privacy."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 4 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 5,
@@ -2158,8 +2579,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 3
+        },
+        {
+          "id": "G4SS-W05-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 5?",
+          "choices": [
+            "Latitude, longitude, scale, physical/political/thematic maps, and spatial data help explain location and patterns; maps are representations shaped by purpose, date, and design choices.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 5
+        },
+        {
+          "id": "G4SS-W05-ST2",
+          "prompt": "Which finding is included in Source C for Week 5?",
+          "choices": [
+            "distance north or south of the Equator",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 5
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 5",
+        "inquiry": "How do advanced map tools help us analyze states and regions?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 5 · Latitude, Longitude, Scale, and Thematic Maps",
+            "content": "Latitude, longitude, scale, physical/political/thematic maps, and spatial data help explain location and patterns; maps are representations shaped by purpose, date, and design choices.",
+            "accessibleDescription": "A concise evidence brief for Latitude, Longitude, Scale, and Thematic Maps.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 5 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Latitude, Longitude, Scale, and Thematic Maps",
+            "rows": [
+              [
+                "latitude",
+                "imaginary east-west lines measuring distance north or south of the Equator"
+              ],
+              [
+                "longitude",
+                "imaginary north-south lines measuring distance east or west of the Prime Meridian"
+              ],
+              [
+                "thematic map",
+                "a map emphasizing a selected topic or pattern"
+              ],
+              [
+                "scale",
+                "a relationship between map distance and real-world distance"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 5 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do advanced map tools help us analyze states and regions?",
+            "findings": [
+              {
+                "question": "Latitude measures...",
+                "finding": "distance north or south of the Equator"
+              },
+              {
+                "question": "A thematic map is useful for...",
+                "finding": "showing a selected pattern such as population, climate, or industry"
+              },
+              {
+                "question": "How do advanced map tools help us analyze states and regions?",
+                "finding": "Latitude, longitude, scale, physical/political/thematic maps, and spatial data help explain location and patterns; maps are representations shaped by purpose, date, and design choices."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 5 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 6,
@@ -2589,8 +3111,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 4
+        },
+        {
+          "id": "G4SS-W06-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 6?",
+          "choices": [
+            "Landforms, climate, water, soils, hazards, and resources influence settlement and economic activity, but technology, policy, culture, migration, markets, and history also shape development.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 6
+        },
+        {
+          "id": "G4SS-W06-ST2",
+          "prompt": "Which finding is included in Source C for Week 6?",
+          "choices": [
+            "influence choices without determining all human outcomes",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 6
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 6",
+        "inquiry": "How do physical geography and resources influence—but not determine—state development?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 6 · Regions, Landforms, Climate, and Resources",
+            "content": "Landforms, climate, water, soils, hazards, and resources influence settlement and economic activity, but technology, policy, culture, migration, markets, and history also shape development.",
+            "accessibleDescription": "A concise evidence brief for Regions, Landforms, Climate, and Resources.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 6 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Regions, Landforms, Climate, and Resources",
+            "rows": [
+              [
+                "physical geography",
+                "natural features and processes of Earth's surface"
+              ],
+              [
+                "resource",
+                "something people use to meet needs or goals"
+              ],
+              [
+                "region",
+                "an area grouped by selected characteristics"
+              ],
+              [
+                "environmental determinism",
+                "the mistaken idea that environment alone determines human culture or history"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 6 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do physical geography and resources influence—but not determine—state development?",
+            "findings": [
+              {
+                "question": "Physical geography can...",
+                "finding": "influence choices without determining all human outcomes"
+              },
+              {
+                "question": "Environmental determinism is...",
+                "finding": "the mistaken idea that environment alone determines human culture or history"
+              },
+              {
+                "question": "How do physical geography and resources influence—but not determine—state development?",
+                "finding": "Landforms, climate, water, soils, hazards, and resources influence settlement and economic activity, but technology, policy, culture, migration, markets, and history also shape development."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 6 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 7,
@@ -3020,8 +3643,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 5
+        },
+        {
+          "id": "G4SS-W07-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 7?",
+          "choices": [
+            "People change environments and adapt to hazards through infrastructure, engineering, planning, conservation, regulation, and individual/community choices that involve benefits, costs, and unequal effects.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 7
+        },
+        {
+          "id": "G4SS-W07-ST2",
+          "prompt": "Which finding is included in Source C for Week 7?",
+          "choices": [
+            "people, infrastructure, and resources may be exposed or vulnerable",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 7
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 7",
+        "inquiry": "How do communities adapt to environments, manage hazards, and debate resource use?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 7 · Human-Environment Interaction, Hazards, and Conservation",
+            "content": "People change environments and adapt to hazards through infrastructure, engineering, planning, conservation, regulation, and individual/community choices that involve benefits, costs, and unequal effects.",
+            "accessibleDescription": "A concise evidence brief for Human-Environment Interaction, Hazards, and Conservation.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 7 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Human-Environment Interaction, Hazards, and Conservation",
+            "rows": [
+              [
+                "hazard",
+                "a potential source of harm from natural or human processes"
+              ],
+              [
+                "conservation",
+                "careful protection or management of resources"
+              ],
+              [
+                "infrastructure",
+                "shared systems such as roads, water, power, ports, and transit"
+              ],
+              [
+                "tradeoff",
+                "a balance of benefits and costs among choices"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 7 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do communities adapt to environments, manage hazards, and debate resource use?",
+            "findings": [
+              {
+                "question": "A hazard becomes a public problem partly because...",
+                "finding": "people, infrastructure, and resources may be exposed or vulnerable"
+              },
+              {
+                "question": "A conservation decision should consider...",
+                "finding": "ecological, economic, cultural, and community effects"
+              },
+              {
+                "question": "How do communities adapt to environments, manage hazards, and debate resource use?",
+                "finding": "People change environments and adapt to hazards through infrastructure, engineering, planning, conservation, regulation, and individual/community choices that involve benefits, costs, and unequal effects."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 7 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 8,
@@ -3451,8 +4175,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 6
+        },
+        {
+          "id": "G4SS-W08-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 8?",
+          "choices": [
+            "Roads, rivers, canals, railroads, ports, aviation, and digital networks reshape movement, markets, settlement, land use, migration, and access while creating benefits and costs.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 8
+        },
+        {
+          "id": "G4SS-W08-ST2",
+          "prompt": "Which finding is included in Source C for Week 8?",
+          "choices": [
+            "reshape settlement, trade, migration, and access",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 8
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 8",
+        "inquiry": "How have transportation and infrastructure connected regions and changed communities?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 8 · Transportation, Cities, Rural Areas, and State Connections",
+            "content": "Roads, rivers, canals, railroads, ports, aviation, and digital networks reshape movement, markets, settlement, land use, migration, and access while creating benefits and costs.",
+            "accessibleDescription": "A concise evidence brief for Transportation, Cities, Rural Areas, and State Connections.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 8 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Transportation, Cities, Rural Areas, and State Connections",
+            "rows": [
+              [
+                "transportation network",
+                "connected routes and systems moving people or goods"
+              ],
+              [
+                "urbanization",
+                "growth of urban population and places"
+              ],
+              [
+                "rural",
+                "relating to lower-density countryside or small communities"
+              ],
+              [
+                "access",
+                "ability or opportunity to reach or use something"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 8 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How have transportation and infrastructure connected regions and changed communities?",
+            "findings": [
+              {
+                "question": "Transportation networks can...",
+                "finding": "reshape settlement, trade, migration, and access"
+              },
+              {
+                "question": "Urbanization means...",
+                "finding": "growth of urban population and places"
+              },
+              {
+                "question": "How have transportation and infrastructure connected regions and changed communities?",
+                "finding": "Roads, rivers, canals, railroads, ports, aviation, and digital networks reshape movement, markets, settlement, land use, migration, and access while creating benefits and costs."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 8 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 9,
@@ -3882,8 +4707,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 7
+        },
+        {
+          "id": "G4SS-W09-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 9?",
+          "choices": [
+            "Indigenous nations are diverse, living political and cultural communities with specific homelands, governments, economies, languages, histories, and continuing sovereignty.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 9
+        },
+        {
+          "id": "G4SS-W09-ST2",
+          "prompt": "Which finding is included in Source C for Week 9?",
+          "choices": [
+            "as diverse living political and cultural communities",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 9
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 9",
+        "inquiry": "How should fourth graders study Indigenous histories before and after colonization?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 9 · Indigenous Nations, Homelands, and Sovereignty",
+            "content": "Indigenous nations are diverse, living political and cultural communities with specific homelands, governments, economies, languages, histories, and continuing sovereignty.",
+            "accessibleDescription": "A concise evidence brief for Indigenous Nations, Homelands, and Sovereignty.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 9 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Indigenous Nations, Homelands, and Sovereignty",
+            "rows": [
+              [
+                "sovereignty",
+                "authority of a nation or people to govern itself"
+              ],
+              [
+                "homeland",
+                "a place with deep historical, cultural, or political connection to a people"
+              ],
+              [
+                "treaty",
+                "a formal agreement between political entities"
+              ],
+              [
+                "continuity",
+                "persistence across time"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 9 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How should fourth graders study Indigenous histories before and after colonization?",
+            "findings": [
+              {
+                "question": "Indigenous nations should be studied...",
+                "finding": "as diverse living political and cultural communities"
+              },
+              {
+                "question": "A treaty is...",
+                "finding": "a formal agreement between political entities"
+              },
+              {
+                "question": "How should fourth graders study Indigenous histories before and after colonization?",
+                "finding": "Indigenous nations are diverse, living political and cultural communities with specific homelands, governments, economies, languages, histories, and continuing sovereignty."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 9 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 10,
@@ -4313,8 +5239,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 8
+        },
+        {
+          "id": "G4SS-W10-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 10?",
+          "choices": [
+            "Indigenous economies and technologies reflected sophisticated knowledge, trade networks, governance, agriculture, hunting/fishing, engineering, craft, and environmental relationships that varied by nation and region.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 10
+        },
+        {
+          "id": "G4SS-W10-ST2",
+          "prompt": "Which finding is included in Source C for Week 10?",
+          "choices": [
+            "tools and systems developed to solve problems, not only electronics",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 10
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 10",
+        "inquiry": "How did Indigenous peoples develop diverse economies and technologies across environments?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 10 · Indigenous Economies, Technologies, and Environmental Knowledge",
+            "content": "Indigenous economies and technologies reflected sophisticated knowledge, trade networks, governance, agriculture, hunting/fishing, engineering, craft, and environmental relationships that varied by nation and region.",
+            "accessibleDescription": "A concise evidence brief for Indigenous Economies, Technologies, and Environmental Knowledge.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 10 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Indigenous Economies, Technologies, and Environmental Knowledge",
+            "rows": [
+              [
+                "economy",
+                "systems of production, exchange, work, and resource use"
+              ],
+              [
+                "technology",
+                "tools or systems developed to solve problems"
+              ],
+              [
+                "trade network",
+                "connected routes and relationships for exchange"
+              ],
+              [
+                "traditional ecological knowledge",
+                "knowledge developed through long relationships among peoples, places, and living systems"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 10 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How did Indigenous peoples develop diverse economies and technologies across environments?",
+            "findings": [
+              {
+                "question": "Technology includes...",
+                "finding": "tools and systems developed to solve problems, not only electronics"
+              },
+              {
+                "question": "A good comparison of Indigenous economies should...",
+                "finding": "use nation-specific evidence and avoid stereotypes"
+              },
+              {
+                "question": "How did Indigenous peoples develop diverse economies and technologies across environments?",
+                "finding": "Indigenous economies and technologies reflected sophisticated knowledge, trade networks, governance, agriculture, hunting/fishing, engineering, craft, and environmental relationships that varied by nation and region."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 10 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 11,
@@ -4744,8 +5771,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 9
+        },
+        {
+          "id": "G4SS-W11-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 11?",
+          "choices": [
+            "Exploration was driven by overlapping political, economic, religious, scientific, and personal motives; encounters created exchange and new connections while also contributing to conquest, disease, coercion, and dispossession.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 11
+        },
+        {
+          "id": "G4SS-W11-ST2",
+          "prompt": "Which finding is included in Source C for Week 11?",
+          "choices": [
+            "political, economic, religious, scientific, and personal goals",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 11
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 11",
+        "inquiry": "Why did explorers travel, and how did encounters connect Europe, Africa, and the Americas?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 11 · Exploration, Motives, Navigation, and Encounter",
+            "content": "Exploration was driven by overlapping political, economic, religious, scientific, and personal motives; encounters created exchange and new connections while also contributing to conquest, disease, coercion, and dispossession.",
+            "accessibleDescription": "A concise evidence brief for Exploration, Motives, Navigation, and Encounter.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 11 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Exploration, Motives, Navigation, and Encounter",
+            "rows": [
+              [
+                "exploration",
+                "travel undertaken to investigate, map, trade, claim, or seek routes/resources"
+              ],
+              [
+                "navigation",
+                "methods and tools used to determine position and route"
+              ],
+              [
+                "encounter",
+                "contact between peoples or groups"
+              ],
+              [
+                "motive",
+                "a reason for action"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 11 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to Why did explorers travel, and how did encounters connect Europe, Africa, and the Americas?",
+            "findings": [
+              {
+                "question": "Exploration motives included...",
+                "finding": "political, economic, religious, scientific, and personal goals"
+              },
+              {
+                "question": "A balanced encounter history should...",
+                "finding": "include perspectives, exchange, conflict, disease, coercion, and agency where supported"
+              },
+              {
+                "question": "Why did explorers travel, and how did encounters connect Europe, Africa, and the Americas?",
+                "finding": "Exploration was driven by overlapping political, economic, religious, scientific, and personal motives; encounters created exchange and new connections while also contributing to conquest, disease, coercion, and dispossession."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 11 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 12,
@@ -5175,8 +6303,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 10
+        },
+        {
+          "id": "G4SS-W12-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 12?",
+          "choices": [
+            "Colonization established settlements and institutions but also imposed new political, economic, religious, and labor systems, causing major demographic change, land loss, coercion, resistance, adaptation, and cultural exchange.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 12
+        },
+        {
+          "id": "G4SS-W12-ST2",
+          "prompt": "Which finding is included in Source C for Week 12?",
+          "choices": [
+            "settlement, political control, land claims, labor systems, religious institutions, and coercion",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 12
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 12",
+        "inquiry": "How did colonization reshape land, labor, government, religion, and Indigenous life?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 12 · Colonization, Missions, Settlements, and Consequences",
+            "content": "Colonization established settlements and institutions but also imposed new political, economic, religious, and labor systems, causing major demographic change, land loss, coercion, resistance, adaptation, and cultural exchange.",
+            "accessibleDescription": "A concise evidence brief for Colonization, Missions, Settlements, and Consequences.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 12 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Colonization, Missions, Settlements, and Consequences",
+            "rows": [
+              [
+                "colonization",
+                "establishing control and settlement over territory and peoples"
+              ],
+              [
+                "mission",
+                "a religious institution established to spread faith and often support colonial settlement"
+              ],
+              [
+                "dispossession",
+                "loss or taking of land or property"
+              ],
+              [
+                "resistance",
+                "actions opposing control, coercion, or injustice"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 12 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How did colonization reshape land, labor, government, religion, and Indigenous life?",
+            "findings": [
+              {
+                "question": "Colonization can include...",
+                "finding": "settlement, political control, land claims, labor systems, religious institutions, and coercion"
+              },
+              {
+                "question": "Dispossession means...",
+                "finding": "loss or taking of land or property"
+              },
+              {
+                "question": "How did colonization reshape land, labor, government, religion, and Indigenous life?",
+                "finding": "Colonization established settlements and institutions but also imposed new political, economic, religious, and labor systems, causing major demographic change, land loss, coercion, resistance, adaptation, and cultural exchange."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 12 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 13,
@@ -5606,8 +6835,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 11
+        },
+        {
+          "id": "G4SS-W13-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 13?",
+          "choices": [
+            "Colonial regions developed differently through environment, imperial policy, Indigenous alliances and resistance, migration, labor systems, religion, trade, and conflict.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 13
+        },
+        {
+          "id": "G4SS-W13-ST2",
+          "prompt": "Which finding is included in Source C for Week 13?",
+          "choices": [
+            "does not necessarily show complete control of every place or people",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 13
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 13",
+        "inquiry": "How did geography, empire, Indigenous diplomacy, labor, and trade shape colonial regions?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 13 · Colonial Regions, Empires, and Competing Claims",
+            "content": "Colonial regions developed differently through environment, imperial policy, Indigenous alliances and resistance, migration, labor systems, religion, trade, and conflict.",
+            "accessibleDescription": "A concise evidence brief for Colonial Regions, Empires, and Competing Claims.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 13 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Colonial Regions, Empires, and Competing Claims",
+            "rows": [
+              [
+                "empire",
+                "a political system extending control over multiple territories or peoples"
+              ],
+              [
+                "colony",
+                "a territory under the control or settlement of another political power"
+              ],
+              [
+                "alliance",
+                "an agreement to cooperate for shared purposes"
+              ],
+              [
+                "mercantilism",
+                "an early modern economic policy emphasizing state power through regulated trade and accumulation of wealth"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 13 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How did geography, empire, Indigenous diplomacy, labor, and trade shape colonial regions?",
+            "findings": [
+              {
+                "question": "A map of imperial claims...",
+                "finding": "does not necessarily show complete control of every place or people"
+              },
+              {
+                "question": "An alliance is...",
+                "finding": "an agreement to cooperate for shared purposes"
+              },
+              {
+                "question": "How did geography, empire, Indigenous diplomacy, labor, and trade shape colonial regions?",
+                "finding": "Colonial regions developed differently through environment, imperial policy, Indigenous alliances and resistance, migration, labor systems, religion, trade, and conflict."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 13 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 14,
@@ -6037,8 +7367,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 12
+        },
+        {
+          "id": "G4SS-W14-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 14?",
+          "choices": [
+            "Colonial economies included slavery and other coerced labor systems; enslaved Africans and others maintained families, cultures, skills, resistance, and community-building while free Black communities and allies also challenged slavery.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 14
+        },
+        {
+          "id": "G4SS-W14-ST2",
+          "prompt": "Which finding is included in Source C for Week 14?",
+          "choices": [
+            "a coercive system denying freedom and treating people as property",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 14
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 14",
+        "inquiry": "How did forced labor systems shape colonial societies, and how did people resist and build freedom?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 14 · Slavery, Forced Labor, Resistance, and Free Communities",
+            "content": "Colonial economies included slavery and other coerced labor systems; enslaved Africans and others maintained families, cultures, skills, resistance, and community-building while free Black communities and allies also challenged slavery.",
+            "accessibleDescription": "A concise evidence brief for Slavery, Forced Labor, Resistance, and Free Communities.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 14 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Slavery, Forced Labor, Resistance, and Free Communities",
+            "rows": [
+              [
+                "enslavement",
+                "a system in which people are treated as property and forced to labor without freedom"
+              ],
+              [
+                "forced labor",
+                "work compelled through coercion or legal/political power"
+              ],
+              [
+                "resistance",
+                "actions opposing control or injustice"
+              ],
+              [
+                "free community",
+                "a community whose members are legally free rather than enslaved"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 14 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How did forced labor systems shape colonial societies, and how did people resist and build freedom?",
+            "findings": [
+              {
+                "question": "Enslavement was...",
+                "finding": "a coercive system denying freedom and treating people as property"
+              },
+              {
+                "question": "Studying resistance helps show...",
+                "finding": "enslaved and oppressed people had agency even within unjust systems"
+              },
+              {
+                "question": "How did forced labor systems shape colonial societies, and how did people resist and build freedom?",
+                "finding": "Colonial economies included slavery and other coerced labor systems; enslaved Africans and others maintained families, cultures, skills, resistance, and community-building while free Black communities and allies also challenged slavery."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 14 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 15,
@@ -6468,8 +7899,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 13
+        },
+        {
+          "id": "G4SS-W15-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 15?",
+          "choices": [
+            "Colonial communities included Indigenous peoples, enslaved and free Africans, European migrants, religious minorities, laborers, merchants, farmers, artisans, and others whose experiences varied by law, region, status, gender, wealth, and time.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 15
+        },
+        {
+          "id": "G4SS-W15-ST2",
+          "prompt": "Which finding is included in Source C for Week 15?",
+          "choices": [
+            "socially diverse and unequal, with experiences varying by region and status",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 15
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 15",
+        "inquiry": "How did diverse peoples build, change, and contest colonial communities?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 15 · Colonial Life, Migration, Religion, and Trade",
+            "content": "Colonial communities included Indigenous peoples, enslaved and free Africans, European migrants, religious minorities, laborers, merchants, farmers, artisans, and others whose experiences varied by law, region, status, gender, wealth, and time.",
+            "accessibleDescription": "A concise evidence brief for Colonial Life, Migration, Religion, and Trade.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 15 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Colonial Life, Migration, Religion, and Trade",
+            "rows": [
+              [
+                "migration",
+                "movement of people from one place to another to live"
+              ],
+              [
+                "pluralism",
+                "presence of multiple groups, beliefs, or viewpoints"
+              ],
+              [
+                "artisan",
+                "a skilled craft worker"
+              ],
+              [
+                "commerce",
+                "exchange of goods and services"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 15 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How did diverse peoples build, change, and contest colonial communities?",
+            "findings": [
+              {
+                "question": "Colonial communities were...",
+                "finding": "socially diverse and unequal, with experiences varying by region and status"
+              },
+              {
+                "question": "Migration can be...",
+                "finding": "voluntary, constrained, or forced depending on circumstances"
+              },
+              {
+                "question": "How did diverse peoples build, change, and contest colonial communities?",
+                "finding": "Colonial communities included Indigenous peoples, enslaved and free Africans, European migrants, religious minorities, laborers, merchants, farmers, artisans, and others whose experiences varied by law, region, status, gender, wealth, and time."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 15 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 16,
@@ -6899,8 +8431,110 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 14
+        },
+        {
+          "id": "G4SS-W16-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 16?",
+          "choices": [
+            "Postwar debt, imperial regulation, taxation, representation disputes, colonial political traditions, enforcement, protests, and competing loyalties contributed to escalating conflict.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 16
+        },
+        {
+          "id": "G4SS-W16-ST2",
+          "prompt": "Which finding is included in Source C for Week 16?",
+          "choices": [
+            "multiple political, economic, legal, and ideological causes",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 16
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 16",
+        "inquiry": "Why did conflict grow between Britain and many colonists after the Seven Years' War?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 16 · Road to Revolution: Taxation, Representation, Protest, and Empire",
+            "content": "Postwar debt, imperial regulation, taxation, representation disputes, colonial political traditions, enforcement, protests, and competing loyalties contributed to escalating conflict.",
+            "accessibleDescription": "A concise evidence brief for Road to Revolution: Taxation, Representation, Protest, and Empire.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 16 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Road to Revolution: Taxation, Representation, Protest, and Empire",
+            "rows": [
+              [
+                "taxation",
+                "government collection of money to fund public purposes"
+              ],
+              [
+                "representation",
+                "acting or speaking on behalf of constituents or interests"
+              ],
+              [
+                "boycott",
+                "organized refusal to buy or use goods as protest"
+              ],
+              [
+                "loyalist",
+                "a colonist who remained loyal to Britain during the American Revolution"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 16 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "Declaration of Independence",
+            "date": "1776",
+            "context": "Primary-source connection for Road to Revolution: Taxation, Representation, Protest, and Empire",
+            "content": "“all men are created equal”",
+            "findings": [
+              {
+                "question": "The road to Revolution had...",
+                "finding": "multiple political, economic, legal, and ideological causes"
+              },
+              {
+                "question": "A boycott is...",
+                "finding": "organized refusal to buy or use goods as protest"
+              },
+              {
+                "question": "Why did conflict grow between Britain and many colonists after the Seven Years' War?",
+                "finding": "Postwar debt, imperial regulation, taxation, representation disputes, colonial political traditions, enforcement, protests, and competing loyalties contributed to escalating conflict."
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from Declaration of Independence, followed by evidence findings for the week's inquiry.",
+            "citation": "Declaration of Independence (1776), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 17,
@@ -7330,8 +8964,110 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 15
+        },
+        {
+          "id": "G4SS-W17-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 17?",
+          "choices": [
+            "The Revolution involved military conflict, political ideas, diplomacy, Indigenous nations, enslaved and free Black people, women, Loyalists, Patriots, and civilians whose goals and outcomes differed.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 17
+        },
+        {
+          "id": "G4SS-W17-ST2",
+          "prompt": "Which finding is included in Source C for Week 17?",
+          "choices": [
+            "different groups in different ways",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 17
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 17",
+        "inquiry": "How did war for independence affect different people and communities?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 17 · The American Revolution and Diverse Experiences",
+            "content": "The Revolution involved military conflict, political ideas, diplomacy, Indigenous nations, enslaved and free Black people, women, Loyalists, Patriots, and civilians whose goals and outcomes differed.",
+            "accessibleDescription": "A concise evidence brief for The American Revolution and Diverse Experiences.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 17 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for The American Revolution and Diverse Experiences",
+            "rows": [
+              [
+                "independence",
+                "political self-government separate from former external rule"
+              ],
+              [
+                "revolution",
+                "major political or social change that challenges an existing order"
+              ],
+              [
+                "diplomacy",
+                "management of relations and negotiation among political entities"
+              ],
+              [
+                "civilian",
+                "a person not serving as a member of the armed forces"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 17 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "Declaration of Independence",
+            "date": "1776",
+            "context": "Primary-source connection for The American Revolution and Diverse Experiences",
+            "content": "“all men are created equal”",
+            "findings": [
+              {
+                "question": "The Revolution affected...",
+                "finding": "different groups in different ways"
+              },
+              {
+                "question": "Diplomacy matters because...",
+                "finding": "alliances, negotiation, supplies, and foreign support affected the war and peace"
+              },
+              {
+                "question": "How did war for independence affect different people and communities?",
+                "finding": "The Revolution involved military conflict, political ideas, diplomacy, Indigenous nations, enslaved and free Black people, women, Loyalists, Patriots, and civilians whose goals and outcomes differed."
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from Declaration of Independence, followed by evidence findings for the week's inquiry.",
+            "citation": "Declaration of Independence (1776), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 18,
@@ -7761,8 +9497,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 16
+        },
+        {
+          "id": "G4SS-W18-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 18?",
+          "choices": [
+            "The midterm measures durable transfer across first-semester content and source reasoning; below 80% triggers targeted correction and a fresh randomized form.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 18
+        },
+        {
+          "id": "G4SS-W18-ST2",
+          "prompt": "Which finding is included in Source C for Week 18?",
+          "choices": [
+            "using learning in a new situation",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 18
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 18",
+        "inquiry": "What can I demonstrate independently about inquiry, geography, Indigenous history, colonization, and Revolution?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 18 · Midyear Synthesis and Closed-Book Midterm",
+            "content": "The midterm measures durable transfer across first-semester content and source reasoning; below 80% triggers targeted correction and a fresh randomized form.",
+            "accessibleDescription": "A concise evidence brief for Midyear Synthesis and Closed-Book Midterm.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 18 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Midyear Synthesis and Closed-Book Midterm",
+            "rows": [
+              [
+                "synthesis",
+                "combining ideas and evidence into a larger explanation"
+              ],
+              [
+                "transfer",
+                "using learning in a new situation"
+              ],
+              [
+                "mastery",
+                "strong demonstrated understanding of required learning"
+              ],
+              [
+                "reassessment",
+                "a fresh assessment after targeted review and correction"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 18 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to What can I demonstrate independently about inquiry, geography, Indigenous history, colonization, and Revolution?",
+            "findings": [
+              {
+                "question": "Transfer means...",
+                "finding": "using learning in a new situation"
+              },
+              {
+                "question": "Below 80% should lead to...",
+                "finding": "targeted review, correction, and fresh reassessment"
+              },
+              {
+                "question": "What can I demonstrate independently about inquiry, geography, Indigenous history, colonization, and Revolution?",
+                "finding": "The midterm measures durable transfer across first-semester content and source reasoning; below 80% triggers targeted correction and a fresh randomized form."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 18 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 19,
@@ -8192,8 +10029,110 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 17
+        },
+        {
+          "id": "G4SS-W19-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 19?",
+          "choices": [
+            "Weaknesses in the Articles, disputes among states, economic and security concerns, and debates over federal power led to the Constitutional Convention and a new framework involving compromise and contested choices.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 19
+        },
+        {
+          "id": "G4SS-W19-ST2",
+          "prompt": "Which finding is included in Source C for Week 19?",
+          "choices": [
+            "the first national governing framework of the United States",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 19
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 19",
+        "inquiry": "Why did the United States replace the Articles of Confederation with a new Constitution?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 19 · From Articles of Confederation to the Constitution",
+            "content": "Weaknesses in the Articles, disputes among states, economic and security concerns, and debates over federal power led to the Constitutional Convention and a new framework involving compromise and contested choices.",
+            "accessibleDescription": "A concise evidence brief for From Articles of Confederation to the Constitution.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 19 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for From Articles of Confederation to the Constitution",
+            "rows": [
+              [
+                "Articles of Confederation",
+                "the first national governing framework of the United States"
+              ],
+              [
+                "Constitution",
+                "the foundational law organizing the U.S. federal government"
+              ],
+              [
+                "compromise",
+                "an agreement in which sides accept some concessions"
+              ],
+              [
+                "ratification",
+                "formal approval of a proposed constitution or agreement"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 19 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "U.S. Constitution",
+            "date": "1787",
+            "context": "Primary-source connection for From Articles of Confederation to the Constitution",
+            "content": "“We the People of the United States”",
+            "findings": [
+              {
+                "question": "The Articles of Confederation were...",
+                "finding": "the first national governing framework of the United States"
+              },
+              {
+                "question": "Ratification means...",
+                "finding": "formal approval of a proposed constitution or agreement"
+              },
+              {
+                "question": "Why did the United States replace the Articles of Confederation with a new Constitution?",
+                "finding": "Weaknesses in the Articles, disputes among states, economic and security concerns, and debates over federal power led to the Constitutional Convention and a new framework involving compromise and contested choices."
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from U.S. Constitution, followed by evidence findings for the week's inquiry.",
+            "citation": "U.S. Constitution, Preamble (1787), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 20,
@@ -8623,8 +10562,110 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 18
+        },
+        {
+          "id": "G4SS-W20-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 20?",
+          "choices": [
+            "Federal power is divided among legislative, executive, and judicial branches and shared with states through federalism; checks and balances and rule of law are intended to limit concentrated power.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 20
+        },
+        {
+          "id": "G4SS-W20-ST2",
+          "prompt": "Which finding is included in Source C for Week 20?",
+          "choices": [
+            "prevent one branch from exercising unchecked power",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 20
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 20",
+        "inquiry": "How does the Constitution divide, share, and limit governmental power?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 20 · Branches, Checks and Balances, Federalism, and Courts",
+            "content": "Federal power is divided among legislative, executive, and judicial branches and shared with states through federalism; checks and balances and rule of law are intended to limit concentrated power.",
+            "accessibleDescription": "A concise evidence brief for Branches, Checks and Balances, Federalism, and Courts.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 20 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Branches, Checks and Balances, Federalism, and Courts",
+            "rows": [
+              [
+                "separation of powers",
+                "division of authority among branches or institutions"
+              ],
+              [
+                "checks and balances",
+                "mechanisms allowing branches to limit or influence one another"
+              ],
+              [
+                "federalism",
+                "division of authority between national and state governments"
+              ],
+              [
+                "judicial review",
+                "the power of courts to evaluate laws or government acts under constitutional rules"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 20 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "U.S. Constitution",
+            "date": "1787",
+            "context": "Primary-source connection for Branches, Checks and Balances, Federalism, and Courts",
+            "content": "“We the People of the United States”",
+            "findings": [
+              {
+                "question": "Checks and balances are designed to...",
+                "finding": "prevent one branch from exercising unchecked power"
+              },
+              {
+                "question": "Federalism divides authority between...",
+                "finding": "national and state governments"
+              },
+              {
+                "question": "How does the Constitution divide, share, and limit governmental power?",
+                "finding": "Federal power is divided among legislative, executive, and judicial branches and shared with states through federalism; checks and balances and rule of law are intended to limit concentrated power."
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from U.S. Constitution, followed by evidence findings for the week's inquiry.",
+            "citation": "U.S. Constitution, Preamble (1787), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 21,
@@ -9054,8 +11095,110 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 19
+        },
+        {
+          "id": "G4SS-W21-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 21?",
+          "choices": [
+            "States have their own constitutions and institutions within the federal system; state and local governments make and administer laws, provide services, raise revenue, and address public problems within their jurisdictions.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 21
+        },
+        {
+          "id": "G4SS-W21-ST2",
+          "prompt": "Which finding is included in Source C for Week 21?",
+          "choices": [
+            "organizes state government within the U.S. federal system",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 21
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 21",
+        "inquiry": "Why do states have constitutions and how do state and local governments serve communities?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 21 · State Constitutions and State/Local Government",
+            "content": "States have their own constitutions and institutions within the federal system; state and local governments make and administer laws, provide services, raise revenue, and address public problems within their jurisdictions.",
+            "accessibleDescription": "A concise evidence brief for State Constitutions and State/Local Government.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 21 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for State Constitutions and State/Local Government",
+            "rows": [
+              [
+                "state constitution",
+                "a state's foundational legal framework"
+              ],
+              [
+                "jurisdiction",
+                "the area or subject over which an authority has legal power"
+              ],
+              [
+                "ordinance",
+                "a law or rule enacted by a local government"
+              ],
+              [
+                "public service",
+                "a service provided or supported for community needs"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 21 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "U.S. Constitution",
+            "date": "1787",
+            "context": "Primary-source connection for State Constitutions and State/Local Government",
+            "content": "“We the People of the United States”",
+            "findings": [
+              {
+                "question": "A state constitution...",
+                "finding": "organizes state government within the U.S. federal system"
+              },
+              {
+                "question": "An ordinance is...",
+                "finding": "a law or rule enacted by a local government"
+              },
+              {
+                "question": "Why do states have constitutions and how do state and local governments serve communities?",
+                "finding": "States have their own constitutions and institutions within the federal system; state and local governments make and administer laws, provide services, raise revenue, and address public problems within their jurisdictions."
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from U.S. Constitution, followed by evidence findings for the week's inquiry.",
+            "citation": "U.S. Constitution, Preamble (1787), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 22,
@@ -9485,8 +11628,110 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 20
+        },
+        {
+          "id": "G4SS-W22-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 22?",
+          "choices": [
+            "Civic participation includes voting when eligible, staying informed, serving communities, petitioning, contacting public officials, peaceful assembly, jury service when called, public comment, volunteering, and evaluating evidence.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 22
+        },
+        {
+          "id": "G4SS-W22-ST2",
+          "prompt": "Which finding is included in Source C for Week 22?",
+          "choices": [
+            "informed, lawful, civil, and evidence-aware",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 22
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 22",
+        "inquiry": "How can citizens participate responsibly in constitutional government?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 22 · Rights, Responsibilities, Voting, Service, and Civic Participation",
+            "content": "Civic participation includes voting when eligible, staying informed, serving communities, petitioning, contacting public officials, peaceful assembly, jury service when called, public comment, volunteering, and evaluating evidence.",
+            "accessibleDescription": "A concise evidence brief for Rights, Responsibilities, Voting, Service, and Civic Participation.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 22 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Rights, Responsibilities, Voting, Service, and Civic Participation",
+            "rows": [
+              [
+                "citizenship",
+                "legal membership in a political community with rights and responsibilities"
+              ],
+              [
+                "petition",
+                "a formal request for action or change"
+              ],
+              [
+                "public comment",
+                "input offered to a public institution or decision process"
+              ],
+              [
+                "civic virtue",
+                "habits supporting responsible public life"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 22 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "First Amendment",
+            "date": "1791",
+            "context": "Primary-source connection for Rights, Responsibilities, Voting, Service, and Civic Participation",
+            "content": "“Congress shall make no law”",
+            "findings": [
+              {
+                "question": "Responsible civic participation should be...",
+                "finding": "informed, lawful, civil, and evidence-aware"
+              },
+              {
+                "question": "A petition is...",
+                "finding": "a formal request for action or change"
+              },
+              {
+                "question": "How can citizens participate responsibly in constitutional government?",
+                "finding": "Civic participation includes voting when eligible, staying informed, serving communities, petitioning, contacting public officials, peaceful assembly, jury service when called, public comment, volunteering, and evaluating evidence."
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from First Amendment, followed by evidence findings for the week's inquiry.",
+            "citation": "U.S. Constitution, Amendment I (1791), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 23,
@@ -9916,8 +12161,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 21
+        },
+        {
+          "id": "G4SS-W23-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 23?",
+          "choices": [
+            "Territorial growth occurred through treaties, purchases, war, annexation, settlement, and statehood processes, but maps of expansion must also account for Indigenous homelands, sovereignty, contested borders, and displacement.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 23
+        },
+        {
+          "id": "G4SS-W23-ST2",
+          "prompt": "Which finding is included in Source C for Week 23?",
+          "choices": [
+            "Indigenous homelands, sovereignty, contested claims, and displacement",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 23
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 23",
+        "inquiry": "How did U.S. territory and state boundaries change, and whose perspectives matter when mapping expansion?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 23 · Territorial Growth, Treaties, Statehood, and Maps",
+            "content": "Territorial growth occurred through treaties, purchases, war, annexation, settlement, and statehood processes, but maps of expansion must also account for Indigenous homelands, sovereignty, contested borders, and displacement.",
+            "accessibleDescription": "A concise evidence brief for Territorial Growth, Treaties, Statehood, and Maps.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 23 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Territorial Growth, Treaties, Statehood, and Maps",
+            "rows": [
+              [
+                "territory",
+                "land under the jurisdiction of a government but not necessarily organized as a state"
+              ],
+              [
+                "annexation",
+                "formal incorporation of territory into a political unit"
+              ],
+              [
+                "statehood",
+                "legal admission of a territory or polity as a U.S. state"
+              ],
+              [
+                "cession",
+                "transfer of territory by agreement or treaty"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 23 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How did U.S. territory and state boundaries change, and whose perspectives matter when mapping expansion?",
+            "findings": [
+              {
+                "question": "A map of U.S. expansion can hide...",
+                "finding": "Indigenous homelands, sovereignty, contested claims, and displacement"
+              },
+              {
+                "question": "Statehood means...",
+                "finding": "legal admission as a U.S. state"
+              },
+              {
+                "question": "How did U.S. territory and state boundaries change, and whose perspectives matter when mapping expansion?",
+                "finding": "Territorial growth occurred through treaties, purchases, war, annexation, settlement, and statehood processes, but maps of expansion must also account for Indigenous homelands, sovereignty, contested borders, and displacement."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 23 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 24,
@@ -10347,8 +12693,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 22
+        },
+        {
+          "id": "G4SS-W24-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 24?",
+          "choices": [
+            "Westward migration involved settlers, migrants, Indigenous nations, free and enslaved Black Americans, immigrants, traders, miners, farmers, soldiers, and governments; expansion produced economic opportunity alongside dispossession, violence, forced removal, and environmental change.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 24
+        },
+        {
+          "id": "G4SS-W24-ST2",
+          "prompt": "Which finding is included in Source C for Week 24?",
+          "choices": [
+            "already inhabited and governed by Indigenous peoples in many places",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 24
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 24",
+        "inquiry": "How did westward migration create opportunity for some people while producing dispossession and forced removal for others?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 24 · Westward Migration, Indigenous Displacement, and Forced Removal",
+            "content": "Westward migration involved settlers, migrants, Indigenous nations, free and enslaved Black Americans, immigrants, traders, miners, farmers, soldiers, and governments; expansion produced economic opportunity alongside dispossession, violence, forced removal, and environmental change.",
+            "accessibleDescription": "A concise evidence brief for Westward Migration, Indigenous Displacement, and Forced Removal.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 24 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Westward Migration, Indigenous Displacement, and Forced Removal",
+            "rows": [
+              [
+                "displacement",
+                "being forced or pressured from a place"
+              ],
+              [
+                "removal",
+                "government-directed relocation of people from homelands"
+              ],
+              [
+                "settler",
+                "a person who moves to establish a permanent residence in a new place"
+              ],
+              [
+                "reservation",
+                "land legally designated for Indigenous use under specific U.S. policies and treaties"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 24 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How did westward migration create opportunity for some people while producing dispossession and forced removal for others?",
+            "findings": [
+              {
+                "question": "Westward lands were...",
+                "finding": "already inhabited and governed by Indigenous peoples in many places"
+              },
+              {
+                "question": "Forced removal was...",
+                "finding": "government-directed relocation causing major harm and dispossession"
+              },
+              {
+                "question": "How did westward migration create opportunity for some people while producing dispossession and forced removal for others?",
+                "finding": "Westward migration involved settlers, migrants, Indigenous nations, free and enslaved Black Americans, immigrants, traders, miners, farmers, soldiers, and governments; expansion produced economic opportunity alongside dispossession, violence, forced removal, and environmental change."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 24 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 25,
@@ -10778,8 +13225,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 23
+        },
+        {
+          "id": "G4SS-W25-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 25?",
+          "choices": [
+            "Canals, steamboats, railroads, roads, mechanization, communications, agriculture, mining, and industry changed productivity, migration, markets, labor, urbanization, and environments while distributing benefits and costs unevenly.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 25
+        },
+        {
+          "id": "G4SS-W25-ST2",
+          "prompt": "Which finding is included in Source C for Week 25?",
+          "choices": [
+            "increase production while changing labor, cities, and environments",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 25
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 25",
+        "inquiry": "How did transportation and technology change work, markets, settlement, and environments?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 25 · Transportation, Technology, Agriculture, and Industry",
+            "content": "Canals, steamboats, railroads, roads, mechanization, communications, agriculture, mining, and industry changed productivity, migration, markets, labor, urbanization, and environments while distributing benefits and costs unevenly.",
+            "accessibleDescription": "A concise evidence brief for Transportation, Technology, Agriculture, and Industry.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 25 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Transportation, Technology, Agriculture, and Industry",
+            "rows": [
+              [
+                "industrialization",
+                "growth of machine-based production and industry"
+              ],
+              [
+                "productivity",
+                "amount produced relative to resources or time used"
+              ],
+              [
+                "labor",
+                "human work used in production or services"
+              ],
+              [
+                "market access",
+                "ability to reach buyers, sellers, jobs, or trade networks"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 25 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How did transportation and technology change work, markets, settlement, and environments?",
+            "findings": [
+              {
+                "question": "Industrialization can...",
+                "finding": "increase production while changing labor, cities, and environments"
+              },
+              {
+                "question": "Market access means...",
+                "finding": "ability to reach buyers, sellers, jobs, or trade networks"
+              },
+              {
+                "question": "How did transportation and technology change work, markets, settlement, and environments?",
+                "finding": "Canals, steamboats, railroads, roads, mechanization, communications, agriculture, mining, and industry changed productivity, migration, markets, labor, urbanization, and environments while distributing benefits and costs unevenly."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 25 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 26,
@@ -11209,8 +13757,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 24
+        },
+        {
+          "id": "G4SS-W26-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 26?",
+          "choices": [
+            "Financial literacy includes earning income, distinguishing needs/wants, budgeting, taxes, saving, investing, borrowing, credit, interest, risk, and protecting assets; choices involve tradeoffs and future consequences.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 26
+        },
+        {
+          "id": "G4SS-W26-ST2",
+          "prompt": "Which finding is included in Source C for Week 26?",
+          "choices": [
+            "paid by borrowers or earned by savers/investors depending on the arrangement",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 26
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 26",
+        "inquiry": "How do households and governments make financial choices with limited income and resources?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 26 · Income, Taxes, Budgets, Saving, Credit, and Interest",
+            "content": "Financial literacy includes earning income, distinguishing needs/wants, budgeting, taxes, saving, investing, borrowing, credit, interest, risk, and protecting assets; choices involve tradeoffs and future consequences.",
+            "accessibleDescription": "A concise evidence brief for Income, Taxes, Budgets, Saving, Credit, and Interest.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 26 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Income, Taxes, Budgets, Saving, Credit, and Interest",
+            "rows": [
+              [
+                "income",
+                "money received from work, business, investments, transfers, or other sources"
+              ],
+              [
+                "budget",
+                "a plan for income, spending, saving, and other financial goals"
+              ],
+              [
+                "interest",
+                "money paid or earned for the use of money over time"
+              ],
+              [
+                "credit",
+                "the ability to borrow with an obligation to repay under agreed terms"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 26 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do households and governments make financial choices with limited income and resources?",
+            "findings": [
+              {
+                "question": "Interest can be...",
+                "finding": "paid by borrowers or earned by savers/investors depending on the arrangement"
+              },
+              {
+                "question": "A budget is...",
+                "finding": "a plan for income, spending, saving, and goals"
+              },
+              {
+                "question": "How do households and governments make financial choices with limited income and resources?",
+                "finding": "Financial literacy includes earning income, distinguishing needs/wants, budgeting, taxes, saving, investing, borrowing, credit, interest, risk, and protecting assets; choices involve tradeoffs and future consequences."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 26 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 27,
@@ -11640,8 +14289,110 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 25
+        },
+        {
+          "id": "G4SS-W27-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 27?",
+          "choices": [
+            "Slavery was the central cause of the Civil War, interacting with disputes over its expansion, political power, constitutional interpretation, and secession; age-appropriate study should center human experiences and evidence rather than battle memorization.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 27
+        },
+        {
+          "id": "G4SS-W27-ST2",
+          "prompt": "Which finding is included in Source C for Week 27?",
+          "choices": [
+            "slavery and conflict over its expansion and political future",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 27
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 27",
+        "inquiry": "How did slavery and sectional conflict contribute to the Civil War?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 27 · Slavery, Sectional Conflict, and the Civil War",
+            "content": "Slavery was the central cause of the Civil War, interacting with disputes over its expansion, political power, constitutional interpretation, and secession; age-appropriate study should center human experiences and evidence rather than battle memorization.",
+            "accessibleDescription": "A concise evidence brief for Slavery, Sectional Conflict, and the Civil War.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 27 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Slavery, Sectional Conflict, and the Civil War",
+            "rows": [
+              [
+                "sectionalism",
+                "strong identification with and interests of a geographic section"
+              ],
+              [
+                "secession",
+                "formal withdrawal from a political union"
+              ],
+              [
+                "abolition",
+                "movement or action to end slavery"
+              ],
+              [
+                "emancipation",
+                "release from slavery or legal bondage"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 27 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "Emancipation Proclamation",
+            "date": "1863",
+            "context": "Primary-source connection for Slavery, Sectional Conflict, and the Civil War",
+            "content": "“shall be then, thenceforward, and forever free”",
+            "findings": [
+              {
+                "question": "The central cause of the Civil War was...",
+                "finding": "slavery and conflict over its expansion and political future"
+              },
+              {
+                "question": "Abolition means...",
+                "finding": "movement or action to end slavery"
+              },
+              {
+                "question": "How did slavery and sectional conflict contribute to the Civil War?",
+                "finding": "Slavery was the central cause of the Civil War, interacting with disputes over its expansion, political power, constitutional interpretation, and secession; age-appropriate study should center human experiences and evidence rather than battle memorization."
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from Emancipation Proclamation, followed by evidence findings for the week's inquiry.",
+            "citation": "Emancipation Proclamation (1863), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 28,
@@ -12071,8 +14822,110 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 26
+        },
+        {
+          "id": "G4SS-W28-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 28?",
+          "choices": [
+            "The 13th, 14th, and 15th Amendments transformed constitutional law by ending slavery, defining national citizenship/equal protection, and protecting voting rights for Black men, while violence, discriminatory laws, and political conflict limited implementation.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 28
+        },
+        {
+          "id": "G4SS-W28-ST2",
+          "prompt": "Which finding is included in Source C for Week 28?",
+          "choices": [
+            "citizenship and equal protection",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 28
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 28",
+        "inquiry": "How did Reconstruction redefine freedom and citizenship, and why were its gains contested?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 28 · Emancipation, Reconstruction, and Constitutional Citizenship",
+            "content": "The 13th, 14th, and 15th Amendments transformed constitutional law by ending slavery, defining national citizenship/equal protection, and protecting voting rights for Black men, while violence, discriminatory laws, and political conflict limited implementation.",
+            "accessibleDescription": "A concise evidence brief for Emancipation, Reconstruction, and Constitutional Citizenship.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 28 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Emancipation, Reconstruction, and Constitutional Citizenship",
+            "rows": [
+              [
+                "Reconstruction",
+                "the post-Civil War period of rebuilding and redefining citizenship and government"
+              ],
+              [
+                "equal protection",
+                "constitutional principle requiring states to provide equal protection of the laws"
+              ],
+              [
+                "citizenship",
+                "legal membership in a political community"
+              ],
+              [
+                "disenfranchisement",
+                "denial or restriction of voting rights"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 28 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "U.S. Constitution",
+            "date": "1787",
+            "context": "Primary-source connection for Emancipation, Reconstruction, and Constitutional Citizenship",
+            "content": "“We the People of the United States”",
+            "findings": [
+              {
+                "question": "The 14th Amendment is especially connected to...",
+                "finding": "citizenship and equal protection"
+              },
+              {
+                "question": "Disenfranchisement means...",
+                "finding": "denial or restriction of voting rights"
+              },
+              {
+                "question": "How did Reconstruction redefine freedom and citizenship, and why were its gains contested?",
+                "finding": "The 13th, 14th, and 15th Amendments transformed constitutional law by ending slavery, defining national citizenship/equal protection, and protecting voting rights for Black men, while violence, discriminatory laws, and political conflict limited implementation."
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from U.S. Constitution, followed by evidence findings for the week's inquiry.",
+            "citation": "U.S. Constitution, Preamble (1787), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 29,
@@ -12502,8 +15355,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 27
+        },
+        {
+          "id": "G4SS-W29-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 29?",
+          "choices": [
+            "Industrialization and changing agriculture, immigration, African American migration, rail/port growth, entrepreneurship, labor, and urbanization reshaped population, culture, politics, and economies, while discrimination and unequal opportunity persisted.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 29
+        },
+        {
+          "id": "G4SS-W29-ST2",
+          "prompt": "Which finding is included in Source C for Week 29?",
+          "choices": [
+            "large-scale movement of African Americans from the South to other U.S. regions",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 29
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 29",
+        "inquiry": "How did migration and industrial growth transform states and communities after the Civil War?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 29 · Industrialization, Immigration, African American Migration, and State Growth",
+            "content": "Industrialization and changing agriculture, immigration, African American migration, rail/port growth, entrepreneurship, labor, and urbanization reshaped population, culture, politics, and economies, while discrimination and unequal opportunity persisted.",
+            "accessibleDescription": "A concise evidence brief for Industrialization, Immigration, African American Migration, and State Growth.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 29 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Industrialization, Immigration, African American Migration, and State Growth",
+            "rows": [
+              [
+                "immigration",
+                "movement into a country to live"
+              ],
+              [
+                "Great Migration",
+                "large-scale movement of African Americans from the U.S. South to other regions, especially in the 20th century"
+              ],
+              [
+                "entrepreneurship",
+                "organizing resources to create or expand an enterprise while accepting risk"
+              ],
+              [
+                "labor movement",
+                "organized efforts by workers to improve wages, conditions, or rights"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 29 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How did migration and industrial growth transform states and communities after the Civil War?",
+            "findings": [
+              {
+                "question": "The Great Migration refers to...",
+                "finding": "large-scale movement of African Americans from the South to other U.S. regions"
+              },
+              {
+                "question": "Industrial growth often...",
+                "finding": "changed jobs, cities, migration, labor organization, and environments"
+              },
+              {
+                "question": "How did migration and industrial growth transform states and communities after the Civil War?",
+                "finding": "Industrialization and changing agriculture, immigration, African American migration, rail/port growth, entrepreneurship, labor, and urbanization reshaped population, culture, politics, and economies, while discrimination and unequal opportunity persisted."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 29 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 30,
@@ -12933,8 +15887,110 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 28
+        },
+        {
+          "id": "G4SS-W30-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 30?",
+          "choices": [
+            "States changed through wars, federal investment, highways, aviation, tourism, industry, agriculture, migration, civil-rights activism, suburbanization, environmental policy, disasters, and demographic change.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 30
+        },
+        {
+          "id": "G4SS-W30-ST2",
+          "prompt": "Which finding is included in Source C for Week 30?",
+          "choices": [
+            "organized efforts to secure equal rights and end racial discrimination",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 30
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 30",
+        "inquiry": "How did twentieth-century forces reshape state economies, populations, rights, and environments?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 30 · Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment",
+            "content": "States changed through wars, federal investment, highways, aviation, tourism, industry, agriculture, migration, civil-rights activism, suburbanization, environmental policy, disasters, and demographic change.",
+            "accessibleDescription": "A concise evidence brief for Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 30 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment",
+            "rows": [
+              [
+                "tourism",
+                "travel for recreation, culture, business, or other temporary purposes that supports economic activity"
+              ],
+              [
+                "civil rights movement",
+                "organized efforts to secure equal rights and end racial discrimination"
+              ],
+              [
+                "suburbanization",
+                "growth of residential and commercial areas outside central cities"
+              ],
+              [
+                "demographic change",
+                "change in population size, composition, distribution, or characteristics"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 30 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "First Amendment",
+            "date": "1791",
+            "context": "Primary-source connection for Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment",
+            "content": "“Congress shall make no law”",
+            "findings": [
+              {
+                "question": "The civil rights movement involved...",
+                "finding": "organized efforts to secure equal rights and end racial discrimination"
+              },
+              {
+                "question": "Demographic change means...",
+                "finding": "change in population size, composition, distribution, or characteristics"
+              },
+              {
+                "question": "How did twentieth-century forces reshape state economies, populations, rights, and environments?",
+                "finding": "States changed through wars, federal investment, highways, aviation, tourism, industry, agriculture, migration, civil-rights activism, suburbanization, environmental policy, disasters, and demographic change."
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from First Amendment, followed by evidence findings for the week's inquiry.",
+            "citation": "U.S. Constitution, Amendment I (1791), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 31,
@@ -13364,8 +16420,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 29
+        },
+        {
+          "id": "G4SS-W31-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 31?",
+          "choices": [
+            "Public problem solving requires defining the problem, identifying jurisdiction and stakeholders, gathering evidence, comparing policy options, considering rights/costs/benefits, and evaluating results.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 31
+        },
+        {
+          "id": "G4SS-W31-ST2",
+          "prompt": "Which finding is included in Source C for Week 31?",
+          "choices": [
+            "careful discussion weighing evidence, values, and options",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 31
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 31",
+        "inquiry": "How do communities define public problems and compare policy options?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 31 · State and Local Problem Solving, Public Policy, and Civic Deliberation",
+            "content": "Public problem solving requires defining the problem, identifying jurisdiction and stakeholders, gathering evidence, comparing policy options, considering rights/costs/benefits, and evaluating results.",
+            "accessibleDescription": "A concise evidence brief for State and Local Problem Solving, Public Policy, and Civic Deliberation.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 31 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for State and Local Problem Solving, Public Policy, and Civic Deliberation",
+            "rows": [
+              [
+                "public policy",
+                "a government course of action or rule addressing public issues"
+              ],
+              [
+                "stakeholder",
+                "a person or group affected by or interested in an issue"
+              ],
+              [
+                "jurisdiction",
+                "the area or subject over which an authority has legal power"
+              ],
+              [
+                "deliberation",
+                "careful discussion weighing evidence, values, and options"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 31 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do communities define public problems and compare policy options?",
+            "findings": [
+              {
+                "question": "Deliberation means...",
+                "finding": "careful discussion weighing evidence, values, and options"
+              },
+              {
+                "question": "A policy recommendation should...",
+                "finding": "identify evidence, jurisdiction, tradeoffs, and likely effects"
+              },
+              {
+                "question": "How do communities define public problems and compare policy options?",
+                "finding": "Public problem solving requires defining the problem, identifying jurisdiction and stakeholders, gathering evidence, comparing policy options, considering rights/costs/benefits, and evaluating results."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 31 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 32,
@@ -13795,8 +16952,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 30
+        },
+        {
+          "id": "G4SS-W32-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 32?",
+          "choices": [
+            "State economies connect through labor, agriculture, manufacturing, services, tourism, technology, finance, ports, energy, supply chains, trade, public investment, and migration; specialization creates opportunities and interdependence.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 32
+        },
+        {
+          "id": "G4SS-W32-ST2",
+          "prompt": "Which finding is included in Source C for Week 32?",
+          "choices": [
+            "linked steps moving materials, production, transport, and products/services to users",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 32
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 32",
+        "inquiry": "How are state economies connected to the nation and the world?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 32 · State Economies in National and Global Systems",
+            "content": "State economies connect through labor, agriculture, manufacturing, services, tourism, technology, finance, ports, energy, supply chains, trade, public investment, and migration; specialization creates opportunities and interdependence.",
+            "accessibleDescription": "A concise evidence brief for State Economies in National and Global Systems.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 32 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for State Economies in National and Global Systems",
+            "rows": [
+              [
+                "gross state product",
+                "the value of final goods and services produced within a state over a period"
+              ],
+              [
+                "supply chain",
+                "linked steps moving materials, production, transport, and goods/services to users"
+              ],
+              [
+                "specialization",
+                "focusing production or work on particular activities"
+              ],
+              [
+                "interdependence",
+                "mutual reliance among people, regions, or systems"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 32 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How are state economies connected to the nation and the world?",
+            "findings": [
+              {
+                "question": "A supply chain is...",
+                "finding": "linked steps moving materials, production, transport, and products/services to users"
+              },
+              {
+                "question": "Specialization can...",
+                "finding": "create efficiency and expertise while increasing reliance on others"
+              },
+              {
+                "question": "How are state economies connected to the nation and the world?",
+                "finding": "State economies connect through labor, agriculture, manufacturing, services, tourism, technology, finance, ports, energy, supply chains, trade, public investment, and migration; specialization creates opportunities and interdependence."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 32 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 33,
@@ -14226,8 +17484,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 31
+        },
+        {
+          "id": "G4SS-W33-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 33?",
+          "choices": [
+            "Verification requires tracing claims to evidence, opening full sources, identifying creator/date/purpose, distinguishing reporting from commentary or advertising, checking primary records when possible, and corroborating across independent sources.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 33
+        },
+        {
+          "id": "G4SS-W33-ST2",
+          "prompt": "Which finding is included in Source C for Week 33?",
+          "choices": [
+            "identifying the claim and tracing it to relevant evidence",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 33
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 33",
+        "inquiry": "How can students verify claims about history, government, and public issues?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 33 · Media Literacy, Historical Claims, and Civic Verification",
+            "content": "Verification requires tracing claims to evidence, opening full sources, identifying creator/date/purpose, distinguishing reporting from commentary or advertising, checking primary records when possible, and corroborating across independent sources.",
+            "accessibleDescription": "A concise evidence brief for Media Literacy, Historical Claims, and Civic Verification.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 33 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Media Literacy, Historical Claims, and Civic Verification",
+            "rows": [
+              [
+                "verification",
+                "checking whether a claim is supported by reliable evidence"
+              ],
+              [
+                "bias",
+                "a tendency or perspective influencing selection or interpretation"
+              ],
+              [
+                "commentary",
+                "analysis or opinion about events or ideas"
+              ],
+              [
+                "primary record",
+                "an original official or contemporaneous record relevant to a claim"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 33 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can students verify claims about history, government, and public issues?",
+            "findings": [
+              {
+                "question": "Verification should start by...",
+                "finding": "identifying the claim and tracing it to relevant evidence"
+              },
+              {
+                "question": "Bias means...",
+                "finding": "a tendency or perspective that may influence selection or interpretation"
+              },
+              {
+                "question": "How can students verify claims about history, government, and public issues?",
+                "finding": "Verification requires tracing claims to evidence, opening full sources, identifying creator/date/purpose, distinguishing reporting from commentary or advertising, checking primary records when possible, and corroborating across independent sources."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 33 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 34,
@@ -14657,8 +18016,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 32
+        },
+        {
+          "id": "G4SS-W34-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 34?",
+          "choices": [
+            "Informed action connects inquiry to responsible participation: define a problem, understand context and jurisdiction, gather evidence, hear stakeholders, compare options, act safely and lawfully, and evaluate outcomes.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 34
+        },
+        {
+          "id": "G4SS-W34-ST2",
+          "prompt": "Which finding is included in Source C for Week 34?",
+          "choices": [
+            "evidence-based, lawful, safe, reflective, and age-appropriate",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 34
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 34",
+        "inquiry": "How can students take safe, nonpartisan, evidence-based action on a community issue?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 34 · Informed Action and Community Evidence Project",
+            "content": "Informed action connects inquiry to responsible participation: define a problem, understand context and jurisdiction, gather evidence, hear stakeholders, compare options, act safely and lawfully, and evaluate outcomes.",
+            "accessibleDescription": "A concise evidence brief for Informed Action and Community Evidence Project.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 34 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Informed Action and Community Evidence Project",
+            "rows": [
+              [
+                "informed action",
+                "action guided by evidence, context, safety, law, and reflection"
+              ],
+              [
+                "advocacy",
+                "public support or action for a cause or proposal"
+              ],
+              [
+                "evaluation",
+                "judging results using evidence and criteria"
+              ],
+              [
+                "nonpartisan",
+                "not directed toward supporting or opposing a political party or candidate"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 34 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can students take safe, nonpartisan, evidence-based action on a community issue?",
+            "findings": [
+              {
+                "question": "Informed action should be...",
+                "finding": "evidence-based, lawful, safe, reflective, and age-appropriate"
+              },
+              {
+                "question": "Nonpartisan means...",
+                "finding": "not directed toward supporting or opposing a political party or candidate"
+              },
+              {
+                "question": "How can students take safe, nonpartisan, evidence-based action on a community issue?",
+                "finding": "Informed action connects inquiry to responsible participation: define a problem, understand context and jurisdiction, gather evidence, hear stakeholders, compare options, act safely and lawfully, and evaluate outcomes."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 34 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 35,
@@ -15088,8 +18548,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 33
+        },
+        {
+          "id": "G4SS-W35-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 35?",
+          "choices": [
+            "The Grade 4 capstone requires a focused state/local question, chronology, geography, multiple source types, primary evidence when appropriate, multiple perspectives, economic/civic context, citations, revision, and oral defense.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 35
+        },
+        {
+          "id": "G4SS-W35-ST2",
+          "prompt": "Which finding is included in Source C for Week 35?",
+          "choices": [
+            "answer the research question and be supported by multiple sources",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 35
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 35",
+        "inquiry": "How can I build a defensible historical investigation using multiple sources and disciplinary tools?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 35 · State and Local History Research Capstone",
+            "content": "The Grade 4 capstone requires a focused state/local question, chronology, geography, multiple source types, primary evidence when appropriate, multiple perspectives, economic/civic context, citations, revision, and oral defense.",
+            "accessibleDescription": "A concise evidence brief for State and Local History Research Capstone.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 35 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for State and Local History Research Capstone",
+            "rows": [
+              [
+                "research question",
+                "a focused question guiding an investigation"
+              ],
+              [
+                "thesis",
+                "a central claim supported by evidence"
+              ],
+              [
+                "bibliography",
+                "a list of sources used in research"
+              ],
+              [
+                "oral defense",
+                "spoken explanation and response to questions about research choices and conclusions"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 35 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can I build a defensible historical investigation using multiple sources and disciplinary tools?",
+            "findings": [
+              {
+                "question": "A strong capstone thesis should...",
+                "finding": "answer the research question and be supported by multiple sources"
+              },
+              {
+                "question": "An oral defense helps show...",
+                "finding": "the learner understands sources, reasoning, limits, and conclusions"
+              },
+              {
+                "question": "How can I build a defensible historical investigation using multiple sources and disciplinary tools?",
+                "finding": "The Grade 4 capstone requires a focused state/local question, chronology, geography, multiple source types, primary evidence when appropriate, multiple perspectives, economic/civic context, citations, revision, and oral defense."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 35 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 36,
@@ -15519,8 +19080,109 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 34
+        },
+        {
+          "id": "G4SS-W36-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 36?",
+          "choices": [
+            "Completion requires 80% mastery across weekly gates, the closed-book midterm and cumulative final, plus portfolio/capstone evidence demonstrating historical inquiry, geography, civics, economics, source literacy, and informed action.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 36
+        },
+        {
+          "id": "G4SS-W36-ST2",
+          "prompt": "Which finding is included in Source C for Week 36?",
+          "choices": [
+            "weekly gates, cumulative assessments, and portfolio/capstone evidence",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 36
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 36",
+        "inquiry": "What durable Grade 4 Social Studies knowledge and reasoning am I ready to carry into Grade 5?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 4 · Week 36 · Final Synthesis, Closed-Book Final, and Grade 5 Bridge",
+            "content": "Completion requires 80% mastery across weekly gates, the closed-book midterm and cumulative final, plus portfolio/capstone evidence demonstrating historical inquiry, geography, civics, economics, source literacy, and informed action.",
+            "accessibleDescription": "A concise evidence brief for Final Synthesis, Closed-Book Final, and Grade 5 Bridge.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 36 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Final Synthesis, Closed-Book Final, and Grade 5 Bridge",
+            "rows": [
+              [
+                "synthesis",
+                "combining evidence and concepts into a larger understanding"
+              ],
+              [
+                "mastery",
+                "strong demonstrated understanding of required learning"
+              ],
+              [
+                "portfolio",
+                "a collection of evidence showing learning, revision, and growth"
+              ],
+              [
+                "bridge",
+                "a connection from current learning to the next stage"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 36 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to What durable Grade 4 Social Studies knowledge and reasoning am I ready to carry into Grade 5?",
+            "findings": [
+              {
+                "question": "Grade 4 mastery requires...",
+                "finding": "weekly gates, cumulative assessments, and portfolio/capstone evidence"
+              },
+              {
+                "question": "If the final is below 80%, the next step is...",
+                "finding": "targeted review, correction, and fresh reassessment"
+              },
+              {
+                "question": "What durable Grade 4 Social Studies knowledge and reasoning am I ready to carry into Grade 5?",
+                "finding": "Completion requires 80% mastery across weekly gates, the closed-book midterm and cumulative final, plus portfolio/capstone evidence demonstrating historical inquiry, geography, civics, economics, source literacy, and informed action."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 4 Social Studies, Week 36 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     }
   ],
   "localization": {
@@ -15597,6 +19259,114 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
     "35": {
       "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 35, \"State and Local History Research Capstone\". Record the source/example and explain how it connects to the national core.",
       "florida": "Use a Florida-specific source or case appropriate to Week 35, \"State and Local History Research Capstone\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    }
+  },
+  "cumulativeEvidence": {
+    "midterm": {
+      "title": "Midterm Source-Based Historical Evidence Task",
+      "authenticity": "mixed public-domain and Khaemenes original sources",
+      "prompt": "Use the unfamiliar source set to explain how political ideas, imperial conflict, and evidence from chronology contributed to the movement toward American independence. Include a limitation or perspective the set does not fully show.",
+      "requirements": [
+        "historical claim",
+        "at least three source references",
+        "chronology/causation",
+        "source context",
+        "limitation or missing perspective"
+      ],
+      "sources": [
+        {
+          "id": "A",
+          "type": "public-domain primary-source excerpt",
+          "creator": "Declaration of Independence",
+          "date": "1776",
+          "content": "“all men are created equal”",
+          "citation": "Declaration of Independence (1776), public domain; National Archives."
+        },
+        {
+          "id": "B",
+          "type": "Khaemenes original chronology",
+          "creator": "Khaemenes Academy Curriculum Studio",
+          "date": "2026",
+          "rows": [
+            [
+              "1763",
+              "Seven Years’ War ends; British imperial debt and policy change"
+            ],
+            [
+              "1765",
+              "Stamp Act intensifies taxation/representation disputes"
+            ],
+            [
+              "1773",
+              "Boston Tea Party follows conflict over tea policy"
+            ],
+            [
+              "1776",
+              "Declaration of Independence states separation and political principles"
+            ]
+          ],
+          "citation": "Khaemenes Academy original chronology, based on public historical record."
+        },
+        {
+          "id": "C",
+          "type": "perspective card",
+          "creator": "Khaemenes Academy Curriculum Studio",
+          "date": "2026",
+          "content": "Patriot, Loyalist, Indigenous, enslaved/free Black, merchant, and British official perspectives could differ because political goals, security, trade, rights, and alliances were not identical.",
+          "citation": "Khaemenes Academy perspective card."
+        }
+      ]
+    },
+    "final": {
+      "title": "Final Source-Based Constitutional & Change Evidence Task",
+      "authenticity": "mixed public-domain and Khaemenes original sources",
+      "prompt": "Use the unfamiliar source set to explain how constitutional ideals and later historical change affected citizenship, government responsibility, and equality. Distinguish law on paper from implementation in practice.",
+      "requirements": [
+        "historical/civic claim",
+        "at least three source references",
+        "constitutional reasoning",
+        "change over time",
+        "counterevidence or limitation"
+      ],
+      "sources": [
+        {
+          "id": "A",
+          "type": "public-domain primary-source excerpt",
+          "creator": "U.S. Constitution",
+          "date": "1787",
+          "content": "“We the People of the United States”",
+          "citation": "U.S. Constitution, Preamble (1787), public domain; National Archives."
+        },
+        {
+          "id": "B",
+          "type": "public-domain primary-source excerpt",
+          "creator": "Fourteenth Amendment",
+          "date": "1868",
+          "content": "“equal protection of the laws”",
+          "citation": "U.S. Constitution, Amendment XIV (1868), public domain; National Archives."
+        },
+        {
+          "id": "C",
+          "type": "Khaemenes original change-over-time table",
+          "creator": "Khaemenes Academy Curriculum Studio",
+          "date": "2026",
+          "rows": [
+            [
+              "Founding era",
+              "new federal constitutional framework; rights and participation remained unequal"
+            ],
+            [
+              "Reconstruction",
+              "constitutional amendments redefine freedom/citizenship and voting protections"
+            ],
+            [
+              "Later civic development",
+              "courts, laws, movements, elections, and public institutions continue interpreting and contesting constitutional promises"
+            ]
+          ],
+          "citation": "Khaemenes Academy original synthesis table."
+        }
+      ]
     }
   }
 };

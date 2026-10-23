@@ -9,7 +9,7 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
     "weeklyDraw": 7,
     "weeklyCurrentItems": 10,
     "weeklyBankMin": 10,
-    "weeklyBankMax": 14,
+    "weeklyBankMax": 16,
     "midtermDraw": 30,
     "finalDraw": 40,
     "weeklyMode": "open-book",
@@ -45,15 +45,32 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
       35
     ],
     "localizationPolicy": "Keep the national Grade 3 Social Studies core, comparative world-community strand, and 80% mastery gates invariant. Localize appropriate community/state history, geography, Indigenous nations, government, public figures, data, civic cases, and capstone evidence.",
-    "assessmentSpecificity": "2026 specificity hardening replaced 108 recurring meta-template current-bank items with week-specific historical, geographic, civic, economic, source, or evidence questions while preserving item IDs for audit continuity.",
+    "assessmentSpecificity": "2026 specificity hardening replaced 108 recurring meta-template current-bank items with week-specific historical, geographic, civic, economic, source, or evidence questions while preserving item IDs for audit continuity. Two source-linked weekly items now draw directly on the visible Khaemenes Source Studio.",
     "antiRepeatDepth": 2,
     "cumulativeBlueprint": "unit-stratified",
     "assessmentModel": "Monte Carlo randomized forms with answer shuffling, two-form anti-repeat weighting, saved attempt snapshots, and unit-stratified cumulative exams.",
     "statePacks": {
-      "florida": "STATE_PACK_FLORIDA.md"
+      "florida": "STATE_PACK_FLORIDA.md",
+      "california": "STATE_PACK_CALIFORNIA.md",
+      "newYork": "STATE_PACK_NEW_YORK.md",
+      "template": "STATE_PACK_TEMPLATE.md"
     },
     "localizationWorkflow": "Teacher-selected generic or Florida context with checkpoint evidence saved in the learner record.",
-    "constructedEvidenceReview": "pending / revise / approved is recorded separately from the 80% objective mastery gate."
+    "constructedEvidenceReview": "pending / revise / approved is recorded separately from the 80% objective mastery gate.",
+    "sourceStudios": true,
+    "sourceStudioSourcesPerWeek": 3,
+    "sourceLinkedWeeklyItems": 2,
+    "statePackSchema": "../../../../SOCIAL_STUDIES_STATE_PACK_SCHEMA.json",
+    "statePackTemplate": "STATE_PACK_TEMPLATE.md",
+    "statePackStatus": {
+      "florida": "complete",
+      "california": "validation",
+      "newYork": "validation",
+      "template": "template"
+    },
+    "cumulativeWrittenEvidence": true,
+    "cumulativeWrittenEvidenceRequired": true,
+    "cumulativeWrittenEvidencePolicy": "Midterm and final each include an unfamiliar source set and a separately teacher-reviewed written response. Objective mastery remains the automatic 80% gate; writing cannot compensate for an objective score below 80%."
   },
   "strands": [
     "Inquiry & Evidence",
@@ -409,8 +426,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "content-specific",
           "sourceWeek": 1
+        },
+        {
+          "id": "G3SS-W01-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 1?",
+          "choices": [
+            "Social Studies uses focused questions, disciplinary tools, sources, evidence, and revision to explain people, places, institutions, choices, and change.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 1
+        },
+        {
+          "id": "G3SS-W01-ST2",
+          "prompt": "Which finding is included in Source C for Week 1?",
+          "choices": [
+            "be answerable with relevant evidence",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 1
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 1",
+        "inquiry": "How do social scientists turn questions into evidence-based explanations?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 1 · Social Scientists Ask Questions",
+            "content": "Social Studies uses focused questions, disciplinary tools, sources, evidence, and revision to explain people, places, institutions, choices, and change.",
+            "accessibleDescription": "A concise evidence brief for Social Scientists Ask Questions.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 1 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Social Scientists Ask Questions",
+            "rows": [
+              [
+                "inquiry",
+                "a planned investigation of a question"
+              ],
+              [
+                "discipline",
+                "an organized field of study with particular questions and tools"
+              ],
+              [
+                "claim",
+                "a conclusion supported by evidence"
+              ],
+              [
+                "evidence",
+                "information used to support or challenge a claim"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 1 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do social scientists turn questions into evidence-based explanations?",
+            "findings": [
+              {
+                "question": "A focused inquiry question should...",
+                "finding": "be answerable with relevant evidence"
+              },
+              {
+                "question": "If evidence challenges a claim, a researcher should...",
+                "finding": "revise the claim or explanation"
+              },
+              {
+                "question": "Which is strongest evidence practice?",
+                "finding": "use more than one relevant source and explain the connection"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 1 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 2,
@@ -762,8 +880,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 1
+        },
+        {
+          "id": "G3SS-W02-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 2?",
+          "choices": [
+            "Sources differ by creator, time, purpose, evidence, perspective, and proximity to events; digital access makes evaluation more important, not less.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 2
+        },
+        {
+          "id": "G3SS-W02-ST2",
+          "prompt": "Which finding is included in Source C for Week 2?",
+          "choices": [
+            "evidence created during the time studied or by a participant/witness",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 2
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 2",
+        "inquiry": "How do we decide what a source can tell us and how much to trust it?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 2 · Primary, Secondary, and Digital Sources",
+            "content": "Sources differ by creator, time, purpose, evidence, perspective, and proximity to events; digital access makes evaluation more important, not less.",
+            "accessibleDescription": "A concise evidence brief for Primary, Secondary, and Digital Sources.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 2 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Primary, Secondary, and Digital Sources",
+            "rows": [
+              [
+                "primary source",
+                "evidence created during the time studied or by a participant/witness"
+              ],
+              [
+                "secondary source",
+                "an interpretation created later using evidence"
+              ],
+              [
+                "reliability",
+                "the degree to which information is dependable for a purpose"
+              ],
+              [
+                "purpose",
+                "the reason a source was created"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 2 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do we decide what a source can tell us and how much to trust it?",
+            "findings": [
+              {
+                "question": "A primary source is...",
+                "finding": "evidence created during the time studied or by a participant/witness"
+              },
+              {
+                "question": "Why identify a source's purpose?",
+                "finding": "purpose can shape what is emphasized or omitted"
+              },
+              {
+                "question": "A reliability judgment should consider...",
+                "finding": "creator, evidence, context, purpose, and relevance"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 2 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 3,
@@ -1141,8 +1360,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 1
+        },
+        {
+          "id": "G3SS-W03-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 3?",
+          "choices": [
+            "Maps, graphs, tables, charts, and photographs organize different evidence and must be read with titles, labels, scales, dates, legends, and context.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 3
+        },
+        {
+          "id": "G3SS-W03-ST2",
+          "prompt": "Which finding is included in Source C for Week 3?",
+          "choices": [
+            "read the title, labels, units, and scale",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 3
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 3",
+        "inquiry": "How can visual and quantitative sources help us explain communities?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 3 · Maps, Graphs, Tables, and Photographs as Evidence",
+            "content": "Maps, graphs, tables, charts, and photographs organize different evidence and must be read with titles, labels, scales, dates, legends, and context.",
+            "accessibleDescription": "A concise evidence brief for Maps, Graphs, Tables, and Photographs as Evidence.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 3 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Maps, Graphs, Tables, and Photographs as Evidence",
+            "rows": [
+              [
+                "data",
+                "recorded information used for analysis"
+              ],
+              [
+                "scale",
+                "a relationship between representation size and real size or quantity"
+              ],
+              [
+                "legend",
+                "a key explaining symbols or categories"
+              ],
+              [
+                "trend",
+                "a general direction or pattern in data"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 3 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can visual and quantitative sources help us explain communities?",
+            "findings": [
+              {
+                "question": "Before interpreting a graph, first...",
+                "finding": "read the title, labels, units, and scale"
+              },
+              {
+                "question": "Why does a map date matter?",
+                "finding": "places, boundaries, names, and data can change over time"
+              },
+              {
+                "question": "A careful data claim should...",
+                "finding": "match what the evidence actually supports"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 3 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 4,
@@ -1520,8 +1840,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 2
+        },
+        {
+          "id": "G3SS-W04-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 4?",
+          "choices": [
+            "Local history can be studied through maps, photographs, oral histories, newspapers, public records, artifacts, buildings, and timelines while respecting privacy and source limits.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 4
+        },
+        {
+          "id": "G3SS-W04-ST2",
+          "prompt": "Which finding is included in Source C for Week 4?",
+          "choices": [
+            "public or appropriately shared evidence, not required private disclosure",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 4
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 4",
+        "inquiry": "How can we reconstruct how a community changed over time?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 4 · Local History and Community Change",
+            "content": "Local history can be studied through maps, photographs, oral histories, newspapers, public records, artifacts, buildings, and timelines while respecting privacy and source limits.",
+            "accessibleDescription": "A concise evidence brief for Local History and Community Change.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 4 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Local History and Community Change",
+            "rows": [
+              [
+                "local history",
+                "study of the past of a particular community or region"
+              ],
+              [
+                "oral history",
+                "recorded spoken memories or testimony"
+              ],
+              [
+                "chronology",
+                "the order events occurred in time"
+              ],
+              [
+                "continuity",
+                "something that remains similar across time"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 4 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can we reconstruct how a community changed over time?",
+            "findings": [
+              {
+                "question": "Local history should rely on...",
+                "finding": "public or appropriately shared evidence, not required private disclosure"
+              },
+              {
+                "question": "Chronology helps historians...",
+                "finding": "put events in time order and examine sequence"
+              },
+              {
+                "question": "A strong local-history exhibit should...",
+                "finding": "identify sources and distinguish evidence from inference"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 4 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 5,
@@ -1899,8 +2320,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 3
+        },
+        {
+          "id": "G3SS-W05-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 5?",
+          "choices": [
+            "Maps simplify the world; scale, projection, orientation, and purpose affect what they show and can distort size, shape, distance, or direction.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 5
+        },
+        {
+          "id": "G3SS-W05-ST2",
+          "prompt": "Which finding is included in Source C for Week 5?",
+          "choices": [
+            "where a place is compared with other places",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 5
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 5",
+        "inquiry": "How do geographers describe location and account for map scale and distortion?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 5 · Location, Scale, and Map Distortion",
+            "content": "Maps simplify the world; scale, projection, orientation, and purpose affect what they show and can distort size, shape, distance, or direction.",
+            "accessibleDescription": "A concise evidence brief for Location, Scale, and Map Distortion.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 5 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Location, Scale, and Map Distortion",
+            "rows": [
+              [
+                "absolute location",
+                "a precise position described with a coordinate or address system"
+              ],
+              [
+                "relative location",
+                "where a place is compared with other places"
+              ],
+              [
+                "distortion",
+                "a change caused by representing curved Earth on a flat map"
+              ],
+              [
+                "projection",
+                "a method for representing Earth's curved surface on a flat map"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 5 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do geographers describe location and account for map scale and distortion?",
+            "findings": [
+              {
+                "question": "Relative location describes...",
+                "finding": "where a place is compared with other places"
+              },
+              {
+                "question": "Map distortion can occur because...",
+                "finding": "curved Earth is represented on a flat surface"
+              },
+              {
+                "question": "Different projections...",
+                "finding": "preserve some properties better than others"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 5 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 6,
@@ -2278,8 +2800,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 4
+        },
+        {
+          "id": "G3SS-W06-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 6?",
+          "choices": [
+            "Regions are human-created ways to organize places by selected characteristics; boundaries can vary by purpose, while states are political units in the federal system.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 6
+        },
+        {
+          "id": "G3SS-W06-ST2",
+          "prompt": "Which finding is included in Source C for Week 6?",
+          "choices": [
+            "regions are grouped for different purposes and characteristics",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 6
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 6",
+        "inquiry": "How do regional groupings help us study the United States?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 6 · United States Regions and States",
+            "content": "Regions are human-created ways to organize places by selected characteristics; boundaries can vary by purpose, while states are political units in the federal system.",
+            "accessibleDescription": "A concise evidence brief for United States Regions and States.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 6 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for United States Regions and States",
+            "rows": [
+              [
+                "region",
+                "an area grouped by shared characteristics"
+              ],
+              [
+                "state",
+                "a major political unit within the United States"
+              ],
+              [
+                "boundary",
+                "a line or limit separating areas"
+              ],
+              [
+                "regionalization",
+                "the process of grouping places into regions"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 6 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do regional groupings help us study the United States?",
+            "findings": [
+              {
+                "question": "Regional boundaries can differ because...",
+                "finding": "regions are grouped for different purposes and characteristics"
+              },
+              {
+                "question": "A U.S. state is...",
+                "finding": "a major political unit in the federal system"
+              },
+              {
+                "question": "A responsible region profile should...",
+                "finding": "describe patterns while recognizing internal variation"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 6 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 7,
@@ -2657,8 +3280,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 5
+        },
+        {
+          "id": "G3SS-W07-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 7?",
+          "choices": [
+            "Settlement patterns reflect interacting environmental and human factors including climate, water, resources, landforms, transportation, jobs, history, and public decisions.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 7
+        },
+        {
+          "id": "G3SS-W07-ST2",
+          "prompt": "Which finding is included in Source C for Week 7?",
+          "choices": [
+            "multiple environmental and human factors",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 7
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 7",
+        "inquiry": "How do climate, resources, landforms, and transportation influence settlement?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 7 · Climate, Resources, and Settlement Patterns",
+            "content": "Settlement patterns reflect interacting environmental and human factors including climate, water, resources, landforms, transportation, jobs, history, and public decisions.",
+            "accessibleDescription": "A concise evidence brief for Climate, Resources, and Settlement Patterns.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 7 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Climate, Resources, and Settlement Patterns",
+            "rows": [
+              [
+                "climate",
+                "long-term patterns of weather in a place"
+              ],
+              [
+                "resource",
+                "something useful for meeting needs or goals"
+              ],
+              [
+                "settlement pattern",
+                "the way people and communities are distributed across space"
+              ],
+              [
+                "infrastructure",
+                "shared systems such as roads, water, power, schools, and transit"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 7 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do climate, resources, landforms, and transportation influence settlement?",
+            "findings": [
+              {
+                "question": "Settlement patterns are shaped by...",
+                "finding": "multiple environmental and human factors"
+              },
+              {
+                "question": "Infrastructure includes...",
+                "finding": "roads, water, power, schools, and transit systems"
+              },
+              {
+                "question": "A strong settlement explanation should...",
+                "finding": "use several interacting causes"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 7 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 8,
@@ -3036,8 +3760,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 6
+        },
+        {
+          "id": "G3SS-W08-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 8?",
+          "choices": [
+            "Human-environment interaction includes adaptation, resource use, construction, conservation, hazards, and changing land use; landmarks gain meaning through geography, history, and culture.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 8
+        },
+        {
+          "id": "G3SS-W08-ST2",
+          "prompt": "Which finding is included in Source C for Week 8?",
+          "choices": [
+            "careful protection or management of resources and environments",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 8
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 8",
+        "inquiry": "How do people shape places and how do places shape people?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 8 · Landmarks, Human-Environment Interaction, and Regional Change",
+            "content": "Human-environment interaction includes adaptation, resource use, construction, conservation, hazards, and changing land use; landmarks gain meaning through geography, history, and culture.",
+            "accessibleDescription": "A concise evidence brief for Landmarks, Human-Environment Interaction, and Regional Change.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 8 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Landmarks, Human-Environment Interaction, and Regional Change",
+            "rows": [
+              [
+                "landmark",
+                "a recognizable feature with geographic or cultural significance"
+              ],
+              [
+                "adaptation",
+                "an adjustment in response to conditions"
+              ],
+              [
+                "conservation",
+                "careful protection or management of resources"
+              ],
+              [
+                "land use",
+                "how people organize and use land"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 8 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do people shape places and how do places shape people?",
+            "findings": [
+              {
+                "question": "Conservation means...",
+                "finding": "careful protection or management of resources and environments"
+              },
+              {
+                "question": "Human-environment interaction includes...",
+                "finding": "people adapting to, using, protecting, and changing places"
+              },
+              {
+                "question": "A development decision should consider...",
+                "finding": "benefits, costs, affected groups, resources, and environmental effects"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 8 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 9,
@@ -3415,8 +4240,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 7
+        },
+        {
+          "id": "G3SS-W09-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 9?",
+          "choices": [
+            "Indigenous nations have distinct histories, cultures, homelands, governments, and continuing sovereignty; they should not be treated as one culture or only as people of the past.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 9
+        },
+        {
+          "id": "G3SS-W09-ST2",
+          "prompt": "Which finding is included in Source C for Week 9?",
+          "choices": [
+            "the authority of a nation or people to govern itself",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 9
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 9",
+        "inquiry": "How can we understand Indigenous nations as historical and present-day political communities?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 9 · Indigenous Nations, Homelands, and Sovereignty",
+            "content": "Indigenous nations have distinct histories, cultures, homelands, governments, and continuing sovereignty; they should not be treated as one culture or only as people of the past.",
+            "accessibleDescription": "A concise evidence brief for Indigenous Nations, Homelands, and Sovereignty.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 9 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Indigenous Nations, Homelands, and Sovereignty",
+            "rows": [
+              [
+                "homeland",
+                "a place with deep historical, cultural, or political connection to a people"
+              ],
+              [
+                "sovereignty",
+                "the authority of a nation or people to govern itself"
+              ],
+              [
+                "tribal nation",
+                "a distinct Indigenous political community with its own governance"
+              ],
+              [
+                "continuity",
+                "persistence across time"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 9 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can we understand Indigenous nations as historical and present-day political communities?",
+            "findings": [
+              {
+                "question": "Sovereignty means...",
+                "finding": "the authority of a nation or people to govern itself"
+              },
+              {
+                "question": "Why name specific tribal nations?",
+                "finding": "Indigenous peoples are diverse political and cultural communities"
+              },
+              {
+                "question": "Which statement is accurate?",
+                "finding": "Tribal nations continue today with distinct governments and communities."
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 9 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 10,
@@ -3794,8 +4720,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 8
+        },
+        {
+          "id": "G3SS-W10-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 10?",
+          "choices": [
+            "Indigenous knowledge, technologies, economies, governance, and cultural practices differ across nations and regions; environment matters without determining culture.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 10
+        },
+        {
+          "id": "G3SS-W10-ST2",
+          "prompt": "Which finding is included in Source C for Week 10?",
+          "choices": [
+            "knowledge developed through long relationships among peoples, places, and living systems",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 10
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 10",
+        "inquiry": "How have Indigenous nations developed diverse relationships with environments and resources?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 10 · Indigenous Regional Diversity and Environmental Knowledge",
+            "content": "Indigenous knowledge, technologies, economies, governance, and cultural practices differ across nations and regions; environment matters without determining culture.",
+            "accessibleDescription": "A concise evidence brief for Indigenous Regional Diversity and Environmental Knowledge.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 10 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Indigenous Regional Diversity and Environmental Knowledge",
+            "rows": [
+              [
+                "traditional ecological knowledge",
+                "knowledge developed through long relationships among peoples, places, and living systems"
+              ],
+              [
+                "adaptation",
+                "adjustment in response to conditions"
+              ],
+              [
+                "technology",
+                "tools or systems developed to solve problems or meet needs"
+              ],
+              [
+                "diversity",
+                "meaningful differences within or among groups"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 10 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How have Indigenous nations developed diverse relationships with environments and resources?",
+            "findings": [
+              {
+                "question": "Traditional ecological knowledge is...",
+                "finding": "knowledge developed through long relationships among peoples, places, and living systems"
+              },
+              {
+                "question": "Geography should help us...",
+                "finding": "explain context without claiming it determines all culture"
+              },
+              {
+                "question": "Technology includes...",
+                "finding": "tools and systems developed to solve problems or meet needs"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 10 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 11,
@@ -4173,8 +5200,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 9
+        },
+        {
+          "id": "G3SS-W11-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 11?",
+          "choices": [
+            "Maps, newspapers, letters, photographs, artifacts, public records, buildings, oral histories, and Indigenous sources can illuminate local/state history when placed in context and corroborated.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 11
+        },
+        {
+          "id": "G3SS-W11-ST2",
+          "prompt": "Which finding is included in Source C for Week 11?",
+          "choices": [
+            "a collection or institution preserving historical records",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 11
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 11",
+        "inquiry": "How can primary sources help us reconstruct local and state history?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 11 · Local and State History through Primary Sources",
+            "content": "Maps, newspapers, letters, photographs, artifacts, public records, buildings, oral histories, and Indigenous sources can illuminate local/state history when placed in context and corroborated.",
+            "accessibleDescription": "A concise evidence brief for Local and State History through Primary Sources.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 11 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Local and State History through Primary Sources",
+            "rows": [
+              [
+                "archive",
+                "a collection or institution preserving historical records"
+              ],
+              [
+                "context",
+                "surrounding time, place, conditions, and purpose"
+              ],
+              [
+                "corroboration",
+                "checking information against other sources"
+              ],
+              [
+                "public record",
+                "a government-created record available under applicable access rules"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 11 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can primary sources help us reconstruct local and state history?",
+            "findings": [
+              {
+                "question": "An archive is...",
+                "finding": "a collection or institution preserving historical records"
+              },
+              {
+                "question": "Corroboration means...",
+                "finding": "checking information against other sources"
+              },
+              {
+                "question": "A local-history project should...",
+                "finding": "use public/appropriately shared sources and protect privacy"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 11 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 12,
@@ -4552,8 +5680,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 10
+        },
+        {
+          "id": "G3SS-W12-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 12?",
+          "choices": [
+            "Communities change through Indigenous continuity, settlement, migration, economic activity, infrastructure, technology, environmental change, and public decisions.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 12
+        },
+        {
+          "id": "G3SS-W12-ST2",
+          "prompt": "Which finding is included in Source C for Week 12?",
+          "choices": [
+            "growth in urban population or settlement",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 12
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 12",
+        "inquiry": "How have settlement, migration, work, transportation, and public decisions changed communities?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 12 · Settlement, Migration, Economy, and Local Change",
+            "content": "Communities change through Indigenous continuity, settlement, migration, economic activity, infrastructure, technology, environmental change, and public decisions.",
+            "accessibleDescription": "A concise evidence brief for Settlement, Migration, Economy, and Local Change.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 12 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Settlement, Migration, Economy, and Local Change",
+            "rows": [
+              [
+                "migration",
+                "movement of people from one place to another to live"
+              ],
+              [
+                "economy",
+                "systems of production, exchange, work, and resource use"
+              ],
+              [
+                "entrepreneurship",
+                "organizing resources to create an enterprise while accepting risk"
+              ],
+              [
+                "urbanization",
+                "growth in the size or share of populations living in urban areas"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 12 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How have settlement, migration, work, transportation, and public decisions changed communities?",
+            "findings": [
+              {
+                "question": "Urbanization means...",
+                "finding": "growth in urban population or settlement"
+              },
+              {
+                "question": "A historical change can have...",
+                "finding": "different benefits and costs for different groups"
+              },
+              {
+                "question": "A strong local-change explanation should...",
+                "finding": "combine chronology, geography, economics, and perspectives"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 12 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 13,
@@ -4931,8 +6160,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 11
+        },
+        {
+          "id": "G3SS-W13-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 13?",
+          "choices": [
+            "Comparative Social Studies uses multiple sources, precise language, scale awareness, internal diversity, and common categories such as geography, government, economy, culture, and history.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 13
+        },
+        {
+          "id": "G3SS-W13-ST2",
+          "prompt": "Which finding is included in Source C for Week 13?",
+          "choices": [
+            "a focused investigation of a particular example",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 13
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 13",
+        "inquiry": "How can we compare world communities without stereotyping?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 13 · Comparing World Communities · Tools and Fair Comparisons",
+            "content": "Comparative Social Studies uses multiple sources, precise language, scale awareness, internal diversity, and common categories such as geography, government, economy, culture, and history.",
+            "accessibleDescription": "A concise evidence brief for Comparing World Communities · Tools and Fair Comparisons.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 13 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Comparing World Communities · Tools and Fair Comparisons",
+            "rows": [
+              [
+                "comparison",
+                "examining similarities and differences"
+              ],
+              [
+                "case study",
+                "a focused investigation of a particular example"
+              ],
+              [
+                "generalization",
+                "a broad statement based on patterns that must be used carefully"
+              ],
+              [
+                "stereotype",
+                "an oversimplified assumption about a group"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 13 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can we compare world communities without stereotyping?",
+            "findings": [
+              {
+                "question": "A case study is...",
+                "finding": "a focused investigation of a particular example"
+              },
+              {
+                "question": "A generalization should...",
+                "finding": "be used cautiously and supported by evidence"
+              },
+              {
+                "question": "A fair comparison should...",
+                "finding": "use the same categories and quality of evidence for each case"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 13 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 14,
@@ -5310,8 +6640,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 12
+        },
+        {
+          "id": "G3SS-W14-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 14?",
+          "choices": [
+            "Japan offers an East Asian case for examining islands, dense urban areas, rural regions, constitutional government, trade, technology, traditions, hazards, and demographic change without stereotypes.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 14
+        },
+        {
+          "id": "G3SS-W14-ST2",
+          "prompt": "Which finding is included in Source C for Week 14?",
+          "choices": [
+            "a group or chain of islands",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 14
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 14",
+        "inquiry": "How do geography, government, economy, culture, and history interact in communities in Japan?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 14 · World Community Case Study · Japan",
+            "content": "Japan offers an East Asian case for examining islands, dense urban areas, rural regions, constitutional government, trade, technology, traditions, hazards, and demographic change without stereotypes.",
+            "accessibleDescription": "A concise evidence brief for World Community Case Study · Japan.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 14 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for World Community Case Study · Japan",
+            "rows": [
+              [
+                "archipelago",
+                "a group or chain of islands"
+              ],
+              [
+                "constitutional monarchy",
+                "a system with a monarch whose role is limited by constitutional rules"
+              ],
+              [
+                "urbanization",
+                "growth and concentration of population in urban areas"
+              ],
+              [
+                "trade",
+                "exchange of goods or services"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 14 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do geography, government, economy, culture, and history interact in communities in Japan?",
+            "findings": [
+              {
+                "question": "An archipelago is...",
+                "finding": "a group or chain of islands"
+              },
+              {
+                "question": "Japan should be studied as...",
+                "finding": "a diverse modern country with urban and rural communities"
+              },
+              {
+                "question": "A constitutional monarchy...",
+                "finding": "has a monarch whose role is limited by constitutional rules"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 14 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 15,
@@ -5689,8 +7120,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 13
+        },
+        {
+          "id": "G3SS-W15-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 15?",
+          "choices": [
+            "Ghana offers a West African case for studying coastal/inland geography, democratic institutions, urban/rural communities, trade, cultural diversity, colonial history, independence, and contemporary development.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 15
+        },
+        {
+          "id": "G3SS-W15-ST2",
+          "prompt": "Which finding is included in Source C for Week 15?",
+          "choices": [
+            "political self-government separate from former external rule",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 15
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 15",
+        "inquiry": "How do geography, history, government, economy, and culture interact in communities in Ghana?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 15 · World Community Case Study · Ghana",
+            "content": "Ghana offers a West African case for studying coastal/inland geography, democratic institutions, urban/rural communities, trade, cultural diversity, colonial history, independence, and contemporary development.",
+            "accessibleDescription": "A concise evidence brief for World Community Case Study · Ghana.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 15 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for World Community Case Study · Ghana",
+            "rows": [
+              [
+                "republic",
+                "a government in which public offices are organized through constitutional institutions rather than hereditary monarchy"
+              ],
+              [
+                "independence",
+                "political self-government separate from former external rule"
+              ],
+              [
+                "urban-rural connection",
+                "relationships linking cities, towns, and rural areas"
+              ],
+              [
+                "export",
+                "a good or service sold to another country"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 15 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do geography, history, government, economy, and culture interact in communities in Ghana?",
+            "findings": [
+              {
+                "question": "Independence means...",
+                "finding": "political self-government separate from former external rule"
+              },
+              {
+                "question": "Why compare urban and rural communities?",
+                "finding": "one city cannot represent an entire country"
+              },
+              {
+                "question": "An export is...",
+                "finding": "a good or service sold to another country"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 15 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 16,
@@ -6068,8 +7600,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 14
+        },
+        {
+          "id": "G3SS-W16-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 16?",
+          "choices": [
+            "Mexico provides a North American case for comparing federal government, Indigenous nations and languages, urban/rural regions, migration, trade, historical change, and cultural diversity.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 16
+        },
+        {
+          "id": "G3SS-W16-ST2",
+          "prompt": "Which finding is included in Source C for Week 16?",
+          "choices": [
+            "divides powers between national and regional governments",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 16
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 16",
+        "inquiry": "How do geography, Indigenous continuity, government, economy, migration, and culture interact in communities in Mexico?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 16 · World Community Case Study · Mexico",
+            "content": "Mexico provides a North American case for comparing federal government, Indigenous nations and languages, urban/rural regions, migration, trade, historical change, and cultural diversity.",
+            "accessibleDescription": "A concise evidence brief for World Community Case Study · Mexico.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 16 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for World Community Case Study · Mexico",
+            "rows": [
+              [
+                "federal system",
+                "a system dividing powers between national and regional governments"
+              ],
+              [
+                "Indigenous language",
+                "a language originating among Indigenous peoples and communities"
+              ],
+              [
+                "migration",
+                "movement of people from one place to another to live"
+              ],
+              [
+                "cultural diversity",
+                "the presence of varied cultural identities, practices, and communities"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 16 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do geography, Indigenous continuity, government, economy, migration, and culture interact in communities in Mexico?",
+            "findings": [
+              {
+                "question": "A federal system...",
+                "finding": "divides powers between national and regional governments"
+              },
+              {
+                "question": "Mexico is part of...",
+                "finding": "North America"
+              },
+              {
+                "question": "Cultural diversity means...",
+                "finding": "different cultural identities and communities exist within a society"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 16 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 17,
@@ -6447,8 +8080,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 15
+        },
+        {
+          "id": "G3SS-W17-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 17?",
+          "choices": [
+            "India offers a South Asian case for studying large population scale, federal democracy, many languages and religions, urban/rural variation, economic change, and regional diversity.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 17
+        },
+        {
+          "id": "G3SS-W17-ST2",
+          "prompt": "Which finding is included in Source C for Week 17?",
+          "choices": [
+            "how many people live within a given area",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 17
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 17",
+        "inquiry": "How do scale, federalism, languages, religions, economy, and regional diversity shape communities in India?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 17 · World Community Case Study · India",
+            "content": "India offers a South Asian case for studying large population scale, federal democracy, many languages and religions, urban/rural variation, economic change, and regional diversity.",
+            "accessibleDescription": "A concise evidence brief for World Community Case Study · India.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 17 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for World Community Case Study · India",
+            "rows": [
+              [
+                "federal democracy",
+                "a democratic system dividing authority between national and regional governments"
+              ],
+              [
+                "pluralism",
+                "the presence and participation of multiple groups, identities, or viewpoints"
+              ],
+              [
+                "population density",
+                "number of people living within a given area"
+              ],
+              [
+                "service economy",
+                "economic activity centered on providing services"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 17 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do scale, federalism, languages, religions, economy, and regional diversity shape communities in India?",
+            "findings": [
+              {
+                "question": "Population density measures...",
+                "finding": "how many people live within a given area"
+              },
+              {
+                "question": "Pluralism means...",
+                "finding": "multiple groups, identities, or viewpoints exist and participate"
+              },
+              {
+                "question": "India should be studied as...",
+                "finding": "a large, diverse federal democracy with major regional variation"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 17 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 18,
@@ -6826,8 +8560,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 16
+        },
+        {
+          "id": "G3SS-W18-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 18?",
+          "choices": [
+            "Comparative analysis identifies patterns and differences without ranking cultures; the midterm checks durable transfer across inquiry, U.S. geography, Indigenous/local history, and world communities.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 18
+        },
+        {
+          "id": "G3SS-W18-ST2",
+          "prompt": "Which finding is included in Source C for Week 18?",
+          "choices": [
+            "systematically studying similarities and differences across cases",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 18
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 18",
+        "inquiry": "What can comparison teach us, and what can I demonstrate independently at midyear?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 18 · Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm",
+            "content": "Comparative analysis identifies patterns and differences without ranking cultures; the midterm checks durable transfer across inquiry, U.S. geography, Indigenous/local history, and world communities.",
+            "accessibleDescription": "A concise evidence brief for Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 18 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm",
+            "rows": [
+              [
+                "comparative analysis",
+                "systematic study of similarities and differences across cases"
+              ],
+              [
+                "variable",
+                "a characteristic that can differ across cases"
+              ],
+              [
+                "transfer",
+                "using learning in a new situation"
+              ],
+              [
+                "reassessment",
+                "a fresh assessment after targeted review and correction"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 18 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to What can comparison teach us, and what can I demonstrate independently at midyear?",
+            "findings": [
+              {
+                "question": "Comparative analysis means...",
+                "finding": "systematically studying similarities and differences across cases"
+              },
+              {
+                "question": "Transfer means...",
+                "finding": "using learning in a new situation"
+              },
+              {
+                "question": "Below 80% should lead to...",
+                "finding": "targeted review, correction, and fresh reassessment"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 18 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 19,
@@ -7205,8 +9040,110 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 17
+        },
+        {
+          "id": "G3SS-W19-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 19?",
+          "choices": [
+            "Rules and laws organize public life; the Constitution structures federal authority, amendments protect rights, and rule of law means public power operates through established legal processes.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 19
+        },
+        {
+          "id": "G3SS-W19-ST2",
+          "prompt": "Which finding is included in Source C for Week 19?",
+          "choices": [
+            "government and people operate through established laws and processes",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 19
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 19",
+        "inquiry": "Why do constitutional communities create laws and limits on government?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 19 · Rules, Laws, the Constitution, and Rule of Law",
+            "content": "Rules and laws organize public life; the Constitution structures federal authority, amendments protect rights, and rule of law means public power operates through established legal processes.",
+            "accessibleDescription": "A concise evidence brief for Rules, Laws, the Constitution, and Rule of Law.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 19 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Rules, Laws, the Constitution, and Rule of Law",
+            "rows": [
+              [
+                "constitution",
+                "a foundational set of rules and structures for government"
+              ],
+              [
+                "rule of law",
+                "the principle that government and people are governed through established legal processes"
+              ],
+              [
+                "amendment",
+                "a formal change or addition to a constitution"
+              ],
+              [
+                "civic virtue",
+                "habits and actions that support responsible public life"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 19 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "U.S. Constitution",
+            "date": "1787",
+            "context": "Primary-source connection for Rules, Laws, the Constitution, and Rule of Law",
+            "content": "“We the People of the United States”",
+            "findings": [
+              {
+                "question": "Rule of law means...",
+                "finding": "government and people operate through established laws and processes"
+              },
+              {
+                "question": "Why limit government power?",
+                "finding": "to protect rights, distribute authority, and require lawful processes"
+              },
+              {
+                "question": "Civic virtue includes...",
+                "finding": "informed participation, civility, service, and respect for lawful processes"
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from U.S. Constitution, followed by evidence findings for the week's inquiry.",
+            "citation": "U.S. Constitution, Preamble (1787), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 20,
@@ -7584,8 +9521,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 18
+        },
+        {
+          "id": "G3SS-W20-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 20?",
+          "choices": [
+            "The U.S. federal system includes national, state, local, and sovereign tribal governments with different and sometimes overlapping responsibilities.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 20
+        },
+        {
+          "id": "G3SS-W20-ST2",
+          "prompt": "Which finding is included in Source C for Week 20?",
+          "choices": [
+            "authority is divided between national and state governments",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 20
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 20",
+        "inquiry": "How do different governments share and exercise authority in the United States?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 20 · Local, State, Federal, and Tribal Governments",
+            "content": "The U.S. federal system includes national, state, local, and sovereign tribal governments with different and sometimes overlapping responsibilities.",
+            "accessibleDescription": "A concise evidence brief for Local, State, Federal, and Tribal Governments.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 20 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Local, State, Federal, and Tribal Governments",
+            "rows": [
+              [
+                "federalism",
+                "division of authority between national and state governments"
+              ],
+              [
+                "jurisdiction",
+                "the area or subject over which an authority has legal power"
+              ],
+              [
+                "local government",
+                "government serving a city, town, county, or other local area"
+              ],
+              [
+                "tribal government",
+                "government of a sovereign tribal nation"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 20 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do different governments share and exercise authority in the United States?",
+            "findings": [
+              {
+                "question": "Federalism means...",
+                "finding": "authority is divided between national and state governments"
+              },
+              {
+                "question": "Jurisdiction means...",
+                "finding": "the area or subject over which an authority has legal power"
+              },
+              {
+                "question": "Tribal governments are...",
+                "finding": "governments of sovereign tribal nations"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 20 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 21,
@@ -7963,8 +10001,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 19
+        },
+        {
+          "id": "G3SS-W21-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 21?",
+          "choices": [
+            "Legislative, executive, and judicial institutions have different roles; elections allow eligible citizens to choose many representatives, and trustworthy elections depend on rules, access, accurate administration, and lawful review.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 21
+        },
+        {
+          "id": "G3SS-W21-ST2",
+          "prompt": "Which finding is included in Source C for Week 21?",
+          "choices": [
+            "makes laws",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 21
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 21",
+        "inquiry": "How do branches and elections distribute public authority?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 21 · Branches, Elections, and Voting",
+            "content": "Legislative, executive, and judicial institutions have different roles; elections allow eligible citizens to choose many representatives, and trustworthy elections depend on rules, access, accurate administration, and lawful review.",
+            "accessibleDescription": "A concise evidence brief for Branches, Elections, and Voting.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 21 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Branches, Elections, and Voting",
+            "rows": [
+              [
+                "legislative",
+                "related to making laws"
+              ],
+              [
+                "executive",
+                "related to carrying out laws and administering government"
+              ],
+              [
+                "judicial",
+                "related to courts and interpretation of law"
+              ],
+              [
+                "election",
+                "a rule-governed process for choosing among candidates or options"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 21 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do branches and elections distribute public authority?",
+            "findings": [
+              {
+                "question": "The legislative branch mainly...",
+                "finding": "makes laws"
+              },
+              {
+                "question": "Why are clear election procedures important?",
+                "finding": "they support fairness, trust, accurate administration, and lawful review"
+              },
+              {
+                "question": "A nonpartisan election lesson should...",
+                "finding": "teach processes and evidence without directing students toward a party or candidate"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 21 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 22,
@@ -8342,8 +10481,110 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 20
+        },
+        {
+          "id": "G3SS-W22-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 22?",
+          "choices": [
+            "Civic symbols and commemorations express ideals and histories, but responsible citizenship studies context, multiple perspectives, and the difference between commemoration and historical analysis.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 22
+        },
+        {
+          "id": "G3SS-W22-ST2",
+          "prompt": "Which finding is included in Source C for Week 22?",
+          "choices": [
+            "remembering or honoring a person, event, or idea",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 22
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 22",
+        "inquiry": "How do symbols, holidays, documents, and public memory shape civic identity?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 22 · Civic Symbols, Holidays, Public Memory, and Informed Citizenship",
+            "content": "Civic symbols and commemorations express ideals and histories, but responsible citizenship studies context, multiple perspectives, and the difference between commemoration and historical analysis.",
+            "accessibleDescription": "A concise evidence brief for Civic Symbols, Holidays, Public Memory, and Informed Citizenship.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 22 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Civic Symbols, Holidays, Public Memory, and Informed Citizenship",
+            "rows": [
+              [
+                "commemoration",
+                "an act of remembering or honoring a person, event, or idea"
+              ],
+              [
+                "public memory",
+                "shared ways communities remember and interpret the past"
+              ],
+              [
+                "patriotism",
+                "attachment or commitment to one's country expressed in varied lawful ways"
+              ],
+              [
+                "civility",
+                "respectful conduct supporting constructive public interaction"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 22 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "Fourteenth Amendment",
+            "date": "1868",
+            "context": "Primary-source connection for Civic Symbols, Holidays, Public Memory, and Informed Citizenship",
+            "content": "“equal protection of the laws”",
+            "findings": [
+              {
+                "question": "Commemoration means...",
+                "finding": "remembering or honoring a person, event, or idea"
+              },
+              {
+                "question": "Civility means...",
+                "finding": "respectful conduct supporting constructive public interaction"
+              },
+              {
+                "question": "Historical inquiry about a civic symbol should...",
+                "finding": "include context and evidence rather than only memorization"
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from Fourteenth Amendment, followed by evidence findings for the week's inquiry.",
+            "citation": "U.S. Constitution, Amendment XIV (1868), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 23,
@@ -8721,8 +10962,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 21
+        },
+        {
+          "id": "G3SS-W23-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 23?",
+          "choices": [
+            "Scarcity means resources are limited relative to possible wants; choosing one option often means giving up another, and good economic reasoning considers tradeoffs and incentives.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 23
+        },
+        {
+          "id": "G3SS-W23-ST2",
+          "prompt": "Which finding is included in Source C for Week 23?",
+          "choices": [
+            "the next-best option given up when choosing",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 23
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 23",
+        "inquiry": "Why do scarcity and opportunity cost shape choices?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 23 · Scarcity, Opportunity Cost, and Resource Choices",
+            "content": "Scarcity means resources are limited relative to possible wants; choosing one option often means giving up another, and good economic reasoning considers tradeoffs and incentives.",
+            "accessibleDescription": "A concise evidence brief for Scarcity, Opportunity Cost, and Resource Choices.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 23 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Scarcity, Opportunity Cost, and Resource Choices",
+            "rows": [
+              [
+                "scarcity",
+                "limited resources relative to possible wants"
+              ],
+              [
+                "opportunity cost",
+                "the next-best option given up when a choice is made"
+              ],
+              [
+                "tradeoff",
+                "a balance of benefits and costs among choices"
+              ],
+              [
+                "incentive",
+                "something that encourages or discourages an action"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 23 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to Why do scarcity and opportunity cost shape choices?",
+            "findings": [
+              {
+                "question": "Opportunity cost is...",
+                "finding": "the next-best option given up when choosing"
+              },
+              {
+                "question": "An incentive is...",
+                "finding": "something that encourages or discourages an action"
+              },
+              {
+                "question": "A strong economic explanation should...",
+                "finding": "name benefits, costs, tradeoffs, and opportunity cost"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 23 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 24,
@@ -9100,8 +11442,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 22
+        },
+        {
+          "id": "G3SS-W24-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 24?",
+          "choices": [
+            "Supply and demand are simplified tools for reasoning about how availability and consumer demand can influence prices and production; real markets are also shaped by costs, rules, expectations, and competition.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 24
+        },
+        {
+          "id": "G3SS-W24-ST2",
+          "prompt": "Which finding is included in Source C for Week 24?",
+          "choices": [
+            "faces upward pressure, other things equal",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 24
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 24",
+        "inquiry": "How do changing supply and demand influence markets?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 24 · Supply, Demand, Prices, and Markets",
+            "content": "Supply and demand are simplified tools for reasoning about how availability and consumer demand can influence prices and production; real markets are also shaped by costs, rules, expectations, and competition.",
+            "accessibleDescription": "A concise evidence brief for Supply, Demand, Prices, and Markets.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 24 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Supply, Demand, Prices, and Markets",
+            "rows": [
+              [
+                "supply",
+                "the amount of a good or service available for sale"
+              ],
+              [
+                "demand",
+                "the amount consumers want and are able to buy"
+              ],
+              [
+                "market",
+                "a system or setting where buyers and sellers exchange"
+              ],
+              [
+                "price",
+                "the amount of money asked or paid for a good or service"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 24 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do changing supply and demand influence markets?",
+            "findings": [
+              {
+                "question": "If demand rises while supply remains limited, price often...",
+                "finding": "faces upward pressure, other things equal"
+              },
+              {
+                "question": "Why say 'other things equal'?",
+                "finding": "real markets can be affected by additional factors"
+              },
+              {
+                "question": "A Grade 3 model should...",
+                "finding": "describe likely patterns without claiming perfect prediction"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 24 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 25,
@@ -9479,8 +11922,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 23
+        },
+        {
+          "id": "G3SS-W25-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 25?",
+          "choices": [
+            "Money serves as a commonly accepted medium of exchange and unit for prices; North American countries use different currencies, and values can change relative to one another.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 25
+        },
+        {
+          "id": "G3SS-W25-ST2",
+          "prompt": "Which finding is included in Source C for Week 25?",
+          "choices": [
+            "the value of one currency compared with another",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 25
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 25",
+        "inquiry": "How do money and currencies support exchange, saving, and economic comparison?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 25 · Money and Currencies of North America",
+            "content": "Money serves as a commonly accepted medium of exchange and unit for prices; North American countries use different currencies, and values can change relative to one another.",
+            "accessibleDescription": "A concise evidence brief for Money and Currencies of North America.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 25 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Money and Currencies of North America",
+            "rows": [
+              [
+                "currency",
+                "a system of money used in a country or economy"
+              ],
+              [
+                "exchange",
+                "giving one thing to receive another"
+              ],
+              [
+                "saving",
+                "setting aside money or resources for future use"
+              ],
+              [
+                "exchange rate",
+                "the value of one currency compared with another"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 25 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do money and currencies support exchange, saving, and economic comparison?",
+            "findings": [
+              {
+                "question": "An exchange rate tells...",
+                "finding": "the value of one currency compared with another"
+              },
+              {
+                "question": "Why can't we compare prices in different currencies by number alone?",
+                "finding": "currency units have different values and purchasing contexts"
+              },
+              {
+                "question": "Saving means...",
+                "finding": "setting aside money or resources for future use"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 25 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 26,
@@ -9858,8 +12402,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 24
+        },
+        {
+          "id": "G3SS-W26-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 26?",
+          "choices": [
+            "Specialization can increase skill or efficiency but creates interdependence; trade links resources, labor, transportation, technology, and consumers across places.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 26
+        },
+        {
+          "id": "G3SS-W26-ST2",
+          "prompt": "Which finding is included in Source C for Week 26?",
+          "choices": [
+            "mutual reliance among people, regions, or systems",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 26
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 26",
+        "inquiry": "Why do regions and countries specialize and trade?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 26 · Specialization, Trade, and Interdependence",
+            "content": "Specialization can increase skill or efficiency but creates interdependence; trade links resources, labor, transportation, technology, and consumers across places.",
+            "accessibleDescription": "A concise evidence brief for Specialization, Trade, and Interdependence.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 26 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Specialization, Trade, and Interdependence",
+            "rows": [
+              [
+                "specialization",
+                "focusing work or production on particular tasks or products"
+              ],
+              [
+                "interdependence",
+                "mutual reliance among people, regions, or systems"
+              ],
+              [
+                "import",
+                "a good or service bought from another country"
+              ],
+              [
+                "export",
+                "a good or service sold to another country"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 26 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to Why do regions and countries specialize and trade?",
+            "findings": [
+              {
+                "question": "Interdependence means...",
+                "finding": "mutual reliance among people, regions, or systems"
+              },
+              {
+                "question": "An import is...",
+                "finding": "a good or service bought from another country"
+              },
+              {
+                "question": "Specialization can...",
+                "finding": "increase efficiency while also increasing reliance on trade connections"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 26 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 27,
@@ -10237,8 +12882,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 25
+        },
+        {
+          "id": "G3SS-W27-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 27?",
+          "choices": [
+            "African American history includes varied contributions across periods and fields; biographies should connect individual action to context, institutions, barriers, collective efforts, and evidence.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 27
+        },
+        {
+          "id": "G3SS-W27-ST2",
+          "prompt": "Which finding is included in Source C for Week 27?",
+          "choices": [
+            "connect a person to context, evidence, institutions, and other people",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 27
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 27",
+        "inquiry": "How have African Americans influenced U.S. civic life, culture, institutions, military service, science, education, and movements for rights?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 27 · African American Heroes, Patriots, and Community Builders",
+            "content": "African American history includes varied contributions across periods and fields; biographies should connect individual action to context, institutions, barriers, collective efforts, and evidence.",
+            "accessibleDescription": "A concise evidence brief for African American Heroes, Patriots, and Community Builders.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 27 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for African American Heroes, Patriots, and Community Builders",
+            "rows": [
+              [
+                "patriotism",
+                "attachment or service to one's country expressed in varied lawful ways"
+              ],
+              [
+                "civil rights",
+                "rights to equal treatment and participation under law"
+              ],
+              [
+                "institution",
+                "an organized body or system serving an established purpose"
+              ],
+              [
+                "legacy",
+                "lasting influence or memory"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 27 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How have African Americans influenced U.S. civic life, culture, institutions, military service, science, education, and movements for rights?",
+            "findings": [
+              {
+                "question": "A strong biography should...",
+                "finding": "connect a person to context, evidence, institutions, and other people"
+              },
+              {
+                "question": "Civil rights concern...",
+                "finding": "equal treatment and participation under law"
+              },
+              {
+                "question": "Why study institutions and collective action?",
+                "finding": "communities and organizations shape history as well as individuals"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 27 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 28,
@@ -10616,8 +13362,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 26
+        },
+        {
+          "id": "G3SS-W28-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 28?",
+          "choices": [
+            "Indigenous history includes leaders, educators, veterans, artists, scientists, advocates, governments, and institutions studied nation-specifically and in historical and contemporary contexts.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 28
+        },
+        {
+          "id": "G3SS-W28-ST2",
+          "prompt": "Which finding is included in Source C for Week 28?",
+          "choices": [
+            "with specific nations, contexts, and sources identified",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 28
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 28",
+        "inquiry": "How have Indigenous leaders and institutions shaped communities and public life?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 28 · Indigenous Leaders, Tribal Governments, and Cultural Continuity",
+            "content": "Indigenous history includes leaders, educators, veterans, artists, scientists, advocates, governments, and institutions studied nation-specifically and in historical and contemporary contexts.",
+            "accessibleDescription": "A concise evidence brief for Indigenous Leaders, Tribal Governments, and Cultural Continuity.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 28 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Indigenous Leaders, Tribal Governments, and Cultural Continuity",
+            "rows": [
+              [
+                "leadership",
+                "guiding or helping a group pursue goals or responsibilities"
+              ],
+              [
+                "governance",
+                "systems and processes for collective decision-making"
+              ],
+              [
+                "advocacy",
+                "public support or action for a cause or community interest"
+              ],
+              [
+                "continuity",
+                "persistence across time"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 28 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How have Indigenous leaders and institutions shaped communities and public life?",
+            "findings": [
+              {
+                "question": "Indigenous leaders should be studied...",
+                "finding": "with specific nations, contexts, and sources identified"
+              },
+              {
+                "question": "Governance means...",
+                "finding": "systems and processes for collective decision-making"
+              },
+              {
+                "question": "Continuity reminds us...",
+                "finding": "Indigenous communities and institutions persist and change over time"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 28 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 29,
@@ -10995,8 +13842,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 27
+        },
+        {
+          "id": "G3SS-W29-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 29?",
+          "choices": [
+            "People who move, work, invent, organize, teach, serve, build enterprises, and create institutions contribute in varied ways; impact should include context and barriers as well as achievements.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 29
+        },
+        {
+          "id": "G3SS-W29-ST2",
+          "prompt": "Which finding is included in Source C for Week 29?",
+          "choices": [
+            "a new or improved idea, method, process, or product",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 29
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 29",
+        "inquiry": "How do migration, work, innovation, and public service shape communities?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 29 · Immigrants, Innovators, Workers, and Public Servants",
+            "content": "People who move, work, invent, organize, teach, serve, build enterprises, and create institutions contribute in varied ways; impact should include context and barriers as well as achievements.",
+            "accessibleDescription": "A concise evidence brief for Immigrants, Innovators, Workers, and Public Servants.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 29 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Immigrants, Innovators, Workers, and Public Servants",
+            "rows": [
+              [
+                "innovation",
+                "a new or improved idea, method, process, or product"
+              ],
+              [
+                "migration",
+                "movement of people from one place to another to live"
+              ],
+              [
+                "public servant",
+                "a person working for government or public institutions"
+              ],
+              [
+                "entrepreneur",
+                "a person who organizes resources to develop an enterprise while accepting risk"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 29 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do migration, work, innovation, and public service shape communities?",
+            "findings": [
+              {
+                "question": "Innovation means...",
+                "finding": "a new or improved idea, method, process, or product"
+              },
+              {
+                "question": "Why include obstacles and collaboration in biographies?",
+                "finding": "impact occurs within real conditions and rarely through one person alone"
+              },
+              {
+                "question": "Migration history should...",
+                "finding": "protect student privacy and use public/fictional cases when appropriate"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 29 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 30,
@@ -11374,8 +14322,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 28
+        },
+        {
+          "id": "G3SS-W30-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 30?",
+          "choices": [
+            "Historical figures can make meaningful contributions and also have limitations, controversies, or unintended effects; responsible history avoids both uncritical hero worship and simplistic dismissal.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 30
+        },
+        {
+          "id": "G3SS-W30-ST2",
+          "prompt": "Which finding is included in Source C for Week 30?",
+          "choices": [
+            "people and events can have multiple effects, motives, contexts, and interpretations",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 30
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 30",
+        "inquiry": "How can we admire contributions while still examining evidence, complexity, and consequences?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 30 · Evaluating Hero Narratives and Historical Impact",
+            "content": "Historical figures can make meaningful contributions and also have limitations, controversies, or unintended effects; responsible history avoids both uncritical hero worship and simplistic dismissal.",
+            "accessibleDescription": "A concise evidence brief for Evaluating Hero Narratives and Historical Impact.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 30 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Evaluating Hero Narratives and Historical Impact",
+            "rows": [
+              [
+                "historical impact",
+                "effects or influence produced by people, institutions, ideas, or events"
+              ],
+              [
+                "legacy",
+                "lasting influence or memory"
+              ],
+              [
+                "complexity",
+                "multiple interacting factors or interpretations"
+              ],
+              [
+                "perspective",
+                "a point of view shaped by experience and position"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 30 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can we admire contributions while still examining evidence, complexity, and consequences?",
+            "findings": [
+              {
+                "question": "Historical complexity means...",
+                "finding": "people and events can have multiple effects, motives, contexts, and interpretations"
+              },
+              {
+                "question": "A balanced impact paragraph should...",
+                "finding": "include contribution, evidence, context, and complication"
+              },
+              {
+                "question": "Responsible historical study should avoid...",
+                "finding": "both uncritical hero worship and unsupported dismissal"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 30 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 31,
@@ -11753,8 +14802,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 29
+        },
+        {
+          "id": "G3SS-W31-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 31?",
+          "choices": [
+            "Culture includes language, religion, customs, arts, foodways, institutions, stories, and identities; communities contain internal diversity, and cultural sources need context.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 31
+        },
+        {
+          "id": "G3SS-W31-ST2",
+          "prompt": "Which finding is included in Source C for Week 31?",
+          "choices": [
+            "use evidence and recognize diversity within groups",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 31
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 31",
+        "inquiry": "How do cultural practices and stories carry meaning without defining every person in a group?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 31 · Culture, Language, Religion, and Folktales",
+            "content": "Culture includes language, religion, customs, arts, foodways, institutions, stories, and identities; communities contain internal diversity, and cultural sources need context.",
+            "accessibleDescription": "A concise evidence brief for Culture, Language, Religion, and Folktales.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 31 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Culture, Language, Religion, and Folktales",
+            "rows": [
+              [
+                "culture",
+                "learned and shared patterns of life, meaning, and expression"
+              ],
+              [
+                "religion",
+                "systems of belief, practice, community, or meaning related to sacred or ultimate questions"
+              ],
+              [
+                "folktale",
+                "a traditional story passed within or among communities"
+              ],
+              [
+                "cultural diffusion",
+                "spread of cultural ideas, practices, or products between groups or places"
+              ]
+            ],
+            "accessibleDescription": "A text-based original evidence brief showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 31 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How do cultural practices and stories carry meaning without defining every person in a group?",
+            "findings": [
+              {
+                "question": "A cultural comparison should...",
+                "finding": "use evidence and recognize diversity within groups"
+              },
+              {
+                "question": "A folktale can reveal...",
+                "finding": "themes, values, memory, and imagination but is not automatically literal history"
+              },
+              {
+                "question": "A religion lesson should...",
+                "finding": "study beliefs descriptively without requiring participation or ranking faiths"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 31 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 32,
@@ -12132,8 +15282,110 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 30
+        },
+        {
+          "id": "G3SS-W32-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 32?",
+          "choices": [
+            "Prejudice involves pre-judgment, discrimination involves unfair treatment, and human-rights frameworks express principles of dignity and equal worth.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 32
+        },
+        {
+          "id": "G3SS-W32-ST2",
+          "prompt": "Which finding is included in Source C for Week 32?",
+          "choices": [
+            "a pre-judgment or attitude based on group identity or assumptions",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 32
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 32",
+        "inquiry": "How can we study unfair treatment and human rights in age-appropriate, evidence-based ways?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 32 · Prejudice, Discrimination, Human Rights, and Dignity",
+            "content": "Prejudice involves pre-judgment, discrimination involves unfair treatment, and human-rights frameworks express principles of dignity and equal worth.",
+            "accessibleDescription": "A concise evidence brief for Prejudice, Discrimination, Human Rights, and Dignity.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 32 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "timeline / sequence card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Prejudice, Discrimination, Human Rights, and Dignity",
+            "rows": [
+              [
+                "prejudice",
+                "a pre-judgment or attitude about people based on group identity or assumptions"
+              ],
+              [
+                "discrimination",
+                "unfair treatment based on identity or perceived identity"
+              ],
+              [
+                "human rights",
+                "rights and freedoms regarded as belonging to all people"
+              ],
+              [
+                "dignity",
+                "inherent worth deserving respect"
+              ]
+            ],
+            "accessibleDescription": "A text-based timeline / sequence card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 32 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "First Amendment",
+            "date": "1791",
+            "context": "Primary-source connection for Prejudice, Discrimination, Human Rights, and Dignity",
+            "content": "“Congress shall make no law”",
+            "findings": [
+              {
+                "question": "Prejudice is...",
+                "finding": "a pre-judgment or attitude based on group identity or assumptions"
+              },
+              {
+                "question": "Discrimination involves...",
+                "finding": "unfair treatment based on identity or perceived identity"
+              },
+              {
+                "question": "Human-rights study should...",
+                "finding": "compare principles with evidence about practice and context"
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from First Amendment, followed by evidence findings for the week's inquiry.",
+            "citation": "U.S. Constitution, Amendment I (1791), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 33,
@@ -12511,8 +15763,110 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 31
+        },
+        {
+          "id": "G3SS-W33-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 33?",
+          "choices": [
+            "Global citizenship is an educational idea about awareness of interdependence, human dignity, environment, evidence, and responsible action; it does not replace legal national citizenship.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 33
+        },
+        {
+          "id": "G3SS-W33-ST2",
+          "prompt": "Which finding is included in Source C for Week 33?",
+          "choices": [
+            "awareness and responsibility in an interconnected world, not a legal replacement for national citizenship",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 33
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 33",
+        "inquiry": "What responsibilities can people have toward communities beyond their immediate locality?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 33 · Global Citizenship and Informed Action",
+            "content": "Global citizenship is an educational idea about awareness of interdependence, human dignity, environment, evidence, and responsible action; it does not replace legal national citizenship.",
+            "accessibleDescription": "A concise evidence brief for Global Citizenship and Informed Action.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 33 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "data / comparison table",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Global Citizenship and Informed Action",
+            "rows": [
+              [
+                "global citizenship",
+                "an educational idea emphasizing awareness and responsibility in an interconnected world"
+              ],
+              [
+                "interdependence",
+                "mutual reliance among people, places, or systems"
+              ],
+              [
+                "informed action",
+                "action guided by evidence, context, safety, and reflection"
+              ],
+              [
+                "stakeholder",
+                "a person or group affected by or interested in an issue"
+              ]
+            ],
+            "accessibleDescription": "A text-based data / comparison table showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 33 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "authentic public-domain primary-source excerpt",
+            "authenticity": "historical primary source excerpt",
+            "creator": "Fourteenth Amendment",
+            "date": "1868",
+            "context": "Primary-source connection for Global Citizenship and Informed Action",
+            "content": "“equal protection of the laws”",
+            "findings": [
+              {
+                "question": "Global citizenship here means...",
+                "finding": "awareness and responsibility in an interconnected world, not a legal replacement for national citizenship"
+              },
+              {
+                "question": "Informed action should be...",
+                "finding": "guided by evidence, context, safety, and reflection"
+              },
+              {
+                "question": "Stakeholders matter because...",
+                "finding": "different people and groups may be affected in different ways"
+              }
+            ],
+            "accessibleDescription": "A short public-domain excerpt from Fourteenth Amendment, followed by evidence findings for the week's inquiry.",
+            "citation": "U.S. Constitution, Amendment XIV (1868), public domain; National Archives."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 34,
@@ -12890,8 +16244,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 32
+        },
+        {
+          "id": "G3SS-W34-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 34?",
+          "choices": [
+            "Digital research requires source tracing, creator/purpose checks, corroboration, date/context awareness, distinction between fact/opinion/persuasion, and careful citation.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 34
+        },
+        {
+          "id": "G3SS-W34-ST2",
+          "prompt": "Which finding is included in Source C for Week 34?",
+          "choices": [
+            "checking whether a claim is supported by reliable evidence",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 34
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 34",
+        "inquiry": "How can we use digital tools without letting speed replace verification?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 34 · Media Literacy, Research Technology, and Verification",
+            "content": "Digital research requires source tracing, creator/purpose checks, corroboration, date/context awareness, distinction between fact/opinion/persuasion, and careful citation.",
+            "accessibleDescription": "A concise evidence brief for Media Literacy, Research Technology, and Verification.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 34 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "artifact-description card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Media Literacy, Research Technology, and Verification",
+            "rows": [
+              [
+                "verification",
+                "checking whether a claim is supported by reliable evidence"
+              ],
+              [
+                "corroboration",
+                "checking information against independent sources"
+              ],
+              [
+                "bias",
+                "a tendency or perspective that may influence selection or interpretation"
+              ],
+              [
+                "citation",
+                "information identifying a source"
+              ]
+            ],
+            "accessibleDescription": "A text-based artifact-description card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 34 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can we use digital tools without letting speed replace verification?",
+            "findings": [
+              {
+                "question": "Verification means...",
+                "finding": "checking whether a claim is supported by reliable evidence"
+              },
+              {
+                "question": "Why open the full source instead of relying on a snippet?",
+                "finding": "snippets can omit context, qualifiers, dates, and evidence"
+              },
+              {
+                "question": "A strong digital research record should...",
+                "finding": "identify source, creator, date/context, evidence, corroboration, and uncertainty"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 34 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 35,
@@ -13269,8 +16724,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 33
+        },
+        {
+          "id": "G3SS-W35-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 35?",
+          "choices": [
+            "A strong capstone integrates a focused question, multiple source types, map/data evidence, historical context, perspectives, economic/civic reasoning, citation, revision, and oral explanation.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 35
+        },
+        {
+          "id": "G3SS-W35-ST2",
+          "prompt": "Which finding is included in Source C for Week 35?",
+          "choices": [
+            "be focused, meaningful, and answerable with evidence",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 35
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 35",
+        "inquiry": "How can I investigate a meaningful Social Studies question and communicate a responsible conclusion or recommendation?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 35 · Grade 3 Research and Civic Capstone",
+            "content": "A strong capstone integrates a focused question, multiple source types, map/data evidence, historical context, perspectives, economic/civic reasoning, citation, revision, and oral explanation.",
+            "accessibleDescription": "A concise evidence brief for Grade 3 Research and Civic Capstone.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 35 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "civic-document practice card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Grade 3 Research and Civic Capstone",
+            "rows": [
+              [
+                "research question",
+                "a focused question guiding an investigation"
+              ],
+              [
+                "thesis",
+                "a central claim or conclusion supported by evidence"
+              ],
+              [
+                "criteria",
+                "standards used to judge quality, options, or outcomes"
+              ],
+              [
+                "revision",
+                "improving work based on evidence or feedback"
+              ]
+            ],
+            "accessibleDescription": "A text-based civic-document practice card showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 35 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to How can I investigate a meaningful Social Studies question and communicate a responsible conclusion or recommendation?",
+            "findings": [
+              {
+                "question": "A strong research question should...",
+                "finding": "be focused, meaningful, and answerable with evidence"
+              },
+              {
+                "question": "A thesis is...",
+                "finding": "a central claim or conclusion supported by evidence"
+              },
+              {
+                "question": "A capstone source plan should...",
+                "finding": "use multiple source types and track citations"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 35 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     },
     {
       "week": 36,
@@ -13648,8 +17204,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
           "answer": 0,
           "kind": "spiral",
           "sourceWeek": 34
+        },
+        {
+          "id": "G3SS-W36-ST1",
+          "prompt": "Which statement is directly supported by Source A in Week 36?",
+          "choices": [
+            "Grade 3 completion requires 80% mastery across weekly gates, the closed-book midterm, cumulative final, and portfolio/capstone evidence showing inquiry, geography, history, civics, economics, culture, and information literacy.",
+            "The topic can be understood without evidence.",
+            "Every historical or civic case is identical.",
+            "Source context never matters."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 36
+        },
+        {
+          "id": "G3SS-W36-ST2",
+          "prompt": "Which finding is included in Source C for Week 36?",
+          "choices": [
+            "apply learned skills to new sources or situations",
+            "The source proves every perspective is identical.",
+            "The source has no creator, date, or context.",
+            "The essential question cannot be investigated with evidence."
+          ],
+          "answer": 0,
+          "kind": "source-studio",
+          "sourceWeek": 36
         }
-      ]
+      ],
+      "sourceStudio": {
+        "title": "Khaemenes Source Studio · Week 36",
+        "inquiry": "What durable Social Studies knowledge and habits am I ready to carry into Grade 4?",
+        "accessibility": "All visual information is duplicated in text. Read-aloud, enlarged print, dictation, and keyboard response may be used.",
+        "sources": [
+          {
+            "id": "A",
+            "type": "Khaemenes original evidence brief",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Grade 3 · Week 36 · Final Synthesis, Closed-Book Final, and Grade 4 Bridge",
+            "content": "Grade 3 completion requires 80% mastery across weekly gates, the closed-book midterm, cumulative final, and portfolio/capstone evidence showing inquiry, geography, history, civics, economics, culture, and information literacy.",
+            "accessibleDescription": "A concise evidence brief for Final Synthesis, Closed-Book Final, and Grade 4 Bridge.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 36 Source Studio, Source A."
+          },
+          {
+            "id": "B",
+            "type": "oral-history practice excerpt",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Key concepts and relationships for Final Synthesis, Closed-Book Final, and Grade 4 Bridge",
+            "rows": [
+              [
+                "synthesis",
+                "combining ideas and evidence into a larger understanding"
+              ],
+              [
+                "mastery",
+                "strong demonstrated understanding of required learning"
+              ],
+              [
+                "portfolio",
+                "a collection of evidence showing learning and revision over time"
+              ],
+              [
+                "bridge",
+                "a connection from current learning to the next stage"
+              ]
+            ],
+            "accessibleDescription": "A text-based oral-history practice excerpt showing key concepts and relationships.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 36 Source Studio, Source B."
+          },
+          {
+            "id": "C",
+            "type": "source findings card",
+            "authenticity": "first-party original instructional source",
+            "creator": "Khaemenes Academy Curriculum Studio",
+            "date": "2026",
+            "context": "Evidence findings connected to What durable Social Studies knowledge and habits am I ready to carry into Grade 4?",
+            "findings": [
+              {
+                "question": "A cumulative transfer task should...",
+                "finding": "apply learned skills to new sources or situations"
+              },
+              {
+                "question": "If the final is below 80%, the response is...",
+                "finding": "targeted review, correction, and fresh reassessment"
+              },
+              {
+                "question": "Grade 4 readiness means...",
+                "finding": "using Grade 3 knowledge and reasoning as a foundation for deeper historical study"
+              }
+            ],
+            "accessibleDescription": "A source card containing content-specific findings students can compare and cite.",
+            "citation": "Khaemenes Academy, Grade 3 Social Studies, Week 36 Source Studio, Source C."
+          }
+        ],
+        "prompts": [
+          "What does Source A claim?",
+          "Which detail from Source B or C best supports the essential question?",
+          "How do creator, date, context, and source type affect what you can conclude?"
+        ]
+      }
     }
   ],
   "localization": {
@@ -13730,6 +17387,109 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
     "35": {
       "generic": "Use a state/local map, public source, Indigenous nation/community source, government example, historical case, biography, or community record to deepen Week 35, \"Grade 3 Research and Civic Capstone\". Record what was used and what it adds.",
       "florida": "Use a Florida-specific map, tribal nation/community source, local/state archive, government institution, historic site, biography, migration/economic case, or civic record appropriate to Week 35, \"Grade 3 Research and Civic Capstone\". Record the evidence and connection."
+    }
+  },
+  "cumulativeEvidence": {
+    "midterm": {
+      "title": "Midterm Unfamiliar Source Set · Harborland Communities",
+      "authenticity": "Khaemenes fictional transfer set",
+      "prompt": "Using all three unfamiliar sources, explain how geography and public choices can shape community life without assuming every resident has the same experience.",
+      "requirements": [
+        "clear claim",
+        "at least three source references",
+        "geographic reasoning",
+        "one limitation or missing piece of evidence"
+      ],
+      "sources": [
+        {
+          "id": "A",
+          "type": "map/data description",
+          "creator": "Khaemenes Academy Curriculum Studio",
+          "date": "2026",
+          "content": "Harborland has three regions: Coast has a port and dense city; River Plain has farms and two market towns; Highlands has smaller settlements connected by one mountain road. All three regions share a state government.",
+          "citation": "Khaemenes fictional transfer source A."
+        },
+        {
+          "id": "B",
+          "type": "data table",
+          "creator": "Khaemenes Academy Curriculum Studio",
+          "date": "2026",
+          "rows": [
+            [
+              "Coast",
+              "high population density · port/services"
+            ],
+            [
+              "River Plain",
+              "medium density · farming/markets"
+            ],
+            [
+              "Highlands",
+              "low density · forestry/tourism"
+            ]
+          ],
+          "citation": "Khaemenes fictional transfer source B."
+        },
+        {
+          "id": "C",
+          "type": "public-notice simulation",
+          "creator": "Harborland Transit Board (fictional)",
+          "date": "2026",
+          "content": "The board proposes a bus route linking the Highlands to the River Plain market towns. Public comments may address access, cost, environment, and community needs.",
+          "citation": "Khaemenes fictional transfer source C."
+        }
+      ]
+    },
+    "final": {
+      "title": "Final Unfamiliar Source Set · Pine River State",
+      "authenticity": "Khaemenes fictional transfer set",
+      "prompt": "Use the unfamiliar map/data/document set to make an evidence-based recommendation about a public problem, including geography, economics, government responsibility, stakeholders, and one likely tradeoff.",
+      "requirements": [
+        "defensible recommendation",
+        "at least three source references",
+        "civic/economic reasoning",
+        "stakeholder perspective",
+        "tradeoff or limitation"
+      ],
+      "sources": [
+        {
+          "id": "A",
+          "type": "map description",
+          "creator": "Khaemenes Academy Curriculum Studio",
+          "date": "2026",
+          "content": "Pine River State has an upstream forest region, a central city beside the river, and downstream farming communities. A state highway and the river connect all three.",
+          "citation": "Khaemenes fictional transfer source A."
+        },
+        {
+          "id": "B",
+          "type": "data table",
+          "creator": "Khaemenes Academy Curriculum Studio",
+          "date": "2026",
+          "rows": [
+            [
+              "Forest region",
+              "jobs: forestry/tourism · concern: wildfire"
+            ],
+            [
+              "Central city",
+              "jobs: services/manufacturing · concern: traffic"
+            ],
+            [
+              "Farm region",
+              "jobs: agriculture · concern: water quality"
+            ]
+          ],
+          "citation": "Khaemenes fictional transfer source B."
+        },
+        {
+          "id": "C",
+          "type": "government memo simulation",
+          "creator": "Pine River State Planning Office (fictional)",
+          "date": "2026",
+          "content": "The state has funds for one first-stage project: watershed restoration, expanded regional transit, or wildfire mitigation. Officials request evidence about benefits, costs, and affected communities.",
+          "citation": "Khaemenes fictional transfer source C."
+        }
+      ]
     }
   }
 };
