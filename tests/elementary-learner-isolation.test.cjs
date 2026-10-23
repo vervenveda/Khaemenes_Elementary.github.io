@@ -5,6 +5,7 @@ const fs=require("node:fs");
 const vm=require("node:vm");
 const configs=[
   {grade:"02",file:"grades/grade-02/assets/khaemenes-grade2-continuity.js",api:"KhaemenesGrade2Continuity",legacy:"khaemenes_grade2_subject_36_aplus_v1"},
+  {grade:"03",file:"grades/grade-03/assets/khaemenes-grade3-continuity.js",api:"KhaemenesGrade3Continuity",legacy:"khaemenes_grade3_subject_36_aplus_v1"},
   {grade:"04",file:"grades/grade-04/assets/khaemenes-grade4-continuity.js",api:"KhaemenesGrade4Continuity",legacy:"khaemenes_grade4_subject_36_aplusplus_v1"},
   {grade:"05",file:"grades/grade-05/assets/khaemenes-grade5-continuity.js",api:"KhaemenesGrade5Continuity",legacy:"khaemenes_grade5_subject_36_aplusplus_v1"}
 ];
@@ -59,5 +60,41 @@ for(const config of configs){
   assert.equal(JSON.parse(store.get(key(b.learnerId))).learnerId,b.learnerId);
   count++;
   process.stdout.write(`PASS Grade ${config.grade}: two learners, preview isolation, legacy preservation, resume\n`);
+}
+// Grade 01 uses its mastery engine directly rather than the Grade 02–05 continuity wrapper.
+{
+  const store=new Map();
+  const storage={getItem:k=>store.has(k)?store.get(k):null,setItem:(k,v)=>store.set(k,String(v)),removeItem:k=>store.delete(k)};
+  const document={readyState:"loading",addEventListener:()=>{},getElementById:()=>null,querySelector:()=>null,querySelectorAll:()=>[],scripts:[],head:{append:()=>{}},body:{append:()=>{}}};
+  const context={window:null,document,localStorage:storage,Date,JSON,Image:function(){},confirm:()=>false,CustomEvent:class{constructor(type,options){this.type=type;this.detail=options?.detail}},setTimeout:()=>0,clearTimeout:()=>{}};
+  context.window={localStorage:storage,KHAEMENES_GRADE01_CURRICULUM:{masteryThreshold:80,weeks:Array.from({length:36},(_,i)=>({week:i+1})),midterm:{unlockAfterWeek:18},final:{unlockAfterWeek:36}},addEventListener:()=>{},dispatchEvent:()=>{},setTimeout:()=>0,clearTimeout:()=>{},document};
+  vm.runInNewContext(fs.readFileSync("grades/grade-01/assets/grade1-mastery.js","utf8"),context,{filename:"grades/grade-01/assets/grade1-mastery.js"});
+  const api=context.window.Grade1Mastery;
+  const registry={learners:{"student-A":{learnerId:"student-A",grade:"01",stage:"elementary",nickname:"A"},"student-B":{learnerId:"student-B",grade:"01",stage:"elementary",nickname:"B"},"student-preview":{learnerId:"student-preview",grade:"02",stage:"elementary",nickname:"Preview"}}};
+  store.set("khaemenes_family_registry_v1",JSON.stringify(registry));
+  const active=id=>store.set("khaemenes_active_learner_v1",JSON.stringify(id));
+  const key=id=>"khaemenes.course:"+id+":elementary-grade-01";
+  active("student-A");
+  assert.equal(api.save({weeks:{1:{bestScore:88}},portfolio:false}),true);
+  active("student-B");
+  assert.equal(Number(api.load().weeks?.[1]?.bestScore||0),0,"Grade 01 B must not inherit A progress");
+  assert.equal(api.save({weeks:{1:{bestScore:94}},portfolio:false}),true);
+  active("student-A");
+  assert.equal(api.load().weeks[1].bestScore,88);
+  active("student-B");
+  assert.equal(api.load().weeks[1].bestScore,94);
+  active("student-preview");
+  assert.equal(api.save({weeks:{1:{bestScore:100}}}),false,"Grade 01 placement mismatch must not write");
+  assert.equal(Number(api.load().weeks?.[1]?.bestScore||0),0,"Grade 01 placement mismatch must not read another learner");
+  assert.equal(store.has(key("student-preview")),false);
+  store.delete("khaemenes_active_learner_v1");
+  store.set("khaemenes.grade01.mastery.v1",JSON.stringify({weeks:{1:{bestScore:81}},portfolio:false}));
+  assert.equal(api.load().weeks[1].bestScore,81,"Grade 01 unassigned legacy preview remains separately readable");
+  active("student-A");
+  assert.equal(api.load().weeks[1].bestScore,88,"Grade 01 A resumes after legacy preview");
+  assert.equal(JSON.parse(store.get(key("student-A"))).weeks[1].bestScore,88);
+  assert.equal(JSON.parse(store.get(key("student-B"))).weeks[1].bestScore,94);
+  count++;
+  process.stdout.write("PASS Grade 01: learner-scoped mastery isolation, placement protection, legacy separation, resume\n");
 }
 process.stdout.write(`PASS ${count} grade continuity regression suites\n`);
