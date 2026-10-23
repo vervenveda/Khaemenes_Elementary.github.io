@@ -63,11 +63,25 @@ function recent(days=7){
   return records().filter(r=>Date.parse(r.completedAt||r.createdAt||"")>=cutoff);
 }
 function focusFor(article){
-  const focus=[...article.querySelectorAll("p")].find(p=>/^\s*Focus:/i.test(p.textContent||""));
+  const paragraphs=[...article.querySelectorAll("p")];
+  const focus=paragraphs.find(p=>/^\s*Focus:/i.test(p.textContent||""));
   if(focus)return focus.textContent.replace(/^\s*Focus:\s*/i,"").trim();
-  const objective=[...article.querySelectorAll("p")].find(p=>/^\s*Objective:/i.test(p.textContent||""));
+
+  // Grade 02 subject pages encode the daily content focus in the lesson heading
+  // instead of a dedicated Focus paragraph. Prefer that concise heading content
+  // before falling back to the longer objective sentence.
+  const heading=(article.querySelector("h4")?.textContent||"").trim();
+  if(heading.includes(":")){
+    const content=heading.split(":").slice(1).join(":").trim();
+    if(content)return content;
+  }
+
+  const pageFocus=(document.querySelector(".heading p:last-child")?.textContent||"").trim();
+  if(pageFocus)return pageFocus;
+
+  const objective=paragraphs.find(p=>/^\s*Objective:/i.test(p.textContent||""));
   if(objective)return objective.textContent.replace(/^\s*Objective:\s*/i,"").trim();
-  return (article.querySelector("h4")?.textContent||document.querySelector("h1")?.textContent||"").trim();
+  return heading||(document.querySelector("h1")?.textContent||"").trim();
 }
 function dayLabel(article,index){
   return (article.querySelector("h4")?.textContent||`Lesson ${index+1}`).split(":")[0].trim();
