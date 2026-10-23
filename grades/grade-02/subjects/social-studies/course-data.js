@@ -16,7 +16,7 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
     "midtermMode": "closed-book teacher-supervised",
     "finalMode": "closed-book teacher-supervised",
     "storageKey": "khaemenes_grade2_social_studies_v2",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "updated": "2026-10-23",
     "authors": "Jennifer Kay Pearl",
     "note": "The grade-wide eight-subject weekly check remains integrated portfolio evidence. Formal Social Studies mastery is recorded here.",
@@ -49,7 +49,15 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
       35
     ],
     "localizationPolicy": "Keep the national Grade 2 Social Studies core and 80% mastery gates invariant. Localize appropriate community history, geography, Indigenous nations, migration/colonization/immigration cases, public institutions, civic examples, biographies, and capstone evidence.",
-    "assessmentSpecificity": "2026 specificity hardening replaced 36 recurring meta-template current-bank items with week-specific historical, geographic, civic, economic, source, or evidence questions while preserving item IDs for audit continuity."
+    "assessmentSpecificity": "2026 specificity hardening replaced 36 recurring meta-template current-bank items with week-specific historical, geographic, civic, economic, source, or evidence questions while preserving item IDs for audit continuity.",
+    "antiRepeatDepth": 2,
+    "cumulativeBlueprint": "unit-stratified",
+    "assessmentModel": "Randomized forms with answer shuffling, two-form anti-repeat weighting, saved attempt snapshots, and unit-stratified cumulative exams.",
+    "statePacks": {
+      "florida": "STATE_PACK_FLORIDA.md"
+    },
+    "localizationWorkflow": "Teacher-selected generic or Florida context with checkpoint evidence saved in the learner record.",
+    "constructedEvidenceReview": "observed / revise / accepted is recorded separately from the 80% objective mastery gate."
   },
   "strands": [
     "Inquiry & Evidence",
@@ -11744,5 +11752,95 @@ window.KHAEMENES_GRADE2_SOCIAL_STUDIES={
     "mode": "national-core-state-local-overlay",
     "rule": "State/local examples, sources, maps, biographies, institutions, and case studies may be substituted or added where appropriate, but the national disciplinary core and 80% mastery requirements remain intact.",
     "guide": "STATE_LOCALIZATION_GUIDE.md"
+  },
+  "localizationTasks": {
+    "4": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 4, \"Unit Inquiry · How Communities Change\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 4, \"Unit Inquiry · How Communities Change\". Record the evidence and connection."
+    },
+    "5": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 5, \"Map Elements and Grid Locations\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 5, \"Map Elements and Grid Locations\". Record the evidence and connection."
+    },
+    "6": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 6, \"Physical, Political, and Thematic Maps\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 6, \"Physical, Political, and Thematic Maps\". Record the evidence and connection."
+    },
+    "7": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 7, \"North America · Countries, Oceans, and Major Features\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 7, \"North America · Countries, Oceans, and Major Features\". Record the evidence and connection."
+    },
+    "8": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 8, \"Human-Environment Interaction and Land Use\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 8, \"Human-Environment Interaction and Land Use\". Record the evidence and connection."
+    },
+    "9": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 9, \"Indigenous Nations · First Peoples of North America\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 9, \"Indigenous Nations · First Peoples of North America\". Record the evidence and connection."
+    },
+    "10": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 10, \"Regional Diversity among Indigenous Nations\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 10, \"Regional Diversity among Indigenous Nations\". Record the evidence and connection."
+    },
+    "11": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 11, \"Artifacts, Archaeology, Oral Traditions, and Sources\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 11, \"Artifacts, Archaeology, Oral Traditions, and Sources\". Record the evidence and connection."
+    },
+    "12": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 12, \"Indigenous Continuity, Change, and Respectful Inquiry\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 12, \"Indigenous Continuity, Change, and Respectful Inquiry\". Record the evidence and connection."
+    },
+    "13": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 13, \"Why People Move · Migration Pushes and Pulls\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 13, \"Why People Move · Migration Pushes and Pulls\". Record the evidence and connection."
+    },
+    "14": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 14, \"Colonial America · Settlement, Labor, and Perspectives\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 14, \"Colonial America · Settlement, Labor, and Perspectives\". Record the evidence and connection."
+    },
+    "15": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 15, \"Immigration Then and Now\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 15, \"Immigration Then and Now\". Record the evidence and connection."
+    },
+    "16": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 16, \"Cultural Exchange and Contributions of Immigrants\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 16, \"Cultural Exchange and Contributions of Immigrants\". Record the evidence and connection."
+    },
+    "19": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 19, \"Why People Form Governments\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 19, \"Why People Form Governments\". Record the evidence and connection."
+    },
+    "20": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 20, \"The Constitution, Rights, and Law of the Land\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 20, \"The Constitution, Rights, and Law of the Land\". Record the evidence and connection."
+    },
+    "21": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 21, \"How Laws Are Made, Carried Out, and Reviewed\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 21, \"How Laws Are Made, Carried Out, and Reviewed\". Record the evidence and connection."
+    },
+    "22": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 22, \"Responsible Citizenship, Service, and Civic Symbols\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 22, \"Responsible Citizenship, Service, and Civic Symbols\". Record the evidence and connection."
+    },
+    "27": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 27, \"Public Servants and Community Leadership\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 27, \"Public Servants and Community Leadership\". Record the evidence and connection."
+    },
+    "28": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 28, \"African American Contributions and Oral Traditions\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 28, \"African American Contributions and Oral Traditions\". Record the evidence and connection."
+    },
+    "29": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 29, \"Biographies, Multiple Perspectives, and Historical Impact\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 29, \"Biographies, Multiple Perspectives, and Historical Impact\". Record the evidence and connection."
+    },
+    "30": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 30, \"Community Problem Solving and Service\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 30, \"Community Problem Solving and Service\". Record the evidence and connection."
+    },
+    "35": {
+      "generic": "Use a state/local map, picture, public source, Indigenous nation/community source, government example, biography, or community case connected to Week 35, \"Research and Community Action Capstone\". Record what was used and one thing it helped the learner understand.",
+      "florida": "Use a Florida-specific map, photograph, tribal nation/community source, local/state archive, public institution, biography, historic site, or community example connected to Week 35, \"Research and Community Action Capstone\". Record the evidence and connection."
+    }
   }
 };
