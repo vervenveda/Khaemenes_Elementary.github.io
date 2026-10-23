@@ -16,8 +16,8 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
     "midtermMode": "closed-book teacher-supervised",
     "finalMode": "closed-book teacher-supervised",
     "storageKey": "khaemenes_grade3_social_studies_v1",
-    "version": "1.0.0",
-    "updated": "2026-10-19",
+    "version": "1.1.0",
+    "updated": "2026-10-23",
     "authors": "Jennifer Kay Pearl",
     "note": "The grade-wide 15-point interdisciplinary weekly assessment remains portfolio evidence. Formal Social Studies mastery is recorded here.",
     "stateLocalizable": true,
@@ -44,7 +44,8 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
       33,
       35
     ],
-    "localizationPolicy": "Keep the national Grade 3 Social Studies core, comparative world-community strand, and 80% mastery gates invariant. Localize appropriate community/state history, geography, Indigenous nations, government, public figures, data, civic cases, and capstone evidence."
+    "localizationPolicy": "Keep the national Grade 3 Social Studies core, comparative world-community strand, and 80% mastery gates invariant. Localize appropriate community/state history, geography, Indigenous nations, government, public figures, data, civic cases, and capstone evidence.",
+    "assessmentSpecificity": "2026 specificity hardening replaced 108 recurring meta-template current-bank items with week-specific historical, geographic, civic, economic, source, or evidence questions while preserving item IDs for audit continuity."
   },
   "strands": [
     "Inquiry & Evidence",
@@ -232,41 +233,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W01-S1",
-          "prompt": "Which statement best summarizes Week 1, \"Social Scientists Ask Questions\"?",
+          "prompt": "How do social scientists turn questions into evidence-based explanations?",
           "choices": [
             "Social Studies uses focused questions, disciplinary tools, sources, evidence, and revision to explain people, places, institutions, choices, and change.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Social Scientists Ask Questions\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Social Scientists Ask Questions\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Social Scientists Ask Questions\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G3SS-W01-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 1 to a new case?",
+          "prompt": "For \"Social Scientists Ask Questions\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Turn broad questions into focused, researchable questions.",
+            "Choose a conclusion about \"Social Scientists Ask Questions\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Social Scientists Ask Questions\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G3SS-W01-A1",
-          "prompt": "What is the best first step when applying \"Social Scientists Ask Questions\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Social Scientists Ask Questions\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a claim about a fictional community using two different source types.",
+            "Choose a conclusion about \"Social Scientists Ask Questions\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Social Scientists Ask Questions\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 1
         }
       ],
@@ -364,41 +365,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W01-S1",
-          "prompt": "Which statement best summarizes Week 1, \"Social Scientists Ask Questions\"?",
+          "prompt": "How do social scientists turn questions into evidence-based explanations?",
           "choices": [
             "Social Studies uses focused questions, disciplinary tools, sources, evidence, and revision to explain people, places, institutions, choices, and change.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Social Scientists Ask Questions\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Social Scientists Ask Questions\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Social Scientists Ask Questions\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G3SS-W01-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 1 to a new case?",
+          "prompt": "For \"Social Scientists Ask Questions\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Turn broad questions into focused, researchable questions.",
+            "Choose a conclusion about \"Social Scientists Ask Questions\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Social Scientists Ask Questions\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G3SS-W01-A1",
-          "prompt": "What is the best first step when applying \"Social Scientists Ask Questions\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Social Scientists Ask Questions\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a claim about a fictional community using two different source types.",
+            "Choose a conclusion about \"Social Scientists Ask Questions\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Social Scientists Ask Questions\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 1
         }
       ]
@@ -559,41 +560,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W02-S1",
-          "prompt": "Which statement best summarizes Week 2, \"Primary, Secondary, and Digital Sources\"?",
+          "prompt": "How do we decide what a source can tell us and how much to trust it?",
           "choices": [
             "Sources differ by creator, time, purpose, evidence, perspective, and proximity to events; digital access makes evaluation more important, not less.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Primary, Secondary, and Digital Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Primary, Secondary, and Digital Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Primary, Secondary, and Digital Sources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G3SS-W02-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 2 to a new case?",
+          "prompt": "For \"Primary, Secondary, and Digital Sources\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Use a checklist: creator, date, purpose, audience, evidence, missing perspective.",
+            "Choose a conclusion about \"Primary, Secondary, and Digital Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Primary, Secondary, and Digital Sources\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G3SS-W02-A1",
-          "prompt": "What is the best first step when applying \"Primary, Secondary, and Digital Sources\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Primary, Secondary, and Digital Sources\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a reliability judgment explaining what a source is useful for and what it cannot establish alone.",
+            "Choose a conclusion about \"Primary, Secondary, and Digital Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Primary, Secondary, and Digital Sources\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 2
         }
       ],
@@ -691,41 +692,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W02-S1",
-          "prompt": "Which statement best summarizes Week 2, \"Primary, Secondary, and Digital Sources\"?",
+          "prompt": "How do we decide what a source can tell us and how much to trust it?",
           "choices": [
             "Sources differ by creator, time, purpose, evidence, perspective, and proximity to events; digital access makes evaluation more important, not less.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Primary, Secondary, and Digital Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Primary, Secondary, and Digital Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Primary, Secondary, and Digital Sources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G3SS-W02-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 2 to a new case?",
+          "prompt": "For \"Primary, Secondary, and Digital Sources\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Use a checklist: creator, date, purpose, audience, evidence, missing perspective.",
+            "Choose a conclusion about \"Primary, Secondary, and Digital Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Primary, Secondary, and Digital Sources\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G3SS-W02-A1",
-          "prompt": "What is the best first step when applying \"Primary, Secondary, and Digital Sources\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Primary, Secondary, and Digital Sources\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a reliability judgment explaining what a source is useful for and what it cannot establish alone.",
+            "Choose a conclusion about \"Primary, Secondary, and Digital Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Primary, Secondary, and Digital Sources\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
@@ -912,41 +913,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W03-S1",
-          "prompt": "Which statement best summarizes Week 3, \"Maps, Graphs, Tables, and Photographs as Evidence\"?",
+          "prompt": "How can visual and quantitative sources help us explain communities?",
           "choices": [
             "Maps, graphs, tables, charts, and photographs organize different evidence and must be read with titles, labels, scales, dates, legends, and context.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Maps, Graphs, Tables, and Photographs as Evidence\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Maps, Graphs, Tables, and Photographs as Evidence\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Maps, Graphs, Tables, and Photographs as Evidence\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G3SS-W03-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 3 to a new case?",
+          "prompt": "For \"Maps, Graphs, Tables, and Photographs as Evidence\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Read titles, axes, legends, dates, units, and scale before drawing conclusions.",
+            "Choose a conclusion about \"Maps, Graphs, Tables, and Photographs as Evidence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Maps, Graphs, Tables, and Photographs as Evidence\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G3SS-W03-A1",
-          "prompt": "What is the best first step when applying \"Maps, Graphs, Tables, and Photographs as Evidence\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Maps, Graphs, Tables, and Photographs as Evidence\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a small data display and write a caption that states what it shows without exaggeration.",
+            "Choose a conclusion about \"Maps, Graphs, Tables, and Photographs as Evidence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Maps, Graphs, Tables, and Photographs as Evidence\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 3
         }
       ],
@@ -1044,41 +1045,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W03-S1",
-          "prompt": "Which statement best summarizes Week 3, \"Maps, Graphs, Tables, and Photographs as Evidence\"?",
+          "prompt": "How can visual and quantitative sources help us explain communities?",
           "choices": [
             "Maps, graphs, tables, charts, and photographs organize different evidence and must be read with titles, labels, scales, dates, legends, and context.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Maps, Graphs, Tables, and Photographs as Evidence\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Maps, Graphs, Tables, and Photographs as Evidence\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Maps, Graphs, Tables, and Photographs as Evidence\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G3SS-W03-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 3 to a new case?",
+          "prompt": "For \"Maps, Graphs, Tables, and Photographs as Evidence\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Read titles, axes, legends, dates, units, and scale before drawing conclusions.",
+            "Choose a conclusion about \"Maps, Graphs, Tables, and Photographs as Evidence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Maps, Graphs, Tables, and Photographs as Evidence\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G3SS-W03-A1",
-          "prompt": "What is the best first step when applying \"Maps, Graphs, Tables, and Photographs as Evidence\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Maps, Graphs, Tables, and Photographs as Evidence\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a small data display and write a caption that states what it shows without exaggeration.",
+            "Choose a conclusion about \"Maps, Graphs, Tables, and Photographs as Evidence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Maps, Graphs, Tables, and Photographs as Evidence\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
@@ -1291,41 +1292,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W04-S1",
-          "prompt": "Which statement best summarizes Week 4, \"Local History and Community Change\"?",
+          "prompt": "How can we reconstruct how a community changed over time?",
           "choices": [
             "Local history can be studied through maps, photographs, oral histories, newspapers, public records, artifacts, buildings, and timelines while respecting privacy and source limits.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Local History and Community Change\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Local History and Community Change\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Local History and Community Change\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G3SS-W04-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 4 to a new case?",
+          "prompt": "For \"Local History and Community Change\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Build a timeline from several dated community sources.",
+            "Choose a conclusion about \"Local History and Community Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local History and Community Change\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G3SS-W04-A1",
-          "prompt": "What is the best first step when applying \"Local History and Community Change\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Local History and Community Change\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Produce a mini local-history exhibit with one claim, three sources, and one unanswered question.",
+            "Choose a conclusion about \"Local History and Community Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local History and Community Change\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 4
         }
       ],
@@ -1423,41 +1424,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W04-S1",
-          "prompt": "Which statement best summarizes Week 4, \"Local History and Community Change\"?",
+          "prompt": "How can we reconstruct how a community changed over time?",
           "choices": [
             "Local history can be studied through maps, photographs, oral histories, newspapers, public records, artifacts, buildings, and timelines while respecting privacy and source limits.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Local History and Community Change\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Local History and Community Change\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Local History and Community Change\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G3SS-W04-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 4 to a new case?",
+          "prompt": "For \"Local History and Community Change\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Build a timeline from several dated community sources.",
+            "Choose a conclusion about \"Local History and Community Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local History and Community Change\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G3SS-W04-A1",
-          "prompt": "What is the best first step when applying \"Local History and Community Change\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Local History and Community Change\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Produce a mini local-history exhibit with one claim, three sources, and one unanswered question.",
+            "Choose a conclusion about \"Local History and Community Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local History and Community Change\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
@@ -1670,41 +1671,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W05-S1",
-          "prompt": "Which statement best summarizes Week 5, \"Location, Scale, and Map Distortion\"?",
+          "prompt": "How do geographers describe location and account for map scale and distortion?",
           "choices": [
             "Maps simplify the world; scale, projection, orientation, and purpose affect what they show and can distort size, shape, distance, or direction.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Location, Scale, and Map Distortion\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Location, Scale, and Map Distortion\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Location, Scale, and Map Distortion\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G3SS-W05-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 5 to a new case?",
+          "prompt": "For \"Location, Scale, and Map Distortion\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare two world map projections and notice differences.",
+            "Choose a conclusion about \"Location, Scale, and Map Distortion\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Location, Scale, and Map Distortion\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G3SS-W05-A1",
-          "prompt": "What is the best first step when applying \"Location, Scale, and Map Distortion\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Location, Scale, and Map Distortion\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Recommend which map or projection best fits a particular question.",
+            "Choose a conclusion about \"Location, Scale, and Map Distortion\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Location, Scale, and Map Distortion\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 5
         }
       ],
@@ -1802,41 +1803,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W05-S1",
-          "prompt": "Which statement best summarizes Week 5, \"Location, Scale, and Map Distortion\"?",
+          "prompt": "How do geographers describe location and account for map scale and distortion?",
           "choices": [
             "Maps simplify the world; scale, projection, orientation, and purpose affect what they show and can distort size, shape, distance, or direction.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Location, Scale, and Map Distortion\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Location, Scale, and Map Distortion\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Location, Scale, and Map Distortion\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G3SS-W05-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 5 to a new case?",
+          "prompt": "For \"Location, Scale, and Map Distortion\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare two world map projections and notice differences.",
+            "Choose a conclusion about \"Location, Scale, and Map Distortion\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Location, Scale, and Map Distortion\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G3SS-W05-A1",
-          "prompt": "What is the best first step when applying \"Location, Scale, and Map Distortion\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Location, Scale, and Map Distortion\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Recommend which map or projection best fits a particular question.",
+            "Choose a conclusion about \"Location, Scale, and Map Distortion\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Location, Scale, and Map Distortion\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
@@ -2049,41 +2050,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W06-S1",
-          "prompt": "Which statement best summarizes Week 6, \"United States Regions and States\"?",
+          "prompt": "How do regional groupings help us study the United States?",
           "choices": [
             "Regions are human-created ways to organize places by selected characteristics; boundaries can vary by purpose, while states are political units in the federal system.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"United States Regions and States\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"United States Regions and States\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"United States Regions and States\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G3SS-W06-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 6 to a new case?",
+          "prompt": "For \"United States Regions and States\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Use a blank map to practice state location, neighbors, coasts, and borders.",
+            "Choose a conclusion about \"United States Regions and States\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"United States Regions and States\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G3SS-W06-A1",
-          "prompt": "What is the best first step when applying \"United States Regions and States\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"United States Regions and States\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a region profile using geography, population, economy, and culture without stereotyping residents.",
+            "Choose a conclusion about \"United States Regions and States\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"United States Regions and States\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 6
         }
       ],
@@ -2181,41 +2182,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W06-S1",
-          "prompt": "Which statement best summarizes Week 6, \"United States Regions and States\"?",
+          "prompt": "How do regional groupings help us study the United States?",
           "choices": [
             "Regions are human-created ways to organize places by selected characteristics; boundaries can vary by purpose, while states are political units in the federal system.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"United States Regions and States\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"United States Regions and States\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"United States Regions and States\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G3SS-W06-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 6 to a new case?",
+          "prompt": "For \"United States Regions and States\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Use a blank map to practice state location, neighbors, coasts, and borders.",
+            "Choose a conclusion about \"United States Regions and States\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"United States Regions and States\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G3SS-W06-A1",
-          "prompt": "What is the best first step when applying \"United States Regions and States\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"United States Regions and States\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a region profile using geography, population, economy, and culture without stereotyping residents.",
+            "Choose a conclusion about \"United States Regions and States\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"United States Regions and States\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
@@ -2428,41 +2429,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W07-S1",
-          "prompt": "Which statement best summarizes Week 7, \"Climate, Resources, and Settlement Patterns\"?",
+          "prompt": "How do climate, resources, landforms, and transportation influence settlement?",
           "choices": [
             "Settlement patterns reflect interacting environmental and human factors including climate, water, resources, landforms, transportation, jobs, history, and public decisions.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Climate, Resources, and Settlement Patterns\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Climate, Resources, and Settlement Patterns\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Climate, Resources, and Settlement Patterns\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G3SS-W07-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 7 to a new case?",
+          "prompt": "For \"Climate, Resources, and Settlement Patterns\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Overlay transportation/infrastructure and population information to look for patterns.",
+            "Choose a conclusion about \"Climate, Resources, and Settlement Patterns\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Climate, Resources, and Settlement Patterns\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G3SS-W07-A1",
-          "prompt": "What is the best first step when applying \"Climate, Resources, and Settlement Patterns\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Climate, Resources, and Settlement Patterns\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a multi-cause explanation for why a fictional city developed in a particular location.",
+            "Choose a conclusion about \"Climate, Resources, and Settlement Patterns\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Climate, Resources, and Settlement Patterns\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 7
         }
       ],
@@ -2560,41 +2561,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W07-S1",
-          "prompt": "Which statement best summarizes Week 7, \"Climate, Resources, and Settlement Patterns\"?",
+          "prompt": "How do climate, resources, landforms, and transportation influence settlement?",
           "choices": [
             "Settlement patterns reflect interacting environmental and human factors including climate, water, resources, landforms, transportation, jobs, history, and public decisions.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Climate, Resources, and Settlement Patterns\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Climate, Resources, and Settlement Patterns\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Climate, Resources, and Settlement Patterns\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G3SS-W07-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 7 to a new case?",
+          "prompt": "For \"Climate, Resources, and Settlement Patterns\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Overlay transportation/infrastructure and population information to look for patterns.",
+            "Choose a conclusion about \"Climate, Resources, and Settlement Patterns\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Climate, Resources, and Settlement Patterns\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G3SS-W07-A1",
-          "prompt": "What is the best first step when applying \"Climate, Resources, and Settlement Patterns\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Climate, Resources, and Settlement Patterns\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a multi-cause explanation for why a fictional city developed in a particular location.",
+            "Choose a conclusion about \"Climate, Resources, and Settlement Patterns\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Climate, Resources, and Settlement Patterns\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
@@ -2807,41 +2808,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W08-S1",
-          "prompt": "Which statement best summarizes Week 8, \"Landmarks, Human-Environment Interaction, and Regional Change\"?",
+          "prompt": "How do people shape places and how do places shape people?",
           "choices": [
             "Human-environment interaction includes adaptation, resource use, construction, conservation, hazards, and changing land use; landmarks gain meaning through geography, history, and culture.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Landmarks, Human-Environment Interaction, and Regional Change\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Landmarks, Human-Environment Interaction, and Regional Change\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Landmarks, Human-Environment Interaction, and Regional Change\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G3SS-W08-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 8 to a new case?",
+          "prompt": "For \"Landmarks, Human-Environment Interaction, and Regional Change\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare historical and current land-use images for one region.",
+            "Choose a conclusion about \"Landmarks, Human-Environment Interaction, and Regional Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Landmarks, Human-Environment Interaction, and Regional Change\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G3SS-W08-A1",
-          "prompt": "What is the best first step when applying \"Landmarks, Human-Environment Interaction, and Regional Change\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Landmarks, Human-Environment Interaction, and Regional Change\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a regional-change storyboard showing adaptation, impact, tradeoff, and one future choice.",
+            "Choose a conclusion about \"Landmarks, Human-Environment Interaction, and Regional Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Landmarks, Human-Environment Interaction, and Regional Change\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 8
         }
       ],
@@ -2939,41 +2940,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W08-S1",
-          "prompt": "Which statement best summarizes Week 8, \"Landmarks, Human-Environment Interaction, and Regional Change\"?",
+          "prompt": "How do people shape places and how do places shape people?",
           "choices": [
             "Human-environment interaction includes adaptation, resource use, construction, conservation, hazards, and changing land use; landmarks gain meaning through geography, history, and culture.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Landmarks, Human-Environment Interaction, and Regional Change\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Landmarks, Human-Environment Interaction, and Regional Change\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Landmarks, Human-Environment Interaction, and Regional Change\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G3SS-W08-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 8 to a new case?",
+          "prompt": "For \"Landmarks, Human-Environment Interaction, and Regional Change\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare historical and current land-use images for one region.",
+            "Choose a conclusion about \"Landmarks, Human-Environment Interaction, and Regional Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Landmarks, Human-Environment Interaction, and Regional Change\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G3SS-W08-A1",
-          "prompt": "What is the best first step when applying \"Landmarks, Human-Environment Interaction, and Regional Change\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Landmarks, Human-Environment Interaction, and Regional Change\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a regional-change storyboard showing adaptation, impact, tradeoff, and one future choice.",
+            "Choose a conclusion about \"Landmarks, Human-Environment Interaction, and Regional Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Landmarks, Human-Environment Interaction, and Regional Change\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
@@ -3186,41 +3187,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W09-S1",
-          "prompt": "Which statement best summarizes Week 9, \"Indigenous Nations, Homelands, and Sovereignty\"?",
+          "prompt": "How can we understand Indigenous nations as historical and present-day political communities?",
           "choices": [
             "Indigenous nations have distinct histories, cultures, homelands, governments, and continuing sovereignty; they should not be treated as one culture or only as people of the past.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Indigenous Nations, Homelands, and Sovereignty\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Nations, Homelands, and Sovereignty\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G3SS-W09-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 9 to a new case?",
+          "prompt": "For \"Indigenous Nations, Homelands, and Sovereignty\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare tribal governance examples without assuming all nations use the same system.",
+            "Choose a conclusion about \"Indigenous Nations, Homelands, and Sovereignty\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G3SS-W09-A1",
-          "prompt": "What is the best first step when applying \"Indigenous Nations, Homelands, and Sovereignty\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Indigenous Nations, Homelands, and Sovereignty\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a nation profile including both past and present evidence.",
+            "Choose a conclusion about \"Indigenous Nations, Homelands, and Sovereignty\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 9
         }
       ],
@@ -3318,41 +3319,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W09-S1",
-          "prompt": "Which statement best summarizes Week 9, \"Indigenous Nations, Homelands, and Sovereignty\"?",
+          "prompt": "How can we understand Indigenous nations as historical and present-day political communities?",
           "choices": [
             "Indigenous nations have distinct histories, cultures, homelands, governments, and continuing sovereignty; they should not be treated as one culture or only as people of the past.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Indigenous Nations, Homelands, and Sovereignty\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Nations, Homelands, and Sovereignty\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G3SS-W09-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 9 to a new case?",
+          "prompt": "For \"Indigenous Nations, Homelands, and Sovereignty\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare tribal governance examples without assuming all nations use the same system.",
+            "Choose a conclusion about \"Indigenous Nations, Homelands, and Sovereignty\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G3SS-W09-A1",
-          "prompt": "What is the best first step when applying \"Indigenous Nations, Homelands, and Sovereignty\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Indigenous Nations, Homelands, and Sovereignty\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a nation profile including both past and present evidence.",
+            "Choose a conclusion about \"Indigenous Nations, Homelands, and Sovereignty\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
@@ -3565,41 +3566,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W10-S1",
-          "prompt": "Which statement best summarizes Week 10, \"Indigenous Regional Diversity and Environmental Knowledge\"?",
+          "prompt": "How have Indigenous nations developed diverse relationships with environments and resources?",
           "choices": [
             "Indigenous knowledge, technologies, economies, governance, and cultural practices differ across nations and regions; environment matters without determining culture.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Indigenous Regional Diversity and Environmental Knowledge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Regional Diversity and Environmental Knowledge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Regional Diversity and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G3SS-W10-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 10 to a new case?",
+          "prompt": "For \"Indigenous Regional Diversity and Environmental Knowledge\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Use environmental maps alongside nation-created sources to examine adaptation and technology.",
+            "Choose a conclusion about \"Indigenous Regional Diversity and Environmental Knowledge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Regional Diversity and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G3SS-W10-A1",
-          "prompt": "What is the best first step when applying \"Indigenous Regional Diversity and Environmental Knowledge\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Indigenous Regional Diversity and Environmental Knowledge\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a comparison naming similarities and differences while avoiding geographic determinism.",
+            "Choose a conclusion about \"Indigenous Regional Diversity and Environmental Knowledge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Regional Diversity and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 10
         }
       ],
@@ -3697,41 +3698,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W10-S1",
-          "prompt": "Which statement best summarizes Week 10, \"Indigenous Regional Diversity and Environmental Knowledge\"?",
+          "prompt": "How have Indigenous nations developed diverse relationships with environments and resources?",
           "choices": [
             "Indigenous knowledge, technologies, economies, governance, and cultural practices differ across nations and regions; environment matters without determining culture.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Indigenous Regional Diversity and Environmental Knowledge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Regional Diversity and Environmental Knowledge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Regional Diversity and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G3SS-W10-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 10 to a new case?",
+          "prompt": "For \"Indigenous Regional Diversity and Environmental Knowledge\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Use environmental maps alongside nation-created sources to examine adaptation and technology.",
+            "Choose a conclusion about \"Indigenous Regional Diversity and Environmental Knowledge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Regional Diversity and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G3SS-W10-A1",
-          "prompt": "What is the best first step when applying \"Indigenous Regional Diversity and Environmental Knowledge\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Indigenous Regional Diversity and Environmental Knowledge\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a comparison naming similarities and differences while avoiding geographic determinism.",
+            "Choose a conclusion about \"Indigenous Regional Diversity and Environmental Knowledge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Regional Diversity and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
@@ -3944,41 +3945,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W11-S1",
-          "prompt": "Which statement best summarizes Week 11, \"Local and State History through Primary Sources\"?",
+          "prompt": "How can primary sources help us reconstruct local and state history?",
           "choices": [
             "Maps, newspapers, letters, photographs, artifacts, public records, buildings, oral histories, and Indigenous sources can illuminate local/state history when placed in context and corroborated.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Local and State History through Primary Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Local and State History through Primary Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Local and State History through Primary Sources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G3SS-W11-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 11 to a new case?",
+          "prompt": "For \"Local and State History through Primary Sources\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Locate an archive, museum, library, tribal, or public-record source relevant to the question.",
+            "Choose a conclusion about \"Local and State History through Primary Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local and State History through Primary Sources\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G3SS-W11-A1",
-          "prompt": "What is the best first step when applying \"Local and State History through Primary Sources\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Local and State History through Primary Sources\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Build a local/state timeline or map exhibit with citations and uncertainty notes.",
+            "Choose a conclusion about \"Local and State History through Primary Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local and State History through Primary Sources\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 11
         }
       ],
@@ -4076,41 +4077,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W11-S1",
-          "prompt": "Which statement best summarizes Week 11, \"Local and State History through Primary Sources\"?",
+          "prompt": "How can primary sources help us reconstruct local and state history?",
           "choices": [
             "Maps, newspapers, letters, photographs, artifacts, public records, buildings, oral histories, and Indigenous sources can illuminate local/state history when placed in context and corroborated.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Local and State History through Primary Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Local and State History through Primary Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Local and State History through Primary Sources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G3SS-W11-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 11 to a new case?",
+          "prompt": "For \"Local and State History through Primary Sources\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Locate an archive, museum, library, tribal, or public-record source relevant to the question.",
+            "Choose a conclusion about \"Local and State History through Primary Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local and State History through Primary Sources\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G3SS-W11-A1",
-          "prompt": "What is the best first step when applying \"Local and State History through Primary Sources\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Local and State History through Primary Sources\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Build a local/state timeline or map exhibit with citations and uncertainty notes.",
+            "Choose a conclusion about \"Local and State History through Primary Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local and State History through Primary Sources\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
@@ -4323,41 +4324,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W12-S1",
-          "prompt": "Which statement best summarizes Week 12, \"Settlement, Migration, Economy, and Local Change\"?",
+          "prompt": "How have settlement, migration, work, transportation, and public decisions changed communities?",
           "choices": [
             "Communities change through Indigenous continuity, settlement, migration, economic activity, infrastructure, technology, environmental change, and public decisions.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Settlement, Migration, Economy, and Local Change\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Settlement, Migration, Economy, and Local Change\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Settlement, Migration, Economy, and Local Change\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G3SS-W12-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 12 to a new case?",
+          "prompt": "For \"Settlement, Migration, Economy, and Local Change\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Map transportation, settlement, and economic activity across two time periods.",
+            "Choose a conclusion about \"Settlement, Migration, Economy, and Local Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Settlement, Migration, Economy, and Local Change\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G3SS-W12-A1",
-          "prompt": "What is the best first step when applying \"Settlement, Migration, Economy, and Local Change\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Settlement, Migration, Economy, and Local Change\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a multi-perspective explanation of one community change and lasting effects.",
+            "Choose a conclusion about \"Settlement, Migration, Economy, and Local Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Settlement, Migration, Economy, and Local Change\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 12
         }
       ],
@@ -4455,41 +4456,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W12-S1",
-          "prompt": "Which statement best summarizes Week 12, \"Settlement, Migration, Economy, and Local Change\"?",
+          "prompt": "How have settlement, migration, work, transportation, and public decisions changed communities?",
           "choices": [
             "Communities change through Indigenous continuity, settlement, migration, economic activity, infrastructure, technology, environmental change, and public decisions.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Settlement, Migration, Economy, and Local Change\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Settlement, Migration, Economy, and Local Change\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Settlement, Migration, Economy, and Local Change\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G3SS-W12-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 12 to a new case?",
+          "prompt": "For \"Settlement, Migration, Economy, and Local Change\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Map transportation, settlement, and economic activity across two time periods.",
+            "Choose a conclusion about \"Settlement, Migration, Economy, and Local Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Settlement, Migration, Economy, and Local Change\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G3SS-W12-A1",
-          "prompt": "What is the best first step when applying \"Settlement, Migration, Economy, and Local Change\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Settlement, Migration, Economy, and Local Change\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a multi-perspective explanation of one community change and lasting effects.",
+            "Choose a conclusion about \"Settlement, Migration, Economy, and Local Change\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Settlement, Migration, Economy, and Local Change\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
@@ -4702,41 +4703,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W13-S1",
-          "prompt": "Which statement best summarizes Week 13, \"Comparing World Communities · Tools and Fair Comparisons\"?",
+          "prompt": "How can we compare world communities without stereotyping?",
           "choices": [
             "Comparative Social Studies uses multiple sources, precise language, scale awareness, internal diversity, and common categories such as geography, government, economy, culture, and history.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Comparing World Communities · Tools and Fair Comparisons\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Comparing World Communities · Tools and Fair Comparisons\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Comparing World Communities · Tools and Fair Comparisons\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G3SS-W13-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 13 to a new case?",
+          "prompt": "For \"Comparing World Communities · Tools and Fair Comparisons\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Practice identifying internal diversity within one country/community.",
+            "Choose a conclusion about \"Comparing World Communities · Tools and Fair Comparisons\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Comparing World Communities · Tools and Fair Comparisons\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G3SS-W13-A1",
-          "prompt": "What is the best first step when applying \"Comparing World Communities · Tools and Fair Comparisons\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Comparing World Communities · Tools and Fair Comparisons\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Prepare a world map and evidence notebook for four case studies.",
+            "Choose a conclusion about \"Comparing World Communities · Tools and Fair Comparisons\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Comparing World Communities · Tools and Fair Comparisons\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 13
         }
       ],
@@ -4834,41 +4835,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W13-S1",
-          "prompt": "Which statement best summarizes Week 13, \"Comparing World Communities · Tools and Fair Comparisons\"?",
+          "prompt": "How can we compare world communities without stereotyping?",
           "choices": [
             "Comparative Social Studies uses multiple sources, precise language, scale awareness, internal diversity, and common categories such as geography, government, economy, culture, and history.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Comparing World Communities · Tools and Fair Comparisons\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Comparing World Communities · Tools and Fair Comparisons\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Comparing World Communities · Tools and Fair Comparisons\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G3SS-W13-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 13 to a new case?",
+          "prompt": "For \"Comparing World Communities · Tools and Fair Comparisons\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Practice identifying internal diversity within one country/community.",
+            "Choose a conclusion about \"Comparing World Communities · Tools and Fair Comparisons\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Comparing World Communities · Tools and Fair Comparisons\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G3SS-W13-A1",
-          "prompt": "What is the best first step when applying \"Comparing World Communities · Tools and Fair Comparisons\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Comparing World Communities · Tools and Fair Comparisons\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Prepare a world map and evidence notebook for four case studies.",
+            "Choose a conclusion about \"Comparing World Communities · Tools and Fair Comparisons\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Comparing World Communities · Tools and Fair Comparisons\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
@@ -5081,41 +5082,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W14-S1",
-          "prompt": "Which statement best summarizes Week 14, \"World Community Case Study · Japan\"?",
+          "prompt": "How do geography, government, economy, culture, and history interact in communities in Japan?",
           "choices": [
             "Japan offers an East Asian case for examining islands, dense urban areas, rural regions, constitutional government, trade, technology, traditions, hazards, and demographic change without stereotypes.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"World Community Case Study · Japan\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"World Community Case Study · Japan\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"World Community Case Study · Japan\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G3SS-W14-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 14 to a new case?",
+          "prompt": "For \"World Community Case Study · Japan\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Study a simplified diagram of Japan's constitutional government and local administration.",
+            "Choose a conclusion about \"World Community Case Study · Japan\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Japan\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G3SS-W14-A1",
-          "prompt": "What is the best first step when applying \"World Community Case Study · Japan\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"World Community Case Study · Japan\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a balanced case-study profile including similarities to and differences from the learner's community.",
+            "Choose a conclusion about \"World Community Case Study · Japan\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Japan\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 14
         }
       ],
@@ -5213,41 +5214,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W14-S1",
-          "prompt": "Which statement best summarizes Week 14, \"World Community Case Study · Japan\"?",
+          "prompt": "How do geography, government, economy, culture, and history interact in communities in Japan?",
           "choices": [
             "Japan offers an East Asian case for examining islands, dense urban areas, rural regions, constitutional government, trade, technology, traditions, hazards, and demographic change without stereotypes.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"World Community Case Study · Japan\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"World Community Case Study · Japan\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"World Community Case Study · Japan\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G3SS-W14-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 14 to a new case?",
+          "prompt": "For \"World Community Case Study · Japan\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Study a simplified diagram of Japan's constitutional government and local administration.",
+            "Choose a conclusion about \"World Community Case Study · Japan\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Japan\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G3SS-W14-A1",
-          "prompt": "What is the best first step when applying \"World Community Case Study · Japan\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"World Community Case Study · Japan\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a balanced case-study profile including similarities to and differences from the learner's community.",
+            "Choose a conclusion about \"World Community Case Study · Japan\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Japan\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
@@ -5460,41 +5461,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W15-S1",
-          "prompt": "Which statement best summarizes Week 15, \"World Community Case Study · Ghana\"?",
+          "prompt": "How do geography, history, government, economy, and culture interact in communities in Ghana?",
           "choices": [
             "Ghana offers a West African case for studying coastal/inland geography, democratic institutions, urban/rural communities, trade, cultural diversity, colonial history, independence, and contemporary development.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"World Community Case Study · Ghana\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"World Community Case Study · Ghana\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"World Community Case Study · Ghana\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G3SS-W15-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 15 to a new case?",
+          "prompt": "For \"World Community Case Study · Ghana\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Study a simplified overview of Ghana's constitutional republic and elections.",
+            "Choose a conclusion about \"World Community Case Study · Ghana\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Ghana\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G3SS-W15-A1",
-          "prompt": "What is the best first step when applying \"World Community Case Study · Ghana\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"World Community Case Study · Ghana\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a case-study comparison with Japan using the same evidence categories.",
+            "Choose a conclusion about \"World Community Case Study · Ghana\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Ghana\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 15
         }
       ],
@@ -5592,41 +5593,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W15-S1",
-          "prompt": "Which statement best summarizes Week 15, \"World Community Case Study · Ghana\"?",
+          "prompt": "How do geography, history, government, economy, and culture interact in communities in Ghana?",
           "choices": [
             "Ghana offers a West African case for studying coastal/inland geography, democratic institutions, urban/rural communities, trade, cultural diversity, colonial history, independence, and contemporary development.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"World Community Case Study · Ghana\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"World Community Case Study · Ghana\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"World Community Case Study · Ghana\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G3SS-W15-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 15 to a new case?",
+          "prompt": "For \"World Community Case Study · Ghana\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Study a simplified overview of Ghana's constitutional republic and elections.",
+            "Choose a conclusion about \"World Community Case Study · Ghana\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Ghana\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G3SS-W15-A1",
-          "prompt": "What is the best first step when applying \"World Community Case Study · Ghana\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"World Community Case Study · Ghana\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a case-study comparison with Japan using the same evidence categories.",
+            "Choose a conclusion about \"World Community Case Study · Ghana\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Ghana\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
@@ -5839,41 +5840,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W16-S1",
-          "prompt": "Which statement best summarizes Week 16, \"World Community Case Study · Mexico\"?",
+          "prompt": "How do geography, Indigenous continuity, government, economy, migration, and culture interact in communities in Mexico?",
           "choices": [
             "Mexico provides a North American case for comparing federal government, Indigenous nations and languages, urban/rural regions, migration, trade, historical change, and cultural diversity.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"World Community Case Study · Mexico\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"World Community Case Study · Mexico\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"World Community Case Study · Mexico\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G3SS-W16-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 16 to a new case?",
+          "prompt": "For \"World Community Case Study · Mexico\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Study a simplified federal-government diagram and compare it with the United States.",
+            "Choose a conclusion about \"World Community Case Study · Mexico\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Mexico\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G3SS-W16-A1",
-          "prompt": "What is the best first step when applying \"World Community Case Study · Mexico\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"World Community Case Study · Mexico\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a three-country comparison of Japan, Ghana, and Mexico using evidence.",
+            "Choose a conclusion about \"World Community Case Study · Mexico\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Mexico\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 16
         }
       ],
@@ -5971,41 +5972,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W16-S1",
-          "prompt": "Which statement best summarizes Week 16, \"World Community Case Study · Mexico\"?",
+          "prompt": "How do geography, Indigenous continuity, government, economy, migration, and culture interact in communities in Mexico?",
           "choices": [
             "Mexico provides a North American case for comparing federal government, Indigenous nations and languages, urban/rural regions, migration, trade, historical change, and cultural diversity.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"World Community Case Study · Mexico\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"World Community Case Study · Mexico\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"World Community Case Study · Mexico\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G3SS-W16-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 16 to a new case?",
+          "prompt": "For \"World Community Case Study · Mexico\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Study a simplified federal-government diagram and compare it with the United States.",
+            "Choose a conclusion about \"World Community Case Study · Mexico\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Mexico\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G3SS-W16-A1",
-          "prompt": "What is the best first step when applying \"World Community Case Study · Mexico\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"World Community Case Study · Mexico\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a three-country comparison of Japan, Ghana, and Mexico using evidence.",
+            "Choose a conclusion about \"World Community Case Study · Mexico\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · Mexico\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
@@ -6218,41 +6219,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W17-S1",
-          "prompt": "Which statement best summarizes Week 17, \"World Community Case Study · India\"?",
+          "prompt": "How do scale, federalism, languages, religions, economy, and regional diversity shape communities in India?",
           "choices": [
             "India offers a South Asian case for studying large population scale, federal democracy, many languages and religions, urban/rural variation, economic change, and regional diversity.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"World Community Case Study · India\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"World Community Case Study · India\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"World Community Case Study · India\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G3SS-W17-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 17 to a new case?",
+          "prompt": "For \"World Community Case Study · India\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Examine a simplified federal-government structure and language/region map.",
+            "Choose a conclusion about \"World Community Case Study · India\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · India\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G3SS-W17-A1",
-          "prompt": "What is the best first step when applying \"World Community Case Study · India\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"World Community Case Study · India\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a four-case evidence matrix and identify one pattern that holds across some cases but not all.",
+            "Choose a conclusion about \"World Community Case Study · India\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · India\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 17
         }
       ],
@@ -6350,41 +6351,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W17-S1",
-          "prompt": "Which statement best summarizes Week 17, \"World Community Case Study · India\"?",
+          "prompt": "How do scale, federalism, languages, religions, economy, and regional diversity shape communities in India?",
           "choices": [
             "India offers a South Asian case for studying large population scale, federal democracy, many languages and religions, urban/rural variation, economic change, and regional diversity.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"World Community Case Study · India\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"World Community Case Study · India\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"World Community Case Study · India\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G3SS-W17-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 17 to a new case?",
+          "prompt": "For \"World Community Case Study · India\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Examine a simplified federal-government structure and language/region map.",
+            "Choose a conclusion about \"World Community Case Study · India\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · India\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G3SS-W17-A1",
-          "prompt": "What is the best first step when applying \"World Community Case Study · India\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"World Community Case Study · India\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a four-case evidence matrix and identify one pattern that holds across some cases but not all.",
+            "Choose a conclusion about \"World Community Case Study · India\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"World Community Case Study · India\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
@@ -6597,41 +6598,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W18-S1",
-          "prompt": "Which statement best summarizes Week 18, \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\"?",
+          "prompt": "What can comparison teach us, and what can I demonstrate independently at midyear?",
           "choices": [
             "Comparative analysis identifies patterns and differences without ranking cultures; the midterm checks durable transfer across inquiry, U.S. geography, Indigenous/local history, and world communities.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G3SS-W18-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 18 to a new case?",
+          "prompt": "For \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare two variables across at least three cases and check whether scale changes the conclusion.",
+            "Choose a conclusion about \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G3SS-W18-A1",
-          "prompt": "What is the best first step when applying \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Complete the teacher-supervised closed-book randomized midterm; below 80% triggers correction and a fresh form.",
+            "Choose a conclusion about \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 18
         }
       ],
@@ -6729,41 +6730,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W18-S1",
-          "prompt": "Which statement best summarizes Week 18, \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\"?",
+          "prompt": "What can comparison teach us, and what can I demonstrate independently at midyear?",
           "choices": [
             "Comparative analysis identifies patterns and differences without ranking cultures; the midterm checks durable transfer across inquiry, U.S. geography, Indigenous/local history, and world communities.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G3SS-W18-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 18 to a new case?",
+          "prompt": "For \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare two variables across at least three cases and check whether scale changes the conclusion.",
+            "Choose a conclusion about \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G3SS-W18-A1",
-          "prompt": "What is the best first step when applying \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Complete the teacher-supervised closed-book randomized midterm; below 80% triggers correction and a fresh form.",
+            "Choose a conclusion about \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Comparative World Communities, Midyear Synthesis, and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
@@ -6976,41 +6977,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W19-S1",
-          "prompt": "Which statement best summarizes Week 19, \"Rules, Laws, the Constitution, and Rule of Law\"?",
+          "prompt": "Why do constitutional communities create laws and limits on government?",
           "choices": [
             "Rules and laws organize public life; the Constitution structures federal authority, amendments protect rights, and rule of law means public power operates through established legal processes.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Rules, Laws, the Constitution, and Rule of Law\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Rules, Laws, the Constitution, and Rule of Law\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Rules, Laws, the Constitution, and Rule of Law\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G3SS-W19-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 19 to a new case?",
+          "prompt": "For \"Rules, Laws, the Constitution, and Rule of Law\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Build a Constitution concept map linking powers, limits, rights, amendments, and institutions.",
+            "Choose a conclusion about \"Rules, Laws, the Constitution, and Rule of Law\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Rules, Laws, the Constitution, and Rule of Law\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G3SS-W19-A1",
-          "prompt": "What is the best first step when applying \"Rules, Laws, the Constitution, and Rule of Law\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Rules, Laws, the Constitution, and Rule of Law\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Explain why government itself should be limited by law.",
+            "Choose a conclusion about \"Rules, Laws, the Constitution, and Rule of Law\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Rules, Laws, the Constitution, and Rule of Law\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 19
         }
       ],
@@ -7108,41 +7109,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W19-S1",
-          "prompt": "Which statement best summarizes Week 19, \"Rules, Laws, the Constitution, and Rule of Law\"?",
+          "prompt": "Why do constitutional communities create laws and limits on government?",
           "choices": [
             "Rules and laws organize public life; the Constitution structures federal authority, amendments protect rights, and rule of law means public power operates through established legal processes.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Rules, Laws, the Constitution, and Rule of Law\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Rules, Laws, the Constitution, and Rule of Law\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Rules, Laws, the Constitution, and Rule of Law\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G3SS-W19-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 19 to a new case?",
+          "prompt": "For \"Rules, Laws, the Constitution, and Rule of Law\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Build a Constitution concept map linking powers, limits, rights, amendments, and institutions.",
+            "Choose a conclusion about \"Rules, Laws, the Constitution, and Rule of Law\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Rules, Laws, the Constitution, and Rule of Law\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G3SS-W19-A1",
-          "prompt": "What is the best first step when applying \"Rules, Laws, the Constitution, and Rule of Law\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Rules, Laws, the Constitution, and Rule of Law\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Explain why government itself should be limited by law.",
+            "Choose a conclusion about \"Rules, Laws, the Constitution, and Rule of Law\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Rules, Laws, the Constitution, and Rule of Law\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
@@ -7355,41 +7356,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W20-S1",
-          "prompt": "Which statement best summarizes Week 20, \"Local, State, Federal, and Tribal Governments\"?",
+          "prompt": "How do different governments share and exercise authority in the United States?",
           "choices": [
             "The U.S. federal system includes national, state, local, and sovereign tribal governments with different and sometimes overlapping responsibilities.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Local, State, Federal, and Tribal Governments\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Local, State, Federal, and Tribal Governments\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Local, State, Federal, and Tribal Governments\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G3SS-W20-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 20 to a new case?",
+          "prompt": "For \"Local, State, Federal, and Tribal Governments\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Map examples of government jurisdictions without collecting learner addresses.",
+            "Choose a conclusion about \"Local, State, Federal, and Tribal Governments\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local, State, Federal, and Tribal Governments\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G3SS-W20-A1",
-          "prompt": "What is the best first step when applying \"Local, State, Federal, and Tribal Governments\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Local, State, Federal, and Tribal Governments\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a federalism diagram showing distinct/shared responsibilities and one tribal-government example.",
+            "Choose a conclusion about \"Local, State, Federal, and Tribal Governments\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local, State, Federal, and Tribal Governments\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 20
         }
       ],
@@ -7487,41 +7488,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W20-S1",
-          "prompt": "Which statement best summarizes Week 20, \"Local, State, Federal, and Tribal Governments\"?",
+          "prompt": "How do different governments share and exercise authority in the United States?",
           "choices": [
             "The U.S. federal system includes national, state, local, and sovereign tribal governments with different and sometimes overlapping responsibilities.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Local, State, Federal, and Tribal Governments\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Local, State, Federal, and Tribal Governments\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Local, State, Federal, and Tribal Governments\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G3SS-W20-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 20 to a new case?",
+          "prompt": "For \"Local, State, Federal, and Tribal Governments\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Map examples of government jurisdictions without collecting learner addresses.",
+            "Choose a conclusion about \"Local, State, Federal, and Tribal Governments\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local, State, Federal, and Tribal Governments\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G3SS-W20-A1",
-          "prompt": "What is the best first step when applying \"Local, State, Federal, and Tribal Governments\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Local, State, Federal, and Tribal Governments\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a federalism diagram showing distinct/shared responsibilities and one tribal-government example.",
+            "Choose a conclusion about \"Local, State, Federal, and Tribal Governments\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local, State, Federal, and Tribal Governments\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
@@ -7734,41 +7735,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W21-S1",
-          "prompt": "Which statement best summarizes Week 21, \"Branches, Elections, and Voting\"?",
+          "prompt": "How do branches and elections distribute public authority?",
           "choices": [
             "Legislative, executive, and judicial institutions have different roles; elections allow eligible citizens to choose many representatives, and trustworthy elections depend on rules, access, accurate administration, and lawful review.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Branches, Elections, and Voting\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Branches, Elections, and Voting\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Branches, Elections, and Voting\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G3SS-W21-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 21 to a new case?",
+          "prompt": "For \"Branches, Elections, and Voting\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Run a nonpartisan mock election with published rules, secret ballot, count, recount check, and result.",
+            "Choose a conclusion about \"Branches, Elections, and Voting\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Branches, Elections, and Voting\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G3SS-W21-A1",
-          "prompt": "What is the best first step when applying \"Branches, Elections, and Voting\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Branches, Elections, and Voting\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create an election-integrity checklist focused on participation, procedures, accurate counting, civility, and lawful review.",
+            "Choose a conclusion about \"Branches, Elections, and Voting\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Branches, Elections, and Voting\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 21
         }
       ],
@@ -7866,41 +7867,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W21-S1",
-          "prompt": "Which statement best summarizes Week 21, \"Branches, Elections, and Voting\"?",
+          "prompt": "How do branches and elections distribute public authority?",
           "choices": [
             "Legislative, executive, and judicial institutions have different roles; elections allow eligible citizens to choose many representatives, and trustworthy elections depend on rules, access, accurate administration, and lawful review.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Branches, Elections, and Voting\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Branches, Elections, and Voting\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Branches, Elections, and Voting\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G3SS-W21-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 21 to a new case?",
+          "prompt": "For \"Branches, Elections, and Voting\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Run a nonpartisan mock election with published rules, secret ballot, count, recount check, and result.",
+            "Choose a conclusion about \"Branches, Elections, and Voting\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Branches, Elections, and Voting\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G3SS-W21-A1",
-          "prompt": "What is the best first step when applying \"Branches, Elections, and Voting\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Branches, Elections, and Voting\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create an election-integrity checklist focused on participation, procedures, accurate counting, civility, and lawful review.",
+            "Choose a conclusion about \"Branches, Elections, and Voting\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Branches, Elections, and Voting\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
@@ -8113,41 +8114,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W22-S1",
-          "prompt": "Which statement best summarizes Week 22, \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\"?",
+          "prompt": "How do symbols, holidays, documents, and public memory shape civic identity?",
           "choices": [
             "Civic symbols and commemorations express ideals and histories, but responsible citizenship studies context, multiple perspectives, and the difference between commemoration and historical analysis.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G3SS-W22-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 22 to a new case?",
+          "prompt": "For \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare commemoration with historical inquiry: what is remembered and what questions remain?",
+            "Choose a conclusion about \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G3SS-W22-A1",
-          "prompt": "What is the best first step when applying \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a civic-memory exhibit emphasizing evidence, constitutional ideals, civility, and informed disagreement.",
+            "Choose a conclusion about \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 22
         }
       ],
@@ -8245,41 +8246,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W22-S1",
-          "prompt": "Which statement best summarizes Week 22, \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\"?",
+          "prompt": "How do symbols, holidays, documents, and public memory shape civic identity?",
           "choices": [
             "Civic symbols and commemorations express ideals and histories, but responsible citizenship studies context, multiple perspectives, and the difference between commemoration and historical analysis.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G3SS-W22-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 22 to a new case?",
+          "prompt": "For \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare commemoration with historical inquiry: what is remembered and what questions remain?",
+            "Choose a conclusion about \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G3SS-W22-A1",
-          "prompt": "What is the best first step when applying \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a civic-memory exhibit emphasizing evidence, constitutional ideals, civility, and informed disagreement.",
+            "Choose a conclusion about \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Civic Symbols, Holidays, Public Memory, and Informed Citizenship\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
@@ -8492,41 +8493,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W23-S1",
-          "prompt": "Which statement best summarizes Week 23, \"Scarcity, Opportunity Cost, and Resource Choices\"?",
+          "prompt": "Why do scarcity and opportunity cost shape choices?",
           "choices": [
             "Scarcity means resources are limited relative to possible wants; choosing one option often means giving up another, and good economic reasoning considers tradeoffs and incentives.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Scarcity, Opportunity Cost, and Resource Choices\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Scarcity, Opportunity Cost, and Resource Choices\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Scarcity, Opportunity Cost, and Resource Choices\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G3SS-W23-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 23 to a new case?",
+          "prompt": "For \"Scarcity, Opportunity Cost, and Resource Choices\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Identify opportunity costs in time, budget, land-use, and community scenarios.",
+            "Choose a conclusion about \"Scarcity, Opportunity Cost, and Resource Choices\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Scarcity, Opportunity Cost, and Resource Choices\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G3SS-W23-A1",
-          "prompt": "What is the best first step when applying \"Scarcity, Opportunity Cost, and Resource Choices\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Scarcity, Opportunity Cost, and Resource Choices\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Recommend a fictional resource choice naming benefit, cost, and opportunity cost.",
+            "Choose a conclusion about \"Scarcity, Opportunity Cost, and Resource Choices\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Scarcity, Opportunity Cost, and Resource Choices\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 23
         }
       ],
@@ -8624,41 +8625,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W23-S1",
-          "prompt": "Which statement best summarizes Week 23, \"Scarcity, Opportunity Cost, and Resource Choices\"?",
+          "prompt": "Why do scarcity and opportunity cost shape choices?",
           "choices": [
             "Scarcity means resources are limited relative to possible wants; choosing one option often means giving up another, and good economic reasoning considers tradeoffs and incentives.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Scarcity, Opportunity Cost, and Resource Choices\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Scarcity, Opportunity Cost, and Resource Choices\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Scarcity, Opportunity Cost, and Resource Choices\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G3SS-W23-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 23 to a new case?",
+          "prompt": "For \"Scarcity, Opportunity Cost, and Resource Choices\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Identify opportunity costs in time, budget, land-use, and community scenarios.",
+            "Choose a conclusion about \"Scarcity, Opportunity Cost, and Resource Choices\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Scarcity, Opportunity Cost, and Resource Choices\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G3SS-W23-A1",
-          "prompt": "What is the best first step when applying \"Scarcity, Opportunity Cost, and Resource Choices\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Scarcity, Opportunity Cost, and Resource Choices\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Recommend a fictional resource choice naming benefit, cost, and opportunity cost.",
+            "Choose a conclusion about \"Scarcity, Opportunity Cost, and Resource Choices\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Scarcity, Opportunity Cost, and Resource Choices\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
@@ -8871,41 +8872,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W24-S1",
-          "prompt": "Which statement best summarizes Week 24, \"Supply, Demand, Prices, and Markets\"?",
+          "prompt": "How do changing supply and demand influence markets?",
           "choices": [
             "Supply and demand are simplified tools for reasoning about how availability and consumer demand can influence prices and production; real markets are also shaped by costs, rules, expectations, and competition.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Supply, Demand, Prices, and Markets\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Supply, Demand, Prices, and Markets\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Supply, Demand, Prices, and Markets\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G3SS-W24-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 24 to a new case?",
+          "prompt": "For \"Supply, Demand, Prices, and Markets\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Graph simple quantity/price observations from the simulation.",
+            "Choose a conclusion about \"Supply, Demand, Prices, and Markets\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Supply, Demand, Prices, and Markets\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G3SS-W24-A1",
-          "prompt": "What is the best first step when applying \"Supply, Demand, Prices, and Markets\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Supply, Demand, Prices, and Markets\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Explain why supply-and-demand models are useful but incomplete descriptions of every price.",
+            "Choose a conclusion about \"Supply, Demand, Prices, and Markets\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Supply, Demand, Prices, and Markets\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 24
         }
       ],
@@ -9003,41 +9004,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W24-S1",
-          "prompt": "Which statement best summarizes Week 24, \"Supply, Demand, Prices, and Markets\"?",
+          "prompt": "How do changing supply and demand influence markets?",
           "choices": [
             "Supply and demand are simplified tools for reasoning about how availability and consumer demand can influence prices and production; real markets are also shaped by costs, rules, expectations, and competition.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Supply, Demand, Prices, and Markets\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Supply, Demand, Prices, and Markets\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Supply, Demand, Prices, and Markets\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G3SS-W24-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 24 to a new case?",
+          "prompt": "For \"Supply, Demand, Prices, and Markets\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Graph simple quantity/price observations from the simulation.",
+            "Choose a conclusion about \"Supply, Demand, Prices, and Markets\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Supply, Demand, Prices, and Markets\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G3SS-W24-A1",
-          "prompt": "What is the best first step when applying \"Supply, Demand, Prices, and Markets\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Supply, Demand, Prices, and Markets\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Explain why supply-and-demand models are useful but incomplete descriptions of every price.",
+            "Choose a conclusion about \"Supply, Demand, Prices, and Markets\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Supply, Demand, Prices, and Markets\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
@@ -9250,41 +9251,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W25-S1",
-          "prompt": "Which statement best summarizes Week 25, \"Money and Currencies of North America\"?",
+          "prompt": "How do money and currencies support exchange, saving, and economic comparison?",
           "choices": [
             "Money serves as a commonly accepted medium of exchange and unit for prices; North American countries use different currencies, and values can change relative to one another.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Money and Currencies of North America\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Money and Currencies of North America\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Money and Currencies of North America\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G3SS-W25-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 25 to a new case?",
+          "prompt": "For \"Money and Currencies of North America\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Use pretend amounts to compare prices within one currency without requiring live rates.",
+            "Choose a conclusion about \"Money and Currencies of North America\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Money and Currencies of North America\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G3SS-W25-A1",
-          "prompt": "What is the best first step when applying \"Money and Currencies of North America\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Money and Currencies of North America\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a North America currency map with country, currency name, and one caution about comparing nominal prices.",
+            "Choose a conclusion about \"Money and Currencies of North America\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Money and Currencies of North America\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 25
         }
       ],
@@ -9382,41 +9383,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W25-S1",
-          "prompt": "Which statement best summarizes Week 25, \"Money and Currencies of North America\"?",
+          "prompt": "How do money and currencies support exchange, saving, and economic comparison?",
           "choices": [
             "Money serves as a commonly accepted medium of exchange and unit for prices; North American countries use different currencies, and values can change relative to one another.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Money and Currencies of North America\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Money and Currencies of North America\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Money and Currencies of North America\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G3SS-W25-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 25 to a new case?",
+          "prompt": "For \"Money and Currencies of North America\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Use pretend amounts to compare prices within one currency without requiring live rates.",
+            "Choose a conclusion about \"Money and Currencies of North America\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Money and Currencies of North America\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G3SS-W25-A1",
-          "prompt": "What is the best first step when applying \"Money and Currencies of North America\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Money and Currencies of North America\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a North America currency map with country, currency name, and one caution about comparing nominal prices.",
+            "Choose a conclusion about \"Money and Currencies of North America\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Money and Currencies of North America\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
@@ -9629,41 +9630,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W26-S1",
-          "prompt": "Which statement best summarizes Week 26, \"Specialization, Trade, and Interdependence\"?",
+          "prompt": "Why do regions and countries specialize and trade?",
           "choices": [
             "Specialization can increase skill or efficiency but creates interdependence; trade links resources, labor, transportation, technology, and consumers across places.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Specialization, Trade, and Interdependence\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Specialization, Trade, and Interdependence\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Specialization, Trade, and Interdependence\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G3SS-W26-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 26 to a new case?",
+          "prompt": "For \"Specialization, Trade, and Interdependence\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Identify examples of regional specialization without implying regions produce only one thing.",
+            "Choose a conclusion about \"Specialization, Trade, and Interdependence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Specialization, Trade, and Interdependence\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G3SS-W26-A1",
-          "prompt": "What is the best first step when applying \"Specialization, Trade, and Interdependence\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Specialization, Trade, and Interdependence\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Explain one benefit and one vulnerability of specialization and interdependence.",
+            "Choose a conclusion about \"Specialization, Trade, and Interdependence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Specialization, Trade, and Interdependence\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 26
         }
       ],
@@ -9761,41 +9762,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W26-S1",
-          "prompt": "Which statement best summarizes Week 26, \"Specialization, Trade, and Interdependence\"?",
+          "prompt": "Why do regions and countries specialize and trade?",
           "choices": [
             "Specialization can increase skill or efficiency but creates interdependence; trade links resources, labor, transportation, technology, and consumers across places.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Specialization, Trade, and Interdependence\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Specialization, Trade, and Interdependence\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Specialization, Trade, and Interdependence\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G3SS-W26-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 26 to a new case?",
+          "prompt": "For \"Specialization, Trade, and Interdependence\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Identify examples of regional specialization without implying regions produce only one thing.",
+            "Choose a conclusion about \"Specialization, Trade, and Interdependence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Specialization, Trade, and Interdependence\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G3SS-W26-A1",
-          "prompt": "What is the best first step when applying \"Specialization, Trade, and Interdependence\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Specialization, Trade, and Interdependence\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Explain one benefit and one vulnerability of specialization and interdependence.",
+            "Choose a conclusion about \"Specialization, Trade, and Interdependence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Specialization, Trade, and Interdependence\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
@@ -10008,41 +10009,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W27-S1",
-          "prompt": "Which statement best summarizes Week 27, \"African American Heroes, Patriots, and Community Builders\"?",
+          "prompt": "How have African Americans influenced U.S. civic life, culture, institutions, military service, science, education, and movements for rights?",
           "choices": [
             "African American history includes varied contributions across periods and fields; biographies should connect individual action to context, institutions, barriers, collective efforts, and evidence.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"African American Heroes, Patriots, and Community Builders\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"African American Heroes, Patriots, and Community Builders\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"African American Heroes, Patriots, and Community Builders\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G3SS-W27-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 27 to a new case?",
+          "prompt": "For \"African American Heroes, Patriots, and Community Builders\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Create a timeline placing each figure in historical context.",
+            "Choose a conclusion about \"African American Heroes, Patriots, and Community Builders\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"African American Heroes, Patriots, and Community Builders\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G3SS-W27-A1",
-          "prompt": "What is the best first step when applying \"African American Heroes, Patriots, and Community Builders\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"African American Heroes, Patriots, and Community Builders\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create an evidence-based profile explaining contribution, barriers, collaborators/institutions, and legacy.",
+            "Choose a conclusion about \"African American Heroes, Patriots, and Community Builders\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"African American Heroes, Patriots, and Community Builders\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 27
         }
       ],
@@ -10140,41 +10141,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W27-S1",
-          "prompt": "Which statement best summarizes Week 27, \"African American Heroes, Patriots, and Community Builders\"?",
+          "prompt": "How have African Americans influenced U.S. civic life, culture, institutions, military service, science, education, and movements for rights?",
           "choices": [
             "African American history includes varied contributions across periods and fields; biographies should connect individual action to context, institutions, barriers, collective efforts, and evidence.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"African American Heroes, Patriots, and Community Builders\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"African American Heroes, Patriots, and Community Builders\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"African American Heroes, Patriots, and Community Builders\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G3SS-W27-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 27 to a new case?",
+          "prompt": "For \"African American Heroes, Patriots, and Community Builders\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Create a timeline placing each figure in historical context.",
+            "Choose a conclusion about \"African American Heroes, Patriots, and Community Builders\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"African American Heroes, Patriots, and Community Builders\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G3SS-W27-A1",
-          "prompt": "What is the best first step when applying \"African American Heroes, Patriots, and Community Builders\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"African American Heroes, Patriots, and Community Builders\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create an evidence-based profile explaining contribution, barriers, collaborators/institutions, and legacy.",
+            "Choose a conclusion about \"African American Heroes, Patriots, and Community Builders\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"African American Heroes, Patriots, and Community Builders\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
@@ -10387,41 +10388,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W28-S1",
-          "prompt": "Which statement best summarizes Week 28, \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\"?",
+          "prompt": "How have Indigenous leaders and institutions shaped communities and public life?",
           "choices": [
             "Indigenous history includes leaders, educators, veterans, artists, scientists, advocates, governments, and institutions studied nation-specifically and in historical and contemporary contexts.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G3SS-W28-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 28 to a new case?",
+          "prompt": "For \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Connect each person to specific nation, time period, and institutional context.",
+            "Choose a conclusion about \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G3SS-W28-A1",
-          "prompt": "What is the best first step when applying \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Compare leadership goals, evidence of impact, and continuing community context.",
+            "Choose a conclusion about \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 28
         }
       ],
@@ -10519,41 +10520,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W28-S1",
-          "prompt": "Which statement best summarizes Week 28, \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\"?",
+          "prompt": "How have Indigenous leaders and institutions shaped communities and public life?",
           "choices": [
             "Indigenous history includes leaders, educators, veterans, artists, scientists, advocates, governments, and institutions studied nation-specifically and in historical and contemporary contexts.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G3SS-W28-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 28 to a new case?",
+          "prompt": "For \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Connect each person to specific nation, time period, and institutional context.",
+            "Choose a conclusion about \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G3SS-W28-A1",
-          "prompt": "What is the best first step when applying \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Compare leadership goals, evidence of impact, and continuing community context.",
+            "Choose a conclusion about \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Leaders, Tribal Governments, and Cultural Continuity\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
@@ -10766,41 +10767,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W29-S1",
-          "prompt": "Which statement best summarizes Week 29, \"Immigrants, Innovators, Workers, and Public Servants\"?",
+          "prompt": "How do migration, work, innovation, and public service shape communities?",
           "choices": [
             "People who move, work, invent, organize, teach, serve, build enterprises, and create institutions contribute in varied ways; impact should include context and barriers as well as achievements.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Immigrants, Innovators, Workers, and Public Servants\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Immigrants, Innovators, Workers, and Public Servants\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Immigrants, Innovators, Workers, and Public Servants\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G3SS-W29-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 29 to a new case?",
+          "prompt": "For \"Immigrants, Innovators, Workers, and Public Servants\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Map migration or work connections where relevant without asking learners for private status.",
+            "Choose a conclusion about \"Immigrants, Innovators, Workers, and Public Servants\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Immigrants, Innovators, Workers, and Public Servants\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G3SS-W29-A1",
-          "prompt": "What is the best first step when applying \"Immigrants, Innovators, Workers, and Public Servants\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Immigrants, Innovators, Workers, and Public Servants\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create an impact card distinguishing achievement, context, obstacles, collaboration, and long-term effects.",
+            "Choose a conclusion about \"Immigrants, Innovators, Workers, and Public Servants\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Immigrants, Innovators, Workers, and Public Servants\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 29
         }
       ],
@@ -10898,41 +10899,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W29-S1",
-          "prompt": "Which statement best summarizes Week 29, \"Immigrants, Innovators, Workers, and Public Servants\"?",
+          "prompt": "How do migration, work, innovation, and public service shape communities?",
           "choices": [
             "People who move, work, invent, organize, teach, serve, build enterprises, and create institutions contribute in varied ways; impact should include context and barriers as well as achievements.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Immigrants, Innovators, Workers, and Public Servants\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Immigrants, Innovators, Workers, and Public Servants\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Immigrants, Innovators, Workers, and Public Servants\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G3SS-W29-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 29 to a new case?",
+          "prompt": "For \"Immigrants, Innovators, Workers, and Public Servants\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Map migration or work connections where relevant without asking learners for private status.",
+            "Choose a conclusion about \"Immigrants, Innovators, Workers, and Public Servants\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Immigrants, Innovators, Workers, and Public Servants\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G3SS-W29-A1",
-          "prompt": "What is the best first step when applying \"Immigrants, Innovators, Workers, and Public Servants\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Immigrants, Innovators, Workers, and Public Servants\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create an impact card distinguishing achievement, context, obstacles, collaboration, and long-term effects.",
+            "Choose a conclusion about \"Immigrants, Innovators, Workers, and Public Servants\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Immigrants, Innovators, Workers, and Public Servants\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
@@ -11145,41 +11146,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W30-S1",
-          "prompt": "Which statement best summarizes Week 30, \"Evaluating Hero Narratives and Historical Impact\"?",
+          "prompt": "How can we admire contributions while still examining evidence, complexity, and consequences?",
           "choices": [
             "Historical figures can make meaningful contributions and also have limitations, controversies, or unintended effects; responsible history avoids both uncritical hero worship and simplistic dismissal.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Evaluating Hero Narratives and Historical Impact\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Evaluating Hero Narratives and Historical Impact\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Evaluating Hero Narratives and Historical Impact\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G3SS-W30-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 30 to a new case?",
+          "prompt": "For \"Evaluating Hero Narratives and Historical Impact\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Identify contribution, context, limitation, and perspectives for one public figure.",
+            "Choose a conclusion about \"Evaluating Hero Narratives and Historical Impact\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Evaluating Hero Narratives and Historical Impact\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G3SS-W30-A1",
-          "prompt": "What is the best first step when applying \"Evaluating Hero Narratives and Historical Impact\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Evaluating Hero Narratives and Historical Impact\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a balanced impact paragraph: contribution, evidence, context, complication, conclusion.",
+            "Choose a conclusion about \"Evaluating Hero Narratives and Historical Impact\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Evaluating Hero Narratives and Historical Impact\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 30
         }
       ],
@@ -11277,41 +11278,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W30-S1",
-          "prompt": "Which statement best summarizes Week 30, \"Evaluating Hero Narratives and Historical Impact\"?",
+          "prompt": "How can we admire contributions while still examining evidence, complexity, and consequences?",
           "choices": [
             "Historical figures can make meaningful contributions and also have limitations, controversies, or unintended effects; responsible history avoids both uncritical hero worship and simplistic dismissal.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Evaluating Hero Narratives and Historical Impact\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Evaluating Hero Narratives and Historical Impact\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Evaluating Hero Narratives and Historical Impact\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G3SS-W30-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 30 to a new case?",
+          "prompt": "For \"Evaluating Hero Narratives and Historical Impact\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Identify contribution, context, limitation, and perspectives for one public figure.",
+            "Choose a conclusion about \"Evaluating Hero Narratives and Historical Impact\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Evaluating Hero Narratives and Historical Impact\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G3SS-W30-A1",
-          "prompt": "What is the best first step when applying \"Evaluating Hero Narratives and Historical Impact\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Evaluating Hero Narratives and Historical Impact\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Write a balanced impact paragraph: contribution, evidence, context, complication, conclusion.",
+            "Choose a conclusion about \"Evaluating Hero Narratives and Historical Impact\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Evaluating Hero Narratives and Historical Impact\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
@@ -11524,41 +11525,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W31-S1",
-          "prompt": "Which statement best summarizes Week 31, \"Culture, Language, Religion, and Folktales\"?",
+          "prompt": "How do cultural practices and stories carry meaning without defining every person in a group?",
           "choices": [
             "Culture includes language, religion, customs, arts, foodways, institutions, stories, and identities; communities contain internal diversity, and cultural sources need context.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Culture, Language, Religion, and Folktales\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Culture, Language, Religion, and Folktales\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Culture, Language, Religion, and Folktales\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G3SS-W31-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 31 to a new case?",
+          "prompt": "For \"Culture, Language, Religion, and Folktales\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare language, religion, stories, arts, or foodways without ranking practices.",
+            "Choose a conclusion about \"Culture, Language, Religion, and Folktales\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Culture, Language, Religion, and Folktales\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G3SS-W31-A1",
-          "prompt": "What is the best first step when applying \"Culture, Language, Religion, and Folktales\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Culture, Language, Religion, and Folktales\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a cultural-source note identifying community/creator, context, theme, and limits.",
+            "Choose a conclusion about \"Culture, Language, Religion, and Folktales\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Culture, Language, Religion, and Folktales\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 31
         }
       ],
@@ -11656,41 +11657,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W31-S1",
-          "prompt": "Which statement best summarizes Week 31, \"Culture, Language, Religion, and Folktales\"?",
+          "prompt": "How do cultural practices and stories carry meaning without defining every person in a group?",
           "choices": [
             "Culture includes language, religion, customs, arts, foodways, institutions, stories, and identities; communities contain internal diversity, and cultural sources need context.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Culture, Language, Religion, and Folktales\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Culture, Language, Religion, and Folktales\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Culture, Language, Religion, and Folktales\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G3SS-W31-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 31 to a new case?",
+          "prompt": "For \"Culture, Language, Religion, and Folktales\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Compare language, religion, stories, arts, or foodways without ranking practices.",
+            "Choose a conclusion about \"Culture, Language, Religion, and Folktales\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Culture, Language, Religion, and Folktales\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G3SS-W31-A1",
-          "prompt": "What is the best first step when applying \"Culture, Language, Religion, and Folktales\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Culture, Language, Religion, and Folktales\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a cultural-source note identifying community/creator, context, theme, and limits.",
+            "Choose a conclusion about \"Culture, Language, Religion, and Folktales\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Culture, Language, Religion, and Folktales\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
@@ -11903,41 +11904,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W32-S1",
-          "prompt": "Which statement best summarizes Week 32, \"Prejudice, Discrimination, Human Rights, and Dignity\"?",
+          "prompt": "How can we study unfair treatment and human rights in age-appropriate, evidence-based ways?",
           "choices": [
             "Prejudice involves pre-judgment, discrimination involves unfair treatment, and human-rights frameworks express principles of dignity and equal worth.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Prejudice, Discrimination, Human Rights, and Dignity\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Prejudice, Discrimination, Human Rights, and Dignity\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Prejudice, Discrimination, Human Rights, and Dignity\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G3SS-W32-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 32 to a new case?",
+          "prompt": "For \"Prejudice, Discrimination, Human Rights, and Dignity\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Study age-appropriate historical cases of exclusion and efforts to expand rights.",
+            "Choose a conclusion about \"Prejudice, Discrimination, Human Rights, and Dignity\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Prejudice, Discrimination, Human Rights, and Dignity\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G3SS-W32-A1",
-          "prompt": "What is the best first step when applying \"Prejudice, Discrimination, Human Rights, and Dignity\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Prejudice, Discrimination, Human Rights, and Dignity\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a dignity-and-fairness response explaining what is wrong, who is affected, and what lawful action could help.",
+            "Choose a conclusion about \"Prejudice, Discrimination, Human Rights, and Dignity\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Prejudice, Discrimination, Human Rights, and Dignity\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 32
         }
       ],
@@ -12035,41 +12036,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W32-S1",
-          "prompt": "Which statement best summarizes Week 32, \"Prejudice, Discrimination, Human Rights, and Dignity\"?",
+          "prompt": "How can we study unfair treatment and human rights in age-appropriate, evidence-based ways?",
           "choices": [
             "Prejudice involves pre-judgment, discrimination involves unfair treatment, and human-rights frameworks express principles of dignity and equal worth.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Prejudice, Discrimination, Human Rights, and Dignity\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Prejudice, Discrimination, Human Rights, and Dignity\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Prejudice, Discrimination, Human Rights, and Dignity\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G3SS-W32-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 32 to a new case?",
+          "prompt": "For \"Prejudice, Discrimination, Human Rights, and Dignity\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Study age-appropriate historical cases of exclusion and efforts to expand rights.",
+            "Choose a conclusion about \"Prejudice, Discrimination, Human Rights, and Dignity\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Prejudice, Discrimination, Human Rights, and Dignity\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G3SS-W32-A1",
-          "prompt": "What is the best first step when applying \"Prejudice, Discrimination, Human Rights, and Dignity\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Prejudice, Discrimination, Human Rights, and Dignity\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a dignity-and-fairness response explaining what is wrong, who is affected, and what lawful action could help.",
+            "Choose a conclusion about \"Prejudice, Discrimination, Human Rights, and Dignity\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Prejudice, Discrimination, Human Rights, and Dignity\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
@@ -12282,41 +12283,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W33-S1",
-          "prompt": "Which statement best summarizes Week 33, \"Global Citizenship and Informed Action\"?",
+          "prompt": "What responsibilities can people have toward communities beyond their immediate locality?",
           "choices": [
             "Global citizenship is an educational idea about awareness of interdependence, human dignity, environment, evidence, and responsible action; it does not replace legal national citizenship.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Global Citizenship and Informed Action\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Global Citizenship and Informed Action\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Global Citizenship and Informed Action\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G3SS-W33-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 33 to a new case?",
+          "prompt": "For \"Global Citizenship and Informed Action\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Identify stakeholders at multiple scales and compare perspectives.",
+            "Choose a conclusion about \"Global Citizenship and Informed Action\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Global Citizenship and Informed Action\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G3SS-W33-A1",
-          "prompt": "What is the best first step when applying \"Global Citizenship and Informed Action\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Global Citizenship and Informed Action\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create an informed-action plan with evidence, goal, audience, safety, likely effects, and reflection criteria.",
+            "Choose a conclusion about \"Global Citizenship and Informed Action\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Global Citizenship and Informed Action\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 33
         }
       ],
@@ -12414,41 +12415,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W33-S1",
-          "prompt": "Which statement best summarizes Week 33, \"Global Citizenship and Informed Action\"?",
+          "prompt": "What responsibilities can people have toward communities beyond their immediate locality?",
           "choices": [
             "Global citizenship is an educational idea about awareness of interdependence, human dignity, environment, evidence, and responsible action; it does not replace legal national citizenship.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Global Citizenship and Informed Action\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Global Citizenship and Informed Action\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Global Citizenship and Informed Action\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G3SS-W33-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 33 to a new case?",
+          "prompt": "For \"Global Citizenship and Informed Action\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Identify stakeholders at multiple scales and compare perspectives.",
+            "Choose a conclusion about \"Global Citizenship and Informed Action\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Global Citizenship and Informed Action\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G3SS-W33-A1",
-          "prompt": "What is the best first step when applying \"Global Citizenship and Informed Action\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Global Citizenship and Informed Action\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create an informed-action plan with evidence, goal, audience, safety, likely effects, and reflection criteria.",
+            "Choose a conclusion about \"Global Citizenship and Informed Action\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Global Citizenship and Informed Action\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
@@ -12661,41 +12662,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W34-S1",
-          "prompt": "Which statement best summarizes Week 34, \"Media Literacy, Research Technology, and Verification\"?",
+          "prompt": "How can we use digital tools without letting speed replace verification?",
           "choices": [
             "Digital research requires source tracing, creator/purpose checks, corroboration, date/context awareness, distinction between fact/opinion/persuasion, and careful citation.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Media Literacy, Research Technology, and Verification\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Media Literacy, Research Technology, and Verification\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Media Literacy, Research Technology, and Verification\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G3SS-W34-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 34 to a new case?",
+          "prompt": "For \"Media Literacy, Research Technology, and Verification\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Trace a claim back to its original or authoritative source when possible.",
+            "Choose a conclusion about \"Media Literacy, Research Technology, and Verification\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Media Literacy, Research Technology, and Verification\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G3SS-W34-A1",
-          "prompt": "What is the best first step when applying \"Media Literacy, Research Technology, and Verification\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Media Literacy, Research Technology, and Verification\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a verification record with claim, source, creator, evidence, corroboration, uncertainty, and citation.",
+            "Choose a conclusion about \"Media Literacy, Research Technology, and Verification\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Media Literacy, Research Technology, and Verification\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 34
         }
       ],
@@ -12793,41 +12794,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W34-S1",
-          "prompt": "Which statement best summarizes Week 34, \"Media Literacy, Research Technology, and Verification\"?",
+          "prompt": "How can we use digital tools without letting speed replace verification?",
           "choices": [
             "Digital research requires source tracing, creator/purpose checks, corroboration, date/context awareness, distinction between fact/opinion/persuasion, and careful citation.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Media Literacy, Research Technology, and Verification\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Media Literacy, Research Technology, and Verification\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Media Literacy, Research Technology, and Verification\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G3SS-W34-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 34 to a new case?",
+          "prompt": "For \"Media Literacy, Research Technology, and Verification\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Trace a claim back to its original or authoritative source when possible.",
+            "Choose a conclusion about \"Media Literacy, Research Technology, and Verification\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Media Literacy, Research Technology, and Verification\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G3SS-W34-A1",
-          "prompt": "What is the best first step when applying \"Media Literacy, Research Technology, and Verification\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Media Literacy, Research Technology, and Verification\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a verification record with claim, source, creator, evidence, corroboration, uncertainty, and citation.",
+            "Choose a conclusion about \"Media Literacy, Research Technology, and Verification\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Media Literacy, Research Technology, and Verification\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
@@ -13040,41 +13041,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W35-S1",
-          "prompt": "Which statement best summarizes Week 35, \"Grade 3 Research and Civic Capstone\"?",
+          "prompt": "How can I investigate a meaningful Social Studies question and communicate a responsible conclusion or recommendation?",
           "choices": [
             "A strong capstone integrates a focused question, multiple source types, map/data evidence, historical context, perspectives, economic/civic reasoning, citation, revision, and oral explanation.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Grade 3 Research and Civic Capstone\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Grade 3 Research and Civic Capstone\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Grade 3 Research and Civic Capstone\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G3SS-W35-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 35 to a new case?",
+          "prompt": "For \"Grade 3 Research and Civic Capstone\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Build a source plan with at least four sources from at least three source types, including map/data and primary/official evidence when appropriate.",
+            "Choose a conclusion about \"Grade 3 Research and Civic Capstone\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Grade 3 Research and Civic Capstone\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G3SS-W35-A1",
-          "prompt": "What is the best first step when applying \"Grade 3 Research and Civic Capstone\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Grade 3 Research and Civic Capstone\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a 3–5 minute presentation, exhibit, report, map story, memo, or civic-action proposal and answer teacher questions.",
+            "Choose a conclusion about \"Grade 3 Research and Civic Capstone\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Grade 3 Research and Civic Capstone\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 35
         }
       ],
@@ -13172,41 +13173,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W35-S1",
-          "prompt": "Which statement best summarizes Week 35, \"Grade 3 Research and Civic Capstone\"?",
+          "prompt": "How can I investigate a meaningful Social Studies question and communicate a responsible conclusion or recommendation?",
           "choices": [
             "A strong capstone integrates a focused question, multiple source types, map/data evidence, historical context, perspectives, economic/civic reasoning, citation, revision, and oral explanation.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Grade 3 Research and Civic Capstone\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Grade 3 Research and Civic Capstone\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Grade 3 Research and Civic Capstone\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G3SS-W35-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 35 to a new case?",
+          "prompt": "For \"Grade 3 Research and Civic Capstone\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Build a source plan with at least four sources from at least three source types, including map/data and primary/official evidence when appropriate.",
+            "Choose a conclusion about \"Grade 3 Research and Civic Capstone\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Grade 3 Research and Civic Capstone\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G3SS-W35-A1",
-          "prompt": "What is the best first step when applying \"Grade 3 Research and Civic Capstone\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Grade 3 Research and Civic Capstone\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Create a 3–5 minute presentation, exhibit, report, map story, memo, or civic-action proposal and answer teacher questions.",
+            "Choose a conclusion about \"Grade 3 Research and Civic Capstone\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Grade 3 Research and Civic Capstone\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
@@ -13419,41 +13420,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W36-S1",
-          "prompt": "Which statement best summarizes Week 36, \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\"?",
+          "prompt": "What durable Social Studies knowledge and habits am I ready to carry into Grade 4?",
           "choices": [
             "Grade 3 completion requires 80% mastery across weekly gates, the closed-book midterm, cumulative final, and portfolio/capstone evidence showing inquiry, geography, history, civics, economics, culture, and information literacy.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G3SS-W36-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 36 to a new case?",
+          "prompt": "For \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Complete an unfamiliar multi-source transfer task combining a map, data display, historical source, and civic/economic scenario.",
+            "Choose a conclusion about \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G3SS-W36-A1",
-          "prompt": "What is the best first step when applying \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Hold a portfolio/capstone conference and create a Grade 4 bridge card identifying strengths and next-level questions.",
+            "Choose a conclusion about \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 36
         }
       ],
@@ -13551,41 +13552,41 @@ window.KHAEMENES_GRADE3_SOCIAL_STUDIES={
         },
         {
           "id": "G3SS-W36-S1",
-          "prompt": "Which statement best summarizes Week 36, \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\"?",
+          "prompt": "What durable Social Studies knowledge and habits am I ready to carry into Grade 4?",
           "choices": [
             "Grade 3 completion requires 80% mastery across weekly gates, the closed-book midterm, cumulative final, and portfolio/capstone evidence showing inquiry, geography, history, civics, economics, culture, and information literacy.",
-            "The topic can be understood without evidence or context.",
-            "Every person or community in the topic has the same experience.",
-            "Only vocabulary memorization matters."
+            "The topic \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G3SS-W36-T1",
-          "prompt": "Which approach best applies the evidence habits from Week 36 to a new case?",
+          "prompt": "For \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Use relevant sources, explain reasoning, compare perspectives where needed, and revise if evidence changes the conclusion.",
-            "Use the first source found and stop.",
-            "Choose only evidence supporting the first guess.",
-            "Replace evidence with a strong opinion."
+            "Complete an unfamiliar multi-source transfer task combining a map, data display, historical source, and civic/economic scenario.",
+            "Choose a conclusion about \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G3SS-W36-A1",
-          "prompt": "What is the best first step when applying \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\" to an unfamiliar example?",
+          "prompt": "Which action or explanation most directly applies the Grade 3 learning from \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\"?",
           "choices": [
-            "Identify the question, relevant context, and evidence needed before reaching a conclusion.",
-            "Choose a conclusion before seeing evidence.",
-            "Ignore source context.",
-            "Assume one example represents every case."
+            "Hold a portfolio/capstone conference and create a Grade 4 bridge card identifying strengths and next-level questions.",
+            "Choose a conclusion about \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Final Synthesis, Closed-Book Final, and Grade 4 Bridge\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
