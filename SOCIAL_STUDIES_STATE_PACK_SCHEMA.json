@@ -12,13 +12,14 @@
     "geography",
     "indigenousNations",
     "chronology",
-    "government",
+    "governmentConstitution",
     "civicInstitutions",
-    "contributors",
+    "africanAmericanAndLocalContributors",
     "economy",
     "archivesMuseums",
     "sourceSets",
-    "checkpointSubstitutions"
+    "checkpointSubstitutions",
+    "privacyAndNonpartisan"
   ],
   "properties": {
     "schemaVersion": {
@@ -63,7 +64,7 @@
         "type": "object"
       }
     },
-    "government": {
+    "governmentConstitution": {
       "type": "array",
       "items": {
         "type": "object"
@@ -75,7 +76,7 @@
         "type": "object"
       }
     },
-    "contributors": {
+    "africanAmericanAndLocalContributors": {
       "type": "array",
       "items": {
         "type": "object"
@@ -105,5 +106,6 @@
     "privacyAndNonpartisan": {
       "type": "object"
     }
-  }
+  },
+  "additionalProperties": true
 }
