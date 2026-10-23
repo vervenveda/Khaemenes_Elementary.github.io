@@ -16,8 +16,8 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
     "midtermMode": "closed-book teacher-supervised",
     "finalMode": "closed-book teacher-supervised",
     "storageKey": "khaemenes_grade4_social_studies_v1",
-    "version": "1.0.0",
-    "updated": "2026-10-19",
+    "version": "1.1.0",
+    "updated": "2026-10-23",
     "authors": "Jennifer Kay Pearl",
     "note": "The grade-wide 20-point A++ weekly assessment remains integrated portfolio evidence. Formal Social Studies mastery is recorded in this subject course.",
     "stateLocalizable": true,
@@ -43,7 +43,8 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
       30,
       35
     ],
-    "localizationPolicy": "Keep the national Grade 4 Social Studies disciplinary spine and 80% mastery gates invariant. Localize required state/local history, geography, Indigenous nations, government, economy, public figures, source sets, and capstone evidence through the state localization guide."
+    "localizationPolicy": "Keep the national Grade 4 Social Studies disciplinary spine and 80% mastery gates invariant. Localize required state/local history, geography, Indigenous nations, government, economy, public figures, source sets, and capstone evidence through the state localization guide.",
+    "assessmentSpecificity": "2026 specificity hardening replaced 216 recurring meta-template current-bank items with week-specific historical, geographic, civic, economic, source, or evidence questions while preserving item IDs for audit continuity."
   },
   "strands": [
     "Historical Inquiry & Evidence",
@@ -218,80 +219,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W01-S1",
-          "prompt": "Which statement best summarizes \"Historical Questions, Claims, and Evidence\"?",
+          "prompt": "How do historians build explanations about the past?",
           "choices": [
             "Historians develop focused questions, gather relevant evidence, build claims, consider context and perspective, and revise explanations when evidence changes.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Historical Questions, Claims, and Evidence\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Historical Questions, Claims, and Evidence\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G4SS-W01-T1",
-          "prompt": "Which method best transfers the learning from \"Historical Questions, Claims, and Evidence\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Historical Questions, Claims, and Evidence\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare a map, artifact image, quotation, and timeline about one historical topic.",
+            "Choose a conclusion about \"Historical Questions, Claims, and Evidence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G4SS-W01-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Historical Questions, Claims, and Evidence\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Historical Questions, Claims, and Evidence\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Corroborate two sources and note agreement, conflict, and missing information.",
+            "Use an unsourced statement about \"Historical Questions, Claims, and Evidence\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Historical Questions, Claims, and Evidence\".",
+            "Use only evidence that agrees with the first guess about \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G4SS-W01-P1",
-          "prompt": "When sources about \"Historical Questions, Claims, and Evidence\" differ, the best next step is to...",
+          "prompt": "When investigating \"Historical Questions, Claims, and Evidence\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Historical Questions, Claims, and Evidence\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Historical Questions, Claims, and Evidence\".",
+            "Use only evidence that agrees with the first guess about \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G4SS-W01-A1",
-          "prompt": "Before making a conclusion about \"Historical Questions, Claims, and Evidence\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Historical Questions, Claims, and Evidence\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a short historical claim with evidence, context, and one limitation.",
+            "Choose a conclusion about \"Historical Questions, Claims, and Evidence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G4SS-W01-R1",
-          "prompt": "Which revision habit best improves work on \"Historical Questions, Claims, and Evidence\"?",
+          "prompt": "A learner's first explanation of \"Historical Questions, Claims, and Evidence\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Historians develop focused questions, gather relevant evidence, build claims, consider context and perspective, and revise explanations when evidence changes.",
+            "The topic \"Historical Questions, Claims, and Evidence\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Historical Questions, Claims, and Evidence\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 1
         }
       ],
@@ -376,80 +377,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W01-S1",
-          "prompt": "Which statement best summarizes \"Historical Questions, Claims, and Evidence\"?",
+          "prompt": "How do historians build explanations about the past?",
           "choices": [
             "Historians develop focused questions, gather relevant evidence, build claims, consider context and perspective, and revise explanations when evidence changes.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Historical Questions, Claims, and Evidence\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Historical Questions, Claims, and Evidence\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G4SS-W01-T1",
-          "prompt": "Which method best transfers the learning from \"Historical Questions, Claims, and Evidence\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Historical Questions, Claims, and Evidence\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare a map, artifact image, quotation, and timeline about one historical topic.",
+            "Choose a conclusion about \"Historical Questions, Claims, and Evidence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G4SS-W01-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Historical Questions, Claims, and Evidence\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Historical Questions, Claims, and Evidence\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Corroborate two sources and note agreement, conflict, and missing information.",
+            "Use an unsourced statement about \"Historical Questions, Claims, and Evidence\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Historical Questions, Claims, and Evidence\".",
+            "Use only evidence that agrees with the first guess about \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G4SS-W01-P1",
-          "prompt": "When sources about \"Historical Questions, Claims, and Evidence\" differ, the best next step is to...",
+          "prompt": "When investigating \"Historical Questions, Claims, and Evidence\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Historical Questions, Claims, and Evidence\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Historical Questions, Claims, and Evidence\".",
+            "Use only evidence that agrees with the first guess about \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G4SS-W01-A1",
-          "prompt": "Before making a conclusion about \"Historical Questions, Claims, and Evidence\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Historical Questions, Claims, and Evidence\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a short historical claim with evidence, context, and one limitation.",
+            "Choose a conclusion about \"Historical Questions, Claims, and Evidence\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 1
         },
         {
           "id": "G4SS-W01-R1",
-          "prompt": "Which revision habit best improves work on \"Historical Questions, Claims, and Evidence\"?",
+          "prompt": "A learner's first explanation of \"Historical Questions, Claims, and Evidence\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Historians develop focused questions, gather relevant evidence, build claims, consider context and perspective, and revise explanations when evidence changes.",
+            "The topic \"Historical Questions, Claims, and Evidence\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Historical Questions, Claims, and Evidence\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Historical Questions, Claims, and Evidence\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 1
         }
       ]
@@ -597,80 +598,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W02-S1",
-          "prompt": "Which statement best summarizes \"Primary, Secondary, and Archival Sources\"?",
+          "prompt": "How do source type, creator, purpose, and audience affect historical evidence?",
           "choices": [
             "Primary and secondary sources can both be valuable; reliability depends on the question, creator, purpose, context, evidence, and corroboration rather than source type alone.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Primary, Secondary, and Archival Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Primary, Secondary, and Archival Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G4SS-W02-T1",
-          "prompt": "Which method best transfers the learning from \"Primary, Secondary, and Archival Sources\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Primary, Secondary, and Archival Sources\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Use creator-date-purpose-audience-evidence questions on a short source set.",
+            "Choose a conclusion about \"Primary, Secondary, and Archival Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G4SS-W02-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Primary, Secondary, and Archival Sources\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Primary, Secondary, and Archival Sources\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Compare a primary source with a later interpretation of the same event.",
+            "Use an unsourced statement about \"Primary, Secondary, and Archival Sources\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Primary, Secondary, and Archival Sources\".",
+            "Use only evidence that agrees with the first guess about \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G4SS-W02-P1",
-          "prompt": "When sources about \"Primary, Secondary, and Archival Sources\" differ, the best next step is to...",
+          "prompt": "When investigating \"Primary, Secondary, and Archival Sources\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Primary, Secondary, and Archival Sources\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Primary, Secondary, and Archival Sources\".",
+            "Use only evidence that agrees with the first guess about \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G4SS-W02-A1",
-          "prompt": "Before making a conclusion about \"Primary, Secondary, and Archival Sources\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Primary, Secondary, and Archival Sources\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Build an archive/source card explaining what each source can and cannot establish.",
+            "Choose a conclusion about \"Primary, Secondary, and Archival Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G4SS-W02-R1",
-          "prompt": "Which revision habit best improves work on \"Primary, Secondary, and Archival Sources\"?",
+          "prompt": "A learner's first explanation of \"Primary, Secondary, and Archival Sources\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Primary and secondary sources can both be valuable; reliability depends on the question, creator, purpose, context, evidence, and corroboration rather than source type alone.",
+            "The topic \"Primary, Secondary, and Archival Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Primary, Secondary, and Archival Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 2
         }
       ],
@@ -755,80 +756,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W02-S1",
-          "prompt": "Which statement best summarizes \"Primary, Secondary, and Archival Sources\"?",
+          "prompt": "How do source type, creator, purpose, and audience affect historical evidence?",
           "choices": [
             "Primary and secondary sources can both be valuable; reliability depends on the question, creator, purpose, context, evidence, and corroboration rather than source type alone.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Primary, Secondary, and Archival Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Primary, Secondary, and Archival Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G4SS-W02-T1",
-          "prompt": "Which method best transfers the learning from \"Primary, Secondary, and Archival Sources\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Primary, Secondary, and Archival Sources\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Use creator-date-purpose-audience-evidence questions on a short source set.",
+            "Choose a conclusion about \"Primary, Secondary, and Archival Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G4SS-W02-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Primary, Secondary, and Archival Sources\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Primary, Secondary, and Archival Sources\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Compare a primary source with a later interpretation of the same event.",
+            "Use an unsourced statement about \"Primary, Secondary, and Archival Sources\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Primary, Secondary, and Archival Sources\".",
+            "Use only evidence that agrees with the first guess about \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G4SS-W02-P1",
-          "prompt": "When sources about \"Primary, Secondary, and Archival Sources\" differ, the best next step is to...",
+          "prompt": "When investigating \"Primary, Secondary, and Archival Sources\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Primary, Secondary, and Archival Sources\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Primary, Secondary, and Archival Sources\".",
+            "Use only evidence that agrees with the first guess about \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G4SS-W02-A1",
-          "prompt": "Before making a conclusion about \"Primary, Secondary, and Archival Sources\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Primary, Secondary, and Archival Sources\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Build an archive/source card explaining what each source can and cannot establish.",
+            "Choose a conclusion about \"Primary, Secondary, and Archival Sources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
           "id": "G4SS-W02-R1",
-          "prompt": "Which revision habit best improves work on \"Primary, Secondary, and Archival Sources\"?",
+          "prompt": "A learner's first explanation of \"Primary, Secondary, and Archival Sources\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Primary and secondary sources can both be valuable; reliability depends on the question, creator, purpose, context, evidence, and corroboration rather than source type alone.",
+            "The topic \"Primary, Secondary, and Archival Sources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Primary, Secondary, and Archival Sources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Primary, Secondary, and Archival Sources\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 2
         },
         {
@@ -1002,80 +1003,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W03-S1",
-          "prompt": "Which statement best summarizes \"Chronology, Cause, Effect, and Multiple Perspectives\"?",
+          "prompt": "How can chronology and perspective improve explanations of historical change?",
           "choices": [
             "Historical events unfold in sequence and usually have multiple causes, consequences, and perspectives; one source or one cause rarely explains a complex change completely.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Chronology, Cause, Effect, and Multiple Perspectives\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Chronology, Cause, Effect, and Multiple Perspectives\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G4SS-W03-T1",
-          "prompt": "Which method best transfers the learning from \"Chronology, Cause, Effect, and Multiple Perspectives\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Chronology, Cause, Effect, and Multiple Perspectives\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Create a multi-cause/multi-effect organizer rather than a single-cause chain.",
+            "Choose a conclusion about \"Chronology, Cause, Effect, and Multiple Perspectives\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G4SS-W03-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Chronology, Cause, Effect, and Multiple Perspectives\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Chronology, Cause, Effect, and Multiple Perspectives\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Compare perspectives from people differently affected by the same event.",
+            "Use an unsourced statement about \"Chronology, Cause, Effect, and Multiple Perspectives\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Chronology, Cause, Effect, and Multiple Perspectives\".",
+            "Use only evidence that agrees with the first guess about \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G4SS-W03-P1",
-          "prompt": "When sources about \"Chronology, Cause, Effect, and Multiple Perspectives\" differ, the best next step is to...",
+          "prompt": "When investigating \"Chronology, Cause, Effect, and Multiple Perspectives\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Chronology, Cause, Effect, and Multiple Perspectives\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Chronology, Cause, Effect, and Multiple Perspectives\".",
+            "Use only evidence that agrees with the first guess about \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G4SS-W03-A1",
-          "prompt": "Before making a conclusion about \"Chronology, Cause, Effect, and Multiple Perspectives\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Chronology, Cause, Effect, and Multiple Perspectives\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write an explanation distinguishing sequence, cause, consequence, and perspective.",
+            "Choose a conclusion about \"Chronology, Cause, Effect, and Multiple Perspectives\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G4SS-W03-R1",
-          "prompt": "Which revision habit best improves work on \"Chronology, Cause, Effect, and Multiple Perspectives\"?",
+          "prompt": "A learner's first explanation of \"Chronology, Cause, Effect, and Multiple Perspectives\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Historical events unfold in sequence and usually have multiple causes, consequences, and perspectives; one source or one cause rarely explains a complex change completely.",
+            "The topic \"Chronology, Cause, Effect, and Multiple Perspectives\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Chronology, Cause, Effect, and Multiple Perspectives\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 3
         }
       ],
@@ -1160,80 +1161,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W03-S1",
-          "prompt": "Which statement best summarizes \"Chronology, Cause, Effect, and Multiple Perspectives\"?",
+          "prompt": "How can chronology and perspective improve explanations of historical change?",
           "choices": [
             "Historical events unfold in sequence and usually have multiple causes, consequences, and perspectives; one source or one cause rarely explains a complex change completely.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Chronology, Cause, Effect, and Multiple Perspectives\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Chronology, Cause, Effect, and Multiple Perspectives\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G4SS-W03-T1",
-          "prompt": "Which method best transfers the learning from \"Chronology, Cause, Effect, and Multiple Perspectives\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Chronology, Cause, Effect, and Multiple Perspectives\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Create a multi-cause/multi-effect organizer rather than a single-cause chain.",
+            "Choose a conclusion about \"Chronology, Cause, Effect, and Multiple Perspectives\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G4SS-W03-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Chronology, Cause, Effect, and Multiple Perspectives\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Chronology, Cause, Effect, and Multiple Perspectives\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Compare perspectives from people differently affected by the same event.",
+            "Use an unsourced statement about \"Chronology, Cause, Effect, and Multiple Perspectives\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Chronology, Cause, Effect, and Multiple Perspectives\".",
+            "Use only evidence that agrees with the first guess about \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G4SS-W03-P1",
-          "prompt": "When sources about \"Chronology, Cause, Effect, and Multiple Perspectives\" differ, the best next step is to...",
+          "prompt": "When investigating \"Chronology, Cause, Effect, and Multiple Perspectives\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Chronology, Cause, Effect, and Multiple Perspectives\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Chronology, Cause, Effect, and Multiple Perspectives\".",
+            "Use only evidence that agrees with the first guess about \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G4SS-W03-A1",
-          "prompt": "Before making a conclusion about \"Chronology, Cause, Effect, and Multiple Perspectives\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Chronology, Cause, Effect, and Multiple Perspectives\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write an explanation distinguishing sequence, cause, consequence, and perspective.",
+            "Choose a conclusion about \"Chronology, Cause, Effect, and Multiple Perspectives\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
           "id": "G4SS-W03-R1",
-          "prompt": "Which revision habit best improves work on \"Chronology, Cause, Effect, and Multiple Perspectives\"?",
+          "prompt": "A learner's first explanation of \"Chronology, Cause, Effect, and Multiple Perspectives\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Historical events unfold in sequence and usually have multiple causes, consequences, and perspectives; one source or one cause rarely explains a complex change completely.",
+            "The topic \"Chronology, Cause, Effect, and Multiple Perspectives\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Chronology, Cause, Effect, and Multiple Perspectives\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Chronology, Cause, Effect, and Multiple Perspectives\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 3
         },
         {
@@ -1433,80 +1434,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W04-S1",
-          "prompt": "Which statement best summarizes \"Local and State History Research Lab\"?",
+          "prompt": "How can public sources help us reconstruct the history of a state and local community?",
           "choices": [
             "Local and state history can be investigated with archives, tribal sources, maps, newspapers, photographs, public records, oral histories, historic sites, and demographic/economic data while protecting learner privacy.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Local and State History Research Lab\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Local and State History Research Lab\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G4SS-W04-T1",
-          "prompt": "Which method best transfers the learning from \"Local and State History Research Lab\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Local and State History Research Lab\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Identify a local/state archive, library, museum, tribal source, historic site, or public-record collection.",
+            "Choose a conclusion about \"Local and State History Research Lab\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G4SS-W04-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Local and State History Research Lab\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Local and State History Research Lab\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Corroborate at least three source types and map one location connected to the inquiry.",
+            "Use an unsourced statement about \"Local and State History Research Lab\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Local and State History Research Lab\".",
+            "Use only evidence that agrees with the first guess about \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G4SS-W04-P1",
-          "prompt": "When sources about \"Local and State History Research Lab\" differ, the best next step is to...",
+          "prompt": "When investigating \"Local and State History Research Lab\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Local and State History Research Lab\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Local and State History Research Lab\".",
+            "Use only evidence that agrees with the first guess about \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G4SS-W04-A1",
-          "prompt": "Before making a conclusion about \"Local and State History Research Lab\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Local and State History Research Lab\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a mini exhibit with claim, chronology, citations, uncertainty, and a question for later research.",
+            "Choose a conclusion about \"Local and State History Research Lab\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G4SS-W04-R1",
-          "prompt": "Which revision habit best improves work on \"Local and State History Research Lab\"?",
+          "prompt": "A learner's first explanation of \"Local and State History Research Lab\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Local and state history can be investigated with archives, tribal sources, maps, newspapers, photographs, public records, oral histories, historic sites, and demographic/economic data while protecting learner privacy.",
+            "The topic \"Local and State History Research Lab\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Local and State History Research Lab\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 4
         }
       ],
@@ -1591,80 +1592,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W04-S1",
-          "prompt": "Which statement best summarizes \"Local and State History Research Lab\"?",
+          "prompt": "How can public sources help us reconstruct the history of a state and local community?",
           "choices": [
             "Local and state history can be investigated with archives, tribal sources, maps, newspapers, photographs, public records, oral histories, historic sites, and demographic/economic data while protecting learner privacy.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Local and State History Research Lab\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Local and State History Research Lab\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G4SS-W04-T1",
-          "prompt": "Which method best transfers the learning from \"Local and State History Research Lab\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Local and State History Research Lab\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Identify a local/state archive, library, museum, tribal source, historic site, or public-record collection.",
+            "Choose a conclusion about \"Local and State History Research Lab\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G4SS-W04-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Local and State History Research Lab\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Local and State History Research Lab\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Corroborate at least three source types and map one location connected to the inquiry.",
+            "Use an unsourced statement about \"Local and State History Research Lab\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Local and State History Research Lab\".",
+            "Use only evidence that agrees with the first guess about \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G4SS-W04-P1",
-          "prompt": "When sources about \"Local and State History Research Lab\" differ, the best next step is to...",
+          "prompt": "When investigating \"Local and State History Research Lab\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Local and State History Research Lab\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Local and State History Research Lab\".",
+            "Use only evidence that agrees with the first guess about \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G4SS-W04-A1",
-          "prompt": "Before making a conclusion about \"Local and State History Research Lab\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Local and State History Research Lab\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a mini exhibit with claim, chronology, citations, uncertainty, and a question for later research.",
+            "Choose a conclusion about \"Local and State History Research Lab\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
           "id": "G4SS-W04-R1",
-          "prompt": "Which revision habit best improves work on \"Local and State History Research Lab\"?",
+          "prompt": "A learner's first explanation of \"Local and State History Research Lab\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Local and state history can be investigated with archives, tribal sources, maps, newspapers, photographs, public records, oral histories, historic sites, and demographic/economic data while protecting learner privacy.",
+            "The topic \"Local and State History Research Lab\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Local and State History Research Lab\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Local and State History Research Lab\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 4
         },
         {
@@ -1864,80 +1865,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W05-S1",
-          "prompt": "Which statement best summarizes \"Latitude, Longitude, Scale, and Thematic Maps\"?",
+          "prompt": "How do advanced map tools help us analyze states and regions?",
           "choices": [
             "Latitude, longitude, scale, physical/political/thematic maps, and spatial data help explain location and patterns; maps are representations shaped by purpose, date, and design choices.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Latitude, Longitude, Scale, and Thematic Maps\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Latitude, Longitude, Scale, and Thematic Maps\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G4SS-W05-T1",
-          "prompt": "Which method best transfers the learning from \"Latitude, Longitude, Scale, and Thematic Maps\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Latitude, Longitude, Scale, and Thematic Maps\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare physical, political, historical, and thematic maps of the same state.",
+            "Choose a conclusion about \"Latitude, Longitude, Scale, and Thematic Maps\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G4SS-W05-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Latitude, Longitude, Scale, and Thematic Maps\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Latitude, Longitude, Scale, and Thematic Maps\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Use scale to estimate distance and route choices.",
+            "Use an unsourced statement about \"Latitude, Longitude, Scale, and Thematic Maps\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Latitude, Longitude, Scale, and Thematic Maps\".",
+            "Use only evidence that agrees with the first guess about \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G4SS-W05-P1",
-          "prompt": "When sources about \"Latitude, Longitude, Scale, and Thematic Maps\" differ, the best next step is to...",
+          "prompt": "When investigating \"Latitude, Longitude, Scale, and Thematic Maps\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Latitude, Longitude, Scale, and Thematic Maps\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Latitude, Longitude, Scale, and Thematic Maps\".",
+            "Use only evidence that agrees with the first guess about \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G4SS-W05-A1",
-          "prompt": "Before making a conclusion about \"Latitude, Longitude, Scale, and Thematic Maps\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Latitude, Longitude, Scale, and Thematic Maps\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a spatial claim using two maps and explain why date/purpose matter.",
+            "Choose a conclusion about \"Latitude, Longitude, Scale, and Thematic Maps\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G4SS-W05-R1",
-          "prompt": "Which revision habit best improves work on \"Latitude, Longitude, Scale, and Thematic Maps\"?",
+          "prompt": "A learner's first explanation of \"Latitude, Longitude, Scale, and Thematic Maps\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Latitude, longitude, scale, physical/political/thematic maps, and spatial data help explain location and patterns; maps are representations shaped by purpose, date, and design choices.",
+            "The topic \"Latitude, Longitude, Scale, and Thematic Maps\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Latitude, Longitude, Scale, and Thematic Maps\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 5
         }
       ],
@@ -2022,80 +2023,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W05-S1",
-          "prompt": "Which statement best summarizes \"Latitude, Longitude, Scale, and Thematic Maps\"?",
+          "prompt": "How do advanced map tools help us analyze states and regions?",
           "choices": [
             "Latitude, longitude, scale, physical/political/thematic maps, and spatial data help explain location and patterns; maps are representations shaped by purpose, date, and design choices.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Latitude, Longitude, Scale, and Thematic Maps\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Latitude, Longitude, Scale, and Thematic Maps\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G4SS-W05-T1",
-          "prompt": "Which method best transfers the learning from \"Latitude, Longitude, Scale, and Thematic Maps\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Latitude, Longitude, Scale, and Thematic Maps\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare physical, political, historical, and thematic maps of the same state.",
+            "Choose a conclusion about \"Latitude, Longitude, Scale, and Thematic Maps\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G4SS-W05-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Latitude, Longitude, Scale, and Thematic Maps\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Latitude, Longitude, Scale, and Thematic Maps\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Use scale to estimate distance and route choices.",
+            "Use an unsourced statement about \"Latitude, Longitude, Scale, and Thematic Maps\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Latitude, Longitude, Scale, and Thematic Maps\".",
+            "Use only evidence that agrees with the first guess about \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G4SS-W05-P1",
-          "prompt": "When sources about \"Latitude, Longitude, Scale, and Thematic Maps\" differ, the best next step is to...",
+          "prompt": "When investigating \"Latitude, Longitude, Scale, and Thematic Maps\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Latitude, Longitude, Scale, and Thematic Maps\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Latitude, Longitude, Scale, and Thematic Maps\".",
+            "Use only evidence that agrees with the first guess about \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G4SS-W05-A1",
-          "prompt": "Before making a conclusion about \"Latitude, Longitude, Scale, and Thematic Maps\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Latitude, Longitude, Scale, and Thematic Maps\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a spatial claim using two maps and explain why date/purpose matter.",
+            "Choose a conclusion about \"Latitude, Longitude, Scale, and Thematic Maps\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
           "id": "G4SS-W05-R1",
-          "prompt": "Which revision habit best improves work on \"Latitude, Longitude, Scale, and Thematic Maps\"?",
+          "prompt": "A learner's first explanation of \"Latitude, Longitude, Scale, and Thematic Maps\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Latitude, longitude, scale, physical/political/thematic maps, and spatial data help explain location and patterns; maps are representations shaped by purpose, date, and design choices.",
+            "The topic \"Latitude, Longitude, Scale, and Thematic Maps\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Latitude, Longitude, Scale, and Thematic Maps\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Latitude, Longitude, Scale, and Thematic Maps\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 5
         },
         {
@@ -2295,80 +2296,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W06-S1",
-          "prompt": "Which statement best summarizes \"Regions, Landforms, Climate, and Resources\"?",
+          "prompt": "How do physical geography and resources influence—but not determine—state development?",
           "choices": [
             "Landforms, climate, water, soils, hazards, and resources influence settlement and economic activity, but technology, policy, culture, migration, markets, and history also shape development.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Regions, Landforms, Climate, and Resources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Regions, Landforms, Climate, and Resources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G4SS-W06-T1",
-          "prompt": "Which method best transfers the learning from \"Regions, Landforms, Climate, and Resources\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Regions, Landforms, Climate, and Resources\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare two state regions using physical and human geography.",
+            "Choose a conclusion about \"Regions, Landforms, Climate, and Resources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G4SS-W06-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Regions, Landforms, Climate, and Resources\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Regions, Landforms, Climate, and Resources\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze settlement/economic patterns using environment plus transportation, policy, labor, and history.",
+            "Use an unsourced statement about \"Regions, Landforms, Climate, and Resources\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Regions, Landforms, Climate, and Resources\".",
+            "Use only evidence that agrees with the first guess about \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G4SS-W06-P1",
-          "prompt": "When sources about \"Regions, Landforms, Climate, and Resources\" differ, the best next step is to...",
+          "prompt": "When investigating \"Regions, Landforms, Climate, and Resources\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Regions, Landforms, Climate, and Resources\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Regions, Landforms, Climate, and Resources\".",
+            "Use only evidence that agrees with the first guess about \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G4SS-W06-A1",
-          "prompt": "Before making a conclusion about \"Regions, Landforms, Climate, and Resources\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Regions, Landforms, Climate, and Resources\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Correct an environmental-determinist explanation by adding human choices and historical factors.",
+            "Choose a conclusion about \"Regions, Landforms, Climate, and Resources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G4SS-W06-R1",
-          "prompt": "Which revision habit best improves work on \"Regions, Landforms, Climate, and Resources\"?",
+          "prompt": "A learner's first explanation of \"Regions, Landforms, Climate, and Resources\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Landforms, climate, water, soils, hazards, and resources influence settlement and economic activity, but technology, policy, culture, migration, markets, and history also shape development.",
+            "The topic \"Regions, Landforms, Climate, and Resources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Regions, Landforms, Climate, and Resources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 6
         }
       ],
@@ -2453,80 +2454,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W06-S1",
-          "prompt": "Which statement best summarizes \"Regions, Landforms, Climate, and Resources\"?",
+          "prompt": "How do physical geography and resources influence—but not determine—state development?",
           "choices": [
             "Landforms, climate, water, soils, hazards, and resources influence settlement and economic activity, but technology, policy, culture, migration, markets, and history also shape development.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Regions, Landforms, Climate, and Resources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Regions, Landforms, Climate, and Resources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G4SS-W06-T1",
-          "prompt": "Which method best transfers the learning from \"Regions, Landforms, Climate, and Resources\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Regions, Landforms, Climate, and Resources\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare two state regions using physical and human geography.",
+            "Choose a conclusion about \"Regions, Landforms, Climate, and Resources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G4SS-W06-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Regions, Landforms, Climate, and Resources\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Regions, Landforms, Climate, and Resources\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze settlement/economic patterns using environment plus transportation, policy, labor, and history.",
+            "Use an unsourced statement about \"Regions, Landforms, Climate, and Resources\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Regions, Landforms, Climate, and Resources\".",
+            "Use only evidence that agrees with the first guess about \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G4SS-W06-P1",
-          "prompt": "When sources about \"Regions, Landforms, Climate, and Resources\" differ, the best next step is to...",
+          "prompt": "When investigating \"Regions, Landforms, Climate, and Resources\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Regions, Landforms, Climate, and Resources\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Regions, Landforms, Climate, and Resources\".",
+            "Use only evidence that agrees with the first guess about \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G4SS-W06-A1",
-          "prompt": "Before making a conclusion about \"Regions, Landforms, Climate, and Resources\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Regions, Landforms, Climate, and Resources\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Correct an environmental-determinist explanation by adding human choices and historical factors.",
+            "Choose a conclusion about \"Regions, Landforms, Climate, and Resources\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
           "id": "G4SS-W06-R1",
-          "prompt": "Which revision habit best improves work on \"Regions, Landforms, Climate, and Resources\"?",
+          "prompt": "A learner's first explanation of \"Regions, Landforms, Climate, and Resources\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Landforms, climate, water, soils, hazards, and resources influence settlement and economic activity, but technology, policy, culture, migration, markets, and history also shape development.",
+            "The topic \"Regions, Landforms, Climate, and Resources\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Regions, Landforms, Climate, and Resources\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Regions, Landforms, Climate, and Resources\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 6
         },
         {
@@ -2726,80 +2727,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W07-S1",
-          "prompt": "Which statement best summarizes \"Human-Environment Interaction, Hazards, and Conservation\"?",
+          "prompt": "How do communities adapt to environments, manage hazards, and debate resource use?",
           "choices": [
             "People change environments and adapt to hazards through infrastructure, engineering, planning, conservation, regulation, and individual/community choices that involve benefits, costs, and unequal effects.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Human-Environment Interaction, Hazards, and Conservation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Human-Environment Interaction, Hazards, and Conservation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G4SS-W07-T1",
-          "prompt": "Which method best transfers the learning from \"Human-Environment Interaction, Hazards, and Conservation\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Human-Environment Interaction, Hazards, and Conservation\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare historical and current responses to a hazard or resource issue.",
+            "Choose a conclusion about \"Human-Environment Interaction, Hazards, and Conservation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G4SS-W07-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Human-Environment Interaction, Hazards, and Conservation\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Human-Environment Interaction, Hazards, and Conservation\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Evaluate a fictional infrastructure or conservation proposal using stakeholders and tradeoffs.",
+            "Use an unsourced statement about \"Human-Environment Interaction, Hazards, and Conservation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Human-Environment Interaction, Hazards, and Conservation\".",
+            "Use only evidence that agrees with the first guess about \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G4SS-W07-P1",
-          "prompt": "When sources about \"Human-Environment Interaction, Hazards, and Conservation\" differ, the best next step is to...",
+          "prompt": "When investigating \"Human-Environment Interaction, Hazards, and Conservation\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Human-Environment Interaction, Hazards, and Conservation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Human-Environment Interaction, Hazards, and Conservation\".",
+            "Use only evidence that agrees with the first guess about \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G4SS-W07-A1",
-          "prompt": "Before making a conclusion about \"Human-Environment Interaction, Hazards, and Conservation\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Human-Environment Interaction, Hazards, and Conservation\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a resilience plan with evidence, costs, benefits, and unanswered questions.",
+            "Choose a conclusion about \"Human-Environment Interaction, Hazards, and Conservation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G4SS-W07-R1",
-          "prompt": "Which revision habit best improves work on \"Human-Environment Interaction, Hazards, and Conservation\"?",
+          "prompt": "A learner's first explanation of \"Human-Environment Interaction, Hazards, and Conservation\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "People change environments and adapt to hazards through infrastructure, engineering, planning, conservation, regulation, and individual/community choices that involve benefits, costs, and unequal effects.",
+            "The topic \"Human-Environment Interaction, Hazards, and Conservation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Human-Environment Interaction, Hazards, and Conservation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 7
         }
       ],
@@ -2884,80 +2885,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W07-S1",
-          "prompt": "Which statement best summarizes \"Human-Environment Interaction, Hazards, and Conservation\"?",
+          "prompt": "How do communities adapt to environments, manage hazards, and debate resource use?",
           "choices": [
             "People change environments and adapt to hazards through infrastructure, engineering, planning, conservation, regulation, and individual/community choices that involve benefits, costs, and unequal effects.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Human-Environment Interaction, Hazards, and Conservation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Human-Environment Interaction, Hazards, and Conservation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G4SS-W07-T1",
-          "prompt": "Which method best transfers the learning from \"Human-Environment Interaction, Hazards, and Conservation\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Human-Environment Interaction, Hazards, and Conservation\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare historical and current responses to a hazard or resource issue.",
+            "Choose a conclusion about \"Human-Environment Interaction, Hazards, and Conservation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G4SS-W07-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Human-Environment Interaction, Hazards, and Conservation\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Human-Environment Interaction, Hazards, and Conservation\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Evaluate a fictional infrastructure or conservation proposal using stakeholders and tradeoffs.",
+            "Use an unsourced statement about \"Human-Environment Interaction, Hazards, and Conservation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Human-Environment Interaction, Hazards, and Conservation\".",
+            "Use only evidence that agrees with the first guess about \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G4SS-W07-P1",
-          "prompt": "When sources about \"Human-Environment Interaction, Hazards, and Conservation\" differ, the best next step is to...",
+          "prompt": "When investigating \"Human-Environment Interaction, Hazards, and Conservation\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Human-Environment Interaction, Hazards, and Conservation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Human-Environment Interaction, Hazards, and Conservation\".",
+            "Use only evidence that agrees with the first guess about \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G4SS-W07-A1",
-          "prompt": "Before making a conclusion about \"Human-Environment Interaction, Hazards, and Conservation\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Human-Environment Interaction, Hazards, and Conservation\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a resilience plan with evidence, costs, benefits, and unanswered questions.",
+            "Choose a conclusion about \"Human-Environment Interaction, Hazards, and Conservation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
           "id": "G4SS-W07-R1",
-          "prompt": "Which revision habit best improves work on \"Human-Environment Interaction, Hazards, and Conservation\"?",
+          "prompt": "A learner's first explanation of \"Human-Environment Interaction, Hazards, and Conservation\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "People change environments and adapt to hazards through infrastructure, engineering, planning, conservation, regulation, and individual/community choices that involve benefits, costs, and unequal effects.",
+            "The topic \"Human-Environment Interaction, Hazards, and Conservation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Human-Environment Interaction, Hazards, and Conservation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Human-Environment Interaction, Hazards, and Conservation\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 7
         },
         {
@@ -3157,80 +3158,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W08-S1",
-          "prompt": "Which statement best summarizes \"Transportation, Cities, Rural Areas, and State Connections\"?",
+          "prompt": "How have transportation and infrastructure connected regions and changed communities?",
           "choices": [
             "Roads, rivers, canals, railroads, ports, aviation, and digital networks reshape movement, markets, settlement, land use, migration, and access while creating benefits and costs.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Transportation, Cities, Rural Areas, and State Connections\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Transportation, Cities, Rural Areas, and State Connections\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G4SS-W08-T1",
-          "prompt": "Which method best transfers the learning from \"Transportation, Cities, Rural Areas, and State Connections\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Transportation, Cities, Rural Areas, and State Connections\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare one city/metro area with one rural/small-community region using common evidence categories.",
+            "Choose a conclusion about \"Transportation, Cities, Rural Areas, and State Connections\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G4SS-W08-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Transportation, Cities, Rural Areas, and State Connections\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Transportation, Cities, Rural Areas, and State Connections\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study a historical transportation change and its effect on trade, settlement, or migration.",
+            "Use an unsourced statement about \"Transportation, Cities, Rural Areas, and State Connections\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Transportation, Cities, Rural Areas, and State Connections\".",
+            "Use only evidence that agrees with the first guess about \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G4SS-W08-P1",
-          "prompt": "When sources about \"Transportation, Cities, Rural Areas, and State Connections\" differ, the best next step is to...",
+          "prompt": "When investigating \"Transportation, Cities, Rural Areas, and State Connections\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Transportation, Cities, Rural Areas, and State Connections\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Transportation, Cities, Rural Areas, and State Connections\".",
+            "Use only evidence that agrees with the first guess about \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G4SS-W08-A1",
-          "prompt": "Before making a conclusion about \"Transportation, Cities, Rural Areas, and State Connections\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Transportation, Cities, Rural Areas, and State Connections\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a before/after explanation including who gained access and who faced new costs or disruption.",
+            "Choose a conclusion about \"Transportation, Cities, Rural Areas, and State Connections\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G4SS-W08-R1",
-          "prompt": "Which revision habit best improves work on \"Transportation, Cities, Rural Areas, and State Connections\"?",
+          "prompt": "A learner's first explanation of \"Transportation, Cities, Rural Areas, and State Connections\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Roads, rivers, canals, railroads, ports, aviation, and digital networks reshape movement, markets, settlement, land use, migration, and access while creating benefits and costs.",
+            "The topic \"Transportation, Cities, Rural Areas, and State Connections\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Transportation, Cities, Rural Areas, and State Connections\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 8
         }
       ],
@@ -3315,80 +3316,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W08-S1",
-          "prompt": "Which statement best summarizes \"Transportation, Cities, Rural Areas, and State Connections\"?",
+          "prompt": "How have transportation and infrastructure connected regions and changed communities?",
           "choices": [
             "Roads, rivers, canals, railroads, ports, aviation, and digital networks reshape movement, markets, settlement, land use, migration, and access while creating benefits and costs.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Transportation, Cities, Rural Areas, and State Connections\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Transportation, Cities, Rural Areas, and State Connections\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G4SS-W08-T1",
-          "prompt": "Which method best transfers the learning from \"Transportation, Cities, Rural Areas, and State Connections\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Transportation, Cities, Rural Areas, and State Connections\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare one city/metro area with one rural/small-community region using common evidence categories.",
+            "Choose a conclusion about \"Transportation, Cities, Rural Areas, and State Connections\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G4SS-W08-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Transportation, Cities, Rural Areas, and State Connections\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Transportation, Cities, Rural Areas, and State Connections\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study a historical transportation change and its effect on trade, settlement, or migration.",
+            "Use an unsourced statement about \"Transportation, Cities, Rural Areas, and State Connections\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Transportation, Cities, Rural Areas, and State Connections\".",
+            "Use only evidence that agrees with the first guess about \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G4SS-W08-P1",
-          "prompt": "When sources about \"Transportation, Cities, Rural Areas, and State Connections\" differ, the best next step is to...",
+          "prompt": "When investigating \"Transportation, Cities, Rural Areas, and State Connections\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Transportation, Cities, Rural Areas, and State Connections\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Transportation, Cities, Rural Areas, and State Connections\".",
+            "Use only evidence that agrees with the first guess about \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G4SS-W08-A1",
-          "prompt": "Before making a conclusion about \"Transportation, Cities, Rural Areas, and State Connections\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Transportation, Cities, Rural Areas, and State Connections\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a before/after explanation including who gained access and who faced new costs or disruption.",
+            "Choose a conclusion about \"Transportation, Cities, Rural Areas, and State Connections\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
           "id": "G4SS-W08-R1",
-          "prompt": "Which revision habit best improves work on \"Transportation, Cities, Rural Areas, and State Connections\"?",
+          "prompt": "A learner's first explanation of \"Transportation, Cities, Rural Areas, and State Connections\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Roads, rivers, canals, railroads, ports, aviation, and digital networks reshape movement, markets, settlement, land use, migration, and access while creating benefits and costs.",
+            "The topic \"Transportation, Cities, Rural Areas, and State Connections\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Transportation, Cities, Rural Areas, and State Connections\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Transportation, Cities, Rural Areas, and State Connections\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 8
         },
         {
@@ -3588,80 +3589,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W09-S1",
-          "prompt": "Which statement best summarizes \"Indigenous Nations, Homelands, and Sovereignty\"?",
+          "prompt": "How should fourth graders study Indigenous histories before and after colonization?",
           "choices": [
             "Indigenous nations are diverse, living political and cultural communities with specific homelands, governments, economies, languages, histories, and continuing sovereignty.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Indigenous Nations, Homelands, and Sovereignty\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Nations, Homelands, and Sovereignty\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G4SS-W09-T1",
-          "prompt": "Which method best transfers the learning from \"Indigenous Nations, Homelands, and Sovereignty\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Indigenous Nations, Homelands, and Sovereignty\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare nation-specific governance, economy, language, and environmental relationships.",
+            "Choose a conclusion about \"Indigenous Nations, Homelands, and Sovereignty\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G4SS-W09-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Indigenous Nations, Homelands, and Sovereignty\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Indigenous Nations, Homelands, and Sovereignty\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze a tribal-nation or museum source alongside an outside historical source.",
+            "Use an unsourced statement about \"Indigenous Nations, Homelands, and Sovereignty\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Indigenous Nations, Homelands, and Sovereignty\".",
+            "Use only evidence that agrees with the first guess about \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G4SS-W09-P1",
-          "prompt": "When sources about \"Indigenous Nations, Homelands, and Sovereignty\" differ, the best next step is to...",
+          "prompt": "When investigating \"Indigenous Nations, Homelands, and Sovereignty\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Indigenous Nations, Homelands, and Sovereignty\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Indigenous Nations, Homelands, and Sovereignty\".",
+            "Use only evidence that agrees with the first guess about \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G4SS-W09-A1",
-          "prompt": "Before making a conclusion about \"Indigenous Nations, Homelands, and Sovereignty\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Indigenous Nations, Homelands, and Sovereignty\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a past-present profile explicitly showing continuity, change, and sovereignty.",
+            "Choose a conclusion about \"Indigenous Nations, Homelands, and Sovereignty\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G4SS-W09-R1",
-          "prompt": "Which revision habit best improves work on \"Indigenous Nations, Homelands, and Sovereignty\"?",
+          "prompt": "A learner's first explanation of \"Indigenous Nations, Homelands, and Sovereignty\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Indigenous nations are diverse, living political and cultural communities with specific homelands, governments, economies, languages, histories, and continuing sovereignty.",
+            "The topic \"Indigenous Nations, Homelands, and Sovereignty\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Nations, Homelands, and Sovereignty\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 9
         }
       ],
@@ -3746,80 +3747,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W09-S1",
-          "prompt": "Which statement best summarizes \"Indigenous Nations, Homelands, and Sovereignty\"?",
+          "prompt": "How should fourth graders study Indigenous histories before and after colonization?",
           "choices": [
             "Indigenous nations are diverse, living political and cultural communities with specific homelands, governments, economies, languages, histories, and continuing sovereignty.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Indigenous Nations, Homelands, and Sovereignty\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Nations, Homelands, and Sovereignty\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G4SS-W09-T1",
-          "prompt": "Which method best transfers the learning from \"Indigenous Nations, Homelands, and Sovereignty\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Indigenous Nations, Homelands, and Sovereignty\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare nation-specific governance, economy, language, and environmental relationships.",
+            "Choose a conclusion about \"Indigenous Nations, Homelands, and Sovereignty\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G4SS-W09-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Indigenous Nations, Homelands, and Sovereignty\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Indigenous Nations, Homelands, and Sovereignty\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze a tribal-nation or museum source alongside an outside historical source.",
+            "Use an unsourced statement about \"Indigenous Nations, Homelands, and Sovereignty\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Indigenous Nations, Homelands, and Sovereignty\".",
+            "Use only evidence that agrees with the first guess about \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G4SS-W09-P1",
-          "prompt": "When sources about \"Indigenous Nations, Homelands, and Sovereignty\" differ, the best next step is to...",
+          "prompt": "When investigating \"Indigenous Nations, Homelands, and Sovereignty\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Indigenous Nations, Homelands, and Sovereignty\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Indigenous Nations, Homelands, and Sovereignty\".",
+            "Use only evidence that agrees with the first guess about \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G4SS-W09-A1",
-          "prompt": "Before making a conclusion about \"Indigenous Nations, Homelands, and Sovereignty\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Indigenous Nations, Homelands, and Sovereignty\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a past-present profile explicitly showing continuity, change, and sovereignty.",
+            "Choose a conclusion about \"Indigenous Nations, Homelands, and Sovereignty\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
           "id": "G4SS-W09-R1",
-          "prompt": "Which revision habit best improves work on \"Indigenous Nations, Homelands, and Sovereignty\"?",
+          "prompt": "A learner's first explanation of \"Indigenous Nations, Homelands, and Sovereignty\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Indigenous nations are diverse, living political and cultural communities with specific homelands, governments, economies, languages, histories, and continuing sovereignty.",
+            "The topic \"Indigenous Nations, Homelands, and Sovereignty\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Nations, Homelands, and Sovereignty\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Nations, Homelands, and Sovereignty\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 9
         },
         {
@@ -4019,80 +4020,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W10-S1",
-          "prompt": "Which statement best summarizes \"Indigenous Economies, Technologies, and Environmental Knowledge\"?",
+          "prompt": "How did Indigenous peoples develop diverse economies and technologies across environments?",
           "choices": [
             "Indigenous economies and technologies reflected sophisticated knowledge, trade networks, governance, agriculture, hunting/fishing, engineering, craft, and environmental relationships that varied by nation and region.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Indigenous Economies, Technologies, and Environmental Knowledge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Economies, Technologies, and Environmental Knowledge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G4SS-W10-T1",
-          "prompt": "Which method best transfers the learning from \"Indigenous Economies, Technologies, and Environmental Knowledge\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Indigenous Economies, Technologies, and Environmental Knowledge\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Map selected precolonial trade networks and resources.",
+            "Choose a conclusion about \"Indigenous Economies, Technologies, and Environmental Knowledge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G4SS-W10-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Indigenous Economies, Technologies, and Environmental Knowledge\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Indigenous Economies, Technologies, and Environmental Knowledge\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze how environment and cultural knowledge interacted without reducing culture to geography.",
+            "Use an unsourced statement about \"Indigenous Economies, Technologies, and Environmental Knowledge\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Indigenous Economies, Technologies, and Environmental Knowledge\".",
+            "Use only evidence that agrees with the first guess about \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G4SS-W10-P1",
-          "prompt": "When sources about \"Indigenous Economies, Technologies, and Environmental Knowledge\" differ, the best next step is to...",
+          "prompt": "When investigating \"Indigenous Economies, Technologies, and Environmental Knowledge\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Indigenous Economies, Technologies, and Environmental Knowledge\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Indigenous Economies, Technologies, and Environmental Knowledge\".",
+            "Use only evidence that agrees with the first guess about \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G4SS-W10-A1",
-          "prompt": "Before making a conclusion about \"Indigenous Economies, Technologies, and Environmental Knowledge\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Indigenous Economies, Technologies, and Environmental Knowledge\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Explain one innovation or system and its evidence, context, and continuity.",
+            "Choose a conclusion about \"Indigenous Economies, Technologies, and Environmental Knowledge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G4SS-W10-R1",
-          "prompt": "Which revision habit best improves work on \"Indigenous Economies, Technologies, and Environmental Knowledge\"?",
+          "prompt": "A learner's first explanation of \"Indigenous Economies, Technologies, and Environmental Knowledge\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Indigenous economies and technologies reflected sophisticated knowledge, trade networks, governance, agriculture, hunting/fishing, engineering, craft, and environmental relationships that varied by nation and region.",
+            "The topic \"Indigenous Economies, Technologies, and Environmental Knowledge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Economies, Technologies, and Environmental Knowledge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 10
         }
       ],
@@ -4177,80 +4178,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W10-S1",
-          "prompt": "Which statement best summarizes \"Indigenous Economies, Technologies, and Environmental Knowledge\"?",
+          "prompt": "How did Indigenous peoples develop diverse economies and technologies across environments?",
           "choices": [
             "Indigenous economies and technologies reflected sophisticated knowledge, trade networks, governance, agriculture, hunting/fishing, engineering, craft, and environmental relationships that varied by nation and region.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Indigenous Economies, Technologies, and Environmental Knowledge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Economies, Technologies, and Environmental Knowledge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G4SS-W10-T1",
-          "prompt": "Which method best transfers the learning from \"Indigenous Economies, Technologies, and Environmental Knowledge\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Indigenous Economies, Technologies, and Environmental Knowledge\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Map selected precolonial trade networks and resources.",
+            "Choose a conclusion about \"Indigenous Economies, Technologies, and Environmental Knowledge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G4SS-W10-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Indigenous Economies, Technologies, and Environmental Knowledge\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Indigenous Economies, Technologies, and Environmental Knowledge\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze how environment and cultural knowledge interacted without reducing culture to geography.",
+            "Use an unsourced statement about \"Indigenous Economies, Technologies, and Environmental Knowledge\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Indigenous Economies, Technologies, and Environmental Knowledge\".",
+            "Use only evidence that agrees with the first guess about \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G4SS-W10-P1",
-          "prompt": "When sources about \"Indigenous Economies, Technologies, and Environmental Knowledge\" differ, the best next step is to...",
+          "prompt": "When investigating \"Indigenous Economies, Technologies, and Environmental Knowledge\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Indigenous Economies, Technologies, and Environmental Knowledge\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Indigenous Economies, Technologies, and Environmental Knowledge\".",
+            "Use only evidence that agrees with the first guess about \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G4SS-W10-A1",
-          "prompt": "Before making a conclusion about \"Indigenous Economies, Technologies, and Environmental Knowledge\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Indigenous Economies, Technologies, and Environmental Knowledge\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Explain one innovation or system and its evidence, context, and continuity.",
+            "Choose a conclusion about \"Indigenous Economies, Technologies, and Environmental Knowledge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
           "id": "G4SS-W10-R1",
-          "prompt": "Which revision habit best improves work on \"Indigenous Economies, Technologies, and Environmental Knowledge\"?",
+          "prompt": "A learner's first explanation of \"Indigenous Economies, Technologies, and Environmental Knowledge\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Indigenous economies and technologies reflected sophisticated knowledge, trade networks, governance, agriculture, hunting/fishing, engineering, craft, and environmental relationships that varied by nation and region.",
+            "The topic \"Indigenous Economies, Technologies, and Environmental Knowledge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Indigenous Economies, Technologies, and Environmental Knowledge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Indigenous Economies, Technologies, and Environmental Knowledge\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 10
         },
         {
@@ -4450,80 +4451,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W11-S1",
-          "prompt": "Which statement best summarizes \"Exploration, Motives, Navigation, and Encounter\"?",
+          "prompt": "Why did explorers travel, and how did encounters connect Europe, Africa, and the Americas?",
           "choices": [
             "Exploration was driven by overlapping political, economic, religious, scientific, and personal motives; encounters created exchange and new connections while also contributing to conquest, disease, coercion, and dispossession.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Exploration, Motives, Navigation, and Encounter\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Exploration, Motives, Navigation, and Encounter\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G4SS-W11-T1",
-          "prompt": "Which method best transfers the learning from \"Exploration, Motives, Navigation, and Encounter\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Exploration, Motives, Navigation, and Encounter\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Use maps/navigation evidence to trace routes and geographic knowledge.",
+            "Choose a conclusion about \"Exploration, Motives, Navigation, and Encounter\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G4SS-W11-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Exploration, Motives, Navigation, and Encounter\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Exploration, Motives, Navigation, and Encounter\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Compare Indigenous and European perspectives on first encounters where sources permit.",
+            "Use an unsourced statement about \"Exploration, Motives, Navigation, and Encounter\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Exploration, Motives, Navigation, and Encounter\".",
+            "Use only evidence that agrees with the first guess about \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G4SS-W11-P1",
-          "prompt": "When sources about \"Exploration, Motives, Navigation, and Encounter\" differ, the best next step is to...",
+          "prompt": "When investigating \"Exploration, Motives, Navigation, and Encounter\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Exploration, Motives, Navigation, and Encounter\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Exploration, Motives, Navigation, and Encounter\".",
+            "Use only evidence that agrees with the first guess about \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G4SS-W11-A1",
-          "prompt": "Before making a conclusion about \"Exploration, Motives, Navigation, and Encounter\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Exploration, Motives, Navigation, and Encounter\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a multi-cause explanation of exploration and a balanced account of encounter consequences.",
+            "Choose a conclusion about \"Exploration, Motives, Navigation, and Encounter\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G4SS-W11-R1",
-          "prompt": "Which revision habit best improves work on \"Exploration, Motives, Navigation, and Encounter\"?",
+          "prompt": "A learner's first explanation of \"Exploration, Motives, Navigation, and Encounter\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Exploration was driven by overlapping political, economic, religious, scientific, and personal motives; encounters created exchange and new connections while also contributing to conquest, disease, coercion, and dispossession.",
+            "The topic \"Exploration, Motives, Navigation, and Encounter\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Exploration, Motives, Navigation, and Encounter\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 11
         }
       ],
@@ -4608,80 +4609,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W11-S1",
-          "prompt": "Which statement best summarizes \"Exploration, Motives, Navigation, and Encounter\"?",
+          "prompt": "Why did explorers travel, and how did encounters connect Europe, Africa, and the Americas?",
           "choices": [
             "Exploration was driven by overlapping political, economic, religious, scientific, and personal motives; encounters created exchange and new connections while also contributing to conquest, disease, coercion, and dispossession.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Exploration, Motives, Navigation, and Encounter\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Exploration, Motives, Navigation, and Encounter\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G4SS-W11-T1",
-          "prompt": "Which method best transfers the learning from \"Exploration, Motives, Navigation, and Encounter\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Exploration, Motives, Navigation, and Encounter\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Use maps/navigation evidence to trace routes and geographic knowledge.",
+            "Choose a conclusion about \"Exploration, Motives, Navigation, and Encounter\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G4SS-W11-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Exploration, Motives, Navigation, and Encounter\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Exploration, Motives, Navigation, and Encounter\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Compare Indigenous and European perspectives on first encounters where sources permit.",
+            "Use an unsourced statement about \"Exploration, Motives, Navigation, and Encounter\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Exploration, Motives, Navigation, and Encounter\".",
+            "Use only evidence that agrees with the first guess about \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G4SS-W11-P1",
-          "prompt": "When sources about \"Exploration, Motives, Navigation, and Encounter\" differ, the best next step is to...",
+          "prompt": "When investigating \"Exploration, Motives, Navigation, and Encounter\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Exploration, Motives, Navigation, and Encounter\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Exploration, Motives, Navigation, and Encounter\".",
+            "Use only evidence that agrees with the first guess about \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G4SS-W11-A1",
-          "prompt": "Before making a conclusion about \"Exploration, Motives, Navigation, and Encounter\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Exploration, Motives, Navigation, and Encounter\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a multi-cause explanation of exploration and a balanced account of encounter consequences.",
+            "Choose a conclusion about \"Exploration, Motives, Navigation, and Encounter\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
           "id": "G4SS-W11-R1",
-          "prompt": "Which revision habit best improves work on \"Exploration, Motives, Navigation, and Encounter\"?",
+          "prompt": "A learner's first explanation of \"Exploration, Motives, Navigation, and Encounter\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Exploration was driven by overlapping political, economic, religious, scientific, and personal motives; encounters created exchange and new connections while also contributing to conquest, disease, coercion, and dispossession.",
+            "The topic \"Exploration, Motives, Navigation, and Encounter\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Exploration, Motives, Navigation, and Encounter\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Exploration, Motives, Navigation, and Encounter\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 11
         },
         {
@@ -4881,80 +4882,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W12-S1",
-          "prompt": "Which statement best summarizes \"Colonization, Missions, Settlements, and Consequences\"?",
+          "prompt": "How did colonization reshape land, labor, government, religion, and Indigenous life?",
           "choices": [
             "Colonization established settlements and institutions but also imposed new political, economic, religious, and labor systems, causing major demographic change, land loss, coercion, resistance, adaptation, and cultural exchange.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Colonization, Missions, Settlements, and Consequences\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonization, Missions, Settlements, and Consequences\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G4SS-W12-T1",
-          "prompt": "Which method best transfers the learning from \"Colonization, Missions, Settlements, and Consequences\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Colonization, Missions, Settlements, and Consequences\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Analyze one mission/settlement/fort/town case using multiple perspectives.",
+            "Choose a conclusion about \"Colonization, Missions, Settlements, and Consequences\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G4SS-W12-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Colonization, Missions, Settlements, and Consequences\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Colonization, Missions, Settlements, and Consequences\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Identify effects on Indigenous land, labor, demography, religion, and governance.",
+            "Use an unsourced statement about \"Colonization, Missions, Settlements, and Consequences\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonization, Missions, Settlements, and Consequences\".",
+            "Use only evidence that agrees with the first guess about \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G4SS-W12-P1",
-          "prompt": "When sources about \"Colonization, Missions, Settlements, and Consequences\" differ, the best next step is to...",
+          "prompt": "When investigating \"Colonization, Missions, Settlements, and Consequences\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Colonization, Missions, Settlements, and Consequences\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonization, Missions, Settlements, and Consequences\".",
+            "Use only evidence that agrees with the first guess about \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G4SS-W12-A1",
-          "prompt": "Before making a conclusion about \"Colonization, Missions, Settlements, and Consequences\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Colonization, Missions, Settlements, and Consequences\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a cause-effect web that distinguishes exchange from coercion and names resistance/adaptation.",
+            "Choose a conclusion about \"Colonization, Missions, Settlements, and Consequences\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G4SS-W12-R1",
-          "prompt": "Which revision habit best improves work on \"Colonization, Missions, Settlements, and Consequences\"?",
+          "prompt": "A learner's first explanation of \"Colonization, Missions, Settlements, and Consequences\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Colonization established settlements and institutions but also imposed new political, economic, religious, and labor systems, causing major demographic change, land loss, coercion, resistance, adaptation, and cultural exchange.",
+            "The topic \"Colonization, Missions, Settlements, and Consequences\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonization, Missions, Settlements, and Consequences\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 12
         }
       ],
@@ -5039,80 +5040,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W12-S1",
-          "prompt": "Which statement best summarizes \"Colonization, Missions, Settlements, and Consequences\"?",
+          "prompt": "How did colonization reshape land, labor, government, religion, and Indigenous life?",
           "choices": [
             "Colonization established settlements and institutions but also imposed new political, economic, religious, and labor systems, causing major demographic change, land loss, coercion, resistance, adaptation, and cultural exchange.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Colonization, Missions, Settlements, and Consequences\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonization, Missions, Settlements, and Consequences\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G4SS-W12-T1",
-          "prompt": "Which method best transfers the learning from \"Colonization, Missions, Settlements, and Consequences\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Colonization, Missions, Settlements, and Consequences\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Analyze one mission/settlement/fort/town case using multiple perspectives.",
+            "Choose a conclusion about \"Colonization, Missions, Settlements, and Consequences\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G4SS-W12-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Colonization, Missions, Settlements, and Consequences\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Colonization, Missions, Settlements, and Consequences\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Identify effects on Indigenous land, labor, demography, religion, and governance.",
+            "Use an unsourced statement about \"Colonization, Missions, Settlements, and Consequences\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonization, Missions, Settlements, and Consequences\".",
+            "Use only evidence that agrees with the first guess about \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G4SS-W12-P1",
-          "prompt": "When sources about \"Colonization, Missions, Settlements, and Consequences\" differ, the best next step is to...",
+          "prompt": "When investigating \"Colonization, Missions, Settlements, and Consequences\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Colonization, Missions, Settlements, and Consequences\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonization, Missions, Settlements, and Consequences\".",
+            "Use only evidence that agrees with the first guess about \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G4SS-W12-A1",
-          "prompt": "Before making a conclusion about \"Colonization, Missions, Settlements, and Consequences\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Colonization, Missions, Settlements, and Consequences\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a cause-effect web that distinguishes exchange from coercion and names resistance/adaptation.",
+            "Choose a conclusion about \"Colonization, Missions, Settlements, and Consequences\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
           "id": "G4SS-W12-R1",
-          "prompt": "Which revision habit best improves work on \"Colonization, Missions, Settlements, and Consequences\"?",
+          "prompt": "A learner's first explanation of \"Colonization, Missions, Settlements, and Consequences\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Colonization established settlements and institutions but also imposed new political, economic, religious, and labor systems, causing major demographic change, land loss, coercion, resistance, adaptation, and cultural exchange.",
+            "The topic \"Colonization, Missions, Settlements, and Consequences\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonization, Missions, Settlements, and Consequences\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonization, Missions, Settlements, and Consequences\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 12
         },
         {
@@ -5312,80 +5313,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W13-S1",
-          "prompt": "Which statement best summarizes \"Colonial Regions, Empires, and Competing Claims\"?",
+          "prompt": "How did geography, empire, Indigenous diplomacy, labor, and trade shape colonial regions?",
           "choices": [
             "Colonial regions developed differently through environment, imperial policy, Indigenous alliances and resistance, migration, labor systems, religion, trade, and conflict.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Colonial Regions, Empires, and Competing Claims\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonial Regions, Empires, and Competing Claims\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G4SS-W13-T1",
-          "prompt": "Which method best transfers the learning from \"Colonial Regions, Empires, and Competing Claims\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Colonial Regions, Empires, and Competing Claims\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Map competing claims and distinguish claimed territory from actual control.",
+            "Choose a conclusion about \"Colonial Regions, Empires, and Competing Claims\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G4SS-W13-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Colonial Regions, Empires, and Competing Claims\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Colonial Regions, Empires, and Competing Claims\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study Indigenous diplomacy/alliance choices as political strategy, not background detail.",
+            "Use an unsourced statement about \"Colonial Regions, Empires, and Competing Claims\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonial Regions, Empires, and Competing Claims\".",
+            "Use only evidence that agrees with the first guess about \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G4SS-W13-P1",
-          "prompt": "When sources about \"Colonial Regions, Empires, and Competing Claims\" differ, the best next step is to...",
+          "prompt": "When investigating \"Colonial Regions, Empires, and Competing Claims\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Colonial Regions, Empires, and Competing Claims\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonial Regions, Empires, and Competing Claims\".",
+            "Use only evidence that agrees with the first guess about \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G4SS-W13-A1",
-          "prompt": "Before making a conclusion about \"Colonial Regions, Empires, and Competing Claims\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Colonial Regions, Empires, and Competing Claims\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a regional comparison explaining similarities, differences, and limits of maps of imperial claims.",
+            "Choose a conclusion about \"Colonial Regions, Empires, and Competing Claims\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G4SS-W13-R1",
-          "prompt": "Which revision habit best improves work on \"Colonial Regions, Empires, and Competing Claims\"?",
+          "prompt": "A learner's first explanation of \"Colonial Regions, Empires, and Competing Claims\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Colonial regions developed differently through environment, imperial policy, Indigenous alliances and resistance, migration, labor systems, religion, trade, and conflict.",
+            "The topic \"Colonial Regions, Empires, and Competing Claims\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonial Regions, Empires, and Competing Claims\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 13
         }
       ],
@@ -5470,80 +5471,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W13-S1",
-          "prompt": "Which statement best summarizes \"Colonial Regions, Empires, and Competing Claims\"?",
+          "prompt": "How did geography, empire, Indigenous diplomacy, labor, and trade shape colonial regions?",
           "choices": [
             "Colonial regions developed differently through environment, imperial policy, Indigenous alliances and resistance, migration, labor systems, religion, trade, and conflict.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Colonial Regions, Empires, and Competing Claims\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonial Regions, Empires, and Competing Claims\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G4SS-W13-T1",
-          "prompt": "Which method best transfers the learning from \"Colonial Regions, Empires, and Competing Claims\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Colonial Regions, Empires, and Competing Claims\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Map competing claims and distinguish claimed territory from actual control.",
+            "Choose a conclusion about \"Colonial Regions, Empires, and Competing Claims\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G4SS-W13-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Colonial Regions, Empires, and Competing Claims\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Colonial Regions, Empires, and Competing Claims\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study Indigenous diplomacy/alliance choices as political strategy, not background detail.",
+            "Use an unsourced statement about \"Colonial Regions, Empires, and Competing Claims\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonial Regions, Empires, and Competing Claims\".",
+            "Use only evidence that agrees with the first guess about \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G4SS-W13-P1",
-          "prompt": "When sources about \"Colonial Regions, Empires, and Competing Claims\" differ, the best next step is to...",
+          "prompt": "When investigating \"Colonial Regions, Empires, and Competing Claims\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Colonial Regions, Empires, and Competing Claims\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonial Regions, Empires, and Competing Claims\".",
+            "Use only evidence that agrees with the first guess about \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G4SS-W13-A1",
-          "prompt": "Before making a conclusion about \"Colonial Regions, Empires, and Competing Claims\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Colonial Regions, Empires, and Competing Claims\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a regional comparison explaining similarities, differences, and limits of maps of imperial claims.",
+            "Choose a conclusion about \"Colonial Regions, Empires, and Competing Claims\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
           "id": "G4SS-W13-R1",
-          "prompt": "Which revision habit best improves work on \"Colonial Regions, Empires, and Competing Claims\"?",
+          "prompt": "A learner's first explanation of \"Colonial Regions, Empires, and Competing Claims\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Colonial regions developed differently through environment, imperial policy, Indigenous alliances and resistance, migration, labor systems, religion, trade, and conflict.",
+            "The topic \"Colonial Regions, Empires, and Competing Claims\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonial Regions, Empires, and Competing Claims\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonial Regions, Empires, and Competing Claims\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 13
         },
         {
@@ -5743,80 +5744,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W14-S1",
-          "prompt": "Which statement best summarizes \"Slavery, Forced Labor, Resistance, and Free Communities\"?",
+          "prompt": "How did forced labor systems shape colonial societies, and how did people resist and build freedom?",
           "choices": [
             "Colonial economies included slavery and other coerced labor systems; enslaved Africans and others maintained families, cultures, skills, resistance, and community-building while free Black communities and allies also challenged slavery.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Slavery, Forced Labor, Resistance, and Free Communities\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Slavery, Forced Labor, Resistance, and Free Communities\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G4SS-W14-T1",
-          "prompt": "Which method best transfers the learning from \"Slavery, Forced Labor, Resistance, and Free Communities\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Slavery, Forced Labor, Resistance, and Free Communities\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Study one state/regional case such as Fort Mose or another free Black community where appropriate.",
+            "Choose a conclusion about \"Slavery, Forced Labor, Resistance, and Free Communities\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G4SS-W14-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Slavery, Forced Labor, Resistance, and Free Communities\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Slavery, Forced Labor, Resistance, and Free Communities\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze resistance through family, culture, escape, petition, military service, law, or community-building.",
+            "Use an unsourced statement about \"Slavery, Forced Labor, Resistance, and Free Communities\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Slavery, Forced Labor, Resistance, and Free Communities\".",
+            "Use only evidence that agrees with the first guess about \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G4SS-W14-P1",
-          "prompt": "When sources about \"Slavery, Forced Labor, Resistance, and Free Communities\" differ, the best next step is to...",
+          "prompt": "When investigating \"Slavery, Forced Labor, Resistance, and Free Communities\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Slavery, Forced Labor, Resistance, and Free Communities\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Slavery, Forced Labor, Resistance, and Free Communities\".",
+            "Use only evidence that agrees with the first guess about \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G4SS-W14-A1",
-          "prompt": "Before making a conclusion about \"Slavery, Forced Labor, Resistance, and Free Communities\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Slavery, Forced Labor, Resistance, and Free Communities\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a source-based explanation distinguishing enslaved people's agency from the injustice of the system.",
+            "Choose a conclusion about \"Slavery, Forced Labor, Resistance, and Free Communities\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G4SS-W14-R1",
-          "prompt": "Which revision habit best improves work on \"Slavery, Forced Labor, Resistance, and Free Communities\"?",
+          "prompt": "A learner's first explanation of \"Slavery, Forced Labor, Resistance, and Free Communities\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Colonial economies included slavery and other coerced labor systems; enslaved Africans and others maintained families, cultures, skills, resistance, and community-building while free Black communities and allies also challenged slavery.",
+            "The topic \"Slavery, Forced Labor, Resistance, and Free Communities\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Slavery, Forced Labor, Resistance, and Free Communities\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 14
         }
       ],
@@ -5901,80 +5902,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W14-S1",
-          "prompt": "Which statement best summarizes \"Slavery, Forced Labor, Resistance, and Free Communities\"?",
+          "prompt": "How did forced labor systems shape colonial societies, and how did people resist and build freedom?",
           "choices": [
             "Colonial economies included slavery and other coerced labor systems; enslaved Africans and others maintained families, cultures, skills, resistance, and community-building while free Black communities and allies also challenged slavery.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Slavery, Forced Labor, Resistance, and Free Communities\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Slavery, Forced Labor, Resistance, and Free Communities\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G4SS-W14-T1",
-          "prompt": "Which method best transfers the learning from \"Slavery, Forced Labor, Resistance, and Free Communities\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Slavery, Forced Labor, Resistance, and Free Communities\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Study one state/regional case such as Fort Mose or another free Black community where appropriate.",
+            "Choose a conclusion about \"Slavery, Forced Labor, Resistance, and Free Communities\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G4SS-W14-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Slavery, Forced Labor, Resistance, and Free Communities\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Slavery, Forced Labor, Resistance, and Free Communities\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze resistance through family, culture, escape, petition, military service, law, or community-building.",
+            "Use an unsourced statement about \"Slavery, Forced Labor, Resistance, and Free Communities\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Slavery, Forced Labor, Resistance, and Free Communities\".",
+            "Use only evidence that agrees with the first guess about \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G4SS-W14-P1",
-          "prompt": "When sources about \"Slavery, Forced Labor, Resistance, and Free Communities\" differ, the best next step is to...",
+          "prompt": "When investigating \"Slavery, Forced Labor, Resistance, and Free Communities\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Slavery, Forced Labor, Resistance, and Free Communities\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Slavery, Forced Labor, Resistance, and Free Communities\".",
+            "Use only evidence that agrees with the first guess about \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G4SS-W14-A1",
-          "prompt": "Before making a conclusion about \"Slavery, Forced Labor, Resistance, and Free Communities\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Slavery, Forced Labor, Resistance, and Free Communities\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a source-based explanation distinguishing enslaved people's agency from the injustice of the system.",
+            "Choose a conclusion about \"Slavery, Forced Labor, Resistance, and Free Communities\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
           "id": "G4SS-W14-R1",
-          "prompt": "Which revision habit best improves work on \"Slavery, Forced Labor, Resistance, and Free Communities\"?",
+          "prompt": "A learner's first explanation of \"Slavery, Forced Labor, Resistance, and Free Communities\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Colonial economies included slavery and other coerced labor systems; enslaved Africans and others maintained families, cultures, skills, resistance, and community-building while free Black communities and allies also challenged slavery.",
+            "The topic \"Slavery, Forced Labor, Resistance, and Free Communities\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Slavery, Forced Labor, Resistance, and Free Communities\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Slavery, Forced Labor, Resistance, and Free Communities\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 14
         },
         {
@@ -6174,80 +6175,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W15-S1",
-          "prompt": "Which statement best summarizes \"Colonial Life, Migration, Religion, and Trade\"?",
+          "prompt": "How did diverse peoples build, change, and contest colonial communities?",
           "choices": [
             "Colonial communities included Indigenous peoples, enslaved and free Africans, European migrants, religious minorities, laborers, merchants, farmers, artisans, and others whose experiences varied by law, region, status, gender, wealth, and time.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Colonial Life, Migration, Religion, and Trade\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonial Life, Migration, Religion, and Trade\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G4SS-W15-T1",
-          "prompt": "Which method best transfers the learning from \"Colonial Life, Migration, Religion, and Trade\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Colonial Life, Migration, Religion, and Trade\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Trace migration and trade routes while distinguishing voluntary from forced movement.",
+            "Choose a conclusion about \"Colonial Life, Migration, Religion, and Trade\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G4SS-W15-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Colonial Life, Migration, Religion, and Trade\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Colonial Life, Migration, Religion, and Trade\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study religion and pluralism descriptively without requiring personal belief disclosure.",
+            "Use an unsourced statement about \"Colonial Life, Migration, Religion, and Trade\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonial Life, Migration, Religion, and Trade\".",
+            "Use only evidence that agrees with the first guess about \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G4SS-W15-P1",
-          "prompt": "When sources about \"Colonial Life, Migration, Religion, and Trade\" differ, the best next step is to...",
+          "prompt": "When investigating \"Colonial Life, Migration, Religion, and Trade\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Colonial Life, Migration, Religion, and Trade\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonial Life, Migration, Religion, and Trade\".",
+            "Use only evidence that agrees with the first guess about \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G4SS-W15-A1",
-          "prompt": "Before making a conclusion about \"Colonial Life, Migration, Religion, and Trade\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Colonial Life, Migration, Religion, and Trade\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a community profile showing diversity, inequality, work, institutions, and trade.",
+            "Choose a conclusion about \"Colonial Life, Migration, Religion, and Trade\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G4SS-W15-R1",
-          "prompt": "Which revision habit best improves work on \"Colonial Life, Migration, Religion, and Trade\"?",
+          "prompt": "A learner's first explanation of \"Colonial Life, Migration, Religion, and Trade\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Colonial communities included Indigenous peoples, enslaved and free Africans, European migrants, religious minorities, laborers, merchants, farmers, artisans, and others whose experiences varied by law, region, status, gender, wealth, and time.",
+            "The topic \"Colonial Life, Migration, Religion, and Trade\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonial Life, Migration, Religion, and Trade\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 15
         }
       ],
@@ -6332,80 +6333,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W15-S1",
-          "prompt": "Which statement best summarizes \"Colonial Life, Migration, Religion, and Trade\"?",
+          "prompt": "How did diverse peoples build, change, and contest colonial communities?",
           "choices": [
             "Colonial communities included Indigenous peoples, enslaved and free Africans, European migrants, religious minorities, laborers, merchants, farmers, artisans, and others whose experiences varied by law, region, status, gender, wealth, and time.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Colonial Life, Migration, Religion, and Trade\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonial Life, Migration, Religion, and Trade\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G4SS-W15-T1",
-          "prompt": "Which method best transfers the learning from \"Colonial Life, Migration, Religion, and Trade\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Colonial Life, Migration, Religion, and Trade\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Trace migration and trade routes while distinguishing voluntary from forced movement.",
+            "Choose a conclusion about \"Colonial Life, Migration, Religion, and Trade\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G4SS-W15-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Colonial Life, Migration, Religion, and Trade\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Colonial Life, Migration, Religion, and Trade\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study religion and pluralism descriptively without requiring personal belief disclosure.",
+            "Use an unsourced statement about \"Colonial Life, Migration, Religion, and Trade\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonial Life, Migration, Religion, and Trade\".",
+            "Use only evidence that agrees with the first guess about \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G4SS-W15-P1",
-          "prompt": "When sources about \"Colonial Life, Migration, Religion, and Trade\" differ, the best next step is to...",
+          "prompt": "When investigating \"Colonial Life, Migration, Religion, and Trade\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Colonial Life, Migration, Religion, and Trade\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Colonial Life, Migration, Religion, and Trade\".",
+            "Use only evidence that agrees with the first guess about \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G4SS-W15-A1",
-          "prompt": "Before making a conclusion about \"Colonial Life, Migration, Religion, and Trade\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Colonial Life, Migration, Religion, and Trade\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a community profile showing diversity, inequality, work, institutions, and trade.",
+            "Choose a conclusion about \"Colonial Life, Migration, Religion, and Trade\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
           "id": "G4SS-W15-R1",
-          "prompt": "Which revision habit best improves work on \"Colonial Life, Migration, Religion, and Trade\"?",
+          "prompt": "A learner's first explanation of \"Colonial Life, Migration, Religion, and Trade\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Colonial communities included Indigenous peoples, enslaved and free Africans, European migrants, religious minorities, laborers, merchants, farmers, artisans, and others whose experiences varied by law, region, status, gender, wealth, and time.",
+            "The topic \"Colonial Life, Migration, Religion, and Trade\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Colonial Life, Migration, Religion, and Trade\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Colonial Life, Migration, Religion, and Trade\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 15
         },
         {
@@ -6605,80 +6606,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W16-S1",
-          "prompt": "Which statement best summarizes \"Road to Revolution: Taxation, Representation, Protest, and Empire\"?",
+          "prompt": "Why did conflict grow between Britain and many colonists after the Seven Years' War?",
           "choices": [
             "Postwar debt, imperial regulation, taxation, representation disputes, colonial political traditions, enforcement, protests, and competing loyalties contributed to escalating conflict.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Road to Revolution: Taxation, Representation, Protest, and Empire\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Road to Revolution: Taxation, Representation, Protest, and Empire\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G4SS-W16-T1",
-          "prompt": "Which method best transfers the learning from \"Road to Revolution: Taxation, Representation, Protest, and Empire\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Road to Revolution: Taxation, Representation, Protest, and Empire\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare Patriot, Loyalist, British official, merchant, Indigenous, and enslaved perspectives where evidence permits.",
+            "Choose a conclusion about \"Road to Revolution: Taxation, Representation, Protest, and Empire\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G4SS-W16-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Road to Revolution: Taxation, Representation, Protest, and Empire\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Road to Revolution: Taxation, Representation, Protest, and Empire\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze a protest broadside/cartoon/law excerpt for purpose and audience.",
+            "Use an unsourced statement about \"Road to Revolution: Taxation, Representation, Protest, and Empire\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Road to Revolution: Taxation, Representation, Protest, and Empire\".",
+            "Use only evidence that agrees with the first guess about \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G4SS-W16-P1",
-          "prompt": "When sources about \"Road to Revolution: Taxation, Representation, Protest, and Empire\" differ, the best next step is to...",
+          "prompt": "When investigating \"Road to Revolution: Taxation, Representation, Protest, and Empire\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Road to Revolution: Taxation, Representation, Protest, and Empire\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Road to Revolution: Taxation, Representation, Protest, and Empire\".",
+            "Use only evidence that agrees with the first guess about \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G4SS-W16-A1",
-          "prompt": "Before making a conclusion about \"Road to Revolution: Taxation, Representation, Protest, and Empire\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Road to Revolution: Taxation, Representation, Protest, and Empire\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a multi-cause explanation avoiding the myth that one tax alone caused the Revolution.",
+            "Choose a conclusion about \"Road to Revolution: Taxation, Representation, Protest, and Empire\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G4SS-W16-R1",
-          "prompt": "Which revision habit best improves work on \"Road to Revolution: Taxation, Representation, Protest, and Empire\"?",
+          "prompt": "A learner's first explanation of \"Road to Revolution: Taxation, Representation, Protest, and Empire\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Postwar debt, imperial regulation, taxation, representation disputes, colonial political traditions, enforcement, protests, and competing loyalties contributed to escalating conflict.",
+            "The topic \"Road to Revolution: Taxation, Representation, Protest, and Empire\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Road to Revolution: Taxation, Representation, Protest, and Empire\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 16
         }
       ],
@@ -6763,80 +6764,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W16-S1",
-          "prompt": "Which statement best summarizes \"Road to Revolution: Taxation, Representation, Protest, and Empire\"?",
+          "prompt": "Why did conflict grow between Britain and many colonists after the Seven Years' War?",
           "choices": [
             "Postwar debt, imperial regulation, taxation, representation disputes, colonial political traditions, enforcement, protests, and competing loyalties contributed to escalating conflict.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Road to Revolution: Taxation, Representation, Protest, and Empire\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Road to Revolution: Taxation, Representation, Protest, and Empire\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G4SS-W16-T1",
-          "prompt": "Which method best transfers the learning from \"Road to Revolution: Taxation, Representation, Protest, and Empire\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Road to Revolution: Taxation, Representation, Protest, and Empire\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare Patriot, Loyalist, British official, merchant, Indigenous, and enslaved perspectives where evidence permits.",
+            "Choose a conclusion about \"Road to Revolution: Taxation, Representation, Protest, and Empire\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G4SS-W16-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Road to Revolution: Taxation, Representation, Protest, and Empire\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Road to Revolution: Taxation, Representation, Protest, and Empire\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze a protest broadside/cartoon/law excerpt for purpose and audience.",
+            "Use an unsourced statement about \"Road to Revolution: Taxation, Representation, Protest, and Empire\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Road to Revolution: Taxation, Representation, Protest, and Empire\".",
+            "Use only evidence that agrees with the first guess about \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G4SS-W16-P1",
-          "prompt": "When sources about \"Road to Revolution: Taxation, Representation, Protest, and Empire\" differ, the best next step is to...",
+          "prompt": "When investigating \"Road to Revolution: Taxation, Representation, Protest, and Empire\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Road to Revolution: Taxation, Representation, Protest, and Empire\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Road to Revolution: Taxation, Representation, Protest, and Empire\".",
+            "Use only evidence that agrees with the first guess about \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G4SS-W16-A1",
-          "prompt": "Before making a conclusion about \"Road to Revolution: Taxation, Representation, Protest, and Empire\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Road to Revolution: Taxation, Representation, Protest, and Empire\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a multi-cause explanation avoiding the myth that one tax alone caused the Revolution.",
+            "Choose a conclusion about \"Road to Revolution: Taxation, Representation, Protest, and Empire\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
           "id": "G4SS-W16-R1",
-          "prompt": "Which revision habit best improves work on \"Road to Revolution: Taxation, Representation, Protest, and Empire\"?",
+          "prompt": "A learner's first explanation of \"Road to Revolution: Taxation, Representation, Protest, and Empire\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Postwar debt, imperial regulation, taxation, representation disputes, colonial political traditions, enforcement, protests, and competing loyalties contributed to escalating conflict.",
+            "The topic \"Road to Revolution: Taxation, Representation, Protest, and Empire\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Road to Revolution: Taxation, Representation, Protest, and Empire\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Road to Revolution: Taxation, Representation, Protest, and Empire\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 16
         },
         {
@@ -7036,80 +7037,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W17-S1",
-          "prompt": "Which statement best summarizes \"The American Revolution and Diverse Experiences\"?",
+          "prompt": "How did war for independence affect different people and communities?",
           "choices": [
             "The Revolution involved military conflict, political ideas, diplomacy, Indigenous nations, enslaved and free Black people, women, Loyalists, Patriots, and civilians whose goals and outcomes differed.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"The American Revolution and Diverse Experiences\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"The American Revolution and Diverse Experiences\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G4SS-W17-T1",
-          "prompt": "Which method best transfers the learning from \"The American Revolution and Diverse Experiences\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"The American Revolution and Diverse Experiences\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare declarations/arguments for independence with Loyalist or other perspectives.",
+            "Choose a conclusion about \"The American Revolution and Diverse Experiences\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G4SS-W17-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"The American Revolution and Diverse Experiences\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"The American Revolution and Diverse Experiences\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study roles of Black Americans, Indigenous nations, women, soldiers, and civilians.",
+            "Use an unsourced statement about \"The American Revolution and Diverse Experiences\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"The American Revolution and Diverse Experiences\".",
+            "Use only evidence that agrees with the first guess about \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G4SS-W17-P1",
-          "prompt": "When sources about \"The American Revolution and Diverse Experiences\" differ, the best next step is to...",
+          "prompt": "When investigating \"The American Revolution and Diverse Experiences\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"The American Revolution and Diverse Experiences\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"The American Revolution and Diverse Experiences\".",
+            "Use only evidence that agrees with the first guess about \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G4SS-W17-A1",
-          "prompt": "Before making a conclusion about \"The American Revolution and Diverse Experiences\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"The American Revolution and Diverse Experiences\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a Revolution exhibit answering: independence for whom, under what conditions, and with what unresolved questions?",
+            "Choose a conclusion about \"The American Revolution and Diverse Experiences\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G4SS-W17-R1",
-          "prompt": "Which revision habit best improves work on \"The American Revolution and Diverse Experiences\"?",
+          "prompt": "A learner's first explanation of \"The American Revolution and Diverse Experiences\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "The Revolution involved military conflict, political ideas, diplomacy, Indigenous nations, enslaved and free Black people, women, Loyalists, Patriots, and civilians whose goals and outcomes differed.",
+            "The topic \"The American Revolution and Diverse Experiences\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"The American Revolution and Diverse Experiences\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 17
         }
       ],
@@ -7194,80 +7195,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W17-S1",
-          "prompt": "Which statement best summarizes \"The American Revolution and Diverse Experiences\"?",
+          "prompt": "How did war for independence affect different people and communities?",
           "choices": [
             "The Revolution involved military conflict, political ideas, diplomacy, Indigenous nations, enslaved and free Black people, women, Loyalists, Patriots, and civilians whose goals and outcomes differed.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"The American Revolution and Diverse Experiences\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"The American Revolution and Diverse Experiences\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G4SS-W17-T1",
-          "prompt": "Which method best transfers the learning from \"The American Revolution and Diverse Experiences\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"The American Revolution and Diverse Experiences\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare declarations/arguments for independence with Loyalist or other perspectives.",
+            "Choose a conclusion about \"The American Revolution and Diverse Experiences\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G4SS-W17-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"The American Revolution and Diverse Experiences\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"The American Revolution and Diverse Experiences\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study roles of Black Americans, Indigenous nations, women, soldiers, and civilians.",
+            "Use an unsourced statement about \"The American Revolution and Diverse Experiences\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"The American Revolution and Diverse Experiences\".",
+            "Use only evidence that agrees with the first guess about \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G4SS-W17-P1",
-          "prompt": "When sources about \"The American Revolution and Diverse Experiences\" differ, the best next step is to...",
+          "prompt": "When investigating \"The American Revolution and Diverse Experiences\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"The American Revolution and Diverse Experiences\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"The American Revolution and Diverse Experiences\".",
+            "Use only evidence that agrees with the first guess about \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G4SS-W17-A1",
-          "prompt": "Before making a conclusion about \"The American Revolution and Diverse Experiences\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"The American Revolution and Diverse Experiences\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a Revolution exhibit answering: independence for whom, under what conditions, and with what unresolved questions?",
+            "Choose a conclusion about \"The American Revolution and Diverse Experiences\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
           "id": "G4SS-W17-R1",
-          "prompt": "Which revision habit best improves work on \"The American Revolution and Diverse Experiences\"?",
+          "prompt": "A learner's first explanation of \"The American Revolution and Diverse Experiences\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "The Revolution involved military conflict, political ideas, diplomacy, Indigenous nations, enslaved and free Black people, women, Loyalists, Patriots, and civilians whose goals and outcomes differed.",
+            "The topic \"The American Revolution and Diverse Experiences\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"The American Revolution and Diverse Experiences\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"The American Revolution and Diverse Experiences\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 17
         },
         {
@@ -7467,80 +7468,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W18-S1",
-          "prompt": "Which statement best summarizes \"Midyear Synthesis and Closed-Book Midterm\"?",
+          "prompt": "What can I demonstrate independently about inquiry, geography, Indigenous history, colonization, and Revolution?",
           "choices": [
             "The midterm measures durable transfer across first-semester content and source reasoning; below 80% triggers targeted correction and a fresh randomized form.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Midyear Synthesis and Closed-Book Midterm\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Midyear Synthesis and Closed-Book Midterm\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G4SS-W18-T1",
-          "prompt": "Which method best transfers the learning from \"Midyear Synthesis and Closed-Book Midterm\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Midyear Synthesis and Closed-Book Midterm\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Complete an unfamiliar map/timeline/source-set transfer task.",
+            "Choose a conclusion about \"Midyear Synthesis and Closed-Book Midterm\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G4SS-W18-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Midyear Synthesis and Closed-Book Midterm\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Midyear Synthesis and Closed-Book Midterm\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Review weak strands using portfolio evidence rather than memorizing exact questions.",
+            "Use an unsourced statement about \"Midyear Synthesis and Closed-Book Midterm\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Midyear Synthesis and Closed-Book Midterm\".",
+            "Use only evidence that agrees with the first guess about \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G4SS-W18-P1",
-          "prompt": "When sources about \"Midyear Synthesis and Closed-Book Midterm\" differ, the best next step is to...",
+          "prompt": "When investigating \"Midyear Synthesis and Closed-Book Midterm\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Midyear Synthesis and Closed-Book Midterm\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Midyear Synthesis and Closed-Book Midterm\".",
+            "Use only evidence that agrees with the first guess about \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G4SS-W18-A1",
-          "prompt": "Before making a conclusion about \"Midyear Synthesis and Closed-Book Midterm\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Midyear Synthesis and Closed-Book Midterm\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Complete the teacher-supervised closed-book randomized midterm; correct and reassess if below 80%.",
+            "Choose a conclusion about \"Midyear Synthesis and Closed-Book Midterm\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G4SS-W18-R1",
-          "prompt": "Which revision habit best improves work on \"Midyear Synthesis and Closed-Book Midterm\"?",
+          "prompt": "A learner's first explanation of \"Midyear Synthesis and Closed-Book Midterm\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "The midterm measures durable transfer across first-semester content and source reasoning; below 80% triggers targeted correction and a fresh randomized form.",
+            "The topic \"Midyear Synthesis and Closed-Book Midterm\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Midyear Synthesis and Closed-Book Midterm\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 18
         }
       ],
@@ -7625,80 +7626,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W18-S1",
-          "prompt": "Which statement best summarizes \"Midyear Synthesis and Closed-Book Midterm\"?",
+          "prompt": "What can I demonstrate independently about inquiry, geography, Indigenous history, colonization, and Revolution?",
           "choices": [
             "The midterm measures durable transfer across first-semester content and source reasoning; below 80% triggers targeted correction and a fresh randomized form.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Midyear Synthesis and Closed-Book Midterm\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Midyear Synthesis and Closed-Book Midterm\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G4SS-W18-T1",
-          "prompt": "Which method best transfers the learning from \"Midyear Synthesis and Closed-Book Midterm\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Midyear Synthesis and Closed-Book Midterm\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Complete an unfamiliar map/timeline/source-set transfer task.",
+            "Choose a conclusion about \"Midyear Synthesis and Closed-Book Midterm\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G4SS-W18-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Midyear Synthesis and Closed-Book Midterm\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Midyear Synthesis and Closed-Book Midterm\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Review weak strands using portfolio evidence rather than memorizing exact questions.",
+            "Use an unsourced statement about \"Midyear Synthesis and Closed-Book Midterm\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Midyear Synthesis and Closed-Book Midterm\".",
+            "Use only evidence that agrees with the first guess about \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G4SS-W18-P1",
-          "prompt": "When sources about \"Midyear Synthesis and Closed-Book Midterm\" differ, the best next step is to...",
+          "prompt": "When investigating \"Midyear Synthesis and Closed-Book Midterm\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Midyear Synthesis and Closed-Book Midterm\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Midyear Synthesis and Closed-Book Midterm\".",
+            "Use only evidence that agrees with the first guess about \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G4SS-W18-A1",
-          "prompt": "Before making a conclusion about \"Midyear Synthesis and Closed-Book Midterm\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Midyear Synthesis and Closed-Book Midterm\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Complete the teacher-supervised closed-book randomized midterm; correct and reassess if below 80%.",
+            "Choose a conclusion about \"Midyear Synthesis and Closed-Book Midterm\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
           "id": "G4SS-W18-R1",
-          "prompt": "Which revision habit best improves work on \"Midyear Synthesis and Closed-Book Midterm\"?",
+          "prompt": "A learner's first explanation of \"Midyear Synthesis and Closed-Book Midterm\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "The midterm measures durable transfer across first-semester content and source reasoning; below 80% triggers targeted correction and a fresh randomized form.",
+            "The topic \"Midyear Synthesis and Closed-Book Midterm\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Midyear Synthesis and Closed-Book Midterm\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Midyear Synthesis and Closed-Book Midterm\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 18
         },
         {
@@ -7898,80 +7899,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W19-S1",
-          "prompt": "Which statement best summarizes \"From Articles of Confederation to the Constitution\"?",
+          "prompt": "Why did the United States replace the Articles of Confederation with a new Constitution?",
           "choices": [
             "Weaknesses in the Articles, disputes among states, economic and security concerns, and debates over federal power led to the Constitutional Convention and a new framework involving compromise and contested choices.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"From Articles of Confederation to the Constitution\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"From Articles of Confederation to the Constitution\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G4SS-W19-T1",
-          "prompt": "Which method best transfers the learning from \"From Articles of Confederation to the Constitution\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"From Articles of Confederation to the Constitution\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Use an age-appropriate Convention simulation to examine competing interests without reenacting dehumanizing compromises.",
+            "Choose a conclusion about \"From Articles of Confederation to the Constitution\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G4SS-W19-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"From Articles of Confederation to the Constitution\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"From Articles of Confederation to the Constitution\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze Federalist/Anti-Federalist-style arguments about power and rights.",
+            "Use an unsourced statement about \"From Articles of Confederation to the Constitution\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"From Articles of Confederation to the Constitution\".",
+            "Use only evidence that agrees with the first guess about \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G4SS-W19-P1",
-          "prompt": "When sources about \"From Articles of Confederation to the Constitution\" differ, the best next step is to...",
+          "prompt": "When investigating \"From Articles of Confederation to the Constitution\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"From Articles of Confederation to the Constitution\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"From Articles of Confederation to the Constitution\".",
+            "Use only evidence that agrees with the first guess about \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G4SS-W19-A1",
-          "prompt": "Before making a conclusion about \"From Articles of Confederation to the Constitution\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"From Articles of Confederation to the Constitution\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write an explanation of why the Constitution represented both change and compromise.",
+            "Choose a conclusion about \"From Articles of Confederation to the Constitution\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G4SS-W19-R1",
-          "prompt": "Which revision habit best improves work on \"From Articles of Confederation to the Constitution\"?",
+          "prompt": "A learner's first explanation of \"From Articles of Confederation to the Constitution\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Weaknesses in the Articles, disputes among states, economic and security concerns, and debates over federal power led to the Constitutional Convention and a new framework involving compromise and contested choices.",
+            "The topic \"From Articles of Confederation to the Constitution\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"From Articles of Confederation to the Constitution\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 19
         }
       ],
@@ -8056,80 +8057,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W19-S1",
-          "prompt": "Which statement best summarizes \"From Articles of Confederation to the Constitution\"?",
+          "prompt": "Why did the United States replace the Articles of Confederation with a new Constitution?",
           "choices": [
             "Weaknesses in the Articles, disputes among states, economic and security concerns, and debates over federal power led to the Constitutional Convention and a new framework involving compromise and contested choices.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"From Articles of Confederation to the Constitution\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"From Articles of Confederation to the Constitution\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G4SS-W19-T1",
-          "prompt": "Which method best transfers the learning from \"From Articles of Confederation to the Constitution\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"From Articles of Confederation to the Constitution\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Use an age-appropriate Convention simulation to examine competing interests without reenacting dehumanizing compromises.",
+            "Choose a conclusion about \"From Articles of Confederation to the Constitution\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G4SS-W19-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"From Articles of Confederation to the Constitution\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"From Articles of Confederation to the Constitution\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze Federalist/Anti-Federalist-style arguments about power and rights.",
+            "Use an unsourced statement about \"From Articles of Confederation to the Constitution\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"From Articles of Confederation to the Constitution\".",
+            "Use only evidence that agrees with the first guess about \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G4SS-W19-P1",
-          "prompt": "When sources about \"From Articles of Confederation to the Constitution\" differ, the best next step is to...",
+          "prompt": "When investigating \"From Articles of Confederation to the Constitution\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"From Articles of Confederation to the Constitution\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"From Articles of Confederation to the Constitution\".",
+            "Use only evidence that agrees with the first guess about \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G4SS-W19-A1",
-          "prompt": "Before making a conclusion about \"From Articles of Confederation to the Constitution\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"From Articles of Confederation to the Constitution\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write an explanation of why the Constitution represented both change and compromise.",
+            "Choose a conclusion about \"From Articles of Confederation to the Constitution\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
           "id": "G4SS-W19-R1",
-          "prompt": "Which revision habit best improves work on \"From Articles of Confederation to the Constitution\"?",
+          "prompt": "A learner's first explanation of \"From Articles of Confederation to the Constitution\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Weaknesses in the Articles, disputes among states, economic and security concerns, and debates over federal power led to the Constitutional Convention and a new framework involving compromise and contested choices.",
+            "The topic \"From Articles of Confederation to the Constitution\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"From Articles of Confederation to the Constitution\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"From Articles of Confederation to the Constitution\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 19
         },
         {
@@ -8329,80 +8330,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W20-S1",
-          "prompt": "Which statement best summarizes \"Branches, Checks and Balances, Federalism, and Courts\"?",
+          "prompt": "How does the Constitution divide, share, and limit governmental power?",
           "choices": [
             "Federal power is divided among legislative, executive, and judicial branches and shared with states through federalism; checks and balances and rule of law are intended to limit concentrated power.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Branches, Checks and Balances, Federalism, and Courts\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Branches, Checks and Balances, Federalism, and Courts\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G4SS-W20-T1",
-          "prompt": "Which method best transfers the learning from \"Branches, Checks and Balances, Federalism, and Courts\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Branches, Checks and Balances, Federalism, and Courts\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Sort powers/responsibilities among national, state, shared, and local levels.",
+            "Choose a conclusion about \"Branches, Checks and Balances, Federalism, and Courts\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G4SS-W20-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Branches, Checks and Balances, Federalism, and Courts\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Branches, Checks and Balances, Federalism, and Courts\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze fictional constitutional conflicts and identify relevant institutions.",
+            "Use an unsourced statement about \"Branches, Checks and Balances, Federalism, and Courts\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Branches, Checks and Balances, Federalism, and Courts\".",
+            "Use only evidence that agrees with the first guess about \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G4SS-W20-P1",
-          "prompt": "When sources about \"Branches, Checks and Balances, Federalism, and Courts\" differ, the best next step is to...",
+          "prompt": "When investigating \"Branches, Checks and Balances, Federalism, and Courts\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Branches, Checks and Balances, Federalism, and Courts\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Branches, Checks and Balances, Federalism, and Courts\".",
+            "Use only evidence that agrees with the first guess about \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G4SS-W20-A1",
-          "prompt": "Before making a conclusion about \"Branches, Checks and Balances, Federalism, and Courts\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Branches, Checks and Balances, Federalism, and Courts\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Explain why dividing power can protect liberty while sometimes slowing decisions.",
+            "Choose a conclusion about \"Branches, Checks and Balances, Federalism, and Courts\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G4SS-W20-R1",
-          "prompt": "Which revision habit best improves work on \"Branches, Checks and Balances, Federalism, and Courts\"?",
+          "prompt": "A learner's first explanation of \"Branches, Checks and Balances, Federalism, and Courts\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Federal power is divided among legislative, executive, and judicial branches and shared with states through federalism; checks and balances and rule of law are intended to limit concentrated power.",
+            "The topic \"Branches, Checks and Balances, Federalism, and Courts\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Branches, Checks and Balances, Federalism, and Courts\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 20
         }
       ],
@@ -8487,80 +8488,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W20-S1",
-          "prompt": "Which statement best summarizes \"Branches, Checks and Balances, Federalism, and Courts\"?",
+          "prompt": "How does the Constitution divide, share, and limit governmental power?",
           "choices": [
             "Federal power is divided among legislative, executive, and judicial branches and shared with states through federalism; checks and balances and rule of law are intended to limit concentrated power.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Branches, Checks and Balances, Federalism, and Courts\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Branches, Checks and Balances, Federalism, and Courts\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G4SS-W20-T1",
-          "prompt": "Which method best transfers the learning from \"Branches, Checks and Balances, Federalism, and Courts\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Branches, Checks and Balances, Federalism, and Courts\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Sort powers/responsibilities among national, state, shared, and local levels.",
+            "Choose a conclusion about \"Branches, Checks and Balances, Federalism, and Courts\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G4SS-W20-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Branches, Checks and Balances, Federalism, and Courts\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Branches, Checks and Balances, Federalism, and Courts\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze fictional constitutional conflicts and identify relevant institutions.",
+            "Use an unsourced statement about \"Branches, Checks and Balances, Federalism, and Courts\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Branches, Checks and Balances, Federalism, and Courts\".",
+            "Use only evidence that agrees with the first guess about \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G4SS-W20-P1",
-          "prompt": "When sources about \"Branches, Checks and Balances, Federalism, and Courts\" differ, the best next step is to...",
+          "prompt": "When investigating \"Branches, Checks and Balances, Federalism, and Courts\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Branches, Checks and Balances, Federalism, and Courts\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Branches, Checks and Balances, Federalism, and Courts\".",
+            "Use only evidence that agrees with the first guess about \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G4SS-W20-A1",
-          "prompt": "Before making a conclusion about \"Branches, Checks and Balances, Federalism, and Courts\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Branches, Checks and Balances, Federalism, and Courts\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Explain why dividing power can protect liberty while sometimes slowing decisions.",
+            "Choose a conclusion about \"Branches, Checks and Balances, Federalism, and Courts\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
           "id": "G4SS-W20-R1",
-          "prompt": "Which revision habit best improves work on \"Branches, Checks and Balances, Federalism, and Courts\"?",
+          "prompt": "A learner's first explanation of \"Branches, Checks and Balances, Federalism, and Courts\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Federal power is divided among legislative, executive, and judicial branches and shared with states through federalism; checks and balances and rule of law are intended to limit concentrated power.",
+            "The topic \"Branches, Checks and Balances, Federalism, and Courts\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Branches, Checks and Balances, Federalism, and Courts\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Branches, Checks and Balances, Federalism, and Courts\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 20
         },
         {
@@ -8760,80 +8761,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W21-S1",
-          "prompt": "Which statement best summarizes \"State Constitutions and State/Local Government\"?",
+          "prompt": "Why do states have constitutions and how do state and local governments serve communities?",
           "choices": [
             "States have their own constitutions and institutions within the federal system; state and local governments make and administer laws, provide services, raise revenue, and address public problems within their jurisdictions.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"State Constitutions and State/Local Government\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State Constitutions and State/Local Government\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G4SS-W21-T1",
-          "prompt": "Which method best transfers the learning from \"State Constitutions and State/Local Government\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"State Constitutions and State/Local Government\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Map state executive, legislative, and judicial branches plus selected local institutions.",
+            "Choose a conclusion about \"State Constitutions and State/Local Government\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G4SS-W21-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"State Constitutions and State/Local Government\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"State Constitutions and State/Local Government\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze a public problem and identify whether local, state, federal, tribal, or shared jurisdiction applies.",
+            "Use an unsourced statement about \"State Constitutions and State/Local Government\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State Constitutions and State/Local Government\".",
+            "Use only evidence that agrees with the first guess about \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G4SS-W21-P1",
-          "prompt": "When sources about \"State Constitutions and State/Local Government\" differ, the best next step is to...",
+          "prompt": "When investigating \"State Constitutions and State/Local Government\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"State Constitutions and State/Local Government\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State Constitutions and State/Local Government\".",
+            "Use only evidence that agrees with the first guess about \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G4SS-W21-A1",
-          "prompt": "Before making a conclusion about \"State Constitutions and State/Local Government\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"State Constitutions and State/Local Government\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a government-service flowchart showing authority, revenue, service, and accountability.",
+            "Choose a conclusion about \"State Constitutions and State/Local Government\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G4SS-W21-R1",
-          "prompt": "Which revision habit best improves work on \"State Constitutions and State/Local Government\"?",
+          "prompt": "A learner's first explanation of \"State Constitutions and State/Local Government\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "States have their own constitutions and institutions within the federal system; state and local governments make and administer laws, provide services, raise revenue, and address public problems within their jurisdictions.",
+            "The topic \"State Constitutions and State/Local Government\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State Constitutions and State/Local Government\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 21
         }
       ],
@@ -8918,80 +8919,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W21-S1",
-          "prompt": "Which statement best summarizes \"State Constitutions and State/Local Government\"?",
+          "prompt": "Why do states have constitutions and how do state and local governments serve communities?",
           "choices": [
             "States have their own constitutions and institutions within the federal system; state and local governments make and administer laws, provide services, raise revenue, and address public problems within their jurisdictions.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"State Constitutions and State/Local Government\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State Constitutions and State/Local Government\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G4SS-W21-T1",
-          "prompt": "Which method best transfers the learning from \"State Constitutions and State/Local Government\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"State Constitutions and State/Local Government\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Map state executive, legislative, and judicial branches plus selected local institutions.",
+            "Choose a conclusion about \"State Constitutions and State/Local Government\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G4SS-W21-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"State Constitutions and State/Local Government\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"State Constitutions and State/Local Government\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze a public problem and identify whether local, state, federal, tribal, or shared jurisdiction applies.",
+            "Use an unsourced statement about \"State Constitutions and State/Local Government\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State Constitutions and State/Local Government\".",
+            "Use only evidence that agrees with the first guess about \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G4SS-W21-P1",
-          "prompt": "When sources about \"State Constitutions and State/Local Government\" differ, the best next step is to...",
+          "prompt": "When investigating \"State Constitutions and State/Local Government\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"State Constitutions and State/Local Government\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State Constitutions and State/Local Government\".",
+            "Use only evidence that agrees with the first guess about \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G4SS-W21-A1",
-          "prompt": "Before making a conclusion about \"State Constitutions and State/Local Government\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"State Constitutions and State/Local Government\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a government-service flowchart showing authority, revenue, service, and accountability.",
+            "Choose a conclusion about \"State Constitutions and State/Local Government\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
           "id": "G4SS-W21-R1",
-          "prompt": "Which revision habit best improves work on \"State Constitutions and State/Local Government\"?",
+          "prompt": "A learner's first explanation of \"State Constitutions and State/Local Government\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "States have their own constitutions and institutions within the federal system; state and local governments make and administer laws, provide services, raise revenue, and address public problems within their jurisdictions.",
+            "The topic \"State Constitutions and State/Local Government\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State Constitutions and State/Local Government\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State Constitutions and State/Local Government\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 21
         },
         {
@@ -9191,80 +9192,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W22-S1",
-          "prompt": "Which statement best summarizes \"Rights, Responsibilities, Voting, Service, and Civic Participation\"?",
+          "prompt": "How can citizens participate responsibly in constitutional government?",
           "choices": [
             "Civic participation includes voting when eligible, staying informed, serving communities, petitioning, contacting public officials, peaceful assembly, jury service when called, public comment, volunteering, and evaluating evidence.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Rights, Responsibilities, Voting, Service, and Civic Participation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Rights, Responsibilities, Voting, Service, and Civic Participation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G4SS-W22-T1",
-          "prompt": "Which method best transfers the learning from \"Rights, Responsibilities, Voting, Service, and Civic Participation\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Rights, Responsibilities, Voting, Service, and Civic Participation\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Run a nonpartisan mock election emphasizing rules, secret ballot, accurate counting, and lawful review.",
+            "Choose a conclusion about \"Rights, Responsibilities, Voting, Service, and Civic Participation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G4SS-W22-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Rights, Responsibilities, Voting, Service, and Civic Participation\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Rights, Responsibilities, Voting, Service, and Civic Participation\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze a local/state issue using evidence and multiple stakeholders without partisan advocacy.",
+            "Use an unsourced statement about \"Rights, Responsibilities, Voting, Service, and Civic Participation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Rights, Responsibilities, Voting, Service, and Civic Participation\".",
+            "Use only evidence that agrees with the first guess about \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G4SS-W22-P1",
-          "prompt": "When sources about \"Rights, Responsibilities, Voting, Service, and Civic Participation\" differ, the best next step is to...",
+          "prompt": "When investigating \"Rights, Responsibilities, Voting, Service, and Civic Participation\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Rights, Responsibilities, Voting, Service, and Civic Participation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Rights, Responsibilities, Voting, Service, and Civic Participation\".",
+            "Use only evidence that agrees with the first guess about \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G4SS-W22-A1",
-          "prompt": "Before making a conclusion about \"Rights, Responsibilities, Voting, Service, and Civic Participation\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Rights, Responsibilities, Voting, Service, and Civic Participation\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a civic participation plan emphasizing evidence, civility, safety, and lawful processes.",
+            "Choose a conclusion about \"Rights, Responsibilities, Voting, Service, and Civic Participation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G4SS-W22-R1",
-          "prompt": "Which revision habit best improves work on \"Rights, Responsibilities, Voting, Service, and Civic Participation\"?",
+          "prompt": "A learner's first explanation of \"Rights, Responsibilities, Voting, Service, and Civic Participation\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Civic participation includes voting when eligible, staying informed, serving communities, petitioning, contacting public officials, peaceful assembly, jury service when called, public comment, volunteering, and evaluating evidence.",
+            "The topic \"Rights, Responsibilities, Voting, Service, and Civic Participation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Rights, Responsibilities, Voting, Service, and Civic Participation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 22
         }
       ],
@@ -9349,80 +9350,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W22-S1",
-          "prompt": "Which statement best summarizes \"Rights, Responsibilities, Voting, Service, and Civic Participation\"?",
+          "prompt": "How can citizens participate responsibly in constitutional government?",
           "choices": [
             "Civic participation includes voting when eligible, staying informed, serving communities, petitioning, contacting public officials, peaceful assembly, jury service when called, public comment, volunteering, and evaluating evidence.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Rights, Responsibilities, Voting, Service, and Civic Participation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Rights, Responsibilities, Voting, Service, and Civic Participation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G4SS-W22-T1",
-          "prompt": "Which method best transfers the learning from \"Rights, Responsibilities, Voting, Service, and Civic Participation\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Rights, Responsibilities, Voting, Service, and Civic Participation\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Run a nonpartisan mock election emphasizing rules, secret ballot, accurate counting, and lawful review.",
+            "Choose a conclusion about \"Rights, Responsibilities, Voting, Service, and Civic Participation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G4SS-W22-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Rights, Responsibilities, Voting, Service, and Civic Participation\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Rights, Responsibilities, Voting, Service, and Civic Participation\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze a local/state issue using evidence and multiple stakeholders without partisan advocacy.",
+            "Use an unsourced statement about \"Rights, Responsibilities, Voting, Service, and Civic Participation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Rights, Responsibilities, Voting, Service, and Civic Participation\".",
+            "Use only evidence that agrees with the first guess about \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G4SS-W22-P1",
-          "prompt": "When sources about \"Rights, Responsibilities, Voting, Service, and Civic Participation\" differ, the best next step is to...",
+          "prompt": "When investigating \"Rights, Responsibilities, Voting, Service, and Civic Participation\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Rights, Responsibilities, Voting, Service, and Civic Participation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Rights, Responsibilities, Voting, Service, and Civic Participation\".",
+            "Use only evidence that agrees with the first guess about \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G4SS-W22-A1",
-          "prompt": "Before making a conclusion about \"Rights, Responsibilities, Voting, Service, and Civic Participation\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Rights, Responsibilities, Voting, Service, and Civic Participation\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a civic participation plan emphasizing evidence, civility, safety, and lawful processes.",
+            "Choose a conclusion about \"Rights, Responsibilities, Voting, Service, and Civic Participation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
           "id": "G4SS-W22-R1",
-          "prompt": "Which revision habit best improves work on \"Rights, Responsibilities, Voting, Service, and Civic Participation\"?",
+          "prompt": "A learner's first explanation of \"Rights, Responsibilities, Voting, Service, and Civic Participation\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Civic participation includes voting when eligible, staying informed, serving communities, petitioning, contacting public officials, peaceful assembly, jury service when called, public comment, volunteering, and evaluating evidence.",
+            "The topic \"Rights, Responsibilities, Voting, Service, and Civic Participation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Rights, Responsibilities, Voting, Service, and Civic Participation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Rights, Responsibilities, Voting, Service, and Civic Participation\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 22
         },
         {
@@ -9622,80 +9623,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W23-S1",
-          "prompt": "Which statement best summarizes \"Territorial Growth, Treaties, Statehood, and Maps\"?",
+          "prompt": "How did U.S. territory and state boundaries change, and whose perspectives matter when mapping expansion?",
           "choices": [
             "Territorial growth occurred through treaties, purchases, war, annexation, settlement, and statehood processes, but maps of expansion must also account for Indigenous homelands, sovereignty, contested borders, and displacement.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Territorial Growth, Treaties, Statehood, and Maps\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Territorial Growth, Treaties, Statehood, and Maps\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G4SS-W23-T1",
-          "prompt": "Which method best transfers the learning from \"Territorial Growth, Treaties, Statehood, and Maps\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Territorial Growth, Treaties, Statehood, and Maps\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Overlay expansion maps with Indigenous homelands and contested boundaries.",
+            "Choose a conclusion about \"Territorial Growth, Treaties, Statehood, and Maps\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G4SS-W23-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Territorial Growth, Treaties, Statehood, and Maps\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Territorial Growth, Treaties, Statehood, and Maps\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study one treaty/purchase/annexation/statehood case relevant to the chosen state or region.",
+            "Use an unsourced statement about \"Territorial Growth, Treaties, Statehood, and Maps\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Territorial Growth, Treaties, Statehood, and Maps\".",
+            "Use only evidence that agrees with the first guess about \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G4SS-W23-P1",
-          "prompt": "When sources about \"Territorial Growth, Treaties, Statehood, and Maps\" differ, the best next step is to...",
+          "prompt": "When investigating \"Territorial Growth, Treaties, Statehood, and Maps\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Territorial Growth, Treaties, Statehood, and Maps\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Territorial Growth, Treaties, Statehood, and Maps\".",
+            "Use only evidence that agrees with the first guess about \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G4SS-W23-A1",
-          "prompt": "Before making a conclusion about \"Territorial Growth, Treaties, Statehood, and Maps\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Territorial Growth, Treaties, Statehood, and Maps\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a map critique explaining what an expansion map shows and what it may hide.",
+            "Choose a conclusion about \"Territorial Growth, Treaties, Statehood, and Maps\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G4SS-W23-R1",
-          "prompt": "Which revision habit best improves work on \"Territorial Growth, Treaties, Statehood, and Maps\"?",
+          "prompt": "A learner's first explanation of \"Territorial Growth, Treaties, Statehood, and Maps\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Territorial growth occurred through treaties, purchases, war, annexation, settlement, and statehood processes, but maps of expansion must also account for Indigenous homelands, sovereignty, contested borders, and displacement.",
+            "The topic \"Territorial Growth, Treaties, Statehood, and Maps\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Territorial Growth, Treaties, Statehood, and Maps\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 23
         }
       ],
@@ -9780,80 +9781,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W23-S1",
-          "prompt": "Which statement best summarizes \"Territorial Growth, Treaties, Statehood, and Maps\"?",
+          "prompt": "How did U.S. territory and state boundaries change, and whose perspectives matter when mapping expansion?",
           "choices": [
             "Territorial growth occurred through treaties, purchases, war, annexation, settlement, and statehood processes, but maps of expansion must also account for Indigenous homelands, sovereignty, contested borders, and displacement.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Territorial Growth, Treaties, Statehood, and Maps\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Territorial Growth, Treaties, Statehood, and Maps\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G4SS-W23-T1",
-          "prompt": "Which method best transfers the learning from \"Territorial Growth, Treaties, Statehood, and Maps\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Territorial Growth, Treaties, Statehood, and Maps\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Overlay expansion maps with Indigenous homelands and contested boundaries.",
+            "Choose a conclusion about \"Territorial Growth, Treaties, Statehood, and Maps\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G4SS-W23-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Territorial Growth, Treaties, Statehood, and Maps\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Territorial Growth, Treaties, Statehood, and Maps\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study one treaty/purchase/annexation/statehood case relevant to the chosen state or region.",
+            "Use an unsourced statement about \"Territorial Growth, Treaties, Statehood, and Maps\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Territorial Growth, Treaties, Statehood, and Maps\".",
+            "Use only evidence that agrees with the first guess about \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G4SS-W23-P1",
-          "prompt": "When sources about \"Territorial Growth, Treaties, Statehood, and Maps\" differ, the best next step is to...",
+          "prompt": "When investigating \"Territorial Growth, Treaties, Statehood, and Maps\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Territorial Growth, Treaties, Statehood, and Maps\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Territorial Growth, Treaties, Statehood, and Maps\".",
+            "Use only evidence that agrees with the first guess about \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G4SS-W23-A1",
-          "prompt": "Before making a conclusion about \"Territorial Growth, Treaties, Statehood, and Maps\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Territorial Growth, Treaties, Statehood, and Maps\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a map critique explaining what an expansion map shows and what it may hide.",
+            "Choose a conclusion about \"Territorial Growth, Treaties, Statehood, and Maps\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
           "id": "G4SS-W23-R1",
-          "prompt": "Which revision habit best improves work on \"Territorial Growth, Treaties, Statehood, and Maps\"?",
+          "prompt": "A learner's first explanation of \"Territorial Growth, Treaties, Statehood, and Maps\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Territorial growth occurred through treaties, purchases, war, annexation, settlement, and statehood processes, but maps of expansion must also account for Indigenous homelands, sovereignty, contested borders, and displacement.",
+            "The topic \"Territorial Growth, Treaties, Statehood, and Maps\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Territorial Growth, Treaties, Statehood, and Maps\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Territorial Growth, Treaties, Statehood, and Maps\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 23
         },
         {
@@ -10053,80 +10054,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W24-S1",
-          "prompt": "Which statement best summarizes \"Westward Migration, Indigenous Displacement, and Forced Removal\"?",
+          "prompt": "How did westward migration create opportunity for some people while producing dispossession and forced removal for others?",
           "choices": [
             "Westward migration involved settlers, migrants, Indigenous nations, free and enslaved Black Americans, immigrants, traders, miners, farmers, soldiers, and governments; expansion produced economic opportunity alongside dispossession, violence, forced removal, and environmental change.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Westward Migration, Indigenous Displacement, and Forced Removal\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Westward Migration, Indigenous Displacement, and Forced Removal\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G4SS-W24-T1",
-          "prompt": "Which method best transfers the learning from \"Westward Migration, Indigenous Displacement, and Forced Removal\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Westward Migration, Indigenous Displacement, and Forced Removal\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Analyze Indigenous sources/perspectives on displacement or treaty change.",
+            "Choose a conclusion about \"Westward Migration, Indigenous Displacement, and Forced Removal\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G4SS-W24-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Westward Migration, Indigenous Displacement, and Forced Removal\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Westward Migration, Indigenous Displacement, and Forced Removal\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study an age-appropriate forced-removal case with causes, policy, resistance, and consequences.",
+            "Use an unsourced statement about \"Westward Migration, Indigenous Displacement, and Forced Removal\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Westward Migration, Indigenous Displacement, and Forced Removal\".",
+            "Use only evidence that agrees with the first guess about \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G4SS-W24-P1",
-          "prompt": "When sources about \"Westward Migration, Indigenous Displacement, and Forced Removal\" differ, the best next step is to...",
+          "prompt": "When investigating \"Westward Migration, Indigenous Displacement, and Forced Removal\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Westward Migration, Indigenous Displacement, and Forced Removal\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Westward Migration, Indigenous Displacement, and Forced Removal\".",
+            "Use only evidence that agrees with the first guess about \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G4SS-W24-A1",
-          "prompt": "Before making a conclusion about \"Westward Migration, Indigenous Displacement, and Forced Removal\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Westward Migration, Indigenous Displacement, and Forced Removal\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a multi-perspective account distinguishing opportunity from dispossession.",
+            "Choose a conclusion about \"Westward Migration, Indigenous Displacement, and Forced Removal\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G4SS-W24-R1",
-          "prompt": "Which revision habit best improves work on \"Westward Migration, Indigenous Displacement, and Forced Removal\"?",
+          "prompt": "A learner's first explanation of \"Westward Migration, Indigenous Displacement, and Forced Removal\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Westward migration involved settlers, migrants, Indigenous nations, free and enslaved Black Americans, immigrants, traders, miners, farmers, soldiers, and governments; expansion produced economic opportunity alongside dispossession, violence, forced removal, and environmental change.",
+            "The topic \"Westward Migration, Indigenous Displacement, and Forced Removal\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Westward Migration, Indigenous Displacement, and Forced Removal\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 24
         }
       ],
@@ -10211,80 +10212,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W24-S1",
-          "prompt": "Which statement best summarizes \"Westward Migration, Indigenous Displacement, and Forced Removal\"?",
+          "prompt": "How did westward migration create opportunity for some people while producing dispossession and forced removal for others?",
           "choices": [
             "Westward migration involved settlers, migrants, Indigenous nations, free and enslaved Black Americans, immigrants, traders, miners, farmers, soldiers, and governments; expansion produced economic opportunity alongside dispossession, violence, forced removal, and environmental change.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Westward Migration, Indigenous Displacement, and Forced Removal\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Westward Migration, Indigenous Displacement, and Forced Removal\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G4SS-W24-T1",
-          "prompt": "Which method best transfers the learning from \"Westward Migration, Indigenous Displacement, and Forced Removal\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Westward Migration, Indigenous Displacement, and Forced Removal\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Analyze Indigenous sources/perspectives on displacement or treaty change.",
+            "Choose a conclusion about \"Westward Migration, Indigenous Displacement, and Forced Removal\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G4SS-W24-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Westward Migration, Indigenous Displacement, and Forced Removal\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Westward Migration, Indigenous Displacement, and Forced Removal\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study an age-appropriate forced-removal case with causes, policy, resistance, and consequences.",
+            "Use an unsourced statement about \"Westward Migration, Indigenous Displacement, and Forced Removal\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Westward Migration, Indigenous Displacement, and Forced Removal\".",
+            "Use only evidence that agrees with the first guess about \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G4SS-W24-P1",
-          "prompt": "When sources about \"Westward Migration, Indigenous Displacement, and Forced Removal\" differ, the best next step is to...",
+          "prompt": "When investigating \"Westward Migration, Indigenous Displacement, and Forced Removal\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Westward Migration, Indigenous Displacement, and Forced Removal\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Westward Migration, Indigenous Displacement, and Forced Removal\".",
+            "Use only evidence that agrees with the first guess about \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G4SS-W24-A1",
-          "prompt": "Before making a conclusion about \"Westward Migration, Indigenous Displacement, and Forced Removal\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Westward Migration, Indigenous Displacement, and Forced Removal\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a multi-perspective account distinguishing opportunity from dispossession.",
+            "Choose a conclusion about \"Westward Migration, Indigenous Displacement, and Forced Removal\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
           "id": "G4SS-W24-R1",
-          "prompt": "Which revision habit best improves work on \"Westward Migration, Indigenous Displacement, and Forced Removal\"?",
+          "prompt": "A learner's first explanation of \"Westward Migration, Indigenous Displacement, and Forced Removal\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Westward migration involved settlers, migrants, Indigenous nations, free and enslaved Black Americans, immigrants, traders, miners, farmers, soldiers, and governments; expansion produced economic opportunity alongside dispossession, violence, forced removal, and environmental change.",
+            "The topic \"Westward Migration, Indigenous Displacement, and Forced Removal\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Westward Migration, Indigenous Displacement, and Forced Removal\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Westward Migration, Indigenous Displacement, and Forced Removal\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 24
         },
         {
@@ -10484,80 +10485,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W25-S1",
-          "prompt": "Which statement best summarizes \"Transportation, Technology, Agriculture, and Industry\"?",
+          "prompt": "How did transportation and technology change work, markets, settlement, and environments?",
           "choices": [
             "Canals, steamboats, railroads, roads, mechanization, communications, agriculture, mining, and industry changed productivity, migration, markets, labor, urbanization, and environments while distributing benefits and costs unevenly.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Transportation, Technology, Agriculture, and Industry\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Transportation, Technology, Agriculture, and Industry\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G4SS-W25-T1",
-          "prompt": "Which method best transfers the learning from \"Transportation, Technology, Agriculture, and Industry\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Transportation, Technology, Agriculture, and Industry\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare economic activity before and after one major infrastructure or technology change.",
+            "Choose a conclusion about \"Transportation, Technology, Agriculture, and Industry\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G4SS-W25-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Transportation, Technology, Agriculture, and Industry\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Transportation, Technology, Agriculture, and Industry\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze labor, environmental, and community consequences alongside gains in production/access.",
+            "Use an unsourced statement about \"Transportation, Technology, Agriculture, and Industry\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Transportation, Technology, Agriculture, and Industry\".",
+            "Use only evidence that agrees with the first guess about \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G4SS-W25-P1",
-          "prompt": "When sources about \"Transportation, Technology, Agriculture, and Industry\" differ, the best next step is to...",
+          "prompt": "When investigating \"Transportation, Technology, Agriculture, and Industry\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Transportation, Technology, Agriculture, and Industry\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Transportation, Technology, Agriculture, and Industry\".",
+            "Use only evidence that agrees with the first guess about \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G4SS-W25-A1",
-          "prompt": "Before making a conclusion about \"Transportation, Technology, Agriculture, and Industry\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Transportation, Technology, Agriculture, and Industry\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a cause-effect network connecting technology, migration, jobs, markets, cities, and land use.",
+            "Choose a conclusion about \"Transportation, Technology, Agriculture, and Industry\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G4SS-W25-R1",
-          "prompt": "Which revision habit best improves work on \"Transportation, Technology, Agriculture, and Industry\"?",
+          "prompt": "A learner's first explanation of \"Transportation, Technology, Agriculture, and Industry\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Canals, steamboats, railroads, roads, mechanization, communications, agriculture, mining, and industry changed productivity, migration, markets, labor, urbanization, and environments while distributing benefits and costs unevenly.",
+            "The topic \"Transportation, Technology, Agriculture, and Industry\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Transportation, Technology, Agriculture, and Industry\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 25
         }
       ],
@@ -10642,80 +10643,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W25-S1",
-          "prompt": "Which statement best summarizes \"Transportation, Technology, Agriculture, and Industry\"?",
+          "prompt": "How did transportation and technology change work, markets, settlement, and environments?",
           "choices": [
             "Canals, steamboats, railroads, roads, mechanization, communications, agriculture, mining, and industry changed productivity, migration, markets, labor, urbanization, and environments while distributing benefits and costs unevenly.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Transportation, Technology, Agriculture, and Industry\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Transportation, Technology, Agriculture, and Industry\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G4SS-W25-T1",
-          "prompt": "Which method best transfers the learning from \"Transportation, Technology, Agriculture, and Industry\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Transportation, Technology, Agriculture, and Industry\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare economic activity before and after one major infrastructure or technology change.",
+            "Choose a conclusion about \"Transportation, Technology, Agriculture, and Industry\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G4SS-W25-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Transportation, Technology, Agriculture, and Industry\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Transportation, Technology, Agriculture, and Industry\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze labor, environmental, and community consequences alongside gains in production/access.",
+            "Use an unsourced statement about \"Transportation, Technology, Agriculture, and Industry\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Transportation, Technology, Agriculture, and Industry\".",
+            "Use only evidence that agrees with the first guess about \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G4SS-W25-P1",
-          "prompt": "When sources about \"Transportation, Technology, Agriculture, and Industry\" differ, the best next step is to...",
+          "prompt": "When investigating \"Transportation, Technology, Agriculture, and Industry\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Transportation, Technology, Agriculture, and Industry\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Transportation, Technology, Agriculture, and Industry\".",
+            "Use only evidence that agrees with the first guess about \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G4SS-W25-A1",
-          "prompt": "Before making a conclusion about \"Transportation, Technology, Agriculture, and Industry\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Transportation, Technology, Agriculture, and Industry\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a cause-effect network connecting technology, migration, jobs, markets, cities, and land use.",
+            "Choose a conclusion about \"Transportation, Technology, Agriculture, and Industry\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
           "id": "G4SS-W25-R1",
-          "prompt": "Which revision habit best improves work on \"Transportation, Technology, Agriculture, and Industry\"?",
+          "prompt": "A learner's first explanation of \"Transportation, Technology, Agriculture, and Industry\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Canals, steamboats, railroads, roads, mechanization, communications, agriculture, mining, and industry changed productivity, migration, markets, labor, urbanization, and environments while distributing benefits and costs unevenly.",
+            "The topic \"Transportation, Technology, Agriculture, and Industry\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Transportation, Technology, Agriculture, and Industry\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Transportation, Technology, Agriculture, and Industry\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 25
         },
         {
@@ -10915,80 +10916,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W26-S1",
-          "prompt": "Which statement best summarizes \"Income, Taxes, Budgets, Saving, Credit, and Interest\"?",
+          "prompt": "How do households and governments make financial choices with limited income and resources?",
           "choices": [
             "Financial literacy includes earning income, distinguishing needs/wants, budgeting, taxes, saving, investing, borrowing, credit, interest, risk, and protecting assets; choices involve tradeoffs and future consequences.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Income, Taxes, Budgets, Saving, Credit, and Interest\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Income, Taxes, Budgets, Saving, Credit, and Interest\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G4SS-W26-T1",
-          "prompt": "Which method best transfers the learning from \"Income, Taxes, Budgets, Saving, Credit, and Interest\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Income, Taxes, Budgets, Saving, Credit, and Interest\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare saving versus borrowing for a future purchase using simple interest concepts.",
+            "Choose a conclusion about \"Income, Taxes, Budgets, Saving, Credit, and Interest\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G4SS-W26-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Income, Taxes, Budgets, Saving, Credit, and Interest\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Income, Taxes, Budgets, Saving, Credit, and Interest\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Discuss why governments collect taxes and connect revenue to public services without implying all taxes/services are the same.",
+            "Use an unsourced statement about \"Income, Taxes, Budgets, Saving, Credit, and Interest\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Income, Taxes, Budgets, Saving, Credit, and Interest\".",
+            "Use only evidence that agrees with the first guess about \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G4SS-W26-P1",
-          "prompt": "When sources about \"Income, Taxes, Budgets, Saving, Credit, and Interest\" differ, the best next step is to...",
+          "prompt": "When investigating \"Income, Taxes, Budgets, Saving, Credit, and Interest\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Income, Taxes, Budgets, Saving, Credit, and Interest\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Income, Taxes, Budgets, Saving, Credit, and Interest\".",
+            "Use only evidence that agrees with the first guess about \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G4SS-W26-A1",
-          "prompt": "Before making a conclusion about \"Income, Taxes, Budgets, Saving, Credit, and Interest\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Income, Taxes, Budgets, Saving, Credit, and Interest\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Evaluate fictional financial choices for cost, risk, opportunity cost, and long-term effect.",
+            "Choose a conclusion about \"Income, Taxes, Budgets, Saving, Credit, and Interest\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G4SS-W26-R1",
-          "prompt": "Which revision habit best improves work on \"Income, Taxes, Budgets, Saving, Credit, and Interest\"?",
+          "prompt": "A learner's first explanation of \"Income, Taxes, Budgets, Saving, Credit, and Interest\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Financial literacy includes earning income, distinguishing needs/wants, budgeting, taxes, saving, investing, borrowing, credit, interest, risk, and protecting assets; choices involve tradeoffs and future consequences.",
+            "The topic \"Income, Taxes, Budgets, Saving, Credit, and Interest\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Income, Taxes, Budgets, Saving, Credit, and Interest\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 26
         }
       ],
@@ -11073,80 +11074,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W26-S1",
-          "prompt": "Which statement best summarizes \"Income, Taxes, Budgets, Saving, Credit, and Interest\"?",
+          "prompt": "How do households and governments make financial choices with limited income and resources?",
           "choices": [
             "Financial literacy includes earning income, distinguishing needs/wants, budgeting, taxes, saving, investing, borrowing, credit, interest, risk, and protecting assets; choices involve tradeoffs and future consequences.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Income, Taxes, Budgets, Saving, Credit, and Interest\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Income, Taxes, Budgets, Saving, Credit, and Interest\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G4SS-W26-T1",
-          "prompt": "Which method best transfers the learning from \"Income, Taxes, Budgets, Saving, Credit, and Interest\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Income, Taxes, Budgets, Saving, Credit, and Interest\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare saving versus borrowing for a future purchase using simple interest concepts.",
+            "Choose a conclusion about \"Income, Taxes, Budgets, Saving, Credit, and Interest\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G4SS-W26-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Income, Taxes, Budgets, Saving, Credit, and Interest\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Income, Taxes, Budgets, Saving, Credit, and Interest\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Discuss why governments collect taxes and connect revenue to public services without implying all taxes/services are the same.",
+            "Use an unsourced statement about \"Income, Taxes, Budgets, Saving, Credit, and Interest\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Income, Taxes, Budgets, Saving, Credit, and Interest\".",
+            "Use only evidence that agrees with the first guess about \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G4SS-W26-P1",
-          "prompt": "When sources about \"Income, Taxes, Budgets, Saving, Credit, and Interest\" differ, the best next step is to...",
+          "prompt": "When investigating \"Income, Taxes, Budgets, Saving, Credit, and Interest\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Income, Taxes, Budgets, Saving, Credit, and Interest\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Income, Taxes, Budgets, Saving, Credit, and Interest\".",
+            "Use only evidence that agrees with the first guess about \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G4SS-W26-A1",
-          "prompt": "Before making a conclusion about \"Income, Taxes, Budgets, Saving, Credit, and Interest\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Income, Taxes, Budgets, Saving, Credit, and Interest\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Evaluate fictional financial choices for cost, risk, opportunity cost, and long-term effect.",
+            "Choose a conclusion about \"Income, Taxes, Budgets, Saving, Credit, and Interest\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
           "id": "G4SS-W26-R1",
-          "prompt": "Which revision habit best improves work on \"Income, Taxes, Budgets, Saving, Credit, and Interest\"?",
+          "prompt": "A learner's first explanation of \"Income, Taxes, Budgets, Saving, Credit, and Interest\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Financial literacy includes earning income, distinguishing needs/wants, budgeting, taxes, saving, investing, borrowing, credit, interest, risk, and protecting assets; choices involve tradeoffs and future consequences.",
+            "The topic \"Income, Taxes, Budgets, Saving, Credit, and Interest\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Income, Taxes, Budgets, Saving, Credit, and Interest\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Income, Taxes, Budgets, Saving, Credit, and Interest\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 26
         },
         {
@@ -11346,80 +11347,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W27-S1",
-          "prompt": "Which statement best summarizes \"Slavery, Sectional Conflict, and the Civil War\"?",
+          "prompt": "How did slavery and sectional conflict contribute to the Civil War?",
           "choices": [
             "Slavery was the central cause of the Civil War, interacting with disputes over its expansion, political power, constitutional interpretation, and secession; age-appropriate study should center human experiences and evidence rather than battle memorization.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Slavery, Sectional Conflict, and the Civil War\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Slavery, Sectional Conflict, and the Civil War\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G4SS-W27-T1",
-          "prompt": "Which method best transfers the learning from \"Slavery, Sectional Conflict, and the Civil War\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Slavery, Sectional Conflict, and the Civil War\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare abolitionist, enslaved/free Black, political, and secession-era arguments using careful context.",
+            "Choose a conclusion about \"Slavery, Sectional Conflict, and the Civil War\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G4SS-W27-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Slavery, Sectional Conflict, and the Civil War\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Slavery, Sectional Conflict, and the Civil War\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study the war through emancipation, civilians, soldiers, Black military service, Indigenous experiences, and state/local connections.",
+            "Use an unsourced statement about \"Slavery, Sectional Conflict, and the Civil War\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Slavery, Sectional Conflict, and the Civil War\".",
+            "Use only evidence that agrees with the first guess about \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G4SS-W27-P1",
-          "prompt": "When sources about \"Slavery, Sectional Conflict, and the Civil War\" differ, the best next step is to...",
+          "prompt": "When investigating \"Slavery, Sectional Conflict, and the Civil War\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Slavery, Sectional Conflict, and the Civil War\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Slavery, Sectional Conflict, and the Civil War\".",
+            "Use only evidence that agrees with the first guess about \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G4SS-W27-A1",
-          "prompt": "Before making a conclusion about \"Slavery, Sectional Conflict, and the Civil War\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Slavery, Sectional Conflict, and the Civil War\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a cause explanation clearly identifying slavery as central while distinguishing related political disputes.",
+            "Choose a conclusion about \"Slavery, Sectional Conflict, and the Civil War\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G4SS-W27-R1",
-          "prompt": "Which revision habit best improves work on \"Slavery, Sectional Conflict, and the Civil War\"?",
+          "prompt": "A learner's first explanation of \"Slavery, Sectional Conflict, and the Civil War\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Slavery was the central cause of the Civil War, interacting with disputes over its expansion, political power, constitutional interpretation, and secession; age-appropriate study should center human experiences and evidence rather than battle memorization.",
+            "The topic \"Slavery, Sectional Conflict, and the Civil War\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Slavery, Sectional Conflict, and the Civil War\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 27
         }
       ],
@@ -11504,80 +11505,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W27-S1",
-          "prompt": "Which statement best summarizes \"Slavery, Sectional Conflict, and the Civil War\"?",
+          "prompt": "How did slavery and sectional conflict contribute to the Civil War?",
           "choices": [
             "Slavery was the central cause of the Civil War, interacting with disputes over its expansion, political power, constitutional interpretation, and secession; age-appropriate study should center human experiences and evidence rather than battle memorization.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Slavery, Sectional Conflict, and the Civil War\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Slavery, Sectional Conflict, and the Civil War\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G4SS-W27-T1",
-          "prompt": "Which method best transfers the learning from \"Slavery, Sectional Conflict, and the Civil War\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Slavery, Sectional Conflict, and the Civil War\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare abolitionist, enslaved/free Black, political, and secession-era arguments using careful context.",
+            "Choose a conclusion about \"Slavery, Sectional Conflict, and the Civil War\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G4SS-W27-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Slavery, Sectional Conflict, and the Civil War\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Slavery, Sectional Conflict, and the Civil War\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study the war through emancipation, civilians, soldiers, Black military service, Indigenous experiences, and state/local connections.",
+            "Use an unsourced statement about \"Slavery, Sectional Conflict, and the Civil War\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Slavery, Sectional Conflict, and the Civil War\".",
+            "Use only evidence that agrees with the first guess about \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G4SS-W27-P1",
-          "prompt": "When sources about \"Slavery, Sectional Conflict, and the Civil War\" differ, the best next step is to...",
+          "prompt": "When investigating \"Slavery, Sectional Conflict, and the Civil War\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Slavery, Sectional Conflict, and the Civil War\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Slavery, Sectional Conflict, and the Civil War\".",
+            "Use only evidence that agrees with the first guess about \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G4SS-W27-A1",
-          "prompt": "Before making a conclusion about \"Slavery, Sectional Conflict, and the Civil War\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Slavery, Sectional Conflict, and the Civil War\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write a cause explanation clearly identifying slavery as central while distinguishing related political disputes.",
+            "Choose a conclusion about \"Slavery, Sectional Conflict, and the Civil War\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
           "id": "G4SS-W27-R1",
-          "prompt": "Which revision habit best improves work on \"Slavery, Sectional Conflict, and the Civil War\"?",
+          "prompt": "A learner's first explanation of \"Slavery, Sectional Conflict, and the Civil War\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Slavery was the central cause of the Civil War, interacting with disputes over its expansion, political power, constitutional interpretation, and secession; age-appropriate study should center human experiences and evidence rather than battle memorization.",
+            "The topic \"Slavery, Sectional Conflict, and the Civil War\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Slavery, Sectional Conflict, and the Civil War\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Slavery, Sectional Conflict, and the Civil War\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 27
         },
         {
@@ -11777,80 +11778,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W28-S1",
-          "prompt": "Which statement best summarizes \"Emancipation, Reconstruction, and Constitutional Citizenship\"?",
+          "prompt": "How did Reconstruction redefine freedom and citizenship, and why were its gains contested?",
           "choices": [
             "The 13th, 14th, and 15th Amendments transformed constitutional law by ending slavery, defining national citizenship/equal protection, and protecting voting rights for Black men, while violence, discriminatory laws, and political conflict limited implementation.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Emancipation, Reconstruction, and Constitutional Citizenship\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Emancipation, Reconstruction, and Constitutional Citizenship\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G4SS-W28-T1",
-          "prompt": "Which method best transfers the learning from \"Emancipation, Reconstruction, and Constitutional Citizenship\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Emancipation, Reconstruction, and Constitutional Citizenship\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare legal changes with evidence about actual conditions.",
+            "Choose a conclusion about \"Emancipation, Reconstruction, and Constitutional Citizenship\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G4SS-W28-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Emancipation, Reconstruction, and Constitutional Citizenship\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Emancipation, Reconstruction, and Constitutional Citizenship\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study Black officeholding, schools, institutions, families, land/labor, and resistance to Reconstruction.",
+            "Use an unsourced statement about \"Emancipation, Reconstruction, and Constitutional Citizenship\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Emancipation, Reconstruction, and Constitutional Citizenship\".",
+            "Use only evidence that agrees with the first guess about \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G4SS-W28-P1",
-          "prompt": "When sources about \"Emancipation, Reconstruction, and Constitutional Citizenship\" differ, the best next step is to...",
+          "prompt": "When investigating \"Emancipation, Reconstruction, and Constitutional Citizenship\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Emancipation, Reconstruction, and Constitutional Citizenship\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Emancipation, Reconstruction, and Constitutional Citizenship\".",
+            "Use only evidence that agrees with the first guess about \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G4SS-W28-A1",
-          "prompt": "Before making a conclusion about \"Emancipation, Reconstruction, and Constitutional Citizenship\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Emancipation, Reconstruction, and Constitutional Citizenship\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write an ideals-versus-implementation explanation using constitutional and historical evidence.",
+            "Choose a conclusion about \"Emancipation, Reconstruction, and Constitutional Citizenship\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G4SS-W28-R1",
-          "prompt": "Which revision habit best improves work on \"Emancipation, Reconstruction, and Constitutional Citizenship\"?",
+          "prompt": "A learner's first explanation of \"Emancipation, Reconstruction, and Constitutional Citizenship\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "The 13th, 14th, and 15th Amendments transformed constitutional law by ending slavery, defining national citizenship/equal protection, and protecting voting rights for Black men, while violence, discriminatory laws, and political conflict limited implementation.",
+            "The topic \"Emancipation, Reconstruction, and Constitutional Citizenship\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Emancipation, Reconstruction, and Constitutional Citizenship\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 28
         }
       ],
@@ -11935,80 +11936,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W28-S1",
-          "prompt": "Which statement best summarizes \"Emancipation, Reconstruction, and Constitutional Citizenship\"?",
+          "prompt": "How did Reconstruction redefine freedom and citizenship, and why were its gains contested?",
           "choices": [
             "The 13th, 14th, and 15th Amendments transformed constitutional law by ending slavery, defining national citizenship/equal protection, and protecting voting rights for Black men, while violence, discriminatory laws, and political conflict limited implementation.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Emancipation, Reconstruction, and Constitutional Citizenship\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Emancipation, Reconstruction, and Constitutional Citizenship\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G4SS-W28-T1",
-          "prompt": "Which method best transfers the learning from \"Emancipation, Reconstruction, and Constitutional Citizenship\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Emancipation, Reconstruction, and Constitutional Citizenship\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare legal changes with evidence about actual conditions.",
+            "Choose a conclusion about \"Emancipation, Reconstruction, and Constitutional Citizenship\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G4SS-W28-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Emancipation, Reconstruction, and Constitutional Citizenship\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Emancipation, Reconstruction, and Constitutional Citizenship\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study Black officeholding, schools, institutions, families, land/labor, and resistance to Reconstruction.",
+            "Use an unsourced statement about \"Emancipation, Reconstruction, and Constitutional Citizenship\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Emancipation, Reconstruction, and Constitutional Citizenship\".",
+            "Use only evidence that agrees with the first guess about \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G4SS-W28-P1",
-          "prompt": "When sources about \"Emancipation, Reconstruction, and Constitutional Citizenship\" differ, the best next step is to...",
+          "prompt": "When investigating \"Emancipation, Reconstruction, and Constitutional Citizenship\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Emancipation, Reconstruction, and Constitutional Citizenship\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Emancipation, Reconstruction, and Constitutional Citizenship\".",
+            "Use only evidence that agrees with the first guess about \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G4SS-W28-A1",
-          "prompt": "Before making a conclusion about \"Emancipation, Reconstruction, and Constitutional Citizenship\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Emancipation, Reconstruction, and Constitutional Citizenship\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Write an ideals-versus-implementation explanation using constitutional and historical evidence.",
+            "Choose a conclusion about \"Emancipation, Reconstruction, and Constitutional Citizenship\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
           "id": "G4SS-W28-R1",
-          "prompt": "Which revision habit best improves work on \"Emancipation, Reconstruction, and Constitutional Citizenship\"?",
+          "prompt": "A learner's first explanation of \"Emancipation, Reconstruction, and Constitutional Citizenship\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "The 13th, 14th, and 15th Amendments transformed constitutional law by ending slavery, defining national citizenship/equal protection, and protecting voting rights for Black men, while violence, discriminatory laws, and political conflict limited implementation.",
+            "The topic \"Emancipation, Reconstruction, and Constitutional Citizenship\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Emancipation, Reconstruction, and Constitutional Citizenship\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Emancipation, Reconstruction, and Constitutional Citizenship\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 28
         },
         {
@@ -12208,80 +12209,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W29-S1",
-          "prompt": "Which statement best summarizes \"Industrialization, Immigration, African American Migration, and State Growth\"?",
+          "prompt": "How did migration and industrial growth transform states and communities after the Civil War?",
           "choices": [
             "Industrialization and changing agriculture, immigration, African American migration, rail/port growth, entrepreneurship, labor, and urbanization reshaped population, culture, politics, and economies, while discrimination and unequal opportunity persisted.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Industrialization, Immigration, African American Migration, and State Growth\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Industrialization, Immigration, African American Migration, and State Growth\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G4SS-W29-T1",
-          "prompt": "Which method best transfers the learning from \"Industrialization, Immigration, African American Migration, and State Growth\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Industrialization, Immigration, African American Migration, and State Growth\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare immigrant and African American migration stories without treating either group as uniform.",
+            "Choose a conclusion about \"Industrialization, Immigration, African American Migration, and State Growth\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G4SS-W29-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Industrialization, Immigration, African American Migration, and State Growth\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Industrialization, Immigration, African American Migration, and State Growth\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study entrepreneurs, workers, public servants, educators, and community institutions.",
+            "Use an unsourced statement about \"Industrialization, Immigration, African American Migration, and State Growth\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Industrialization, Immigration, African American Migration, and State Growth\".",
+            "Use only evidence that agrees with the first guess about \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G4SS-W29-P1",
-          "prompt": "When sources about \"Industrialization, Immigration, African American Migration, and State Growth\" differ, the best next step is to...",
+          "prompt": "When investigating \"Industrialization, Immigration, African American Migration, and State Growth\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Industrialization, Immigration, African American Migration, and State Growth\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Industrialization, Immigration, African American Migration, and State Growth\".",
+            "Use only evidence that agrees with the first guess about \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G4SS-W29-A1",
-          "prompt": "Before making a conclusion about \"Industrialization, Immigration, African American Migration, and State Growth\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Industrialization, Immigration, African American Migration, and State Growth\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a migration-and-growth map/story linking jobs, transport, discrimination, institutions, and cultural change.",
+            "Choose a conclusion about \"Industrialization, Immigration, African American Migration, and State Growth\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G4SS-W29-R1",
-          "prompt": "Which revision habit best improves work on \"Industrialization, Immigration, African American Migration, and State Growth\"?",
+          "prompt": "A learner's first explanation of \"Industrialization, Immigration, African American Migration, and State Growth\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Industrialization and changing agriculture, immigration, African American migration, rail/port growth, entrepreneurship, labor, and urbanization reshaped population, culture, politics, and economies, while discrimination and unequal opportunity persisted.",
+            "The topic \"Industrialization, Immigration, African American Migration, and State Growth\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Industrialization, Immigration, African American Migration, and State Growth\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 29
         }
       ],
@@ -12366,80 +12367,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W29-S1",
-          "prompt": "Which statement best summarizes \"Industrialization, Immigration, African American Migration, and State Growth\"?",
+          "prompt": "How did migration and industrial growth transform states and communities after the Civil War?",
           "choices": [
             "Industrialization and changing agriculture, immigration, African American migration, rail/port growth, entrepreneurship, labor, and urbanization reshaped population, culture, politics, and economies, while discrimination and unequal opportunity persisted.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Industrialization, Immigration, African American Migration, and State Growth\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Industrialization, Immigration, African American Migration, and State Growth\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G4SS-W29-T1",
-          "prompt": "Which method best transfers the learning from \"Industrialization, Immigration, African American Migration, and State Growth\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Industrialization, Immigration, African American Migration, and State Growth\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Compare immigrant and African American migration stories without treating either group as uniform.",
+            "Choose a conclusion about \"Industrialization, Immigration, African American Migration, and State Growth\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G4SS-W29-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Industrialization, Immigration, African American Migration, and State Growth\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Industrialization, Immigration, African American Migration, and State Growth\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Study entrepreneurs, workers, public servants, educators, and community institutions.",
+            "Use an unsourced statement about \"Industrialization, Immigration, African American Migration, and State Growth\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Industrialization, Immigration, African American Migration, and State Growth\".",
+            "Use only evidence that agrees with the first guess about \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G4SS-W29-P1",
-          "prompt": "When sources about \"Industrialization, Immigration, African American Migration, and State Growth\" differ, the best next step is to...",
+          "prompt": "When investigating \"Industrialization, Immigration, African American Migration, and State Growth\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Industrialization, Immigration, African American Migration, and State Growth\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Industrialization, Immigration, African American Migration, and State Growth\".",
+            "Use only evidence that agrees with the first guess about \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G4SS-W29-A1",
-          "prompt": "Before making a conclusion about \"Industrialization, Immigration, African American Migration, and State Growth\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Industrialization, Immigration, African American Migration, and State Growth\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a migration-and-growth map/story linking jobs, transport, discrimination, institutions, and cultural change.",
+            "Choose a conclusion about \"Industrialization, Immigration, African American Migration, and State Growth\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
           "id": "G4SS-W29-R1",
-          "prompt": "Which revision habit best improves work on \"Industrialization, Immigration, African American Migration, and State Growth\"?",
+          "prompt": "A learner's first explanation of \"Industrialization, Immigration, African American Migration, and State Growth\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Industrialization and changing agriculture, immigration, African American migration, rail/port growth, entrepreneurship, labor, and urbanization reshaped population, culture, politics, and economies, while discrimination and unequal opportunity persisted.",
+            "The topic \"Industrialization, Immigration, African American Migration, and State Growth\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Industrialization, Immigration, African American Migration, and State Growth\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Industrialization, Immigration, African American Migration, and State Growth\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 29
         },
         {
@@ -12639,80 +12640,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W30-S1",
-          "prompt": "Which statement best summarizes \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"?",
+          "prompt": "How did twentieth-century forces reshape state economies, populations, rights, and environments?",
           "choices": [
             "States changed through wars, federal investment, highways, aviation, tourism, industry, agriculture, migration, civil-rights activism, suburbanization, environmental policy, disasters, and demographic change.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G4SS-W30-T1",
-          "prompt": "Which method best transfers the learning from \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Study African American and other civil-rights leaders/institutions in the chosen state.",
+            "Choose a conclusion about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G4SS-W30-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze one industry/tourism/agriculture/environment case and its tradeoffs.",
+            "Use an unsourced statement about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\".",
+            "Use only evidence that agrees with the first guess about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G4SS-W30-P1",
-          "prompt": "When sources about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" differ, the best next step is to...",
+          "prompt": "When investigating \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\".",
+            "Use only evidence that agrees with the first guess about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G4SS-W30-A1",
-          "prompt": "Before making a conclusion about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a twentieth-century change timeline showing economy, population, rights, infrastructure, and environment.",
+            "Choose a conclusion about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G4SS-W30-R1",
-          "prompt": "Which revision habit best improves work on \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"?",
+          "prompt": "A learner's first explanation of \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "States changed through wars, federal investment, highways, aviation, tourism, industry, agriculture, migration, civil-rights activism, suburbanization, environmental policy, disasters, and demographic change.",
+            "The topic \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 30
         }
       ],
@@ -12797,80 +12798,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W30-S1",
-          "prompt": "Which statement best summarizes \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"?",
+          "prompt": "How did twentieth-century forces reshape state economies, populations, rights, and environments?",
           "choices": [
             "States changed through wars, federal investment, highways, aviation, tourism, industry, agriculture, migration, civil-rights activism, suburbanization, environmental policy, disasters, and demographic change.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G4SS-W30-T1",
-          "prompt": "Which method best transfers the learning from \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Study African American and other civil-rights leaders/institutions in the chosen state.",
+            "Choose a conclusion about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G4SS-W30-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Analyze one industry/tourism/agriculture/environment case and its tradeoffs.",
+            "Use an unsourced statement about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\".",
+            "Use only evidence that agrees with the first guess about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G4SS-W30-P1",
-          "prompt": "When sources about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" differ, the best next step is to...",
+          "prompt": "When investigating \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\".",
+            "Use only evidence that agrees with the first guess about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G4SS-W30-A1",
-          "prompt": "Before making a conclusion about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a twentieth-century change timeline showing economy, population, rights, infrastructure, and environment.",
+            "Choose a conclusion about \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
           "id": "G4SS-W30-R1",
-          "prompt": "Which revision habit best improves work on \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"?",
+          "prompt": "A learner's first explanation of \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "States changed through wars, federal investment, highways, aviation, tourism, industry, agriculture, migration, civil-rights activism, suburbanization, environmental policy, disasters, and demographic change.",
+            "The topic \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 30
         },
         {
@@ -13070,80 +13071,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W31-S1",
-          "prompt": "Which statement best summarizes \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"?",
+          "prompt": "How do communities define public problems and compare policy options?",
           "choices": [
             "Public problem solving requires defining the problem, identifying jurisdiction and stakeholders, gathering evidence, comparing policy options, considering rights/costs/benefits, and evaluating results.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G4SS-W31-T1",
-          "prompt": "Which method best transfers the learning from \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"State and Local Problem Solving, Public Policy, and Civic Deliberation\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Identify jurisdiction, stakeholders, evidence needs, and constraints.",
+            "Choose a conclusion about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G4SS-W31-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Compare at least three policy options using common criteria.",
+            "Use an unsourced statement about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\".",
+            "Use only evidence that agrees with the first guess about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G4SS-W31-P1",
-          "prompt": "When sources about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" differ, the best next step is to...",
+          "prompt": "When investigating \"State and Local Problem Solving, Public Policy, and Civic Deliberation\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\".",
+            "Use only evidence that agrees with the first guess about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G4SS-W31-A1",
-          "prompt": "Before making a conclusion about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Conduct a nonpartisan deliberation and produce a recommendation plus evaluation plan.",
+            "Choose a conclusion about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G4SS-W31-R1",
-          "prompt": "Which revision habit best improves work on \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"?",
+          "prompt": "A learner's first explanation of \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Public problem solving requires defining the problem, identifying jurisdiction and stakeholders, gathering evidence, comparing policy options, considering rights/costs/benefits, and evaluating results.",
+            "The topic \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 31
         }
       ],
@@ -13228,80 +13229,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W31-S1",
-          "prompt": "Which statement best summarizes \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"?",
+          "prompt": "How do communities define public problems and compare policy options?",
           "choices": [
             "Public problem solving requires defining the problem, identifying jurisdiction and stakeholders, gathering evidence, comparing policy options, considering rights/costs/benefits, and evaluating results.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G4SS-W31-T1",
-          "prompt": "Which method best transfers the learning from \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"State and Local Problem Solving, Public Policy, and Civic Deliberation\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Identify jurisdiction, stakeholders, evidence needs, and constraints.",
+            "Choose a conclusion about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G4SS-W31-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Compare at least three policy options using common criteria.",
+            "Use an unsourced statement about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\".",
+            "Use only evidence that agrees with the first guess about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G4SS-W31-P1",
-          "prompt": "When sources about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" differ, the best next step is to...",
+          "prompt": "When investigating \"State and Local Problem Solving, Public Policy, and Civic Deliberation\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\".",
+            "Use only evidence that agrees with the first guess about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G4SS-W31-A1",
-          "prompt": "Before making a conclusion about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Conduct a nonpartisan deliberation and produce a recommendation plus evaluation plan.",
+            "Choose a conclusion about \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
           "id": "G4SS-W31-R1",
-          "prompt": "Which revision habit best improves work on \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"?",
+          "prompt": "A learner's first explanation of \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Public problem solving requires defining the problem, identifying jurisdiction and stakeholders, gathering evidence, comparing policy options, considering rights/costs/benefits, and evaluating results.",
+            "The topic \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State and Local Problem Solving, Public Policy, and Civic Deliberation\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State and Local Problem Solving, Public Policy, and Civic Deliberation\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 31
         },
         {
@@ -13501,80 +13502,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W32-S1",
-          "prompt": "Which statement best summarizes \"State Economies in National and Global Systems\"?",
+          "prompt": "How are state economies connected to the nation and the world?",
           "choices": [
             "State economies connect through labor, agriculture, manufacturing, services, tourism, technology, finance, ports, energy, supply chains, trade, public investment, and migration; specialization creates opportunities and interdependence.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"State Economies in National and Global Systems\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State Economies in National and Global Systems\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G4SS-W32-T1",
-          "prompt": "Which method best transfers the learning from \"State Economies in National and Global Systems\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"State Economies in National and Global Systems\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Trace one product/service through a state-to-national/global supply chain.",
+            "Choose a conclusion about \"State Economies in National and Global Systems\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G4SS-W32-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"State Economies in National and Global Systems\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"State Economies in National and Global Systems\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Compare benefits and vulnerabilities of specialization and interdependence.",
+            "Use an unsourced statement about \"State Economies in National and Global Systems\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State Economies in National and Global Systems\".",
+            "Use only evidence that agrees with the first guess about \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G4SS-W32-P1",
-          "prompt": "When sources about \"State Economies in National and Global Systems\" differ, the best next step is to...",
+          "prompt": "When investigating \"State Economies in National and Global Systems\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"State Economies in National and Global Systems\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State Economies in National and Global Systems\".",
+            "Use only evidence that agrees with the first guess about \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G4SS-W32-A1",
-          "prompt": "Before making a conclusion about \"State Economies in National and Global Systems\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"State Economies in National and Global Systems\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create an economic map linking resources, labor, infrastructure, markets, trade, and environmental effects.",
+            "Choose a conclusion about \"State Economies in National and Global Systems\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G4SS-W32-R1",
-          "prompt": "Which revision habit best improves work on \"State Economies in National and Global Systems\"?",
+          "prompt": "A learner's first explanation of \"State Economies in National and Global Systems\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "State economies connect through labor, agriculture, manufacturing, services, tourism, technology, finance, ports, energy, supply chains, trade, public investment, and migration; specialization creates opportunities and interdependence.",
+            "The topic \"State Economies in National and Global Systems\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State Economies in National and Global Systems\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 32
         }
       ],
@@ -13659,80 +13660,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W32-S1",
-          "prompt": "Which statement best summarizes \"State Economies in National and Global Systems\"?",
+          "prompt": "How are state economies connected to the nation and the world?",
           "choices": [
             "State economies connect through labor, agriculture, manufacturing, services, tourism, technology, finance, ports, energy, supply chains, trade, public investment, and migration; specialization creates opportunities and interdependence.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"State Economies in National and Global Systems\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State Economies in National and Global Systems\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G4SS-W32-T1",
-          "prompt": "Which method best transfers the learning from \"State Economies in National and Global Systems\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"State Economies in National and Global Systems\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Trace one product/service through a state-to-national/global supply chain.",
+            "Choose a conclusion about \"State Economies in National and Global Systems\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G4SS-W32-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"State Economies in National and Global Systems\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"State Economies in National and Global Systems\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Compare benefits and vulnerabilities of specialization and interdependence.",
+            "Use an unsourced statement about \"State Economies in National and Global Systems\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State Economies in National and Global Systems\".",
+            "Use only evidence that agrees with the first guess about \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G4SS-W32-P1",
-          "prompt": "When sources about \"State Economies in National and Global Systems\" differ, the best next step is to...",
+          "prompt": "When investigating \"State Economies in National and Global Systems\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"State Economies in National and Global Systems\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State Economies in National and Global Systems\".",
+            "Use only evidence that agrees with the first guess about \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G4SS-W32-A1",
-          "prompt": "Before making a conclusion about \"State Economies in National and Global Systems\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"State Economies in National and Global Systems\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create an economic map linking resources, labor, infrastructure, markets, trade, and environmental effects.",
+            "Choose a conclusion about \"State Economies in National and Global Systems\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
           "id": "G4SS-W32-R1",
-          "prompt": "Which revision habit best improves work on \"State Economies in National and Global Systems\"?",
+          "prompt": "A learner's first explanation of \"State Economies in National and Global Systems\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "State economies connect through labor, agriculture, manufacturing, services, tourism, technology, finance, ports, energy, supply chains, trade, public investment, and migration; specialization creates opportunities and interdependence.",
+            "The topic \"State Economies in National and Global Systems\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State Economies in National and Global Systems\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State Economies in National and Global Systems\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 32
         },
         {
@@ -13932,80 +13933,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W33-S1",
-          "prompt": "Which statement best summarizes \"Media Literacy, Historical Claims, and Civic Verification\"?",
+          "prompt": "How can students verify claims about history, government, and public issues?",
           "choices": [
             "Verification requires tracing claims to evidence, opening full sources, identifying creator/date/purpose, distinguishing reporting from commentary or advertising, checking primary records when possible, and corroborating across independent sources.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Media Literacy, Historical Claims, and Civic Verification\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Media Literacy, Historical Claims, and Civic Verification\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G4SS-W33-T1",
-          "prompt": "Which method best transfers the learning from \"Media Literacy, Historical Claims, and Civic Verification\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Media Literacy, Historical Claims, and Civic Verification\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Trace a claim to its original source or record when possible.",
+            "Choose a conclusion about \"Media Literacy, Historical Claims, and Civic Verification\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G4SS-W33-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Media Literacy, Historical Claims, and Civic Verification\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Media Literacy, Historical Claims, and Civic Verification\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Corroborate a factual public claim with at least two independent sources.",
+            "Use an unsourced statement about \"Media Literacy, Historical Claims, and Civic Verification\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Media Literacy, Historical Claims, and Civic Verification\".",
+            "Use only evidence that agrees with the first guess about \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G4SS-W33-P1",
-          "prompt": "When sources about \"Media Literacy, Historical Claims, and Civic Verification\" differ, the best next step is to...",
+          "prompt": "When investigating \"Media Literacy, Historical Claims, and Civic Verification\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Media Literacy, Historical Claims, and Civic Verification\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Media Literacy, Historical Claims, and Civic Verification\".",
+            "Use only evidence that agrees with the first guess about \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G4SS-W33-A1",
-          "prompt": "Before making a conclusion about \"Media Literacy, Historical Claims, and Civic Verification\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Media Literacy, Historical Claims, and Civic Verification\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a verification log showing claim, source, date, evidence, uncertainty, and conclusion.",
+            "Choose a conclusion about \"Media Literacy, Historical Claims, and Civic Verification\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G4SS-W33-R1",
-          "prompt": "Which revision habit best improves work on \"Media Literacy, Historical Claims, and Civic Verification\"?",
+          "prompt": "A learner's first explanation of \"Media Literacy, Historical Claims, and Civic Verification\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Verification requires tracing claims to evidence, opening full sources, identifying creator/date/purpose, distinguishing reporting from commentary or advertising, checking primary records when possible, and corroborating across independent sources.",
+            "The topic \"Media Literacy, Historical Claims, and Civic Verification\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Media Literacy, Historical Claims, and Civic Verification\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 33
         }
       ],
@@ -14090,80 +14091,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W33-S1",
-          "prompt": "Which statement best summarizes \"Media Literacy, Historical Claims, and Civic Verification\"?",
+          "prompt": "How can students verify claims about history, government, and public issues?",
           "choices": [
             "Verification requires tracing claims to evidence, opening full sources, identifying creator/date/purpose, distinguishing reporting from commentary or advertising, checking primary records when possible, and corroborating across independent sources.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Media Literacy, Historical Claims, and Civic Verification\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Media Literacy, Historical Claims, and Civic Verification\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G4SS-W33-T1",
-          "prompt": "Which method best transfers the learning from \"Media Literacy, Historical Claims, and Civic Verification\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Media Literacy, Historical Claims, and Civic Verification\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Trace a claim to its original source or record when possible.",
+            "Choose a conclusion about \"Media Literacy, Historical Claims, and Civic Verification\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G4SS-W33-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Media Literacy, Historical Claims, and Civic Verification\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Media Literacy, Historical Claims, and Civic Verification\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Corroborate a factual public claim with at least two independent sources.",
+            "Use an unsourced statement about \"Media Literacy, Historical Claims, and Civic Verification\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Media Literacy, Historical Claims, and Civic Verification\".",
+            "Use only evidence that agrees with the first guess about \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G4SS-W33-P1",
-          "prompt": "When sources about \"Media Literacy, Historical Claims, and Civic Verification\" differ, the best next step is to...",
+          "prompt": "When investigating \"Media Literacy, Historical Claims, and Civic Verification\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Media Literacy, Historical Claims, and Civic Verification\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Media Literacy, Historical Claims, and Civic Verification\".",
+            "Use only evidence that agrees with the first guess about \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G4SS-W33-A1",
-          "prompt": "Before making a conclusion about \"Media Literacy, Historical Claims, and Civic Verification\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Media Literacy, Historical Claims, and Civic Verification\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a verification log showing claim, source, date, evidence, uncertainty, and conclusion.",
+            "Choose a conclusion about \"Media Literacy, Historical Claims, and Civic Verification\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
           "id": "G4SS-W33-R1",
-          "prompt": "Which revision habit best improves work on \"Media Literacy, Historical Claims, and Civic Verification\"?",
+          "prompt": "A learner's first explanation of \"Media Literacy, Historical Claims, and Civic Verification\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Verification requires tracing claims to evidence, opening full sources, identifying creator/date/purpose, distinguishing reporting from commentary or advertising, checking primary records when possible, and corroborating across independent sources.",
+            "The topic \"Media Literacy, Historical Claims, and Civic Verification\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Media Literacy, Historical Claims, and Civic Verification\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Media Literacy, Historical Claims, and Civic Verification\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 33
         },
         {
@@ -14363,80 +14364,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W34-S1",
-          "prompt": "Which statement best summarizes \"Informed Action and Community Evidence Project\"?",
+          "prompt": "How can students take safe, nonpartisan, evidence-based action on a community issue?",
           "choices": [
             "Informed action connects inquiry to responsible participation: define a problem, understand context and jurisdiction, gather evidence, hear stakeholders, compare options, act safely and lawfully, and evaluate outcomes.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Informed Action and Community Evidence Project\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Informed Action and Community Evidence Project\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G4SS-W34-T1",
-          "prompt": "Which method best transfers the learning from \"Informed Action and Community Evidence Project\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Informed Action and Community Evidence Project\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Gather evidence and identify affected stakeholders without collecting sensitive personal data.",
+            "Choose a conclusion about \"Informed Action and Community Evidence Project\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G4SS-W34-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Informed Action and Community Evidence Project\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Informed Action and Community Evidence Project\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Create a nonpartisan product such as a public-information guide, service proposal, exhibit, or evidence memo.",
+            "Use an unsourced statement about \"Informed Action and Community Evidence Project\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Informed Action and Community Evidence Project\".",
+            "Use only evidence that agrees with the first guess about \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G4SS-W34-P1",
-          "prompt": "When sources about \"Informed Action and Community Evidence Project\" differ, the best next step is to...",
+          "prompt": "When investigating \"Informed Action and Community Evidence Project\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Informed Action and Community Evidence Project\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Informed Action and Community Evidence Project\".",
+            "Use only evidence that agrees with the first guess about \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G4SS-W34-A1",
-          "prompt": "Before making a conclusion about \"Informed Action and Community Evidence Project\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Informed Action and Community Evidence Project\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Present the action/project and define how success, unintended effects, and next steps would be evaluated.",
+            "Choose a conclusion about \"Informed Action and Community Evidence Project\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G4SS-W34-R1",
-          "prompt": "Which revision habit best improves work on \"Informed Action and Community Evidence Project\"?",
+          "prompt": "A learner's first explanation of \"Informed Action and Community Evidence Project\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Informed action connects inquiry to responsible participation: define a problem, understand context and jurisdiction, gather evidence, hear stakeholders, compare options, act safely and lawfully, and evaluate outcomes.",
+            "The topic \"Informed Action and Community Evidence Project\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Informed Action and Community Evidence Project\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 34
         }
       ],
@@ -14521,80 +14522,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W34-S1",
-          "prompt": "Which statement best summarizes \"Informed Action and Community Evidence Project\"?",
+          "prompt": "How can students take safe, nonpartisan, evidence-based action on a community issue?",
           "choices": [
             "Informed action connects inquiry to responsible participation: define a problem, understand context and jurisdiction, gather evidence, hear stakeholders, compare options, act safely and lawfully, and evaluate outcomes.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Informed Action and Community Evidence Project\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Informed Action and Community Evidence Project\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G4SS-W34-T1",
-          "prompt": "Which method best transfers the learning from \"Informed Action and Community Evidence Project\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Informed Action and Community Evidence Project\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Gather evidence and identify affected stakeholders without collecting sensitive personal data.",
+            "Choose a conclusion about \"Informed Action and Community Evidence Project\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G4SS-W34-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Informed Action and Community Evidence Project\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Informed Action and Community Evidence Project\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Create a nonpartisan product such as a public-information guide, service proposal, exhibit, or evidence memo.",
+            "Use an unsourced statement about \"Informed Action and Community Evidence Project\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Informed Action and Community Evidence Project\".",
+            "Use only evidence that agrees with the first guess about \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G4SS-W34-P1",
-          "prompt": "When sources about \"Informed Action and Community Evidence Project\" differ, the best next step is to...",
+          "prompt": "When investigating \"Informed Action and Community Evidence Project\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Informed Action and Community Evidence Project\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Informed Action and Community Evidence Project\".",
+            "Use only evidence that agrees with the first guess about \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G4SS-W34-A1",
-          "prompt": "Before making a conclusion about \"Informed Action and Community Evidence Project\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Informed Action and Community Evidence Project\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Present the action/project and define how success, unintended effects, and next steps would be evaluated.",
+            "Choose a conclusion about \"Informed Action and Community Evidence Project\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
           "id": "G4SS-W34-R1",
-          "prompt": "Which revision habit best improves work on \"Informed Action and Community Evidence Project\"?",
+          "prompt": "A learner's first explanation of \"Informed Action and Community Evidence Project\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Informed action connects inquiry to responsible participation: define a problem, understand context and jurisdiction, gather evidence, hear stakeholders, compare options, act safely and lawfully, and evaluate outcomes.",
+            "The topic \"Informed Action and Community Evidence Project\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Informed Action and Community Evidence Project\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Informed Action and Community Evidence Project\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 34
         },
         {
@@ -14794,80 +14795,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W35-S1",
-          "prompt": "Which statement best summarizes \"State and Local History Research Capstone\"?",
+          "prompt": "How can I build a defensible historical investigation using multiple sources and disciplinary tools?",
           "choices": [
             "The Grade 4 capstone requires a focused state/local question, chronology, geography, multiple source types, primary evidence when appropriate, multiple perspectives, economic/civic context, citations, revision, and oral defense.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"State and Local History Research Capstone\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State and Local History Research Capstone\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G4SS-W35-T1",
-          "prompt": "Which method best transfers the learning from \"State and Local History Research Capstone\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"State and Local History Research Capstone\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Build a source plan with at least five sources from at least three source types, including map/data and primary/official evidence when appropriate.",
+            "Choose a conclusion about \"State and Local History Research Capstone\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G4SS-W35-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"State and Local History Research Capstone\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"State and Local History Research Capstone\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Draft a thesis, timeline/map, evidence table, counterevidence/limitations note, and bibliography.",
+            "Use an unsourced statement about \"State and Local History Research Capstone\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State and Local History Research Capstone\".",
+            "Use only evidence that agrees with the first guess about \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G4SS-W35-P1",
-          "prompt": "When sources about \"State and Local History Research Capstone\" differ, the best next step is to...",
+          "prompt": "When investigating \"State and Local History Research Capstone\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"State and Local History Research Capstone\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State and Local History Research Capstone\".",
+            "Use only evidence that agrees with the first guess about \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G4SS-W35-A1",
-          "prompt": "Before making a conclusion about \"State and Local History Research Capstone\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"State and Local History Research Capstone\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a report, exhibit, map story, documentary script, civic memo, or presentation and complete a short oral defense.",
+            "Choose a conclusion about \"State and Local History Research Capstone\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G4SS-W35-R1",
-          "prompt": "Which revision habit best improves work on \"State and Local History Research Capstone\"?",
+          "prompt": "A learner's first explanation of \"State and Local History Research Capstone\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "The Grade 4 capstone requires a focused state/local question, chronology, geography, multiple source types, primary evidence when appropriate, multiple perspectives, economic/civic context, citations, revision, and oral defense.",
+            "The topic \"State and Local History Research Capstone\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State and Local History Research Capstone\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 35
         }
       ],
@@ -14952,80 +14953,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W35-S1",
-          "prompt": "Which statement best summarizes \"State and Local History Research Capstone\"?",
+          "prompt": "How can I build a defensible historical investigation using multiple sources and disciplinary tools?",
           "choices": [
             "The Grade 4 capstone requires a focused state/local question, chronology, geography, multiple source types, primary evidence when appropriate, multiple perspectives, economic/civic context, citations, revision, and oral defense.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"State and Local History Research Capstone\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State and Local History Research Capstone\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G4SS-W35-T1",
-          "prompt": "Which method best transfers the learning from \"State and Local History Research Capstone\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"State and Local History Research Capstone\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Build a source plan with at least five sources from at least three source types, including map/data and primary/official evidence when appropriate.",
+            "Choose a conclusion about \"State and Local History Research Capstone\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G4SS-W35-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"State and Local History Research Capstone\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"State and Local History Research Capstone\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Draft a thesis, timeline/map, evidence table, counterevidence/limitations note, and bibliography.",
+            "Use an unsourced statement about \"State and Local History Research Capstone\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State and Local History Research Capstone\".",
+            "Use only evidence that agrees with the first guess about \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G4SS-W35-P1",
-          "prompt": "When sources about \"State and Local History Research Capstone\" differ, the best next step is to...",
+          "prompt": "When investigating \"State and Local History Research Capstone\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"State and Local History Research Capstone\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"State and Local History Research Capstone\".",
+            "Use only evidence that agrees with the first guess about \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G4SS-W35-A1",
-          "prompt": "Before making a conclusion about \"State and Local History Research Capstone\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"State and Local History Research Capstone\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Create a report, exhibit, map story, documentary script, civic memo, or presentation and complete a short oral defense.",
+            "Choose a conclusion about \"State and Local History Research Capstone\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
           "id": "G4SS-W35-R1",
-          "prompt": "Which revision habit best improves work on \"State and Local History Research Capstone\"?",
+          "prompt": "A learner's first explanation of \"State and Local History Research Capstone\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "The Grade 4 capstone requires a focused state/local question, chronology, geography, multiple source types, primary evidence when appropriate, multiple perspectives, economic/civic context, citations, revision, and oral defense.",
+            "The topic \"State and Local History Research Capstone\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"State and Local History Research Capstone\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"State and Local History Research Capstone\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 35
         },
         {
@@ -15225,80 +15226,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W36-S1",
-          "prompt": "Which statement best summarizes \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"?",
+          "prompt": "What durable Grade 4 Social Studies knowledge and reasoning am I ready to carry into Grade 5?",
           "choices": [
             "Completion requires 80% mastery across weekly gates, the closed-book midterm and cumulative final, plus portfolio/capstone evidence demonstrating historical inquiry, geography, civics, economics, source literacy, and informed action.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G4SS-W36-T1",
-          "prompt": "Which method best transfers the learning from \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Complete an unfamiliar multi-source transfer task using map, timeline, primary source, data, and civic/economic evidence.",
+            "Choose a conclusion about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G4SS-W36-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Complete the teacher-supervised closed-book cumulative final; below 80% triggers targeted correction and fresh reassessment.",
+            "Use an unsourced statement about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\".",
+            "Use only evidence that agrees with the first guess about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G4SS-W36-P1",
-          "prompt": "When sources about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" differ, the best next step is to...",
+          "prompt": "When investigating \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\".",
+            "Use only evidence that agrees with the first guess about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G4SS-W36-A1",
-          "prompt": "Before making a conclusion about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Hold a portfolio/capstone conference and create a Grade 5 bridge identifying strengths and next-level U.S. history questions.",
+            "Choose a conclusion about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G4SS-W36-R1",
-          "prompt": "Which revision habit best improves work on \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"?",
+          "prompt": "A learner's first explanation of \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Completion requires 80% mastery across weekly gates, the closed-book midterm and cumulative final, plus portfolio/capstone evidence demonstrating historical inquiry, geography, civics, economics, source literacy, and informed action.",
+            "The topic \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 36
         }
       ],
@@ -15383,80 +15384,80 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
         },
         {
           "id": "G4SS-W36-S1",
-          "prompt": "Which statement best summarizes \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"?",
+          "prompt": "What durable Grade 4 Social Studies knowledge and reasoning am I ready to carry into Grade 5?",
           "choices": [
             "Completion requires 80% mastery across weekly gates, the closed-book midterm and cumulative final, plus portfolio/capstone evidence demonstrating historical inquiry, geography, civics, economics, source literacy, and informed action.",
-            "The topic can be explained without evidence or context.",
-            "Every group in the topic had the same experience.",
-            "Only memorizing names and dates matters."
+            "The topic \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "synthesis",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G4SS-W36-T1",
-          "prompt": "Which method best transfers the learning from \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" to an unfamiliar historical or civic case?",
+          "prompt": "For \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\", which week-specific disciplinary analysis best advances the essential question?",
           "choices": [
-            "Identify the question and context, use relevant evidence, compare perspectives when needed, and revise conclusions if evidence changes.",
-            "Choose a conclusion first and search only for support.",
-            "Use one source and stop.",
-            "Ignore chronology and geography."
+            "Complete an unfamiliar multi-source transfer task using map, timeline, primary source, data, and civic/economic evidence.",
+            "Choose a conclusion about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "transfer",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G4SS-W36-E1",
-          "prompt": "What would strengthen an evidence-based explanation of \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" most?",
+          "prompt": "Which source-and-evidence investigation is most directly tied to \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"?",
           "choices": [
-            "Adding another relevant source and explaining how the evidence connects to the claim.",
-            "Adding stronger adjectives.",
-            "Removing dates and context.",
-            "Ignoring evidence that complicates the claim."
+            "Complete the teacher-supervised closed-book cumulative final; below 80% triggers targeted correction and fresh reassessment.",
+            "Use an unsourced statement about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\".",
+            "Use only evidence that agrees with the first guess about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "evidence",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G4SS-W36-P1",
-          "prompt": "When sources about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" differ, the best next step is to...",
+          "prompt": "When investigating \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\", which evidence practice best protects against oversimplifying the people, places, or institutions involved?",
           "choices": [
-            "compare creator, date, purpose, evidence, perspective, and context before deciding what the difference means.",
-            "assume one source must be dishonest.",
-            "pick the shortest source.",
-            "average the statements together."
+            "Source-analysis record with citation, evidence, inference, corroboration, and uncertainty.",
+            "Use an unsourced statement about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" and do not check who created it.",
+            "Ignore the date, creator, purpose, and context of evidence about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\".",
+            "Use only evidence that agrees with the first guess about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "perspective",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G4SS-W36-A1",
-          "prompt": "Before making a conclusion about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\", a careful fourth-grade social scientist should first...",
+          "prompt": "Which action or explanation most directly applies the Grade 4 learning from \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"?",
           "choices": [
-            "clarify the question, relevant context, and evidence needed.",
-            "decide which answer sounds best.",
-            "ignore source limitations.",
-            "assume one example represents every case."
+            "Hold a portfolio/capstone conference and create a Grade 5 bridge identifying strengths and next-level U.S. history questions.",
+            "Choose a conclusion about \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" before looking at sources.",
+            "Use one unrelated fact and ignore chronology, geography, or context.",
+            "Treat one example as if it represents every case connected to \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "application",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
           "id": "G4SS-W36-R1",
-          "prompt": "Which revision habit best improves work on \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"?",
+          "prompt": "A learner's first explanation of \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" ignores the week's central idea. Which revision best corrects it?",
           "choices": [
-            "Check whether the evidence truly supports the claim and revise wording, scope, or conclusion when needed.",
-            "Keep the first draft unchanged.",
-            "Remove citations to make it shorter.",
-            "Replace evidence with opinion."
+            "Completion requires 80% mastery across weekly gates, the closed-book midterm and cumulative final, plus portfolio/capstone evidence demonstrating historical inquiry, geography, civics, economics, source literacy, and informed action.",
+            "The topic \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" can be explained without using evidence or historical/geographic context.",
+            "Every person, place, or group connected to \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\" had the same experience.",
+            "Memorizing one vocabulary term is enough to explain \"Final Synthesis, Closed-Book Final, and Grade 5 Bridge\"."
           ],
           "answer": 0,
-          "kind": "revision",
+          "kind": "content-specific",
           "sourceWeek": 36
         },
         {
