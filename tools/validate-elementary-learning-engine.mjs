@@ -179,11 +179,66 @@ expect(verifiedBlock,"Could not isolate Portfolio verified-assessment mapping.")
 expect(verifiedBlock[0].includes("mastery:Number(attempt.score)||0"),"Verified assessment score is not preserved as mastery evidence.");
 expect(!verifiedBlock[0].includes("responses:"),"Portfolio must not import assessment answer-level payloads.");
 
+
+// Full-year subject-hall structural audit: every non-civic subject week must
+// retain five daily lessons, the shared learning engine, an assessment route,
+// and resolvable local links. Social Studies canonical redirects are validated separately.
+const subjectSets={
+  "02":["language-arts","mathematics","science","arts-music","health-pe-sel","technology","integrated-projects"],
+  "03":["language-arts","mathematics","science","arts-music","health-pe-sel","technology-tools","integrated-projects"],
+  "04":["language-arts","mathematics","science","arts-music","health-pe-sel","technology-tools","integrated-projects"],
+  "05":["language-arts","mathematics","science","arts-music","health-pe-sel","technology-tools","integrated-projects"]
+};
+let fullYearSubjectPages=0;
+for(const [g,subjects] of Object.entries(subjectSets)){
+  for(let week=1;week<=36;week++){
+    const ww=String(week).padStart(2,"0");
+    expect(exists(\`grades/grade-\${g}/assessments/week-\${ww}-assessment.html\`),\`Grade \${g} Week \${ww} assessment missing.\`);
+    for(const subject of subjects){
+      const file=\`grades/grade-\${g}/subjects/\${subject}/week-\${ww}.html\`;
+      expect(exists(file),\`Missing subject lesson: \${file}\`);
+      const html=read(file);
+      expect((html.match(/<article class=['"]lesson['"]/g)||[]).length===5,\`\${file} must retain exactly five daily lesson articles.\`);
+      for(const asset of ["khaemenes-elementary-focus-map.js","khaemenes-elementary-question-factory.js","khaemenes-elementary-learning-ledger.js"])
+        expect(html.includes(asset),\`\${file} missing shared learning asset \${asset}\`);
+      for(const match of html.matchAll(/<(?:a|script|link)\b[^>]*?\b(?:href|src)=["']([^"']+)["']/gi)){
+        const ref=match[1].trim();
+        if(!ref||/^(?:#|https?:|mailto:|tel:|data:|javascript:|\/)/i.test(ref))continue;
+        const target=decodeURIComponent(ref.split(/[?#]/)[0]);
+        if(!target)continue;
+        const resolved=path.resolve(path.dirname(path.join(ROOT,file)),target);
+        expect(fs.existsSync(resolved),\`\${file} broken local reference: \${ref}\`);
+      }
+      fullYearSubjectPages++;
+    }
+  }
+}
+expect(fullYearSubjectPages===1008,\`Expected 1008 Grades 2–5 non-civic subject-week pages, audited \${fullYearSubjectPages}.\`);
+
+// Shared depth layer must remain formative/non-mastery.
+expect(ledger.includes("function depthPlan("),"Shared Instructional Depth Studio is missing.");
+expect(ledger.includes('aria-label","Instructional depth studio"'),"Instructional Depth Studio accessibility label missing.");
+expect(ledger.includes("masteryAuthority:false"),"Depth/formative layer must remain outside formal mastery.");
+
+// Grade 1 evidence printables require Academy identification and homeschool evidence fields.
+for(let week=1;week<=36;week++){
+  const ww=String(week).padStart(2,"0"),file=\`grades/grade-01/printables/unit-\${ww}-packet.html\`,html=read(file);
+  expect(html.includes('data-khae-evidence-header="v1"'),\`\${file} missing standardized evidence header.\`);
+  for(const marker of ["Khaemenes Academy","Student Name:","Date:","Grade:","Unit/Week:","Lesson/Day:"])
+    expect(html.includes(marker),\`\${file} missing printable evidence field: \${marker}\`);
+}
+
+// Latent Grade 1 dashboard helper may not reintroduce average-only certification.
+const grade1LegacyApp=read("grades/grade-01/assets/app.js");
+expect(/function ready\(\)\{return done\(\)===36/.test(grade1LegacyApp),"Grade 01 latent dashboard can certify from an average instead of 36/36.");
+expect(!grade1LegacyApp.includes("Certificate requires weekly average 80%+"),"Grade 01 latent dashboard still advertises average-only readiness.");
+
 console.log("Elementary learning engine regression: PASS");
 console.log(`  lesson surfaces covered: ${coverage.lesson}`);
 console.log(`  formal assessment surfaces covered: ${coverage.assessment}`);
 console.log(`  generated questions sampled: ${sampled}`);
 console.log(`  large-pool questions validated: ${largePoolQuestions}`);
+console.log(`  full-year non-civic subject pages audited: ${fullYearSubjectPages}`);
 console.log("  mastery threshold: 80%");
 console.log("  certificates: 36/36 weeks + midterm + final + portfolio");
 console.log("  practice ledger: learner-scoped and non-mastery");
