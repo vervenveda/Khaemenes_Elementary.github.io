@@ -43,3 +43,23 @@ The primary Elementary validator now explicitly audits all 140 Weeks 08–12 tar
 - formative-only authority boundary.
 
 Existing full-year structural, assessment, portfolio, learner-isolation, and state-localization checks remain in place.
+
+
+## Follow-up runtime hardening
+
+A live-main verification pass found one Grade 02 compatibility seam after the depth-band rollout. Grade 02 subject pages encode their concise daily content focus in the lesson heading (for example, `Monday: Operations: one-step word problems`) rather than in the dedicated `Focus:` paragraph used by Grades 03–05.
+
+The shared learning ledger now:
+- prefers an explicit `Focus:` paragraph when present;
+- otherwise derives the concise content focus from the Grade 02 lesson heading;
+- uses the page focus next;
+- falls back to the longer objective only after those stronger sources.
+
+The regression validator now additionally requires:
+- Grade 02 heading-based focus extraction to remain ahead of the objective fallback;
+- all Grade 02 Weeks 08–12 lessons to retain five content-bearing headings;
+- the focus map to load before the topic-aware learning ledger on every one of the 140 target surfaces.
+
+Verification result: **PASS** in GitHub Actions run 39908248592. The full Elementary validator, Week 6 instructional-evidence validator, and Grades 01–05 learner-isolation regression all completed successfully.
+
+Functional hardening head: `2b33ffc717ffe8a714ebe6e272b6710f45aec0f9`.
