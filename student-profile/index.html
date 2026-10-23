@@ -106,7 +106,7 @@ function renderVisual(){
  for(const b of $("themes").querySelectorAll("button"))b.setAttribute("aria-pressed",String(b.dataset.value===appearance.theme));
 }
 function saveVisual(){if(!needsAdult())return false;if(!store(visualKey(),{schema:SCHEMA,learnerId:activeId,updatedAt:new Date().toISOString(),...appearance})){say("Cannot save. Please export a backup or use a smaller photo.",true);return false}renderVisual();say("Saved for this learner on this browser.");return true}
-function subjectMap(){const x=GRADE_SUBJECTS[grade]||{};return {...x,"Grade "+Number(grade)+" Home":""}}
+function subjectMap(){const x=GRADE_SUBJECTS[grade]||{};return {...x,["Grade "+Number(grade)+" Home"]:""}}
 function classHref(path){return BASE+"grades/grade-"+grade+"/"+path}
 function pinIds(){const v=read(pinKey(),[]);return Array.isArray(v)?v.filter(x=>typeof x==="string").slice(0,14):[]}
 function link(container,label,href,detail){
