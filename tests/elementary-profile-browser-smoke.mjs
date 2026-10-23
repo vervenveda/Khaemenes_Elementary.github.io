@@ -22,7 +22,6 @@ const url="https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile
 try{
  await page.goto(url,{waitUntil:"domcontentloaded"});
  await page.waitForTimeout(160);
- console.log("BOOT",JSON.stringify({errors,notice:await page.locator("#accountNote").innerText(),registry:await page.evaluate(()=>Boolean(window.KhaemenesFamilyRegistry))}));
  assert.equal(await page.locator("#profileStudio").isVisible(),false);
  assert.match(await page.locator("#accountNote").innerText(),/No eligible Elementary learner/);
  console.log("PASS guest cannot create or impersonate an Elementary learner");
@@ -91,6 +90,33 @@ try{
  const after=await page.evaluate(()=>localStorage.getItem("khaemenes_elementary_visual_profile_v1:"+encodeURIComponent(window.KhaemenesFamilyRegistry.getLearner().learnerId)));
  assert.equal(after,before);
  console.log("PASS cross-child backup import rejected without changes");
+
+ const more=await page.evaluate(()=>{
+  const R=window.KhaemenesFamilyRegistry,f=R.getFamily();
+  const list=[];
+  for(const grade of ["02","04","05"]){
+    const learner=R.registerLearner({familyId:f.familyId,nickname:"Grade "+Number(grade)+" Explorer",stage:"elementary",grade});
+    list.push({grade,learnerId:learner.learnerId});
+  }
+  return list;
+ });
+ for(const student of more){
+  await page.locator("#learnerSelect").selectOption(student.learnerId);
+  assert.equal(await page.locator("#gradePill").innerText(),"Grade "+Number(student.grade));
+  assert.equal(await page.locator("#gradeHomeLink").getAttribute("href"),
+   "https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-"+student.grade+"/");
+  await page.locator("#subjectSelect").selectOption("Mathematics");
+  await page.locator("#pinSubject").click();
+  const item=page.locator("#pinned a").first();
+  assert.match(await item.getAttribute("href"),new RegExp("grades/grade-"+student.grade+"/subjects/mathematics/$"));
+  assert.equal(await page.evaluate(()=>window.KhaemenesFamilyRegistry.getLearner().grade),student.grade);
+  console.log("PASS Grade "+Number(student.grade)+" registered pathway and grade-specific Mathematics pin");
+ }
+ await page.locator("#learnerSelect").selectOption(ids.first);
+ assert.equal(await page.locator("#gradePill").innerText(),"Grade 1");
+ assert.equal(await page.evaluate(()=>window.KhaemenesFamilyRegistry.getLearner().grade),"01","checking another grade must not alter first learner's placement");
+ console.log("PASS exploration across Grades 1–5 preserves all registered placements");
+
  await page.setViewportSize({width:390,height:844});
  const widths=await page.evaluate(()=>({view:innerWidth,scroll:document.documentElement.scrollWidth}));
  assert.ok(widths.scroll<=widths.view+5,"Elementary mobile overflow: "+JSON.stringify(widths));
