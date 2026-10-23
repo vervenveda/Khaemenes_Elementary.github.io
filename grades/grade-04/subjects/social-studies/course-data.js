@@ -16,7 +16,7 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
     "midtermMode": "closed-book teacher-supervised",
     "finalMode": "closed-book teacher-supervised",
     "storageKey": "khaemenes_grade4_social_studies_v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "updated": "2026-10-23",
     "authors": "Jennifer Kay Pearl",
     "note": "The grade-wide 20-point A++ weekly assessment remains integrated portfolio evidence. Formal Social Studies mastery is recorded in this subject course.",
@@ -44,7 +44,15 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
       35
     ],
     "localizationPolicy": "Keep the national Grade 4 Social Studies disciplinary spine and 80% mastery gates invariant. Localize required state/local history, geography, Indigenous nations, government, economy, public figures, source sets, and capstone evidence through the state localization guide.",
-    "assessmentSpecificity": "2026 specificity hardening replaced 216 recurring meta-template current-bank items with week-specific historical, geographic, civic, economic, source, or evidence questions while preserving item IDs for audit continuity."
+    "assessmentSpecificity": "2026 specificity hardening replaced 216 recurring meta-template current-bank items with week-specific historical, geographic, civic, economic, source, or evidence questions while preserving item IDs for audit continuity.",
+    "antiRepeatDepth": 2,
+    "cumulativeBlueprint": "unit-stratified",
+    "assessmentModel": "Monte Carlo randomized forms with answer shuffling, two-form anti-repeat weighting, saved attempt snapshots, and unit-stratified cumulative exams.",
+    "statePacks": {
+      "florida": "STATE_PACK_FLORIDA.md"
+    },
+    "localizationWorkflow": "Teacher-selected generic or Florida context with checkpoint evidence saved in the learner record.",
+    "constructedEvidenceReview": "pending / revise / approved is recorded separately from the 80% objective mastery gate."
   },
   "strands": [
     "Historical Inquiry & Evidence",
@@ -15520,5 +15528,75 @@ window.KHAEMENES_GRADE4_SOCIAL_STUDIES={
     "mode": "national-core-state-local-overlay",
     "rule": "State/local examples, sources, maps, biographies, institutions, and case studies may be substituted or added where appropriate, but the national disciplinary core and 80% mastery requirements remain intact.",
     "guide": "STATE_LOCALIZATION_GUIDE.md"
+  },
+  "localizationTasks": {
+    "4": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 4, \"Local and State History Research Lab\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 4, \"Local and State History Research Lab\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "6": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 6, \"Regions, Landforms, Climate, and Resources\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 6, \"Regions, Landforms, Climate, and Resources\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "7": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 7, \"Human-Environment Interaction, Hazards, and Conservation\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 7, \"Human-Environment Interaction, Hazards, and Conservation\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "8": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 8, \"Transportation, Cities, Rural Areas, and State Connections\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 8, \"Transportation, Cities, Rural Areas, and State Connections\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "9": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 9, \"Indigenous Nations, Homelands, and Sovereignty\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 9, \"Indigenous Nations, Homelands, and Sovereignty\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "10": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 10, \"Indigenous Economies, Technologies, and Environmental Knowledge\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 10, \"Indigenous Economies, Technologies, and Environmental Knowledge\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "11": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 11, \"Exploration, Motives, Navigation, and Encounter\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 11, \"Exploration, Motives, Navigation, and Encounter\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "12": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 12, \"Colonization, Missions, Settlements, and Consequences\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 12, \"Colonization, Missions, Settlements, and Consequences\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "23": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 23, \"Territorial Growth, Treaties, Statehood, and Maps\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 23, \"Territorial Growth, Treaties, Statehood, and Maps\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "24": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 24, \"Westward Migration, Indigenous Displacement, and Forced Removal\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 24, \"Westward Migration, Indigenous Displacement, and Forced Removal\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "25": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 25, \"Transportation, Technology, Agriculture, and Industry\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 25, \"Transportation, Technology, Agriculture, and Industry\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "26": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 26, \"Income, Taxes, Budgets, Saving, Credit, and Interest\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 26, \"Income, Taxes, Budgets, Saving, Credit, and Interest\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "27": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 27, \"Slavery, Sectional Conflict, and the Civil War\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 27, \"Slavery, Sectional Conflict, and the Civil War\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "28": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 28, \"Emancipation, Reconstruction, and Constitutional Citizenship\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 28, \"Emancipation, Reconstruction, and Constitutional Citizenship\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "29": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 29, \"Industrialization, Immigration, African American Migration, and State Growth\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 29, \"Industrialization, Immigration, African American Migration, and State Growth\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "30": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 30, \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 30, \"Twentieth-Century State Change: Tourism, Industry, Civil Rights, and Environment\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    },
+    "35": {
+      "generic": "Use a state/local source, map, public institution, historical case, Indigenous nation/community, economic example, or civic record to deepen Week 35, \"State and Local History Research Capstone\". Record the source/example and explain how it connects to the national core.",
+      "florida": "Use a Florida-specific source or case appropriate to Week 35, \"State and Local History Research Capstone\"—such as a Florida map, tribal nation/community source, archive, historic site, state/local institution, economic record, or civic example. Record the evidence and explain the connection."
+    }
   }
 };
