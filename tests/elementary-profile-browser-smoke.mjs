@@ -89,7 +89,7 @@ try{
   schema:"khaemenes.kindergarten-visual.v1",learnerId:id,theme:"sunset",avatar:"🦉",photo:""
  })),ids.first);
  await page.locator("#bringKinder").click();
- assert.equal(await page.locator("body").getAttribute("data-theme"),"sky");
+ assert.equal(await page.locator("body").getAttribute("data-theme"),"sunset");
  assert.equal(await page.evaluate(()=>window.KhaemenesFamilyRegistry.getLearner().grade),"01");
  console.log("PASS family-approved Kindergarten visual handoff does not alter Grade 1 placement");
  await page.evaluate(id=>localStorage.setItem("khaemenes_kindergarten_visual_profile_v1:"+encodeURIComponent(id),JSON.stringify({
