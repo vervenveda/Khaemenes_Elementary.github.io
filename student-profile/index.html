@@ -153,7 +153,18 @@ function renderNext(){
  const steps=$("nextSteps");steps.replaceChildren();
  const child=learner(),home=classHref("");
  let rows=[];try{rows=C?.readLearner?.(activeId)||[]}catch{}
- const match=Array.isArray(rows)?rows.filter(x=>x?.stage==="elementary"&&(x.grade===grade||String(x.grade)==="grade-"+grade||!x.grade)&&x.nextHref):[];
+ const expected="/Khaemenes_Elementary.github.io/grades/grade-"+grade+"/";
+ const match=Array.isArray(rows)?rows.filter(x=>{
+  if(x?.stage!=="elementary"||!x.nextHref)return false;
+  const gradeText=String(x.grade||"");
+  const tagged=gradeText===grade||gradeText==="grade-"+grade||gradeText===String(Number(grade));
+  try{
+   const u=new URL(x.nextHref,BASE);
+   if(u.protocol!=="https:"||u.origin!=="https://vervenveda.com")return false;
+   if(u.pathname.startsWith("/Khaemenes_Elementary.github.io/"))return u.pathname.startsWith(expected)&&(tagged||!gradeText);
+   return tagged&&u.pathname.startsWith("/Khaemenes_Academy.github.io/");
+  }catch{return false}
+ }):[];
  const safe=raw=>{try{const u=new URL(raw,BASE);return u.protocol==="https:"&&u.origin==="https://vervenveda.com"&&(u.pathname.startsWith("/Khaemenes_Elementary.github.io/")||u.pathname.startsWith("/Khaemenes_Academy.github.io/"))?u.href:null}catch{return null}};
  for(const item of match.slice(0,4)){const href=safe(item.nextHref);if(href)link(steps,item.nextTitle||item.courseTitle||"Continue learning",href,item.summary||"Academy continuation")}
  if(!steps.children.length)link(steps,"Start or continue Grade "+Number(grade),home,"The grade's course engine determines your next available lesson.");
@@ -198,8 +209,8 @@ $("showGradePreview").addEventListener("click",()=>{
  const a=$("gradePreviewLink");a.href=older?"https://vervenveda.com/Khaemenes_Middle.github.io/":"https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-"+String(next).padStart(2,"0")+"/";
  a.textContent="Explore "+(older?"Middle School":"Grade "+next);
 });
-$("pinSubject").addEventListener("click",()=>{if(!isReady())return say("Select a learner first.",true);const id=$("subjectSelect").value;if(!Object.hasOwn(subjectMap(),id))return say("Choose a Grade "+Number(grade)+" subject.",true);const old=pinIds(),next=[...new Set([...old,id])].slice(0,14);if(!store(pinKey(),next))return say("Could not save pinned subject.",true);renderPins();say("Subject pinned to this learner.");});
-$("unpinSubject").addEventListener("click",()=>{if(!isReady())return say("Select a learner first.",true);const id=$("subjectSelect").value;if(!Object.hasOwn(subjectMap(),id))return say("Choose a subject.",true);if(!store(pinKey(),pinIds().filter(x=>x!==id)))return say("Could not remove pin.",true);renderPins();say("Subject removed from this learner's pins.");});
+$("pinSubject").addEventListener("click",()=>{if(!needsAdult())return;const id=$("subjectSelect").value;if(!Object.hasOwn(subjectMap(),id))return say("Choose a Grade "+Number(grade)+" subject.",true);const old=pinIds(),next=[...new Set([...old,id])].slice(0,14);if(!store(pinKey(),next))return say("Could not save pinned subject.",true);renderPins();say("Subject pinned to this learner.");});
+$("unpinSubject").addEventListener("click",()=>{if(!needsAdult())return;const id=$("subjectSelect").value;if(!Object.hasOwn(subjectMap(),id))return say("Choose a subject.",true);if(!store(pinKey(),pinIds().filter(x=>x!==id)))return say("Could not remove pin.",true);renderPins();say("Subject removed from this learner's pins.");});
 $("photoFile").addEventListener("change",async e=>{
  const file=e.target.files?.[0];e.target.value="";if(!file||!needsAdult())return;
  if(!["image/png","image/jpeg","image/webp","image/gif"].includes(file.type)||file.size>5*1024*1024)return say("Choose JPG, PNG, WebP, or GIF below 5 MB.",true);
