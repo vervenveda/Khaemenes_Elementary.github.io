@@ -40,7 +40,23 @@ try{
  assert.equal(await page.locator("#learnerSelect option").count(),2);
  assert.equal(await page.locator("#profileStudio").isVisible(),true);
  console.log("PASS registered grade drives the profile, not an editable grade selector");
+ await page.evaluate(id=>{
+  const C=window.KhaemenesLearningContinuation;
+  C.publish({learnerId:id,courseId:"unlabeled-third-grade",stage:"elementary",nextTitle:"UNRELATED THIRD GRADE",nextHref:"https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-03/subjects/science/"});
+  C.publish({learnerId:id,courseId:"mislabeled-third-grade",stage:"elementary",grade:"01",nextTitle:"MISLABELED THIRD GRADE",nextHref:"https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-03/subjects/science/"});
+  C.publish({learnerId:id,courseId:"unlabeled-first-grade",stage:"elementary",nextTitle:"MATCHING FIRST GRADE",nextHref:"https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-01/lessons/unit-01/"});
+ },ids.first);
+ await page.reload({waitUntil:"domcontentloaded"});
+ assert.match(await page.locator("#nextSteps").innerText(),/MATCHING FIRST GRADE/);
+ assert.doesNotMatch(await page.locator("#nextSteps").innerText(),/UNRELATED THIRD GRADE|MISLABELED THIRD GRADE/);
+ console.log("PASS grade-scoped Today Next excludes wrong-grade continuation records");
+ await page.evaluate(id=>{const C=window.KhaemenesLearningContinuation;for(const key of ["unlabeled-third-grade","mislabeled-third-grade","unlabeled-first-grade"])C.removeCourse(id,key)},ids.first);
+ await page.reload({waitUntil:"domcontentloaded"});
+ 
  await page.locator("#subjectSelect").selectOption("Math Practice");
+ await page.locator("#pinSubject").click();
+ assert.equal(await page.locator("#pinned").innerText().then(x=>x.includes("Math Practice")),false,"subject pins must require adult assistance");
+ await page.locator("#adultConfirm").check();
  await page.locator("#pinSubject").click();
  assert.match(await page.locator("#pinned").innerText(),/Math Practice/);
  await page.locator("#adultConfirm").check();
@@ -68,6 +84,7 @@ try{
  await page.locator("#pv2Goal").fill("Practice reading aloud");
  await page.locator("#pv2SaveCompass").click();
  await page.locator("#learnerSelect").selectOption(ids.second);
+ assert.equal(await page.locator("#adultConfirm").isChecked(),false,"second learner needs new adult confirmation");
  assert.equal(await page.locator("#childName").innerText(),"Science Star");
  assert.equal(await page.locator("#gradePill").innerText(),"Grade 3");
  assert.equal(await page.locator("#portrait img").count(),0);
@@ -75,9 +92,11 @@ try{
  assert.doesNotMatch(await page.locator("#pinned").innerText(),/Math Practice/);
  assert.notEqual(await page.locator("#pv2Goal").inputValue(),"Practice reading aloud");
  await page.locator("#subjectSelect").selectOption("Science");
+ await page.locator("#adultConfirm").check();
  await page.locator("#pinSubject").click();
  assert.match(await page.locator("#pinned").innerText(),/Science/);
  await page.locator("#learnerSelect").selectOption(ids.first);
+ assert.equal(await page.locator("#adultConfirm").isChecked(),false);
  assert.match(await page.locator("#pinned").innerText(),/Math Practice/);
  assert.doesNotMatch(await page.locator("#pinned").innerText(),/Science/);
  assert.equal(await page.locator("#portrait img").count(),1);
@@ -122,6 +141,7 @@ try{
   assert.equal(await page.locator("#gradePill").innerText(),"Grade "+Number(student.grade));
   assert.equal(await page.locator("#gradeHomeLink").getAttribute("href"),
    "https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-"+student.grade+"/");
+  await page.locator("#adultConfirm").check();
   await page.locator("#subjectSelect").selectOption("Technology");
   await page.locator("#pinSubject").click();
   assert.match(await page.locator("#pinned a").last().getAttribute("href"),/subjects\/technology(?:-tools)?\/$/);
