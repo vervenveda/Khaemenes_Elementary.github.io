@@ -5,6 +5,7 @@
 <style>
 :root{color-scheme:light;--ink:#2d4445;--muted:#556c6e;--panel:#fffcf5;--line:#ced9d2;--leaf:#3d6b60;--gold:#d9ad66}
 *{box-sizing:border-box}body{margin:0;color:var(--ink);font:400 17px/1.6 "Nunito","Avenir Next","Segoe UI",Arial,sans-serif;background:linear-gradient(145deg,#f2eddb,#e0f1e7 60%,#e8eff6)}
+body[data-theme="sky"]{background:linear-gradient(140deg,#fff1d5,#dff4fb 60%,#f2e5fb)}
 body[data-theme="forest"]{background:linear-gradient(140deg,#ddecd3,#b7e0cf,#f4efd3)}
 body[data-theme="ocean"]{background:linear-gradient(140deg,#dcf1f8,#cde0fa,#f3faff)}
 body[data-theme="sunset"]{background:linear-gradient(140deg,#fff0d5,#f6dcdf,#f0e2f8)}
@@ -75,7 +76,7 @@ body[data-theme="night"] .notice{background:#413e34;color:#ffeed0}.skip{position
 const $=id=>document.getElementById(id),R=window.KhaemenesFamilyRegistry,C=window.KhaemenesLearningContinuation;
 const BASE="https://vervenveda.com/Khaemenes_Elementary.github.io/";
 const KEY="khaemenes_elementary_visual_profile_v1:",PINS="khaemenes_elementary_profile_pins_v1:",KINDER="khaemenes_kindergarten_visual_profile_v1:",COURSES="khaemenes_course_pins_v1";
-const SCHEMA="khaemenes.elementary-visual.v1",THEMES=["parchment","forest","ocean","sunset","night"],AVATARS=["🌟","🦉","🦋","🚀","🌿","🎨","📚","🦊"];
+const SCHEMA="khaemenes.elementary-visual.v1",THEMES=["parchment","sky","forest","ocean","sunset","night"],AVATARS=["🌟","🦉","🦋","🚀","🌿","🎨","📚","🦊","🌈","🌻","🐝","🐢"];
 const COMMON={"Language Arts":"subjects/language-arts/","Mathematics":"subjects/mathematics/","Science":"subjects/science/","Social Studies":"subjects/social-studies/","Arts & Music":"subjects/arts-music/","Health & Wellness":"subjects/health-pe-sel/","Projects":"subjects/integrated-projects/"};
 const GRADE_SUBJECTS={
 "01":{"Math Practice":"subjects/math/","Science":"subjects/science/","Social Studies":"subjects/social-studies/"},
