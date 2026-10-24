@@ -89,9 +89,17 @@ try{
   schema:"khaemenes.kindergarten-visual.v1",learnerId:id,theme:"sunset",avatar:"🦉",photo:""
  })),ids.first);
  await page.locator("#bringKinder").click();
- assert.equal(await page.locator("body").getAttribute("data-theme"),"sunset");
+ assert.equal(await page.locator("body").getAttribute("data-theme"),"sky");
  assert.equal(await page.evaluate(()=>window.KhaemenesFamilyRegistry.getLearner().grade),"01");
  console.log("PASS family-approved Kindergarten visual handoff does not alter Grade 1 placement");
+ await page.evaluate(id=>localStorage.setItem("khaemenes_kindergarten_visual_profile_v1:"+encodeURIComponent(id),JSON.stringify({
+  schema:"khaemenes.kindergarten-visual.v1",learnerId:id,theme:"sky",avatar:"🌻",photo:""
+ })),ids.first);
+ await page.locator("#bringKinder").click();
+ assert.equal(await page.locator("body").getAttribute("data-theme"),"sky");
+ assert.equal((await page.locator("#portrait").innerText()).trim(),"🌻");
+ assert.equal(await page.evaluate(()=>window.KhaemenesFamilyRegistry.getLearner().grade),"01");
+ console.log("PASS Kindergarten Sky theme and sunflower avatar survive Elementary handoff");
  const before=await page.evaluate(()=>localStorage.getItem("khaemenes_elementary_visual_profile_v1:"+encodeURIComponent(window.KhaemenesFamilyRegistry.getLearner().learnerId)));
  const wrong={schema:"khaemenes.elementary-visual.v1",learnerId:ids.second,theme:"night",avatar:"🌿",photo:""};
  await page.locator("#importVisual").setInputFiles({name:"wrong.json",mimeType:"application/json",buffer:Buffer.from(JSON.stringify(wrong))});
@@ -119,7 +127,8 @@ try{
   assert.match(await page.locator("#pinned a").last().getAttribute("href"),/subjects\/technology(?:-tools)?\/$/);
   await page.locator("#subjectSelect").selectOption("Mathematics");
   await page.locator("#pinSubject").click();
-  const item=page.locator("#pinned a").first();
+  const item=page.locator("#pinned a").filter({hasText:"Mathematics"});
+  assert.equal(await item.count(),1,"Mathematics pin should exist alongside Technology");
   assert.match(await item.getAttribute("href"),new RegExp("grades/grade-"+student.grade+"/subjects/mathematics/$"));
   assert.equal(await page.evaluate(()=>window.KhaemenesFamilyRegistry.getLearner().grade),student.grade);
   console.log("PASS Grade "+Number(student.grade)+" registered pathway and grade-specific Mathematics pin");
