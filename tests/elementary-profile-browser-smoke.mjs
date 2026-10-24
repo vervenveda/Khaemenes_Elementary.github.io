@@ -51,6 +51,15 @@ try{
  assert.match(await page.locator("#pinned").innerText(),/Math Practice/);
  console.log("PASS Grade 1 subject pin and appearance survive reload");
  await page.locator("#adultConfirm").check();
+ await page.locator("#pinClass").click();
+ assert.match(await page.locator("#pinned").innerText(),/My Grade 1 Class/);
+ const classPins=await page.evaluate(id=>JSON.parse(localStorage.getItem("khaemenes_course_pins_v1")).learners[id],ids.first);
+ assert.equal(classPins.filter(x=>x.id==="khaemenes-grade-01").length,1);
+ await page.locator("#showGradePreview").click();
+ assert.match(await page.locator("#gradePreviewName").innerText(),/Grade 2/);
+ assert.equal(await page.evaluate(()=>window.KhaemenesFamilyRegistry.getLearner().grade),"01");
+ console.log("PASS Elementary class pin and Grade 2 preview never change registered grade");
+ await page.locator("#adultConfirm").check();
  await page.locator("#avatars button[data-value='🦋']").click();
  assert.equal((await page.locator("#portrait").innerText()).trim(),"🦋");
  const tiny=Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9pXmKr8AAAAASUVORK5CYII=","base64");
@@ -105,6 +114,9 @@ try{
   assert.equal(await page.locator("#gradePill").innerText(),"Grade "+Number(student.grade));
   assert.equal(await page.locator("#gradeHomeLink").getAttribute("href"),
    "https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-"+student.grade+"/");
+  await page.locator("#subjectSelect").selectOption("Technology");
+  await page.locator("#pinSubject").click();
+  assert.match(await page.locator("#pinned a").last().getAttribute("href"),/subjects\/technology(?:-tools)?\/$/);
   await page.locator("#subjectSelect").selectOption("Mathematics");
   await page.locator("#pinSubject").click();
   const item=page.locator("#pinned a").first();
@@ -115,6 +127,11 @@ try{
  await page.locator("#learnerSelect").selectOption(ids.first);
  assert.equal(await page.locator("#gradePill").innerText(),"Grade 1");
  assert.equal(await page.evaluate(()=>window.KhaemenesFamilyRegistry.getLearner().grade),"01","checking another grade must not alter first learner's placement");
+ await page.locator("#adultConfirm").check();
+ await page.locator("#unpinClass").click();
+ assert.doesNotMatch(await page.locator("#pinned").innerText(),/My Grade 1 Class/);
+ assert.match(await page.locator("#pinned").innerText(),/Math Practice/);
+ console.log("PASS Elementary unpin class retains grade placement and subjects");
  console.log("PASS exploration across Grades 1–5 preserves all registered placements");
 
  await page.setViewportSize({width:390,height:844});
