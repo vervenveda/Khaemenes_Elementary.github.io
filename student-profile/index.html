@@ -182,7 +182,8 @@ function selectLearners(){
 function refresh(){
  $("gradePreviewDetails").hidden=true;$("showGradePreview").setAttribute("aria-expanded","false");
  selectLearners();
- const l=learner();activeId=l?.learnerId||"";grade=l?.grade||"";
+ const l=learner(),priorId=activeId;activeId=l?.learnerId||"";grade=l?.grade||"";
+ if(priorId!==activeId)$("adultConfirm").checked=false;
  if(!l){
   $("accountNote").hidden=false;$("accountNote").replaceChildren();$("accountNote").append("No eligible Elementary learner is selected. ");
   const a=document.createElement("a");a.href="https://vervenveda.com/Khaemenes_Academy.github.io/family/";a.textContent="Choose a family learner →";$("accountNote").append(a);
