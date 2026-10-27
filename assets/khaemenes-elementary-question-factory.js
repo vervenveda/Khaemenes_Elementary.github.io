@@ -305,7 +305,8 @@ function makeBalanced({grade=1,focus="",seed=1,count=16,includeLegacy=false,scop
   const g=Math.max(1,Math.min(5,Number(grade)||1)),r=rng(hash(`balanced|${seed}|${g}|${scope}|${week||0}|${focus}`)),out=[];
   if(includeLegacy&&g===1){
     const legacy=legacyGrade1Questions(scope,week);
-    out.push(...shuffle(r,legacy).slice(0,Math.min(6,legacy.length)).map(q=>finalizeQuestion(q,r)));
+    const sampleSize=scope==="weekly"?8:6;
+    out.push(...shuffle(r,legacy).slice(0,Math.min(sampleSize,legacy.length)).map(q=>finalizeQuestion(q,r)));
   }
   let cursor=0,guard=0;
   while(out.length<count&&guard<count*20){
@@ -315,7 +316,20 @@ function makeBalanced({grade=1,focus="",seed=1,count=16,includeLegacy=false,scop
     const next=candidates.find(q=>!out.some(existing=>existing.prompt===q.prompt));
     if(next)out.push(next);
   }
-  return shuffle(r,out).slice(0,count);
+  const mixed=shuffle(r,out).slice(0,count);
+  if(includeLegacy&&g===1&&scope==="weekly"&&count>=12){
+    // The engine generates 32+ candidates and displays 12. A plain shuffle
+    // diluted lesson-authored questions; keep an 8/4 released weekly balance
+    // inside the existing first-party randomized pool, without a new scorer.
+    const key="g1-weekly-"+(week||0)+"-";
+    const authored=mixed.filter(q=>String(q.id||"").startsWith(key));
+    const integrated=mixed.filter(q=>!String(q.id||"").startsWith(key));
+    const quota=Math.min(8,authored.length,12);
+    const selected=shuffle(r,[...authored.slice(0,quota),...integrated.slice(0,12-quota)]);
+    const chosen=new Set(selected.map(q=>q.id));
+    return [...selected,...mixed.filter(q=>!chosen.has(q.id))];
+  }
+  return mixed;
 }
 function validateQuestion(q){
   if(!q||typeof q.prompt!=="string"||!q.prompt.trim())return false;
