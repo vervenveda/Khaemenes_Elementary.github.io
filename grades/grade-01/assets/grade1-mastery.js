@@ -542,7 +542,7 @@ function renderLessonPage(weekNum){
   function renderCertificate(){
     updateSummary();
     const s=load(), mastered=C.weeks.filter(w=>masteredWeek(w.week)).length, mid=s.midterm?.bestScore||0, fin=s.final?.bestScore||0, portfolio=!!s.portfolio;
-    const eligible=mastered===C.weeks.length && mid>=THRESHOLD && fin>=THRESHOLD && portfolio;
+    const eligible=academyContext().match && mastered===C.weeks.length && mid>=THRESHOLD && fin>=THRESHOLD && portfolio;
     const status=$('certificateStatus');
     if(status){ status.className='scorebox '+(eligible?'mastered':'review'); status.innerHTML=eligible?'<strong>Certificate unlocked.</strong> Print this page for records.':`<strong>Certificate locked.</strong><br>Weeks mastered: ${mastered}/${C.weeks.length}<br>Midterm: ${mid||'Not yet'}%<br>Final: ${fin||'Not yet'}%<br>Portfolio marked complete: ${portfolio?'Yes':'No'}`; }
     const cb=$('portfolioComplete'); if(cb){ cb.checked=portfolio; cb.addEventListener('change',e=>{ const st=load(); st.portfolio=e.target.checked; save(st); location.reload(); }); }
