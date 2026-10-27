@@ -1,0 +1,39 @@
+/* Khaemenes Elementary · seven-game interface regression guard · 2026-10-27.
+   Opt-in on audited activity hubs only. Presentation only; zero grading, storage,
+   sound, print, canvas, keyboard or activity runtime changes. */
+
+/* The global campus header is the only sticky navigation surface.
+   A game's original header remains visible as its own non-sticky title/controls. */
+body > header[data-khae-header] ~ header:not([data-khae-header]){
+  position:relative!important;top:auto!important;
+}
+
+/* Provide scrollable clearance under last game controls so the fixed utility rail
+   cannot obscure activity actions, evidence buttons, or the last row. */
+html:has(body > header[data-khae-header]){scroll-padding-bottom:110px}
+body:has(> header[data-khae-header]){
+  padding-bottom:max(104px,env(safe-area-inset-bottom))!important;
+}
+body:has(> header[data-khae-header]) :is(#khaeLandingUtilityDock,#khaemenesLearnerUtilityToolbar){
+  gap:5px!important;padding:6px!important;
+  border-radius:7px!important;
+}
+body:has(> header[data-khae-header]) :is(#khaeLandingUtilityDock,#khaemenesLearnerUtilityToolbar)>:is(a,button){
+  min-height:34px!important;padding:7px 11px!important;
+  font-size:10px!important;font-weight:400!important;
+  line-height:1.35!important;
+}
+/* Keep ephemeral feedback legible when a bottom-corner dock occupies the page. */
+@media(max-width:800px){
+ html:has(body > header[data-khae-header]){scroll-padding-bottom:155px}
+ body:has(> header[data-khae-header]){
+   padding-bottom:max(154px,env(safe-area-inset-bottom))!important;
+ }
+ body:has(> header[data-khae-header]) .toast{
+   bottom:145px!important;max-width:calc(100vw - 24px)!important;
+   box-sizing:border-box!important;overflow-wrap:anywhere!important;
+ }
+}
+@media print{
+ body:has(> header[data-khae-header]){padding-bottom:0!important}
+}
