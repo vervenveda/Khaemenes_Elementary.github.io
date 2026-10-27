@@ -21,6 +21,20 @@ for(const week of course.weeks){
  assert.equal(week.daily?.length,5,"Grade 1 Week "+n+" must have five daily lessons");
  assert.equal(week.quiz?.length,10,"Grade 1 Week "+n+" authored legacy quiz must keep ten questions");
 }
+// A learner must be assessed on more than recycled general questions.
+const authoredPrompts=new Set();
+for(const week of course.weeks.slice(0,6)){
+ assert.equal(week.quiz.length,10,"Week "+week.week+" needs ten authored questions");
+ for(const [i,q] of week.quiz.entries()){
+  assert.ok(typeof q.prompt==="string"&&q.prompt.length>=30,"Insufficient authored question Week "+week.week+" #"+(i+1));
+  assert.ok(!authoredPrompts.has(q.prompt),"Repeated generic question across Weeks 01–06: "+q.prompt);
+  authoredPrompts.add(q.prompt);
+  assert.equal(q.choices.length,4,"Four answer options required");
+  assert.equal(new Set(q.choices).size,4,"Duplicate answer option in Week "+week.week);
+  assert.ok(Number.isInteger(q.answer)&&q.answer>=0&&q.answer<4,"Invalid answer index");
+ }
+}
+assert.equal(authoredPrompts.size,60,"The first six weekly banks must have 60 distinct prompts");
 for(const n of [2,3,4,5,6]){
  const week=course.weeks[n-1];
  for(const [i,day] of week.daily.entries()){
@@ -34,4 +48,4 @@ for(let n=1;n<=6;n++){
  assert.ok(companion.includes('id="week-'+String(n).padStart(2,"0")+'"'),"Missing week-specific companion section "+n);
  assert.ok(companion.includes(course.weeks[n-1].title),"Companion title diverges in Week "+n);
 }
-console.log("PASS: Grade 1 36/36 canonical Mentor focuses, 5 daily lessons, 10 reviewed legacy quiz questions, and Weeks 2-6 instructional depth contract.");
+console.log("PASS: Grade 1 36/36 canonical Mentor focuses, 25 authored daily lessons, 60 unique first-six-week questions, and rubric/evidence boundaries.");
