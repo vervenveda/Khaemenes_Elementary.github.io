@@ -26,6 +26,7 @@ on:
       - 'tools/validate-elementary-learning-engine.mjs'
       - 'tools/validate-elementary-week06-evidence.mjs'
       - 'tests/elementary-learner-isolation.test.cjs'
+      - 'tests/elementary-formal-boundaries.test.cjs'
       - '.github/workflows/elementary-learning-engine-regression.yml'
   pull_request:
     paths:
@@ -50,6 +51,7 @@ on:
       - 'tools/validate-elementary-learning-engine.mjs'
       - 'tools/validate-elementary-week06-evidence.mjs'
       - 'tests/elementary-learner-isolation.test.cjs'
+      - 'tests/elementary-formal-boundaries.test.cjs'
       - '.github/workflows/elementary-learning-engine-regression.yml'
   workflow_dispatch:
 
@@ -76,3 +78,5 @@ jobs:
         run: node tools/validate-elementary-week06-evidence.mjs
       - name: Validate learner isolation across Grades 01–05
         run: node tests/elementary-learner-isolation.test.cjs
+      - name: Validate live formal assessment boundaries and Grade 1 compatibility
+        run: node tests/elementary-formal-boundaries.test.cjs
