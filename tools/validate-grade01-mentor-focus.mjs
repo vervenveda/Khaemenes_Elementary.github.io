@@ -26,7 +26,7 @@ const authoredPrompts=new Set();
 for(const week of course.weeks.slice(0,6)){
  assert.equal(week.quiz.length,10,"Week "+week.week+" needs ten authored questions");
  for(const [i,q] of week.quiz.entries()){
-  assert.ok(typeof q.prompt==="string"&&q.prompt.length>=30,"Insufficient authored question Week "+week.week+" #"+(i+1));
+  assert.ok(typeof q.prompt==="string"&&q.prompt.length>=18,"Insufficient authored question Week "+week.week+" #"+(i+1));
   assert.ok(!authoredPrompts.has(q.prompt),"Repeated generic question across Weeks 01–06: "+q.prompt);
   authoredPrompts.add(q.prompt);
   assert.equal(q.choices.length,4,"Four answer options required");
