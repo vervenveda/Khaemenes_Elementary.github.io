@@ -44,7 +44,12 @@ function completedWeeks(state,end=36){let count=0;for(let n=1;n<=end;n++)if(week
 function gate(){
   const l=learner(),state=readFormalState(),k=kind(),w=week();
   if(!l)return{open:true,preview:true,reason:"Preview attempt. Link the matching Academy learner to save formal mastery."};
-  if(k==="weekly"){if(w===1)return{open:true,preview:false,reason:"Week 01 is open."};const prior=weeklyBest(state,w-1);return prior>=PASS?{open:true,preview:false,reason:`Week ${String(w-1).padStart(2,"0")} is mastered at ${prior}%.`}:{open:false,preview:false,reason:`Week ${String(w-1).padStart(2,"0")} must reach 80% before this quiz opens.`}}
+  if(k==="weekly"){
+    if(w>18&&milestoneBest(state,"midterm")<PASS)return{open:false,preview:false,reason:"The midterm must reach 80% before second-half weekly assessments open."};
+    if(w===1)return{open:true,preview:false,reason:"Week 01 is open."};
+    const prior=weeklyBest(state,w-1);
+    return prior>=PASS?{open:true,preview:false,reason:`Week ${String(w-1).padStart(2,"0")} is mastered at ${prior}%.`}:{open:false,preview:false,reason:`Week ${String(w-1).padStart(2,"0")} must reach 80% before this quiz opens.`};
+  }
   if(k==="midterm"){const done=completedWeeks(state,18);return done===18?{open:true,preview:false,reason:"Weeks 01–18 are mastered."}:{open:false,preview:false,reason:`${18-done} of the first 18 weeks still need 80% mastery.`}}
   if(k==="final"){const done=completedWeeks(state,36),mid=milestoneBest(state,"midterm");if(done<36)return{open:false,preview:false,reason:`${36-done} weekly mastery gate${36-done===1?"":"s"} remain before the final.`};if(mid<PASS)return{open:false,preview:false,reason:"The midterm must reach 80% before the final opens."};return{open:true,preview:false,reason:"All weekly gates and the midterm are mastered."}}
   return{open:false,preview:false,reason:"This page is not a recognized formal assessment."};
@@ -91,7 +96,7 @@ function bestScore(){const state=readFormalState();return kind()==="weekly"?week
 function nextHref(){
   const g=grade(),w=week();
   if(kind()==="weekly"&&w<36){if(g==="01")return`../lessons/unit-${String(w+1).padStart(2,"0")}/index.html`;if(g==="02")return"../index.html#weeks";return`../weekly-plans/week-${String(w+1).padStart(2,"0")}.html`}
-  if(kind()==="weekly"&&w===36)return"midterm.html";
+  if(kind()==="weekly"&&w===36)return"final-exam.html";
   if(kind()==="midterm")return"../index.html";
   if(kind()==="final")return"../records/certificate.html";
   return"../index.html";
@@ -114,18 +119,32 @@ function mount(){
 }
 function renderStart(root,legacy){
   const access=gate(),prior=bestScore(),closed=kind()!=="weekly";
-  root.innerHTML=`<div class="elementary-assessment-head"><div><h2>${esc(label())}</h2><div class="elementary-assessment-meta"><span class="elementary-assessment-badge">Grade ${esc(grade())}</span><span class="elementary-assessment-badge">${closed?"Closed-book":"Open-book"}</span><span class="elementary-assessment-badge">80% mastery</span><span class="elementary-assessment-badge">${countForAssessment()} questions drawn from ${poolSize()}+ candidates</span></div><p>${esc(access.reason)}</p>${prior?`<p><strong>Best verified score:</strong> ${prior}%</p>`:""}</div></div>${!access.open?'<div class="elementary-assessment-gate"><strong>Assessment locked.</strong><p>'+esc(access.reason)+'</p><a href="../index.html">Return to Grade Home</a></div>':'<div class="elementary-assessment-actions"><button type="button" class="primary" data-start-assessment>Begin New Randomized Attempt</button>'+(legacy?'<button type="button" data-toggle-legacy>Show Printable Teacher Rubric</button>':'')+'</div><div data-assessment-body></div>'}`;
+  root.innerHTML=`<div class="elementary-assessment-head"><div><h2>${esc(label())}</h2><div class="elementary-assessment-meta"><span class="elementary-assessment-badge">Grade ${esc(grade())}</span><span class="elementary-assessment-badge">${closed?"Closed-book":"Open-book"}</span><span class="elementary-assessment-badge">80% mastery</span><span class="elementary-assessment-badge">${countForAssessment()} questions drawn from ${poolSize()}+ candidates</span></div><p>${esc(access.reason)}</p>${prior?`<p><strong>Best verified score:</strong> ${prior}%</p>`:""}</div></div>${!access.open?'<div class="elementary-assessment-gate"><strong>Assessment locked.</strong><p>'+esc(access.reason)+'</p><a href="../index.html">Return to Grade Home</a></div>':'<div class="elementary-assessment-actions"><button type="button" class="primary" data-start-assessment>Begin New Randomized Attempt</button>'+(legacy&&!legacy.querySelector("#quizForm")?'<button type="button" data-toggle-legacy>Show Printable Teacher Rubric</button>':'')+'</div><div data-assessment-body></div>'}`;
   root.querySelector("[data-start-assessment]")?.addEventListener("click",()=>beginAttempt(root.querySelector("[data-assessment-body]")));
-  root.querySelector("[data-toggle-legacy]")?.addEventListener("click",e=>{legacy.hidden=!legacy.hidden;e.currentTarget.textContent=legacy.hidden?"Show Printable Teacher Rubric":"Hide Printable Teacher Rubric"});
+  root.querySelector("[data-toggle-legacy]")?.addEventListener("click",e=>{
+    // Only passive paper rubrics are available here; no competing legacy quiz form.
+    if(legacy.querySelector("#quizForm"))return;
+    legacy.hidden=!legacy.hidden;
+    e.currentTarget.textContent=legacy.hidden?"Show Printable Teacher Rubric":"Hide Printable Teacher Rubric";
+  });
 }
 function beginAttempt(body){
   const seed=`${Date.now()}|${Math.random()}|${location.pathname}`,questions=newAttemptQuestions(seed);
   if(!questions.length){body.innerHTML="<p>Question bank could not load. Refresh the page and try again.</p>";return}
   const attemptId=uid(),startedAt=new Date().toISOString();
+  const initialOwner=learner()?.learnerId||null,initialKey=courseKey(),initialAccess=gate();
   body.innerHTML=`<form data-formal-assessment>${questions.map((q,i)=>`<fieldset class="elementary-assessment-question"><legend>${i+1}. ${esc(q.prompt)}</legend>${q.options.map((opt,j)=>`<label class="elementary-assessment-option"><input type="radio" name="formal-q${i}" value="${j}"> ${esc(opt)}</label>`).join("")}<div class="elementary-assessment-feedback" data-feedback="${i}" hidden></div></fieldset>`).join("")}<div class="elementary-assessment-actions"><button type="submit" class="primary">Submit This Attempt</button><button type="button" data-restart-assessment>Discard & Draw a New Attempt</button></div><div aria-live="polite" data-form-status></div></form>`;
   body.querySelector("[data-restart-assessment]").addEventListener("click",()=>beginAttempt(body));
   body.querySelector("[data-formal-assessment]").addEventListener("submit",event=>{
-    event.preventDefault();const form=event.currentTarget,status=form.querySelector("[data-form-status]"),responses=[];let correct=0,answered=0;
+    event.preventDefault();
+    const form=event.currentTarget,status=form.querySelector("[data-form-status]");
+    const currentAccess=gate();
+    if((learner()?.learnerId||null)!==initialOwner||courseKey()!==initialKey||!currentAccess.open||currentAccess.preview!==initialAccess.preview){
+      status.textContent="The active learner or assessment eligibility changed. This attempt was not graded or saved. Return to the matching learner and begin a new attempt.";
+      form.querySelectorAll("input,button").forEach(el=>el.disabled=true);
+      return;
+    }
+    const responses=[];let correct=0,answered=0;
     questions.forEach((q,i)=>{
       const chosen=form.querySelector(`input[name="formal-q${i}"]:checked`),selected=chosen?Number(chosen.value):null,ok=selected===q.answer,feedback=form.querySelector(`[data-feedback="${i}"]`);
       if(selected!==null)answered++;if(ok)correct++;
