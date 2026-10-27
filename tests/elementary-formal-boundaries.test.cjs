@@ -44,4 +44,26 @@ assert.match(assessment,/if\(legacy\.querySelector\("#quizForm"\)\)return/);
 assert.match(assessment,/w===36\)return"final-exam\.html"/);
 assert.match(grade1,/n>18&&Number\(load\(\)\.midterm\?\.bestScore\|\|0\)<THRESHOLD/);
 assert.match(grade1,/locked:!masteredWeek\(C\.final\.unlockAfterWeek\)\|\|Number\(load\(\)\.midterm\?\.bestScore\|\|0\)<THRESHOLD/);
-console.log("PASS: Grades 01–05 midterm and week gates, learner separation, Grade 1 legacy form and final navigation safeguards.");
+
+assert.match(grade1,/const eligible=academyContext\(\)\.match && mastered===C\.weeks\.length/);
+for(const grade of ["02","03","04","05"]){
+  const program=fs.readFileSync("grades/grade-"+grade+"/assets/certificate.js","utf8");
+  const legacy=grade==="02"?"khaemenes_grade2_subject_36_aplus_v1":grade==="03"?"khaemenes_grade3_subject_36_aplus_v1":"khaemenes_grade"+Number(grade)+"_subject_36_aplusplus_v1";
+  const record={weekly:Object.fromEntries(Array.from({length:36},(_,i)=>[i+1,100])),midterm:95,final:94,portfolio:true,student:"Fictional Learner"};
+  const map=new Map([[legacy,JSON.stringify(record)]]);
+  const localStorage={getItem:k=>map.get(k)??null,setItem:(k,v)=>map.set(k,String(v))};
+  const document={getElementById:()=>view},view={innerHTML:""};
+  const run=()=>vm.runInNewContext(program,{localStorage,document,Date,Math,JSON,Number,String},{filename:"grades/grade-"+grade+"/assets/certificate.js"});
+  run();
+  assert.match(view.innerHTML,/Certificate Locked/,grade+": unassigned preview issued an official certificate");
+  map.set("khaemenes_active_learner_v1",JSON.stringify("fiction-A"));
+  map.set("khaemenes_family_registry_v1",JSON.stringify({learners:{"fiction-A":{learnerId:"fiction-A",grade,stage:"elementary",nickname:"Fiction A"}}}));
+  map.set("khaemenes.course:fiction-A:elementary-grade-"+grade,JSON.stringify({format:"khaemenes-course-state-v1",state:record}));
+  run();
+  assert.match(view.innerHTML,/Certificate of/,grade+": linked eligible learner incorrectly locked");
+  map.set("khaemenes_active_learner_v1",JSON.stringify("fiction-B"));
+  run();
+  assert.match(view.innerHTML,/Certificate Locked/,grade+": sibling inherited certificate");
+}
+
+console.log("PASS: Grades 01–05 midterm and week gates, learner separation, certificates, Grade 1 legacy and final navigation.");
