@@ -35,6 +35,24 @@ for(const week of course.weeks.slice(0,6)){
  }
 }
 assert.equal(authoredPrompts.size,60,"The first six weekly banks must have 60 distinct prompts");
+// Verify delivered assessment forms, not only the 32-question candidate pool.
+const factoryCode=fs.readFileSync("assets/khaemenes-elementary-question-factory.js","utf8");
+context.KHAEMENES_GRADE01_CURRICULUM=course;
+vm.runInNewContext(factoryCode,context,{filename:"assets/khaemenes-elementary-question-factory.js"});
+const factory=context.KhaemenesElementaryQuestionFactory;
+assert.ok(factory?.makeBalanced&&factory?.validateQuestion,"Missing canonical question factory");
+for(let n=1;n<=6;n++){
+ const focus=map["01"][String(n)];
+ for(let seed=1;seed<=16;seed++){
+  const questions=factory.makeBalanced({grade:1,focus,seed:"grade01-"+n+"-"+seed,count:32,includeLegacy:true,scope:"weekly",week:n});
+  assert.equal(questions.length,32,"Grade 1 weekly randomized candidate pool must contain 32 questions");
+  const delivered=questions.slice(0,12);
+  assert.equal(delivered.length,12,"Grade 1 weekly quiz must deliver 12 questions");
+  assert.equal(delivered.filter(q=>String(q.id).startsWith("g1-weekly-"+n+"-")).length,8,"Week "+n+" failed eight authored delivered questions");
+  assert.equal(new Set(delivered.map(q=>q.prompt)).size,12,"Duplicate visible question in Week "+n);
+  for(const item of delivered)assert.ok(factory.validateQuestion(item),"Invalid delivered question Week "+n);
+ }
+}
 for(const n of [2,3,4,5,6]){
  const week=course.weeks[n-1];
  for(const [i,day] of week.daily.entries()){
@@ -48,4 +66,4 @@ for(let n=1;n<=6;n++){
  assert.ok(companion.includes('id="week-'+String(n).padStart(2,"0")+'"'),"Missing week-specific companion section "+n);
  assert.ok(companion.includes(course.weeks[n-1].title),"Companion title diverges in Week "+n);
 }
-console.log("PASS: Grade 1 36/36 canonical Mentor focuses, 25 authored daily lessons, 60 unique first-six-week questions, and rubric/evidence boundaries.");
+console.log("PASS: Grade 1 36/36 canonical Mentor focuses, 25 authored daily lessons, 60 unique first-six-week questions, 96 randomized 8/4 delivered-form checks, and rubric/evidence boundaries.");
