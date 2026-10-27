@@ -166,113 +166,113 @@ window.KHAEMENES_GRADE01_CURRICULUM = {
       "quiz": [
         {
           "type": "mc",
-          "prompt": "Which word best matches this week’s big idea: Welcome to First Grade Scholars?",
+          "prompt": "A learning routine says: gather materials, work, check, then put away. What comes just before putting materials away?",
           "choices": [
-            "scholar",
-            "airplane",
-            "triangle only",
-            "yesterday only"
+            "Check the work",
+            "Gather materials",
+            "Begin a new lesson",
+            "Leave the desk"
           ],
           "answer": 0
         },
         {
           "type": "mc",
-          "prompt": "What should a first grade scholar do when work feels hard?",
+          "prompt": "Lia has six blocks and Jo has four. Which group has more?",
           "choices": [
-            "Give up quickly",
-            "Ask for help and try again",
-            "Hide the work",
-            "Stop listening"
+            "Jo's group, by two blocks",
+            "Lia's group, by two blocks",
+            "Both groups are equal",
+            "Jo's group, by one block"
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "Which sentence shows evidence?",
+          "prompt": "Which is the most careful way to count eight objects?",
           "choices": [
-            "I know because I can show my work.",
-            "No reason.",
-            "It is magic.",
-            "I do not need to explain."
+            "Say numbers without looking at the objects",
+            "Count the same object twice",
+            "Point to each object once while saying one number word",
+            "Guess after counting three objects"
+          ],
+          "answer": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "A learner sorts buttons by color. Which rule matches that sort?",
+          "choices": [
+            "Put the biggest button first regardless of color",
+            "Put every round button with every square one",
+            "Put all buttons in a single pile",
+            "Put all red buttons together and all blue buttons together"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "Which sentence tells a complete thought about learning?",
+          "choices": [
+            "I check my picture before I finish.",
+            "Because the classroom",
+            "When the pencils",
+            "On the desk and"
           ],
           "answer": 0
         },
         {
           "type": "mc",
-          "prompt": "This week’s math focus is closest to:",
+          "prompt": "What would a simple map of a learning space help someone find?",
           "choices": [
-            "Count",
-            "driving a car",
-            "baking a cake only",
-            "watching television"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "A good reader should:",
-          "choices": [
-            "Look away from the page",
-            "Use sounds, pictures, and meaning",
-            "Skip every hard word",
-            "Never reread"
+            "How old each person is",
+            "Where the books and tables are located",
+            "Which story is funniest",
+            "The exact number of clouds outside"
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "A good mathematician should:",
+          "prompt": "Which observation could someone make about a classroom table?",
           "choices": [
-            "Guess without checking",
-            "Use tools, drawings, or numbers to explain",
-            "Hide mistakes",
-            "Copy only"
+            "A student must be worried.",
+            "The pencils were bought yesterday.",
+            "Three pencils are on the table.",
+            "Someone will move the pencils tomorrow."
+          ],
+          "answer": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "Which choice demonstrates respectful listening?",
+          "choices": [
+            "Talk over the speaker to save time",
+            "Ignore what the speaker says",
+            "Walk away during the explanation",
+            "Wait for a speaker to finish and then ask a question"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "A Scholar Shield shows kindness, a routine, a goal and a strength. What is the best explanation for one picture?",
+          "choices": [
+            "This picture shows how I help by putting supplies away.",
+            "I chose it without thinking about its meaning.",
+            "It proves that every learner likes the same task.",
+            "The picture does not need to relate to my learning."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "A learner counts five counters but writes six. What should they do?",
+          "choices": [
+            "Erase all the counters from the page",
+            "Recount each counter and correct the numeral",
+            "Keep six because it is a larger number",
+            "Choose seven without recounting"
           ],
           "answer": 1
-        },
-        {
-          "type": "mc",
-          "prompt": "Which project belongs to this week?",
-          "choices": [
-            "My First Grade Scholar Shield",
-            "A high school essay only",
-            "A car engine",
-            "A shopping receipt only"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "What does portfolio evidence show?",
-          "choices": [
-            "Learning progress",
-            "Only recess",
-            "A secret password",
-            "Nothing"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which behavior helps a learning community?",
-          "choices": [
-            "Kind listening",
-            "Interrupting every turn",
-            "Breaking tools",
-            "Leaving work unfinished"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which vocabulary word belongs to this week?",
-          "choices": [
-            "routine",
-            "galaxy only",
-            "password",
-            "thunderbolt only"
-          ],
-          "answer": 0
         }
       ],
       "instructionalLayerVersion": "2.0.0"
@@ -455,113 +455,113 @@ window.KHAEMENES_GRADE01_CURRICULUM = {
       "quiz": [
         {
           "type": "mc",
-          "prompt": "Which word best matches this week’s big idea: Letters, Sounds, and Counting to 20?",
+          "prompt": "Which beginning sound is heard in the word sun?",
           "choices": [
-            "letter",
-            "airplane",
-            "triangle only",
-            "yesterday only"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "What should a first grade scholar do when work feels hard?",
-          "choices": [
-            "Give up quickly",
-            "Ask for help and try again",
-            "Hide the work",
-            "Stop listening"
+            "/m/",
+            "/s/",
+            "/t/",
+            "/p/"
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "Which sentence shows evidence?",
+          "prompt": "Which letter represents the first sound in mat?",
           "choices": [
-            "I know because I can show my work.",
-            "No reason.",
-            "It is magic.",
-            "I do not need to explain."
+            "s",
+            "t",
+            "m",
+            "p"
+          ],
+          "answer": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "What word do the sounds /s/ /a/ /t/ make when blended?",
+          "choices": [
+            "sit",
+            "set",
+            "sun",
+            "sat"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "A full ten-frame and four extra counters show which number?",
+          "choices": [
+            "14",
+            "10",
+            "4",
+            "16"
           ],
           "answer": 0
         },
         {
           "type": "mc",
-          "prompt": "This week’s math focus is closest to:",
+          "prompt": "What is one more than 18?",
           "choices": [
-            "Count to 20",
-            "driving a car",
-            "baking a cake only",
-            "watching television"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "A good reader should:",
-          "choices": [
-            "Look away from the page",
-            "Use sounds, pictures, and meaning",
-            "Skip every hard word",
-            "Never reread"
+            "17",
+            "19",
+            "20",
+            "16"
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "A good mathematician should:",
+          "prompt": "What is one less than 12?",
           "choices": [
-            "Guess without checking",
-            "Use tools, drawings, or numbers to explain",
-            "Hide mistakes",
-            "Copy only"
+            "13",
+            "10",
+            "11",
+            "14"
+          ],
+          "answer": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "Which number list is in counting order?",
+          "choices": [
+            "13, 15, 14, 16",
+            "16, 15, 14, 13",
+            "13, 16, 14, 15",
+            "13, 14, 15, 16"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "The repeating unit is red, blue. What comes next after red, blue, red?",
+          "choices": [
+            "blue",
+            "red",
+            "green",
+            "yellow"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "Which is an accurate way to show 16?",
+          "choices": [
+            "Six total counters",
+            "One full ten-frame and six more counters",
+            "One full ten-frame and nine counters",
+            "Two full ten-frames"
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "Which project belongs to this week?",
+          "prompt": "What should a page about the letter p show?",
           "choices": [
-            "Alphabet and Number Pattern Book",
-            "A high school essay only",
-            "A car engine",
-            "A shopping receipt only"
+            "A drawing of a sun labeled with p",
+            "The number four only",
+            "A picture of a pen with p as its starting letter",
+            "A picture with no letter or word"
           ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "What does portfolio evidence show?",
-          "choices": [
-            "Learning progress",
-            "Only recess",
-            "A secret password",
-            "Nothing"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which behavior helps a learning community?",
-          "choices": [
-            "Kind listening",
-            "Interrupting every turn",
-            "Breaking tools",
-            "Leaving work unfinished"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which vocabulary word belongs to this week?",
-          "choices": [
-            "sound",
-            "galaxy only",
-            "password",
-            "thunderbolt only"
-          ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "instructionalLayerVersion": "grade01-original-depth-v2-2026-10-26"
@@ -744,113 +744,113 @@ window.KHAEMENES_GRADE01_CURRICULUM = {
       "quiz": [
         {
           "type": "mc",
-          "prompt": "Which word best matches this week’s big idea: Short Vowels and Addition Stories?",
+          "prompt": "Which word has the short a sound in the middle?",
           "choices": [
-            "blend",
-            "airplane",
-            "triangle only",
-            "yesterday only"
+            "pen",
+            "pin",
+            "pan",
+            "pun"
+          ],
+          "answer": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "Which word has the short e sound in the middle?",
+          "choices": [
+            "bad",
+            "bid",
+            "bud",
+            "bed"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "Replacing a with e in pan makes which word?",
+          "choices": [
+            "pen",
+            "pin",
+            "pun",
+            "pat"
           ],
           "answer": 0
         },
         {
           "type": "mc",
-          "prompt": "What should a first grade scholar do when work feels hard?",
+          "prompt": "Three red counters and two blue counters are joined. How many counters are there?",
           "choices": [
-            "Give up quickly",
-            "Ask for help and try again",
-            "Hide the work",
-            "Stop listening"
+            "6",
+            "5",
+            "3",
+            "2"
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "Which sentence shows evidence?",
+          "prompt": "Which equation matches four birds joined by three more birds?",
           "choices": [
-            "I know because I can show my work.",
-            "No reason.",
-            "It is magic.",
-            "I do not need to explain."
+            "4 − 3 = 1",
+            "4 + 3 = 6",
+            "4 + 3 = 7",
+            "3 + 3 = 7"
+          ],
+          "answer": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "A picture shows two apples and five oranges. Which addition shows the total fruit?",
+          "choices": [
+            "2 + 5 = 5",
+            "5 − 2 = 7",
+            "2 + 5 = 6",
+            "2 + 5 = 7"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "In a story, a pencil is lost, searched for, and found. Which event happens in the middle?",
+          "choices": [
+            "The pencil is searched for.",
+            "The pencil is found.",
+            "The pencil is first lost.",
+            "The pencil is put in a museum."
           ],
           "answer": 0
         },
         {
           "type": "mc",
-          "prompt": "This week’s math focus is closest to:",
+          "prompt": "What should the first picture of a joining story show?",
           "choices": [
-            "Addition within 10 using objects and drawings",
-            "driving a car",
-            "baking a cake only",
-            "watching television"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "A good reader should:",
-          "choices": [
-            "Look away from the page",
-            "Use sounds, pictures, and meaning",
-            "Skip every hard word",
-            "Never reread"
+            "Only the final answer numeral",
+            "The starting group before more objects join",
+            "An unrelated drawing",
+            "A different problem's result"
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "A good mathematician should:",
+          "prompt": "A learner writes 3 + 4 = 8 but draws seven counters. What is the correct revision?",
           "choices": [
-            "Guess without checking",
-            "Use tools, drawings, or numbers to explain",
-            "Hide mistakes",
-            "Copy only"
+            "Add one to the answer with no new counter",
+            "Leave eight because it is close",
+            "Change the answer to seven after recounting",
+            "Erase the entire story instead of checking"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "type": "mc",
-          "prompt": "Which project belongs to this week?",
+          "prompt": "What is the best reason to include an equation beside the Story Mat picture?",
           "choices": [
-            "Short Vowel Story Mat",
-            "A high school essay only",
-            "A car engine",
-            "A shopping receipt only"
+            "It replaces the need to check the groups",
+            "It changes the story's character",
+            "It always means subtraction",
+            "It shows how the pictured groups form the total"
           ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "What does portfolio evidence show?",
-          "choices": [
-            "Learning progress",
-            "Only recess",
-            "A secret password",
-            "Nothing"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which behavior helps a learning community?",
-          "choices": [
-            "Kind listening",
-            "Interrupting every turn",
-            "Breaking tools",
-            "Leaving work unfinished"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which vocabulary word belongs to this week?",
-          "choices": [
-            "vowel",
-            "galaxy only",
-            "password",
-            "thunderbolt only"
-          ],
-          "answer": 0
+          "answer": 3
         }
       ],
       "instructionalLayerVersion": "grade01-original-depth-v2-2026-10-26"
@@ -1033,111 +1033,111 @@ window.KHAEMENES_GRADE01_CURRICULUM = {
       "quiz": [
         {
           "type": "mc",
-          "prompt": "Which word best matches this week’s big idea: More Short Vowels and Subtraction Stories?",
+          "prompt": "Which word contains the short i sound?",
           "choices": [
-            "decode",
-            "airplane",
-            "triangle only",
-            "yesterday only"
+            "pan",
+            "pen",
+            "pun",
+            "pin"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "Which word contains the short o sound?",
+          "choices": [
+            "hot",
+            "hat",
+            "hit",
+            "hut"
           ],
           "answer": 0
         },
         {
           "type": "mc",
-          "prompt": "What should a first grade scholar do when work feels hard?",
+          "prompt": "Which word contains the short u sound?",
           "choices": [
-            "Give up quickly",
-            "Ask for help and try again",
-            "Hide the work",
-            "Stop listening"
+            "sin",
+            "sun",
+            "son",
+            "sen"
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "Which sentence shows evidence?",
+          "prompt": "Eight birds sit on a fence and three fly away. How many remain?",
           "choices": [
-            "I know because I can show my work.",
-            "No reason.",
-            "It is magic.",
-            "I do not need to explain."
+            "11",
+            "6",
+            "5",
+            "3"
+          ],
+          "answer": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "Which equation matches nine shells with four taken away?",
+          "choices": [
+            "9 + 4 = 5",
+            "9 − 4 = 6",
+            "4 − 9 = 5",
+            "9 − 4 = 5"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "A learner has seven counters and removes two. Which picture shows what remains?",
+          "choices": [
+            "Five uncrossed counters",
+            "Nine uncrossed counters",
+            "Two new counters added",
+            "Seven uncrossed counters"
           ],
           "answer": 0
         },
         {
           "type": "mc",
-          "prompt": "This week’s math focus is closest to:",
+          "prompt": "Which addition checks 8 − 3 = 5?",
           "choices": [
-            "Subtraction within 10",
-            "driving a car",
-            "baking a cake only",
-            "watching television"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "A good reader should:",
-          "choices": [
-            "Look away from the page",
-            "Use sounds, pictures, and meaning",
-            "Skip every hard word",
-            "Never reread"
+            "5 − 3 = 8",
+            "5 + 3 = 8",
+            "8 + 3 = 5",
+            "8 + 5 = 3"
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "A good mathematician should:",
+          "prompt": "Before there were six pencils; afterward there were four. What can we observe?",
           "choices": [
-            "Guess without checking",
-            "Use tools, drawings, or numbers to explain",
-            "Hide mistakes",
-            "Copy only"
+            "A classmate definitely took them.",
+            "They must have been broken.",
+            "There are two fewer pencils afterward.",
+            "The pencils will return tomorrow."
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "type": "mc",
-          "prompt": "Which project belongs to this week?",
+          "prompt": "What should the middle page of a take-away flipbook show?",
           "choices": [
-            "Change Story Flipbook",
-            "A high school essay only",
-            "A car engine",
-            "A shopping receipt only"
+            "A completely unrelated new set",
+            "Only the cover title",
+            "The original group with nothing changed",
+            "The objects leaving or being crossed out"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "type": "mc",
-          "prompt": "What does portfolio evidence show?",
+          "prompt": "An equation says 8 − 5 = 4. What is the correct answer after checking with counters?",
           "choices": [
-            "Learning progress",
-            "Only recess",
-            "A secret password",
-            "Nothing"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which behavior helps a learning community?",
-          "choices": [
-            "Kind listening",
-            "Interrupting every turn",
-            "Breaking tools",
-            "Leaving work unfinished"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which vocabulary word belongs to this week?",
-          "choices": [
-            "subtract",
-            "galaxy only",
-            "password",
-            "thunderbolt only"
+            "3",
+            "4",
+            "5",
+            "2"
           ],
           "answer": 0
         }
@@ -1322,113 +1322,113 @@ window.KHAEMENES_GRADE01_CURRICULUM = {
       "quiz": [
         {
           "type": "mc",
-          "prompt": "Which word best matches this week’s big idea: Families, Communities, and Teen Numbers?",
+          "prompt": "Where does a librarian in a library story usually work?",
           "choices": [
-            "community",
-            "airplane",
-            "triangle only",
-            "yesterday only"
+            "At the library",
+            "At a weather station",
+            "Inside a book's illustration",
+            "In a number line"
           ],
           "answer": 0
         },
         {
           "type": "mc",
-          "prompt": "What should a first grade scholar do when work feels hard?",
+          "prompt": "Which detail tells the setting of a story?",
           "choices": [
-            "Give up quickly",
-            "Ask for help and try again",
-            "Hide the work",
-            "Stop listening"
+            "The helper's name has five letters.",
+            "The characters are reading in a public library.",
+            "A visitor feels curious.",
+            "Someone is kind to a friend."
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "Which sentence shows evidence?",
+          "prompt": "What does a helpful community action accomplish?",
           "choices": [
-            "I know because I can show my work.",
-            "No reason.",
-            "It is magic.",
-            "I do not need to explain."
+            "It guarantees everyone has the same job",
+            "It means a helper cannot ask for help",
+            "It addresses a shared need or supports other people",
+            "It replaces every community rule"
+          ],
+          "answer": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "Which model represents 13?",
+          "choices": [
+            "Three counters only",
+            "One full ten-frame and eight extras",
+            "Two full ten-frames",
+            "One ten-frame filled and three extra counters"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "Ten blocks grouped together and seven single blocks make which number?",
+          "choices": [
+            "17",
+            "10",
+            "7",
+            "20"
           ],
           "answer": 0
         },
         {
           "type": "mc",
-          "prompt": "This week’s math focus is closest to:",
+          "prompt": "Which equation shows 15 as ten and extra ones?",
           "choices": [
-            "Teen numbers as ten and some more",
-            "driving a car",
-            "baking a cake only",
-            "watching television"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "A good reader should:",
-          "choices": [
-            "Look away from the page",
-            "Use sounds, pictures, and meaning",
-            "Skip every hard word",
-            "Never reread"
+            "15 + 5 = 10",
+            "10 + 5 = 15",
+            "10 + 4 = 15",
+            "5 + 5 = 15"
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "A good mathematician should:",
+          "prompt": "In the number 19, how many extra ones go with a full ten?",
           "choices": [
-            "Guess without checking",
-            "Use tools, drawings, or numbers to explain",
-            "Hide mistakes",
-            "Copy only"
+            "1",
+            "10",
+            "9",
+            "19"
+          ],
+          "answer": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "Which number is greater: 14 or 18?",
+          "choices": [
+            "14, because four is a smaller digit",
+            "Both are equal because each has a ten",
+            "14, because it comes earlier",
+            "18, because eight extra ones is more than four"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "What should a Community Helper Number Mural include?",
+          "choices": [
+            "A helpful role and a teen number shown as ten plus ones",
+            "Only a helper's name without an action",
+            "A numeral that does not match the picture",
+            "A picture without mathematical labels"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "A story tells who helped at a park but not where. What is missing from the retelling?",
+          "choices": [
+            "The number of pages",
+            "The setting",
+            "The title font",
+            "A weather forecast"
           ],
           "answer": 1
-        },
-        {
-          "type": "mc",
-          "prompt": "Which project belongs to this week?",
-          "choices": [
-            "Community Helper Number Mural",
-            "A high school essay only",
-            "A car engine",
-            "A shopping receipt only"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "What does portfolio evidence show?",
-          "choices": [
-            "Learning progress",
-            "Only recess",
-            "A secret password",
-            "Nothing"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which behavior helps a learning community?",
-          "choices": [
-            "Kind listening",
-            "Interrupting every turn",
-            "Breaking tools",
-            "Leaving work unfinished"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which vocabulary word belongs to this week?",
-          "choices": [
-            "helper",
-            "galaxy only",
-            "password",
-            "thunderbolt only"
-          ],
-          "answer": 0
         }
       ],
       "instructionalLayerVersion": "grade01-original-depth-v2-2026-10-26"
@@ -1611,113 +1611,113 @@ window.KHAEMENES_GRADE01_CURRICULUM = {
       "quiz": [
         {
           "type": "mc",
-          "prompt": "Which word best matches this week’s big idea: Weather, Seasons, and Data?",
+          "prompt": "Which statement is a direct weather observation?",
           "choices": [
-            "weather",
-            "airplane",
-            "triangle only",
-            "yesterday only"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "What should a first grade scholar do when work feels hard?",
-          "choices": [
-            "Give up quickly",
-            "Ask for help and try again",
-            "Hide the work",
-            "Stop listening"
+            "It will definitely rain tomorrow.",
+            "I can see clouds outside the window.",
+            "This whole season must be rainy.",
+            "Next week will be warmer."
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "Which sentence shows evidence?",
+          "prompt": "Which statement is a weather prediction?",
           "choices": [
-            "I know because I can show my work.",
-            "No reason.",
-            "It is magic.",
-            "I do not need to explain."
+            "There are three clouds visible now.",
+            "I recorded two sunny days last week.",
+            "It might rain later today.",
+            "The picture shows a thermometer."
+          ],
+          "answer": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "A chart has sunny, sunny, cloudy, rainy, sunny. How many sunny days are shown?",
+          "choices": [
+            "2",
+            "4",
+            "5",
+            "3"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "Using the same five-day chart, how many days were not sunny?",
+          "choices": [
+            "2",
+            "1",
+            "3",
+            "5"
           ],
           "answer": 0
         },
         {
           "type": "mc",
-          "prompt": "This week’s math focus is closest to:",
+          "prompt": "Which tally correctly represents four rainy days?",
           "choices": [
-            "Collect data",
-            "driving a car",
-            "baking a cake only",
-            "watching television"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "A good reader should:",
-          "choices": [
-            "Look away from the page",
-            "Use sounds, pictures, and meaning",
-            "Skip every hard word",
-            "Never reread"
+            "III",
+            "IIII",
+            "II",
+            "IIIII"
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "A good mathematician should:",
+          "prompt": "A picture graph key says one symbol equals one day. What do three sun symbols mean?",
           "choices": [
-            "Guess without checking",
-            "Use tools, drawings, or numbers to explain",
-            "Hide mistakes",
-            "Copy only"
+            "One sunny day",
+            "Six sunny days",
+            "Three sunny days",
+            "A whole month of sun"
+          ],
+          "answer": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "A weather graph shows four sunny days and two cloudy days. How many more sunny days are there?",
+          "choices": [
+            "4",
+            "6",
+            "1",
+            "2"
+          ],
+          "answer": 3
+        },
+        {
+          "type": "mc",
+          "prompt": "What should every weather picture graph have so it can be understood?",
+          "choices": [
+            "A title, category labels and a clear symbol key",
+            "Only pictures with no labels",
+            "Exactly ten pictures in every category",
+            "A prediction in place of recorded data"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "If one winter day is rainy, what can we conclude about winter weather?",
+          "choices": [
+            "Every winter day is rainy.",
+            "It rained on that day; more observations are needed for seasonal patterns.",
+            "The season is no longer winter.",
+            "All rainy days occur in winter."
           ],
           "answer": 1
         },
         {
           "type": "mc",
-          "prompt": "Which project belongs to this week?",
+          "prompt": "What is a sensible safety choice when lightning is nearby?",
           "choices": [
-            "Class Weather Graph",
-            "A high school essay only",
-            "A car engine",
-            "A shopping receipt only"
+            "Continue playing in an open field",
+            "Stand under the tallest isolated tree",
+            "Seek shelter and follow trusted adult guidance",
+            "Hold a metal object above the head"
           ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "What does portfolio evidence show?",
-          "choices": [
-            "Learning progress",
-            "Only recess",
-            "A secret password",
-            "Nothing"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which behavior helps a learning community?",
-          "choices": [
-            "Kind listening",
-            "Interrupting every turn",
-            "Breaking tools",
-            "Leaving work unfinished"
-          ],
-          "answer": 0
-        },
-        {
-          "type": "mc",
-          "prompt": "Which vocabulary word belongs to this week?",
-          "choices": [
-            "season",
-            "galaxy only",
-            "password",
-            "thunderbolt only"
-          ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "instructionalLayerVersion": "grade01-original-depth-v2-2026-10-26"
