@@ -66,4 +66,18 @@ for(let n=1;n<=6;n++){
  assert.ok(companion.includes('id="week-'+String(n).padStart(2,"0")+'"'),"Missing week-specific companion section "+n);
  assert.ok(companion.includes(course.weeks[n-1].title),"Companion title diverges in Week "+n);
 }
-console.log("PASS: Grade 1 36/36 canonical Mentor focuses, 25 authored daily lessons, 60 unique first-six-week questions, 96 randomized 8/4 delivered-form checks, and rubric/evidence boundaries.");
+const htmlEsc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+for(let n=2;n<=6;n++){
+ const week=course.weeks[n-1];
+ const packet=fs.readFileSync("grades/grade-01/printables/unit-"+String(n).padStart(2,"0")+"-packet.html","utf8");
+ assert.ok(packet.includes(week.title),"Week "+n+" packet has an obsolete title");
+ assert.ok(packet.includes('data-khae-evidence-header="v1"'),"Evidence header missing Week "+n);
+ assert.ok(packet.includes("Five-day evidence prompts"),"Daily prompts missing Week "+n);
+ for(const day of week.daily){
+   for(const field of ["focus","objective","independentPractice","evidence"]){
+     const canonical=htmlEsc(day[field]);
+     assert.ok(packet.includes(canonical),"Packet Week "+n+" does not match canonical "+field+" for "+day.day);
+   }
+ }
+}
+console.log("PASS: Grade 1 36/36 canonical Mentor focuses, 25 authored daily lessons, 60 unique first-six-week questions, 96 randomized 8/4 delivered-form checks, aligned printables and rubric/evidence boundaries.");
