@@ -13,6 +13,9 @@ on:
       - 'grades/grade-05/index.html'
       - 'assets/khaemenes-elementary-resources.js'
       - 'assets/khaemenes-elementary-focus-map.js'
+      - 'grades/grade-01/data/curriculum.js'
+      - 'grades/grade-01/learning/weeks-01-06-instructional-companion.html'
+      - 'tools/validate-grade01-mentor-focus.mjs'
       - 'assets/khaemenes-elementary-experience.js'
       - 'assets/khaemenes-elementary-continuation-publisher.js'
       - 'games/**'
@@ -30,6 +33,9 @@ on:
       - 'grades/grade-05/index.html'
       - 'assets/khaemenes-elementary-resources.js'
       - 'assets/khaemenes-elementary-focus-map.js'
+      - 'grades/grade-01/data/curriculum.js'
+      - 'grades/grade-01/learning/weeks-01-06-instructional-companion.html'
+      - 'tools/validate-grade01-mentor-focus.mjs'
       - 'assets/khaemenes-elementary-experience.js'
       - 'assets/khaemenes-elementary-continuation-publisher.js'
       - 'games/**'
@@ -60,3 +66,5 @@ jobs:
 
       - name: Validate Elementary Mentor and family experience
         run: node tools/validate-elementary-experience.mjs
+      - name: Validate Grade 1 active curriculum and Mentor lesson alignment
+        run: node tools/validate-grade01-mentor-focus.mjs
