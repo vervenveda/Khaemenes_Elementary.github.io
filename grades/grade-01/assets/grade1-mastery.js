@@ -225,6 +225,18 @@
     </section>`;
   }
 
+  // One page session always belongs to its original Academy learner.
+  let lessonOwnerToken=null;
+  function ownerToken(){
+    const ctx=academyContext();
+    return ctx.learner?(ctx.match?'learner:'+ctx.learner.learnerId:'ineligible'):'guest';
+  }
+  function ownsOpenLesson(key){
+    if(lessonOwnerToken!==null&&lessonOwnerToken===ownerToken())return true;
+    const status=key&&document.querySelector('[data-work-status="'+key+'"]');
+    if(status){status.textContent='The active learner changed. Reload before saving this lesson.';status.classList.remove('saved');}
+    return false;
+  }
   const activePads = new Map();
 
   function setupCanvas(canvas, key){
@@ -281,6 +293,7 @@
     }
 
     function start(evt){
+      if(!ownsOpenLesson(key))return;
       evt.preventDefault();
       canvas.setPointerCapture?.(evt.pointerId);
       const p = point(evt);
@@ -325,6 +338,7 @@
   }
 
   function saveWork(key){
+    if(!ownsOpenLesson(key))return;
     const st = load();
     st.dailyResponses ||= {};
     st.handwritingImages ||= {};
@@ -336,15 +350,16 @@
       st.handwritingImages[key] = canvas.toDataURL('image/png');
     }
     st.workSaved[key] = {savedAt:new Date().toISOString(), hasText:!!(text&&text.value.trim()), hasHandwriting:!!st.handwritingImages[key]};
-    save(st);
-    const status = document.querySelector(`[data-work-status="${key}"]`);
+    const saved=save(st);
+    const status=document.querySelector(`[data-work-status="${key}"]`);
     if(status){
-      status.textContent = 'Saved locally. Typed work and handwriting/drawing are stored only in this browser.';
-      status.classList.add('saved');
+      status.textContent=saved?'Saved locally. Typed work and handwriting/drawing are stored only in this browser.':'Storage rejected the save. Keep this page open and copy your work.';
+      status.classList.toggle('saved',saved);
     }
   }
 
   function clearPad(key){
+    if(!ownsOpenLesson(key))return;
     const canvas = document.querySelector(`[data-work-pad="${key}"]`);
     if(canvas){
       const ctx = canvas.getContext('2d');
@@ -354,10 +369,10 @@
     st.handwritingImages ||= {};
     delete st.handwritingImages[key];
     if(st.workSaved && st.workSaved[key]) st.workSaved[key].hasHandwriting = false;
-    save(st);
-    const status = document.querySelector(`[data-work-status="${key}"]`);
+    const saved=save(st);
+    const status=document.querySelector(`[data-work-status="${key}"]`);
     if(status){
-      status.textContent = 'Handwriting cleared locally. Press Save Work after writing again.';
+      status.textContent=saved?'Handwriting cleared locally. Press Save Work after writing again.':'Unable to save the clear action. Previously saved handwriting may return on reload.';
       status.classList.remove('saved');
     }
   }
@@ -367,10 +382,14 @@
     document.querySelectorAll('[data-work-pad]').forEach(canvas => setupCanvas(canvas, canvas.dataset.workPad));
     document.querySelectorAll('[data-work-text]').forEach(textarea => {
       textarea.addEventListener('input', () => {
-        const st = load();
-        st.dailyResponses ||= {};
-        st.dailyResponses[textarea.dataset.workText] = textarea.value;
-        save(st);
+        const key=textarea.dataset.workText;
+        if(!ownsOpenLesson(key))return;
+        const st=load();st.dailyResponses||={};
+        st.dailyResponses[key]=textarea.value;
+        if(!save(st)){
+          const status=document.querySelector('[data-work-status="'+key+'"]');
+          if(status){status.textContent='Auto-save failed. Copy your work before leaving.';status.classList.remove('saved');}
+        }
       });
     });
     document.querySelectorAll('[data-save-work]').forEach(btn => btn.addEventListener('click', () => saveWork(btn.dataset.saveWork)));
@@ -439,6 +458,7 @@
 
 function renderLessonPage(weekNum){
     const w=C.weeks.find(x=>x.week===weekNum); if(!w) return;
+    lessonOwnerToken=ownerToken();
     const s=load(), open=isWeekUnlocked(weekNum);
     setText('lessonTitle', `Week ${String(weekNum).padStart(2,'0')} — ${w.title}`);
     setText('essentialQuestion', w.essentialQuestion);
@@ -497,12 +517,24 @@ function renderLessonPage(weekNum){
             <label class="day-complete"><input type="checkbox" data-day="${key}" ${done?'checked':''}> Mark this day complete locally</label>
           </article>`;
         }).join('');
-        days.querySelectorAll('input[data-day]').forEach(cb=>cb.addEventListener('change',e=>{ const st=load(); st.daily||={}; st.daily[e.target.dataset.day]=e.target.checked; save(st); }));
+        days.querySelectorAll('input[data-day]').forEach(cb=>cb.addEventListener('change',e=>{
+          if(!ownsOpenLesson()){e.target.checked=!e.target.checked;return;}
+          const st=load();st.daily||={};const before=!!st.daily[e.target.dataset.day];
+          st.daily[e.target.dataset.day]=e.target.checked;
+          if(!save(st)){e.target.checked=before;alert('Daily completion could not be saved.');}
+        }));
         initStudentWorkPanels();
       }
     }
     const note=$('weekNote'); if(note){ note.value=s.notes[weekNum]||''; note.disabled=!open; }
-    const saveNote=$('saveNote'); if(saveNote){ saveNote.disabled=!open; saveNote.addEventListener('click',()=>{ const st=load(); st.notes||={}; st.notes[weekNum]=note.value.trim(); save(st); alert('Saved locally for this browser.'); }); }
+    const saveNote=$('saveNote');if(saveNote){
+      saveNote.disabled=!open;
+      saveNote.addEventListener('click',()=>{
+        if(!ownsOpenLesson()){alert('Learner changed. Reload this lesson before saving.');return;}
+        const st=load();st.notes||={};st.notes[weekNum]=note.value.trim();
+        alert(save(st)?'Saved locally for this browser.':'Save failed. Copy your note before leaving this page.');
+      });
+    }
     const q=$('quizLink');if(q)q.href=open?`../../assessments/unit-${String(weekNum).padStart(2,'0')}-assessment.html`:
       weekNum>18&&Number(s.midterm?.bestScore||0)<THRESHOLD?'../../assessments/midterm.html':
       `../../assessments/unit-${String(weekNum-1).padStart(2,'0')}-assessment.html`;
@@ -565,6 +597,17 @@ function renderLessonPage(weekNum){
     const cb=$('portfolioComplete'); if(cb){ cb.checked=portfolio; cb.addEventListener('change',e=>{ const st=load(); st.portfolio=e.target.checked; save(st); location.reload(); }); }
   }
 
+  function concealOtherLearner(){
+    if(lessonOwnerToken===null||lessonOwnerToken===ownerToken())return;
+    const panel=$('dailyLessons'),note=$('weekNote'),notice=$('lockNotice');
+    if(panel)panel.replaceChildren();
+    if(note){note.value='';note.disabled=true;}
+    if(notice)notice.textContent='Active learner changed. Reload for this learner’s own lesson work.';
+  }
+  window.addEventListener('khaemenes-family-changed',concealOtherLearner);
+  window.addEventListener('storage',e=>{
+    if([ACTIVE_LEARNER_KEY,REGISTRY_KEY].includes(e.key))concealOtherLearner();
+  });
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{mountLegacyRecovery();scheduleContinuationPublish()},{once:true});
   else {mountLegacyRecovery();scheduleContinuationPublish()}
   window.addEventListener('khaemenes-learning-continuation-ready',publishContinuation);
