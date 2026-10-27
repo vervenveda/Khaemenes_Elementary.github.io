@@ -66,4 +66,11 @@ for(const grade of ["02","03","04","05"]){
   assert.match(view.innerHTML,/Certificate Locked/,grade+": sibling inherited certificate");
 }
 
+assert.match(grade1,/function renderAssessment\(\)\{[\s\S]*?if\(document\.querySelector\('script\[src\*="khaemenes-elementary-assessment-engine\.js"\]'\)\)return;/);
+assert.match(grade1,/lessonOwnerToken=ownerToken\(\)/);
+assert.match(grade1,/if\(!ownsOpenLesson\(key\)\)return/);
+assert.match(grade1,/if\(!save\(st\)\)/);
+assert.match(grade1,/Math\.max\(7, Math\.round\(rect\.width/);
+assert.match(grade1,/const draft=pad\.dirty/);
+assert.match(grade1,/needsMidterm\?'\.\.\/\.\.\/assessments\/midterm\.html'/);
 console.log("PASS: Grades 01–05 midterm and week gates, learner separation, certificates, Grade 1 legacy and final navigation.");
