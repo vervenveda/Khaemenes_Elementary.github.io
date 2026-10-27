@@ -24,8 +24,9 @@ for(const week of course.weeks){
 for(const n of [2,3,4,5,6]){
  const week=course.weeks[n-1];
  for(const [i,day] of week.daily.entries()){
-   const required=["objective","miniLesson","workedExample","guidedPractice","independentPractice","challenge","studentProduct","checkForUnderstanding","evidence","support","extension","reflection","skill","standard","estimatedMinutes"];
+   const required=["objective","miniLesson","workedExample","guidedPractice","independentPractice","challenge","studentProduct","checkForUnderstanding","evidence","support","extension","reflection","skill","standard"];
    for(const field of required)assert.ok(String(day[field]||"").trim().length>=12,"Grade 1 Week "+n+", Day "+(i+1)+" missing authored "+field);
+   assert.ok(Number(day.estimatedMinutes)>=15&&Number(day.estimatedMinutes)<=120,"Grade 1 daily lesson time must be reasonable");
  }
 }
 const companion=fs.readFileSync("grades/grade-01/learning/weeks-01-06-instructional-companion.html","utf8");
