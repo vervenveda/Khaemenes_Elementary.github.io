@@ -241,9 +241,11 @@
 
     function resize(){
       const rect = canvas.getBoundingClientRect();
-      const w = Math.max(280, Math.round(rect.width || canvas.parentElement?.clientWidth || 420));
+      const w = Math.max(7, Math.round(rect.width || canvas.parentElement?.clientWidth || 280));
       const h = Math.max(220, Math.round(rect.height || canvas.parentElement?.clientHeight || 250));
       const dpr = Math.max(1, window.devicePixelRatio || 1);
+      // A resize must not silently erase in-progress drawing.
+      const draft=pad.dirty&&canvas.width>0&&canvas.height>0?canvas.toDataURL('image/png'):null;
       canvas.width = Math.round(w*dpr);
       canvas.height = Math.round(h*dpr);
       canvas.style.width = w+'px';
@@ -253,7 +255,11 @@
       pad.ctx.lineJoin = 'round';
       pad.ctx.lineWidth = 4;
       pad.ctx.strokeStyle = '#172129';
-      restoreImage();
+      if(draft){
+        const draftImage=new Image();
+        draftImage.onload=()=>pad.ctx.drawImage(draftImage,0,0,w,h);
+        draftImage.src=draft;
+      }else restoreImage();
     }
 
     function restoreImage(){
@@ -439,11 +445,18 @@ function renderLessonPage(weekNum){
     setText('literacyFocus', w.literacy); setText('mathFocus', w.math); setText('inquiryFocus', w.inquiry); setText('selFocus', w.sel); setText('projectFocus', w.project);
     const vocab=$('vocabularyList'); if(vocab) vocab.innerHTML=(w.vocabulary||[]).map(v=>`<span class="badge">${escapeHtml(v)}</span>`).join('');
     const lock=$('lockNotice');
-    if(lock) lock.innerHTML = open ? '<strong>Open:</strong> Complete the daily lessons, save typed or handwritten work, then take the weekly quiz. 80% unlocks the next week.' : `<strong>Locked:</strong> Week ${String(weekNum).padStart(2,'0')} lessons unlock after Week ${String(weekNum-1).padStart(2,'0')} reaches 80% mastery. Return to the prior quiz and try again.`;
+    if(lock){
+      const needsMidterm=weekNum>18&&Number(s.midterm?.bestScore||0)<THRESHOLD;
+      lock.innerHTML=open?'<strong>Open:</strong> Complete daily lessons and the weekly quiz. 80% unlocks the next week.':
+        needsMidterm?'<strong>Locked:</strong> Complete the midterm at 80% to continue to Week 19 or later.':
+        `<strong>Locked:</strong> Week ${String(weekNum).padStart(2,'0')} unlocks after the prior week reaches 80%.`;
+    }
     const days=$('dailyLessons');
     if(days){
       if(!open){
-        days.innerHTML = `<section class="card week-card"><h2>Lesson gate</h2><p>This week is hidden from the student route until the prior week reaches 80% mastery. Multiple tries are allowed on the prior quiz.</p><div class="actions"><a class="button gold" href="../../assessments/unit-${String(weekNum-1).padStart(2,'0')}-assessment.html">Return to Prior Quiz</a><a class="button" href="../../index.html">Grade Home</a></div></section>`;
+        const needsMidterm=weekNum>18&&Number(s.midterm?.bestScore||0)<THRESHOLD;
+        const prior=needsMidterm?'../../assessments/midterm.html':`../../assessments/unit-${String(weekNum-1).padStart(2,'0')}-assessment.html`;
+        days.innerHTML=`<section class="card week-card"><h2>Lesson gate</h2><p>${needsMidterm?'Complete the midterm at 80% before continuing.':'Reach 80% on the prior weekly quiz to continue.'}</p><div class="actions"><a class="button gold" href="${prior}">${needsMidterm?'Return to Midterm':'Return to Prior Quiz'}</a><a class="button" href="../../index.html">Grade Home</a></div></section>`;
       } else {
         days.innerHTML = (w.daily||[]).map((d,idx)=>{
           const dayNum = idx+1;
@@ -490,7 +503,9 @@ function renderLessonPage(weekNum){
     }
     const note=$('weekNote'); if(note){ note.value=s.notes[weekNum]||''; note.disabled=!open; }
     const saveNote=$('saveNote'); if(saveNote){ saveNote.disabled=!open; saveNote.addEventListener('click',()=>{ const st=load(); st.notes||={}; st.notes[weekNum]=note.value.trim(); save(st); alert('Saved locally for this browser.'); }); }
-    const q=$('quizLink'); if(q) q.href=open ? `../../assessments/unit-${String(weekNum).padStart(2,'0')}-assessment.html` : `../../assessments/unit-${String(weekNum-1).padStart(2,'0')}-assessment.html`;
+    const q=$('quizLink');if(q)q.href=open?`../../assessments/unit-${String(weekNum).padStart(2,'0')}-assessment.html`:
+      weekNum>18&&Number(s.midterm?.bestScore||0)<THRESHOLD?'../../assessments/midterm.html':
+      `../../assessments/unit-${String(weekNum-1).padStart(2,'0')}-assessment.html`;
     const p=$('printableLink'); if(p) p.href=`../../printables/unit-${String(weekNum).padStart(2,'0')}-packet.html`;
   }
 
@@ -503,6 +518,8 @@ function renderLessonPage(weekNum){
   }
 
   function renderAssessment(){
+    // The shared formal engine is authoritative; do not bind legacy scoring.
+    if(document.querySelector('script[src*="khaemenes-elementary-assessment-engine.js"]'))return;
     const ctx=getAssessmentContext();
     setText('assessmentTitle', ctx.title);
     const status=$('assessmentStatus'), form=$('quizForm'), submit=$('submitQuiz'), box=$('scoreBox');
