@@ -153,7 +153,11 @@
 
   function pct(n,d){ return d ? Math.round((n/d)*100) : 0; }
   function masteredWeek(n){ const s=load(); return !!(s.weeks && s.weeks[n] && s.weeks[n].bestScore >= THRESHOLD); }
-  function isWeekUnlocked(n){ return n<=1 || masteredWeek(n-1); }
+  function isWeekUnlocked(n){
+    if(n<=1)return true;
+    if(n>18&&Number(load().midterm?.bestScore||0)<THRESHOLD)return false;
+    return masteredWeek(n-1);
+  }
   function setText(id,val){ const el=$(id); if(el) el.textContent=val; }
   function escapeHtml(s){ return String(s??'').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
   function weekLink(n){ return `lessons/unit-${String(n).padStart(2,'0')}/index.html`; }
@@ -393,7 +397,7 @@
         <p>${escapeHtml(w.essentialQuestion)}</p>
         <p><strong>Mastery:</strong> ${score}</p>
         <div class="actions">
-          ${open ? `<a class="button gold" href="${weekLink(w.week)}">Open Lessons</a>` : `<span class="badge">Unlock by mastering Week ${String(w.week-1).padStart(2,'0')}</span>`}
+          ${open ? `<a class="button gold" href="${weekLink(w.week)}">Open Lessons</a>` : `<span class="badge">${w.week>18&&Number(s.midterm?.bestScore||0)<THRESHOLD?'Unlock by completing the Midterm at 80%.':`Unlock by mastering Week ${String(w.week-1).padStart(2,'0')}`}</span>`}
           <a class="button" href="${assessLink(w.week)}">${open?'Take Quiz':'View Gate'}</a>
         </div>
       </article>`;
@@ -493,7 +497,7 @@ function renderLessonPage(weekNum){
   function getAssessmentContext(){
     const page=document.body.dataset.assessment||'unit', week=Number(document.body.dataset.week||0);
     if(page==='midterm') return {kind:'midterm', title:C.midterm.title, questions:C.midterm.questions, locked:!masteredWeek(C.midterm.unlockAfterWeek), key:'midterm', unlockLabel:`Week ${String(C.midterm.unlockAfterWeek).padStart(2,'0')}`};
-    if(page==='final') return {kind:'final', title:C.final.title, questions:C.final.questions, locked:!masteredWeek(C.final.unlockAfterWeek), key:'final', unlockLabel:`Week ${String(C.final.unlockAfterWeek).padStart(2,'0')}`};
+    if(page==='final') return {kind:'final', title:C.final.title, questions:C.final.questions, locked:!masteredWeek(C.final.unlockAfterWeek)||Number(load().midterm?.bestScore||0)<THRESHOLD, key:'final', unlockLabel:'Week 36 and Midterm'};
     const w=C.weeks.find(x=>x.week===week);
     return {kind:'unit', week, title:`Week ${String(week).padStart(2,'0')} Mastery Quiz — ${w?.title||''}`, questions:w?.quiz||[], locked:!isWeekUnlocked(week), key:String(week), unlockLabel:week<=1?'Grade Home':`Week ${String(week-1).padStart(2,'0')}`};
   }
