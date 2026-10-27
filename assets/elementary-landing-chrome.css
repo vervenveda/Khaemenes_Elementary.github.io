@@ -1,0 +1,121 @@
+/* Elementary landing-page header and footer · opt-in only · 2026-10-27
+   Matches the approved Verve N Veda gateway standard.
+   Contains no lesson/assessment/game/profile or storage rules. */
+body > header[data-khae-header]{
+  min-height:58px!important;height:auto!important;
+  padding:0!important;overflow:visible!important;
+}
+body > header[data-khae-header] [data-khae-header-inner]{
+  width:calc(100% - 24px)!important;max-width:none!important;
+  min-height:58px!important;margin:0 12px!important;padding:4px 0!important;
+  display:grid!important;
+  grid-template-columns:minmax(205px,auto) minmax(0,1fr) minmax(0,auto) 40px!important;
+  grid-template-rows:minmax(50px,auto)!important;
+  gap:8px!important;align-items:center!important
+}
+body > header[data-khae-header] [data-khae-brand]{
+  grid-column:1!important;grid-row:1!important;
+  display:flex!important;justify-self:start!important;align-items:center!important;
+  gap:9px!important;min-width:0!important;max-width:100%!important
+}
+body > header[data-khae-header] [data-khae-brand-mark]{
+  width:34px!important;height:34px!important;flex:0 0 34px!important;
+  font:400 10px/1 Georgia,serif!important
+}
+body > header[data-khae-header] [data-khae-brand-name]{
+  font:400 clamp(12px,1.1vw,15px)/1.18 Cinzel,Georgia,serif!important;
+  letter-spacing:.025em!important;white-space:nowrap!important
+}
+body > header[data-khae-header] [data-khae-brand-sub]{
+  display:block!important;margin-top:2px!important;
+  font:400 9px/1.2 "Avenir Next","Segoe UI",Arial,sans-serif!important;
+  letter-spacing:0!important;text-transform:none!important;
+  white-space:nowrap!important
+}
+body > header[data-khae-header] [data-khae-nav]{
+  grid-column:2!important;grid-row:1!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  flex-wrap:nowrap!important;gap:5px!important;
+  width:100%!important;min-width:0!important;
+  padding:0!important;overflow-x:auto!important;overflow-y:hidden!important;
+  scrollbar-width:thin
+}
+body > header[data-khae-header] [data-khae-nav] a{
+  flex:0 0 auto!important;display:inline-flex!important;
+  align-items:center!important;justify-content:center!important;
+  min-height:32px!important;padding:6px 8px!important;
+  border:0!important;box-shadow:none!important;
+  background:transparent!important;
+  font:400 10px/1.2 "Avenir Next","Segoe UI",Arial,sans-serif!important;
+  letter-spacing:.025em!important;text-transform:none!important;
+  white-space:nowrap!important
+}
+body > header[data-khae-header] [data-khae-actions]{
+  grid-column:3!important;grid-row:1!important;
+  display:flex!important;justify-self:end!important;align-items:center!important;
+  justify-content:flex-end!important;flex-wrap:nowrap!important;
+  gap:5px!important;min-width:0!important;width:auto!important
+}
+body > header[data-khae-header] [data-khae-actions] :is(a,button){
+  flex:0 0 auto!important;display:inline-flex!important;
+  min-height:31px!important;padding:6px 9px!important;
+  border-radius:7px!important;box-shadow:none!important;
+  font:400 10px/1.2 "Avenir Next","Segoe UI",Arial,sans-serif!important;
+  letter-spacing:0!important;text-transform:none!important;
+  white-space:nowrap!important
+}
+body > header[data-khae-header] [data-vnv-ecosystem-slot]{
+  grid-column:4!important;grid-row:1!important;
+  display:grid!important;justify-self:end!important;align-items:center!important;
+  width:40px!important;min-width:40px!important;height:40px!important
+}
+body > header[data-khae-header] #vnvEcosystemMenuButton{
+  width:38px!important;height:38px!important;min-width:38px!important;
+  min-height:38px!important;padding:0!important;border-radius:7px!important
+}
+/* Footer content is unchanged. Only typography, alignment and spacing are adjusted. */
+body > footer,body > footer.footer{
+  padding:19px 14px!important;text-align:center!important;
+  background:#f4f0e7!important;color:#4e5b55!important;
+  border-top:1px solid rgba(20,31,26,.16)!important;
+  font:400 11px/1.55 "Avenir Next","Segoe UI",Arial,sans-serif!important;
+  letter-spacing:0!important
+}
+body > footer :is(a,strong,b,small,span,div){
+  font-weight:400!important;letter-spacing:0!important
+}
+body > footer a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1100px){
+  body > header[data-khae-header] [data-khae-header-inner]{
+    grid-template-columns:minmax(0,1fr) minmax(0,auto) 40px!important;
+    grid-template-rows:50px minmax(34px,auto)!important;
+    gap:0 7px!important
+  }
+  body > header[data-khae-header] [data-khae-brand]{grid-column:1!important;grid-row:1!important}
+  body > header[data-khae-header] [data-khae-actions]{
+    grid-column:2!important;grid-row:1!important;max-width:45vw!important;
+    overflow-x:auto!important
+  }
+  body > header[data-khae-header] [data-vnv-ecosystem-slot]{grid-column:3!important;grid-row:1!important}
+  body > header[data-khae-header] [data-khae-nav]{
+    grid-column:1/-1!important;grid-row:2!important;
+    justify-content:center!important;
+    border-top:1px solid rgba(20,31,26,.15)!important
+  }
+}
+@media(max-width:600px){
+  body > header[data-khae-header] [data-khae-header-inner]{
+    width:calc(100% - 16px)!important;margin:0 8px!important
+  }
+  body > header[data-khae-header] [data-khae-brand-name]{font-size:12px!important}
+  body > header[data-khae-header] [data-khae-brand-sub]{font-size:8px!important}
+  body > header[data-khae-header] [data-khae-nav]{justify-content:flex-start!important}
+  body > header[data-khae-header] [data-khae-actions]{max-width:33vw!important}
+  body > header[data-khae-header] [data-khae-actions] a:nth-child(n+2){display:none!important}
+  body > header[data-khae-header] [data-khae-actions] :is(a,button){
+    font-size:9px!important;padding:5px 6px!important
+  }
+}
+@media print{
+  body > header[data-khae-header]{position:static!important;top:auto!important}
+}
