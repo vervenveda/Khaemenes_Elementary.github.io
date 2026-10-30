@@ -403,7 +403,8 @@
     function renderPrintableWorksheet(week,day,problems){ const dateStr = `Week ${week} — Day ${day}`;
       let qhtml = '';
       problems.forEach((p,i)=>{ qhtml += `<div style="margin-bottom:14px"><strong>${i+1}.</strong> ${p.text}<div style="height:28px;border-bottom:2px dashed #ccc;margin-top:8px"></div></div>`; });
-      const html = `<!doctype html><html><head><meta charset="utf-8"><title>Worksheet - ${dateStr}</title><style>body{font-family:Arial;margin:36px} .header{display:flex;justify-content:space-between;align-items:center} h2{margin:0} .q{margin-top:12px}</style></head><body><div class="worksheet"><div class="header"><h2>Math Worksheet</h2><div>${dateStr}</div></div><p>Complete these problems. Show your work below each question.</p>${qhtml}<hr><h3>Teacher answer key</h3><ol>${problems.map(p=>`<li>${p.answer}</li>`).join('')}</ol></div></body></html>`;
+      const html = `<!doctype html><html><head><meta charset="utf-8"><title>Worksheet - ${dateStr}</title><style>body{font-family:Arial;margin:36px} .header{display:flex;justify-content:space-between;align-items:center} h2{margin:0} .q{margin-top:12px}</style></head><body><div class="worksheet"><div class="header"><h2>Math Worksheet</h2><div>${dateStr}</div></div><p>Complete these problems. Show your work below each question.</p>${qhtml}<hr><h3>Teacher answer key</h3><ol>${problems.map(p=>`<li>${p.answer}</li>`).join('')}</ol></div><script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
+</body></html>`;
       return html;
     }
 
@@ -452,8 +453,8 @@ function generateProblem(week, dayIndex) {
 }
 </script>
 <!-- VNV_BETA_PROGRAM_V2 -->
-<a id="vnvBetaProgramFallback" href="https://vervenveda.com/beta/?source=Khaemenes_Elementary.github.io%2Fgrades%2Fgrade-01%2Fsubjects%2Fmath%2Fmath-01_index.html&surface=interactive-index" aria-label="Open the Verve N Veda Beta Program for this page">β Beta Program</a>
-<script src="https://vervenveda.com/assets/vnv-beta-link.js" defer data-vnv-beta-program="2"></script>
+
+
 </body>
 </html>
 
