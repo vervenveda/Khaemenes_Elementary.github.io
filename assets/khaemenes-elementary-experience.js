@@ -62,7 +62,7 @@ function syncContext(){const c=contextRecord();if(c)write(KEYS.context,c);return
 function addStyle(){if($("#khaeElementaryExperienceStyle"))return;const s=document.createElement("style");s.id="khaeElementaryExperienceStyle";s.textContent=".elementary-experience{width:min(calc(100% - 32px),1180px);margin:34px auto;padding:24px;border:1px solid rgba(24,37,51,.16);border-radius:14px;background:linear-gradient(145deg,#fffdf7,#eef4fb);box-shadow:0 14px 34px rgba(16,43,72,.10);text-align:left}.elementary-experience-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap}.elementary-mentor-id{display:flex;gap:12px;align-items:center}.elementary-owl{width:58px;height:58px;display:grid;place-items:center;border-radius:14px;background:#fff2c8;font-size:30px}.elementary-experience h2{margin:0;color:#102b48}.elementary-experience p{color:#5f6f7a}.elementary-mode{font-size:12px;color:#745c2e}.elementary-path{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}.elementary-step{min-height:170px;display:flex;flex-direction:column;padding:14px;border:1px solid rgba(24,37,51,.14);border-radius:10px;background:#fff;color:#182533;text-decoration:none}.elementary-step b{color:#102b48;margin-top:6px}.elementary-step small{margin-top:6px;color:#697782;line-height:1.4}.elementary-step em{margin-top:auto;padding-top:10px;color:#3f6fb2;font-size:12px;font-style:normal}.elementary-chip{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7a5c24}.elementary-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.elementary-actions a,.elementary-actions button{min-height:42px;padding:9px 13px;border:1px solid rgba(24,37,51,.16);border-radius:8px;background:#fff;color:#102b48;text-decoration:none;font-weight:600}.elementary-actions .primary{background:#102b48;color:#fff}.elementary-snapshot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:15px}.elementary-metric{padding:12px;border-radius:9px;background:#f4f7fa}.elementary-metric strong{display:block;color:#102b48}.elementary-metric span{font-size:12px;color:#697782}.elementary-observe{margin-top:15px;padding:14px;border:1px solid rgba(201,154,66,.28);border-radius:10px;background:#fff9e9}.elementary-observe-buttons{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.elementary-observe-buttons button{padding:8px 10px;border:1px solid rgba(24,37,51,.15);border-radius:8px;background:#fff;color:#102b48}.elementary-note{font-size:12px;color:#6b7075}@media(max-width:850px){.elementary-path,.elementary-snapshot-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.elementary-path,.elementary-snapshot-grid{grid-template-columns:1fr}.elementary-actions{display:grid}.elementary-actions>*{width:100%}}@media print{.elementary-actions,.elementary-observe-buttons{display:none!important}.elementary-experience{box-shadow:none;background:#fff}}";document.head.appendChild(s)}
 function pathCards(){const pos=position(),m=matches(pos),practice=m[0],explore=m[1]||m[0],formal={kind:"formal",chip:"Learn",icon:"📘",title:pos?.label||"Current grade path",desc:pos?.best>0&&pos?.best<PASS?"Best recorded score: "+pos.best+"%. Review and retry toward 80% mastery.":"Continue the current formal learning step.",href:pos?.href||ROOT},cards=[formal];if(practice)cards.push({kind:"practice",chip:"Practice",icon:practice.icon,title:practice.title,desc:"Matched to the current week or learner focus. Optional support only.",href:resourceUrl(practice)});if(explore)cards.push({kind:"explore",chip:/arts|technology|engineering/.test((explore.domains||[]).join(" "))?"Create":"Explore",icon:explore.icon,title:explore.title,desc:"A second way to apply, explore, or extend the idea.",href:resourceUrl(explore)});cards.push({kind:"reset",chip:"Reset",icon:"☼",title:"Aurora · Learning Reset",desc:"Pause, move, breathe, or reset before returning to the formal path.",href:AURORA});return cards.slice(0,4)}
 function mountToday(){if($("#elementaryTodayWithArchaemenes"))return;const anchor=routeGrade()?($("main.hero")||$("section.hero")||document.querySelector("main")):$("#identity");if(!anchor)return;const sec=document.createElement("section");sec.className="elementary-experience";sec.id="elementaryTodayWithArchaemenes";anchor.insertAdjacentElement("afterend",sec);renderToday()}
-function renderToday(){const box=$("#elementaryTodayWithArchaemenes");if(!box)return;const l=learner(),g=activeGrade();if(!l||!g){box.innerHTML='<div class="elementary-mentor-id"><span class="elementary-owl">🦉</span><div><h2>Today with Archaemenes</h2><p>Choose an active Elementary learner in the Academy Family Registry to build a grade-aware path.</p></div></div><div class="elementary-actions"><a class="primary" href="'+FAMILY+'">Open Family Hub →</a></div>';return}const cards=pathCards();box.innerHTML='<div class="elementary-experience-head"><div class="elementary-mentor-id"><span class="elementary-owl">🦉</span><div><h2>Today with Archaemenes</h2><div class="elementary-mode">Archaemenes · Academy Mentor · '+esc(developmentalMode(g))+'</div><p>'+esc(l.nickname||"Scholar")+' keeps the formal '+esc(gradeName(g))+' work first. Practice and exploration support mastery; they never create it.</p></div></div></div><div class="elementary-path">'+cards.map(x=>'<a class="elementary-step" href="'+esc(x.href)+'" data-elementary-kind="'+esc(x.kind)+'" data-elementary-title="'+esc(x.title)+'"><span class="elementary-chip">'+esc(x.chip)+'</span><span style="font-size:26px">'+esc(x.icon)+'</span><b>'+esc(x.title)+'</b><small>'+esc(x.desc)+'</small><em>Open →</em></a>').join("")+'</div><div class="elementary-actions"><a class="primary" href="'+MENTOR+'" data-elementary-mentor>Open Archaemenes →</a><a href="'+ROOT+'#family">Family Learning Snapshot</a></div>';box.querySelectorAll("[data-elementary-kind]").forEach(a=>a.addEventListener("click",()=>log(a.dataset.elementaryKind,a.dataset.elementaryTitle,a.href)));box.querySelector("[data-elementary-mentor]")?.addEventListener("click",syncContext);syncContext()}
+function renderToday(){const box=$("#elementaryTodayWithArchaemenes");if(!box)return;const l=learner(),g=activeGrade();if(!l||!g){box.innerHTML='<div class="elementary-mentor-id"><span class="elementary-owl">🦉</span><div><h2>Today with Archaemenes</h2><p>Choose an active Elementary learner in the Academy Family Registry to build a grade-aware path.</p></div></div><div class="elementary-actions"><button type="button" data-elementary-mentor-open>Converse with Archaemenes →</button><a href="'+FAMILY+'">Open Family Hub →</a></div>';return}const cards=pathCards();box.innerHTML='<div class="elementary-experience-head"><div class="elementary-mentor-id"><span class="elementary-owl">🦉</span><div><h2>Today with Archaemenes</h2><div class="elementary-mode">Archaemenes · Academy Mentor · '+esc(developmentalMode(g))+'</div><p>'+esc(l.nickname||"Scholar")+' keeps the formal '+esc(gradeName(g))+' work first. Practice and exploration support mastery; they never create it.</p></div></div></div><div class="elementary-path">'+cards.map(x=>'<a class="elementary-step" href="'+esc(x.href)+'" data-elementary-kind="'+esc(x.kind)+'" data-elementary-title="'+esc(x.title)+'"><span class="elementary-chip">'+esc(x.chip)+'</span><span style="font-size:26px">'+esc(x.icon)+'</span><b>'+esc(x.title)+'</b><small>'+esc(x.desc)+'</small><em>Open →</em></a>').join("")+'</div><div class="elementary-actions"><a class="primary" href="'+MENTOR+'" data-elementary-mentor>Open Archaemenes →</a><a href="'+ROOT+'#family">Family Learning Snapshot</a></div>';box.querySelectorAll("[data-elementary-kind]").forEach(a=>a.addEventListener("click",()=>log(a.dataset.elementaryKind,a.dataset.elementaryTitle,a.href)));box.querySelector("[data-elementary-mentor]")?.addEventListener("click",syncContext);syncContext()}
 function mountSnapshot(){if($("#elementaryFamilySnapshot"))return;const anchor=$("#family")||$("#records")||document.querySelector("main");if(!anchor)return;const sec=document.createElement("section");sec.className="elementary-experience";sec.id="elementaryFamilySnapshot";anchor.insertAdjacentElement("afterend",sec);renderSnapshots()}
 function renderSnapshots(){const box=$("#elementaryFamilySnapshot");if(!box)return;const l=learner(),g=activeGrade();if(!l||!g){box.innerHTML="<h2>Family Learning Snapshot</h2><p>Select the active Elementary learner to view learner-scoped progress and family observations.</p>";return}const p=progress(g),pos=position(g),guide=observationGuide(pos),m=matches(pos),latest=observations().slice(-1)[0],lessonChecks=recentLearning(7),latestAssessment=recentAssessments(30).slice(-1)[0],labels={support:"Learning with support",independent:"Working independently",transfer:"Explaining & applying"},pr=prefs();box.innerHTML='<div class="elementary-experience-head"><div><h2>Family Learning Snapshot</h2><p>'+esc(l.nickname||"Learner")+' · '+esc(gradeName(g))+' · Formal scores stay under the course engine.</p></div><div class="elementary-mode">7-day family context · local to this browser</div></div><div class="elementary-snapshot-grid"><div class="elementary-metric"><strong>'+p.completed+'/36</strong><span>Weeks at 80% mastery</span></div><div class="elementary-metric"><strong>'+p.average+'%</strong><span>Average of attempted weeks</span></div><div class="elementary-metric"><strong>'+esc(pos?.label||"Grade path")+'</strong><span>Current formal position</span></div><div class="elementary-metric"><strong>'+lessonChecks.length+'</strong><span>Saved lesson checks this week</span></div></div><div class="elementary-observe"><strong>'+esc(guide.domain)+'</strong><p>'+esc(guide.prompt)+'</p><div class="elementary-observe-buttons"><button type="button" data-elementary-observe="support">Learning with support</button><button type="button" data-elementary-observe="independent">Working independently</button><button type="button" data-elementary-observe="transfer">Explaining & applying</button></div><p class="elementary-note"><strong>Latest family observation:</strong> '+esc(latest?labels[latest.level]||"Observed":"No optional observation saved yet")+'. These notes never alter a score, mastery gate, assessment, placement, or certificate.</p><p class="elementary-note"><strong>Learning goal:</strong> '+esc(pr.goal||"No learner goal saved yet")+'</p><p class="elementary-note"><strong>Matched support:</strong> '+esc(m[0]?.title||"Use the formal lesson first; Archaemenes can help choose support afterward.")+'</p><p class="elementary-note"><strong>Latest verified assessment:</strong> '+esc(latestAssessment?(latestAssessment.kind+(latestAssessment.week?" · Week "+String(latestAssessment.week).padStart(2,"0"):"")+" · "+latestAssessment.score+"%"):"No verified assessment attempt saved yet")+'</p></div><div class="elementary-actions"><a class="primary" href="'+MENTOR+'" data-elementary-mentor>Ask Archaemenes about this learning →</a><button type="button" data-elementary-print>Print Snapshot</button></div>';box.querySelectorAll("[data-elementary-observe]").forEach(b=>b.addEventListener("click",()=>{if(saveObservation(b.dataset.elementaryObserve)){b.textContent="Saved ✓";setTimeout(renderSnapshots,450)}}));box.querySelector("[data-elementary-print]")?.addEventListener("click",()=>print());box.querySelector("[data-elementary-mentor]")?.addEventListener("click",syncContext);syncContext()}
 let activatedGrade=null;function activateGradeContinuity(){const g=activeGrade();if(!g||g==="01"||activatedGrade===g)return;const name="KhaemenesGrade"+Number(g)+"Continuity";try{global[name]?.activate?.();activatedGrade=g}catch{}}
@@ -74,3 +74,82 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 ["input","change","click"].forEach(e=>document.addEventListener(e,schedule,true));
 global.addEventListener("storage",e=>{if(String(e.key||"").startsWith("khaemenes"))schedule()});
 })(window);
+
+/* Scholarly Elementary Mentor salon: isolated from shared toolbar and central mentor logic. */
+(()=>{"use strict";
+const URL="https://vervenveda.com/Khaemenes_Academy.github.io/mentor/";
+let opener=null,modal=null,frame=null;
+const style=document.createElement("style");
+style.id="elementary-scholarly-archaemenes-v1";
+style.textContent=`
+#elementaryTodayWithArchaemenes.elementary-experience{
+  background:linear-gradient(135deg,#fffdf8 0%,#f4eddf 100%)!important;
+  border:2px solid #caa862!important;border-top:6px solid #caa862!important;
+  box-shadow:0 16px 40px rgba(16,43,72,.12)!important;border-radius:7px!important;
+  padding:clamp(24px,4vw,44px)!important;
+}
+#elementaryTodayWithArchaemenes h2{
+ font-family:Cinzel,Georgia,serif!important;font-size:clamp(26px,3vw,38px)!important;
+ font-weight:400!important;color:#102b48!important;line-height:1.2!important;
+}
+#elementaryTodayWithArchaemenes .elementary-owl{
+ background:#102b48!important;color:#f3ca71!important;border:2px solid #caa862!important;
+ border-radius:7px!important;width:68px!important;height:68px!important;font-size:32px!important;
+}
+#elementaryTodayWithArchaemenes .elementary-mentor-id{align-items:center!important;gap:20px!important}
+#elementaryTodayWithArchaemenes p{color:#35485b!important;font-size:16px!important;line-height:1.6!important}
+#elementaryTodayWithArchaemenes .elementary-mode{color:#765b2a!important;font-size:13px!important}
+#elementaryTodayWithArchaemenes .elementary-actions [data-elementary-mentor-open],
+#elementaryTodayWithArchaemenes .elementary-actions [data-elementary-mentor]{
+ background:#102b48!important;color:#fffdf8!important;border:1px solid #102b48!important;
+ border-radius:7px!important;min-height:46px!important;padding:12px 18px!important;
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ font:400 14px Nunito,Arial,sans-serif!important;cursor:pointer;text-decoration:none!important;
+}
+#elementaryTodayWithArchaemenes .elementary-actions a:not([data-elementary-mentor]){border-radius:7px!important}
+#elementaryArchaemenesDialog{
+ position:fixed!important;inset:0!important;z-index:2147482000!important;
+ display:grid;place-items:center;padding:20px;
+ background:rgba(8,20,33,.80);box-sizing:border-box;
+}
+#elementaryArchaemenesDialog[hidden]{display:none!important}
+#elementaryArchaemenesDialog .scholar-window{
+ width:min(1100px,100%);height:min(90vh,900px);
+ display:flex;flex-direction:column;overflow:hidden;
+ border:4px solid #caa862;border-radius:7px;background:#fffdf8;
+ box-shadow:0 24px 80px rgba(0,0,0,.40);
+}
+#elementaryArchaemenesDialog .scholar-bar{
+ display:flex;align-items:center;justify-content:space-between;gap:14px;
+ background:#102b48;color:#fffdf8;padding:12px 18px;
+}
+#elementaryArchaemenesDialog .scholar-bar strong{font:400 19px Cinzel,Georgia,serif;color:#fffdf8}
+#elementaryArchaemenesDialog .scholar-bar button{
+ min-width:42px;min-height:42px;background:#f3ca71;color:#102b48;
+ border:0;border-radius:7px;font-size:24px;cursor:pointer;
+}
+#elementaryArchaemenesDialog iframe{border:0;width:100%;flex:1;min-height:0;background:#fffdf8}
+@media(max-width:600px){#elementaryArchaemenesDialog{padding:7px}#elementaryArchaemenesDialog .scholar-window{height:95dvh}}
+`;
+document.head.appendChild(style);
+function close(){if(!modal)return;modal.hidden=true;document.body.style.overflow=modal.dataset.oldOverflow||"";frame.removeAttribute("src");opener?.focus();opener=null}
+function open(button){
+ opener=button;
+ if(!modal){
+ modal=document.createElement("div");modal.id="elementaryArchaemenesDialog";modal.hidden=true;
+ modal.innerHTML='<section class="scholar-window" role="dialog" aria-modal="true" aria-label="Conversation with Archaemenes"><div class="scholar-bar"><strong>Archaemenes · Scholarly Conversation</strong><button type="button" aria-label="Close conversation">×</button></div><iframe title="Archaemenes Academy Mentor conversation" referrerpolicy="no-referrer" loading="eager"></iframe></section>';
+ document.body.appendChild(modal);frame=modal.querySelector("iframe");
+ modal.querySelector("button").addEventListener("click",close);
+ modal.addEventListener("click",e=>{if(e.target===modal)close()});
+ }
+ modal.dataset.oldOverflow=document.body.style.overflow;document.body.style.overflow="hidden";
+ modal.hidden=false;frame.src=URL;
+ modal.querySelector("button").focus();
+}
+document.addEventListener("click",e=>{
+ const launch=e.target.closest("#elementaryTodayWithArchaemenes [data-elementary-mentor],#elementaryTodayWithArchaemenes [data-elementary-mentor-open]");
+ if(!launch)return;
+ e.preventDefault();open(launch);
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&modal&&!modal.hidden){e.preventDefault();close()}});
+})();
