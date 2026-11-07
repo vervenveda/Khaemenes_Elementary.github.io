@@ -40,7 +40,7 @@ body :is(main, .hero, .ug-hero, .mast) :is(a.btn,a.button,.hero-btn,.ug-priority
 body :is(.hero,.ug-hero,.mast)> :is(h1,p),body :is(.hero,.ug-hero,.mast)>div> :is(h1,p){text-align:center}
 body :is(.hero,.ug-hero,.mast) h1{font-size:clamp(30px,4.4vw,52px)!important;line-height:1.18!important;font-weight:400!important}
 body :is(.hero,.ug-hero,.mast) :is(.eyebrow,.ug-eyebrow),body main>.eyebrow{font-size:16px!important;letter-spacing:.045em!important;line-height:1.4!important}
-</style></head><body data-theme="parchment"><a href="#main" class="skip">Skip to student profile</a>
+</style></head><body data-theme="parchment" data-profile-stage="elementary"><a href="#main" class="skip">Skip to student profile</a>
 <header class="top"><div class="head"><a class="brand" href="https://vervenveda.com/Khaemenes_Academy.github.io/">Khaemenes Academy</a><nav class="nav"><a href="../">Elementary Hall</a><a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family Portal</a><a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student Portal</a><a href="https://vervenveda.com/">Ecosystem</a></nav></div></header>
 <main id="main"><p class="eyebrow">Khaemenes Academy · Elementary Learning</p><h1>My Student Profile</h1>
 <p class="muted">A familiar learner identity, a clear first step, favorite subject halls, personal learning goals, and a record of work to be proud of. Your registered grade—not a page selection—determines your official pathway.</p>
@@ -118,6 +118,7 @@ function renderVisual(){
  else box.textContent=appearance.avatar;
  for(const b of $("avatars").querySelectorAll("button"))b.setAttribute("aria-pressed",String(b.dataset.value===appearance.avatar&&!appearance.photo));
  for(const b of $("themes").querySelectorAll("button"))b.setAttribute("aria-pressed",String(b.dataset.value===appearance.theme));
+ window.KhaemenesElementaryProfileEnhancement?.refresh?.();
 }
 function saveVisual(){if(!needsAdult())return false;if(!store(visualKey(),{schema:SCHEMA,learnerId:activeId,updatedAt:new Date().toISOString(),...appearance})){say("Cannot save. Please export a backup or use a smaller photo.",true);return false}renderVisual();say("Saved for this learner on this browser.");return true}
 function subjectMap(){const x=GRADE_SUBJECTS[grade]||{};return {...x,["Grade "+Number(grade)+" Home"]:""}}
@@ -244,6 +245,11 @@ $("reset").addEventListener("click",()=>{if(!needsAdult())return;appearance=norm
 $("printProfile").addEventListener("click",()=>{if(!needsAdult())return;window.print()});
 $("exportVisual").addEventListener("click",()=>{if(!isReady())return say("Select a learner first.",true);const v=read(visualKey(),null)||{schema:SCHEMA,learnerId:activeId,...appearance},blob=new Blob([JSON.stringify(v,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="khaemenes-elementary-visual-"+new Date().toISOString().slice(0,10)+".json";a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);say("Visual backup exported. Learning evidence is backed up separately in the Academy studio.")});
 $("importVisual").addEventListener("change",async e=>{const file=e.target.files?.[0];e.target.value="";if(!file||!needsAdult())return;if(file.size>400000)return say("Backup too large.",true);const id=activeId;try{const value=JSON.parse(await file.text());if(activeId!==id||value?.schema!==SCHEMA||value.learnerId!==activeId)return say("Backup belongs to another learner or has the wrong format. No changes made.",true);const prior=appearance;appearance=normalize(value);if(!saveVisual()){appearance=prior;renderVisual()}}catch{say("Unable to read this backup. No changes made.",true)}});
+window.addEventListener("khaemenes-elementary-universal-look-updated",event=>{
+ if(event.detail?.learnerId!==activeId)return;
+ appearance=normalize(read(visualKey(),null)); // Native picture and avatar remain up to date.
+ renderVisual();
+});
 window.addEventListener("khaemenes-family-changed",refresh);
 window.addEventListener("khaemenes-learner-placement-changed",refresh);
 window.addEventListener("khaemenes-learning-continuation-changed",()=>{if(activeId)renderNext()});
@@ -260,4 +266,9 @@ refresh();
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>VNV_TICKER.autoPopulate({label:"Elementary Profile Quick Links",max:14});</script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
+<!-- Additive Profile Tools: existing child photo, guardian approval, local backup, subject pins,
+     learning continuity and Academy studio remain intact and visible. -->
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-universal-profile-look-editor.js?v=20261107-universal-v5" defer></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-elementary-look-adapter.js?v=20261107-elementary-v1" defer></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-elementary-profile-enhancement.js?v=20261107-elementary-v1" defer></script>
 </body></html>
