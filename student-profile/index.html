@@ -267,6 +267,27 @@ refresh();
 <script src="https://vervenveda.com/assets/vnv-333-ticker.js"></script>
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>VNV_TICKER.autoPopulate({label:"Elementary Profile Quick Links",max:14});</script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script>
+/* Single canonical header, preserving the four existing Elementary header links.
+   Exact selector prevents removal of ticker, hero, or Academy toolbars. */
+if(window.VNV_HEADER?.mount){
+  window.VNV_HEADER.mount({
+    replaceLegacy:true,
+    legacySelectors:["body > header.top"],
+    title:"Elementary Student Profile",
+    subtitle:"Khaemenes Academy · Grades 1–5",
+    icon:"K",
+    home:"https://vervenveda.com/Khaemenes_Academy.github.io/",
+    actions:[
+      {label:"ELEMENTARY HALL",href:"../"},
+      {label:"FAMILY PORTAL",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+      {label:"STUDENT PORTAL",href:"https://vervenveda.com/Khaemenes_Academy.github.io/student/"},
+      {label:"ECOSYSTEM",href:"https://vervenveda.com/"}
+    ]
+  });
+}
+</script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
 <!-- Additive Profile Tools: existing child photo, guardian approval, local backup, subject pins,
      learning continuity and Academy studio remain intact and visible. -->
