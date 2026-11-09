@@ -9,6 +9,8 @@ on:
       - assets/khaemenes-grade-three-family-view.js
       - grades/grade-03/assets/app.js
       - tests/grade-three-deep-forensic-round3.test.cjs
+      - tests/grade-three-instructional-forensic.test.cjs
+      - tests/grade-three-family-guardrails.test.cjs
       - .github/workflows/grade-three-forensic-round3.yml
 jobs:
   verify:
