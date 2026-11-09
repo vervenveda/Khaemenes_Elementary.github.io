@@ -62,7 +62,7 @@ test("Bubble 4: unauthenticated teacher convenience page cannot edit registered 
 });
 test("Bubble 5: Grade 4 preview remains practice, not recorded mastery",()=>{
  const s=read(P.assessment);
- assert.match(s,/gradeThreePreview=\(grade\(\)==="03"\|\|grade\(\)==="04"\)&&!l/);
+ assert.match(s,/gradeThreePreview=\(grade\(\)==="03"\|\|grade\(\)==="04"\|\|grade\(\)==="05"\)&&!l/);
  assert.match(s,/attemptSaved=gradeThreePreview\?false:appendAttempt\(snapshot\)/);
  assert.match(s,/!l\?"Practice completed"/);
 });
