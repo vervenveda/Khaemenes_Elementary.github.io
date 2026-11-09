@@ -61,7 +61,7 @@ body :is(.hero,.ug-hero,.mast) :is(.eyebrow,.ug-eyebrow),body main>.eyebrow{font
 </section>
 <section class="card span6 appearance"><h2>Picture &amp; avatar</h2><p class="muted">A family member can add an optional photo or choose an illustrated avatar. Pictures are resized locally and are not uploaded by this page.</p>
 <label><input id="adultConfirm" type="checkbox"> I am an adult helping this learner personalize their profile.</label>
-<div class="choice" id="avatars" aria-label="Choose an avatar"></div><label for="photoFile">Choose a picture (JPG, PNG, WebP or GIF under 4 MB)</label><input id="photoFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif">
+<div class="choice" id="avatars" aria-label="Choose an avatar"></div><label for="photoFile">Choose a picture (JPG, PNG, WebP or GIF under 4 MB)</label><input id="photoFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif"><button type="button" class="secondary" id="nativeYearbookPicture" style="font-size:16px;min-height:44px;border-radius:7px;margin-top:8px">Choose from My Yearbook</button>
 <div class="actions"><button type="button" class="secondary" id="removePhoto">Remove photo</button><button type="button" class="secondary" id="bringKinder">Bring Kindergarten picture &amp; colors forward</button></div></section>
 <section class="card span6 appearance"><h2>Background &amp; comfort</h2><p class="muted">Choose a colorful reading space. These choices belong only to the selected learner.</p>
 <div class="choice" id="themes"></div><div class="actions"><button type="button" class="secondary" id="reset">Reset colors</button><button type="button" class="secondary" id="printProfile">Print profile</button><button type="button" class="secondary" id="exportVisual">Export picture &amp; colors</button></div>
@@ -225,6 +225,18 @@ $("showGradePreview").addEventListener("click",()=>{
 });
 $("pinSubject").addEventListener("click",()=>{if(!needsAdult())return;const id=$("subjectSelect").value;if(!Object.hasOwn(subjectMap(),id))return say("Choose a Grade "+Number(grade)+" subject.",true);const old=pinIds(),next=[...new Set([...old,id])].slice(0,14);if(!store(pinKey(),next))return say("Could not save pinned subject.",true);renderPins();say("Subject pinned to this learner.");});
 $("unpinSubject").addEventListener("click",()=>{if(!needsAdult())return;const id=$("subjectSelect").value;if(!Object.hasOwn(subjectMap(),id))return say("Choose a subject.",true);if(!store(pinKey(),pinIds().filter(x=>x!==id)))return say("Could not remove pin.",true);renderPins();say("Subject removed from this learner's pins.");});
+$("nativeYearbookPicture").addEventListener("click",()=>{
+ if(!needsAdult())return;
+ const id=activeId,bridge=window.KhaemenesYearbookProfileImages;
+ if(!bridge?.choose){say("Yearbook picker is unavailable on this device.",true);return}
+ const request=++pictureRequest;
+ bridge.choose(id,async(data,learnerId)=>{
+  if(id!==learnerId||id!==activeId||request!==pictureRequest||!needsAdult())return false;
+  const old=appearance.photo;appearance.photo=data;
+  if(saveVisual()!==true){appearance.photo=old;return false}
+  return true;
+ });
+});
 $("photoFile").addEventListener("change",async e=>{
  const file=e.target.files?.[0];e.target.value="";if(!file||!needsAdult())return;
  if(!["image/png","image/jpeg","image/webp","image/gif"].includes(file.type)||!file.size||file.size>4*1024*1024)return say("Choose JPG, PNG, WebP, or GIF below 4 MB.",true);
