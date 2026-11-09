@@ -13,6 +13,8 @@ on:
       - assets/khaemenes-elementary-assessment-engine.js
       - assets/khaemenes-elementary-learning-ledger.js
       - tests/grade-five-family-guardrails.test.cjs
+      - tests/grade-three-instructional-forensic.test.cjs
+      - tests/grade-four-family-guardrails.test.cjs
       - .github/workflows/grade-five-family-guardrails.yml
 jobs:
   verify:
