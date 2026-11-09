@@ -61,7 +61,7 @@ body :is(.hero,.ug-hero,.mast) :is(.eyebrow,.ug-eyebrow),body main>.eyebrow{font
 </section>
 <section class="card span6 appearance"><h2>Picture &amp; avatar</h2><p class="muted">A family member can add an optional photo or choose an illustrated avatar. Pictures are resized locally and are not uploaded by this page.</p>
 <label><input id="adultConfirm" type="checkbox"> I am an adult helping this learner personalize their profile.</label>
-<div class="choice" id="avatars" aria-label="Choose an avatar"></div><label for="photoFile">Choose a picture (JPG, PNG, WebP or GIF under 4 MB)</label><input id="photoFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif"><button type="button" class="secondary" id="nativeYearbookPicture" style="font-size:16px;min-height:44px;border-radius:7px;margin-top:8px">Choose from My Yearbook</button>
+<div class="choice" id="avatars" aria-label="Choose an avatar"></div><label for="photoFile">Choose a picture (JPG, PNG, WebP or GIF under 4 MB)</label><input id="photoFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif"><button type="button" class="secondary" id="nativeYearbookPicture" style="font-size:16px;min-height:44px;border-radius:7px;margin-top:8px">Choose from My Yearbook</button><button type="button" id="openYearbookFromProfile" style="font-size:16px;min-height:44px;border-radius:7px;margin-top:8px;background:#243038;color:#fff8e9">Open My Yearbook</button>
 <div class="actions"><button type="button" class="secondary" id="removePhoto">Remove photo</button><button type="button" class="secondary" id="bringKinder">Bring Kindergarten picture &amp; colors forward</button></div></section>
 <section class="card span6 appearance"><h2>Background &amp; comfort</h2><p class="muted">Choose a colorful reading space. These choices belong only to the selected learner.</p>
 <div class="choice" id="themes"></div><div class="actions"><button type="button" class="secondary" id="reset">Reset colors</button><button type="button" class="secondary" id="printProfile">Print profile</button><button type="button" class="secondary" id="exportVisual">Export picture &amp; colors</button></div>
@@ -225,6 +225,12 @@ $("showGradePreview").addEventListener("click",()=>{
 });
 $("pinSubject").addEventListener("click",()=>{if(!needsAdult())return;const id=$("subjectSelect").value;if(!Object.hasOwn(subjectMap(),id))return say("Choose a Grade "+Number(grade)+" subject.",true);const old=pinIds(),next=[...new Set([...old,id])].slice(0,14);if(!store(pinKey(),next))return say("Could not save pinned subject.",true);renderPins();say("Subject pinned to this learner.");});
 $("unpinSubject").addEventListener("click",()=>{if(!needsAdult())return;const id=$("subjectSelect").value;if(!Object.hasOwn(subjectMap(),id))return say("Choose a subject.",true);if(!store(pinKey(),pinIds().filter(x=>x!==id)))return say("Could not remove pin.",true);renderPins();say("Subject removed from this learner's pins.");});
+$("openYearbookFromProfile").addEventListener("click",()=>{
+ if(!needsAdult())return;
+ if(!window.KhaemenesYearbookProfileImages?.openYearbook?.(activeId)){
+  say("Yearbook is unavailable for this learner.",true)
+ }
+});
 $("nativeYearbookPicture").addEventListener("click",()=>{
  if(!needsAdult())return;
  const id=activeId,bridge=window.KhaemenesYearbookProfileImages;
