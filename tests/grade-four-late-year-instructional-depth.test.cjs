@@ -15,7 +15,7 @@ function render(week,subject){
  const location={pathname:"/Khaemenes_Elementary.github.io/grades/grade-04/subjects/"+subject+"/week-"+String(week).padStart(2,"0")+".html"};
  const w={};w.window=w;
  vm.runInNewContext(studio,{window:w,document,location},{timeout:2000});
- return {children,created,window:w,strings:created.map(e=>e.textContent).join(" \n "),links:created.filter(e=>e.tag==="a").map(e=>e.href)};
+ return {children,created,window:w,strings:created.map(e=>[e.textContent,...e.children.map(v=>v?.text||v?.textContent||"")].join(" ")).join(" \n "),links:created.filter(e=>e.tag==="a").map(e=>e.href)};
 }
 test("Grade 4 depth module and shared ledger parse",()=>{
  new vm.Script(studio);new vm.Script(ledger);
