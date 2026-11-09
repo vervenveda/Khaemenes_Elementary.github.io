@@ -167,7 +167,7 @@ function beginAttempt(body){
     if(answered<questions.length){status.textContent=`Answer all ${questions.length} questions before submitting.`;return}
     const score=Math.round(correct/questions.length*100),completedAt=new Date().toISOString(),l=learner();
     const snapshot={schema:"khaemenes-elementary-assessment-attempt-v1",id:attemptId,engineVersion:VERSION,factoryVersion:global.KhaemenesElementaryQuestionFactory?.version||null,learnerId:l?.learnerId||null,preview:!l,grade:grade(),kind:kind(),week:week(),page:location.pathname,seed,startedAt,completedAt,questionCount:questions.length,correct,score,masteryThreshold:PASS,mastered:score>=PASS,responses};
-    const gradeThreePreview=grade()==="03"&&!l;
+    const gradeThreePreview=(grade()==="03"||grade()==="04")&&!l;
     const attemptSaved=gradeThreePreview?false:appendAttempt(snapshot);
     const formallySaved=l&&attemptSaved?updateFormalScore(snapshot):false;
     form.querySelectorAll("input,button[type=submit]").forEach(el=>el.disabled=true);
