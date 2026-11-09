@@ -20,7 +20,7 @@ function learner(){
   if(!l)return null;
   const g=String(l.grade||"").replace(/[^0-9]/g,"").padStart(2,"0"),stage=String(l.stage||"").trim().toLowerCase();
   if(stage!=="elementary"||g!==grade())return null;
-  if(g==="03"||g==="04"){
+  if(g==="03"||g==="04"||g==="05"){
     const f=l.familyId?registry?.families?.[l.familyId]:null;
     if(l.learnerId!==id||l.selfDirectedAdult===true||!f?.learnerIds?.includes(id))return null;
   }
@@ -32,7 +32,7 @@ function readFormalState(){
   if(grade()==="01"&&global.Grade1Mastery?.load)return global.Grade1Mastery.load();
   const key=courseKey();if(!key)return blankState();
   const raw=read(key,null);
-  if(grade()==="03"||grade()==="04"){
+  if(grade()==="03"||grade()==="04"||grade()==="05"){
     const l=learner();
     return raw?.format==="khaemenes-course-state-v1"&&raw.learnerId===l?.learnerId&&
       raw.courseId===`elementary-grade-${grade()}`&&raw.state&&typeof raw.state==="object"&&!Array.isArray(raw.state)?
@@ -44,7 +44,7 @@ function readFormalState(){
 function writeFormalState(state){
   if(grade()==="01"&&global.Grade1Mastery?.save)return global.Grade1Mastery.save(state);
   const key=courseKey(),l=learner();if(!key||!l)return false;
-  if((grade()==="03"||grade()==="04")&&key!==`khaemenes.course:${l.learnerId}:elementary-grade-${grade()}`)return false;
+  if((grade()==="03"||grade()==="04"||grade()==="05")&&key!==`khaemenes.course:${l.learnerId}:elementary-grade-${grade()}`)return false;
   return write(key,{format:"khaemenes-course-state-v1",learnerId:l.learnerId,courseId:`elementary-grade-${grade()}`,source:"elementary-assessment-engine-v1",updatedAt:new Date().toISOString(),state});
 }
 function weeklyBest(state,n){
@@ -167,7 +167,7 @@ function beginAttempt(body){
     if(answered<questions.length){status.textContent=`Answer all ${questions.length} questions before submitting.`;return}
     const score=Math.round(correct/questions.length*100),completedAt=new Date().toISOString(),l=learner();
     const snapshot={schema:"khaemenes-elementary-assessment-attempt-v1",id:attemptId,engineVersion:VERSION,factoryVersion:global.KhaemenesElementaryQuestionFactory?.version||null,learnerId:l?.learnerId||null,preview:!l,grade:grade(),kind:kind(),week:week(),page:location.pathname,seed,startedAt,completedAt,questionCount:questions.length,correct,score,masteryThreshold:PASS,mastered:score>=PASS,responses};
-    const gradeThreePreview=(grade()==="03"||grade()==="04")&&!l;
+    const gradeThreePreview=(grade()==="03"||grade()==="04"||grade()==="05")&&!l;
     const attemptSaved=gradeThreePreview?false:appendAttempt(snapshot);
     const formallySaved=l&&attemptSaved?updateFormalScore(snapshot):false;
     form.querySelectorAll("input,button[type=submit]").forEach(el=>el.disabled=true);
