@@ -1,0 +1,26 @@
+name: Grade Four Family Guardrails
+on:
+  workflow_dispatch:
+  push:
+    branches: [audit/elementary-family-report-2026-11-09]
+    paths:
+      - student-profile/index.html
+      - grades/grade-04/assets/app.js
+      - grades/grade-04/assets/certificate.js
+      - grades/grade-04/assets/khaemenes-grade4-continuity.js
+      - grades/grade-04/assets/khaemenes-grade4-subject-context.js
+      - grades/grade-04/data/course-data.js
+      - assets/khaemenes-grade-four-family-view.js
+      - tests/grade-four-family-guardrails.test.cjs
+      - .github/workflows/grade-four-family-guardrails.yml
+jobs:
+  grade-four:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/grade-four-family-guardrails.test.cjs
