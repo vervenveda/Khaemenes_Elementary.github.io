@@ -167,11 +167,12 @@ function beginAttempt(body){
     if(answered<questions.length){status.textContent=`Answer all ${questions.length} questions before submitting.`;return}
     const score=Math.round(correct/questions.length*100),completedAt=new Date().toISOString(),l=learner();
     const snapshot={schema:"khaemenes-elementary-assessment-attempt-v1",id:attemptId,engineVersion:VERSION,factoryVersion:global.KhaemenesElementaryQuestionFactory?.version||null,learnerId:l?.learnerId||null,preview:!l,grade:grade(),kind:kind(),week:week(),page:location.pathname,seed,startedAt,completedAt,questionCount:questions.length,correct,score,masteryThreshold:PASS,mastered:score>=PASS,responses};
-    const attemptSaved=appendAttempt(snapshot);
+    const gradeThreePreview=grade()==="03"&&!l;
+    const attemptSaved=gradeThreePreview?false:appendAttempt(snapshot);
     const formallySaved=l&&attemptSaved?updateFormalScore(snapshot):false;
     form.querySelectorAll("input,button[type=submit]").forEach(el=>el.disabled=true);
     const result=document.createElement("section");result.className="elementary-assessment-result"+(score>=PASS?"":" review");
-    result.innerHTML=`<strong>${score>=PASS?"Mastery reached":"Review and retry"}</strong><p>Score: ${score}% · ${correct}/${questions.length} correct. ${l?(formallySaved?"This assessment result was saved to the learner’s local course record.":"The attempt or formal record could not be verified on this device."):"Preview mode: no formal learner record was changed."}</p><div class="elementary-assessment-actions"><button type="button" data-new-attempt>Draw a New Attempt</button><a href="${MENTOR_URL}">Review with Archaemenes</a>${score>=PASS&&formallySaved?'<a href="'+esc(nextHref())+'">Continue →</a>':""}</div>`;
+    result.innerHTML=`<strong>${!l?"Practice completed":score>=PASS&&formallySaved?"Mastery recorded":score>=PASS?"Score reached; save unverified":"Review and retry"}</strong><p>Score: ${score}% · ${correct}/${questions.length} correct. ${l?(formallySaved?"This assessment result was saved to the learner’s local course record.":"The attempt or formal record could not be verified on this device."):"Preview practice was not stored as learner mastery."}</p><div class="elementary-assessment-actions"><button type="button" data-new-attempt>Draw a New Attempt</button><a href="${MENTOR_URL}">Review with Archaemenes</a>${score>=PASS&&formallySaved?'<a href="'+esc(nextHref())+'">Continue →</a>':""}</div>`;
     form.appendChild(result);result.querySelector("[data-new-attempt]").addEventListener("click",()=>beginAttempt(body));result.scrollIntoView({behavior:"smooth",block:"center"});
   });
 }
