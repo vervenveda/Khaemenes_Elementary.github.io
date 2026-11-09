@@ -94,7 +94,7 @@ test("Grade 4 formal assessment checks family membership and rejects foreign aca
 });
 test("Grade 4 formative ledger requires selected family and rejects preview saves",()=>{
  const s=src("assets/khaemenes-elementary-learning-ledger.js");
- assert.match(s,/grade==="03"\|\|grade==="04"/);
+ assert.match(s,/grade==="03"\|\|grade==="04"\|\|grade==="05"/);
  assert.match(s,/family\?\.learnerIds\?\.includes\(id\)/);
  assert.match(s,/\(routeGrade\(\)==="03"\|\|routeGrade\(\)==="04"\)&&id==="preview"/);
  assert.match(s,/record\.grade!==routeGrade\(\)/);
