@@ -59,7 +59,7 @@ test("Grade 2 full profile uses a dedicated learner-scoped panel without modifyi
  new vm.Script(panel);
  assert.match(html,/id="gradeTwoFamilyOverview"/);
  assert.match(html,/khaemenes-grade-two-family-view\.js/);
- assert.match(panel,/record\.learnerId!==learnerId/);
+ assert.match(panel,/stored\.learnerId!==learnerId/);
  assert.doesNotMatch(panel,/\.publish\(/);
  assert.doesNotMatch(panel,/localStorage\.setItem\(/);
 });
