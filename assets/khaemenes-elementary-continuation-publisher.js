@@ -1,6 +1,6 @@
 (function attachKhaemenesElementaryContinuationPublisher(global){
 "use strict";
-const VERSION="1.1.0",PASS=80;
+const VERSION="1.1.1",PASS=80;
 const CONT_URL="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-learning-continuation.js";
 const REGISTRY_KEY="khaemenes_family_registry_v1",ACTIVE_KEY="khaemenes_active_learner_v1";
 const CFG={
@@ -14,8 +14,10 @@ const readJSON=(key,fallback=null)=>{try{const raw=localStorage.getItem(key);ret
 function grade(){const m=String(location.pathname||"").match(/grade-(0[2-5])/i);return m?m[1]:null}
 function config(){const g=grade();return g&&CFG[g]?{...CFG[g],grade:g,base:`https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-${g}/`}:null}
 function activeLearner(conf){
- const registry=readJSON(REGISTRY_KEY,null),id=readJSON(ACTIVE_KEY,null),learner=id&&registry?.learners?.[id]?registry.learners[id]:null;
- if(!learner)return null;
+ const registry=readJSON(REGISTRY_KEY,null),id=readJSON(ACTIVE_KEY,null),learner=typeof id==="string"&&registry?.learners?.[id]?registry.learners[id]:null;
+ if(!learner||learner.learnerId!==id||learner.selfDirectedAdult===true||!learner.familyId)return null;
+ const family=registry?.families?.[learner.familyId];
+ if(!family||!Array.isArray(family.learnerIds)||!family.learnerIds.includes(id))return null;
  const g=String(learner.grade||"").replace(/[^0-9]/g,"").padStart(2,"0"),stage=String(learner.stage||"").toLowerCase();
  return g===conf.grade&&stage==="elementary"?learner:null;
 }
@@ -49,7 +51,10 @@ async function ensureContract(){
 async function publish(){
  const conf=config();if(!conf)return false;
  const C=await ensureContract();if(!C?.publish)return false;
- const ctx=context(conf);if(!ctx?.learner?.learnerId)return false;
+ const ctx=context(conf);
+ // Continuity readers must never bypass the current registered learner/grade.
+ const registered=activeLearner(conf);
+ if(!registered||!ctx?.learner?.learnerId||ctx.learner.learnerId!==registered.learnerId)return false;
  const state=ctx.state||{},weeks=Array.from({length:36},(_,i)=>i+1),completed=weeks.filter(n=>score(state,n)>=PASS).length;
  let status="continue",nextLabel="Continue Learning",nextTitle="",nextHref="",summary="",best=null,family={needsAction:false,label:"",summary:"",href:""};
  const first=weeks.find(n=>score(state,n)<PASS);
@@ -72,7 +77,7 @@ async function publish(){
    status="complete";nextLabel="Open Certificate";nextTitle=`${conf.title} Complete`;nextHref=new URL("records/certificate.html",conf.base).href;summary="All recorded completion gates are satisfied.";best=100;
  }
  try{
-   C.publish({learnerId:ctx.learner.learnerId,courseId:conf.courseId,school:"Khaemenes Elementary School",stage:"elementary",grade:conf.title,subject:"Integrated Elementary Program",courseTitle:`Khaemenes ${conf.title}`,status,nextLabel,nextTitle,nextHref,summary,progress:{completed,total:36,percent:Math.round(completed/36*100)},mastery:{best,threshold:PASS,mastered:status==="complete"},family,source:`elementary-${conf.courseId}-continuity`});
+   C.publish({learnerId:ctx.learner.learnerId,courseId:conf.courseId,school:"Khaemenes Elementary School",stage:"elementary",grade:conf.grade,subject:"Integrated Elementary Program",courseTitle:`Khaemenes ${conf.title}`,status,nextLabel,nextTitle,nextHref,summary,progress:{completed,total:36,percent:Math.round(completed/36*100)},mastery:{best,threshold:PASS,mastered:status==="complete"},family,source:`elementary-${conf.courseId}-continuity`});
    return true;
  }catch{return false}
 }
