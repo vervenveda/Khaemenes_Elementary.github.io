@@ -18,7 +18,7 @@ test("Bubble 2 — ordinary Grade 3 student-profile save cannot change portfolio
 });
 test("Bubble 3 — Grade 3 preview assessments are not stored as formal attempt history",()=>{
  const s=src(files.engine);
- assert.match(s,/gradeThreePreview=grade\(\)==="03"&&!l/);
+ assert.match(s,/gradeThreePreview=\(grade\(\)==="03"\|\|grade\(\)==="04"\)&&!l/);
  assert.match(s,/attemptSaved=gradeThreePreview\?false:appendAttempt\(snapshot\)/);
  assert.match(s,/!l\?"Practice completed"/);
  assert.match(s,/score>=PASS&&formallySaved/);
