@@ -11,6 +11,8 @@ on:
       - grades/grade-04/assets/khaemenes-grade4-subject-context.js
       - grades/grade-04/data/course-data.js
       - assets/khaemenes-grade-four-family-view.js
+      - assets/khaemenes-elementary-assessment-engine.js
+      - assets/khaemenes-elementary-learning-ledger.js
       - tests/grade-four-family-guardrails.test.cjs
       - .github/workflows/grade-four-family-guardrails.yml
 jobs:
