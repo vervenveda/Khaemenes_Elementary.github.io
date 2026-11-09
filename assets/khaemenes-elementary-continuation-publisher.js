@@ -79,8 +79,9 @@ async function publish(){
  try{
    // Revalidate registered identity and scoped data immediately before publishing.
    const current=activeLearner(conf);
-   if(!current||current.learnerId!==ctx.learner.learnerId||
-      !global[conf.api]?.status||global[conf.api].status().learner?.learnerId!==current.learnerId)return false;
+   if(!current||current.learnerId!==ctx.learner.learnerId)return false;
+   const latestStatus=global[conf.api]?.status?.();
+   if(latestStatus&&latestStatus.status==="ready"&&latestStatus.learner?.learnerId!==current.learnerId)return false;
    C.publish({learnerId:ctx.learner.learnerId,courseId:conf.courseId,school:"Khaemenes Elementary School",stage:"elementary",grade:conf.grade,subject:"Integrated Elementary Program",courseTitle:`Khaemenes ${conf.title}`,status,nextLabel,nextTitle,nextHref,summary,progress:{completed,total:36,percent:Math.round(completed/36*100)},mastery:{best,threshold:PASS,mastered:status==="complete"},family,source:`elementary-${conf.courseId}-continuity`});
    return true;
  }catch{return false}
