@@ -14,20 +14,39 @@ function owned(id){
  }catch{return null}
 }
 const passed=x=>typeof x==="number"&&Number.isFinite(x)&&x>=80&&x<=100;
+function subjectProgress(learnerId){
+ // Social Studies owns a separate 36-week subject course; never import its scores into grade-wide mastery.
+ const key=KEY+learnerId+":elementary-grade-04-social-studies";
+ try{
+  const db=JSON.parse(global.localStorage.getItem(key)||"null");
+  if(!db||!Array.isArray(db.students))return Object.freeze({kind:"pending"});
+  const matches=db.students.filter(s=>s?.academyLearnerId===learnerId&&s.id==="academy_"+learnerId);
+  if(matches.length!==1)return Object.freeze({kind:"pending"});
+  const student=matches[0],weeks=student.weeks||{};
+  const mastered=Array.from({length:36},(_,i)=>i+1).filter(n=>passed(weeks[n]?.best)).length;
+  return Object.freeze({kind:"report",mastered,midterm:passed(student.exams?.midterm?.best),final:passed(student.exams?.final?.best)});
+ }catch{return Object.freeze({kind:"pending"})}
+}
 function snapshot(){
  const l=selected();if(!l)return Object.freeze({kind:"unavailable"});
- const state=owned(l.learnerId);if(!state)return Object.freeze({kind:"pending"});
+ const socialStudies=subjectProgress(l.learnerId);
+ const state=owned(l.learnerId);if(!state)return Object.freeze({kind:"pending",socialStudies});
  const weekly=state.weekly&&typeof state.weekly==="object"&&!Array.isArray(state.weekly)?state.weekly:{};
  const mastered=Array.from({length:36},(_,i)=>i+1).filter(n=>passed(weekly[n])).length;
  const next=Array.from({length:36},(_,i)=>i+1).find(n=>!passed(weekly[n]))||null;
  return Object.freeze({kind:"report",learnerId:l.learnerId,nickname:l.nickname||"Fourth Grade Scholar",
- mastered,next,midterm:passed(state.midterm),final:passed(state.final),portfolio:state.portfolio===true});
+ mastered,next,midterm:passed(state.midterm),final:passed(state.final),portfolio:state.portfolio===true,socialStudies});
 }
 function render(){
- const panel=$("gradeFourFamilyOverview"),status=$("gradeFourFamilyOverviewStatus"),detail=$("gradeFourFamilyDetails");
+ const panel=$("gradeFourFamilyOverview"),status=$("gradeFourFamilyOverviewStatus"),detail=$("gradeFourFamilyDetails"),subject=$("gradeFourSubjectSummary");
  if(!panel||!status||!detail)return;
  const x=snapshot();panel.hidden=x.kind==="unavailable";
- if(x.kind==="unavailable"){status.textContent="";detail.textContent="";return}
+ if(x.kind==="unavailable"){status.textContent="";detail.textContent="";if(subject)subject.textContent="";return}
+ if(subject)subject.textContent=x.socialStudies?.kind==="report"?
+  "Social Studies (separate subject course): "+x.socialStudies.mastered+" of 36 weeks mastered; subject midterm "+
+  (x.socialStudies.midterm?"mastered":"pending")+"; subject final "+(x.socialStudies.final?"mastered":"pending")+
+  ". These do not change integrated Grade 4 mastery.":
+  "Social Studies: no verified learner-owned subject report is available on this browser.";
  if(x.kind==="pending"){status.textContent="No verified learner-owned Grade 4 record is available on this browser.";detail.textContent="No grades were imported or changed.";return}
  status.textContent=x.nickname+" · "+x.mastered+" of 36 learning weeks mastered at 80% or higher.";
  detail.textContent="Next: "+(x.next?"Week "+String(x.next).padStart(2,"0"):x.midterm?x.final?"Portfolio and certificate review":"Final Assessment":"Midterm Assessment")+
@@ -35,7 +54,7 @@ function render(){
  ". Portfolio: "+(x.portfolio?"recorded complete":"adult review pending")+".";
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",render,{once:true});else render();
-["pageshow","khaemenes-family-changed","khaemenes-grade4-continuity-ready","khaemenes-learner-placement-changed"].forEach(e=>global.addEventListener(e,render));
+["pageshow","khaemenes-family-changed","khaemenes-grade4-continuity-ready","khaemenes-learner-placement-changed","khaemenes-grade4-subject-context"].forEach(e=>global.addEventListener(e,render));
 global.addEventListener("storage",e=>{if(e.key?.startsWith(KEY)||e.key==="khaemenes_active_learner_v1"||e.key==="khaemenes_family_registry_v1")render()});
-global.KhaemenesGradeFourFamilyView=Object.freeze({version:"1.0.0",selected,snapshot,render});
+global.KhaemenesGradeFourFamilyView=Object.freeze({version:"1.1.0",selected,snapshot,subjectProgress,render});
 })(window);
