@@ -301,4 +301,14 @@ if(window.VNV_HEADER?.mount){
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-elementary-profile-folds.js?v=20261107-folds-v2" defer></script>
 <!-- Elementary-only sticky header alignment for asynchronously mounted ticker pair. -->
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-elementary-chrome-alignment.js?v=20261107-align-v1" defer></script>
+
+<!-- Learner-owned profile creative rail: uses existing local photo and hero stores, never creates a second profile. -->
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-profile-creative-rail.js?v=20261109-universal-v1"></script>
+<script>
+(function(){
+ const show=()=>window.KhaemenesProfileCreativeRail?.mount?.("elementary","elementaryPageTitleHero");
+ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",show,{once:true});else show();
+ window.addEventListener("pageshow",show);
+})();
+</script>
 </body></html>
