@@ -23,4 +23,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test tests/grade-four-topology-repairs.test.cjs tests/grade-four-family-guardrails.test.cjs tests/grade-three-family-guardrails.test.cjs tests/grade-three-instructional-forensic.test.cjs tests/grade-three-deep-forensic-round3.test.cjs
+      - run: node --test tests/grade-four-topology-repairs.test.cjs tests/grade-four-family-guardrails.test.cjs tests/grade-one-family-guardrails.test.cjs tests/grade-two-family-guardrails.test.cjs tests/grade-two-post-profile-forensic.test.cjs tests/grade-three-family-guardrails.test.cjs tests/grade-three-instructional-forensic.test.cjs tests/grade-three-deep-forensic-round3.test.cjs
