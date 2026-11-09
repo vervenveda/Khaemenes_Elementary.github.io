@@ -20,7 +20,7 @@ function learner(){
   if(!l)return null;
   const g=String(l.grade||"").replace(/[^0-9]/g,"").padStart(2,"0"),stage=String(l.stage||"").trim().toLowerCase();
   if(stage!=="elementary"||g!==grade())return null;
-  if(g==="03"){
+  if(g==="03"||g==="04"){
     const f=l.familyId?registry?.families?.[l.familyId]:null;
     if(l.learnerId!==id||l.selfDirectedAdult===true||!f?.learnerIds?.includes(id))return null;
   }
@@ -32,10 +32,10 @@ function readFormalState(){
   if(grade()==="01"&&global.Grade1Mastery?.load)return global.Grade1Mastery.load();
   const key=courseKey();if(!key)return blankState();
   const raw=read(key,null);
-  if(grade()==="03"){
+  if(grade()==="03"||grade()==="04"){
     const l=learner();
     return raw?.format==="khaemenes-course-state-v1"&&raw.learnerId===l?.learnerId&&
-      raw.courseId==="elementary-grade-03"&&raw.state&&typeof raw.state==="object"&&!Array.isArray(raw.state)?
+      raw.courseId===`elementary-grade-${grade()}`&&raw.state&&typeof raw.state==="object"&&!Array.isArray(raw.state)?
       raw.state:blankState();
   }
   if(raw?.format==="khaemenes-course-state-v1"&&raw.state)return raw.state;
@@ -44,7 +44,7 @@ function readFormalState(){
 function writeFormalState(state){
   if(grade()==="01"&&global.Grade1Mastery?.save)return global.Grade1Mastery.save(state);
   const key=courseKey(),l=learner();if(!key||!l)return false;
-  if(grade()==="03"&&key!==`khaemenes.course:${l.learnerId}:elementary-grade-03`)return false;
+  if((grade()==="03"||grade()==="04")&&key!==`khaemenes.course:${l.learnerId}:elementary-grade-${grade()}`)return false;
   return write(key,{format:"khaemenes-course-state-v1",learnerId:l.learnerId,courseId:`elementary-grade-${grade()}`,source:"elementary-assessment-engine-v1",updatedAt:new Date().toISOString(),state});
 }
 function weeklyBest(state,n){
