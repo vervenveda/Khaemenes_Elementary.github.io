@@ -9,7 +9,7 @@ const ATTEMPT_PREFIX="khaemenes.elementary.assessment.attempts";
 const MENTOR_URL="https://vervenveda.com/Khaemenes_Academy.github.io/mentor/";
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const read=(k,f=null)=>{try{const raw=localStorage.getItem(k);return raw?JSON.parse(raw):f}catch{return f}};
-const write=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}};
+const write=(k,v)=>{try{const raw=JSON.stringify(v);localStorage.setItem(k,raw);return localStorage.getItem(k)===raw}catch{return false}};
 const uid=()=>`aea-${Date.now().toString(36)}-${Math.random().toString(36).slice(2,10)}`;
 
 function grade(){const m=location.pathname.match(/\/grades\/grade-(0[1-5])\//i);if(m)return m[1];if(/\/assessments\//i.test(location.pathname))return"01";return null}
@@ -19,19 +19,32 @@ function learner(){
   const id=read(ACTIVE_KEY,null),registry=read(REGISTRY_KEY,null),l=id&&registry?.learners?.[id]?registry.learners[id]:null;
   if(!l)return null;
   const g=String(l.grade||"").replace(/[^0-9]/g,"").padStart(2,"0"),stage=String(l.stage||"").trim().toLowerCase();
-  return stage==="elementary"&&g===grade()?{...l,grade:g}:null;
+  if(stage!=="elementary"||g!==grade())return null;
+  if(g==="03"){
+    const f=l.familyId?registry?.families?.[l.familyId]:null;
+    if(l.learnerId!==id||l.selfDirectedAdult===true||!f?.learnerIds?.includes(id))return null;
+  }
+  return {...l,grade:g};
 }
 function courseKey(){const l=learner(),g=grade();return l?.learnerId&&g?`khaemenes.course:${l.learnerId}:elementary-grade-${g}`:null}
 function blankState(){return grade()==="01"?{weeks:{},notes:{},daily:{},dailyResponses:{},handwritingImages:{},workSaved:{},portfolio:false}:{student:"Elementary Scholar",weekly:{},midterm:0,final:0,portfolio:false,assessmentMeta:{}}}
 function readFormalState(){
   if(grade()==="01"&&global.Grade1Mastery?.load)return global.Grade1Mastery.load();
   const key=courseKey();if(!key)return blankState();
-  const raw=read(key,null);if(raw?.format==="khaemenes-course-state-v1"&&raw.state)return raw.state;
+  const raw=read(key,null);
+  if(grade()==="03"){
+    const l=learner();
+    return raw?.format==="khaemenes-course-state-v1"&&raw.learnerId===l?.learnerId&&
+      raw.courseId==="elementary-grade-03"&&raw.state&&typeof raw.state==="object"&&!Array.isArray(raw.state)?
+      raw.state:blankState();
+  }
+  if(raw?.format==="khaemenes-course-state-v1"&&raw.state)return raw.state;
   return raw&&typeof raw==="object"?raw:blankState();
 }
 function writeFormalState(state){
   if(grade()==="01"&&global.Grade1Mastery?.save)return global.Grade1Mastery.save(state);
   const key=courseKey(),l=learner();if(!key||!l)return false;
+  if(grade()==="03"&&key!==`khaemenes.course:${l.learnerId}:elementary-grade-03`)return false;
   return write(key,{format:"khaemenes-course-state-v1",learnerId:l.learnerId,courseId:`elementary-grade-${grade()}`,source:"elementary-assessment-engine-v1",updatedAt:new Date().toISOString(),state});
 }
 function weeklyBest(state,n){
@@ -154,10 +167,11 @@ function beginAttempt(body){
     if(answered<questions.length){status.textContent=`Answer all ${questions.length} questions before submitting.`;return}
     const score=Math.round(correct/questions.length*100),completedAt=new Date().toISOString(),l=learner();
     const snapshot={schema:"khaemenes-elementary-assessment-attempt-v1",id:attemptId,engineVersion:VERSION,factoryVersion:global.KhaemenesElementaryQuestionFactory?.version||null,learnerId:l?.learnerId||null,preview:!l,grade:grade(),kind:kind(),week:week(),page:location.pathname,seed,startedAt,completedAt,questionCount:questions.length,correct,score,masteryThreshold:PASS,mastered:score>=PASS,responses};
-    appendAttempt(snapshot);const formallySaved=l?updateFormalScore(snapshot):false;
+    const attemptSaved=appendAttempt(snapshot);
+    const formallySaved=l&&attemptSaved?updateFormalScore(snapshot):false;
     form.querySelectorAll("input,button[type=submit]").forEach(el=>el.disabled=true);
     const result=document.createElement("section");result.className="elementary-assessment-result"+(score>=PASS?"":" review");
-    result.innerHTML=`<strong>${score>=PASS?"Mastery reached":"Review and retry"}</strong><p>Score: ${score}% · ${correct}/${questions.length} correct. ${l?(formallySaved?"This verified attempt was written to the learner’s formal record.":"The attempt was saved, but formal record writing failed."):"Preview mode: no formal learner record was changed."}</p><div class="elementary-assessment-actions"><button type="button" data-new-attempt>Draw a New Attempt</button><a href="${MENTOR_URL}">Review with Archaemenes</a>${score>=PASS&&l?'<a href="'+esc(nextHref())+'">Continue →</a>':""}</div>`;
+    result.innerHTML=`<strong>${score>=PASS?"Mastery reached":"Review and retry"}</strong><p>Score: ${score}% · ${correct}/${questions.length} correct. ${l?(formallySaved?"This assessment result was saved to the learner’s local course record.":"The attempt or formal record could not be verified on this device."):"Preview mode: no formal learner record was changed."}</p><div class="elementary-assessment-actions"><button type="button" data-new-attempt>Draw a New Attempt</button><a href="${MENTOR_URL}">Review with Archaemenes</a>${score>=PASS&&formallySaved?'<a href="'+esc(nextHref())+'">Continue →</a>':""}</div>`;
     form.appendChild(result);result.querySelector("[data-new-attempt]").addEventListener("click",()=>beginAttempt(body));result.scrollIntoView({behavior:"smooth",block:"center"});
   });
 }
