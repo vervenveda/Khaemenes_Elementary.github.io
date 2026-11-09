@@ -59,7 +59,7 @@ function saveRecord(record){
   const id=ownerId();
   if(routeGrade()==="03"&&id==="preview")return false;
   const all=allLedger(),list=Array.isArray(all[id])?all[id]:[];
-  if(routeGrade()==="03"&&record?.learnerId&&record.learnerId!==id)return false;
+  if(routeGrade()==="03"&&(record?.learnerId!==id||record.grade!=="03"||record.preview!==false))return false;
   list.push(record);
   all[id]=list.slice(-MAX_RECORDS);
   if(!write(LEDGER_KEY,all))return false;
@@ -137,9 +137,14 @@ function renderQuestions(container,questions,context){
       <div class="elementary-formative-status" aria-live="polite"></div>
     </div>`;
 
+  const initialLearnerId=activeLearner()?.learnerId||null;
   const status=container.querySelector(".elementary-formative-status");
   container.querySelector("[data-new-formative]").addEventListener("click",()=>startCheckpoint(container,context));
   container.querySelector("[data-submit-formative]").addEventListener("click",()=>{
+    if(routeGrade()==="03"&&(!initialLearnerId||activeLearner()?.learnerId!==initialLearnerId)){
+      status.textContent="The learner changed during practice. Start a fresh checkpoint for the selected child.";
+      return;
+    }
     let correct=0,answered=0;
     const responses=[];
     questions.forEach((q,i)=>{
