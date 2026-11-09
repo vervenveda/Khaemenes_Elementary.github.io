@@ -63,3 +63,40 @@ test("Grade 2 full profile uses a dedicated learner-scoped panel without modifyi
  assert.doesNotMatch(panel,/\.publish\(/);
  assert.doesNotMatch(panel,/localStorage\.setItem\(/);
 });
+
+test("Grade 2 shows eight real subject halls without fabricating subject scores",()=>{
+ const module=source("assets/khaemenes-grade-two-family-view.js");
+ const course=source("grades/grade-02/data/course-data.js");
+ const subjects=[...module.matchAll(/name:"([^"]+)",path:"([^"]+)"/g)];
+ assert.equal(subjects.length,8);
+ for(const [,name,slug] of subjects){
+  assert.ok(fs.existsSync(path.join(path.resolve(__dirname,".."),"grades/grade-02/subjects",slug,"index.html")),name+" route is missing");
+ }
+ assert.match(course,/weeklyAssessments:\s*36/);
+ assert.match(html,/id="gradeTwoSubjectHalls"/);
+ assert.match(html,/id="gradeTwoDailySummary"/);
+ assert.match(html,/id="gradeTwoMilestones"/);
+ assert.match(html,/id="gradeTwoPortfolioStatus"/);
+ assert.doesNotMatch(module,/subjectScore|subjectMastery/);
+});
+test("Grade 2 milestone rewards are read-only, count only valid mastery scores and preserve portfolio authority",()=>{
+ const c=fake({stored:{format:"khaemenes-course-state-v1",learnerId:"a",courseId:"elementary-grade-02",
+  state:{weekly:{1:90,2:79,3:101,4:"95",5:88,6:95,7:95,8:95,9:95},midterm:82,final:45,portfolio:false}}});
+ const result=c.panel.snapshot();
+ assert.equal(result.kind,"report");
+ assert.equal(result.completed,6);
+ assert.equal(result.milestones.mastered,6);
+ assert.equal(result.milestones.nextWeek,2);
+ assert.equal(result.milestones.midterm,true);
+ assert.equal(result.milestones.final,false);
+ assert.equal(result.milestones.portfolio,false);
+ assert.deepEqual(Array.from(result.milestones.celebrations),[6]);
+ assert.equal(c.records.size,1);
+});
+test("Grade 2 never reports another sibling's milestones",()=>{
+ const wrong={format:"khaemenes-course-state-v1",learnerId:"b",courseId:"elementary-grade-02",
+  state:{weekly:{1:100,2:100},midterm:100,final:100,portfolio:true}};
+ const ctx=fake({stored:wrong});
+ assert.equal(ctx.panel.snapshot().kind,"pending");
+ assert.equal(fake({owner:"b"}).panel.snapshot().kind,"unavailable");
+});
