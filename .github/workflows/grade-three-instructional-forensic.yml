@@ -1,0 +1,23 @@
+name: Grade Three Instructional Forensic
+on:
+  workflow_dispatch:
+  push:
+    branches: [audit/elementary-family-report-2026-11-09]
+    paths:
+      - assets/khaemenes-elementary-assessment-engine.js
+      - assets/khaemenes-elementary-learning-ledger.js
+      - grades/grade-03/assets/app.js
+      - grades/grade-03/data/course-data.js
+      - tests/grade-three-instructional-forensic.test.cjs
+      - .github/workflows/grade-three-instructional-forensic.yml
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/grade-three-instructional-forensic.test.cjs
