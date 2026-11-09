@@ -44,7 +44,7 @@ test("Bubble 4: formative ledger rejects Grade 3 unaffiliated and preview owners
  const s=get(P.ledger);
  assert.match(s,/learner\.learnerId!==id\|\|learner\.selfDirectedAdult===true/);
  assert.match(s,/family\?\.learnerIds\?\.includes\(id\)/);
- assert.match(s,/routeGrade\(\)==="03"&&id==="preview"/);
+ assert.match(s,/\(routeGrade\(\)==="03"\|\|routeGrade\(\)==="04"\)&&id==="preview"/);
  assert.match(s,/localStorage\.getItem\(k\)===raw/);
 });
 test("Bubble 5: daily next step uses actual lessons, printables, exams and portfolio",()=>{
