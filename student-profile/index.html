@@ -192,6 +192,7 @@ function selectLearners(){
  area.hidden=candidates.length===0||(candidates.length===1&&Boolean(active));
 }
 function refresh(){
+ pictureRequest++; // Cancel pending photo writes on learner selection.
  $("gradePreviewDetails").hidden=true;$("showGradePreview").setAttribute("aria-expanded","false");
  selectLearners();
  const l=learner(),priorId=activeId;activeId=l?.learnerId||"";grade=l?.grade||"";
@@ -237,7 +238,7 @@ $("photoFile").addEventListener("change",async e=>{
   const prior=appearance.photo;appearance.photo=jpeg;if(!saveVisual()){appearance.photo=prior;renderVisual()}
  }catch{say("Could not process photo. Try a smaller image.",true)}finally{URL.revokeObjectURL(url)}
 });
-$("removePhoto").addEventListener("click",()=>{if(!needsAdult())return;appearance.photo="";saveVisual()});
+$("removePhoto").addEventListener("click",()=>{if(!needsAdult())return;pictureRequest++;appearance.photo="";saveVisual()});
 $("bringKinder").addEventListener("click",()=>{
  if(!needsAdult())return;
  if(grade!=="01")return say("Kindergarten visual handoff is for Grade 1.",true);
