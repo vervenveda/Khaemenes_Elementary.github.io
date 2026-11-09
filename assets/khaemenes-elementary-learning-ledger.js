@@ -16,7 +16,7 @@ const MAX_RECORDS=500;
 
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const read=(k,f=null)=>{try{const raw=localStorage.getItem(k);return raw?JSON.parse(raw):f}catch{return f}};
-const write=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}};
+const write=(k,v)=>{try{const raw=JSON.stringify(v);localStorage.setItem(k,raw);return localStorage.getItem(k)===raw}catch{return false}};
 const uid=()=>`lel-${Date.now().toString(36)}-${Math.random().toString(36).slice(2,9)}`;
 
 function routeGrade(){
@@ -39,7 +39,12 @@ function activeLearner(){
   if(!learner)return null;
   const grade=String(learner.grade||"").replace(/[^0-9]/g,"").padStart(2,"0");
   const stage=String(learner.stage||"").trim().toLowerCase();
-  return stage==="elementary"&&grade===routeGrade()?{...learner,grade}:null;
+  if(stage!=="elementary"||grade!==routeGrade())return null;
+  if(grade==="03"){
+    const family=learner.familyId?registry?.families?.[learner.familyId]:null;
+    if(learner.learnerId!==id||learner.selfDirectedAdult===true||!family?.learnerIds?.includes(id))return null;
+  }
+  return {...learner,grade};
 }
 function ownerId(){return activeLearner()?.learnerId||"preview"}
 function allLedger(){
@@ -51,7 +56,10 @@ function records(){
   return Array.isArray(all[id])?all[id]:[];
 }
 function saveRecord(record){
-  const all=allLedger(),id=ownerId(),list=Array.isArray(all[id])?all[id]:[];
+  const id=ownerId();
+  if(routeGrade()==="03"&&id==="preview")return false;
+  const all=allLedger(),list=Array.isArray(all[id])?all[id]:[];
+  if(routeGrade()==="03"&&record?.learnerId&&record.learnerId!==id)return false;
   list.push(record);
   all[id]=list.slice(-MAX_RECORDS);
   if(!write(LEDGER_KEY,all))return false;
