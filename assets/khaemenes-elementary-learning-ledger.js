@@ -394,7 +394,17 @@ function mountPageCheckpoint(){
     renderQuestions(box.querySelector("[data-checkpoint-body]"),questions,{focus,day:"Weekly Review",key:`${routeGrade()}-${routeWeek()}-weekly-review`});
   });
 }
+function attachGrade4LateYearDepth(){
+  const m=location.pathname.match(/\/grades\/grade-04\/subjects\/[a-z-]+\/week-(\d{2})\.html$/i);
+  const week=m?Number(m[1]):0;
+  if(week<19||week>36||document.getElementById("grade4DepthModuleScript"))return;
+  const script=document.createElement("script");
+  script.id="grade4DepthModuleScript";
+  script.src="../../../../assets/khaemenes-grade4-late-year-depth.js";
+  document.head.appendChild(script);
+}
 function scan(){
+  attachGrade4LateYearDepth();
   addStyle();
   const articles=[...document.querySelectorAll(".lesson")];
   articles.forEach(enhanceArticle);
