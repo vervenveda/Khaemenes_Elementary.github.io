@@ -1,0 +1,27 @@
+name: Grade Five Family Guardrails
+on:
+  workflow_dispatch:
+  push:
+    branches: [audit/elementary-family-report-2026-11-09]
+    paths:
+      - student-profile/index.html
+      - assets/khaemenes-grade-five-family-view.js
+      - grades/grade-05/assets/app.js
+      - grades/grade-05/assets/certificate.js
+      - grades/grade-05/assets/khaemenes-grade5-continuity.js
+      - grades/grade-05/assets/khaemenes-grade5-subject-context.js
+      - assets/khaemenes-elementary-assessment-engine.js
+      - assets/khaemenes-elementary-learning-ledger.js
+      - tests/grade-five-family-guardrails.test.cjs
+      - .github/workflows/grade-five-family-guardrails.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/grade-five-family-guardrails.test.cjs tests/grade-one-family-guardrails.test.cjs tests/grade-two-family-guardrails.test.cjs tests/grade-two-post-profile-forensic.test.cjs tests/grade-three-family-guardrails.test.cjs tests/grade-three-instructional-forensic.test.cjs tests/grade-three-deep-forensic-round3.test.cjs tests/grade-four-family-guardrails.test.cjs tests/grade-four-topology-repairs.test.cjs tests/grade-four-late-year-instructional-depth.test.cjs tests/grade-four-focus-alignment-forensic.test.cjs
