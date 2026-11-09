@@ -7,7 +7,7 @@ test("Bubble 1 — Grade 3 formative work requires initiating learner and strict
  const s=src(files.ledger);
  assert.match(s,/const initialLearnerId=activeLearner\(\)\?\.learnerId\|\|null/);
  assert.match(s,/activeLearner\(\)\?\.learnerId!==initialLearnerId/);
- assert.match(s,/record\?\.learnerId!==id\|\|record\.grade!=="03"\|\|record\.preview!==false/);
+ assert.match(s,/record\?\.learnerId!==id\|\|record\.grade!==routeGrade\(\)\|\|record\.preview!==false/);
 });
 test("Bubble 2 — ordinary Grade 3 student-profile save cannot change portfolio review approval",()=>{
  const s=src(files.app);
