@@ -1,0 +1,22 @@
+name: Grade One Family Guardrails
+on:
+  workflow_dispatch:
+  push:
+    branches: [audit/elementary-family-report-2026-11-09]
+    paths:
+      - student-profile/index.html
+      - grades/grade-01/assets/khaemenes-grade1-continuity.js
+      - assets/khaemenes-grade-one-family-view.js
+      - tests/grade-one-family-guardrails.test.cjs
+      - .github/workflows/grade-one-family-guardrails.yml
+jobs:
+  grade-one:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/grade-one-family-guardrails.test.cjs
