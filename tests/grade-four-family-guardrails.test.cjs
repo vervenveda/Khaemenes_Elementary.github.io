@@ -96,7 +96,7 @@ test("Grade 4 formative ledger requires selected family and rejects preview save
  const s=src("assets/khaemenes-elementary-learning-ledger.js");
  assert.match(s,/grade==="03"\|\|grade==="04"\|\|grade==="05"/);
  assert.match(s,/family\?\.learnerIds\?\.includes\(id\)/);
- assert.match(s,/\(routeGrade\(\)==="03"\|\|routeGrade\(\)==="04"\)&&id==="preview"/);
+ assert.match(s,/\(routeGrade\(\)==="03"\|\|routeGrade\(\)==="04"\|\|routeGrade\(\)==="05"\)&&id==="preview"/);
  assert.match(s,/record\.grade!==routeGrade\(\)/);
  assert.match(s,/activeLearner\(\)\?\.learnerId!==initialLearnerId/);
 });
