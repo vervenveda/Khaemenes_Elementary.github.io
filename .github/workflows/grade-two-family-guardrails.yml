@@ -1,0 +1,22 @@
+name: Grade Two Family Guardrails
+on:
+  workflow_dispatch:
+  push:
+    branches: [audit/elementary-family-report-2026-11-09]
+    paths:
+      - student-profile/index.html
+      - grades/grade-02/assets/khaemenes-grade2-continuity.js
+      - assets/khaemenes-grade-two-family-view.js
+      - tests/grade-two-family-guardrails.test.cjs
+      - .github/workflows/grade-two-family-guardrails.yml
+jobs:
+  grade-two:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/grade-two-family-guardrails.test.cjs
