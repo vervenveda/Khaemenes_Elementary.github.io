@@ -36,7 +36,7 @@ test("Bubble 2: Grade 3 assessment refuses raw or wrong-owner course state",()=>
 test("Bubble 3: formal attempt requires persistent write before course update and continue",()=>{
  const s=get(P.engine);
  assert.match(s,/localStorage\.getItem\(k\)===raw/);
- assert.match(s,/const attemptSaved=appendAttempt\(snapshot\)/);
+ assert.match(s,/const attemptSaved=gradeThreePreview\?false:appendAttempt\(snapshot\)/);
  assert.match(s,/l&&attemptSaved\?updateFormalScore\(snapshot\):false/);
  assert.match(s,/score>=PASS&&formallySaved/);
 });
