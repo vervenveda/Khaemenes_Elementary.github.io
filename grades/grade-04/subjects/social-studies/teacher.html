@@ -1,10 +1,10 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Khaemenes Academy · Grade 4 Social Studies Teacher Tools</title><link rel="stylesheet" href="styles.css"></head><body><main class="shell" style="padding:28px 0"><div class="actions noPrint"><a class="button" href="index.html">← Student Course</a><a class="button" href="../../index.html">Grade 4 Home</a></div><h1 style="font-size:42px">Khaemenes Academy</h1><h2>Grade 4 Social Studies · Teacher Tools</h2><section class="card"><p><strong>Static-site boundary:</strong> this convenience code is not secure authentication. Backups are course-identified and learner-scoped when an Academy learner is active.</p><label>Convenience code <input id="code" type="password"> <button id="open">Open</button></label></section><div id="tools"></div></main><script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script><script src="../../assets/khaemenes-grade4-subject-context.js"></script><script src="course-data.js"></script><script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Khaemenes Academy · Grade 4 Social Studies Teacher Tools</title><link rel="stylesheet" href="styles.css"></head><body><main class="shell" style="padding:28px 0"><div class="actions noPrint"><a class="button" href="index.html">← Student Course</a><a class="button" href="../../index.html">Grade 4 Home</a></div><h1 style="font-size:42px">Khaemenes Academy</h1><h2>Grade 4 Social Studies · Teacher Tools</h2><section class="card"><p><strong>Static-site boundary:</strong> this convenience code is not secure authentication. Registered learner records are not accessible to this convenience-code interface. Authoritative teacher review requires a secure adult session, which is not yet connected here.</p><label>Convenience code <input id="code" type="password"> <button id="open">Open</button></label></section><div id="tools"></div></main><script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script><script src="../../assets/khaemenes-grade4-subject-context.js"></script><script src="course-data.js"></script><script>
 (()=>{
  const C=window.KHAEMENES_GRADE4_SOCIAL_STUDIES,M=C.metadata,SUB=window[Object.keys(window).find(k=>/^Khaemenes.*SubjectContext$/.test(k))]||null,$=s=>document.querySelector(s);
- function key(){return SUB?.scopedKey?.("social-studies")||M.storageKey}
+ function key(){return academy()?.status==="no-active-learner"?M.storageKey:null}
  function academy(){return SUB?.status?.("social-studies")||null}
- function load(){try{return JSON.parse(localStorage.getItem(key()))||{students:[],activeId:null}}catch{return{students:[],activeId:null}}}
- function save(db){localStorage.setItem(key(),JSON.stringify(db))}
+ function load(){const k=key();if(!k)return{students:[],activeId:null};try{return JSON.parse(localStorage.getItem(k))||{students:[],activeId:null}}catch{return{students:[],activeId:null}}}
+ function save(db){const k=key();if(!k)return false;try{const raw=JSON.stringify(db);localStorage.setItem(k,raw);return localStorage.getItem(k)===raw}catch{return false}}
  function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
  function ensure(s){s.weeks||={};s.exams||={};s.localization||={statePack:"generic",stateLabel:"",updatedAt:null};for(const k of ["midterm","final"]){s.exams[k]||={best:0,attempts:[]};s.exams[k].attempts||=[];s.exams[k].best=s.exams[k].best||0;s.exams[k].reviewStatus??="pending";s.exams[k].constructedResponse??=""}for(let w=1;w<=36;w++){s.weeks[w]||={};s.weeks[w].attempts||=[];s.weeks[w].reviewStatus??="pending";s.weeks[w].localizationEvidence??="";s.weeks[w].constructedResponse??="";s.weeks[w].correction??="";s.weeks[w].artifact??=""}}
  function visible(db){const a=academy();if(a?.status!=="ready")return db.students||[];const id=a.learner.learnerId;return(db.students||[]).filter(s=>s.academyLearnerId===id||s.id==="academy_"+id)}
@@ -49,7 +49,14 @@
    document.querySelectorAll("[data-exam-review]").forEach(el=>el.onchange=e=>{const db=load(),s=(db.students||[]).find(x=>x.id===e.target.dataset.student);if(!s)return;ensure(s);s.exams[e.target.dataset.examReview].reviewStatus=e.target.value;save(db)});
    document.querySelectorAll("[data-save-localization]").forEach(btn=>btn.onclick=e=>{const db=load(),id=e.target.dataset.saveLocalization,s=(db.students||[]).find(x=>x.id===id);if(!s)return;ensure(s);s.localization.statePack=document.querySelector(`[data-pack="${CSS.escape(id)}"]`).value;s.localization.stateLabel=document.querySelector(`[data-state-label="${CSS.escape(id)}"]`).value.trim();s.localization.updatedAt=new Date().toISOString();save(db);alert("Localization context saved.")});
  }
- $("#open").onclick=()=>{if($("#code").value!=="KHAE4SS")return alert("Incorrect convenience code.");render()};
+ $("#open").onclick=()=>{
+   if(academy()?.status!=="no-active-learner"){
+     $("#tools").textContent="Registered academic records require verified adult authorization. This local convenience interface cannot review, import, export, or approve them.";
+     return;
+   }
+   if($("#code").value!=="KHAE4SS")return alert("Incorrect convenience code.");
+   render();
+ };
 })();
 </script>
 <!-- VNV_BETA_PROGRAM_V2 -->
