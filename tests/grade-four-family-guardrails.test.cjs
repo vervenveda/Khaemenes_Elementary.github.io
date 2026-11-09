@@ -69,3 +69,34 @@ test("Bubble 5: Grade 4 family progress is read-only, learner-owned and accurate
  assert.equal(fixture({record:{...record,learnerId:"b"}}).view.snapshot().kind,"pending");
  const data=src(P.data);assert.match(data,/Each of the 36 weekly assessments at or above 80%/);
 });
+
+test("Grade 4 formal assessment checks family membership and rejects foreign academic state",()=>{
+ const engine=src("assets/khaemenes-elementary-assessment-engine.js");
+ const learner={learnerId:"a",familyId:"F",stage:"elementary",grade:"04"};
+ const family={familyId:"F",learnerIds:["a"]},registry={learners:{a:learner},families:{F:family}};
+ const map=new Map([["khaemenes_active_learner_v1",JSON.stringify("a")],["khaemenes_family_registry_v1",JSON.stringify(registry)]]);
+ const store={getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v)};
+ const loc={pathname:"/Khaemenes_Elementary.github.io/grades/grade-04/assessments/week-01-assessment.html"};
+ const w={addEventListener:()=>{},CustomEvent:function(){},location:loc};w.window=w;
+ const document={readyState:"loading",addEventListener:()=>{},querySelector:()=>null,title:"Grade 4"};
+ vm.runInNewContext(engine,{window:w,document,location:loc,localStorage:store,Date,Math,CustomEvent:w.CustomEvent},{timeout:2000});
+ const api=w.KhaemenesElementaryAssessmentEngine;
+ assert.equal(api.learner().learnerId,"a");
+ const key="khaemenes.course:a:elementary-grade-04",state={weekly:{1:100},midterm:100,final:100,portfolio:true};
+ map.set(key,JSON.stringify({format:"khaemenes-course-state-v1",learnerId:"b",courseId:"elementary-grade-04",state}));
+ assert.equal(api.readFormalState().weekly[1],undefined);
+ map.set(key,JSON.stringify({format:"khaemenes-course-state-v1",learnerId:"a",courseId:"elementary-grade-04",state}));
+ assert.equal(api.readFormalState().weekly[1],100);
+ family.learnerIds=[];
+ map.set("khaemenes_family_registry_v1",JSON.stringify(registry));
+ assert.equal(api.learner(),null);
+ assert.equal(api.gate().preview,true);
+});
+test("Grade 4 formative ledger requires selected family and rejects preview saves",()=>{
+ const s=src("assets/khaemenes-elementary-learning-ledger.js");
+ assert.match(s,/grade==="03"\|\|grade==="04"/);
+ assert.match(s,/family\?\.learnerIds\?\.includes\(id\)/);
+ assert.match(s,/\(routeGrade\(\)==="03"\|\|routeGrade\(\)==="04"\)&&id==="preview"/);
+ assert.match(s,/record\.grade!==routeGrade\(\)/);
+ assert.match(s,/activeLearner\(\)\?\.learnerId!==initialLearnerId/);
+});
