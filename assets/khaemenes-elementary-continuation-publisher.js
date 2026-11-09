@@ -77,6 +77,10 @@ async function publish(){
    status="complete";nextLabel="Open Certificate";nextTitle=`${conf.title} Complete`;nextHref=new URL("records/certificate.html",conf.base).href;summary="All recorded completion gates are satisfied.";best=100;
  }
  try{
+   // Revalidate registered identity and scoped data immediately before publishing.
+   const current=activeLearner(conf);
+   if(!current||current.learnerId!==ctx.learner.learnerId||
+      !global[conf.api]?.status||global[conf.api].status().learner?.learnerId!==current.learnerId)return false;
    C.publish({learnerId:ctx.learner.learnerId,courseId:conf.courseId,school:"Khaemenes Elementary School",stage:"elementary",grade:conf.grade,subject:"Integrated Elementary Program",courseTitle:`Khaemenes ${conf.title}`,status,nextLabel,nextTitle,nextHref,summary,progress:{completed,total:36,percent:Math.round(completed/36*100)},mastery:{best,threshold:PASS,mastered:status==="complete"},family,source:`elementary-${conf.courseId}-continuity`});
    return true;
  }catch{return false}
