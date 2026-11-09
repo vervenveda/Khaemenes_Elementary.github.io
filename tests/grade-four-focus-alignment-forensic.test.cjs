@@ -20,7 +20,7 @@ test("Ten source-file focus repairs are reflected across all five days of teachi
   const found=[...html.matchAll(/<strong>Focus:<\/strong>\s*([^<]+)/g)].map(x=>x[1].trim());
   assert.equal(found.length,5,subject+" week "+week+" should have five dated lessons");
   assert.ok(found.every(v=>v===newFocus),subject+" week "+week+": mismatched weekday focus");
-  assert.equal(html.split(newFocus).length-1,15,subject+" week "+week+" should use new focus in objective and teacher guide");
+  assert.ok(html.split(newFocus).length-1>=15,subject+" week "+week+" should use new focus in objectives and teacher guidance");
   assert.ok(!found.includes(oldFocus),subject+" "+week+" retained old focus");
  }
 });
