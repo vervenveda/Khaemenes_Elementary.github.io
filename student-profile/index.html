@@ -67,6 +67,13 @@ body :is(.hero,.ug-hero,.mast) :is(.eyebrow,.ug-eyebrow),body main>.eyebrow{font
 <div class="choice" id="themes"></div><div class="actions"><button type="button" class="secondary" id="reset">Reset colors</button><button type="button" class="secondary" id="printProfile">Print profile</button><button type="button" class="secondary" id="exportVisual">Export picture &amp; colors</button></div>
 <label for="importVisual">Restore picture &amp; colors from a local backup</label><input id="importVisual" type="file" accept=".json,application/json"><p class="status" id="status" aria-live="polite"></p></section>
 </div>
+<section class="card" id="gradeOneFamilyOverview" aria-labelledby="gradeOneFamilyHeading" hidden>
+<p class="eyebrow">Family Learning Center · First Grade</p>
+<h2 id="gradeOneFamilyHeading">My Grade 1 Family Learning Report</h2>
+<p id="gradeOneFamilyOverviewStatus" role="status" aria-live="polite">Checking the selected first-grade learner…</p>
+<p class="muted">Your class, favorite subjects, goals and portfolio remain available. Historical Grade 1 academic scores are not assigned to this profile until their learner ownership can be verified.</p>
+<div class="actions"><a class="button" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Open Family Learning Center</a><a class="button secondary" href="../grades/grade-01/">Open Grade 1 Learning</a></div>
+</section>
 <section class="card" id="gradePreview" aria-labelledby="nextGradeHeading"><p class="eyebrow">My next milestone</p>
 <h2 id="nextGradeHeading">A new learning horizon</h2><p class="muted">Preview the next learning level while keeping all course requirements, assessment results, and family placement decisions in their original systems.</p>
 <div class="actions"><button type="button" class="secondary" id="showGradePreview" aria-expanded="false" aria-controls="gradePreviewDetails">Explore my next grade</button></div>
@@ -79,6 +86,7 @@ body :is(.hero,.ug-hero,.mast) :is(.eyebrow,.ug-eyebrow),body main>.eyebrow{font
 </main>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-learning-continuation.js"></script>
+<script src="../assets/khaemenes-grade-one-family-view.js"></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-student-profile-v2.js"></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-student-quick-pins-v1.js"></script>
 <script>
@@ -98,11 +106,13 @@ const GRADE_SUBJECTS={
 };
 let activeId="",grade="",appearance={theme:"parchment",avatar:"🌟",photo:""};
 const read=(k,f)=>{try{const v=localStorage.getItem(k);return v===null?f:JSON.parse(v)}catch{return f}};
-const store=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}};
+const store=(k,v)=>{try{const raw=JSON.stringify(v);localStorage.setItem(k,raw);return localStorage.getItem(k)===raw}catch{return false}};
 const validGrade=g=>/^(0[1-5])$/.test(String(g||""));
 function learner(){
- const child=R?.getLearner?.()||null;
- return child&&child.stage==="elementary"&&validGrade(child.grade)&&child.learnerId?child:null;
+ const ids=R?.activeIds?.()||{},child=R?.getLearner?.(ids.learnerId),family=R?.getFamily?.(ids.familyId);
+ return child&&family&&child.learnerId===ids.learnerId&&child.familyId===family.familyId&&
+  child.stage==="elementary"&&validGrade(child.grade)&&child.selfDirectedAdult!==true&&
+  family.learnerIds?.includes(child.learnerId)?child:null;
 }
 function isReady(){return location.origin==="https://vervenveda.com"&&Boolean(learner())}
 function needsAdult(){if(!isReady()){say("Choose an existing Elementary learner in the Family Portal.",true);return false}if(!$("adultConfirm").checked){say("A grown-up must confirm before changing this child's picture or preferences.",true);return false}return true}
@@ -167,7 +177,7 @@ function renderNext(){
  let rows=[];try{rows=C?.readLearner?.(activeId)||[]}catch{}
  const expected="/Khaemenes_Elementary.github.io/grades/grade-"+grade+"/";
  const match=Array.isArray(rows)?rows.filter(x=>{
-  if(x?.stage!=="elementary"||!x.nextHref)return false;
+  if(x?.learnerId!==activeId||x?.stage!=="elementary"||!x.nextHref)return false;
   const gradeText=String(x.grade||"");
   const tagged=gradeText===grade||gradeText==="grade-"+grade||gradeText===String(Number(grade));
   try{
@@ -185,7 +195,9 @@ function renderNext(){
  $("nextPill").textContent=match.length?"Learning continuation available":"Grade "+Number(grade)+" pathway";
 }
 function selectLearners(){
- const area=$("switcher"),select=$("learnerSelect"),family=R?.getFamily?.(),candidates=Array.isArray(family?.learners)?family.learners.filter(x=>x.stage==="elementary"&&validGrade(x.grade)):[];
+ const area=$("switcher"),select=$("learnerSelect"),ids=R?.activeIds?.()||{},family=R?.getFamily?.(ids.familyId),
+ candidates=Array.isArray(family?.learners)?family.learners.filter(x=>x?.learnerId&&x.familyId===family.familyId&&
+  x.stage==="elementary"&&validGrade(x.grade)&&family.learnerIds?.includes(x.learnerId)):[];
  select.replaceChildren();
  for(const c of candidates){const o=document.createElement("option");o.value=c.learnerId;o.textContent=(c.nickname||"Learner")+" · Grade "+Number(c.grade);select.append(o)}
  const active=learner();if(active)select.value=active.learnerId;
@@ -210,7 +222,7 @@ function refresh(){
 }
 for(const avatar of AVATARS){const b=document.createElement("button");b.type="button";b.className="secondary";b.dataset.value=avatar;b.textContent=avatar;b.setAttribute("aria-label","Use "+avatar+" avatar");b.addEventListener("click",()=>{if(!needsAdult())return;appearance.avatar=avatar;appearance.photo="";saveVisual()});$("avatars").append(b)}
 for(const theme of THEMES){const b=document.createElement("button");b.type="button";b.className="secondary";b.dataset.value=theme;b.textContent=theme.charAt(0).toUpperCase()+theme.slice(1);b.addEventListener("click",()=>{if(!needsAdult())return;appearance.theme=theme;saveVisual()});$("themes").append(b)}
-$("learnerSelect").addEventListener("change",e=>{const family=R?.getFamily?.(),l=family?.learners?.find(x=>x.learnerId===e.target.value&&x.stage==="elementary"&&validGrade(x.grade));if(l?.familyId===family?.familyId)R.setActive?.({familyId:family.familyId,learnerId:l.learnerId})});
+$("learnerSelect").addEventListener("change",e=>{const family=R?.getFamily?.(R?.activeIds?.().familyId),l=family?.learners?.find(x=>x.learnerId===e.target.value&&x.stage==="elementary"&&validGrade(x.grade));if(l?.familyId===family?.familyId&&family.learnerIds?.includes(l.learnerId))R.setActive?.({familyId:family.familyId,learnerId:l.learnerId})});
 $("pinClass").addEventListener("click",()=>updateClassPin(true));
 $("unpinClass").addEventListener("click",()=>updateClassPin(false));
 $("showGradePreview").addEventListener("click",()=>{
