@@ -31,12 +31,15 @@ function snapshot(){
  const state=verified(child.learnerId);
  const valid=report?.learnerId===child.learnerId&&report.courseId===COURSE&&report.grade==="03"&&report.stage==="elementary";
  if(!valid&&!state)return Object.freeze({kind:"pending"});
- const completed=valid&&Number.isInteger(report.progress?.completed)&&report.progress.completed>=0&&report.progress.completed<=36?
-  report.progress.completed:count(state);
+ const publishedCount=valid&&Number.isInteger(report.progress?.completed)&&report.progress.completed>=0&&report.progress.completed<=36?
+  report.progress.completed:null;
+ // Where available, the current verified learner-owned course state is authoritative.
+ const completed=state?count(state):publishedCount;
+ const differs=state&&publishedCount!==null&&completed!==publishedCount;
  return Object.freeze({kind:"report",nickname:child.nickname||"Grade 3 Scholar",completed,
  next:valid?String(report.nextTitle||"Open Grade 3").slice(0,120):"Open Grade 3 learning",
  needsReview:valid&&report.family?.needsAction===true,
- stale:!valid||report.stale===true,
+ stale:!valid||report.stale===true||Boolean(differs),
  midterm:state?typeof state.midterm==="number"&&state.midterm>=80&&state.midterm<=100:null,
  final:state?typeof state.final==="number"&&state.final>=80&&state.final<=100:null,
  portfolio:state?state.portfolio===true:null});
@@ -53,7 +56,7 @@ function render(){
  status.textContent=r.nickname+" · "+(r.completed===null?"No verified weekly count":r.completed+" of 36 integrated weeks reported")+
  ". Next step: "+r.next+".";
  details.textContent=(r.needsReview?"Family portfolio review requested. ":"")+
- (r.stale?"Open the Grade 3 course for the latest progress. ":"")+
+ (r.stale?"Open the Grade 3 course to reconcile or refresh the progress summary. ":"")+
  (r.midterm===null?"Midterm status not verified. ":"Midterm: "+(r.midterm?"mastered. ":"pending. "))+
  (r.final===null?"Final status not verified. ":"Final: "+(r.final?"mastered. ":"pending. "))+
  (r.portfolio===null?"Portfolio status not verified.":"Portfolio: "+(r.portfolio?"recorded complete.":"review pending."));
