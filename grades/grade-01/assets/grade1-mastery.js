@@ -41,10 +41,15 @@
   }
   function academyContext(){
     const learnerId=readJSON(ACTIVE_LEARNER_KEY,null),registry=readJSON(REGISTRY_KEY,null);
-    const learner=learnerId&&registry?.learners?.[learnerId] ? registry.learners[learnerId] : null;
+    const familyId=readJSON('khaemenes_active_family_v1',null);
+    const learner=typeof learnerId==='string'&&registry?.learners?.[learnerId]?.learnerId===learnerId
+      ?registry.learners[learnerId]:null;
+    const family=typeof familyId==='string'?registry?.families?.[familyId]:null;
+    const familyMatch=Boolean(learner&&family&&learner.familyId===familyId&&family.familyId===familyId&&
+      Array.isArray(family.learnerIds)&&family.learnerIds.includes(learnerId));
     const grade=String(learner?.grade||'').replace(/[^0-9]/g,'').padStart(2,'0');
     const stage=String(learner?.stage||'').trim().toLowerCase();
-    return {learner,match:Boolean(learner&&grade==='01'&&stage==='elementary')};
+    return {learner,selectedId:learnerId,match:Boolean(familyMatch&&grade==='01'&&stage==='elementary')};
   }
   function scopedKey(){
     const ctx=academyContext();
@@ -71,12 +76,14 @@
   function save(s){
     const normalized=normalizeState(s),ctx=academyContext(),k=scopedKey();
     try{
-      if(ctx.learner){
-        if(!ctx.match||!k) return false;
-        localStorage.setItem(k,JSON.stringify(normalized));
-      }else{
-        localStorage.setItem(KEY,JSON.stringify(normalized));
-      }
+      // Never fall back to an unassigned preview when a learner was selected
+      // but family membership or formal placement could not be validated.
+      if(ctx.selectedId&&!ctx.match)return false;
+      const target=ctx.match?k:KEY;
+      if(!target)return false;
+      const encoded=JSON.stringify(normalized);
+      localStorage.setItem(target,encoded);
+      if(localStorage.getItem(target)!==encoded)return false;
       scheduleContinuationPublish();
       return true;
     }catch{return false}
@@ -88,7 +95,9 @@
     try{
       const legacy=normalizeState(JSON.parse(localStorage.getItem(KEY)));
       if(localStorage.getItem(k)!==null) return false;
-      localStorage.setItem(k,JSON.stringify(legacy));
+      const encoded=JSON.stringify(legacy);
+      localStorage.setItem(k,encoded);
+      if(localStorage.getItem(k)!==encoded)return false;
       scheduleContinuationPublish();
       return true;
     }catch{return false}
