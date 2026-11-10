@@ -59,8 +59,10 @@ for(const grade of ["02","03","04","05"]){
   run();
   assert.match(view.innerHTML,/Certificate Locked/,grade+": unassigned preview issued an official certificate");
   map.set("khaemenes_active_learner_v1",JSON.stringify("fiction-A"));
-  map.set("khaemenes_family_registry_v1",JSON.stringify({learners:{"fiction-A":{learnerId:"fiction-A",grade,stage:"elementary",nickname:"Fiction A"}}}));
-  map.set("khaemenes.course:fiction-A:elementary-grade-"+grade,JSON.stringify({format:"khaemenes-course-state-v1",state:record}));
+  const familyId="fiction-family";
+  map.set("khaemenes_active_family_v1",JSON.stringify(familyId));
+  map.set("khaemenes_family_registry_v1",JSON.stringify({families:{[familyId]:{familyId,learnerIds:["fiction-A"]}},learners:{"fiction-A":{learnerId:"fiction-A",familyId,grade,stage:"elementary",nickname:"Fiction A"}}}));
+  map.set("khaemenes.course:fiction-A:elementary-grade-"+grade,JSON.stringify({format:"khaemenes-course-state-v1",learnerId:"fiction-A",courseId:"elementary-grade-"+grade,state:record}));
   run();
   assert.match(view.innerHTML,/Certificate of/,grade+": linked eligible learner incorrectly locked");
   map.set("khaemenes_active_learner_v1",JSON.stringify("fiction-B"));
