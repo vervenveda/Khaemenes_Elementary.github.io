@@ -14,14 +14,21 @@ for(const config of configs){
   const store=new Map();
   let active=null;
   const storage={getItem:k=>store.has(k)?store.get(k):null,setItem:(k,v)=>store.set(k,String(v)),removeItem:k=>store.delete(k)};
-  const registry={getLearner:()=>active,normalizeGrade:v=>String(v||"").replace(/[^0-9]/g,"").padStart(2,"0"),normalizeStage:v=>String(v||"").toLowerCase()};
+  const family={familyId:"synthetic-family",learnerIds:["student-A","student-B","student-preview"]};
+  const registry={
+    getLearner:(id)=>id?({"student-A":a,"student-B":b,"student-preview":preview}[id]||null):active,
+    getFamily:id=>id===family.familyId?family:null,
+    activeIds:()=>({familyId:family.familyId,learnerId:active?.learnerId||null}),
+    normalizeGrade:v=>String(v||"").replace(/[^0-9]/g,"").padStart(2,"0"),
+    normalizeStage:v=>String(v||"").toLowerCase()
+  };
   const context={window:null,CustomEvent:class{constructor(type,options){this.type=type;this.detail=options?.detail}},Date,JSON};
   context.window={localStorage:storage,KhaemenesFamilyRegistry:registry,dispatchEvent:()=>{},addEventListener:()=>{}};
   vm.runInNewContext(fs.readFileSync(config.file,"utf8"),context,{filename:config.file});
   const api=context.window[config.api];
-  const a={learnerId:"student-A",grade:config.grade,stage:"elementary",nickname:"A"};
-  const b={learnerId:"student-B",grade:config.grade,stage:"elementary",nickname:"B"};
-  const preview={learnerId:"student-preview",grade:"09",stage:"elementary",nickname:"Preview"};
+  const a={learnerId:"student-A",familyId:family.familyId,grade:config.grade,stage:"elementary",nickname:"A"};
+  const b={learnerId:"student-B",familyId:family.familyId,grade:config.grade,stage:"elementary",nickname:"B"};
+  const preview={learnerId:"student-preview",familyId:family.familyId,grade:"09",stage:"elementary",nickname:"Preview"};
   const key=id=>`khaemenes.course:${id}:elementary-grade-${config.grade}`;
   store.set(config.legacy,JSON.stringify({weekly:{1:97},student:"legacy"}));
   active=a;
@@ -70,7 +77,12 @@ for(const config of configs){
   context.window={localStorage:storage,KHAEMENES_GRADE01_CURRICULUM:{masteryThreshold:80,weeks:Array.from({length:36},(_,i)=>({week:i+1})),midterm:{unlockAfterWeek:18},final:{unlockAfterWeek:36}},addEventListener:()=>{},dispatchEvent:()=>{},setTimeout:()=>0,clearTimeout:()=>{},document};
   vm.runInNewContext(fs.readFileSync("grades/grade-01/assets/grade1-mastery.js","utf8"),context,{filename:"grades/grade-01/assets/grade1-mastery.js"});
   const api=context.window.Grade1Mastery;
-  const registry={learners:{"student-A":{learnerId:"student-A",grade:"01",stage:"elementary",nickname:"A"},"student-B":{learnerId:"student-B",grade:"01",stage:"elementary",nickname:"B"},"student-preview":{learnerId:"student-preview",grade:"02",stage:"elementary",nickname:"Preview"}}};
+  const familyId="synthetic-family";
+  const registry={families:{[familyId]:{familyId,learnerIds:["student-A","student-B","student-preview"]}},
+    learners:{"student-A":{learnerId:"student-A",familyId,grade:"01",stage:"elementary",nickname:"A"},
+    "student-B":{learnerId:"student-B",familyId,grade:"01",stage:"elementary",nickname:"B"},
+    "student-preview":{learnerId:"student-preview",familyId,grade:"02",stage:"elementary",nickname:"Preview"}}};
+  store.set("khaemenes_active_family_v1",JSON.stringify(familyId));
   store.set("khaemenes_family_registry_v1",JSON.stringify(registry));
   const active=id=>store.set("khaemenes_active_learner_v1",JSON.stringify(id));
   const key=id=>"khaemenes.course:"+id+":elementary-grade-01";
