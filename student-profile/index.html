@@ -210,7 +210,22 @@ function refresh(){
 }
 for(const avatar of AVATARS){const b=document.createElement("button");b.type="button";b.className="secondary";b.dataset.value=avatar;b.textContent=avatar;b.setAttribute("aria-label","Use "+avatar+" avatar");b.addEventListener("click",()=>{if(!needsAdult())return;appearance.avatar=avatar;appearance.photo="";saveVisual()});$("avatars").append(b)}
 for(const theme of THEMES){const b=document.createElement("button");b.type="button";b.className="secondary";b.dataset.value=theme;b.textContent=theme.charAt(0).toUpperCase()+theme.slice(1);b.addEventListener("click",()=>{if(!needsAdult())return;appearance.theme=theme;saveVisual()});$("themes").append(b)}
-$("learnerSelect").addEventListener("change",e=>{const family=R?.getFamily?.(),l=family?.learners?.find(x=>x.learnerId===e.target.value&&x.stage==="elementary"&&validGrade(x.grade));if(l?.familyId===family?.familyId)R.setActive?.({familyId:family.familyId,learnerId:l.learnerId})});
+$("learnerSelect").addEventListener("change",e=>{
+ const select=e.target,id=select.value,family=R?.getFamily?.(),ids=R?.activeIds?.()||{};
+ const l=family?.learners?.find(x=>x.learnerId===id&&x.stage==="elementary"&&validGrade(x.grade));
+ const adult=R?.getAdult?.(ids.adultId);
+ const permitted=l?.familyId===family?.familyId&&family?.learnerIds?.includes(id)&&
+  family?.adultIds?.includes(ids.adultId)&&ids.familyId===family.familyId&&
+  adult&&R?.canAdult?.(ids.adultId,id,"progress.view")===true;
+ if(!permitted){select.value=activeId;say("This adult cannot open that Elementary learner's profile.",true);return}
+ try{
+  R.setActive({familyId:family.familyId,adultId:ids.adultId,learnerId:id});
+  const after=R.activeIds?.()||{};
+  if(after.familyId!==family.familyId||after.adultId!==ids.adultId||after.learnerId!==id)
+   throw Error("Learner switch did not persist");
+  $("adultConfirm").checked=false;
+ }catch{select.value=activeId;say("Learner switch could not be verified. Existing work is unchanged.",true)}
+});
 $("pinClass").addEventListener("click",()=>updateClassPin(true));
 $("unpinClass").addEventListener("click",()=>updateClassPin(false));
 $("showGradePreview").addEventListener("click",()=>{
