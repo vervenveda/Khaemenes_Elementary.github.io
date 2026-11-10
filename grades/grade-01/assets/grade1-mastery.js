@@ -61,6 +61,7 @@
   function load(){
     try{
       const ctx=academyContext(),k=scopedKey();
+      if(ctx.selectedId&&!ctx.match)return blankState();
       if(ctx.learner){
         if(!ctx.match||!k) return blankState();
         const raw=localStorage.getItem(k);
