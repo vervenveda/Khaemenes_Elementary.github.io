@@ -8,14 +8,14 @@ RESOLUTION="integration/elementary-family-retention-reconcile-2026-11-10"
 LOCAL="integration/elementary-audit-merge-review-2026-11-10"
 EXPECTED_MAIN="a314176710fcd0b2dc249a35054753c191d221e1"
 EXPECTED_AUDIT="4e9e8fa78849c0f280cc996337d1ad0e05148ae4"
-EXPECTED_RESOLUTION="06e8546d10e8cdf295504a1ee4b7feac64945327"
+EXPECTED_PROFILE_BLOB="27a6b9abbfab85d94dfc0cea639e146b7ece6078"
 
 [ -d .git ] || { echo "Run inside an existing clone of $REPO" >&2; exit 1; }
 [ -z "$(git status --porcelain)" ] || { echo "Working tree has changes; stash/commit before merging." >&2; exit 1; }
 git fetch origin main "$SOURCE" "$RESOLUTION"
 [ "$(git rev-parse origin/main)" = "$EXPECTED_MAIN" ] || { echo "main moved; stop and re-audit." >&2; exit 1; }
 [ "$(git rev-parse origin/$SOURCE)" = "$EXPECTED_AUDIT" ] || { echo "Audit branch moved; stop and re-audit." >&2; exit 1; }
-[ "$(git rev-parse origin/$RESOLUTION)" = "$EXPECTED_RESOLUTION" ] || { echo "Reconciliation candidate moved; stop and re-audit." >&2; exit 1; }
+[ "$(git rev-parse "origin/$RESOLUTION:student-profile/index.html")" = "$EXPECTED_PROFILE_BLOB" ] || { echo "Reviewed profile content changed; stop and re-audit." >&2; exit 1; }
 
 git switch -c "$LOCAL" origin/main
 # A merge conflict in student-profile/index.html is expected. Do not swallow unexpected errors.
