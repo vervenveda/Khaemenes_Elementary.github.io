@@ -1,0 +1,33 @@
+name: Elementary Integration Validation
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - integration/elementary-family-retention-reconcile-2026-11-10
+  pull_request:
+    paths:
+      - 'grades/**'
+      - 'student-profile/**'
+      - 'assets/**'
+      - 'tests/**'
+      - '.github/workflows/elementary-integration-validation.yml'
+permissions:
+  contents: read
+jobs:
+  synthetic-retention-and-guardrails:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript source syntax
+        run: |
+          node --check grades/grade-01/assets/grade1-mastery.js
+          node --check grades/grade-02/assets/khaemenes-grade2-continuity.js
+          node --check grades/grade-03/assets/khaemenes-grade3-continuity.js
+          node --check grades/grade-04/assets/khaemenes-grade4-continuity.js
+          node --check grades/grade-05/assets/khaemenes-grade5-continuity.js
+      - name: Grade 01 through 05 regression suite
+        run: node --test tests/*.test.cjs
