@@ -39,7 +39,7 @@ function activeLearner(){
   if(!learner)return null;
   const grade=String(learner.grade||"").replace(/[^0-9]/g,"").padStart(2,"0");
   const stage=String(learner.stage||"").trim().toLowerCase();
-  if(stage!=="elementary"||grade!==routeGrade())return null;
+  if(!(stage==="elementary"&&grade===routeGrade()))return null;
   if(grade==="03"||grade==="04"||grade==="05"){
     const family=learner.familyId?registry?.families?.[learner.familyId]:null;
     if(learner.learnerId!==id||learner.selfDirectedAdult===true||!family?.learnerIds?.includes(id))return null;
