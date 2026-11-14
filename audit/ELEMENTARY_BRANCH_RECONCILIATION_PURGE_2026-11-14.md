@@ -54,3 +54,16 @@ The one-time workflow:
 7. never targets `main` or `hardening/archaemenes-elementary`.
 
 No real learner data is read or modified by this cleanup.
+
+
+## Executed result
+- One-time cleanup run: `43620926448` — **PASS**.
+- All exact source-head checks passed before deletion.
+- Full synthetic curriculum, learner isolation, formal boundary, retention, family and forensic suites passed inside the cleanup job.
+- **19 approved branch refs were deleted successfully.**
+- Remote branch re-list immediately after cleanup contained only:
+  - `main`
+  - `hardening/archaemenes-elementary`
+- The one-time workflow `.github/workflows/elementary-branch-retirement-20261114.yml` was then removed from `main`, so no branch-deletion workflow remains armed.
+
+The preserved historical branch remains intentionally outside the purge because its 84 unique commits have not been exhaustively mapped file-by-file to current equivalents. Its mentor-authority concepts are superseded by current contract/manifest metadata, but historical runtime preservation is the safer forensic choice until that final archive audit is completed.
