@@ -32,18 +32,23 @@ const rows=[];
     replaceLegacy:/replaceLegacy\s*:\s*true/i.test(s),
     fiveActions:["Academy Home","Student Profile","Family","Teacher","Middle School"].every(x=>s.includes('label:"'+x+'"')),
     unmarkedHeader:count(/<header\b(?![^>]*data-vnv-header-legacy)(?![^>]*id=["\']vnvHeaderAutoPopulate["\'])[^>]*>/gi,s),
-    portfolioControls:rel==="grades/portfolio/index.html" ? /data-vnv-page-controls/.test(s)&&/id=["\']scanBtn["\']/.test(s)&&/id=["\']printTop["\']/.test(s) : true
+    headerOpen:count(/<header\b[^>]*>/gi,s),
+    headerClose:count(/<\/header\s*>/gi,s),
+    portfolioControls:rel==="grades/portfolio/index.html"
+      ? /<section\b[^>]*data-vnv-page-controls[^>]*>[\s\S]*?id=["\']scanBtn["\'][\s\S]*?id=["\']printTop["\'][\s\S]*?<\/section>/i.test(s)
+      : true
    });
   }
  }
 })(ROOT);
 rows.sort((a,b)=>a.path.localeCompare(b.path));
-const bad=rows.filter(r=>!(r.loader===1&&r.contract===1&&r.title&&r.subtitle&&r.icon&&r.replaceLegacy&&r.fiveActions&&r.unmarkedHeader===0&&r.portfolioControls));
+const bad=rows.filter(r=>!(r.loader===1&&r.contract===1&&r.title&&r.subtitle&&r.icon&&r.replaceLegacy&&r.fiveActions&&r.unmarkedHeader===0&&r.headerOpen===r.headerClose&&r.portfolioControls));
 console.log("ELEMENTARY OFFICIAL HEADER LANDING AUDIT");
 console.log("REAL_LANDINGS="+rows.length);
 console.log("COMPLIANT="+(rows.length-bad.length));
 console.log("NONCOMPLIANT="+bad.length);
 console.log("UNMARKED_LEGACY_HEADERS="+rows.reduce((n,r)=>n+r.unmarkedHeader,0));
+console.log("UNBALANCED_HEADER_TAG_PAGES="+rows.filter(r=>r.headerOpen!==r.headerClose).length);
 console.log("PORTFOLIO_CONTROLS_PRESERVED="+rows.find(r=>r.path==="grades/portfolio/index.html")?.portfolioControls);
 bad.forEach(r=>console.log("BAD|"+JSON.stringify(r)));
 if(rows.length!==49||bad.length)process.exitCode=2;

@@ -7,6 +7,7 @@ on:
       - "grades/grade-*/index.html"
       - "tests/elementary-profile-browser-smoke.mjs"
       - "tests/student-profile-sibling-isolation.test.cjs"
+      - "tools/audit-elementary-official-header.mjs"
       - ".github/workflows/elementary-profile-browser.yml"
   workflow_dispatch:
 permissions:
@@ -16,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      # The profile is one of the 49 official Elementary header landing surfaces.
       - uses: actions/checkout@v4
         with:
           persist-credentials: false

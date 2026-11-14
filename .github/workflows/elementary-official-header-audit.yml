@@ -26,4 +26,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
-      - run: node tools/audit-elementary-official-header.mjs
+      - name: Verify official Elementary landing header contract
+        run: node tools/audit-elementary-official-header.mjs
+      - name: Verify auto-ticker still renders on all content pages
+        run: node tools/audit-elementary-autoticker.mjs
