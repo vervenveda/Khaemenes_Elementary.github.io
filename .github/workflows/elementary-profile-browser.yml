@@ -6,6 +6,7 @@ on:
       - "student-profile/**"
       - "grades/grade-*/index.html"
       - "tests/elementary-profile-browser-smoke.mjs"
+      - "tests/student-profile-sibling-isolation.test.cjs"
       - ".github/workflows/elementary-profile-browser.yml"
   workflow_dispatch:
 permissions:
