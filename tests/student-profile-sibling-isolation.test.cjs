@@ -5,7 +5,7 @@ test("sibling selection requires current adult and linked learner membership",()
  assert.ok(html.includes('R?.getAdult?.(ids.adultId)'));
  assert.ok(html.includes('R?.canAdult?.(ids.adultId,id,"progress.view")===true'));
  assert.ok(html.includes('family?.adultIds?.includes(ids.adultId)'));
- assert.ok(html.includes('family?.learnerIds?.includes(id)'));
+ assert.ok(html.includes('family&&l?.familyId===family.familyId&&family.learnerIds?.includes(l.learnerId)'));
 });
 test("sibling switch verifies persisted family adult and learner",()=>{
  assert.ok(html.includes('after.familyId!==family.familyId'));
