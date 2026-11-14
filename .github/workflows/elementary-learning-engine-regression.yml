@@ -10,6 +10,8 @@ on:
       - 'assets/khaemenes-elementary-learning-ledger.js'
       - 'assets/khaemenes-elementary-assessment-engine.js'
       - 'assets/khaemenes-elementary-experience.js'
+      - 'assets/khaemenes-grade-*-family-view.js'
+      - 'assets/khaemenes-grade4-late-year-depth.js'
       - 'grades/portfolio/index.html'
       - 'mentor-manifest.json'
       - 'mentor-contract.json'
@@ -29,6 +31,8 @@ on:
       - 'tests/elementary-learner-isolation.test.cjs'
       - 'tests/elementary-formal-boundaries.test.cjs'
       - 'tests/elementary-grade1-5-lesson-retention.test.cjs'
+      - 'tests/elementary-family-report.test.cjs'
+      - 'tests/grade-*.test.cjs'
       - '.github/workflows/elementary-learning-engine-regression.yml'
   pull_request:
     paths:
@@ -37,6 +41,8 @@ on:
       - 'assets/khaemenes-elementary-learning-ledger.js'
       - 'assets/khaemenes-elementary-assessment-engine.js'
       - 'assets/khaemenes-elementary-experience.js'
+      - 'assets/khaemenes-grade-*-family-view.js'
+      - 'assets/khaemenes-grade4-late-year-depth.js'
       - 'grades/portfolio/index.html'
       - 'mentor-manifest.json'
       - 'mentor-contract.json'
@@ -56,6 +62,8 @@ on:
       - 'tests/elementary-learner-isolation.test.cjs'
       - 'tests/elementary-formal-boundaries.test.cjs'
       - 'tests/elementary-grade1-5-lesson-retention.test.cjs'
+      - 'tests/elementary-family-report.test.cjs'
+      - 'tests/grade-*.test.cjs'
       - '.github/workflows/elementary-learning-engine-regression.yml'
   workflow_dispatch:
 
@@ -86,3 +94,18 @@ jobs:
         run: node tests/elementary-formal-boundaries.test.cjs
       - name: Validate Grade 01–05 learner record retention and write readback
         run: node --test tests/elementary-grade1-5-lesson-retention.test.cjs
+      - name: Validate reconciled Grade 01–05 family and forensic guardrails
+        run: |
+          node --test \
+            tests/elementary-family-report.test.cjs \
+            tests/grade-one-family-guardrails.test.cjs \
+            tests/grade-two-family-guardrails.test.cjs \
+            tests/grade-two-post-profile-forensic.test.cjs \
+            tests/grade-three-family-guardrails.test.cjs \
+            tests/grade-three-instructional-forensic.test.cjs \
+            tests/grade-three-deep-forensic-round3.test.cjs \
+            tests/grade-four-family-guardrails.test.cjs \
+            tests/grade-four-topology-repairs.test.cjs \
+            tests/grade-four-late-year-instructional-depth.test.cjs \
+            tests/grade-four-focus-alignment-forensic.test.cjs \
+            tests/grade-five-family-guardrails.test.cjs
