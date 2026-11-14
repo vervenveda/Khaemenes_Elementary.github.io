@@ -1,0 +1,23 @@
+name: Elementary Auto Ticker Coverage Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/audit-elementary-autoticker.mjs'
+      - '.github/workflows/elementary-autoticker-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Audit every Elementary HTML surface
+        run: node tools/audit-elementary-autoticker.mjs
