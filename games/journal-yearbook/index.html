@@ -17,8 +17,13 @@
 .writerTools{display:flex;gap:7px;flex-wrap:wrap;margin:7px 0}.writerTools button{font-size:.8rem;padding:7px 9px}
 .wordCount{text-align:right;color:var(--muted);font-size:.78rem;margin-top:3px}
 @media(max-width:700px){.eirenMentor{grid-template-columns:auto 1fr}.eirenTools{grid-column:1/-1;justify-content:center}}
-</style></head><body>
-<header><div class="shell nav"><div class="badge">K</div><div class="brand"><strong>My School Year</strong><small>Elementary Journal · Memory Book · Yearbook</small></div><button id="printTop">🖨 Print</button></div></header>
+</style><style data-vnv-page-controls-style>
+[data-vnv-page-controls]{position:relative;z-index:40;border-bottom:1px solid rgba(18,23,19,.14);background:rgba(255,253,248,.97);color:inherit}
+[data-vnv-page-controls]>.wrap,[data-vnv-page-controls]>.shell{padding-top:14px;padding-bottom:14px}
+@media print{[data-vnv-page-controls]{display:none!important}}
+</style>
+</head><body>
+<section data-vnv-page-controls class="vnv-page-controls"><div class="shell nav"><div class="badge">K</div><div class="brand"><strong>My School Year</strong><small>Elementary Journal · Memory Book · Yearbook</small></div><button id="printTop">🖨 Print</button></div></section>
 <section class="hero"><div class="shell heroBox"><small>WRITE · DRAW · REMEMBER · GROW</small><h1>My School Year ✏️📚</h1><p>A private, local-first journal for Grades 1–5. Capture 36 weeks of learning, favorite moments, drawings, reflections, and a photo yearbook—with Eiren nearby to encourage the writer without taking over the writing.</p></div></section>
 <main class="shell">
 <section class="eirenMentor" aria-label="Eiren writing mentor">
@@ -111,5 +116,23 @@ window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false,links:discovered.lengt
 {label:"Family Portal",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
 {label:"Verve N Veda",href:"https://vervenveda.com/"}
 ]});})();
+</script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script data-vnv-elementary-header-contract="v2">
+window.VNV_HEADER?.mount({
+ title:"Khaemenes Elementary Academy",
+ subtitle:"Grades 01–05",
+ icon:"K",
+ home:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/",
+ replaceLegacy:true,
+ legacySelectors:["[data-vnv-header-legacy]"],
+ actions:[
+  {label:"Academy Home",href:"https://vervenveda.com/Khaemenes_Academy.github.io/"},
+  {label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+  {label:"Family",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+  {label:"Teacher",href:"https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/"},
+  {label:"Middle School",href:"https://vervenveda.com/Khaemenes_Middle.github.io/"}
+ ]
+});
 </script>
 </body></html>

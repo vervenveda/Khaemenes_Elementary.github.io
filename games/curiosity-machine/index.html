@@ -58,9 +58,14 @@ h1,h2,h3,h4{font-family:var(--serif)}h1{margin:10px 0 4px;font-size:clamp(2.9rem
 <link rel="stylesheet" href="../../assets/elementary-landing-chrome.css" data-elementary-landing-chrome>
 <link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.css">
 <link rel="stylesheet" href="../../assets/elementary-seven-game-regression.css" data-seven-game-regression>
+<style data-vnv-page-controls-style>
+[data-vnv-page-controls]{position:relative;z-index:40;border-bottom:1px solid rgba(18,23,19,.14);background:rgba(255,253,248,.97);color:inherit}
+[data-vnv-page-controls]>.wrap,[data-vnv-page-controls]>.shell{padding-top:14px;padding-bottom:14px}
+@media print{[data-vnv-page-controls]{display:none!important}}
+</style>
 </head>
 <body>
-<header data-khae-header class="khae-global-campus-header">
+<header data-vnv-header-legacy data-khae-header class="khae-global-campus-header">
   <div data-khae-header-inner>
     <a data-khae-brand href="https://vervenveda.com/Khaemenes_Academy.github.io/" aria-label="Khaemenes Academy home">
       <span data-khae-brand-mark>1–5</span>
@@ -79,7 +84,7 @@ h1,h2,h3,h4{font-family:var(--serif)}h1{margin:10px 0 4px;font-size:clamp(2.9rem
     <div data-vnv-ecosystem-slot aria-label="Ecosystem menu"></div>
   </div>
 </header>
-<header><div class="shell nav"><div class="brand"><div class="mark">💭</div><div><strong>Khaemenes Elementary · Curiosity Machine</strong><small>Grades 1–5 · Science · Writing · Reasoning</small></div></div><div></div><div class="head-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></header>
+<section data-vnv-page-controls class="vnv-page-controls"><div class="shell nav"><div class="brand"><div class="mark">💭</div><div><strong>Khaemenes Elementary · Curiosity Machine</strong><small>Grades 1–5 · Science · Writing · Reasoning</small></div></div><div></div><div class="head-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></section>
 
 <section class="hero"><div class="shell"><div class="hero-card"><span class="eyebrow">Predict → Explain → Draw → Test → Observe → Revise</span><h1>Curiosity Machine 💭</h1><p>One big question at a time. Make a prediction, explain your thinking, sketch what you expect, design a safe test or thought experiment, record evidence, then revise your idea.</p><div class="badges"><span>Grades 1–5</span><span>Developmentally Appropriate Prompts</span><span>Science + Writing</span><span>Drawing Canvas</span><span>Testing Planner</span><span>Evidence</span><span>Reflection</span><span>Local Portfolio</span></div></div></div></section>
 
@@ -208,7 +213,6 @@ $("gradeSelect").value=s.grade;$("topicSelect").value=s.topic;$("modeSelect").va
 </script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.js" defer></script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-menu.js" defer></script>
-<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.js" defer></script>
 <!-- VNV_BETA_PROGRAM_V2 -->
 
 
@@ -216,4 +220,22 @@ $("gradeSelect").value=s.grade;$("topicSelect").value=s.topic;$("modeSelect").va
 <!-- Verve N Veda · canonical auto-populating page-link ticker -->
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false});</script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script data-vnv-elementary-header-contract="v2">
+window.VNV_HEADER?.mount({
+ title:"Khaemenes Elementary Academy",
+ subtitle:"Grades 01–05",
+ icon:"K",
+ home:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/",
+ replaceLegacy:true,
+ legacySelectors:["[data-vnv-header-legacy]"],
+ actions:[
+  {label:"Academy Home",href:"https://vervenveda.com/Khaemenes_Academy.github.io/"},
+  {label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+  {label:"Family",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+  {label:"Teacher",href:"https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/"},
+  {label:"Middle School",href:"https://vervenveda.com/Khaemenes_Middle.github.io/"}
+ ]
+});
+</script>
 </body></html>

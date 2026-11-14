@@ -58,9 +58,14 @@ canvas{display:block;width:100%;max-width:100%;background:#fff;touch-action:none
 @media(max-width:1040px){.layout{grid-template-columns:1fr}.side{position:static}}@media(max-width:860px){.studio-grid{grid-template-columns:1fr}.toolbar{grid-template-columns:repeat(2,1fr)}.label-grid,.color-theory{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}}@media(max-width:520px){.toolbar,.voice-grid{grid-template-columns:1fr}.nav{grid-template-columns:1fr auto}.brand small{display:none}.shape-grid,.stamp-grid,.pattern-sampler{grid-template-columns:repeat(2,1fr)}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}@media print{header,.head-actions,.side,.actions,.tabs,.tool-panel,.toolbar{display:none!important}body{background:#fff}.hero{padding:6px}.hero-card{background:#fff!important;color:#111;border:1px solid #999;box-shadow:none}.hero p{color:#111}.layout{display:block}.card,.panel,.challenge{box-shadow:none}.workspace{display:block!important}.canvas-wrap{border:1px solid #bbb}}
 </style>
+<style data-vnv-page-controls-style>
+[data-vnv-page-controls]{position:relative;z-index:40;border-bottom:1px solid rgba(18,23,19,.14);background:rgba(255,253,248,.97);color:inherit}
+[data-vnv-page-controls]>.wrap,[data-vnv-page-controls]>.shell{padding-top:14px;padding-bottom:14px}
+@media print{[data-vnv-page-controls]{display:none!important}}
+</style>
 </head>
 <body>
-<header><div class="shell nav"><div class="brand"><div class="mark">🎨</div><div><strong>Khaemenes Elementary · Bazaar Junior Art Studio</strong><small>Grades 1–5 · Drawing · Symmetry · Pattern · Color · Posters · Exhibit Labels</small></div></div><div></div><div class="head-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></header>
+<section data-vnv-page-controls class="vnv-page-controls"><div class="shell nav"><div class="brand"><div class="mark">🎨</div><div><strong>Khaemenes Elementary · Bazaar Junior Art Studio</strong><small>Grades 1–5 · Drawing · Symmetry · Pattern · Color · Posters · Exhibit Labels</small></div></div><div></div><div class="head-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></section>
 
 <section class="hero"><div class="shell"><div class="hero-card"><span class="eyebrow">Elementary Visual Arts · Create → Refine → Label → Exhibit</span><h1>Bazaar Junior Art Studio 🎨</h1><p>A child-centered digital art studio for Grades 1–5 with brushes, symmetry, shapes, collage-style stamps, pattern tools, color theory, poster design, exhibit labels, local saving, and print/export. Finished work can link outward to the broader Bazaar Art world with adult supervision.</p><div class="badges"><span>Grades 1–5</span><span>Digital Canvas</span><span>Symmetry</span><span>Shapes</span><span>Pattern Tools</span><span>Stamps</span><span>Poster Mode</span><span>Exhibit Labels</span><span>PNG Export</span><span>Local Save</span></div></div></div></section>
 
@@ -207,6 +212,24 @@ window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false,links:discovered.lengt
 {label:"Family Portal",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
 {label:"Verve N Veda",href:"https://vervenveda.com/"}
 ]});})();
+</script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script data-vnv-elementary-header-contract="v2">
+window.VNV_HEADER?.mount({
+ title:"Khaemenes Elementary Academy",
+ subtitle:"Grades 01–05",
+ icon:"K",
+ home:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/",
+ replaceLegacy:true,
+ legacySelectors:["[data-vnv-header-legacy]"],
+ actions:[
+  {label:"Academy Home",href:"https://vervenveda.com/Khaemenes_Academy.github.io/"},
+  {label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+  {label:"Family",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+  {label:"Teacher",href:"https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/"},
+  {label:"Middle School",href:"https://vervenveda.com/Khaemenes_Middle.github.io/"}
+ ]
+});
 </script>
 </body>
 </html>

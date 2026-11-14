@@ -50,9 +50,14 @@ canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
 @media(max-width:900px){.grid{grid-template-columns:1fr}.familyGrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.bond{gap:14px}.whole,.part{width:110px;height:110px}.connector{display:none}.portfolio{grid-template-columns:1fr}.tenframe{grid-template-columns:repeat(5,42px);grid-template-rows:repeat(2,42px)}}
 @media print{body{background:#fff}.hero,.tabs,.no-print,.card:first-child{display:none!important}.panel{display:none!important}#writePanel{display:block!important}.grid{display:block}.card{box-shadow:none;border:0}.numberSheet{border:1px solid #222}}
 </style>
+<style data-vnv-page-controls-style>
+[data-vnv-page-controls]{position:relative;z-index:40;border-bottom:1px solid rgba(18,23,19,.14);background:rgba(255,253,248,.97);color:inherit}
+[data-vnv-page-controls]>.wrap,[data-vnv-page-controls]>.shell{padding-top:14px;padding-bottom:14px}
+@media print{[data-vnv-page-controls]{display:none!important}}
+</style>
 </head>
 <body><div class="app">
-<header class="hero">
+<section data-vnv-page-controls class="hero vnv-page-controls">
 <div style="font-size:42px">🌱 🔢 🌼 ✍️</div>
 <h1>Number Bonds Garden</h1>
 <p>Compose and decompose 0–10, see the parts inside the whole, grow into early addition and subtraction, and practice writing the numbers you use.</p>
@@ -71,7 +76,7 @@ canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
 <button data-tab="write">✍️ Write Numbers</button>
 <button data-tab="portfolio">📁 Growth</button>
 </div>
-</header>
+</section>
 
 <section class="panel active" id="buildPanel">
 <div class="grid">
@@ -186,5 +191,23 @@ window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false,links:discovered.lengt
 {label:"Family Portal",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
 {label:"Verve N Veda",href:"https://vervenveda.com/"}
 ]});})();
+</script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script data-vnv-elementary-header-contract="v2">
+window.VNV_HEADER?.mount({
+ title:"Khaemenes Elementary Academy",
+ subtitle:"Grades 01–05",
+ icon:"K",
+ home:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/",
+ replaceLegacy:true,
+ legacySelectors:["[data-vnv-header-legacy]"],
+ actions:[
+  {label:"Academy Home",href:"https://vervenveda.com/Khaemenes_Academy.github.io/"},
+  {label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+  {label:"Family",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+  {label:"Teacher",href:"https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/"},
+  {label:"Middle School",href:"https://vervenveda.com/Khaemenes_Middle.github.io/"}
+ ]
+});
 </script>
 </body></html>

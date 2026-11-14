@@ -21,11 +21,16 @@ button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1400px;mar
 .badge{display:inline-block;padding:4px 8px;border-radius:99px;background:var(--leaf);font-size:.74rem;margin:2px}.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.sample{border:1px solid var(--line);border-radius:12px;padding:8px;background:#fff}.sample img{width:100%;border-radius:7px}
 @media(max-width:900px){.grid{grid-template-columns:1fr}.familyGrid{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.soundBox{width:78px;height:78px}.portfolio{grid-template-columns:1fr}.familyGrid{grid-template-columns:repeat(2,1fr)}}
 @media print{body{background:#fff}.hero,.tabs,.no-print,.card:first-child{display:none!important}.panel{display:none!important}#writePanel{display:block!important}.grid{display:block}.card{box-shadow:none;border:0}.writeSheet{max-width:none}}
-</style></head>
+</style><style data-vnv-page-controls-style>
+[data-vnv-page-controls]{position:relative;z-index:40;border-bottom:1px solid rgba(18,23,19,.14);background:rgba(255,253,248,.97);color:inherit}
+[data-vnv-page-controls]>.wrap,[data-vnv-page-controls]>.shell{padding-top:14px;padding-bottom:14px}
+@media print{[data-vnv-page-controls]{display:none!important}}
+</style>
+</head>
 <body><div class="app">
-<header class="hero"><div style="font-size:42px">👂 🔤 🌱 ✍️</div><h1>Sound Builder / CVC Word Lab</h1><p>Hear it. Stretch it. Build it. Blend it. Read it. Write it.</p>
+<section data-vnv-page-controls class="hero vnv-page-controls"><div style="font-size:42px">👂 🔤 🌱 ✍️</div><h1>Sound Builder / CVC Word Lab</h1><p>Hear it. Stretch it. Build it. Blend it. Read it. Write it.</p>
 <div class="controls"><select id="level"><option>Preschool Readiness</option><option selected>Kindergarten</option><option>Grade 1</option><option>Grade 2 / Review</option></select><input id="name" placeholder="Learner name"><button id="saveProfile">Save Learner</button><button id="guide">🔊 Friendly Guide</button></div>
-<div class="tabs"><button class="active" data-tab="build">🔤 Build</button><button data-tab="segment">👂 Segment</button><button data-tab="detective">🔎 Sound Detective</button><button data-tab="families">🌻 Word Families</button><button data-tab="write">✍️ Build → Write</button><button data-tab="portfolio">📁 Growth</button></div></header>
+<div class="tabs"><button class="active" data-tab="build">🔤 Build</button><button data-tab="segment">👂 Segment</button><button data-tab="detective">🔎 Sound Detective</button><button data-tab="families">🌻 Word Families</button><button data-tab="write">✍️ Build → Write</button><button data-tab="portfolio">📁 Growth</button></div></section>
 
 <section class="panel active" id="buildPanel"><div class="grid"><aside class="card"><h2>Adaptive Sound Garden</h2><p class="note">Practice changes gently based on successful and difficult sound patterns. There are no leaderboards.</p><div id="skills"></div><h3>Round</h3><div class="progressDots" id="dots"></div><div class="actions"><button id="newBuild">New Word</button></div></aside><main class="card stage"><div class="prompt" id="buildPrompt">Listen to the word. Build it with three sounds.</div><div class="picture" id="picture">🐱</div><button id="hearWord">🔊 Hear Word</button><div class="soundBoxes" id="boxes"></div><div class="tiles" id="tiles"></div><div class="actions"><button id="hearSounds">👂 Stretch Sounds</button><button id="blend" class="primary">🌱 Blend It!</button><button id="check">Check Word</button></div><div class="feedback" id="feedback"></div></main></div></section>
 
@@ -94,5 +99,23 @@ window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false,links:discovered.lengt
 {label:"Family Portal",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
 {label:"Verve N Veda",href:"https://vervenveda.com/"}
 ]});})();
+</script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script data-vnv-elementary-header-contract="v2">
+window.VNV_HEADER?.mount({
+ title:"Khaemenes Elementary Academy",
+ subtitle:"Grades 01–05",
+ icon:"K",
+ home:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/",
+ replaceLegacy:true,
+ legacySelectors:["[data-vnv-header-legacy]"],
+ actions:[
+  {label:"Academy Home",href:"https://vervenveda.com/Khaemenes_Academy.github.io/"},
+  {label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+  {label:"Family",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+  {label:"Teacher",href:"https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/"},
+  {label:"Middle School",href:"https://vervenveda.com/Khaemenes_Middle.github.io/"}
+ ]
+});
 </script>
 </body></html>

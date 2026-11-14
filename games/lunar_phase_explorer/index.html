@@ -144,7 +144,7 @@ footer{margin-top:15px;text-align:center;color:var(--muted);font-size:.82rem;lin
 </head>
 <body>
 
-<header class="creche-header" aria-label="Crèche Preschool Portal">
+<header data-vnv-header-legacy class="creche-header" aria-label="Crèche Preschool Portal">
   <div class="creche-mark" aria-hidden="true">🌙</div>
   <div>
     <p class="creche-eyebrow">Khaemenes Academy · Elementary Portal</p>
@@ -157,7 +157,7 @@ footer{margin-top:15px;text-align:center;color:var(--muted);font-size:.82rem;lin
 </header>
 
 <main class="wrap">
-<header class="hero">
+<header data-vnv-header-legacy class="hero">
 <div class="mascot" aria-hidden="true">😊</div>
 <h1>Explorers Moon Adventure</h1>
 <p class="subtitle">Explore the eight main lunar phases, learn why the Moon appears to change shape, and practice safe sky observation.</p>
@@ -510,5 +510,23 @@ window.addEventListener('beforeunload',()=>{
 <!-- Verve N Veda · canonical auto-populating page-link ticker -->
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false});</script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script data-vnv-elementary-header-contract="v2">
+window.VNV_HEADER?.mount({
+ title:"Khaemenes Elementary Academy",
+ subtitle:"Grades 01–05",
+ icon:"K",
+ home:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/",
+ replaceLegacy:true,
+ legacySelectors:["[data-vnv-header-legacy]"],
+ actions:[
+  {label:"Academy Home",href:"https://vervenveda.com/Khaemenes_Academy.github.io/"},
+  {label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+  {label:"Family",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+  {label:"Teacher",href:"https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/"},
+  {label:"Middle School",href:"https://vervenveda.com/Khaemenes_Middle.github.io/"}
+ ]
+});
+</script>
 </body>
 </html>

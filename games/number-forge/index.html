@@ -151,9 +151,14 @@ h1{margin:10px auto 4px;max-width:900px;font-size:clamp(2.9rem,7vw,5.4rem);line-
 @media(max-width:470px){.toolbar{grid-template-columns:1fr}.nav{grid-template-columns:1fr auto}.brand small{display:none}.header-actions button:first-child{display:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
+<style data-vnv-page-controls-style>
+[data-vnv-page-controls]{position:relative;z-index:40;border-bottom:1px solid rgba(18,23,19,.14);background:rgba(255,253,248,.97);color:inherit}
+[data-vnv-page-controls]>.wrap,[data-vnv-page-controls]>.shell{padding-top:14px;padding-bottom:14px}
+@media print{[data-vnv-page-controls]{display:none!important}}
+</style>
 </head>
 <body>
-<header>
+<section data-vnv-page-controls class="vnv-page-controls">
   <div class="shell nav">
     <div class="brand">
       <div class="brand-mark">🔨</div>
@@ -167,7 +172,7 @@ h1{margin:10px auto 4px;max-width:900px;font-size:clamp(2.9rem,7vw,5.4rem);line-
       <button id="resetBtn">↺ Reset</button>
     </div>
   </div>
-</header>
+</section>
 
 <section class="hero">
   <div class="shell">
@@ -773,6 +778,24 @@ window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false,links:discovered.lengt
 {label:"Family Portal",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
 {label:"Verve N Veda",href:"https://vervenveda.com/"}
 ]});})();
+</script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script data-vnv-elementary-header-contract="v2">
+window.VNV_HEADER?.mount({
+ title:"Khaemenes Elementary Academy",
+ subtitle:"Grades 01–05",
+ icon:"K",
+ home:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/",
+ replaceLegacy:true,
+ legacySelectors:["[data-vnv-header-legacy]"],
+ actions:[
+  {label:"Academy Home",href:"https://vervenveda.com/Khaemenes_Academy.github.io/"},
+  {label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+  {label:"Family",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+  {label:"Teacher",href:"https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/"},
+  {label:"Middle School",href:"https://vervenveda.com/Khaemenes_Middle.github.io/"}
+ ]
+});
 </script>
 </body>
 </html>

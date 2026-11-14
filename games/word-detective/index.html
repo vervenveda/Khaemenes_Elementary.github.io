@@ -51,9 +51,14 @@ h1,h2,h3,h4{font-family:var(--serif)}h1{margin:10px 0 4px;font-size:clamp(2.9rem
 <link rel="stylesheet" href="../../assets/elementary-landing-chrome.css" data-elementary-landing-chrome>
 <link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.css">
 <link rel="stylesheet" href="../../assets/elementary-seven-game-regression.css" data-seven-game-regression>
+<style data-vnv-page-controls-style>
+[data-vnv-page-controls]{position:relative;z-index:40;border-bottom:1px solid rgba(18,23,19,.14);background:rgba(255,253,248,.97);color:inherit}
+[data-vnv-page-controls]>.wrap,[data-vnv-page-controls]>.shell{padding-top:14px;padding-bottom:14px}
+@media print{[data-vnv-page-controls]{display:none!important}}
+</style>
 </head>
 <body>
-<header data-khae-header class="khae-global-campus-header">
+<header data-vnv-header-legacy data-khae-header class="khae-global-campus-header">
   <div data-khae-header-inner>
     <a data-khae-brand href="https://vervenveda.com/Khaemenes_Academy.github.io/" aria-label="Khaemenes Academy home">
       <span data-khae-brand-mark>1–5</span>
@@ -72,7 +77,7 @@ h1,h2,h3,h4{font-family:var(--serif)}h1{margin:10px 0 4px;font-size:clamp(2.9rem
     <div data-vnv-ecosystem-slot aria-label="Ecosystem menu"></div>
   </div>
 </header>
-<header><div class="shell nav"><div class="brand"><div class="mark">🔎</div><div><strong>Khaemenes Elementary · Word Detective</strong><small>Grades 1–5 · Phonics · Morphology · Grammar · Vocabulary</small></div></div><div></div><div class="head-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></header>
+<section data-vnv-page-controls class="vnv-page-controls"><div class="shell nav"><div class="brand"><div class="mark">🔎</div><div><strong>Khaemenes Elementary · Word Detective</strong><small>Grades 1–5 · Phonics · Morphology · Grammar · Vocabulary</small></div></div><div></div><div class="head-actions"><button id="soundBtn">🔊 Voice On</button><button id="printTop">🖨 Print</button><button id="resetBtn">↺ Reset</button></div></div></section>
 <section class="hero"><div class="shell"><div class="hero-card"><span class="eyebrow">Elementary Language Arts · Weeks 2, 5, 14, 27–28 · Earn Clues, Not Points</span><h1>Word Detective 🔎</h1><p>Investigate words by highlighting meaningful parts, spotting vowel patterns, breaking syllables, finding compounds, identifying r-controlled vowels, and sorting nouns, verbs, and adjectives.</p><div class="badges"><span>Grades 1–5</span><span>Clue-Based Progress</span><span>Storybird-Inspired Gentle Language</span><span>Aurora-Inspired Word Analysis</span><span>Eiren Guided</span><span>Local Save</span><span>No Dependencies</span></div></div></div></section>
 <main class="shell layout">
 <section class="card main">
@@ -190,7 +195,6 @@ $("gradeSelect").value=s.grade;$("skillSelect").value=s.skill;$("modeSelect").va
 </script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.js" defer></script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-menu.js" defer></script>
-<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.js" defer></script>
 <!-- VNV_BETA_PROGRAM_V2 -->
 
 
@@ -198,5 +202,23 @@ $("gradeSelect").value=s.grade;$("skillSelect").value=s.skill;$("modeSelect").va
 <!-- Verve N Veda · canonical auto-populating page-link ticker -->
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false});</script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script data-vnv-elementary-header-contract="v2">
+window.VNV_HEADER?.mount({
+ title:"Khaemenes Elementary Academy",
+ subtitle:"Grades 01–05",
+ icon:"K",
+ home:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/",
+ replaceLegacy:true,
+ legacySelectors:["[data-vnv-header-legacy]"],
+ actions:[
+  {label:"Academy Home",href:"https://vervenveda.com/Khaemenes_Academy.github.io/"},
+  {label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+  {label:"Family",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+  {label:"Teacher",href:"https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/"},
+  {label:"Middle School",href:"https://vervenveda.com/Khaemenes_Middle.github.io/"}
+ ]
+});
+</script>
 </body>
 </html>
