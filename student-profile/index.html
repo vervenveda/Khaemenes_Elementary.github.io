@@ -40,7 +40,9 @@ body :is(main, .hero, .ug-hero, .mast) :is(a.btn,a.button,.hero-btn,.ug-priority
 body :is(.hero,.ug-hero,.mast)> :is(h1,p),body :is(.hero,.ug-hero,.mast)>div> :is(h1,p){text-align:center}
 body :is(.hero,.ug-hero,.mast) h1{font-size:clamp(30px,4.4vw,52px)!important;line-height:1.18!important;font-weight:400!important}
 body :is(.hero,.ug-hero,.mast) :is(.eyebrow,.ug-eyebrow),body main>.eyebrow{font-size:16px!important;letter-spacing:.045em!important;line-height:1.4!important}
-<style id="elementary-photo-parity-controls-20261114">.appearance :is(label,button,input,select){font-size:max(16px,1rem);line-height:1.45}.appearance :is(button,input,select){min-height:44px;border-radius:7px}</style></style><link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-elementary-profile-v3.css?v=20261107-folds-v8"><!-- Opt-in forensic probe; inert unless ?chrome_audit=1. No learner data. -->
+</style>
+<style id="elementary-photo-parity-controls-20261114">.appearance :is(label,button,input,select){font-size:max(16px,1rem);line-height:1.45}.appearance :is(button,input,select){min-height:44px;border-radius:7px}</style>
+<link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-elementary-profile-v3.css?v=20261107-folds-v8"><!-- Opt-in forensic probe; inert unless ?chrome_audit=1. No learner data. -->
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-elementary-chrome-audit.js?v=20261107-audit-v4" defer></script>
 </head><body data-theme="parchment" data-profile-stage="elementary"><a href="#main" class="skip">Skip to student profile</a>
 <header class="top"><div class="head"><a class="brand" href="https://vervenveda.com/Khaemenes_Academy.github.io/">Khaemenes Academy</a><nav class="nav"><a href="../">Elementary Hall</a><a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family Portal</a><a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student Portal</a><a href="https://vervenveda.com/">Ecosystem</a></nav></div></header>
@@ -67,6 +69,55 @@ body :is(.hero,.ug-hero,.mast) :is(.eyebrow,.ug-eyebrow),body main>.eyebrow{font
 <div class="choice" id="themes"></div><div class="actions"><button type="button" class="secondary" id="reset">Reset colors</button><button type="button" class="secondary" id="printProfile">Print profile</button><button type="button" class="secondary" id="exportVisual">Export picture &amp; colors</button></div>
 <p class="muted" style="font-size:16px">Exported picture backups may include this learner’s photo and are not encrypted. Keep backups private.</p><label for="importVisual">Restore picture &amp; colors from a local backup</label><input id="importVisual" type="file" accept=".json,application/json"><p class="status" id="status" aria-live="polite"></p></section>
 </div>
+<section class="card" id="gradeOneFamilyOverview" aria-labelledby="gradeOneFamilyHeading" hidden>
+<p class="eyebrow">Family Learning Center · First Grade</p>
+<h2 id="gradeOneFamilyHeading">My Grade 1 Family Learning Report</h2>
+<p id="gradeOneFamilyOverviewStatus" role="status" aria-live="polite">Checking the selected first-grade learner…</p>
+<p class="muted">Your class, favorite subjects, goals and portfolio remain available. Historical Grade 1 academic scores are not assigned to this profile until their learner ownership can be verified.</p>
+<div class="actions"><a class="button" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Open Family Learning Center</a><a class="button secondary" href="../grades/grade-01/">Open Grade 1 Learning</a></div>
+</section>
+<section class="card" id="gradeTwoFamilyOverview" aria-labelledby="gradeTwoFamilyHeading" hidden>
+<p class="eyebrow">Family Learning Center · Second Grade</p>
+<h2 id="gradeTwoFamilyHeading">My Grade 2 Family Learning Report</h2>
+<p id="gradeTwoFamilyOverviewStatus" role="status" aria-live="polite">Checking this learner's registered Grade 2 activity…</p>
+<p id="gradeTwoFamilyProgress" aria-live="polite"></p>
+<div id="gradeTwoDailySummary" class="muted" role="status" aria-live="polite"></div>
+<h3>My Grade 2 subject halls</h3>
+<p class="muted">These are learning entrances, not eight separate graded progress reports.</p>
+<div id="gradeTwoSubjectHalls" class="grid" aria-label="Grade 2 subject hall shortcuts"></div>
+<h3>Learning milestones &amp; portfolio</h3>
+<div id="gradeTwoMilestones" class="muted" aria-live="polite"></div>
+<p id="gradeTwoPortfolioStatus" class="muted" aria-live="polite"></p>
+<p class="muted">A read-only view of this learner’s verified integrated Grade 2 progress. The course engine controls the 80% mastery gates. Subject links and milestone celebrations never change scores, placement, or portfolio approval.</p>
+<div class="actions"><a class="button" href="../grades/grade-02/">Open Grade 2 Daily Learning</a><a class="button secondary" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Open Family Learning Center</a></div>
+</section>
+<section class="card" id="gradeThreeFamilyOverview" aria-labelledby="gradeThreeFamilyHeading" hidden>
+<p class="eyebrow">Family Learning Center · Third Grade</p>
+<h2 id="gradeThreeFamilyHeading">My Grade 3 Family Learning Report</h2>
+<p id="gradeThreeFamilyOverviewStatus" role="status" aria-live="polite">Checking registered learner progress…</p>
+<p id="gradeThreeFamilyDetails" aria-live="polite"></p>
+<p class="muted">This report reflects verified integrated weekly progress and existing portfolio records. It does not invent subject grades or modify mastery and placement.</p>
+<div class="actions"><a class="button" href="../grades/grade-03/">Open Grade 3 Daily Learning</a><a class="button secondary" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family Learning Center</a></div>
+</section>
+<section class="card" id="gradeFourFamilyOverview" aria-labelledby="gradeFourFamilyHeading" hidden>
+<p class="eyebrow">Family Learning Center · Fourth Grade</p>
+<h2 id="gradeFourFamilyHeading">My Grade 4 Family Learning Report</h2>
+<p id="gradeFourFamilyOverviewStatus" role="status" aria-live="polite">Checking registered learner progress…</p>
+<p id="gradeFourFamilyDetails" aria-live="polite"></p>
+<p id="gradeFourSubjectSummary" class="muted" aria-live="polite"></p>
+<p><a class="button secondary" href="../grades/grade-04/subjects/social-studies/">Open Social Studies Subject Course</a></p>
+<p class="muted">This read-only view reflects only verified learner-owned Grade 4 progress. It cannot change scores, placement, or adult portfolio approval.</p>
+<div class="actions"><a class="button" href="../grades/grade-04/">Open Grade 4 Learning</a><a class="button secondary" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family Learning Center</a></div>
+</section>
+<section class="card" id="gradeFiveFamilyOverview" aria-labelledby="gradeFiveFamilyHeading" hidden>
+<p class="eyebrow">Family Learning Center · Fifth Grade</p>
+<h2 id="gradeFiveFamilyHeading">My Grade 5 Family Learning Report</h2>
+<p id="gradeFiveFamilyStatus" role="status" aria-live="polite"></p>
+<p id="gradeFiveFamilyDetails" aria-live="polite"></p>
+<p id="gradeFiveSubjectSummary" class="muted" aria-live="polite"></p>
+<p class="muted">This report is read-only and learner-specific. Integrated mastery and Social Studies subject mastery are shown separately; neither changes placement, grades, or adult approval.</p>
+<div class="actions"><a class="button" href="../grades/grade-05/">Open Grade 5 Learning</a><a class="button secondary" href="../grades/grade-05/subjects/social-studies/">Social Studies</a><a class="button secondary" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family Learning Center</a></div>
+</section>
 <section class="card" id="gradePreview" aria-labelledby="nextGradeHeading"><p class="eyebrow">My next milestone</p>
 <h2 id="nextGradeHeading">A new learning horizon</h2><p class="muted">Preview the next learning level while keeping all course requirements, assessment results, and family placement decisions in their original systems.</p>
 <div class="actions"><button type="button" class="secondary" id="showGradePreview" aria-expanded="false" aria-controls="gradePreviewDetails">Explore my next grade</button></div>
@@ -79,6 +130,11 @@ body :is(.hero,.ug-hero,.mast) :is(.eyebrow,.ug-eyebrow),body main>.eyebrow{font
 </main>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-learning-continuation.js"></script>
+<script src="../assets/khaemenes-grade-one-family-view.js"></script>
+<script src="../assets/khaemenes-grade-two-family-view.js"></script>
+<script src="../assets/khaemenes-grade-three-family-view.js"></script>
+<script src="../assets/khaemenes-grade-four-family-view.js"></script>
+<script src="../assets/khaemenes-grade-five-family-view.js"></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-student-profile-v2.js"></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-student-quick-pins-v1.js"></script>
 <script>
