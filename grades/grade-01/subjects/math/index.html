@@ -25,8 +25,8 @@ footer{padding:22px 0;text-align:center;font-size:13px;color:#d5e1de}
 </head>
 <body><main>
 <nav aria-label="Academy navigation"><a href="../../index.html">← Grade 1 Home</a><a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student Portal</a><a href="https://vervenveda.com/#directory">Verve N Veda</a></nav>
-<header data-khae-header class="khae-global-campus-header no-print"><div data-khae-header-inner><a data-khae-brand href="../../index.html"><span data-khae-brand-mark>1</span><span><span data-khae-brand-name>Khaemenes Elementary Academy</span><small data-khae-brand-sub>Grade 1 · Mathematics</small></span></a><nav data-khae-nav aria-label="Grade 1 subject navigation"><a href="../../index.html">Grade 1 Home</a><a href="../../teacher-tools/index.html">Teacher Tools</a><a href="../../../../index.html">Elementary Home</a></nav><div data-khae-actions></div><div data-vnv-ecosystem-slot aria-label="Ecosystem menu"></div></div></header>
-<header><small>Khaemenes Academy · Grade 1</small><h1>Mathematics Hall</h1><p>Number sense, reasoning, measurement, and mathematical independence.</p></header>
+<header data-vnv-header-legacy data-khae-header class="khae-global-campus-header no-print"><div data-khae-header-inner><a data-khae-brand href="../../index.html"><span data-khae-brand-mark>1</span><span><span data-khae-brand-name>Khaemenes Elementary Academy</span><small data-khae-brand-sub>Grade 1 · Mathematics</small></span></a><nav data-khae-nav aria-label="Grade 1 subject navigation"><a href="../../index.html">Grade 1 Home</a><a href="../../teacher-tools/index.html">Teacher Tools</a><a href="../../../../index.html">Elementary Home</a></nav><div data-khae-actions></div><div data-vnv-ecosystem-slot aria-label="Ecosystem menu"></div></div></header>
+<header data-vnv-header-legacy><small>Khaemenes Academy · Grade 1</small><h1>Mathematics Hall</h1><p>Number sense, reasoning, measurement, and mathematical independence.</p></header>
 <section class="notice"><strong>36-week Mathematics Hall · In Development</strong><p>The official Grade 1 curriculum retains its 36-week mastery sequence and 80% mastery requirements. The original 42-week Mathematics Practice Portal is available below as optional practice, with separate browser progress.</p></section>
 <div class="grid">
 <section class="card"><h2>Official Grade 1 Journey</h2><p>Continue the 36-week Grade 1 curriculum, weekly learning, assessment and portfolio pathway.</p><a href="../../index.html">Continue Grade 1 →</a></section>
@@ -44,4 +44,22 @@ footer{padding:22px 0;text-align:center;font-size:13px;color:#d5e1de}
 <!-- Verve N Veda · canonical auto-populating page-link ticker -->
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false});</script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script data-vnv-elementary-header-contract="v1">
+window.VNV_HEADER?.mount({
+  title:"Khaemenes Elementary Academy",
+  subtitle:"Grades 01–05",
+  icon:"K",
+  home:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/",
+  replaceLegacy:true,
+  legacySelectors:["[data-vnv-header-legacy]","header.site-header","header[data-khae-header]","body > header:not(#vnvHeaderAutoPopulate)"],
+  actions:[
+    {label:"Academy Home",href:"https://vervenveda.com/Khaemenes_Academy.github.io/"},
+    {label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+    {label:"Family",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+    {label:"Teacher",href:"https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/"},
+    {label:"Middle School",href:"https://vervenveda.com/Khaemenes_Middle.github.io/"}
+  ]
+});
+</script>
 </body></html>
