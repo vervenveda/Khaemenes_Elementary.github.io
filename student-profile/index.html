@@ -159,7 +159,7 @@ const validGrade=g=>/^(0[1-5])$/.test(String(g||""));
 function learner(){
  const ids=R?.activeIds?.()||{},family=R?.getFamily?.(ids.familyId)||null,child=R?.getLearner?.(ids.learnerId)||null;
  return child&&family&&child.learnerId===ids.learnerId&&child.familyId===family.familyId&&child.selfDirectedAdult!==true&&
-  family?.learnerIds?.includes(child.learnerId)&&child.stage==="elementary"&&validGrade(child.grade)?child:null;
+  family.learnerIds?.includes(child.learnerId)&&child.stage==="elementary"&&validGrade(child.grade)?child:null;
 }
 function isReady(){return location.origin==="https://vervenveda.com"&&Boolean(learner())}
 function needsAdult(){if(!isReady()){say("Choose an existing Elementary learner in the Family Portal.",true);return false}if(!$("adultConfirm").checked){say("A grown-up must confirm before changing this child's picture or preferences.",true);return false}return true}
