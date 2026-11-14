@@ -12,7 +12,7 @@ const read=(k,f=null)=>{try{const raw=localStorage.getItem(k);return raw?JSON.pa
 const write=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}};
 const uid=()=>`aea-${Date.now().toString(36)}-${Math.random().toString(36).slice(2,10)}`;
 
-function grade(){const m=location.pathname.match(/\/grades\/grade-(0[1-5])\//i);if(m)return m[1];if(/\/assessments\//i.test(location.pathname))return"01";return null}
+function grade(){const m=location.pathname.match(/\/grades\/grade-(0[1-5])\//i);return m?m[1]:null}
 function kind(){if(/\/midterm\.html$/i.test(location.pathname))return"midterm";if(/\/final-exam\.html$/i.test(location.pathname))return"final";if(/\/(?:unit|week)-\d+-assessment\.html$/i.test(location.pathname))return"weekly";return null}
 function week(){const m=location.pathname.match(/\/(?:unit|week)-(\d+)-assessment\.html$/i);return m?Math.max(1,Math.min(36,Number(m[1])||1)):null}
 function learner(){

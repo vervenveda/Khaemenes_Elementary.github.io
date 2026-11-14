@@ -26,11 +26,11 @@ function walk(dir,out=[]){
 function classify(rel){
   const p="/"+posix(rel);
   const lesson=
-    /^\/(?:grades\/grade-01\/)?lessons\/unit-\d+\/index\.html$/i.test(p) ||
+    /^\/grades\/grade-01\/lessons\/unit-\d+\/index\.html$/i.test(p) ||
     /^\/grades\/grade-0[2-5]\/subjects\/[^/]+\/week-\d+\.html$/i.test(p) ||
     /^\/grades\/grade-0[3-5]\/weekly-plans\/week-\d+\.html$/i.test(p);
   const assessment=
-    /^\/(?:grades\/grade-0[1-5]\/)?assessments\/(?:unit-\d+-assessment|week-\d+-assessment|midterm|final-exam)\.html$/i.test(p);
+    /^\/grades\/grade-0[1-5]\/assessments\/(?:unit-\d+-assessment|week-\d+-assessment|midterm|final-exam)\.html$/i.test(p);
   return lesson?"lesson":assessment?"assessment":null;
 }
 function ref(fromFile,target){

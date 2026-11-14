@@ -31,11 +31,11 @@ function walk(dir,out=[]){
 function classify(rel){
   const p="/"+posix(rel);
   const lesson=
-    /^\/(?:grades\/grade-01\/)?lessons\/unit-\d+\/index\.html$/i.test(p) ||
+    /^\/grades\/grade-01\/lessons\/unit-\d+\/index\.html$/i.test(p) ||
     /^\/grades\/grade-0[2-5]\/subjects\/[^/]+\/week-\d+\.html$/i.test(p) ||
     /^\/grades\/grade-0[3-5]\/weekly-plans\/week-\d+\.html$/i.test(p);
   const assessment=
-    /^\/(?:grades\/grade-0[1-5]\/)?assessments\/(?:unit-\d+-assessment|week-\d+-assessment|midterm|final-exam)\.html$/i.test(p);
+    /^\/grades\/grade-0[1-5]\/assessments\/(?:unit-\d+-assessment|week-\d+-assessment|midterm|final-exam)\.html$/i.test(p);
   return lesson?"lesson":assessment?"assessment":null;
 }
 function refs(html){return [...html.matchAll(/<script[^>]+src=["']([^"']+)["']/gi)].map(m=>m[1])}
@@ -66,6 +66,33 @@ expect(coverage.lesson>0,"No lesson surfaces found.");
 expect(coverage.assessment>0,"No assessment surfaces found.");
 expect(coverage.missing.length===0,`Learning-engine coverage gaps:\n${coverage.missing.slice(0,30).join("\n")}`);
 expect(coverage.duplicates.length===0,`Duplicate learning-engine markers:\n${coverage.duplicates.slice(0,30).join("\n")}`);
+
+// Historical root Grade 1 URLs are compatibility redirects only.
+// They must never regain a second lesson, assessment, or certificate authority.
+const CANONICAL_G1="https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-01/";
+function expectGrade1Redirect(file,target){
+  expect(exists(file),`Historical Grade 1 compatibility route missing: ${file}`);
+  const html=read(file);
+  expect(html.includes('http-equiv="refresh"'),`${file} must immediately forward to canonical Grade 1.`);
+  expect(html.includes(`rel="canonical" href="${target}"`),`${file} canonical link drifted.`);
+  expect(html.includes(`location.replace(${JSON.stringify(target)})`),`${file} script redirect drifted.`);
+  expect(html.includes(`href="${target}"`),`${file} accessible fallback link drifted.`);
+  expect(!html.includes(MARKER),`${file} legacy redirect must not carry the learning engine.`);
+  expect(!html.includes("khaemenes-elementary-assessment-engine.js"),`${file} legacy redirect must not carry formal assessment authority.`);
+}
+for(let week=1;week<=36;week++){
+  const ww=String(week).padStart(2,"0");
+  expectGrade1Redirect(`lessons/unit-${ww}/index.html`,CANONICAL_G1+`lessons/unit-${ww}/index.html`);
+  expectGrade1Redirect(`assessments/unit-${ww}-assessment.html`,CANONICAL_G1+`assessments/unit-${ww}-assessment.html`);
+}
+for(const name of ["midterm.html","final-exam.html","weekly-assessments.html"])
+  expectGrade1Redirect("assessments/"+name,CANONICAL_G1+"assessments/"+name);
+expectGrade1Redirect("records/certificate.html",CANONICAL_G1+"records/certificate.html");
+expectGrade1Redirect("teacher-tools/index.html",CANONICAL_G1+"teacher-tools/index.html");
+const legacyCertificateScript=read("assets/certificate.js");
+expect(!/localStorage|khaemenes_grade1_36_aplus_v1|Weekly Average/i.test(legacyCertificateScript),"Legacy root certificate script still contains a second certificate authority.");
+expect(legacyCertificateScript.includes(CANONICAL_G1+"records/certificate.html"),"Legacy root certificate script no longer forwards to canonical Grade 1.");
+
 
 // Evaluate factory in an isolated context and sample every grade/subject.
 const context={console,globalThis:null};context.globalThis=context;
