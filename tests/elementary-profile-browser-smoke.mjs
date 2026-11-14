@@ -31,6 +31,7 @@ async function openPassport(){
 async function openWorkingFolds(){
  await openFold("kepFoldSubjects");
  await openPassport();
+ await openFold("kepOriginalPictureTools");
 }
 try{
  await page.goto(url,{waitUntil:"domcontentloaded"});
