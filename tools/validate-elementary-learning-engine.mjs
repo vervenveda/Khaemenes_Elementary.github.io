@@ -93,6 +93,29 @@ const legacyCertificateScript=read("assets/certificate.js");
 expect(!/localStorage|khaemenes_grade1_36_aplus_v1|Weekly Average/i.test(legacyCertificateScript),"Legacy root certificate script still contains a second certificate authority.");
 expect(legacyCertificateScript.includes(CANONICAL_G1+"records/certificate.html"),"Legacy root certificate script no longer forwards to canonical Grade 1.");
 
+// Historical Grade 2 subject trees are compatibility routes only. The sole
+// instructional authority is grades/grade-02/subjects/.
+const CANONICAL_G2_SUBJECTS="https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-02/subjects/";
+function expectGrade2Redirect(file,target){
+  expect(exists(file),`Historical Grade 2 compatibility route missing: ${file}`);
+  const html=read(file);
+  expect(html.includes('http-equiv="refresh"'),`${file} must immediately forward to canonical Grade 2.`);
+  expect(html.includes(`rel="canonical" href="${target}"`),`${file} canonical link drifted.`);
+  expect(html.includes(`location.replace(${JSON.stringify(target)})`),`${file} script redirect drifted.`);
+  expect(html.includes(`href="${target}"`),`${file} accessible fallback link drifted.`);
+  expect(!html.includes(MARKER),`${file} legacy Grade 2 redirect must not carry the learning engine.`);
+  expect(!html.includes("khaemenes-elementary-assessment-engine.js"),`${file} legacy Grade 2 redirect must not carry formal assessment authority.`);
+}
+for(const subject of ["language-arts","mathematics","science","social-studies","arts-music","health-pe-sel","technology","integrated-projects"]){
+  for(const leaf of ["index.html",...Array.from({length:36},(_,i)=>`week-${String(i+1).padStart(2,"0")}.html`])
+    expectGrade2Redirect(`subjects/${subject}/${leaf}`,CANONICAL_G2_SUBJECTS+subject+"/"+leaf);
+}
+for(const subject of ["arts-music","health-pe-sel","social-studies","technology"]){
+  for(const leaf of ["index.html",...Array.from({length:36},(_,i)=>`week-${String(i+1).padStart(2,"0")}.html`])
+    expectGrade2Redirect(`${subject}/${leaf}`,CANONICAL_G2_SUBJECTS+subject+"/"+leaf);
+}
+
+
 
 // Evaluate factory in an isolated context and sample every grade/subject.
 const context={console,globalThis:null};context.globalThis=context;
