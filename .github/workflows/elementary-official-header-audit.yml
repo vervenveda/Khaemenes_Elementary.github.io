@@ -1,0 +1,29 @@
+name: Elementary Official Header Landing Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'student-profile/index.html'
+      - 'games/index.html'
+      - 'grades/portfolio/index.html'
+      - 'grades/grade-*/index.html'
+      - 'grades/grade-*/teacher-tools/index.html'
+      - 'grades/grade-*/subjects/*/index.html'
+      - 'tools/audit-elementary-official-header.mjs'
+      - '.github/workflows/elementary-official-header-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - run: node tools/audit-elementary-official-header.mjs
