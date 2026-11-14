@@ -45,7 +45,13 @@ function removeExistingHeaderContract(s){
  return s;
 }
 function ensureToolbarLoader(s){
- if(/vnv-ecosystem-toolbar\.js/i.test(s)||/khaemenes-landing-toolbar\.js/i.test(s))return s;
+ s=s.replace(/<script\b[^>]*\bsrc=["'][^"']*khaemenes-landing-toolbar\.js[^"']*["'][^>]*>\s*<\/script>\s*/gi,"");
+ const direct=[...s.matchAll(/<script\b[^>]*\bsrc=["'][^"']*vnv-ecosystem-toolbar\.js[^"']*["'][^>]*>\s*<\/script>/gi)];
+ if(direct.length>1){
+   let first=true;
+   s=s.replace(/<script\b[^>]*\bsrc=["'][^"']*vnv-ecosystem-toolbar\.js[^"']*["'][^>]*>\s*<\/script>\s*/gi,m=>first?(first=false,m):"");
+ }
+ if(/vnv-ecosystem-toolbar\.js/i.test(s))return s;
  const tag=`<script src="${TOOLBAR_SRC}"></script>`;
  return /<\/body\s*>/i.test(s)?s.replace(/<\/body\s*>/i,tag+"\n</body>"):s+"\n"+tag+"\n";
 }
