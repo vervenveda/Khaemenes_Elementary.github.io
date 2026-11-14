@@ -1,8 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-
 const ROOT=process.cwd();
-const targetMatchers=[
+const TARGETS=[
   /^index\.html$/,
   /^student-profile\/index\.html$/,
   /^games\/index\.html$/,
@@ -11,52 +10,40 @@ const targetMatchers=[
   /^grades\/grade-0[1-5]\/teacher-tools\/index\.html$/,
   /^grades\/grade-0[1-5]\/subjects\/[^/]+\/index\.html$/
 ];
-const LOADER=/vnv-header-autopopulate\.js/gi;
-const MOUNT=/\bVNV_HEADER\?*\.mount\s*\(/gi;
-const OFFICIAL_ROOT=/id=["']vnvHeaderAutoPopulate["']/gi;
-const LEGACY=/<header\b(?![^>]*id=["']vnvHeaderAutoPopulate["'])[^>]*>/gi;
-
-function target(p){return targetMatchers.some(re=>re.test(p))}
-function redirect(s){
- return /<meta[^>]+http-equiv=["']?refresh["']?/i.test(s)&&
- /<link[^>]+rel=["']canonical["'][^>]*>|<link[^>]+href=[^>]+rel=["']canonical["']/i.test(s)&&
- /\blocation\.replace\s*\(/i.test(s);
-}
+function target(rel){return TARGETS.some(re=>re.test(rel))}
 function count(re,s){return (s.match(re)||[]).length}
-
-const files=[];
-function walk(dir){
+const rows=[];
+(function walk(dir){
  for(const e of fs.readdirSync(dir,{withFileTypes:true})){
   if([".git","node_modules"].includes(e.name))continue;
   const p=path.join(dir,e.name);
   if(e.isDirectory())walk(p);
   else if(e.isFile()&&e.name==="index.html"){
    const rel=path.relative(ROOT,p).split(path.sep).join("/");
-   if(target(rel))files.push({p,rel});
+   if(!target(rel))continue;
+   const s=fs.readFileSync(p,"utf8");
+   rows.push({
+    path:rel,
+    loader:count(/vnv-header-autopopulate\.js/gi,s),
+    contract:count(/data-vnv-elementary-header-contract=["\']v1["\']/gi,s),
+    title:/title\s*:\s*["\']Khaemenes Elementary Academy["\']/i.test(s),
+    subtitle:/subtitle\s*:\s*["\']Grades 01.?05["\']/i.test(s),
+    icon:/icon\s*:\s*["\']K["\']/i.test(s),
+    replaceLegacy:/replaceLegacy\s*:\s*true/i.test(s),
+    fiveActions:["Academy Home","Student Profile","Family","Teacher","Middle School"].every(x=>s.includes('label:"'+x+'"')),
+    unmarkedHeader:count(/<header\b(?![^>]*data-vnv-header-legacy)(?![^>]*id=["\']vnvHeaderAutoPopulate["\'])[^>]*>/gi,s),
+    portfolioControls:rel==="grades/portfolio/index.html" ? /data-vnv-page-controls/.test(s)&&/id=["\']scanBtn["\']/.test(s)&&/id=["\']printTop["\']/.test(s) : true
+   });
   }
  }
-}
-walk(ROOT); files.sort((a,b)=>a.rel.localeCompare(b.rel));
-const rows=files.map(({p,rel})=>{
- const s=fs.readFileSync(p,"utf8");
- return {path:rel,redirect:redirect(s),loader:count(new RegExp(LOADER.source,"gi"),s),
- mount:count(new RegExp(MOUNT.source,"gi"),s),
- officialRoot:count(new RegExp(OFFICIAL_ROOT.source,"gi"),s),
- legacyHeaders:count(new RegExp(LEGACY.source,"gi"),s),
- replaceLegacy:/replaceLegacy\s*:\s*true/i.test(s),
- exactTitle:/title\s*:\s*["']Khaemenes Elementary Academy["']/i.test(s),
- exactSubtitle:/subtitle\s*:\s*["']Grades 01.?05["']/i.test(s),
- iconK:/icon\s*:\s*["']K["']/i.test(s)
- };
-});
-const content=rows.filter(r=>!r.redirect);
-const compliant=content.filter(r=>r.loader===1&&r.mount===1&&r.replaceLegacy&&r.exactTitle&&r.exactSubtitle&&r.iconK);
-const missing=content.filter(r=>!compliant.includes(r));
+})(ROOT);
+rows.sort((a,b)=>a.path.localeCompare(b.path));
+const bad=rows.filter(r=>!(r.loader===1&&r.contract===1&&r.title&&r.subtitle&&r.icon&&r.replaceLegacy&&r.fiveActions&&r.unmarkedHeader===0&&r.portfolioControls));
 console.log("ELEMENTARY OFFICIAL HEADER LANDING AUDIT");
-console.log("TARGET_INDEX_SURFACES="+rows.length);
-console.log("REDIRECTS="+rows.filter(r=>r.redirect).length);
-console.log("REAL_LANDINGS="+content.length);
-console.log("COMPLIANT="+compliant.length);
-console.log("MISSING_OR_NONCANONICAL="+missing.length);
-console.log("LEGACY_HEADER_TAGS_ON_REAL_LANDINGS="+content.reduce((n,r)=>n+r.legacyHeaders,0));
-for(const r of missing)console.log("MISSING|"+JSON.stringify(r));
+console.log("REAL_LANDINGS="+rows.length);
+console.log("COMPLIANT="+(rows.length-bad.length));
+console.log("NONCOMPLIANT="+bad.length);
+console.log("UNMARKED_LEGACY_HEADERS="+rows.reduce((n,r)=>n+r.unmarkedHeader,0));
+console.log("PORTFOLIO_CONTROLS_PRESERVED="+rows.find(r=>r.path==="grades/portfolio/index.html")?.portfolioControls);
+bad.forEach(r=>console.log("BAD|"+JSON.stringify(r)));
+if(rows.length!==49||bad.length)process.exitCode=2;
