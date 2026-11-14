@@ -406,7 +406,15 @@
       const html = `<!doctype html><html><head><meta charset="utf-8"><title>Worksheet - ${dateStr}</title><style>body{font-family:Arial;margin:36px} .header{display:flex;justify-content:space-between;align-items:center} h2{margin:0} .q{margin-top:12px}</style></head><body><div class="worksheet"><div class="header"><h2>Math Worksheet</h2><div>${dateStr}</div></div><p>Complete these problems. Show your work below each question.</p>${qhtml}<hr><h3>Teacher answer key</h3><ol>${problems.map(p=>`<li>${p.answer}</li>`).join('')}</ol></div><script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
 <!-- Verve N Veda · canonical auto-populating page-link ticker -->
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
-<script>window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false});</script>
+<script data-vnv-ticker-fallback>
+(()=>{const discovered=window.VNV_TICKER?.discover?.({max:14})||[];
+window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false,links:discovered.length?discovered:[
+{label:"Elementary Home",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/"},
+{label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+{label:"Family Portal",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+{label:"Verve N Veda",href:"https://vervenveda.com/"}
+]});})();
+</script>
 </body></html>`;
       return html;
     }

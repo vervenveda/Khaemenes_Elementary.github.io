@@ -877,6 +877,14 @@
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
 <!-- Verve N Veda · canonical auto-populating page-link ticker -->
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
-<script>window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false});</script>
+<script data-vnv-ticker-fallback>
+(()=>{const discovered=window.VNV_TICKER?.discover?.({max:14})||[];
+window.VNV_TICKER?.autoPopulate({max:14,cleanLegacy:false,links:discovered.length?discovered:[
+{label:"Elementary Home",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/"},
+{label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+{label:"Family Portal",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+{label:"Verve N Veda",href:"https://vervenveda.com/"}
+]});})();
+</script>
 </body>
 </html>
