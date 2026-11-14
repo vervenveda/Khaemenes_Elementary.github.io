@@ -158,7 +158,7 @@ const store=(k,v)=>{try{const raw=JSON.stringify(v);localStorage.setItem(k,raw);
 const validGrade=g=>/^(0[1-5])$/.test(String(g||""));
 function learner(){
  const ids=R?.activeIds?.()||{},family=R?.getFamily?.(ids.familyId)||null,child=R?.getLearner?.(ids.learnerId)||null;
- return child&&child.learnerId===ids.learnerId&&child.familyId===family?.familyId&&child.selfDirectedAdult!==true&&
+ return child&&family&&child.learnerId===ids.learnerId&&child.familyId===family.familyId&&child.selfDirectedAdult!==true&&
   family?.learnerIds?.includes(child.learnerId)&&child.stage==="elementary"&&validGrade(child.grade)?child:null;
 }
 function isReady(){return location.origin==="https://vervenveda.com"&&Boolean(learner())}
