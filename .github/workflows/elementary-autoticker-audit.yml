@@ -4,7 +4,9 @@ on:
   push:
     branches: [main]
     paths:
+      - '**/*.html'
       - 'tools/audit-elementary-autoticker.mjs'
+      - '.elementary-autoticker-normalization.json'
       - '.github/workflows/elementary-autoticker-audit.yml'
   workflow_dispatch:
 

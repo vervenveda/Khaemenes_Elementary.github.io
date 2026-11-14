@@ -31,7 +31,10 @@ for(const file of files){
   const invoke=(html.match(new RegExp(INVOKE.source,"gi"))||[]).length;
   const root=(html.match(new RegExp(ROOT_ID.source,"gi"))||[]).length;
   const redirect=isCompatibilityRedirect(html);
-  rows.push({path:rel(file),redirect,loader,invoke,root,
+  const hrefs=[...html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["'][^>]*>/gi)]
+    .map(m=>String(m[1]||"").trim())
+    .filter(h=>h&&!/^(?:javascript:|mailto:|tel:|#?$)/i.test(h));
+  rows.push({path:rel(file),redirect,loader,invoke,root,hrefs:hrefs.length,
     legacy333:/networkTicker|333 Network application ticker|khaeNetworkTicker/i.test(html)});
 }
 const content=rows.filter(r=>!r.redirect);
@@ -41,6 +44,7 @@ const missing=content.filter(r=>r.loader===0||r.invoke===0);
 const duplicate=content.filter(r=>r.loader>1||r.invoke>1||r.root>1);
 const partial=content.filter(r=>(r.loader===1)!==(r.invoke===1));
 const with333=content.filter(r=>r.legacy333).length;
+const noUsableLinks=content.filter(r=>r.hrefs===0);
 
 console.log("ELEMENTARY AUTOTICKER AUDIT");
 console.log("TOTAL_HTML="+rows.length);
@@ -51,8 +55,9 @@ console.log("MISSING_OR_INCOMPLETE="+missing.length);
 console.log("PARTIAL="+partial.length);
 console.log("DUPLICATE="+duplicate.length);
 console.log("CONTENT_WITH_333_OR_NETWORK_TICKER="+with333);
-for(const [label,list] of [["MISSING",missing],["PARTIAL",partial],["DUPLICATE",duplicate]]){
+console.log("CONTENT_WITH_NO_USABLE_LINKS="+noUsableLinks.length);
+for(const [label,list] of [["MISSING",missing],["PARTIAL",partial],["DUPLICATE",duplicate],["NO_USABLE_LINKS",noUsableLinks]]){
   console.log("\n["+label+"] "+list.length);
   list.slice(0,4000).forEach(r=>console.log(`${r.path}|loader=${r.loader}|invoke=${r.invoke}|root=${r.root}|333=${r.legacy333}`));
 }
-if(duplicate.length||partial.length)process.exitCode=2;
+if(missing.length||duplicate.length||partial.length)process.exitCode=2;
