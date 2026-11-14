@@ -1,0 +1,21 @@
+name: Elementary Global Chrome Regression
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'tools/validate-elementary-global-chrome.mjs'
+      - '.github/workflows/elementary-global-chrome-regression.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  chrome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - run: node tools/validate-elementary-global-chrome.mjs
+      - run: node tools/audit-elementary-autoticker.mjs

@@ -1,0 +1,46 @@
+name: One-Time Elementary Global Chrome Normalization
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/normalize-elementary-global-chrome.mjs'
+      - '.github/workflows/elementary-global-chrome-normalize.yml'
+permissions:
+  contents: write
+concurrency:
+  group: elementary-global-chrome-normalize-20261114
+  cancel-in-progress: false
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Normalize official header, menu and toolbar loader
+        run: node tools/normalize-elementary-global-chrome.mjs
+      - name: Validate global chrome invariants
+        run: node tools/validate-elementary-global-chrome.mjs
+      - name: Revalidate ticker, curriculum and learner boundaries
+        run: |
+          node tools/audit-elementary-autoticker.mjs
+          node tools/validate-elementary-learning-engine.mjs
+          node tools/validate-elementary-week06-evidence.mjs
+          node tests/elementary-learner-isolation.test.cjs
+          node tests/elementary-formal-boundaries.test.cjs
+          node --test tests/elementary-grade1-5-lesson-retention.test.cjs
+          node tools/validate-elementary-experience.mjs
+      - name: Commit global chrome normalization
+        run: |
+          set -euo pipefail
+          git config user.name "Verve N Veda Ecosystem Guardian"
+          git config user.email "ecosystem@vervenveda.com"
+          git add -- '*.html' '**/*.html'
+          git commit -m "Normalize official Elementary chrome across every page"
+          git pull --rebase origin main
+          git push origin HEAD:main
