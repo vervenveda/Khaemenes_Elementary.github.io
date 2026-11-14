@@ -33,7 +33,7 @@ const CANONICAL=[
   `</script>`
 ].join("\n");
 const LOADER=/<script\b[^>]*\bsrc=["\'][^"\']*vnv-header-autopopulate\.js[^"\']*["\'][^>]*>\s*<\/script>\s*/gi;
-const MOUNT_SCRIPT=/<script\b(?![^>]*\bsrc=)[^>]*>[\s\S]*?\bVNV_HEADER\??\.mount\s*\([\s\S]*?<\/script>\s*/gi;
+const MOUNT_SCRIPT=/<script\b(?![^>]*\bsrc=)[^>]*>(?:(?!<\/script>)[\s\S])*?\bVNV_HEADER\??\.mount\s*\((?:(?!<\/script>)[\s\S])*?<\/script>\s*/gi;
 
 function target(rel){return TARGETS.some(re=>re.test(rel))}
 function walk(dir,out=[]){
