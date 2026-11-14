@@ -35,6 +35,7 @@ for(const file of files){
     .map(m=>String(m[1]||"").trim())
     .filter(h=>h&&!/^(?:javascript:|mailto:|tel:|#?$)/i.test(h));
   rows.push({path:rel(file),redirect,loader,invoke,root,hrefs:hrefs.length,
+    fallback:/data-vnv-ticker-fallback/i.test(html),
     legacy333:/networkTicker|333 Network application ticker|khaeNetworkTicker/i.test(html)});
 }
 const content=rows.filter(r=>!r.redirect);
@@ -45,6 +46,9 @@ const duplicate=content.filter(r=>r.loader>1||r.invoke>1||r.root>1);
 const partial=content.filter(r=>(r.loader===1)!==(r.invoke===1));
 const with333=content.filter(r=>r.legacy333).length;
 const noUsableLinks=content.filter(r=>r.hrefs===0);
+const fallback=content.filter(r=>r.fallback);
+const unrenderable=content.filter(r=>r.hrefs===0&&!r.fallback);
+const unnecessaryFallback=content.filter(r=>r.hrefs>0&&r.fallback);
 
 console.log("ELEMENTARY AUTOTICKER AUDIT");
 console.log("TOTAL_HTML="+rows.length);
@@ -56,8 +60,11 @@ console.log("PARTIAL="+partial.length);
 console.log("DUPLICATE="+duplicate.length);
 console.log("CONTENT_WITH_333_OR_NETWORK_TICKER="+with333);
 console.log("CONTENT_WITH_NO_USABLE_LINKS="+noUsableLinks.length);
-for(const [label,list] of [["MISSING",missing],["PARTIAL",partial],["DUPLICATE",duplicate],["NO_USABLE_LINKS",noUsableLinks]]){
+console.log("CONTENT_WITH_APPROVED_FALLBACK="+fallback.length);
+console.log("UNRENDERABLE="+unrenderable.length);
+console.log("UNNECESSARY_FALLBACK="+unnecessaryFallback.length);
+for(const [label,list] of [["MISSING",missing],["PARTIAL",partial],["DUPLICATE",duplicate],["NO_USABLE_LINKS",noUsableLinks],["UNRENDERABLE",unrenderable],["UNNECESSARY_FALLBACK",unnecessaryFallback]]){
   console.log("\n["+label+"] "+list.length);
   list.slice(0,4000).forEach(r=>console.log(`${r.path}|loader=${r.loader}|invoke=${r.invoke}|root=${r.root}|333=${r.legacy333}`));
 }
-if(missing.length||duplicate.length||partial.length)process.exitCode=2;
+if(missing.length||duplicate.length||partial.length||unrenderable.length||unnecessaryFallback.length)process.exitCode=2;
