@@ -1,0 +1,25 @@
+name: Grade Three Family Guardrails
+on:
+  workflow_dispatch:
+  push:
+    branches: [audit/elementary-family-report-2026-11-09]
+    paths:
+      - student-profile/index.html
+      - grades/grade-03/assets/app.js
+      - grades/grade-03/assets/certificate.js
+      - grades/grade-03/assets/khaemenes-grade3-continuity.js
+      - grades/grade-03/assets/khaemenes-grade3-subject-context.js
+      - assets/khaemenes-grade-three-family-view.js
+      - tests/grade-three-family-guardrails.test.cjs
+      - .github/workflows/grade-three-family-guardrails.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/grade-three-family-guardrails.test.cjs

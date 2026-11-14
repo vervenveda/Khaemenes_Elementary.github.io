@@ -7,12 +7,22 @@ esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'
 
 function blank(){return{student:"Second Grade Scholar",weekly:{},midterm:0,final:0,portfolio:false}}
 function readLegacy(){try{return JSON.parse(localStorage.getItem(KEY))||blank()}catch{return blank()}}
-function read(){const scoped=CONT?.readState?.(null);return scoped&&typeof scoped==="object"?Object.assign(blank(),scoped):readLegacy()}
+function read(){
+ const linked=CONT?.status?.();
+ if(CONT){
+  if(linked?.status==="ready"){
+   const scoped=CONT.readState?.(null);
+   return scoped&&typeof scoped==="object"&&!Array.isArray(scoped)?Object.assign(blank(),scoped):blank();
+  }
+  return linked?.status==="no-active-learner"?readLegacy():blank();
+ }
+ return blank();
+}
 let state=read();
-function save(){try{if(CONT?.writeState)return CONT.writeState(state)===true;localStorage.setItem(KEY,JSON.stringify(state));return true}catch{return false}}
+function save(){try{return CONT?.status?.().status==="ready"&&CONT.writeState?.(state)===true}catch{return false}}
 function avg(){const v=DATA.units.map(u=>Number(state.weekly[u.week]||0)).filter(Boolean);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0}
 function done(){return DATA.units.filter(u=>Number(state.weekly[u.week]||0)>=80).length}
-function ready(){return done()===36&&Number(state.midterm||0)>=80&&Number(state.final||0)>=80&&!!state.portfolio}
+function ready(){return learnerStatus()?.status==="ready"&&done()===36&&Number(state.midterm||0)>=80&&Number(state.final||0)>=80&&state.portfolio===true}
 function learnerStatus(){return CONT?.status?.()||null}
 function learnerName(){const s=learnerStatus();return s?.status==="ready"&&s.learner?.nickname?s.learner.nickname:(state.student||"Second Grade Scholar")}
 
@@ -50,7 +60,7 @@ function bind(){
   });
   $("clearRecords").addEventListener("click",()=>{
     if(!confirm("Clear local second-grade records for this learner on this device?"))return;
-    if(CONT?.clearState)CONT.clearState();else localStorage.removeItem(KEY);
+    if(learnerStatus()?.status!=="ready"||!CONT?.clearState){alert("Select a registered Grade 2 learner before clearing a learner-owned record.");return}CONT.clearState();
     state=read();renderDash();renderWeeks()
   })
 }

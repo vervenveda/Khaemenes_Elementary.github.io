@@ -1,0 +1,21 @@
+name: Elementary Family Reporting
+on:
+  workflow_dispatch:
+  push:
+    branches: [audit/elementary-family-report-2026-11-09]
+    paths:
+      - assets/khaemenes-elementary-continuation-publisher.js
+      - grades/grade-01/index.html
+      - tests/elementary-family-report.test.cjs
+      - .github/workflows/elementary-family-report.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/elementary-family-report.test.cjs

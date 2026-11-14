@@ -28,4 +28,23 @@
 
 
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
+<section class="section" id="grade01FamilyReporting" aria-labelledby="grade01FamilyReportingTitle"><div class="shell"><div class="card" style="padding:24px;border:1px solid #bfb39c;border-radius:7px;background:#fffdf8;text-align:center"><h2 id="grade01FamilyReportingTitle" style="font:400 24px/1.3 Cinzel,Georgia,serif;color:#243038">Family Learning Report</h2><p id="grade01FamilyReportStatus" role="status" aria-live="polite" style="font-size:16px;line-height:1.6">Checking the selected Academy learner...</p><p style="font-size:16px;line-height:1.6">Grade 1's older assessment records are not automatically shared with the Family Center. Academic reporting will be enabled only after the learner-scoped source is verified.</p><a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/#family-progress" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 18px;color:#fff8e9;background:#243038;border-radius:7px;font-size:16px;text-decoration:none">Open Family Learning Center</a></div></div></section>
+<script>
+(()=>{"use strict";
+ const target=document.getElementById("grade01FamilyReportStatus");
+ function report(){
+  let registry=null,id=null;
+  try{registry=JSON.parse(localStorage.getItem("khaemenes_family_registry_v1")||"null");id=JSON.parse(localStorage.getItem("khaemenes_active_learner_v1")||"null")}catch{}
+  const student=typeof id==="string"?registry?.learners?.[id]:null;
+  const family=student?.familyId?registry?.families?.[student.familyId]:null;
+  const linked=student&&student.learnerId===id&&student.grade==="01"&&student.stage==="elementary"&&student.selfDirectedAdult!==true&&family?.learnerIds?.includes(id);
+  target.textContent=linked
+    ?"Grade 01 learner profile selected. Family reporting is pending verification of learner-scoped academic records; no grades have been transmitted."
+    :"No matching Grade 01 learner selected. Public lessons remain available, but no personal family report is shown.";
+ }
+ report();
+ window.addEventListener("pageshow",report);
+ window.addEventListener("storage",e=>{if(e.key==="khaemenes_family_registry_v1"||e.key==="khaemenes_active_learner_v1")report()});
+})();
+</script>
 </body></html>

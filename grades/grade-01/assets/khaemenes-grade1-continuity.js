@@ -1,7 +1,7 @@
 (function attachKhaemenesGrade1Continuity(global){
   "use strict";
 
-  const VERSION="1.0.0";
+  const VERSION="1.1.0";
   const EXPECTED_GRADE="01";
   const EXPECTED_STAGE="elementary";
   const LEGACY_GRADE_KEY="khaemenes_grade1_36_aplus_v1";
@@ -38,26 +38,14 @@
     return `khaemenes.course:${l.learnerId}:${suffix}`;
   }
 
+  // Existing browser-wide legacy records have no verifiable learner owner.
+  // Never auto-assign them to whichever child happens to be selected.
   function migrateLegacy(){
-    const s=status();
-    if(s.status!=="ready")return Object.freeze({migrated:false,reason:s.status});
-    const courseKey=scopedKey("course"),favoritesKey=scopedKey("favorites");
-    const legacyCourse=readJSON(LEGACY_GRADE_KEY,null),legacyFavorites=readJSON(LEGACY_FAVORITES_KEY,null);
-    let courseMigrated=false,favoritesMigrated=false;
-    if(courseKey&&legacyCourse!==null&&readJSON(courseKey,null)===null){courseMigrated=writeJSON(courseKey,{format:"khaemenes-course-state-v1",learnerId:s.learner.learnerId,courseId:"elementary-grade-01",source:"legacy-grade-01",updatedAt:new Date().toISOString(),state:legacyCourse})}
-    if(favoritesKey&&legacyFavorites!==null&&readJSON(favoritesKey,null)===null){favoritesMigrated=writeJSON(favoritesKey,{format:"khaemenes-course-preferences-v1",learnerId:s.learner.learnerId,courseId:"elementary-grade-01",source:"legacy-grade-01",updatedAt:new Date().toISOString(),favorites:legacyFavorites})}
-    return Object.freeze({migrated:courseMigrated||favoritesMigrated,courseMigrated,favoritesMigrated,courseKey,favoritesKey});
+    return Object.freeze({migrated:false,courseMigrated:false,favoritesMigrated:false,reason:"legacy-ownership-unverified"});
   }
 
   function syncFromLegacy(){
-    const s=status();
-    if(s.status!=="ready")return false;
-    const courseKey=scopedKey("course"),favoritesKey=scopedKey("favorites");
-    const course=readJSON(LEGACY_GRADE_KEY,null),favorites=readJSON(LEGACY_FAVORITES_KEY,null);
-    if(courseKey&&course!==null)writeJSON(courseKey,{format:"khaemenes-course-state-v1",learnerId:s.learner.learnerId,courseId:"elementary-grade-01",source:"grade-01-runtime",updatedAt:new Date().toISOString(),state:course});
-    if(favoritesKey&&favorites!==null)writeJSON(favoritesKey,{format:"khaemenes-course-preferences-v1",learnerId:s.learner.learnerId,courseId:"elementary-grade-01",source:"grade-01-runtime",updatedAt:new Date().toISOString(),favorites});
-    global.dispatchEvent(new CustomEvent("khaemenes-grade1-continuity-synced",{detail:{learnerId:s.learner.learnerId,courseKey,favoritesKey}}));
-    return true;
+    return false; // No unverified cross-learner grade or favorite mirroring.
   }
 
   function publish(){
@@ -68,14 +56,8 @@
 
   function activate(){
     const s=publish();
-    if(s.status==="ready"){
-      migrateLegacy();
-      const sync=()=>global.setTimeout(syncFromLegacy,0);
-      global.addEventListener("beforeunload",syncFromLegacy,{passive:true});
-      document.addEventListener("change",sync,{passive:true});
-      document.addEventListener("click",sync,{passive:true});
-      global.addEventListener("khaemenes-family-changed",()=>{publish();syncFromLegacy()});
-    }
+    global.addEventListener("khaemenes-family-changed",publish);
+    // Only read-only placement publication is automatic. No legacy writes.
     return s;
   }
 

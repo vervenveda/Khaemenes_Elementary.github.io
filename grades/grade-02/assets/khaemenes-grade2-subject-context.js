@@ -1,6 +1,6 @@
 (function attachKhaemenesGrade2SubjectContext(global){
   "use strict";
-  const VERSION="1.0.0";
+  const VERSION="1.1.0";
   const EXPECTED_GRADE="02";
   const EXPECTED_STAGE="elementary";
   const SUBJECTS=Object.freeze({
@@ -15,7 +15,11 @@
   });
 
   function registry(){return global.KhaemenesFamilyRegistry||null}
-  function learner(){return registry()?.getLearner?.()||null}
+  function learner(){
+    const R=registry(),ids=R?.activeIds?.()||{},l=R?.getLearner?.(ids.learnerId),family=R?.getFamily?.(ids.familyId);
+    return l&&family&&l.learnerId===ids.learnerId&&l.familyId===family.familyId&&
+      l.selfDirectedAdult!==true&&family.learnerIds?.includes(l.learnerId)?l:null;
+  }
   function normalizeGrade(v){return registry()?.normalizeGrade?.(v)||String(v||"").replace(/[^0-9]/g,"").padStart(2,"0")}
   function normalizeStage(v){return registry()?.normalizeStage?.(v)||String(v||"").trim().toLowerCase()}
   function detectSubject(){

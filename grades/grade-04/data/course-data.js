@@ -822,7 +822,7 @@ window.KHAE_GRADE4_DATA = {
     "certification": {
       "threshold": 80,
       "requires": [
-        "Weekly assessment average at or above 80%",
+        "Each of the 36 weekly assessments at or above 80%",
         "Midterm score at or above 80%",
         "Final score at or above 80%",
         "Portfolio evidence approved by adult mentor"
