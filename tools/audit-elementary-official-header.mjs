@@ -25,7 +25,7 @@ const rows=[];
    rows.push({
     path:rel,
     loader:count(/vnv-header-autopopulate\.js/gi,s),
-    contract:count(/data-vnv-elementary-header-contract=["\']v1["\']/gi,s),
+    contract:count(/data-vnv-elementary-header-contract=["\']v2["\']/gi,s),
     title:/title\s*:\s*["\']Khaemenes Elementary Academy["\']/i.test(s),
     subtitle:/subtitle\s*:\s*["\']Grades 01.?05["\']/i.test(s),
     icon:/icon\s*:\s*["\']K["\']/i.test(s),
