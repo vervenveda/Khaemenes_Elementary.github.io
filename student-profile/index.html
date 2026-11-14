@@ -40,7 +40,7 @@ body :is(main, .hero, .ug-hero, .mast) :is(a.btn,a.button,.hero-btn,.ug-priority
 body :is(.hero,.ug-hero,.mast)> :is(h1,p),body :is(.hero,.ug-hero,.mast)>div> :is(h1,p){text-align:center}
 body :is(.hero,.ug-hero,.mast) h1{font-size:clamp(30px,4.4vw,52px)!important;line-height:1.18!important;font-weight:400!important}
 body :is(.hero,.ug-hero,.mast) :is(.eyebrow,.ug-eyebrow),body main>.eyebrow{font-size:16px!important;letter-spacing:.045em!important;line-height:1.4!important}
-</style><link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-elementary-profile-v3.css?v=20261107-folds-v8"><!-- Opt-in forensic probe; inert unless ?chrome_audit=1. No learner data. -->
+<style id="elementary-photo-parity-controls-20261114">.appearance :is(label,button,input,select){font-size:max(16px,1rem);line-height:1.45}.appearance :is(button,input,select){min-height:44px;border-radius:7px}</style></style><link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-elementary-profile-v3.css?v=20261107-folds-v8"><!-- Opt-in forensic probe; inert unless ?chrome_audit=1. No learner data. -->
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-elementary-chrome-audit.js?v=20261107-audit-v4" defer></script>
 </head><body data-theme="parchment" data-profile-stage="elementary"><a href="#main" class="skip">Skip to student profile</a>
 <header class="top"><div class="head"><a class="brand" href="https://vervenveda.com/Khaemenes_Academy.github.io/">Khaemenes Academy</a><nav class="nav"><a href="../">Elementary Hall</a><a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family Portal</a><a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student Portal</a><a href="https://vervenveda.com/">Ecosystem</a></nav></div></header>
@@ -65,7 +65,7 @@ body :is(.hero,.ug-hero,.mast) :is(.eyebrow,.ug-eyebrow),body main>.eyebrow{font
 <div class="actions"><button type="button" class="secondary" id="removePhoto">Remove photo</button><button type="button" class="secondary" id="bringKinder">Bring Kindergarten picture &amp; colors forward</button></div></section>
 <section class="card span6 appearance"><h2>Background &amp; comfort</h2><p class="muted">Choose a colorful reading space. These choices belong only to the selected learner.</p>
 <div class="choice" id="themes"></div><div class="actions"><button type="button" class="secondary" id="reset">Reset colors</button><button type="button" class="secondary" id="printProfile">Print profile</button><button type="button" class="secondary" id="exportVisual">Export picture &amp; colors</button></div>
-<label for="importVisual">Restore picture &amp; colors from a local backup</label><input id="importVisual" type="file" accept=".json,application/json"><p class="status" id="status" aria-live="polite"></p></section>
+<p class="muted" style="font-size:16px">Exported picture backups may include this learner’s photo and are not encrypted. Keep backups private.</p><label for="importVisual">Restore picture &amp; colors from a local backup</label><input id="importVisual" type="file" accept=".json,application/json"><p class="status" id="status" aria-live="polite"></p></section>
 </div>
 <section class="card" id="gradePreview" aria-labelledby="nextGradeHeading"><p class="eyebrow">My next milestone</p>
 <h2 id="nextGradeHeading">A new learning horizon</h2><p class="muted">Preview the next learning level while keeping all course requirements, assessment results, and family placement decisions in their original systems.</p>
@@ -96,7 +96,7 @@ const GRADE_SUBJECTS={
 "04":{...COMMON,"Technology":"subjects/technology-tools/"},
 "05":{...COMMON,"Technology":"subjects/technology-tools/"}
 };
-let activeId="",grade="",appearance={theme:"parchment",avatar:"🌟",photo:""};
+let activeId="",grade="",appearance={theme:"parchment",avatar:"🌟",photo:""},pictureRequest=0;
 const read=(k,f)=>{try{const v=localStorage.getItem(k);return v===null?f:JSON.parse(v)}catch{return f}};
 const store=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}};
 const validGrade=g=>/^(0[1-5])$/.test(String(g||""));
@@ -192,6 +192,7 @@ function selectLearners(){
  area.hidden=candidates.length===0||(candidates.length===1&&Boolean(active));
 }
 function refresh(){
+ pictureRequest++; // Invalidate pending picture writes when learner identity changes.
  $("gradePreviewDetails").hidden=true;$("showGradePreview").setAttribute("aria-expanded","false");
  selectLearners();
  const l=learner(),priorId=activeId;activeId=l?.learnerId||"";grade=l?.grade||"";
@@ -210,7 +211,22 @@ function refresh(){
 }
 for(const avatar of AVATARS){const b=document.createElement("button");b.type="button";b.className="secondary";b.dataset.value=avatar;b.textContent=avatar;b.setAttribute("aria-label","Use "+avatar+" avatar");b.addEventListener("click",()=>{if(!needsAdult())return;appearance.avatar=avatar;appearance.photo="";saveVisual()});$("avatars").append(b)}
 for(const theme of THEMES){const b=document.createElement("button");b.type="button";b.className="secondary";b.dataset.value=theme;b.textContent=theme.charAt(0).toUpperCase()+theme.slice(1);b.addEventListener("click",()=>{if(!needsAdult())return;appearance.theme=theme;saveVisual()});$("themes").append(b)}
-$("learnerSelect").addEventListener("change",e=>{const family=R?.getFamily?.(),l=family?.learners?.find(x=>x.learnerId===e.target.value&&x.stage==="elementary"&&validGrade(x.grade));if(l?.familyId===family?.familyId)R.setActive?.({familyId:family.familyId,learnerId:l.learnerId})});
+$("learnerSelect").addEventListener("change",e=>{
+ const select=e.target,id=select.value,family=R?.getFamily?.(),ids=R?.activeIds?.()||{};
+ const l=family?.learners?.find(x=>x.learnerId===id&&x.stage==="elementary"&&validGrade(x.grade));
+ const adult=R?.getAdult?.(ids.adultId);
+ const permitted=l?.familyId===family?.familyId&&family?.learnerIds?.includes(id)&&
+  family?.adultIds?.includes(ids.adultId)&&ids.familyId===family.familyId&&
+  adult&&R?.canAdult?.(ids.adultId,id,"progress.view")===true;
+ if(!permitted){select.value=activeId;say("This adult cannot open that Elementary learner's profile.",true);return}
+ try{
+  R.setActive({familyId:family.familyId,adultId:ids.adultId,learnerId:id});
+  const after=R.activeIds?.()||{};
+  if(after.familyId!==family.familyId||after.adultId!==ids.adultId||after.learnerId!==id)
+   throw Error("Learner switch did not persist");
+  $("adultConfirm").checked=false;
+ }catch{select.value=activeId;say("Learner switch could not be verified. Existing work is unchanged.",true)}
+});
 $("pinClass").addEventListener("click",()=>updateClassPin(true));
 $("unpinClass").addEventListener("click",()=>updateClassPin(false));
 $("showGradePreview").addEventListener("click",()=>{
@@ -226,18 +242,19 @@ $("pinSubject").addEventListener("click",()=>{if(!needsAdult())return;const id=$
 $("unpinSubject").addEventListener("click",()=>{if(!needsAdult())return;const id=$("subjectSelect").value;if(!Object.hasOwn(subjectMap(),id))return say("Choose a subject.",true);if(!store(pinKey(),pinIds().filter(x=>x!==id)))return say("Could not remove pin.",true);renderPins();say("Subject removed from this learner's pins.");});
 $("photoFile").addEventListener("change",async e=>{
  const file=e.target.files?.[0];e.target.value="";if(!file||!needsAdult())return;
- if(!["image/png","image/jpeg","image/webp","image/gif"].includes(file.type)||file.size>5*1024*1024)return say("Choose JPG, PNG, WebP, or GIF below 5 MB.",true);
- const id=activeId,url=URL.createObjectURL(file);
+ if(!["image/png","image/jpeg","image/webp","image/gif"].includes(file.type)||!file.size||file.size>4*1024*1024)return say("Choose JPG, PNG, WebP, or GIF below 4 MB.",true);
+ const id=activeId,request=++pictureRequest,url=URL.createObjectURL(file);
  try{
-  const image=new Image();image.src=url;await image.decode();if(activeId!==id||!needsAdult())return;
+  const image=new Image();image.src=url;await image.decode();if(activeId!==id||request!==pictureRequest||!needsAdult())return;
   const c=document.createElement("canvas");c.width=c.height=256;const x=c.getContext("2d"),size=Math.min(image.naturalWidth,image.naturalHeight);
   if(!x||!size)throw Error("Image unavailable");x.fillStyle="#fff";x.fillRect(0,0,256,256);
   x.drawImage(image,(image.naturalWidth-size)/2,(image.naturalHeight-size)/2,size,size,0,0,256,256);
-  const jpeg=c.toDataURL("image/jpeg",.72);if(jpeg.length>=180000)throw Error("Too large");
+  let jpeg="";for(const quality of [.78,.64,.50,.38]){jpeg=c.toDataURL("image/jpeg",quality);if(jpeg.length<180000)break}
+  if(!jpeg||jpeg.length>=180000)throw Error("Too large");
   const prior=appearance.photo;appearance.photo=jpeg;if(!saveVisual()){appearance.photo=prior;renderVisual()}
  }catch{say("Could not process photo. Try a smaller image.",true)}finally{URL.revokeObjectURL(url)}
 });
-$("removePhoto").addEventListener("click",()=>{if(!needsAdult())return;appearance.photo="";saveVisual()});
+$("removePhoto").addEventListener("click",()=>{if(!needsAdult())return;pictureRequest++;appearance.photo="";saveVisual()});
 $("bringKinder").addEventListener("click",()=>{
  if(!needsAdult())return;
  if(grade!=="01")return say("Kindergarten visual handoff is for Grade 1.",true);

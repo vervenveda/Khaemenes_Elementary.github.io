@@ -38,5 +38,7 @@ jobs:
           node-version: "22"
       - run: npm install --no-save --no-package-lock playwright
       - run: npx playwright install chromium
+      - name: Validate profile authorization and picture isolation source guards
+        run: node --test tests/student-profile-sibling-isolation.test.cjs
       - name: Validate Elementary profile grade, appearance and sibling isolation
         run: node tests/elementary-profile-browser-smoke.mjs
