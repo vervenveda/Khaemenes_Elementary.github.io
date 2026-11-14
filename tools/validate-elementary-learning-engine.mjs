@@ -183,6 +183,9 @@ expect(assessment.includes('verifiedBy:"elementary-assessment-engine-v1"'),"Form
 expect(assessment.includes("completedWeeks(state,18)"),"Midterm gate no longer checks the first 18 weeks.");
 expect(assessment.includes("completedWeeks(state,36)"),"Final gate no longer checks all 36 weeks.");
 expect(assessment.includes("manualScoreEntry:false"),"Assessment authority declaration drifted.");
+expect(assessment.includes("localStorage.getItem(k)===raw"),"Formal assessment saves no longer verify exact storage readback.");
+expect(assessment.includes('raw.learnerId===l?.learnerId'),"Formal assessment state no longer validates learner ownership.");
+expect(assessment.includes('raw.courseId===`elementary-grade-${grade()}`'),"Formal assessment state no longer validates course ownership.");
 
 // Dashboards must not write manual scores and must require 36/36.
 for(const g of ["02","03","04","05"]){

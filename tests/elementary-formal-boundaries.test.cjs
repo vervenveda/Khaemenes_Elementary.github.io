@@ -8,14 +8,16 @@ function create(grade,week,formal,pathname=null){
  const store=new Map();
  const storage={getItem:k=>store.has(k)?store.get(k):null,setItem:(k,v)=>store.set(k,String(v)),removeItem:k=>store.delete(k)};
  const owner="fiction-A",other="fiction-B";
- const registry={learners:{
-  [owner]:{learnerId:owner,stage:"elementary",grade},
-  [other]:{learnerId:other,stage:"elementary",grade}
+ const familyId="fiction-family";
+ const registry={families:{[familyId]:{familyId,learnerIds:[owner,other]}},learners:{
+  [owner]:{learnerId:owner,familyId,stage:"elementary",grade},
+  [other]:{learnerId:other,familyId,stage:"elementary",grade}
  }};
  store.set("khaemenes_family_registry_v1",JSON.stringify(registry));
+ store.set("khaemenes_active_family_v1",JSON.stringify(familyId));
  store.set("khaemenes_active_learner_v1",JSON.stringify(owner));
  const key="khaemenes.course:"+owner+":elementary-grade-"+grade;
- function setState(state){store.set(key,JSON.stringify({format:"khaemenes-course-state-v1",state}))}
+ function setState(state){store.set(key,JSON.stringify({format:"khaemenes-course-state-v1",learnerId:owner,courseId:"elementary-grade-"+grade,state}))}
  setState(formal);
  const window={dispatchEvent(){},addEventListener(){}};
  const context={window,localStorage:storage,location:{pathname:pathname||"/Khaemenes_Elementary.github.io/grades/grade-"+grade+"/assessments/week-"+String(week).padStart(2,"0")+"-assessment.html"},document:{readyState:"loading",addEventListener(){},querySelector(){return null}},CustomEvent:class{}};
@@ -62,8 +64,10 @@ for(const grade of ["02","03","04","05"]){
   run();
   assert.match(view.innerHTML,/Certificate Locked/,grade+": unassigned preview issued an official certificate");
   map.set("khaemenes_active_learner_v1",JSON.stringify("fiction-A"));
-  map.set("khaemenes_family_registry_v1",JSON.stringify({learners:{"fiction-A":{learnerId:"fiction-A",grade,stage:"elementary",nickname:"Fiction A"}}}));
-  map.set("khaemenes.course:fiction-A:elementary-grade-"+grade,JSON.stringify({format:"khaemenes-course-state-v1",state:record}));
+  const familyId="fiction-family";
+  map.set("khaemenes_active_family_v1",JSON.stringify(familyId));
+  map.set("khaemenes_family_registry_v1",JSON.stringify({families:{[familyId]:{familyId,learnerIds:["fiction-A"]}},learners:{"fiction-A":{learnerId:"fiction-A",familyId,grade,stage:"elementary",nickname:"Fiction A"}}}));
+  map.set("khaemenes.course:fiction-A:elementary-grade-"+grade,JSON.stringify({format:"khaemenes-course-state-v1",learnerId:"fiction-A",courseId:"elementary-grade-"+grade,state:record}));
   run();
   assert.match(view.innerHTML,/Certificate of/,grade+": linked eligible learner incorrectly locked");
   map.set("khaemenes_active_learner_v1",JSON.stringify("fiction-B"));

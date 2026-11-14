@@ -28,6 +28,7 @@ on:
       - 'tools/validate-elementary-week06-evidence.mjs'
       - 'tests/elementary-learner-isolation.test.cjs'
       - 'tests/elementary-formal-boundaries.test.cjs'
+      - 'tests/elementary-grade1-5-lesson-retention.test.cjs'
       - '.github/workflows/elementary-learning-engine-regression.yml'
   pull_request:
     paths:
@@ -54,6 +55,7 @@ on:
       - 'tools/validate-elementary-week06-evidence.mjs'
       - 'tests/elementary-learner-isolation.test.cjs'
       - 'tests/elementary-formal-boundaries.test.cjs'
+      - 'tests/elementary-grade1-5-lesson-retention.test.cjs'
       - '.github/workflows/elementary-learning-engine-regression.yml'
   workflow_dispatch:
 
@@ -82,3 +84,5 @@ jobs:
         run: node tests/elementary-learner-isolation.test.cjs
       - name: Validate live formal assessment boundaries and Grade 1 compatibility
         run: node tests/elementary-formal-boundaries.test.cjs
+      - name: Validate Grade 01–05 learner record retention and write readback
+        run: node --test tests/elementary-grade1-5-lesson-retention.test.cjs
