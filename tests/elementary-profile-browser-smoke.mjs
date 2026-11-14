@@ -46,8 +46,10 @@ try{
   const f=R.createFamily({displayName:"Elementary QA",adultName:"QA Guardian"});
   const first=R.registerLearner({familyId:f.familyId,nickname:"Reading Star",stage:"elementary",grade:"01"});
   const second=R.registerLearner({familyId:f.familyId,nickname:"Science Star",stage:"elementary",grade:"03"});
-  R.setActive({familyId:f.familyId,learnerId:first.learnerId});
-  return {first:first.learnerId,second:second.learnerId};
+  R.grantAdultAccess({familyId:f.familyId,adultId:f.adultId,learnerId:first.learnerId,permissionPreset:"co-guardian"});
+  R.grantAdultAccess({familyId:f.familyId,adultId:f.adultId,learnerId:second.learnerId,permissionPreset:"co-guardian"});
+  R.setActive({familyId:f.familyId,adultId:f.adultId,learnerId:first.learnerId});
+  return {first:first.learnerId,second:second.learnerId,adult:f.adultId};
  });
  assert.equal(await page.locator("#childName").innerText(),"Reading Star");
  assert.equal(await page.locator("#gradePill").innerText(),"Grade 1");
@@ -150,8 +152,10 @@ try{
  const more=await page.evaluate(()=>{
   const R=window.KhaemenesFamilyRegistry,f=R.getFamily();
   const list=[];
+  const adultId=R.activeIds().adultId;
   for(const grade of ["02","04","05"]){
     const learner=R.registerLearner({familyId:f.familyId,nickname:"Grade "+Number(grade)+" Explorer",stage:"elementary",grade});
+    R.grantAdultAccess({familyId:f.familyId,adultId,learnerId:learner.learnerId,permissionPreset:"co-guardian"});
     list.push({grade,learnerId:learner.learnerId});
   }
   return list;
