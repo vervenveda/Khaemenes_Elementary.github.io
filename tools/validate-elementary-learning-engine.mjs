@@ -84,6 +84,7 @@ for(let week=1;week<=36;week++){
   const ww=String(week).padStart(2,"0");
   expectGrade1Redirect(`lessons/unit-${ww}/index.html`,CANONICAL_G1+`lessons/unit-${ww}/index.html`);
   expectGrade1Redirect(`assessments/unit-${ww}-assessment.html`,CANONICAL_G1+`assessments/unit-${ww}-assessment.html`);
+  expectGrade1Redirect(`printables/printables/unit-${ww}-packet.html`,CANONICAL_G1+`printables/unit-${ww}-packet.html`);
 }
 for(const name of ["midterm.html","final-exam.html","weekly-assessments.html"])
   expectGrade1Redirect("assessments/"+name,CANONICAL_G1+"assessments/"+name);
