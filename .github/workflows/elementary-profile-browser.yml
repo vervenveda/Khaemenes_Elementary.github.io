@@ -21,7 +21,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: vervenveda/Khaemenes_Academy.github.io
-          ref: main
+          # Pin the audited shared profile contract so Elementary CI is reproducible.
+          # Update this SHA deliberately when the Academy profile contract changes.
+          ref: fff9d4852d71ef9288e6fbd631112d7930f52f6e
           path: shared-academy
           persist-credentials: false
       - uses: actions/setup-node@v4

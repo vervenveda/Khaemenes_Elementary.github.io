@@ -19,6 +19,12 @@ await page.route("https://vervenveda.com/**",async route=>{
  catch{return route.fulfill({status:404,body:"Missing test asset"})}
 });
 const url="https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/";
+async function openPassport(){
+ const fold=page.locator("#kepFoldPassport");
+ await fold.waitFor({state:"attached",timeout:3000});
+ if(!(await fold.evaluate(el=>el.open)))await fold.locator(":scope > summary").click();
+ await page.locator("#profileStudio").waitFor({state:"visible",timeout:3000});
+}
 try{
  await page.goto(url,{waitUntil:"domcontentloaded"});
  await page.waitForTimeout(160);
@@ -38,6 +44,7 @@ try{
  assert.equal(await page.locator("#gradePill").innerText(),"Grade 1");
  assert.match(await page.locator("#gradeHomeLink").getAttribute("href"),/grades\/grade-01\/$/);
  assert.equal(await page.locator("#learnerSelect option").count(),2);
+ await openPassport();
  assert.equal(await page.locator("#profileStudio").isVisible(),true);
  console.log("PASS registered grade drives the profile, not an editable grade selector");
  await page.evaluate(id=>{
@@ -47,11 +54,13 @@ try{
   C.publish({learnerId:id,courseId:"unlabeled-first-grade",stage:"elementary",nextTitle:"MATCHING FIRST GRADE",nextHref:"https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-01/lessons/unit-01/"});
  },ids.first);
  await page.reload({waitUntil:"domcontentloaded"});
+ await openPassport();
  assert.match(await page.locator("#nextSteps").innerText(),/MATCHING FIRST GRADE/);
  assert.doesNotMatch(await page.locator("#nextSteps").innerText(),/UNRELATED THIRD GRADE|MISLABELED THIRD GRADE/);
  console.log("PASS grade-scoped Today Next excludes wrong-grade continuation records");
  await page.evaluate(id=>{const C=window.KhaemenesLearningContinuation;for(const key of ["unlabeled-third-grade","mislabeled-third-grade","unlabeled-first-grade"])C.removeCourse(id,key)},ids.first);
  await page.reload({waitUntil:"domcontentloaded"});
+ await openPassport();
  
  await page.locator("#subjectSelect").selectOption("Math Practice");
  await page.locator("#pinSubject").click();
