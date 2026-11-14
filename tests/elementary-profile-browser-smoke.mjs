@@ -19,11 +19,18 @@ await page.route("https://vervenveda.com/**",async route=>{
  catch{return route.fulfill({status:404,body:"Missing test asset"})}
 });
 const url="https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/";
-async function openPassport(){
- const fold=page.locator("#kepFoldPassport");
+async function openFold(id){
+ const fold=page.locator("#"+id);
  await fold.waitFor({state:"attached",timeout:3000});
  if(!(await fold.evaluate(el=>el.open)))await fold.locator(":scope > summary").click();
+}
+async function openPassport(){
+ await openFold("kepFoldPassport");
  await page.locator("#profileStudio").waitFor({state:"visible",timeout:3000});
+}
+async function openWorkingFolds(){
+ await openFold("kepFoldSubjects");
+ await openPassport();
 }
 try{
  await page.goto(url,{waitUntil:"domcontentloaded"});
@@ -44,7 +51,7 @@ try{
  assert.equal(await page.locator("#gradePill").innerText(),"Grade 1");
  assert.match(await page.locator("#gradeHomeLink").getAttribute("href"),/grades\/grade-01\/$/);
  assert.equal(await page.locator("#learnerSelect option").count(),2);
- await openPassport();
+ await openWorkingFolds();
  assert.equal(await page.locator("#profileStudio").isVisible(),true);
  console.log("PASS registered grade drives the profile, not an editable grade selector");
  await page.evaluate(id=>{
@@ -54,13 +61,13 @@ try{
   C.publish({learnerId:id,courseId:"unlabeled-first-grade",stage:"elementary",nextTitle:"MATCHING FIRST GRADE",nextHref:"https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-01/lessons/unit-01/"});
  },ids.first);
  await page.reload({waitUntil:"domcontentloaded"});
- await openPassport();
+ await openWorkingFolds();
  assert.match(await page.locator("#nextSteps").innerText(),/MATCHING FIRST GRADE/);
  assert.doesNotMatch(await page.locator("#nextSteps").innerText(),/UNRELATED THIRD GRADE|MISLABELED THIRD GRADE/);
  console.log("PASS grade-scoped Today Next excludes wrong-grade continuation records");
  await page.evaluate(id=>{const C=window.KhaemenesLearningContinuation;for(const key of ["unlabeled-third-grade","mislabeled-third-grade","unlabeled-first-grade"])C.removeCourse(id,key)},ids.first);
  await page.reload({waitUntil:"domcontentloaded"});
- await openPassport();
+ await openWorkingFolds();
  
  await page.locator("#subjectSelect").selectOption("Math Practice");
  await page.locator("#pinSubject").click();
@@ -80,6 +87,7 @@ try{
  assert.match(await page.locator("#pinned").innerText(),/My Grade 1 Class/);
  const classPins=await page.evaluate(id=>JSON.parse(localStorage.getItem("khaemenes_course_pins_v1")).learners[id],ids.first);
  assert.equal(classPins.filter(x=>x.id==="khaemenes-grade-01").length,1);
+ await openFold("kepFoldMilestone");
  await page.locator("#showGradePreview").click();
  assert.match(await page.locator("#gradePreviewName").innerText(),/Grade 2/);
  assert.equal(await page.evaluate(()=>window.KhaemenesFamilyRegistry.getLearner().grade),"01");
