@@ -107,12 +107,14 @@ function expectGrade2Redirect(file,target){
   expect(!html.includes("khaemenes-elementary-assessment-engine.js"),`${file} legacy Grade 2 redirect must not carry formal assessment authority.`);
 }
 for(const subject of ["language-arts","mathematics","science","social-studies","arts-music","health-pe-sel","technology","integrated-projects"]){
-  for(const leaf of ["index.html",...Array.from({length:36},(_,i)=>`week-${String(i+1).padStart(2,"0")}.html`])
+  for(const leaf of ["index.html",...Array.from({length:36},(_,i)=>`week-${String(i+1).padStart(2,"0")}.html`)]){
     expectGrade2Redirect(`subjects/${subject}/${leaf}`,CANONICAL_G2_SUBJECTS+subject+"/"+leaf);
+  }
 }
 for(const subject of ["arts-music","health-pe-sel","social-studies","technology"]){
-  for(const leaf of ["index.html",...Array.from({length:36},(_,i)=>`week-${String(i+1).padStart(2,"0")}.html`])
+  for(const leaf of ["index.html",...Array.from({length:36},(_,i)=>`week-${String(i+1).padStart(2,"0")}.html`)]){
     expectGrade2Redirect(`${subject}/${leaf}`,CANONICAL_G2_SUBJECTS+subject+"/"+leaf);
+  }
 }
 
 
