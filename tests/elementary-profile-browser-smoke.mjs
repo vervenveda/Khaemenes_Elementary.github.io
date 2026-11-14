@@ -80,6 +80,7 @@ try{
  await page.locator("#themes button[data-value='forest']").click();
  assert.equal(await page.locator("body").getAttribute("data-theme"),"forest");
  await page.reload({waitUntil:"domcontentloaded"});
+ await openWorkingFolds();
  assert.equal(await page.locator("body").getAttribute("data-theme"),"forest");
  assert.match(await page.locator("#pinned").innerText(),/Math Practice/);
  console.log("PASS Grade 1 subject pin and appearance survive reload");
