@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import {chromium} from "playwright";
-const root=process.cwd(),academy=path.join(root,"shared-academy");
+const root=process.cwd(),academy=path.join(root,"shared-academy"),vnv=path.join(root,"shared-vnv");
 const mime={".html":"text/html; charset=utf-8",".js":"text/javascript; charset=utf-8",".css":"text/css; charset=utf-8",".json":"application/json"};
 const browser=await chromium.launch({headless:true});
 const context=await browser.newContext({viewport:{width:1024,height:860},acceptDownloads:true,reducedMotion:"reduce"});
@@ -12,6 +12,7 @@ await page.route("https://vervenveda.com/**",async route=>{
  const p=new URL(route.request().url()).pathname;let home=root,local=p;
  if(p.startsWith("/Khaemenes_Elementary.github.io/"))local=p.slice("/Khaemenes_Elementary.github.io".length);
  else if(p.startsWith("/Khaemenes_Academy.github.io/")){home=academy;local=p.slice("/Khaemenes_Academy.github.io".length)}
+ else if(p.startsWith("/assets/")){home=vnv;local=p}
  else return route.fulfill({status:404,body:"Unmapped test asset"});
  let filename=path.resolve(home,"."+local);
  if(!filename.startsWith(home+path.sep)&&filename!==home)return route.fulfill({status:403});

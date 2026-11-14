@@ -26,6 +26,13 @@ jobs:
           ref: fff9d4852d71ef9288e6fbd631112d7930f52f6e
           path: shared-academy
           persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: vervenveda/vervenveda.github.io
+          # Pin shared VNV ticker/header assets used by the profile page.
+          ref: 200b1cb1fe3c55e4b1dc3137a83bba1d93a94417
+          path: shared-vnv
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
