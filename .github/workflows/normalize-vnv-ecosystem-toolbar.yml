@@ -23,12 +23,13 @@ jobs:
           SKIP={'.git','.github','node_modules','vendor','admin','internal','private','archive','archives','backup','backups','deprecated'}
           PROTECTED=re.compile(r'(^|/)(quiz|quizzes|exam|exams|assessment|assessments)(/|$)',re.I)
           CLOSED=re.compile(r'data-closed-book',re.I)
+          REDIRECT=re.compile(r'<meta\b[^>]*http-equiv=["\']refresh["\']',re.I)
           DOC=re.compile(r'<!doctype\s+html|<html\b|<body\b',re.I)
           TB=re.compile(r'<script\b[^>]*\bsrc=["\'][^"\']*vnv-ecosystem-toolbar\.js[^"\']*["\'][^>]*>(?:\s*</script>)?',re.I)
           LEG=re.compile(r'<script\b[^>]*\bsrc=["\'][^"\']*vnv-beta-link\.js[^"\']*["\'][^>]*>(?:\s*</script>)?',re.I)
           NODE=re.compile(r'<(?P<t>a|button)[^>]*\bid=["\'](?:vnvBetaProgramLink|vnvBetaProgramFallback)["\'][^>]*>[\s\S]*?</(?P=t)>',re.I)
 
-          counts={'html':0,'eligible':0,'already':0,'changed':0,'protected':0,'internal':0,'fragments':0,'legacyRemoved':0,'duplicatesCollapsed':0}
+          counts={'html':0,'eligible':0,'already':0,'changed':0,'protected':0,'redirects':0,'internal':0,'fragments':0,'legacyRemoved':0,'duplicatesCollapsed':0}
           changed=[]
           files=sorted(set(Path('.').rglob('*.html'))|set(Path('.').rglob('*.htm')))
           for p in files:
@@ -41,6 +42,8 @@ jobs:
               except UnicodeDecodeError: continue
               if not DOC.search(s):
                   counts['fragments']+=1; continue
+              if REDIRECT.search(s):
+                  counts['redirects']+=1; continue
               if PROTECTED.search('/'+rel) or CLOSED.search(s):
                   counts['protected']+=1; continue
               counts['eligible']+=1
@@ -72,6 +75,17 @@ jobs:
           Path('.vnv-toolbar-normalization.json').write_text(json.dumps({'schema':'vnv-toolbar-normalization-v1','counts':counts,'changed':changed},indent=2)+'\n',encoding='utf-8')
           print(json.dumps(counts,indent=2))
           PY
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Validate normalized working tree before any production write
+        run: |
+          node tools/validate-elementary-learning-engine.mjs
+          node tools/validate-elementary-week06-evidence.mjs
+          node tests/elementary-learner-isolation.test.cjs
+          node tests/elementary-formal-boundaries.test.cjs
+          node --test tests/elementary-grade1-5-lesson-retention.test.cjs
+          node tools/validate-elementary-experience.mjs
       - name: Commit normalized toolbar
         run: |
           git config user.name "Verve N Veda Ecosystem Guardian"

@@ -39,6 +39,14 @@ jobs:
       - name: Inject learning engine
         run: node scripts/inject-elementary-learning-engine.mjs
 
+      - name: Validate injected working tree before any production write
+        run: |
+          node tools/validate-elementary-learning-engine.mjs
+          node tools/validate-elementary-week06-evidence.mjs
+          node tests/elementary-learner-isolation.test.cjs
+          node tests/elementary-formal-boundaries.test.cjs
+          node --test tests/elementary-grade1-5-lesson-retention.test.cjs
+
       - name: Commit rollout
         shell: bash
         run: |

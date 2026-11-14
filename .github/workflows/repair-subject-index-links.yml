@@ -1,4 +1,4 @@
-name: Repair Subject Index Links
+name: Verify Legacy Subject Index Compatibility Routes
 
 on:
   workflow_dispatch:
@@ -8,63 +8,27 @@ on:
       - ".github/workflows/repair-subject-index-links.yml"
 
 permissions:
-  contents: write
-
-concurrency:
-  group: repair-elementary-subject-index-links
-  cancel-in-progress: true
+  contents: read
 
 jobs:
-  repair:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-
-      - name: Repair subject-index printable destinations
+      - name: Verify historical Grade 2 subject indexes only redirect to canonical halls
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import re
-          files=replacements=0
-          for p in Path("subjects").glob("*/index.html"):
-              s=p.read_text(encoding="utf-8")
-              n,c=re.subn(
-                  r"\.\./\.\./printables/week-(\d{2})-packet\.html",
-                  lambda m: "../../printables/printables/unit-"+m.group(1)+"-packet.html",
-                  s
-              )
-              if n!=s:
-                  p.write_text(n,encoding="utf-8")
-                  files+=1
-                  replacements+=c
-          print(f"Repaired {replacements} subject-index printable route(s) across {files} file(s).")
-          PY
-
-      - name: Verify
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
+          base="https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-02/subjects/"
+          subjects=["language-arts","mathematics","science","social-studies","arts-music","health-pe-sel","technology","integrated-projects"]
+          extra=["arts-music","health-pe-sel","social-studies","technology"]
           bad=[]
-          for p in Path("subjects").glob("*/index.html"):
-              if re.search(r"\.\./\.\./printables/week-\d{2}-packet\.html",p.read_text(encoding="utf-8")):
-                  bad.append(str(p))
+          def check(p,target):
+              s=Path(p).read_text(encoding="utf-8") if Path(p).exists() else ""
+              if not all(x in s for x in ('http-equiv="refresh"',f'rel="canonical" href="{target}"',f'href="{target}"',f'location.replace("{target}")')):
+                  bad.append(p)
+          for subject in subjects: check(f"subjects/{subject}/index.html",base+subject+"/index.html")
+          for subject in extra: check(f"{subject}/index.html",base+subject+"/index.html")
           assert not bad,bad
-          print("Subject-index printable regression PASS.")
+          print("PASS: 12 historical Grade 2 subject indexes are read-only canonical redirects.")
           PY
-
-      - name: Commit repairs
-        shell: bash
-        run: |
-          if [ -z "$(git status --porcelain -- subjects)" ]; then exit 0; fi
-          git config user.name "Khaemenes Elementary Repair"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add subjects
-          git commit -m "Repair subject index printable routes"
-          for attempt in 1 2 3; do
-            git pull --rebase origin main
-            if git push; then exit 0; fi
-          done
-          exit 1

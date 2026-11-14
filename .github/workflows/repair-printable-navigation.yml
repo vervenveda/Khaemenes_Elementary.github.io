@@ -1,4 +1,4 @@
-name: Repair Printable Packet Navigation
+name: Verify Legacy Printable Compatibility Routes
 
 on:
   workflow_dispatch:
@@ -8,73 +8,26 @@ on:
       - ".github/workflows/repair-printable-navigation.yml"
 
 permissions:
-  contents: write
-
-concurrency:
-  group: repair-elementary-printable-navigation
-  cancel-in-progress: true
+  contents: read
 
 jobs:
-  repair:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-
-      - name: Repair packet-relative navigation
+      - name: Verify historical Grade 1 printable URLs only redirect to canonical packets
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          root=Path("printables/printables")
-          pairs=[
-              ('../assets/','../../assets/'),
-              ('../index.html','../../index.html'),
-              ('../teacher-tools/','../../teacher-tools/'),
-              ('../assessments/','../../assessments/'),
-              ('../records/','../../records/'),
-              ('../lessons/','../../lessons/'),
-          ]
-          files=changes=0
-          for p in sorted(root.glob("*.html")):
-              s=p.read_text(encoding="utf-8")
-              n=s
-              local=0
-              for a,b in pairs:
-                  local += n.count(a)
-                  n=n.replace(a,b)
-              if n!=s:
-                  p.write_text(n,encoding="utf-8")
-                  files+=1
-                  changes+=local
-          print(f"Repaired {changes} packet navigation reference(s) across {files} file(s).")
-          PY
-
-      - name: Verify packet navigation
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
+          base="https://vervenveda.com/Khaemenes_Elementary.github.io/grades/grade-01/printables/"
           bad=[]
-          tokens=('../assets/','../teacher-tools/','../assessments/','../records/','../lessons/')
-          for p in Path("printables/printables").glob("*.html"):
-              s=p.read_text(encoding="utf-8")
-              for token in tokens:
-                  if token in s.replace('../../'+token[3:],''):
-                      bad.append((str(p),token))
-          assert not bad, bad[:20]
-          print("Printable navigation regression PASS.")
+          for week in range(1,37):
+              ww=f"{week:02d}"
+              p=Path(f"printables/printables/unit-{ww}-packet.html")
+              target=base+f"unit-{ww}-packet.html"
+              s=p.read_text(encoding="utf-8") if p.exists() else ""
+              if not all(x in s for x in ('http-equiv="refresh"',f'rel="canonical" href="{target}"',f'href="{target}"',f'location.replace("{target}")')):
+                  bad.append(str(p))
+          assert not bad,bad[:20]
+          print("PASS: 36 historical Grade 1 printable routes are read-only canonical redirects.")
           PY
-
-      - name: Commit repairs
-        shell: bash
-        run: |
-          if [ -z "$(git status --porcelain -- printables/printables)" ]; then
-            echo "No printable navigation repairs needed."
-            exit 0
-          fi
-          git config user.name "Khaemenes Elementary Repair"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add printables/printables
-          git commit -m "Repair printable packet navigation"
-          git pull --rebase origin main
-          git push
