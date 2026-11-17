@@ -1,0 +1,34 @@
+name: Elementary Learner Toolbar Regression
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/elementary-global-standard-v1.js'
+      - 'grades/**'
+      - 'student-profile/**'
+      - 'games/**'
+      - 'tools/validate-elementary-class-tools.mjs'
+      - '.github/workflows/elementary-learner-toolbar-regression.yml'
+  pull_request:
+    paths:
+      - 'assets/elementary-global-standard-v1.js'
+      - 'grades/**'
+      - 'student-profile/**'
+      - 'games/**'
+      - 'tools/validate-elementary-class-tools.mjs'
+      - '.github/workflows/elementary-learner-toolbar-regression.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - run: node tools/validate-elementary-class-tools.mjs
