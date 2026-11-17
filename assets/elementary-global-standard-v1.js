@@ -15,7 +15,9 @@ const SCRIPTS={
   ticker333:VNV+"vnv-333-ticker.js",
   tickerAuto:VNV+"vnv-ticker-autopopulate.js",
   header:VNV+"vnv-header-autopopulate.js",
-  toolbar:VNV+"vnv-ecosystem-toolbar.js"
+  toolbar:VNV+"vnv-ecosystem-toolbar.js",
+  classPresets:VNV+"vnv-class-tools-presets.js",
+  classToolbar:VNV+"vnv-class-tools-toolbar.js"
 };
 
 function hasScript(pathname){
@@ -180,6 +182,32 @@ function mountHeader(){
     });
   }catch{}
 }
+
+function elementaryLearnerSurface(){
+  const path=location.pathname;
+  const excluded=/(?:\/|^)(?:assessments?|records?|teacher-tools?|teacher|teachers|admin|printables?)(?:\/|$)/i;
+  if(excluded.test(path))return false;
+  if(/\/Khaemenes_Elementary\.github\.io\/(?:index\.html)?$/i.test(path))return true;
+  if(/\/Khaemenes_Elementary\.github\.io\/student-profile\/(?:index\.html)?$/i.test(path))return true;
+  return /\/Khaemenes_Elementary\.github\.io\/grades\/grade-(01|02|03|04|05)\/(?:index\.html)?$/i.test(path)
+    || /\/Khaemenes_Elementary\.github\.io\/grades\/grade-(01|02|03|04|05)\/(?:lessons|learning|subjects)(?:\/|$)/i.test(path)
+    || /\/Khaemenes_Elementary\.github\.io\/games(?:\/|$)/i.test(path);
+}
+function mountClassTools(){
+  if(!elementaryLearnerSurface()){
+    document.getElementById("vnvClassToolsToolbar")?.remove();
+    document.documentElement.dataset.khaemenesElementaryClassTools="excluded";
+    return;
+  }
+  try{window.VNVSelectClassToolsPreset?.("elementary")}catch{}
+  try{window.VNVClassToolsToolbar?.mount?.()}catch{}
+  const dock=document.getElementById("vnvClassToolsToolbar");
+  if(dock){
+    dock.dataset.khaemenesElementaryLearnerToolbar="true";
+    document.documentElement.dataset.khaemenesElementaryClassTools="mounted";
+  }
+}
+
 function mountToolbar(){
   try{window.VNVEcosystemToolbar?.mount?.()}catch{}
   const dock=document.getElementById("vnvEcosystemUtilityDock");
@@ -195,7 +223,7 @@ function schedule(){
   pending=true;
   requestAnimationFrame(()=>{
     pending=false;
-    installTypography();normalizeHierarchy(document);mount333();mountAuto();mountHeader();mountToolbar();
+    installTypography();normalizeHierarchy(document);mount333();mountAuto();mountHeader();mountToolbar();mountClassTools();
   });
 }
 async function start(){
@@ -206,7 +234,15 @@ async function start(){
   await load(SCRIPTS.tickerAuto,"khaemenesElementaryAutoTicker");mountAuto();
   await load(SCRIPTS.header,"khaemenesElementaryHeader");mountHeader();
   await load(SCRIPTS.toolbar,"khaemenesElementaryToolbar");mountToolbar();
-  document.documentElement.dataset.khaemenesElementaryChrome="333-auto-header-menu-toolbar";
+  if(elementaryLearnerSurface()){
+    await load(SCRIPTS.classPresets,"khaemenesElementaryClassPresets");
+    try{window.VNVSelectClassToolsPreset?.("elementary")}catch{}
+    await load(SCRIPTS.classToolbar,"khaemenesElementaryClassToolbar");
+    mountClassTools();
+  }else{
+    document.documentElement.dataset.khaemenesElementaryClassTools="excluded";
+  }
+  document.documentElement.dataset.khaemenesElementaryChrome="333-auto-header-menu-toolbar-class-tools";
   if(typeof MutationObserver==="function")new MutationObserver(schedule).observe(document.documentElement,{childList:true,subtree:true});
   window.addEventListener("resize",schedule,{passive:true});
 }
