@@ -17,6 +17,6 @@ const tests=[
 ["legacy preserved as separate unclaimed source",()=>{const r=api.build({...base(),legacyExists:true,favoritesExist:true});assert.equal(r.separateLegacyOwnershipReviewRequired,true);assert.equal(Object.hasOwn(r,"legacyPayload"),false)}],
 ["wrong learner label rejected",()=>assert.throws(()=>api.build({...base(),learnerId:"Synthetic Name"}),/invalid_learner/)],
 ["source objects not mutated",()=>{const original=base(),before=JSON.stringify(original);api.build(original);assert.equal(JSON.stringify(original),before)}],
-["missing daily state rejected",()=>{const v=state();delete v.daily;assert.throws(()=>api.build({...base(),courseRecord:v}),/unexpected_grade01_state/)]
+["missing daily state rejected",()=>{const v=state();delete v.daily;assert.throws(()=>api.build({...base(),courseRecord:v}),/unexpected_grade01_state/)}]
 ];
 let pass=0;for(const [name,fn] of tests){fn();pass++;}console.log("PASS "+pass+"/"+tests.length+" Grade01 preservation synthetic checks");
