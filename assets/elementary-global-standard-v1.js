@@ -1,6 +1,6 @@
-/* Khaemenes Elementary · canonical global standard v1.0.0
+/* Khaemenes Elementary · canonical global standard v1.1.0
    Typography: 16px floor · 33px titles · one 66px primary title.
-   Chrome: 333 ticker -> AutoPopulate ticker -> official header/menu -> lower-right 3x2 ecosystem toolbar.
+   Chrome: 333 ticker -> AutoPopulate ticker -> official header/menu -> lower-right ecosystem toolbar + guarded lower-left learner toolbar.
    Semantics: eyebrow = category/brand; title = heading; description = paragraph.
 */
 (()=>{"use strict";
