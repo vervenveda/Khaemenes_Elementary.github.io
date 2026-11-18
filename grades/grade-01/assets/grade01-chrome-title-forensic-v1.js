@@ -114,10 +114,16 @@ function monitor(){
    if(relevant)sample("DOM/style mutation");
  });
  observer.observe(root,{subtree:true,childList:true,attributes:true,attributeFilter:["class","style","data-khaemenes-primary-title"]});
- function trackFrame(){
-   frameCount++;sample("animation frame");
-   if(performance.now()-started<6000&&frameCount<500)requestAnimationFrame(trackFrame);
-   else{log("6-second startup capture complete");observer.disconnect()}
+ let lastPoll=0,loadAt=null;
+ window.addEventListener("load",()=>{loadAt=performance.now();log("post-load monitoring active")},{once:true});
+ function trackFrame(now){
+   frameCount++;
+   if(now-lastPoll>=120){lastPoll=now;sample("startup / post-load sample")}
+   const elapsedNow=now-started;
+   // Continue beyond unusually late DOMContentLoaded and the load event.
+   const settled=loadAt!==null&&now-loadAt>=5000;
+   if(!settled&&elapsedNow<45000&&frameCount<3000)requestAnimationFrame(trackFrame);
+   else{log("startup/post-load capture complete");observer.disconnect()}
  }
  requestAnimationFrame(trackFrame);
 }
