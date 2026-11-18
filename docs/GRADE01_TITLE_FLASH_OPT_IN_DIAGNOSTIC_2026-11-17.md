@@ -38,3 +38,27 @@ The First Grade page uses independent heading styles from `grades/grade-01/asset
 ## Next action
 
 Use **Copy Report** from the panel and provide the text. Locate the observed font transitions and their timings, then consolidate/precede typography styles only after isolating the competing selectors. Preserve the canonical template hierarchy: eyebrow category; one largest primary title; all other headings in their established hierarchy; minimum 16px body/control text. Stop any repeated layout repaint rather than masking visible flashes with animation.
+
+## 2026-11-17 live diagnostic feedback and first-paint correction
+
+User-provided report on a 2086 × 1083 viewport:
+
+| Transition | Primary title | Other three main headings |
+| --- | --- | --- |
+| 342ms | 30px | 22.5px |
+| 8,176ms | 76px | 43.7px |
+| 23,344ms / DOMContentLoaded | 66px | 33px |
+
+At 23,353ms the report found 0 instances of both ticker IDs and the left class-tools dock, one visible 2064×67 VNV header and one 240×108 right dock. This report alone does **not** prove a permanent ticker/left-tools absence: the snapshot was taken roughly **10ms after a delayed DOMContentLoaded** and the original probe stopped frequent sampling after six seconds. All seven linked CSS stylesheets and four runtime style elements were reported ready at that time.
+
+### Source repair applied
+
+- `grades/grade-01/index.html`: inserted a *scoped critical first-paint heading style* before any page stylesheet. Sets the main Grade 01 title to 66px and other targeted section headings to 33px with appropriate specificity. This aims to prevent the 30→76→66px / 22.5→43.7→33px three-stage render. The title is explicitly premarked `data-khaemenes-primary-title="true"` in HTML so the deferred global script does not need to promote it after first paint. Existing shared typography and grade engine retained.
+- `grades/grade-01/assets/grade01-chrome-title-forensic-v1.js`: extended observation up to five seconds beyond page load (maximum 45 seconds) to determine whether ticker and left-tools mounts are merely late.
+- Code commits: `70693e930bcc679ad205ac146188ea7308a83c93` and `44697c30d01a86667a3b980e71ffecda3098f89c`.
+- Prior release preserved at `rollback/pre-grade01-typography-stabilization-20261117`.
+- **10/10 source contract checks plus syntax validation PASS**. Not a browser-based visual acceptance test.
+
+### Next verification
+
+Reopen the First Grade page with `?chrome_audit=1` and refresh. Wait until at least five seconds after the page's load event, then click **Copy Report**. Confirm that each title reports one stable size throughout the captured render. Verify whether the canonical 333 and AutoPopulate tickers and left class-tools dock eventually appear; investigate their load URLs or mount operations only if still missing once the page is settled. No learner or STOS data was read or changed during this repair.
