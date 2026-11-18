@@ -207,7 +207,54 @@ function selectElementaryClassTools(){
     return true;
   }catch{return false}
 }
+const ELEMENTARY_CLASS_TOOLS_STYLE_ID="khaemenesElementaryCompactClassToolsV1";
+function installCompactClassToolsStyle(){
+  if(document.getElementById(ELEMENTARY_CLASS_TOOLS_STYLE_ID))return;
+  const style=document.createElement("style");
+  style.id=ELEMENTARY_CLASS_TOOLS_STYLE_ID;
+  style.textContent=`
+    html body #vnvClassToolsToolbar{
+      width:min(276px,calc(100vw - 24px))!important;
+      max-width:calc(100vw - 24px)!important
+    }
+    html body #vnvClassToolsPanel .vct-grid{
+      display:grid!important;
+      grid-template-columns:repeat(3,minmax(0,1fr))!important;
+      gap:7px!important
+    }
+    html body #vnvClassToolsPanel .vct-grid .vct-tool{
+      min-width:0!important;
+      min-height:64px!important;
+      padding:9px 4px!important;
+      border-radius:7px!important;
+      white-space:nowrap!important;
+      overflow:hidden!important;
+      text-overflow:clip!important;
+      justify-content:center!important
+    }
+    html body #vnvClassToolsPanel .vct-grid .vct-tool strong{
+      display:block!important;
+      width:100%!important;
+      white-space:nowrap!important;
+      overflow:visible!important;
+      font:400 16px/1.25 "Brandon Grotesque","Avenir Next",Arial,sans-serif!important;
+      text-align:center!important;
+    }
+    html body #vnvClassToolsPanel .vct-grid .vct-tool span{
+      display:none!important
+    }
+    @media(max-width:700px){
+      html body #vnvClassToolsToolbar{
+        left:max(12px,env(safe-area-inset-left))!important;
+        right:auto!important;
+        bottom:max(12px,env(safe-area-inset-bottom))!important
+      }
+    }
+  `;
+  (document.head||document.documentElement).append(style);
+}
 function mountClassTools(){
+  installCompactClassToolsStyle();
   if(!elementaryLearnerSurface()){
     document.getElementById("vnvClassToolsToolbar")?.remove();
     document.documentElement.dataset.khaemenesElementaryClassTools="excluded";
