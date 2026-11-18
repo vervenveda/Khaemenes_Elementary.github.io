@@ -30,6 +30,8 @@ function setup(){
  const window={document,localStorage:storage,setTimeout(){}};
  const context=vm.createContext({window,document,Blob:SyntheticBlob,URL,console,JSON,Date,Object,String,Array});
  vm.runInContext(bundleSource,context,{filename:"grade01-preservation-bundle-v1.js"});
+ // Node vm globalThis is the sandbox, not context.window; mirror the browser global.
+ window.KhaemenesGrade01PreservationV1=context.KhaemenesGrade01PreservationV1;
  vm.runInContext(uiSource,context,{filename:"grade01-preservation-export-ui-v1.js"});
  return {data,writes,downloads,blobs,nodes,id,family,familyData,
    click(){nodes.grade01PreservationExport.click()},
