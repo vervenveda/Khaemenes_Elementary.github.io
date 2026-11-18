@@ -193,48 +193,13 @@ function elementaryLearnerSurface(){
     || /\/Khaemenes_Elementary\.github\.io\/grades\/grade-(01|02|03|04|05)\/(?:lessons|learning|subjects)(?:\/|$)/i.test(path)
     || /\/Khaemenes_Elementary\.github\.io\/games(?:\/|$)/i.test(path);
 }
-/* Elementary-only labels preserve universal destinations, types and pop-up instructions.
-   Compact 3 × 2 grid: one clear word per button, no descriptive subtitle. */
-const ELEMENTARY_TOOL_LABELS=Object.freeze(["Games","Study","Explore","Parent","Search","Help"]);
-function selectElementaryClassTools(){
-  try{
-    const base=window.VNVSelectClassToolsPreset?.("elementary");
-    if(!base||!Array.isArray(base.tools)||base.tools.length!==6)return false;
-    window.KhaemenesClassToolsConfigV1={
-      ...base,
-      tools:base.tools.map((tool,index)=>({...tool,label:ELEMENTARY_TOOL_LABELS[index],sub:""}))
-    };
-    return true;
-  }catch{return false}
-}
-const ELEMENTARY_CLASS_TOOLS_STYLE_ID="khaemenesElementaryCompactClassToolsV1";
-function installCompactClassToolsStyle(){
-  if(document.getElementById(ELEMENTARY_CLASS_TOOLS_STYLE_ID))return;
-  const style=document.createElement("style");
-  style.id=ELEMENTARY_CLASS_TOOLS_STYLE_ID;
-  style.textContent=`
-    /* Keep canonical dock width, button size and fixed positioning. */
-    html body #vnvClassToolsPanel .vct-grid{
-      grid-template-columns:repeat(3,minmax(0,1fr))!important
-    }
-    html body #vnvClassToolsPanel .vct-grid .vct-tool strong{
-      white-space:nowrap!important;
-      font:400 16px/1.2 "Brandon Grotesque","Avenir Next",Arial,sans-serif!important
-    }
-    html body #vnvClassToolsPanel .vct-grid .vct-tool span{
-      display:none!important
-    }
-  `;
-  (document.head||document.documentElement).append(style);
-}
 function mountClassTools(){
-  installCompactClassToolsStyle();
   if(!elementaryLearnerSurface()){
     document.getElementById("vnvClassToolsToolbar")?.remove();
     document.documentElement.dataset.khaemenesElementaryClassTools="excluded";
     return;
   }
-  selectElementaryClassTools();
+  try{window.VNVSelectClassToolsPreset?.("elementary")}catch{}
   try{window.VNVClassToolsToolbar?.mount?.()}catch{}
   const dock=document.getElementById("vnvClassToolsToolbar");
   if(dock){
@@ -271,7 +236,7 @@ async function start(){
   await load(SCRIPTS.toolbar,"khaemenesElementaryToolbar");mountToolbar();
   if(elementaryLearnerSurface()){
     await load(SCRIPTS.classPresets,"khaemenesElementaryClassPresets");
-    selectElementaryClassTools();
+    try{window.VNVSelectClassToolsPreset?.("elementary")}catch{}
     await load(SCRIPTS.classToolbar,"khaemenesElementaryClassToolbar");
     mountClassTools();
   }else{
