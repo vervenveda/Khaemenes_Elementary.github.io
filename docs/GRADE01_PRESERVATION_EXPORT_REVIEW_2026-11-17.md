@@ -41,3 +41,11 @@ The actively published Grade 01 landing page uses `grades/grade-01/assets/grade1
 5. Confirm no duplicate buttons, minimum 16 px labels, centered presentation and no toolbar obstruction.
 
 **STOS T03 is not commissioned; this tool does not connect to T03.**
+
+## 2026-11-17 browser-style review checkpoint
+
+The Grade 01 export UI now refuses malformed JSON in the family registry, active learner selector, course record, assessment attempts or learning-ledger store, rather than silently treating corrupted content as an absent record. The export records whether separate attempt/ledger stores were `absent` or `present`; empty arrays never constitute proof of historical completeness.
+
+The actual committed `tests/grade01-preservation-ui.test.cjs` source was exercised using a synthetic JavaScript Node-vm-compatible shim: **11/11 PASS**, alongside an independent in-memory UI simulation **11/11 PASS**. The Node mock harness was corrected to bridge the sandbox global object to the simulated browser window. This **does not certify execution under native Node itself**, nor an actual browser/device download, because the execution environment did not have network access to fetch the repository into the Node container. Manual browser acceptance remains a release blocker.
+
+The source review branch remains unmerged. No real learner work, course/mastery authority or T03 runtime changed.
