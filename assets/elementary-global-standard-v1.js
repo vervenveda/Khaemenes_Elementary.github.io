@@ -193,13 +193,27 @@ function elementaryLearnerSurface(){
     || /\/Khaemenes_Elementary\.github\.io\/grades\/grade-(01|02|03|04|05)\/(?:lessons|learning|subjects)(?:\/|$)/i.test(path)
     || /\/Khaemenes_Elementary\.github\.io\/games(?:\/|$)/i.test(path);
 }
+/* Elementary-only labels preserve universal destinations, types and pop-up instructions.
+   Compact 3 × 2 grid: one clear word per button, no descriptive subtitle. */
+const ELEMENTARY_TOOL_LABELS=Object.freeze(["Games","Study","Explore","Parent","Search","Help"]);
+function selectElementaryClassTools(){
+  try{
+    const base=window.VNVSelectClassToolsPreset?.("elementary");
+    if(!base||!Array.isArray(base.tools)||base.tools.length!==6)return false;
+    window.KhaemenesClassToolsConfigV1={
+      ...base,
+      tools:base.tools.map((tool,index)=>({...tool,label:ELEMENTARY_TOOL_LABELS[index],sub:""}))
+    };
+    return true;
+  }catch{return false}
+}
 function mountClassTools(){
   if(!elementaryLearnerSurface()){
     document.getElementById("vnvClassToolsToolbar")?.remove();
     document.documentElement.dataset.khaemenesElementaryClassTools="excluded";
     return;
   }
-  try{window.VNVSelectClassToolsPreset?.("elementary")}catch{}
+  selectElementaryClassTools();
   try{window.VNVClassToolsToolbar?.mount?.()}catch{}
   const dock=document.getElementById("vnvClassToolsToolbar");
   if(dock){
@@ -236,7 +250,7 @@ async function start(){
   await load(SCRIPTS.toolbar,"khaemenesElementaryToolbar");mountToolbar();
   if(elementaryLearnerSurface()){
     await load(SCRIPTS.classPresets,"khaemenesElementaryClassPresets");
-    try{window.VNVSelectClassToolsPreset?.("elementary")}catch{}
+    selectElementaryClassTools();
     await load(SCRIPTS.classToolbar,"khaemenesElementaryClassToolbar");
     mountClassTools();
   }else{
