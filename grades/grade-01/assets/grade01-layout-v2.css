@@ -126,3 +126,85 @@ body.grade01-layout-v2 #grade01FamilyReporting > .shell > .card{
 @media print{
   body.grade01-layout-v2 #weeksGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
+
+/* 36-week path: native, keyboard-accessible details; CLOSED by default. */
+body.grade01-layout-v2 #grade01WeekPath .grade01-week-details{
+  border:1px solid #b7ab94;
+  border-radius:7px;
+  background:#fffdf8;
+  overflow:clip;
+}
+body.grade01-layout-v2 #grade01WeekPath .grade01-week-details > summary{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:22px;
+  min-height:90px;
+  padding:20px 28px;
+  cursor:pointer;
+  list-style:none;
+  text-align:center;
+  color:#243038;
+}
+body.grade01-layout-v2 #grade01WeekPath .grade01-week-details > summary::-webkit-details-marker{
+  display:none;
+}
+body.grade01-layout-v2 #grade01WeekPath .grade01-week-details > summary:focus-visible{
+  outline:3px solid #b48b45;
+  outline-offset:-4px;
+}
+body.grade01-layout-v2 #grade01WeekPath .grade01-week-summary-copy{
+  display:grid;
+  gap:4px;
+  min-width:0;
+}
+body.grade01-layout-v2 #grade01WeekPath .grade01-week-summary-title{
+  font:400 33px/1.2 Cinzel,Georgia,serif!important;
+  color:#243038;
+}
+body.grade01-layout-v2 #grade01WeekPath .grade01-week-summary-hint{
+  font:400 16px/1.5 "Brandon Grotesque",Nunito,Arial,sans-serif!important;
+  color:#536072;
+}
+body.grade01-layout-v2 #grade01WeekPath .grade01-week-chevron{
+  font:400 33px/1 Cinzel,Georgia,serif!important;
+  transform:rotate(0deg);
+  transition:transform 160ms ease;
+}
+body.grade01-layout-v2 #grade01WeekPath .grade01-week-details[open] .grade01-week-chevron{
+  transform:rotate(180deg);
+}
+body.grade01-layout-v2 #grade01WeekPath #weeksGrid{
+  padding:22px;
+}
+body.grade01-layout-v2 footer.footer{
+  margin-top:auto;
+  text-align:center;
+  background:#243038;
+  color:#fff8e9;
+  border-top:1px solid #b48b45;
+  padding:30px 20px;
+  font:400 16px/1.6 "Brandon Grotesque",Nunito,Arial,sans-serif;
+}
+@media(max-width:560px){
+  body.grade01-layout-v2 #grade01WeekPath .grade01-week-details > summary{
+    padding:18px 12px;
+    gap:10px;
+  }
+  body.grade01-layout-v2 #grade01WeekPath .grade01-week-summary-title{
+    font-size:24px!important;
+  }
+  body.grade01-layout-v2 #grade01WeekPath #weeksGrid{
+    padding:12px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body.grade01-layout-v2 #grade01WeekPath .grade01-week-chevron{
+    transition:none;
+  }
+}
+@media print{
+  body.grade01-layout-v2 #grade01WeekPath .grade01-week-details > summary{
+    display:none!important;
+  }
+}
