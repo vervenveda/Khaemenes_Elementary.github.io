@@ -7,7 +7,8 @@
  const API=w.KhaemenesGrade01PreservationV1;
  if(!API)return;
  const $=id=>w.document.getElementById(id);
- const parse=key=>{try{const raw=w.localStorage.getItem(key);return raw===null?null:JSON.parse(raw)}catch{return null}};
+ const parse=key=>{const raw=w.localStorage.getItem(key);return raw===null?null:JSON.parse(raw)};
+ const statusOf=key=>{const raw=w.localStorage.getItem(key);if(raw===null)return "absent";JSON.parse(raw);return "present"};
  function reviewContext(){
    const registry=parse("khaemenes_family_registry_v1"),selected=parse("khaemenes_active_learner_v1"),familySelected=parse("khaemenes_active_family_v1");
    const learner=typeof selected==="string"?registry?.learners?.[selected]:null;
@@ -20,24 +21,30 @@
  }
  function exportClicked(){
    const output=$("grade01PreservationStatus");
-   const ctx=reviewContext();
+   let ctx;
+   try{ctx=reviewContext()}catch{output.textContent="Export withheld: learner selection or family registry cannot be read.";return}
    if(!ctx){output.textContent="No locally linked Grade 1 learner. Nothing was read or exported.";return}
    const k="khaemenes.course:"+ctx.learnerId+":elementary-grade-01";
-   const state=parse(k);
-   if(!state){output.textContent="No readable scoped Grade 1 course record found. Original storage remains untouched.";return}
+   let state;
+   try{state=parse(k)}catch{output.textContent="Export withheld: selected course record is unreadable.";return}
+   if(!state){output.textContent="No scoped Grade 1 course record found. Original storage remains untouched.";return}
    try{
      const attemptKey="khaemenes.elementary.assessment.attempts:"+ctx.learnerId+":grade-01";
-     const savedAttempts=parse(attemptKey),ledger=parse("khaemenes_elementary_learning_ledger_v1");
+     const ledgerKey="khaemenes_elementary_learning_ledger_v1";
+     const attemptsPresence=statusOf(attemptKey),ledgerPresence=statusOf(ledgerKey);
+     const savedAttempts=parse(attemptKey),ledger=parse(ledgerKey);
      // Absent independent evidence is not an empty verified archive.
      if(savedAttempts!==null&&!Array.isArray(savedAttempts))throw Error("Assessment history malformed");
      if(ledger!==null&&(!ledger||typeof ledger!=="object"||Array.isArray(ledger)))throw Error("Learning ledger malformed");
      const ownLedger=ledger?.[ctx.learnerId]??[];
      if(!Array.isArray(ownLedger))throw Error("Learner ledger malformed");
      const bundle=API.build({learnerId:ctx.learnerId,courseRecord:state,attempts:savedAttempts??[],
+       evidenceSourcePresence:{attempts:attemptsPresence,ledger:ledgerPresence},
        ledgerEntries:ownLedger,legacyExists:w.localStorage.getItem("khaemenes.grade01.mastery.v1")!==null||
          w.localStorage.getItem("khaemenes_grade1_36_aplus_v1")!==null,
        favoritesExist:w.localStorage.getItem("khaemenes_grade1_favorite_adventures_v1")!==null});
-     if(!reviewContext()||reviewContext().learnerId!==ctx.learnerId)throw Error("Selected learner changed");
+     const repeat=reviewContext();
+     if(!repeat||repeat.learnerId!==ctx.learnerId)throw Error("Selected learner changed");
      const bytes=JSON.stringify(bundle,null,2);
      const blob=new Blob([bytes],{type:"application/json"}),url=URL.createObjectURL(blob);
      const a=w.document.createElement("a");
