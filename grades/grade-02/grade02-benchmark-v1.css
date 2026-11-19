@@ -12,7 +12,6 @@
   --g2-muted:#5d625e;
   --g2-yellow:#d8ad00;
   --g2-line:#c9bea8;
-  --g2-green:#31594b;
   --g2-blue:#2f5fd0;
   --g2-red:#c53c3c;
   --g2-yellow:#d8ad00;
@@ -150,10 +149,10 @@ button{cursor:pointer}
 .front-card p{margin:0 0 22px;color:var(--g2-muted);font-size:16px;line-height:1.6}
 .front-card .btn{margin-top:auto;width:100%}
 .accent-blue{--accent:var(--g2-blue)}
-.accent-teal{--accent:var(--g2-red)}
+.accent-red{--accent:var(--g2-red)}
 .accent-terra{--accent:var(--g2-yellow)}
 .accent-plum{--accent:var(--g2-blue)}
-.accent-sage{--accent:var(--g2-red)}
+.accent-yellow{--accent:var(--g2-yellow)}
 .accent-gold{--accent:var(--g2-yellow)}
 
 /* Buttons */
