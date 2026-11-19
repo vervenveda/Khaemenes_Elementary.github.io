@@ -150,8 +150,6 @@ button{cursor:pointer}
 .front-card .btn{margin-top:auto;width:100%}
 .accent-blue{--accent:var(--g2-blue)}
 .accent-red{--accent:var(--g2-red)}
-.accent-terra{--accent:var(--g2-yellow)}
-.accent-plum{--accent:var(--g2-blue)}
 .accent-yellow{--accent:var(--g2-yellow)}
 .accent-gold{--accent:var(--g2-yellow)}
 
