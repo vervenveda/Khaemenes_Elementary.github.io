@@ -1,119 +1,53 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Khaemenes First Grade Mastery Curriculum</title><link rel="stylesheet" href="./grade01-benchmark-v1.css?v=1.0.0" data-grade01-benchmark="v1">
-</head><body>
-<a class="skip" href="#main">Skip to main content</a>
-<nav class="grade01-local-links" aria-label="Grade 1 learning shortcuts">
-  <a href="../../index.html">Elementary</a>
-  <a href="#week-path">Weekly Path</a>
-  <a href="https://vervenveda.com/Academy-Yearbook.github.io/">Yearbook</a>
-  <a href="assessments/weekly-assessments.html">Quizzes</a>
-  <a href="records/certificate.html">Certificate</a>
-</nav>
-<section class="hero">
-  <div class="shell">
-    <p class="kicker">Khaemenes Academy · Elementary</p>
-    <h1>First Grade</h1>
-    <h2 class="grade-title">1st Grade</h2>
-    <p class="lead">A year to read, write, count, investigate, create, and grow through 36 weeks of daily learning with colorful milestones and clear mastery steps.</p>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Khaemenes First Grade Mastery Curriculum</title><script src="assets/grade01-chrome-title-forensic-v1.js"></script><style id="grade01-first-paint-title-contract">
+/* Critical first-paint type sizes: avoid 30→76→66px and 22.5→43.7→33px flashes.
+   Scoped to Grade01, independent of the deferred shared typography controller. */
+html:root body.grade01-layout-v2 main.hero > .shell > h1[data-khaemenes-primary-title="true"]{
+  font:400 66px/1.05 Cinzel,Georgia,serif!important;
+  text-align:center!important;
+  text-wrap:balance;
+}
+html:root body.grade01-layout-v2 :is(main.hero h2,.section > .shell > h2,#grade01FamilyReportingTitle){
+  font-size:33px!important;
+  line-height:1.2!important;
+  font-weight:400!important;
+}
+@media(max-width:560px){
+  html:root body.grade01-layout-v2 main.hero > .shell > h1[data-khaemenes-primary-title="true"]{
+    font-size:clamp(40px,10vw,66px)!important
+  }
+}
+</style><link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.css">
+<link rel="stylesheet" href="https://vervenveda.com/assets/vnv-ecosystem-menu.css">
+<link rel="stylesheet" href="../../assets/elementary-landing-chrome.css" data-elementary-landing-chrome>
+<link rel="stylesheet" href="assets/grade01-layout-v2.css" data-grade01-layout-v2>
+<link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-standard.css">
+<link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.css">
+  <script src="/Khaemenes_Elementary.github.io/assets/elementary-global-standard-v1.js" defer data-elementary-global-standard="16-33-66-chrome-semantics"></script>
+</head><body class="grade01-layout-v2">
+<header data-vnv-header-legacy data-khae-header class="khae-global-campus-header">
+  <div data-khae-header-inner>
+    <a data-khae-brand href="https://vervenveda.com/Khaemenes_Academy.github.io/" aria-label="Khaemenes Academy home">
+      <span data-khae-brand-mark>1–5</span>
+      <span><strong data-khae-brand-name>Khaemenes Elementary Academy</strong><small data-khae-brand-sub>Grades 01–05</small></span>
+    </a>
+    <nav data-khae-nav aria-label="Academy global navigation">
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/">Academy</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/">Teacher</a>
+    </nav>
+    <div data-khae-actions><a data-khae-secondary href="../../student-profile/">Student Profile</a></div>
+    <div data-vnv-ecosystem-slot aria-label="Ecosystem menu"></div>
   </div>
-</section>
-<main id="main">
-<section class="section" id="front-desk">
-  <div class="shell">
-    <div class="heading">
-      <p class="kicker">Discover &amp; Grow</p>
-      <h2>Front Desk</h2>
-      <p>Choose where to begin today, follow your weekly path, and celebrate the progress you make along the way.</p>
-    </div>
-    <div class="front-grid">
-      <article class="front-card accent-blue">
-        <span class="front-mark">1</span>
-        <h3>Start Learning</h3>
-        <p>Begin Week 01 or return to the first learning step in the First Grade mastery path.</p>
-        <a class="btn" href="lessons/unit-01/index.html">Start Learning</a>
-      </article>
-      <article class="front-card accent-green">
-        <span class="front-mark">W</span>
-        <h3>Weekly Path</h3>
-        <p>Explore all 36 weeks and see which lessons are open, mastered, or waiting to be unlocked.</p>
-        <a class="btn" href="#week-path">Weekly Path</a>
-      </article>
-      <article class="front-card accent-violet">
-        <span class="front-mark">P</span>
-        <h3>My Learning Profile</h3>
-        <p>Open your learner profile and see the work, goals, and achievements connected to your Academy journey.</p>
-        <a class="btn" href="../../student-profile/">My Profile</a>
-      </article>
-    </div>
-  </div>
-</section>
-<div class="grade01-shelves">
-  <details class="grade01-shelf" id="progress">
-    <summary>Progress &amp; Assessments</summary>
-    <section class="grade01-shelf-body">
-      <div class="shell">
-        <div class="heading">
-          <p class="kicker">Mastery Progress</p>
-          <h2>See what you have mastered and what comes next.</h2>
-          <p>Each week unlocks after the prior weekly quiz reaches <strong id="threshold">80%</strong>. Multiple tries are allowed, and the best score is saved for the active learner.</p>
-        </div>
-        <div class="grade01-progress-grid">
-          <article class="grade01-progress-card accent-blue">
-            <h3>Weeks Mastered</h3>
-            <p><strong id="masteredCount">0</strong> / <span id="weekCount">36</span></p>
-            <div class="progressbar"><span id="progressFill"></span></div>
-          </article>
-          <article class="grade01-progress-card accent-yellow">
-            <h3>Midterm</h3>
-            <p><strong id="midtermScore">Not yet</strong></p>
-          </article>
-          <article class="grade01-progress-card accent-red">
-            <h3>Final</h3>
-            <p><strong id="finalScore">Not yet</strong></p>
-          </article>
-        </div>
-        <div class="grade01-assessment-links">
-          <a class="button" href="assessments/weekly-assessments.html">Weekly Quizzes</a>
-          <a class="button light" href="assessments/midterm.html">Midterm</a>
-          <a class="button light" href="assessments/final-exam.html">Final</a>
-          <a class="button light" href="learning/discovery-to-independence.html">Learning Bridge</a>
-        </div>
-      </div>
-    </section>
-  </details>
-  <details class="grade01-shelf" id="week-path">
-  <summary>36-Week Learning Path</summary>
-  <section class="grade01-shelf-body alt">
-    <div class="shell">
-      <div class="heading">
-        <p class="kicker">Weekly Learning</p>
-        <h2>Explore all 36 weeks.</h2>
-        <p>Open weeks, review mastered weeks, and see which mastery gate unlocks the next step.</p>
-      </div>
-      <div id="weeksGrid"></div>
-    </div>
-  </section>
-</details>
-  <details class="grade01-shelf" id="family-report">
-  <summary>Family Learning Report</summary>
-  <section class="grade01-shelf-body">
-    <div class="shell">
-      <div class="grade01-family-card">
-        <h2 id="grade01FamilyReportingTitle">Family Learning Report</h2>
-        <p id="grade01FamilyReportStatus" role="status" aria-live="polite">Checking the selected Academy learner...</p>
-        <p>Grade 1's older assessment records are not automatically shared with the Family Center. Academic reporting will be enabled only after the learner-scoped source is verified.</p>
-        <a class="button" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/#family-progress">Open Family Learning Center</a>
-      </div>
-    </div>
-  </section>
-</details>
-</div>
-</main><script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script><script src="data/curriculum.js"></script><script src="assets/grade1-mastery.js"></script><script>Grade1Mastery.renderDashboard();</script>
+</header><header data-vnv-header-legacy class="header no-print"><div class="shell nav"><a class="brand" href="index.html"><span class="seal">1</span><span><strong>Khaemenes First Grade</strong><small>36-week mastery curriculum</small></span></a><nav class="navlinks"><a href="../../student-profile/">My Learning Profile</a><a href="index.html">Grade Home</a><a href="assessments/weekly-assessments.html">Weekly Quizzes</a><a href="records/certificate.html">Certificate</a><a href="teacher-tools/index.html">Teacher Tools</a><a href="https://vervenveda.com/Khaemenes_Academy.github.io/mentor/">Archaemenes</a></nav></div></header><main class="hero"><div class="shell"><p class="kicker">Grade 01 · Mastery path</p><h1 data-khaemenes-primary-title="true">First Grade Daily Learning Hall</h1><p>Thirty-six weeks of daily lessons, weekly quizzes, multiple tries, 80% mastery gates, midterm, final, portfolio evidence, and printable records.</p><div class="grid"><section class="card span8"><h2>Start here</h2><p>Week 1 is open. Each next week unlocks after the prior weekly quiz reaches <strong id="threshold">80%</strong>. Multiple tries are allowed, and the best score is saved locally in this browser.</p><div class="actions"><a class="button gold" href="lessons/unit-01/index.html">Start Week 01</a><a class="button" href="learning/discovery-to-independence.html">Five-Day Learning Bridge</a><a class="button" href="subjects/math/index.html">Mathematics · 36 weeks</a><a class="button blue" href="assessments/weekly-assessments.html">Open Weekly Quizzes</a><a class="button" href="subjects/science/index.html">Science · 36 weeks</a><a class="button" href="subjects/social-studies/index.html">Social Studies</a><a class="button" href="assessments/midterm.html">Midterm</a><a class="button" href="assessments/final-exam.html">Final</a></div></section><aside class="card span4"><h2>Progress</h2><p><strong id="masteredCount">0</strong> / <strong id="weekCount">36</strong> weeks mastered</p><div class="progressbar"><span id="progressFill"></span></div><p><strong>Midterm:</strong> <span id="midtermScore">Not yet</span></p><p><strong>Final:</strong> <span id="finalScore">Not yet</span></p></aside></div></div></main><section class="section" id="grade01WeekPath" aria-labelledby="grade01WeekPathTitle"><div class="shell"><details class="grade01-week-details"><summary aria-controls="weeksGrid"><span class="grade01-week-summary-copy"><span class="grade01-week-summary-title" id="grade01WeekPathTitle">36-Week Learning Path</span><span class="grade01-week-summary-hint">Explore all 36 weekly lesson cards</span></span><span class="grade01-week-chevron" aria-hidden="true">⌄</span></summary><div class="grid" id="weeksGrid"></div></details></div></section><script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script><script src="data/curriculum.js"></script><script src="assets/grade1-mastery.js"></script><script>Grade1Mastery.renderDashboard();</script>
 <script src="../../assets/khaemenes-elementary-resources.js"></script><script src="../../assets/khaemenes-elementary-experience.js"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.js" defer></script>
+<script src="https://vervenveda.com/assets/vnv-ecosystem-menu.js" defer></script>
 <!-- VNV_BETA_PROGRAM_V2 -->
 
 
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
-
+<section class="section" id="grade01FamilyReporting" aria-labelledby="grade01FamilyReportingTitle"><div class="shell"><div class="card" style="padding:24px;border:1px solid #bfb39c;border-radius:7px;background:#fffdf8;text-align:center"><h2 id="grade01FamilyReportingTitle" style="font:400 24px/1.3 Cinzel,Georgia,serif;color:#243038">Family Learning Report</h2><p id="grade01FamilyReportStatus" role="status" aria-live="polite" style="font-size:16px;line-height:1.6">Checking the selected Academy learner...</p><p style="font-size:16px;line-height:1.6">Grade 1's older assessment records are not automatically shared with the Family Center. Academic reporting will be enabled only after the learner-scoped source is verified.</p><a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/#family-progress" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 18px;color:#fff8e9;background:#243038;border-radius:7px;font-size:16px;text-decoration:none">Open Family Learning Center</a></div></div></section>
 <script>
 (()=>{"use strict";
  const target=document.getElementById("grade01FamilyReportStatus");
@@ -135,109 +69,24 @@
 <!-- Grade 01 local-only preservation review: no imports, no legacy auto-attribution -->
 <script src="../../assets/grade01-preservation-bundle-v1.js" defer></script>
 <script src="assets/grade01-preservation-export-ui-v1.js" defer></script>
-<script src="https://vervenveda.com/assets/vnv-333-ticker.js"></script>
-<script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
-<script>window.VNV_TICKER?.autoPopulate({label:"Grade 1 Quick Links",max:14});</script>
-<script defer src="https://vervenveda.com/assets/vnv-language.js"></script>
+<!-- 333 + AutoPopulate tickers are mounted once by elementary-global-standard-v1.js. -->
 <script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
-<script data-vnv-grade01-header-contract="v1">
+<script data-vnv-elementary-header-contract="v2">
 window.VNV_HEADER?.mount({
- title:"Khaemenes Academy",
- subtitle:"Elementary · 1st Grade",
- icon:"1",
- home:"https://vervenveda.com/Khaemenes_Academy.github.io/",
+ title:"Khaemenes Elementary Academy",
+ subtitle:"Grades 01–05",
+ icon:"K",
+ home:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/",
  replaceLegacy:true,
- actions:[]
+ legacySelectors:["[data-vnv-header-legacy]"],
+ actions:[
+  {label:"Academy Home",href:"https://vervenveda.com/Khaemenes_Academy.github.io/"},
+  {label:"Student Profile",href:"https://vervenveda.com/Khaemenes_Elementary.github.io/student-profile/"},
+  {label:"Family",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+  {label:"Teacher",href:"https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/"},
+  {label:"Middle School",href:"https://vervenveda.com/Khaemenes_Middle.github.io/"}
+ ]
 });
 </script>
 <footer class="footer no-print"><div class="shell">© <span id="year"></span> Jennifer Kay Pearl · Khaemenes Academy · First-party local curriculum · no third-party dependencies</div></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
-<script id="vnv-grade01-class-tools-config">
-(()=>{"use strict";
- if(window.KhaemenesClassToolsConfigV1?.id==="grade01-elementary")return;
- const reveal=(selector)=>{const target=document.querySelector(selector);if(!target)return false;const shelf=target.matches?.("details")?target:target.closest?.("details.grade01-shelf");if(shelf)shelf.open=true;target.scrollIntoView({behavior:"smooth",block:"start"});return true;};
- function languagePanel(root){
-  if(!root)return null;
-  let panel=root.querySelector("[data-vct-language-panel]");
-  if(!panel){
-   panel=document.createElement("div");panel.className="vct-pop";panel.dataset.vctLanguagePanel="1";panel.hidden=true;
-   const h=document.createElement("h2");h.textContent="Language";
-   const p=document.createElement("p");p.textContent="Choose the interface language.";
-   panel.append(h,p);root.querySelector("#vnvClassToolsPanel")?.append(panel);
-  }
-  const translator=document.getElementById("vnv-language-switch");
-  if(translator&&!panel.contains(translator))panel.append(translator);
-  return panel;
- }
- window.KhaemenesClassToolsConfigV1={
-  id:"grade01-elementary",
-  match:()=>/\/grades\/grade-01\/(?:index\.html)?$/i.test(location.pathname),
-  toggleLabel:"Tools",
-  ariaLabel:"1st Grade learning tools",
-  tools:[
-   {type:"action",label:"Classes",sub:"Weekly path",action:"classes"},
-   {type:"ecosystem-list",label:"Learning",sub:"Learning tools",filter:{category:"education",limit:12}},
-   {type:"ecosystem-link",label:"Arcade",sub:"Games",ecosystemId:"arcade",fallbackHref:"https://vervenveda.com/arcade.github.io/"},
-   {type:"ecosystem-link",label:"Art",sub:"Bazaar Art",ecosystemId:"bazaar",fallbackHref:"https://vervenveda.com/bazaarart.github.io/"},
-   {type:"ecosystem-link",label:"Music",sub:"The Refrain",ecosystemId:"refrain",fallbackHref:"https://vervenveda.com/the_refrain.github.io/"},
-   {type:"ecosystem-link",label:"Aurora",sub:"Wellness",ecosystemId:"aurora",fallbackHref:"https://vervenveda.com/aurora.github.io/"},
-   {type:"ecosystem-link",label:"Weather",sub:"Solanar",ecosystemId:"solanar",fallbackHref:"https://vervenveda.com/solanar.github.io/"},
-   {type:"ecosystem-link",label:"Yearbook",sub:"Academy Yearbook",ecosystemId:"yearbook",fallbackHref:"https://vervenveda.com/Academy-Yearbook.github.io/"},
-   {type:"action",label:"Progress",sub:"Mastery progress",action:"progress"},
-   {type:"action",label:"Family",sub:"Family report",action:"family"},
-   {type:"ecosystem-link",label:"Medical",sub:"Medicament",ecosystemId:"medicament",fallbackHref:"https://vervenveda.com/medicament-hub.github.io/"},
-   {type:"action",label:"Language",sub:"Translator",action:"language"}
-  ],
-  actions:{
-   classes:()=>reveal("#week-path"),
-   progress:()=>reveal("#progress"),
-   family:()=>reveal("#family-report"),
-   language:({root})=>{
-    const panel=languagePanel(root);if(!panel)return false;
-    const open=panel.hidden;root.querySelectorAll(".vct-pop").forEach(p=>p.hidden=true);panel.hidden=!open;
-    if(open)panel.querySelector("select,button")?.focus?.();return true;
-   }
-  },
-  help:{title:"1st Grade Tools",paragraphs:[]}
- };
-})();
-</script>
-<script src="https://vervenveda.com/assets/vnv-class-tools-toolbar.js?v=1.6.1" defer data-vnv-class-tools-toolbar="grade01"></script>
-<script id="vnv-grade01-translator-relocation">
-(()=>{"use strict";
- const move=()=>{
-  const root=document.getElementById("vnvClassToolsToolbar"),translator=document.getElementById("vnv-language-switch");
-  if(!root||!translator)return false;
-  let panel=root.querySelector("[data-vct-language-panel]");
-  if(!panel){
-   panel=document.createElement("div");panel.className="vct-pop";panel.dataset.vctLanguagePanel="1";panel.hidden=true;
-   const h=document.createElement("h2");h.textContent="Language";
-   const p=document.createElement("p");p.textContent="Choose the interface language.";
-   panel.append(h,p);root.querySelector("#vnvClassToolsPanel")?.append(panel);
-  }
-  if(!panel.contains(translator))panel.append(translator);
-  return true;
- };
- const observer=new MutationObserver(()=>{if(move())observer.disconnect()});
- if(!move())observer.observe(document.documentElement,{subtree:true,childList:true});
- window.addEventListener("pageshow",move);
-})();
-</script>
-<script id="grade01-shelf-hash-behavior">
-(()=>{"use strict";
- const openHash=()=>{
-  if(!location.hash)return;
-  const target=document.querySelector(location.hash);
-  const shelf=target?.matches?.("details.grade01-shelf")?target:target?.closest?.("details.grade01-shelf");
-  if(shelf)shelf.open=true;
- };
- window.addEventListener("hashchange",openHash);
- window.addEventListener("pageshow",openHash);
- document.addEventListener("click",e=>{
-  const a=e.target.closest?.('a[href^="#"]');if(!a)return;
-  const target=document.querySelector(a.getAttribute("href"));
-  const shelf=target?.matches?.("details.grade01-shelf")?target:target?.closest?.("details.grade01-shelf");
-  if(shelf)shelf.open=true;
- });
-})();
-</script>
 </body></html>
