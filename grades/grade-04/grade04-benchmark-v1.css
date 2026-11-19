@@ -216,7 +216,7 @@ input,select{
 .progress{height:14px;border-radius:var(--g4-radius);background:#e8dcc7;overflow:hidden;border:1px solid var(--g4-line)}
 .progress span{height:100%;display:block;background:var(--g4-green)}
 #summary{min-width:0}
-#summary>.profile-box{margin-top:16px}
+#summary>.profile-box,.grade04-next-step{margin-top:16px}
 
 /* Vocabulary pilot */
 .grade04-vocabulary-pilot{padding:24px 0}
